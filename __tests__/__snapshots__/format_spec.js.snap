@@ -51,11 +51,9 @@ Object {
 exports[`faces format snapshot 1`] = `
 Object {
   "_reduce": Object {
+    "count": 0,
     "hash": Object {},
     "list": Array [],
-  },
-  "_reduce.all.all": Object {
-    "count": 0,
   },
   "_reduce.name_head.ア": Object {
     "hash": Object {},
@@ -429,89 +427,121 @@ Object {
   "_reduce.name_head.Ｐ": Object {
     "hash": Object {},
   },
+  "_reduce.tag.all": Object {
+    "count": 0,
+    "hash": Object {},
+  },
   "_reduce.tag.animal": Object {
     "count": 0,
+    "hash": Object {},
   },
   "_reduce.tag.apartment": Object {
     "count": 0,
+    "hash": Object {},
   },
   "_reduce.tag.asia": Object {
     "count": 0,
+    "hash": Object {},
   },
   "_reduce.tag.ecclesia": Object {
     "count": 0,
+    "hash": Object {},
   },
   "_reduce.tag.elder": Object {
     "count": 0,
+    "hash": Object {},
   },
   "_reduce.tag.elegant": Object {
     "count": 0,
+    "hash": Object {},
   },
   "_reduce.tag.fable": Object {
     "count": 0,
+    "hash": Object {},
   },
   "_reduce.tag.farm": Object {
     "count": 0,
+    "hash": Object {},
   },
   "_reduce.tag.giji": Object {
     "count": 0,
+    "hash": Object {},
   },
   "_reduce.tag.god": Object {
     "count": 0,
+    "hash": Object {},
   },
   "_reduce.tag.government": Object {
     "count": 0,
+    "hash": Object {},
   },
   "_reduce.tag.guild": Object {
     "count": 0,
+    "hash": Object {},
   },
   "_reduce.tag.immoral": Object {
     "count": 0,
+    "hash": Object {},
   },
   "_reduce.tag.kid": Object {
     "count": 0,
+    "hash": Object {},
   },
   "_reduce.tag.marchen": Object {
     "count": 0,
+    "hash": Object {},
   },
   "_reduce.tag.market": Object {
     "count": 0,
+    "hash": Object {},
   },
   "_reduce.tag.medical": Object {
     "count": 0,
+    "hash": Object {},
   },
   "_reduce.tag.middle": Object {
     "count": 0,
+    "hash": Object {},
   },
   "_reduce.tag.myth": Object {
     "count": 0,
+    "hash": Object {},
   },
   "_reduce.tag.pair": Object {
     "count": 0,
+    "hash": Object {},
   },
   "_reduce.tag.river": Object {
     "count": 0,
+    "hash": Object {},
   },
   "_reduce.tag.road": Object {
     "count": 0,
+    "hash": Object {},
   },
   "_reduce.tag.school": Object {
     "count": 0,
+    "hash": Object {},
   },
   "_reduce.tag.servant": Object {
     "count": 0,
+    "hash": Object {},
   },
   "_reduce.tag.shoji": Object {
     "count": 0,
+    "hash": Object {},
   },
   "_reduce.tag.stratos": Object {
     "count": 0,
+    "hash": Object {},
   },
   "_reduce.tag.travel": Object {
     "count": 0,
+    "hash": Object {},
   },
   "_reduce.tag.young": Object {
     "count": 0,
+    "hash": Object {},
   },
 }
 `;
