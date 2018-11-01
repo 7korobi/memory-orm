@@ -47,7 +47,7 @@ module.exports = class Query
   in: (req)->
     query_parser @, req, (q, target, req, path)->
       add = (f)-> q._filters.push f
-      switch req && req.constructor
+      switch req?.constructor ? req
         when Array
           set = set_for req
           add (o)->
@@ -63,7 +63,7 @@ module.exports = class Query
           add (o)->
             -1 < path(o)?.indexOf req
         else
-          console.log { target, req, path }
+          console.log { target, req: [req, req?.constructor] }
           throw Error 'unimplemented'
 
   partition: (...ary)->
@@ -73,7 +73,7 @@ module.exports = class Query
   where: (req)->
     query_parser @, req, (q, target, req, path)->
       add = (f)-> q._filters.push f
-      switch req && req.constructor
+      switch req?.constructor ? req
         when Function
           add req
         when Array
@@ -84,13 +84,13 @@ module.exports = class Query
             add (o)-> set[ path o ]
         when RegExp
           add (o)-> req.test path o
-        when null, 0, Boolean, String, Number
+        when null, 0, "", Boolean, String, Number
           if "_id" == target
             q._all_ids = [req]
           else
             add (o)-> req == path o
         else
-          console.log { target, req, path }
+          console.log { target, req: [req, req?.constructor] }
           throw Error 'unimplemented'
 
   search: (text)->
