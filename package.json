@@ -3,7 +3,7 @@
   "description": "client side ORM + map reduce",
   "author": "7korobi",
   "main": "lib/index.min.js",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "preferGlobal": true,
   "repository": "git@github.com:7korobi/memory-orm.git",
   "homepage": "https://github.com/7korobi/memory-orm",

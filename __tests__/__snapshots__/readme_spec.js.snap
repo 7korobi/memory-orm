@@ -1,5 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`query.checks order asc snapshot 1`] = `
+Array [
+  "シャワー浴びる",
+  "右上",
+  "左上",
+  "肩まで入って１０数える",
+]
+`;
+
+exports[`query.checks order desc snapshot 1`] = `
+Array [
+  "肩まで入って１０数える",
+  "左上",
+  "右上",
+  "シャワー浴びる",
+]
+`;
+
 exports[`query.positions checked snapshot 1`] = `
 Object {
   "hash": Object {
@@ -187,7 +205,7 @@ Object {
 
 exports[`query.todos checked snapshot 1`] = `
 Array [
-  t {
+  model {
     "_id": 4,
     "checked": true,
     "label": "肩まで入って１０数える",
@@ -206,7 +224,7 @@ Array [
 
 exports[`query.todos not checked snapshot 1`] = `
 Array [
-  t {
+  model {
     "_id": 3,
     "checked": false,
     "label": "シャワー浴びる",

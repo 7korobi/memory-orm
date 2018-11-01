@@ -15,7 +15,8 @@ module.exports =
   output:
     path: current
     filename: '[name].js' # Important
-    libraryTarget: 'this' # Important
+    library: 'Mem'
+    libraryTarget: 'umd' # Important
 
   module:
     rules: [

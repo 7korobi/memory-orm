@@ -22,10 +22,6 @@ module.exports = class Model
   @create: (item)->
   @delete: (old)->
 
-  @aggregate: [
-    (o, idx)->
-  ]
-
   @map_partition:  (item, emit)->
     emit
       set: item.id

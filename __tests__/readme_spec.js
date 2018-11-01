@@ -3,10 +3,21 @@ const { Rule, Set, Query } = require("../lib/index.min");
 new Rule("todo").schema(function() {
   this.has_many("checks");
 });
-
 new Rule("check").schema(function() {
   this.belongs_to("todo");
+
+  this.model = class model extends this.model {
+    static map_reduce(o, emit) {
+      emit("asc", { list: true });
+      emit("desc", { list: true });
+    }
+    static order(o, emit) {
+      emit("asc",  "list", { sort: ["label",  "asc"] });
+      emit("desc", "list", { sort: ["label", "desc"] });
+    }
+  };
 });
+
 
 Set.todo.merge([
   {
@@ -75,6 +86,15 @@ Set.position.merge([{
   "position": [20,90,20,60,40]
 }])
 
+
+describe("query.checks", ()=> {
+  test('order asc snapshot', ()=> {
+    expect(Query.checks.reduce.asc.list.pluck("label")).toMatchSnapshot()
+  })
+  test('order desc snapshot', ()=> {
+    expect(Query.checks.reduce.desc.list.pluck("label")).toMatchSnapshot()
+  })
+})
 
 describe("query.todos", ()=> {
   test('labels snapshot', ()=> {
