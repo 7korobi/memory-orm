@@ -2,9 +2,6 @@ _ = require "lodash"
 Mem = require "./index.coffee"
 Query = require "./query.coffee"
 
-OBJ = ->
-  new Object null
-
 f_reset = (list, parent)->
   @all._finder.reset @all, list, parent
 
