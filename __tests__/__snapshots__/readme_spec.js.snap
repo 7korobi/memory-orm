@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`query.todos checked snapshot 1`] = `
+Array [
+  t {
+    "_id": 4,
+    "checked": true,
+    "label": "肩まで入って１０数える",
+    "todo_id": 3,
+  },
+]
+`;
+
+exports[`query.todos not checked snapshot 1`] = `
+Array [
+  t {
+    "_id": 3,
+    "checked": false,
+    "label": "シャワー浴びる",
+    "todo_id": 3,
+  },
+]
+`;

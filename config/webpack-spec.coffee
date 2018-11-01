@@ -17,7 +17,6 @@ module.exports =
   devtool: 'source-map'
   entry:
     "__tests__/index_spec":  './__tests__/index_spec.coffee'
-
     "__tests__/chr_spec":    './__tests__/chr_spec.coffee'
     "__tests__/sort_spec":   './__tests__/sort_spec.coffee'
     "__tests__/list_spec":   './__tests__/list_spec.coffee'
