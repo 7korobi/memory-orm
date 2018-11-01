@@ -50,11 +50,49 @@ Set.check.merge([
   }
 ]);
 
+
+new Rule("position").schema(function() {
+  this.model = class model extends this.model {
+    static map_reduce (o, emit){
+      for ( const p of o.position ) {
+        emit("position", { count: 1, all: p, min: p, max: p})
+      }
+    }
+  }
+});
+
+Set.position.merge([{
+  "_id": "x1", 
+  "position": [40,60,80,100,200]
+},{
+  "_id": "y1", 
+  "position": [70,190,220,160,240]
+},{
+  "_id": "x2", 
+  "position": [40,60,80,100,200]
+},{
+  "_id": "y2", 
+  "position": [20,90,20,60,40]
+}])
+
+
 describe("query.todos", ()=> {
+  test('labels snapshot', ()=> {
+    expect(Query.todos.pluck("label")).toMatchSnapshot()
+  })
   test('checked snapshot', ()=> {
     expect(Query.todos.find(3).checks.where({ checked: true }).list).toMatchSnapshot()
   })
   test('not checked snapshot', ()=> {
     expect(Query.todos.find(3).checks.where({ checked: false }).list).toMatchSnapshot()
+  })
+})
+
+describe("query.positions", ()=> {
+  test('x1 snapshot', ()=> {
+    expect(Query.positions.where({_id: "x1"}).reduce).toMatchSnapshot()
+  })
+  test('checked snapshot', ()=> {
+    expect(Query.positions.reduce).toMatchSnapshot()
   })
 })
