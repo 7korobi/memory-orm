@@ -9,12 +9,72 @@ Array [
 ]
 `;
 
+exports[`query.checks order asc snapshot 2`] = `
+Array [
+  "シャワー浴びる",
+  "右上",
+  "左上",
+  "肩まで入って１０数える",
+]
+`;
+
 exports[`query.checks order desc snapshot 1`] = `
 Array [
   "肩まで入って１０数える",
   "左上",
   "右上",
   "シャワー浴びる",
+]
+`;
+
+exports[`query.checks order desc snapshot 2`] = `
+Array [
+  "肩まで入って１０数える",
+  "左上",
+  "右上",
+  "シャワー浴びる",
+]
+`;
+
+exports[`query.checks page snapshot. 1`] = `
+Array [
+  Array [
+    model {
+      "_id": 3,
+      "checked": false,
+      "label": "シャワー浴びる",
+      "todo_id": 3,
+    },
+    model {
+      "_id": 1,
+      "checked": true,
+      "label": "右上",
+      "todo_id": 1,
+    },
+    model {
+      "_id": 2,
+      "checked": true,
+      "label": "左上",
+      "todo_id": 1,
+    },
+  ],
+  Array [
+    model {
+      "_id": 4,
+      "checked": true,
+      "label": "肩まで入って１０数える",
+      "todo_id": 3,
+    },
+  ],
+]
+`;
+
+exports[`query.checks shuffle snapshot. 1`] = `
+Array [
+  "右上",
+  "左上",
+  "シャワー浴びる",
+  "肩まで入って１０数える",
 ]
 `;
 
@@ -140,6 +200,21 @@ Object {
     "y2",
   ],
 }
+`;
+
+exports[`query.positions in 100 1`] = `
+Array [
+  "x1",
+  "x2",
+]
+`;
+
+exports[`query.positions in 100 2`] = `
+Array [
+  "x1",
+  "x2",
+  "y2",
+]
 `;
 
 exports[`query.positions x1 snapshot 1`] = `

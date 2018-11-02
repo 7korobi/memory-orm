@@ -145,79 +145,136 @@ Query.checks.reduce.asc.list.pluck("label");
 Query.checks.reduce.desc.list.pluck("label");
 ```
 
-## API list
+## class list
 
- Model | action
- :-- | :--
- get id | same as _id
- static update | event when add data exist.
- static create | event when add data not exist.
- static delete | event when del data exist.
- static bless  | value become extends this
- static map_partition | define map reduce for partition.
- static map_reduce    | define map reduce.
- static order         | define order process for reduced value.
+### Model
 
- List | action
- :-- | :--
- get first | [0]
- get head  | [0]
- get tail  | [length - 1]
- get last  | [length - 1]
- get uniq  | get unique values
- get pluck | get path data
+ style | name | action
+ :-- | :-- | :--
+ get | id | same as _id
+ static | update | event when add data exist.
+ static | create | event when add data not exist.
+ static | delete | event when del data exist.
+ static | bless  | value become extends this
+ static | map_partition | define map reduce for partition.
+ static | map_reduce    | define map reduce.
+ static | order         | define order process for reduced value.
 
- Rule | action
- :-- | :--
- schema | execute schema definition block.
- key_by | id value. default: _id
- deploy | data adjust before Set.
- scope  | define query shorthand.
- property | define property shorthand.
- default_scope | root Query replace.
- shuffle | root Query replace. and replace sort order by Math.random.
- order | root Query replace. and replace order.
- path | set name property. for id separate by '-'.
- belongs_to | set target property. find by `${target}_id` 
- habtm | set target property. finds by `${target}_ids`
- has_many | set target property. find from `${target}_id` by _id
- tree | set 'nodes' method. scan recursivery by `${target}_id`
- graph | set 'path' method. scan recursivery by `${target}_id`
- model | Model base class ( need extends )
- list  | List base class ( need extends )
- set  | Set base class ( need extends )
- map  | Map base class ( need extends )
 
- Set | action
- :-- | :--
- set    | set data. and old data cleanup.
- reset  | set data. and old data cleanup.
- merge  | set data.
- add    | set datum.
- append | set datum.
- reject | remove data.
- del    | remove datum.
- remove | remove datum.
- clear_cache | recalculate query caches.
- refresh     | recalculate query caches.
- rehash      | recalculate query caches.
+### List
 
- Query | action
- :-- | :--
- where | copy Query and add conditions.
- in | copy Query and add conditions. (includes algorythm.)
- partition | copy Query and replace partition.
- search | copy Query and add conditions. for data search_words value.
- shuffle | copy Query and replace sort order by Math.random.
- order | copy Query and replace order.
- sort | copy Query and replace order's sort parameter.
- page | copy Query and replace page_by.
- find | pick first data from hash by ids.
- finds | pick all data from hash by ids.
- pluck | get path data by list values.
- reduce | calculate map reduce.
- list | calculate list. ( same as reduce.list )
- hash | calculate hash. ( same as reduce.hash )
- ids | calculate hash and get keys.
- memory | all stored data.
+ style | name | action
+ :-- | :-- | :--
+ . | pluck | get path data
+ get | first | [0]
+ get | head  | [0]
+ get | tail  | [length - 1]
+ get | last  | [length - 1]
+ get | uniq  | get unique values
+
+```javascript
+const { list } = Query.checks.reduce.asc
+list.pluck("label")
+list.first
+list.head
+list.tail
+list.last
+```
+
+
+### Rule
+
+ style | name | action
+ :-- | :-- | :--
+ . | schema | execute schema definition block.
+ . | key_by | id value. default: _id
+ . | deploy | data adjust before Set.
+ . | scope  | define query shorthand.
+ . | property | define property shorthand.
+ . | default_scope | root Query replace.
+ . | shuffle | root Query replace. and replace sort order by Math.random.
+ . | order | root Query replace. and replace order.
+ . | path | set name property. for id separate by '-'.
+ . | belongs_to | set target property. find by `${target}_id` 
+ . | habtm | set target property. finds by `${target}_ids`
+ . | has_many | set target property. find from `${target}_id` by _id
+ . | tree | set 'nodes' method. scan recursivery by `${target}_id`
+ . | graph | set 'path' method. scan recursivery by `${target}_id`
+ . | model | Model base class ( need extends )
+ . | list  | List base class ( need extends )
+ . | set  | Set base class ( need extends )
+ . | map  | Map base class ( need extends )
+
+```javascript
+new Rule("todo").schema(function() {
+  this.key_by(function() { return this._id })
+  this.deploy(function(model) {
+    this.search_words = this.label
+  })
+  this.scope(function(all) {
+    return {
+      scan: (word)=> all.where({ checked: true }).search(word)
+    }
+  })
+})
+```
+
+### Set
+
+ style | name | action
+ :-- | :-- | :--
+ . | set    | set data. and old data cleanup.
+ . | reset  | set data. and old data cleanup.
+ . | merge  | set data.
+ . | add    | set datum.
+ . | append | set datum.
+ . | reject | remove data.
+ . | del    | remove datum.
+ . | remove | remove datum.
+ . | clear_cache | recalculate query caches.
+ . | refresh     | recalculate query caches.
+ . | rehash      | recalculate query caches.
+
+```javascript
+Set.check.add({
+  _id: 10,
+  todo_id: 1,
+  label: "新しい項目",
+  checked: true
+})
+Set.check.del({ _id: 10 })
+```
+
+### Query
+
+ style | name | action
+ :-- | :-- | :--
+ . | where | copy Query and add conditions.
+ . | in | copy Query and add conditions. (includes algorythm.)
+ . | partition | copy Query and replace partition.
+ . | search | copy Query and add conditions. for data search_words value.
+ . | shuffle | copy Query and replace sort order by Math.random.
+ . | order | copy Query and replace order.
+ . | sort | copy Query and replace order's sort parameter.
+ . | page | copy Query and replace page_by.
+ . | find | pick first data from hash by ids.
+ . | finds | pick all data from hash by ids.
+ . | pluck | get path data by list values.
+ get | reduce | calculate map reduce.
+ get | list | calculate list. ( same as reduce.list )
+ get | hash | calculate hash. ( same as reduce.hash )
+ get | ids | calculate hash and get keys.
+ get | memory | all stored data.
  
+```javascript
+Query.positions.in({ position: 100 }).pluck("_id")
+Query.positions.in({ position: [100, 90] }).pluck("_id")
+Query.checks.shuffle().pluck("label")
+Query.checks.sort("label").pluck("label")
+Query.checks.sort("label",  "desc").pluck("label")
+Query.checks.order({ sort: ["label", "desc"] }).pluck("label")
+Query.checks.page(3).list[0][0]
+Query.checks.page(3).list[0][1]
+Query.checks.page(3).list[0][2]
+Query.checks.page(3).list[1][0]
+```

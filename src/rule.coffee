@@ -131,7 +131,7 @@ module.exports = class Rule
     cb =
       switch keys?.constructor
         when undefined
-          (o)-> o
+          -> @_id
         when Function
           keys
         when String, Array

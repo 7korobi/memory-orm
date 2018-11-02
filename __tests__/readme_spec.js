@@ -1,7 +1,18 @@
 const { Rule, Set, Query } = require("../lib/index.min");
 
 new Rule("todo").schema(function() {
+  this.key_by(function() { return this._id })
   this.has_many("checks");
+
+  this.deploy(function(model) {
+    this.search_words = this.label
+  })
+
+  this.scope(function(all) {
+    return {
+      scan: (word)=> all.where({ checked: true }).search(word)
+    }
+  })
 });
 new Rule("check").schema(function() {
   this.belongs_to("todo");
@@ -12,6 +23,7 @@ new Rule("check").schema(function() {
       emit("desc", { list: true });
     }
     static order(o, emit) {
+      emit("list", { sort: ["label",  "asc"], page: true });
       emit("asc",  "list", { sort: ["label",  "asc"] });
       emit("desc", "list", { sort: ["label", "desc"] });
     }
@@ -86,13 +98,22 @@ Set.position.merge([{
   "position": [20,90,20,60,40]
 }])
 
-
+$inc = 0
 describe("query.checks", ()=> {
+  test('page snapshot.', ()=> {
+    expect(Query.checks.page(3).list).toMatchSnapshot()
+  })
+  test('shuffle snapshot.', ()=> {
+    Math.random = function(){ return ++$inc }
+    expect(Query.checks.shuffle().pluck("label")).toMatchSnapshot()
+  })
   test('order asc snapshot', ()=> {
     expect(Query.checks.reduce.asc.list.pluck("label")).toMatchSnapshot()
+    expect(Query.checks.sort("label").pluck("label")).toMatchSnapshot()
   })
   test('order desc snapshot', ()=> {
     expect(Query.checks.reduce.desc.list.pluck("label")).toMatchSnapshot()
+    expect(Query.checks.sort("label",  "desc").pluck("label")).toMatchSnapshot()
   })
 })
 
@@ -111,6 +132,10 @@ describe("query.todos", ()=> {
 describe("query.positions", ()=> {
   test('x1 snapshot', ()=> {
     expect(Query.positions.where({_id: "x1"}).reduce).toMatchSnapshot()
+  })
+  test('in 100', ()=> {
+    expect(Query.positions.in({ position: 100 }).pluck("_id")).toMatchSnapshot()
+    expect(Query.positions.in({ position: [100, 90] }).pluck("_id")).toMatchSnapshot()
   })
   test('checked snapshot', ()=> {
     expect(Query.positions.reduce).toMatchSnapshot()
