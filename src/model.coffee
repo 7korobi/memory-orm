@@ -1,6 +1,4 @@
 _ = require "lodash"
-# Mem = require "./index.coffee"
-
 
 
 module.exports = class Model

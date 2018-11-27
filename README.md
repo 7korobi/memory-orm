@@ -219,7 +219,38 @@ new Rule("todo").schema(function() {
 })
 ```
 
-### Set
+
+### State
+State =
+  transaction: (cb)->
+    State.$journal = result = {}
+    cb()
+    State.$journal = {}
+    result
+
+  journal: cache.bind null, '$journal'
+  base:    cache.bind null, '$base'
+  step:     new Object null
+  $journal: new Object null
+  $base:    new Object null
+
+  store: (pack)->
+    _.merge State.$base, pack
+    for key, { $sort, $memory, $format } of pack
+      { model } = Query[key]._finder
+      for _id, o of $memory
+        model.bless o.item
+      Query[key]._finder.clear_cache()
+
+
+ style | name | action
+ :-- | :-- | :--
+ . | transaction | get transaction diff data.
+ . | store       | merge transaction diff data. 
+ . | step.< plural name > | countup if data manipulation.
+
+
+### Set.< base name >
 
  style | name | action
  :-- | :-- | :--
@@ -236,16 +267,26 @@ new Rule("todo").schema(function() {
  . | rehash      | recalculate query caches.
 
 ```javascript
-Set.check.add({
-  _id: 10,
-  todo_id: 1,
-  label: "新しい項目",
-  checked: true
+const {
+  checks: {
+    $sort,
+    $memory,
+    $format,
+  }
+} = State.transaction(=>{
+  Set.check.add({
+    _id: 10,
+    todo_id: 1,
+    label: "新しい項目",
+    checked: true
+  })
+  Set.check.del({ _id: 10 })
 })
-Set.check.del({ _id: 10 })
+State.store(JSON.parse(JSON.stringify({ checks: { $sort, $memory, $format }})))
 ```
 
-### Query
+
+### Query.< plural name >
 
  style | name | action
  :-- | :-- | :--

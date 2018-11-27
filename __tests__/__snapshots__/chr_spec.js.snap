@@ -20548,3 +20548,5 @@ Array [
   ],
 ]
 `;
+
+exports[`faces transaction result 1`] = `true`;

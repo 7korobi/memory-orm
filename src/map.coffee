@@ -1,5 +1,5 @@
 _ = require "lodash"
-{ Query } = require "./mem.coffee"
+{ State, Query } = require "./mem.coffee"
 
 matrix =
   map: (cb)->
@@ -14,19 +14,21 @@ module.exports = class Map
     o.__proto__ = @::
     o
 
-  @$deploy: (model, format, all, item, parent)->
+  @$deploy: (model, $format, all, item, parent)->
     o = { item, $group: [] }
 
     model.$deploy item, parent
-    @$deploy_reduce model, item, format, o
+    @$deploy_reduce model, item, $format, o
     @$deploy_sort   model, item, all
     o
 
-  @$deploy_reduce: (model, item, format, o)->
+  @$deploy_reduce: (model, item, $format, o)->
+    journal = State.journal(@$name)
     emit = (target)=> (keys..., cmd)=>
       path = ["_reduce", keys...].join('.')
       target.push [path, cmd]
-      map = format[path] ?= {}
+      map = $format[path] ?= {}
+      journal.$format[path] ?= {}
       @init map, cmd
     emit_group = emit o.$group
     emit_group
@@ -35,9 +37,11 @@ module.exports = class Map
     model.map_reduce    item, emit_group
 
   @$deploy_sort: (model, item, all)->
+    journal = State.journal(@$name)
     emit = (keys..., cmd)->
       path = ["_reduce", keys...].join('.')
       all.$sort[path] = cmd
+      journal.$sort[path] = cmd
     emit "list", {}
     model.order item, emit
 

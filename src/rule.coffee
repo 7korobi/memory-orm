@@ -22,7 +22,7 @@ module.exports = class Rule
     @set   = Set
     @map   = Map
 
-    @all = Query.build()
+    @all = Query.build Mem.State.base(@$name)
     @all.cache = {}
     @all._finder = new Finder @$name
 
@@ -110,7 +110,7 @@ module.exports = class Rule
       class @map extends @map
     Object.defineProperties @map::, @map_property
 
-    @model.$name = @set.$name = @map.$name = @$name
+    @model.$name = @list.$name = @set.$name = @map.$name = @$name
 
     Mem.Query[@$name.list] = @all
 
@@ -119,12 +119,12 @@ module.exports = class Rule
     _set.$name = @$name
     list = @list.bless [], @all
 
-    Mem.Finder[@$name.base] = finder = @all._finder
+    Mem.Finder[@$name.list] = finder = @all._finder
     finder.set = @set
     finder.map = @map
     finder.list = @list
     finder.model = @model
-    finder.format = {}
+    finder.$format = Mem.State.base(@$name).$format
     @
 
   key_by: (keys)->

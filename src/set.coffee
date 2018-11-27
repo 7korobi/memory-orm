@@ -1,5 +1,5 @@
 _ = require "lodash"
-Mem = require "./index.coffee"
+{ State } = require "./index.coffee"
 Query = require "./query.coffee"
 
 f_reset = (list, parent)->

@@ -1,11 +1,8 @@
 _ = require "lodash"
-# { State } = require "./index.coffee"
 
-OBJ = ->
-  new Object null
 
 set_for = (list)->
-  set = OBJ()
+  set = new Object null
   for key in list
     set[key] = true
   set
@@ -28,14 +25,13 @@ query_parser = (base, req, cb)->
 
 
 module.exports = class Query
-  @build: ->
+  @build: ({ $sort, $memory })->
     _all_ids = _group = null
     _filters = []
-    $sort = {}
     $partition = ["set"]
     new Query { _all_ids, _group, _filters, $sort, $partition }, ->
       @all = @
-      @_memory = OBJ()
+      @$memory = $memory
 
   constructor: (base, tap)->
     @_step = 0
@@ -125,7 +121,7 @@ module.exports = class Query
   form: (ids...)->
     oo = @find ...ids
     if oo
-      o = @all._memory[oo.id].form ?= {}
+      o = @all.$memory[oo.id].form ?= {}
       o.__proto__ = oo
       o
     else
@@ -145,7 +141,7 @@ module.exports = class Query
   Object.defineProperties @::,
     reduce:
       get: ->
-        @all._finder.calculate @, @all._memory
+        @all._finder.calculate @, @all.$memory
         @_reduce
 
     list:
@@ -158,7 +154,7 @@ module.exports = class Query
 
     memory:
       get: ->
-        @all._memory
+        @all.$memory
 
     ids:
       get: ->

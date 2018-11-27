@@ -1,19 +1,18 @@
 _ = require "lodash"
 { State, Query, Format } = require "./mem.coffee"
 
-OBJ = ->
-  new Object null
 
-each = ({ depends }, from, process)->
+each = ({ list, depends }, from, process)->
+
   f() for f in depends
   switch from?.constructor
     when Array
       for item in from
-        process(item)
+        process item
     when Object
       for id, item of from
         item._id = id
-        process(item)
+        process item
   return
 
 validate = (item, chklist)->
@@ -25,16 +24,17 @@ validate = (item, chklist)->
 $step = 0
 
 module.exports = class Finder
-  constructor: (@name)->
-    State.step[@name.list] = ++$step
+  constructor: (@$name)->
+    State.step[@$name.list] = ++$step
+    State.base(@$name)
 
   calculate: (query, memory)->
-    return unless query._step < State.step[@name.list]
+    return unless query._step < State.step[@$name.list]
 
     delete query._reduce
     query._step = ++$step
 
-    cache = _.cloneDeep @format
+    cache = _.cloneDeep @$format
     paths =
       _reduce:
         list: []
@@ -73,41 +73,46 @@ module.exports = class Finder
       _.set query, path, o
 
   clear_cache: (all = null)->
-    State.step[@name.list] = ++$step
+    State.step[@$name.list] = ++$step
     if all
-      for id, { item } of all._memory
+      for id, { item } of all.$memory
         @map.$deploy_sort @model, item, all
     return
 
   remove: (all, from)->
-    { _memory } = all
+    { $memory } = all
+    journal = State.journal(@$name)
     hit = false
-    each @name, from, (item)=>
+    each @$name, from, (item)=>
       @model.bless item
-      old = _memory[item.id]
+      old = $memory[item.id]
       if old?
         @model.delete old.item
-        delete _memory[item.id]
+        delete journal.$memory[item.id]
+        delete $memory[item.id]
         hit = true
     if hit?
       @clear_cache()
 
   reset: (all, from, parent)->
-    { _memory } = all
-    all._memory = news = OBJ()
+    { $memory } = all
+    State.journal(@$name).$memory = new Object null
+    State.base(@$name).$memory = all.$memory = news = new Object null
     @merge all, from, parent
 
-    for key, old of _memory
+    for key, old of $memory
       item = news[key]
       unless item?
         @model.delete old
 
   merge: (all, from, parent)->
-    { _memory } = all
-    each @name, from, (item)=>
-      o = @map.$deploy @model, @format, all, item, parent
-      old = _memory[item.id]
-      _memory[item.id] = o
+    { $memory } = all
+    journal = State.journal(@$name)
+    each @$name, from, (item)=>
+      o = @map.$deploy @model, @$format, all, item, parent
+      old = $memory[item.id]
+      journal.$memory[item.id] = o
+      $memory[item.id] = o
       if old?
         @model.update item, old.item
       else

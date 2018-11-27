@@ -2,6 +2,13 @@ require "./models/index"
 Mem = require "../src/index"
 
 describe "faces", ->
+  test 'transaction result', ->
+    json = JSON.stringify Mem.Query.transaction_chr
+    Mem.State.store JSON.parse(json)
+    expect(
+      true
+    ).toMatchSnapshot()
+
   test 'reduce name_head snapshot', ->
     expect(
       for o in Mem.Query.faces.reduce.name_head
