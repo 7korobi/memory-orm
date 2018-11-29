@@ -1,14 +1,30 @@
 require "./models/index"
 Mem = require "../src/index"
 
-describe "faces", ->
-  test 'transaction result', ->
-    json = JSON.stringify Mem.Query.transaction_chr
-    Mem.State.store JSON.parse(json)
+test_is = (target, list, key, o)->
+  test "#{target} #{list} #{key}", ->
+    base = Mem.State.base { list }
     expect(
-      true
-    ).toMatchSnapshot()
+      base[target][key]
+    ).toEqual o
 
+describe "transaction", ->
+  json = JSON.parse JSON.stringify Mem.Query.transaction_chr
+  Mem.State.store json
+  for list_id, { $sort, $memory, $format } of json
+    for key, o of $sort
+      test_is "$sort", list_id, key, o
+
+  for list_id, { $sort, $memory, $format } of json
+    for key, o of $format
+      test_is "$format", list_id, key, o
+
+  for list_id, { $sort, $memory, $format } of json
+    for key, o of $memory
+      test_is "$memory", list_id, key, o
+
+
+describe "faces", ->
   test 'reduce name_head snapshot', ->
     expect(
       for o in Mem.Query.faces.reduce.name_head

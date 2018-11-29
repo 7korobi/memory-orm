@@ -6,32 +6,46 @@ Name = {}
 Query = {}
 Finder = {}
 
+OBJ = ->
+  new Object null
+
 cache = (type, { list })->
   State[type][list] ?=
-    $sort:   new Object null
-    $memory: new Object null
-    $format:  new Object null
+    $sort:   OBJ()
+    $memory: OBJ()
+    $format:  OBJ()
 
 State =
   transaction: (cb)->
-    State.$journal = result = {}
+    State.$journal = result = OBJ()
     cb()
-    State.$journal = {}
+    State.$journal = OBJ()
     result
 
   journal: cache.bind null, '$journal'
   base:    cache.bind null, '$base'
-  step:     new Object null
-  $journal: new Object null
-  $base:    new Object null
+  step:     OBJ()
+  $journal: OBJ()
+  $base:    OBJ()
 
   store: (pack)->
-    _.merge State.$base, pack
-    for key, { $sort, $memory, $format } of pack
-      { model } = Query[key]._finder
-      for _id, o of $memory
+    for list, { $sort, $memory, $format } of pack
+      { model } = Finder[list]
+      base = State.base { list }
+
+      for key, o of $sort
+        base.$sort[key] = o
+
+      for key, o of $format
+        base.$format[key] = o
+
+      for key, o of $memory
         model.bless o.item
-      Query[key]._finder.clear_cache()
+        base.$memory[key] = o
+
+      Finder[list].clear_cache()
+
+    true
 
 set_deploy = (key, cb)-> Name[key].deploys.push cb
 set_depend = (key, cb)-> Name[key].depends.push cb

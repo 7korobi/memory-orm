@@ -162,6 +162,8 @@ module.exports = class Rule
 
   default_scope: (scope)->
     @all._copy scope @all
+    base = Mem.State.base(@$name)
+    base.$sort = @all.$sort
 
   shuffle: ->
     @default_scope (all)-> all.shuffle()

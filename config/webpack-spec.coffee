@@ -24,7 +24,7 @@ yml =
 
 
 module.exports =
-  mode: 'production'
+  mode: 'development'
   devtool: 'source-map'
   entry:
     "__tests__/index_spec":  './__tests__/index_spec.coffee'

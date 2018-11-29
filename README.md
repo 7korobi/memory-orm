@@ -221,27 +221,6 @@ new Rule("todo").schema(function() {
 
 
 ### State
-State =
-  transaction: (cb)->
-    State.$journal = result = {}
-    cb()
-    State.$journal = {}
-    result
-
-  journal: cache.bind null, '$journal'
-  base:    cache.bind null, '$base'
-  step:     new Object null
-  $journal: new Object null
-  $base:    new Object null
-
-  store: (pack)->
-    _.merge State.$base, pack
-    for key, { $sort, $memory, $format } of pack
-      { model } = Query[key]._finder
-      for _id, o of $memory
-        model.bless o.item
-      Query[key]._finder.clear_cache()
-
 
  style | name | action
  :-- | :-- | :--
