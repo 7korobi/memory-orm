@@ -47,21 +47,6 @@ new Rule("face").schema ->
       all.tag(tag_id).reduce.name_head
 
   @deploy ->
-    @aggregate =
-      sow_auths: []
-      mestypes: []
-      folders: []
-      roles: []
-      lives: []
-      log:
-        date_min:   0xfffffffffffff
-        date_max:  -0xfffffffffffff
-        story_ids: []
-      fav:
-        _id:
-          sow_auth_id: null
-        count: 0
-    @summary_url = "/summary/faces/show?id=#{@_id}"
 
   map =
     count: 1
@@ -94,6 +79,9 @@ new Rule("face").schema ->
         set: o.name
 
   @property 'model',
+    summary_url:
+      get: ->
+        "/summary/faces/show?id=#{@_id}"
     roles:
       get: ->
         @aggregate.roles
@@ -181,9 +169,26 @@ new Rule("chr_job").schema ->
 
 Query.transaction_chr = State.transaction ->
   Set.tag.set  require "../yaml/chr_tag.yml"
-  Set.face.set require "../yaml/chr_face.yml"
+
+  Set.face.set faces = require "../yaml/chr_face.yml"
+  for o in faces
+    o.aggregate =
+      sow_auths: []
+      mestypes: []
+      folders: []
+      roles: []
+      lives: []
+      log:
+        date_min:   0xfffffffffffff
+        date_max:  -0xfffffffffffff
+        story_ids: []
+      fav:
+        _id:
+          sow_auth_id: null
+        count: 0
+
   for { face_id, say } in require "../yaml/npc.yml"
-    Query.faces.find(face_id).npc = { say }
+    Set.face.find(face_id).npc = { say }
 
 
   for key in order
@@ -197,7 +202,7 @@ Query.transaction_chr = State.transaction ->
     Set.chr_job.merge o.chr_job, cs_key
 
   list =
-    for face in Query.faces.list
+    for face in faces
       chr_set_id = "all"
       face_id = face._id
       job = face.chr_jobs.list.sort("chr_set_idx")[0]?.job

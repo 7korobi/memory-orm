@@ -127,9 +127,9 @@ module.exports = class Query
     else
       oo
 
-  find: (ids...)->
+  find: (...ids)->
     for id in ids when o = @hash[id]
-      return o if o
+      return o
     null
 
   finds: (ids)->

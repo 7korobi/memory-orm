@@ -615,27 +615,7 @@ new Rule("face").schema(function () {
       }
     };
   });
-  this.deploy(function () {
-    this.aggregate = {
-      sow_auths: [],
-      mestypes: [],
-      folders: [],
-      roles: [],
-      lives: [],
-      log: {
-        date_min: 0xfffffffffffff,
-        date_max: -0xfffffffffffff,
-        story_ids: []
-      },
-      fav: {
-        _id: {
-          sow_auth_id: null
-        },
-        count: 0
-      }
-    };
-    return this.summary_url = `/summary/faces/show?id=${this._id}`;
-  });
+  this.deploy(function () {});
   map = {
     count: 1
   };
@@ -686,6 +666,11 @@ new Rule("face").schema(function () {
 
   };
   return this.property('model', {
+    summary_url: {
+      get: function () {
+        return `/summary/faces/show?id=${this._id}`;
+      }
+    },
     roles: {
       get: function () {
         return this.aggregate.roles;
@@ -802,16 +787,37 @@ new Rule("chr_job").schema(function () {
 });
 
 Query.transaction_chr = State.transaction(function () {
-  var chr_set_id, cs_key, face, face_id, i, j, job, key, len, len1, list, o, ref, say;
+  var chr_set_id, cs_key, face, face_id, faces, i, j, job, k, key, len, len1, len2, list, o, ref, say;
   Set.tag.set(__webpack_require__(/*! ../yaml/chr_tag.yml */ "./__tests__/yaml/chr_tag.yml"));
-  Set.face.set(__webpack_require__(/*! ../yaml/chr_face.yml */ "./__tests__/yaml/chr_face.yml"));
-  ref = __webpack_require__(/*! ../yaml/npc.yml */ "./__tests__/yaml/npc.yml");
-  for (i = 0, len = ref.length; i < len; i++) {
-    ({ face_id, say } = ref[i]);
-    Query.faces.find(face_id).npc = { say };
+  Set.face.set(faces = __webpack_require__(/*! ../yaml/chr_face.yml */ "./__tests__/yaml/chr_face.yml"));
+  for (i = 0, len = faces.length; i < len; i++) {
+    o = faces[i];
+    o.aggregate = {
+      sow_auths: [],
+      mestypes: [],
+      folders: [],
+      roles: [],
+      lives: [],
+      log: {
+        date_min: 0xfffffffffffff,
+        date_max: -0xfffffffffffff,
+        story_ids: []
+      },
+      fav: {
+        _id: {
+          sow_auth_id: null
+        },
+        count: 0
+      }
+    };
   }
-  for (j = 0, len1 = order.length; j < len1; j++) {
-    key = order[j];
+  ref = __webpack_require__(/*! ../yaml/npc.yml */ "./__tests__/yaml/npc.yml");
+  for (j = 0, len1 = ref.length; j < len1; j++) {
+    ({ face_id, say } = ref[j]);
+    Set.face.find(face_id).npc = { say };
+  }
+  for (k = 0, len2 = order.length; k < len2; k++) {
+    key = order[k];
     o = __webpack_require__("./__tests__/yaml sync recursive ^\\.\\/cs_.*\\.yml$")(`./cs_${key}.yml`);
     Set.chr_set.append(o.chr_set);
     ({ chr_set_id } = o.chr_set);
@@ -820,14 +826,13 @@ Query.transaction_chr = State.transaction(function () {
     Set.chr_job.merge(o.chr_job, cs_key);
   }
   list = function () {
-    var k, len2, ref1, ref2, results;
-    ref1 = Query.faces.list;
+    var l, len3, ref1, results;
     results = [];
-    for (k = 0, len2 = ref1.length; k < len2; k++) {
-      face = ref1[k];
+    for (l = 0, len3 = faces.length; l < len3; l++) {
+      face = faces[l];
       chr_set_id = "all";
       face_id = face._id;
-      job = (ref2 = face.chr_jobs.list.sort("chr_set_idx")[0]) != null ? ref2.job : void 0;
+      job = (ref1 = face.chr_jobs.list.sort("chr_set_idx")[0]) != null ? ref1.job : void 0;
       if (job == null) {
         continue;
       }
@@ -2211,11 +2216,26 @@ module.exports = {
 "use strict";
 
 
-var $step, Finder, Format, Query, State, _, each, validate;
+var $step, Finder, Format, Query, State, _, each, each_by_id, validate;
 
 _ = __webpack_require__(/*! lodash */ "lodash");
 
 ({ State, Query, Format } = __webpack_require__(/*! ./mem.coffee */ "./src/mem.coffee"));
+
+each_by_id = function ({ list, depends }, from, process) {
+  var f, i, item, j, len, len1;
+  for (i = 0, len = depends.length; i < len; i++) {
+    f = depends[i];
+    f();
+  }
+  switch (from != null ? from.constructor : void 0) {
+    case Array:
+      for (j = 0, len1 = from.length; j < len1; j++) {
+        item = from[j];
+        process(item.id || item);
+      }
+  }
+};
 
 each = function ({ list, depends }, from, process) {
   var f, i, id, item, j, len, len1;
@@ -2356,33 +2376,12 @@ module.exports = Finder = class Finder {
     }
   }
 
-  remove(all, from) {
-    var $memory, hit, journal;
-    ({ $memory } = all);
-    journal = State.journal(this.$name);
-    hit = false;
-    each(this.$name, from, item => {
-      var old;
-      this.model.bless(item);
-      old = $memory[item.id];
-      if (old != null) {
-        this.model.delete(old.item);
-        delete journal.$memory[item.id];
-        delete $memory[item.id];
-        return hit = true;
-      }
-    });
-    if (hit != null) {
-      return this.clear_cache();
-    }
-  }
-
-  reset(all, from, parent) {
+  reset(journal, all, from, parent) {
     var $memory, item, key, news, old, results;
     ({ $memory } = all);
-    State.journal(this.$name).$memory = new Object(null);
+    journal.$memory = new Object(null);
     State.base(this.$name).$memory = all.$memory = news = new Object(null);
-    this.merge(all, from, parent);
+    this.merge(journal, all, from, parent);
     results = [];
     for (key in $memory) {
       old = $memory[key];
@@ -2396,14 +2395,14 @@ module.exports = Finder = class Finder {
     return results;
   }
 
-  merge(all, from, parent) {
-    var $memory, journal;
+  merge(journal, all, from, parent) {
+    var $memory;
     ({ $memory } = all);
-    journal = State.journal(this.$name);
     each(this.$name, from, item => {
       var o, old;
-      o = this.map.$deploy(this.model, this.$format, all.$sort, journal, item, parent);
       old = $memory[item.id];
+      this.model.$deploy(item, parent);
+      o = this.map.$deploy(this.model, this.$format, all.$sort, journal, item, parent);
       journal.$memory[item.id] = o;
       $memory[item.id] = o;
       if (old != null) {
@@ -2412,6 +2411,42 @@ module.exports = Finder = class Finder {
         this.model.create(item);
         return this.model.rowid++;
       }
+    });
+    return this.clear_cache();
+  }
+
+  remove(journal, all, ids) {
+    var $memory, hit;
+    ({ $memory } = all);
+    hit = false;
+    each_by_id(this.$name, ids, id => {
+      var old;
+      old = $memory[id];
+      if (old != null) {
+        this.model.delete(old.item);
+        delete journal.$memory[id];
+        delete $memory[id];
+        return hit = true;
+      }
+    });
+    if (hit != null) {
+      return this.clear_cache();
+    }
+  }
+
+  update(journal, all, ids, parent) {
+    var $memory;
+    ({ $memory } = all);
+    each_by_id(this.$name, ids, id => {
+      var o, old;
+      if (!(old = $memory[id])) {
+        return;
+      }
+      _.merge(old.item, parent);
+      o = this.map.$deploy(this.model, this.$format, all.$sort, journal, old.item, parent);
+      journal.$memory[id] = o;
+      $memory[id] = o;
+      return this.model.update(old.item, old.item);
     });
     return this.clear_cache();
   }
@@ -2553,7 +2588,6 @@ module.exports = Map = class Map {
       item,
       $group: []
     };
-    model.$deploy(item, parent);
     this.$deploy_reduce(model, item, $format, journal, o);
     this.$deploy_sort(model, item, $sort, journal);
     return o;
@@ -2896,7 +2930,9 @@ module.exports = Model = function () {
     static $deploy(item, parent) {
       var deploy, i, len, ref;
       this.bless(item);
-      Object.assign(item, parent);
+      if (parent) {
+        _.merge(item, parent);
+      }
       ref = this.$name.deploys;
       for (i = 0, len = ref.length; i < len; i++) {
         deploy = ref[i];
@@ -3202,9 +3238,7 @@ module.exports = Query = function () {
       for (i = 0, len = ids.length; i < len; i++) {
         id = ids[i];
         if (o = this.hash[id]) {
-          if (o) {
-            return o;
-          }
+          return o;
         }
       }
       return null;
@@ -3550,23 +3584,21 @@ module.exports = Rule = class Rule {
   relation_tree(key, ik) {
     var all;
     all = this.all;
-    this.use_cache(key, function (_id, n) {
+    this.use_cache(key, function (id, n) {
       var q;
       if (n) {
         q = all.where({
-          [`${ik}`]: _id
+          [`${ik}`]: id
         });
         return all[key](q.ids, n - 1);
       } else {
-        return all.where({
-          _id: _id
-        });
+        return all.where({ id });
       }
     });
     return this.model_property[key] = {
       enumerable: true,
       value: function (n) {
-        return all[key]([this._id], n);
+        return all[key]([this.id], n);
       }
     };
   }
@@ -3574,13 +3606,11 @@ module.exports = Rule = class Rule {
   relation_graph(key, ik) {
     var all;
     all = this.all;
-    this.use_cache(key, function (_id, n) {
-      var _ids, a, i, j, k, len, len1, q, ref;
-      q = all.where({
-        _id: _id
-      });
+    this.use_cache(key, function (id, n) {
+      var a, i, ids, j, k, len, len1, q, ref;
+      q = all.where({ id });
       if (n) {
-        _ids = [];
+        ids = [];
         ref = q.pluck(ik);
         for (i = 0, len = ref.length; i < len; i++) {
           a = ref[i];
@@ -3588,12 +3618,12 @@ module.exports = Rule = class Rule {
             for (j = 0, len1 = a.length; j < len1; j++) {
               k = a[j];
               if (k != null) {
-                _ids.push(k);
+                ids.push(k);
               }
             }
           }
         }
-        return all[key](_.uniq(_ids), n - 1);
+        return all[key](_.uniq(ids), n - 1);
       } else {
         return q;
       }
@@ -3601,7 +3631,7 @@ module.exports = Rule = class Rule {
     return this.model_property[key] = {
       enumerable: true,
       value: function (n) {
-        return all[key]([this._id], n);
+        return all[key]([this.id], n);
       }
     };
   }
@@ -3626,7 +3656,7 @@ module.exports = Rule = class Rule {
     }
     this.deploy(function () {
       var idx, j, len1, results, subids;
-      subids = this._id.split("-");
+      subids = this.id.split("-");
       this.idx = subids[keys.length];
       results = [];
       for (idx = j = 0, len1 = keys.length; j < len1; idx = ++j) {
@@ -3659,10 +3689,10 @@ module.exports = Rule = class Rule {
     name = rename(to);
     if (option.reverse) {
       ({ key = this.$name.ids, target = to } = option);
-      return this.relation_to_many(name.list, target, "in", "_id", key);
+      return this.relation_to_many(name.list, target, "in", "id", key);
     } else {
       ({ key = name.ids, target = name.list } = option);
-      return this.relation_to_many(name.list, target, "where", key, "_id");
+      return this.relation_to_many(name.list, target, "where", key, "id");
     }
   }
 
@@ -3670,7 +3700,7 @@ module.exports = Rule = class Rule {
     var key, name, target;
     name = rename(to);
     ({ key = this.$name.id, target = name.list } = option);
-    return this.relation_to_many(name.list, target, "where", "_id", key);
+    return this.relation_to_many(name.list, target, "where", "id", key);
   }
 
   tree(option = {}) {
@@ -3685,7 +3715,7 @@ module.exports = Rule = class Rule {
           not_leaf = _.uniq(this.pluck(fk));
           return this.where(function (o) {
             var ref;
-            return ref = o._id, indexOf.call(not_leaf, ref) < 0;
+            return ref = o.id, indexOf.call(not_leaf, ref) < 0;
           });
         }
       }
@@ -3696,7 +3726,7 @@ module.exports = Rule = class Rule {
     var cost, directed, ik;
     ({ directed, cost } = option);
     ik = this.$name.ids;
-    this.relation_to_many(this.$name.list, this.$name.list, "where", ik, "_id");
+    this.relation_to_many(this.$name.list, this.$name.list, "where", ik, "id");
     this.relation_graph("path", ik);
     if (!directed) {
       return true; // todo
@@ -3717,7 +3747,7 @@ module.exports = Rule = class Rule {
 "use strict";
 
 
-var Query, Set, State, _, f_clear, f_item, f_merge, f_remove, f_reset;
+var Query, Set, State, _, f_clear, f_common, f_item, f_update;
 
 _ = __webpack_require__(/*! lodash */ "lodash");
 
@@ -3725,16 +3755,20 @@ _ = __webpack_require__(/*! lodash */ "lodash");
 
 Query = __webpack_require__(/*! ./query.coffee */ "./src/query.coffee");
 
-f_reset = function (list, parent) {
-  return this.all._finder.reset(this.all, list, parent);
+f_common = function (type) {
+  return function (list, parent) {
+    var journal;
+    journal = State.journal(this.$name);
+    return this.all._finder[type](journal, this.all, list, parent);
+  };
 };
 
-f_merge = function (list, parent) {
-  return this.all._finder.merge(this.all, list, parent);
-};
-
-f_remove = function (list) {
-  return this.all._finder.remove(this.all, list);
+f_update = function (list, parent) {
+  var journal;
+  journal = State.journal(this.$name);
+  if (parent != null) {
+    return this.all._finder.update(journal, this.all, list, parent);
+  }
 };
 
 f_item = function (cb) {
@@ -3750,23 +3784,42 @@ f_clear = function () {
 };
 
 module.exports = Set = function () {
-  class Set {};
+  class Set {
+    find(...ids) {
+      var i, id, journal, len, o;
+      journal = State.journal(this.$name);
+      for (i = 0, len = ids.length; i < len; i++) {
+        id = ids[i];
+        if (!(o = this.all.$memory[id])) {
+          continue;
+        }
+        journal.$memory[id] = o;
+        return o.item;
+      }
+      return null;
+    }
 
-  Set.prototype.set = f_reset;
+  };
 
-  Set.prototype.reset = f_reset;
+  Set.prototype.set = f_common("reset");
 
-  Set.prototype.merge = f_merge;
+  Set.prototype.reset = f_common("reset");
 
-  Set.prototype.add = f_item(f_merge);
+  Set.prototype.merge = f_common("merge");
 
-  Set.prototype.append = f_item(f_merge);
+  Set.prototype.add = f_item(f_common("merge"));
 
-  Set.prototype.reject = f_remove;
+  Set.prototype.append = f_item(f_common("merge"));
 
-  Set.prototype.del = f_item(f_remove);
+  Set.prototype.reject = f_common("remove");
 
-  Set.prototype.remove = f_item(f_remove);
+  Set.prototype.del = f_item(f_common("remove"));
+
+  Set.prototype.remove = f_item(f_common("remove"));
+
+  Set.prototype.updates = f_update;
+
+  Set.prototype.update = f_item(f_update);
 
   Set.prototype.clear_cache = f_clear;
 

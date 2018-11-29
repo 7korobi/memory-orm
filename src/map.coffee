@@ -17,7 +17,6 @@ module.exports = class Map
   @$deploy: (model, $format, $sort, journal, item, parent)->
     o = { item, $group: [] }
 
-    model.$deploy item, parent
     @$deploy_reduce model, item, $format, journal, o
     @$deploy_sort   model, item, $sort,   journal
     o

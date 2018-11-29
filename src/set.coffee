@@ -2,14 +2,14 @@ _ = require "lodash"
 { State } = require "./index.coffee"
 Query = require "./query.coffee"
 
-f_reset = (list, parent)->
-  @all._finder.reset @all, list, parent
+f_common = (type)-> (list, parent)->
+  journal = State.journal(@$name)
+  @all._finder[type] journal, @all, list, parent
 
-f_merge = (list, parent)->
-  @all._finder.merge @all, list, parent
-
-f_remove = (list)->
-  @all._finder.remove @all, list
+f_update = (list, parent)->
+  journal = State.journal(@$name)
+  if parent?
+    @all._finder.update journal, @all, list, parent
 
 f_item = (cb)->
   (item, parent)->
@@ -21,17 +21,26 @@ f_clear = ->
 
 
 module.exports = class Set
-  set:           f_reset
-  reset:         f_reset
+  set:           f_common "reset"
+  reset:         f_common "reset"
 
-  merge:         f_merge
-  add:    f_item f_merge
-  append: f_item f_merge
+  merge:         f_common "merge"
+  add:    f_item f_common "merge"
+  append: f_item f_common "merge"
 
-  reject:        f_remove
-  del:    f_item f_remove
-  remove: f_item f_remove
+  reject:        f_common "remove"
+  del:    f_item f_common "remove"
+  remove: f_item f_common "remove"
+  updates:       f_update
+  update: f_item f_update
 
   clear_cache:   f_clear
   refresh:       f_clear
   rehash:        f_clear
+
+  find: (...ids)->
+    journal = State.journal(@$name)
+    for id in ids when o = @all.$memory[id]
+      journal.$memory[id] = o
+      return o.item
+    null

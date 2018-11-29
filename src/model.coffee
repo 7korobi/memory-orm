@@ -10,7 +10,8 @@ module.exports = class Model
 
   @$deploy: (item, parent)->
     @bless item
-    Object.assign item, parent
+    if parent
+      _.merge item, parent
     for deploy in @$name.deploys
       deploy.call item, @
     unless item.id

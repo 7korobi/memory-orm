@@ -10880,7 +10880,6 @@ list [
     "comment": "test",
     "name": "ボリス",
     "order": 1,
-    "summary_url": "/summary/faces/show?id=c49",
     "tag_ids": Array [
       "animal",
       "school",
@@ -10911,7 +10910,6 @@ list [
     },
     "name": "コリーン",
     "order": 2,
-    "summary_url": "/summary/faces/show?id=c38",
     "tag_ids": Array [
       "animal",
       "school",
@@ -10942,7 +10940,6 @@ list [
     },
     "name": "キャロライナ",
     "order": 3,
-    "summary_url": "/summary/faces/show?id=c77",
     "tag_ids": Array [
       "animal",
       "school",
@@ -10975,7 +10972,6 @@ list [
     },
     "name": "ダン",
     "order": 4,
-    "summary_url": "/summary/faces/show?id=c35",
     "tag_ids": Array [
       "animal",
       "school",
@@ -11006,7 +11002,6 @@ list [
     },
     "name": "ゼルダ",
     "order": 5,
-    "summary_url": "/summary/faces/show?id=c53",
     "tag_ids": Array [
       "animal",
       "school",
@@ -11039,7 +11034,6 @@ list [
     },
     "name": "フランシスカ",
     "order": 6,
-    "summary_url": "/summary/faces/show?id=c74",
     "tag_ids": Array [
       "animal",
       "school",
@@ -11070,7 +11064,6 @@ list [
     },
     "name": "ディーン",
     "order": 8,
-    "summary_url": "/summary/faces/show?id=c50",
     "tag_ids": Array [
       "animal",
       "school",
@@ -11102,7 +11095,6 @@ list [
     },
     "name": "ミッシェル",
     "order": 8.1,
-    "summary_url": "/summary/faces/show?id=c36",
     "tag_ids": Array [
       "animal",
       "school",
@@ -11134,7 +11126,6 @@ list [
     },
     "name": "モニカ",
     "order": 8.2,
-    "summary_url": "/summary/faces/show?id=c26",
     "tag_ids": Array [
       "animal",
       "school",
@@ -11165,7 +11156,6 @@ list [
     },
     "name": "ヒロシ",
     "order": 9,
-    "summary_url": "/summary/faces/show?id=c09",
     "tag_ids": Array [
       "animal",
       "school",
@@ -11198,7 +11188,6 @@ list [
     },
     "name": "パピヨン",
     "order": 10,
-    "summary_url": "/summary/faces/show?id=c55",
     "tag_ids": Array [
       "animal",
       "school",
@@ -11230,7 +11219,6 @@ list [
     },
     "name": "イアン",
     "order": 11,
-    "summary_url": "/summary/faces/show?id=c29",
     "tag_ids": Array [
       "animal",
       "school",
@@ -11261,7 +11249,6 @@ list [
     },
     "name": "バーナバス",
     "order": 12,
-    "summary_url": "/summary/faces/show?id=c12",
     "tag_ids": Array [
       "school",
       "giji",
@@ -11292,7 +11279,6 @@ list [
     },
     "name": "バーナバス",
     "order": 12,
-    "summary_url": "/summary/faces/show?id=r12",
     "tag_ids": Array [],
   },
   model {
@@ -11317,7 +11303,6 @@ list [
     },
     "name": "トニー",
     "order": 14,
-    "summary_url": "/summary/faces/show?id=c34",
     "tag_ids": Array [
       "animal",
       "animal",
@@ -11350,7 +11335,6 @@ list [
     },
     "name": "ドナルド",
     "order": 15,
-    "summary_url": "/summary/faces/show?id=c44",
     "tag_ids": Array [
       "animal",
       "animal",
@@ -11382,7 +11366,6 @@ list [
     },
     "name": "カルヴィン",
     "order": 16,
-    "summary_url": "/summary/faces/show?id=c11",
     "tag_ids": Array [
       "animal",
       "animal",
@@ -11423,7 +11406,6 @@ list [
       ],
     },
     "order": 17,
-    "summary_url": "/summary/faces/show?id=c10",
     "tag_ids": Array [
       "animal",
       "travel",
@@ -11457,7 +11439,6 @@ list [
     "comment": "",
     "name": "ドン",
     "order": 17.1,
-    "summary_url": "/summary/faces/show?id=t34",
     "tag_ids": Array [
       "travel",
     ],
@@ -11484,7 +11465,6 @@ list [
     },
     "name": "パティ",
     "order": 18,
-    "summary_url": "/summary/faces/show?id=c70",
     "tag_ids": Array [
       "animal",
       "school",
@@ -11516,7 +11496,6 @@ list [
     },
     "name": "ゴドウィン",
     "order": 19,
-    "summary_url": "/summary/faces/show?id=c56",
     "tag_ids": Array [
       "animal",
       "school",
@@ -11548,7 +11527,6 @@ list [
     },
     "name": "ティモシー",
     "order": 20,
-    "summary_url": "/summary/faces/show?id=c07",
     "tag_ids": Array [
       "animal",
       "school",
@@ -11579,7 +11557,6 @@ list [
     },
     "name": "ヤニク",
     "order": 21,
-    "summary_url": "/summary/faces/show?id=c41",
     "tag_ids": Array [
       "animal",
       "school",
@@ -11612,7 +11589,6 @@ list [
     },
     "name": "ペラジー",
     "order": 21.1,
-    "summary_url": "/summary/faces/show?id=c47",
     "tag_ids": Array [
       "animal",
       "school",
@@ -11645,7 +11621,6 @@ list [
     },
     "name": "ブルーノ",
     "order": 22,
-    "summary_url": "/summary/faces/show?id=c58",
     "tag_ids": Array [
       "animal",
       "school",
@@ -11677,7 +11652,6 @@ list [
     },
     "name": "ユリシーズ",
     "order": 23,
-    "summary_url": "/summary/faces/show?id=c17",
     "tag_ids": Array [
       "animal",
       "school",
@@ -11708,7 +11682,6 @@ list [
     },
     "name": "シビル",
     "order": 24,
-    "summary_url": "/summary/faces/show?id=c39",
     "tag_ids": Array [
       "animal",
       "school",
@@ -11740,7 +11713,6 @@ list [
     },
     "name": "ハワード",
     "order": 25,
-    "summary_url": "/summary/faces/show?id=c40",
     "tag_ids": Array [
       "animal",
       "school",
@@ -11771,7 +11743,6 @@ list [
     },
     "name": "ズリエル",
     "order": 26,
-    "summary_url": "/summary/faces/show?id=c65",
     "tag_ids": Array [
       "animal",
       "school",
@@ -11802,7 +11773,6 @@ list [
     },
     "name": "ムパムピス",
     "order": 27,
-    "summary_url": "/summary/faces/show?id=c59",
     "tag_ids": Array [
       "animal",
       "school",
@@ -11833,7 +11803,6 @@ list [
     },
     "name": "ツェツィーリヤ",
     "order": 28,
-    "summary_url": "/summary/faces/show?id=c57",
     "tag_ids": Array [
       "animal",
       "school",
@@ -11865,7 +11834,6 @@ list [
     },
     "name": "ノーリーン",
     "order": 29,
-    "summary_url": "/summary/faces/show?id=c04",
     "tag_ids": Array [
       "animal",
       "animal",
@@ -11897,7 +11865,6 @@ list [
     },
     "name": "ゲイル",
     "order": 30,
-    "summary_url": "/summary/faces/show?id=c46",
     "tag_ids": Array [
       "animal",
       "school",
@@ -11930,7 +11897,6 @@ list [
     },
     "name": "レティーシャ",
     "order": 31,
-    "summary_url": "/summary/faces/show?id=c14",
     "tag_ids": Array [
       "animal",
       "school",
@@ -11961,7 +11927,6 @@ list [
     },
     "name": "ラルフ",
     "order": 33,
-    "summary_url": "/summary/faces/show?id=c42",
     "tag_ids": Array [
       "animal",
       "school",
@@ -11992,7 +11957,6 @@ list [
     },
     "name": "セシル",
     "order": 34,
-    "summary_url": "/summary/faces/show?id=c37",
     "tag_ids": Array [
       "animal",
       "school",
@@ -12024,7 +11988,6 @@ list [
     },
     "name": "ビリー",
     "order": 35,
-    "summary_url": "/summary/faces/show?id=c75",
     "tag_ids": Array [
       "animal",
       "school",
@@ -12064,7 +12027,6 @@ list [
       ],
     },
     "order": 36,
-    "summary_url": "/summary/faces/show?id=c32",
     "tag_ids": Array [
       "animal",
       "school",
@@ -12096,7 +12058,6 @@ list [
     },
     "name": "ホリー",
     "order": 37,
-    "summary_url": "/summary/faces/show?id=c33",
     "tag_ids": Array [
       "animal",
       "school",
@@ -12128,7 +12089,6 @@ list [
     },
     "name": "アルフレッド",
     "order": 38,
-    "summary_url": "/summary/faces/show?id=c02",
     "tag_ids": Array [
       "animal",
       "animal",
@@ -12160,7 +12120,6 @@ list [
     },
     "name": "クリストファー",
     "order": 39,
-    "summary_url": "/summary/faces/show?id=c66",
     "tag_ids": Array [
       "animal",
       "school",
@@ -12193,7 +12152,6 @@ list [
     },
     "name": "ナタリア",
     "order": 41,
-    "summary_url": "/summary/faces/show?id=c24",
     "tag_ids": Array [
       "animal",
       "school",
@@ -12225,7 +12183,6 @@ list [
     },
     "name": "マーゴ",
     "order": 42,
-    "summary_url": "/summary/faces/show?id=c79",
     "tag_ids": Array [
       "animal",
       "school",
@@ -12257,7 +12214,6 @@ list [
     },
     "name": "ヌマタロウ",
     "order": 43,
-    "summary_url": "/summary/faces/show?id=c61",
     "tag_ids": Array [
       "animal",
       "school",
@@ -12289,7 +12245,6 @@ list [
     },
     "name": "チャールズ",
     "order": 44,
-    "summary_url": "/summary/faces/show?id=c23",
     "tag_ids": Array [
       "animal",
       "school",
@@ -12321,7 +12276,6 @@ list [
     "comment": "",
     "name": "ケイト",
     "order": 47,
-    "summary_url": "/summary/faces/show?id=c28",
     "tag_ids": Array [
       "animal",
       "school",
@@ -12358,7 +12312,6 @@ list [
       ],
     },
     "order": 48,
-    "summary_url": "/summary/faces/show?id=c68",
     "tag_ids": Array [
       "animal",
       "school",
@@ -12392,7 +12345,6 @@ list [
     },
     "name": "フィリップ",
     "order": 49,
-    "summary_url": "/summary/faces/show?id=c30",
     "tag_ids": Array [
       "animal",
       "school",
@@ -12425,7 +12377,6 @@ list [
     },
     "name": "ニール",
     "order": 50,
-    "summary_url": "/summary/faces/show?id=c21",
     "tag_ids": Array [
       "animal",
       "school",
@@ -12458,7 +12409,6 @@ list [
     },
     "name": "ギリアン",
     "order": 52,
-    "summary_url": "/summary/faces/show?id=c52",
     "tag_ids": Array [
       "animal",
       "school",
@@ -12497,7 +12447,6 @@ list [
       ],
     },
     "order": 53,
-    "summary_url": "/summary/faces/show?id=c51",
     "tag_ids": Array [
       "animal",
       "school",
@@ -12530,7 +12479,6 @@ list [
     "comment": "",
     "name": "メアリー",
     "order": 55,
-    "summary_url": "/summary/faces/show?id=c01",
     "tag_ids": Array [
       "animal",
       "animal",
@@ -12563,7 +12511,6 @@ list [
     },
     "name": "ギネス",
     "order": 56,
-    "summary_url": "/summary/faces/show?id=c69",
     "tag_ids": Array [
       "animal",
       "school",
@@ -12595,7 +12542,6 @@ list [
     },
     "name": "ピッパ",
     "order": 57,
-    "summary_url": "/summary/faces/show?id=c63",
     "tag_ids": Array [
       "animal",
       "school",
@@ -12632,7 +12578,6 @@ list [
       ],
     },
     "order": 59,
-    "summary_url": "/summary/faces/show?id=c05",
     "tag_ids": Array [
       "animal",
       "animal",
@@ -12664,7 +12609,6 @@ list [
     },
     "name": "ワット",
     "order": 60,
-    "summary_url": "/summary/faces/show?id=c22",
     "tag_ids": Array [
       "animal",
       "school",
@@ -12695,7 +12639,6 @@ list [
     },
     "name": "ヴェラ",
     "order": 61,
-    "summary_url": "/summary/faces/show?id=c62",
     "tag_ids": Array [
       "animal",
       "school",
@@ -12727,7 +12670,6 @@ list [
     },
     "name": "ロミオ",
     "order": 62,
-    "summary_url": "/summary/faces/show?id=c13",
     "tag_ids": Array [
       "animal",
       "school",
@@ -12758,7 +12700,6 @@ list [
     },
     "name": "エマ",
     "order": 63,
-    "summary_url": "/summary/faces/show?id=c18",
     "tag_ids": Array [
       "animal",
       "school",
@@ -12789,7 +12730,6 @@ list [
     },
     "name": "リンダ",
     "order": 65,
-    "summary_url": "/summary/faces/show?id=c27",
     "tag_ids": Array [
       "animal",
       "school",
@@ -12829,7 +12769,6 @@ list [
       ],
     },
     "order": 66,
-    "summary_url": "/summary/faces/show?id=c08",
     "tag_ids": Array [
       "animal",
       "school",
@@ -12866,7 +12805,6 @@ list [
       ],
     },
     "order": 67,
-    "summary_url": "/summary/faces/show?id=c19",
     "tag_ids": Array [
       "animal",
       "school",
@@ -12898,7 +12836,6 @@ list [
     },
     "name": "ノックス",
     "order": 70,
-    "summary_url": "/summary/faces/show?id=c71",
     "tag_ids": Array [
       "animal",
       "school",
@@ -12930,7 +12867,6 @@ list [
     },
     "name": "スティーブン",
     "order": 71,
-    "summary_url": "/summary/faces/show?id=c03",
     "tag_ids": Array [
       "animal",
       "animal",
@@ -12962,7 +12898,6 @@ list [
     },
     "name": "ガストン",
     "order": 72,
-    "summary_url": "/summary/faces/show?id=c43",
     "tag_ids": Array [
       "animal",
       "school",
@@ -12993,7 +12928,6 @@ list [
     },
     "name": "ウェーズリー",
     "order": 73,
-    "summary_url": "/summary/faces/show?id=c15",
     "tag_ids": Array [
       "animal",
       "school",
@@ -13025,7 +12959,6 @@ list [
     },
     "name": "ザック",
     "order": 75,
-    "summary_url": "/summary/faces/show?id=c54",
     "tag_ids": Array [
       "animal",
       "school",
@@ -13057,7 +12990,6 @@ list [
     },
     "name": "ルーカス",
     "order": 77,
-    "summary_url": "/summary/faces/show?id=c25",
     "tag_ids": Array [
       "animal",
       "school",
@@ -13096,7 +13028,6 @@ list [
       ],
     },
     "order": 79,
-    "summary_url": "/summary/faces/show?id=c20",
     "tag_ids": Array [
       "animal",
       "school",
@@ -13133,7 +13064,6 @@ list [
       ],
     },
     "order": 81,
-    "summary_url": "/summary/faces/show?id=c72",
     "tag_ids": Array [
       "animal",
       "school",
@@ -13165,7 +13095,6 @@ list [
     "comment": "年末カウントダウン♪",
     "name": "シメオン",
     "order": 82,
-    "summary_url": "/summary/faces/show?id=c105",
     "tag_ids": Array [
       "animal",
       "school",
@@ -13197,7 +13126,6 @@ list [
     },
     "name": "テッド",
     "order": 87,
-    "summary_url": "/summary/faces/show?id=c80",
     "tag_ids": Array [
       "animal",
       "school",
@@ -13230,7 +13158,6 @@ list [
     "comment": "2011/12/11",
     "name": "レオナルド",
     "order": 89,
-    "summary_url": "/summary/faces/show?id=c96",
     "tag_ids": Array [
       "animal",
       "school",
@@ -13263,7 +13190,6 @@ list [
     "comment": "年末カウントダウン♪",
     "name": "ヒュー",
     "order": 89,
-    "summary_url": "/summary/faces/show?id=c104",
     "tag_ids": Array [
       "animal",
       "school",
@@ -13295,7 +13221,6 @@ list [
     "comment": "年末カウントダウン♪",
     "name": "ワンダ",
     "order": 90,
-    "summary_url": "/summary/faces/show?id=c106",
     "tag_ids": Array [
       "animal",
       "school",
@@ -13328,7 +13253,6 @@ list [
     "comment": "2011/12/11",
     "name": "モリス",
     "order": 91,
-    "summary_url": "/summary/faces/show?id=c95",
     "tag_ids": Array [
       "animal",
       "school",
@@ -13361,7 +13285,6 @@ list [
     "comment": "年末カウントダウン♪",
     "name": "ブローリン",
     "order": 91,
-    "summary_url": "/summary/faces/show?id=c108",
     "tag_ids": Array [
       "animal",
       "school",
@@ -13394,7 +13317,6 @@ list [
     "comment": "",
     "name": "リー",
     "order": 92,
-    "summary_url": "/summary/faces/show?id=c110",
     "tag_ids": Array [
       "giji",
       "immoral",
@@ -13425,7 +13347,6 @@ list [
     "comment": "2011/12/14 超常現象はあるんだ…",
     "name": "ジェフ",
     "order": 93,
-    "summary_url": "/summary/faces/show?id=c97",
     "tag_ids": Array [
       "animal",
       "school",
@@ -13459,7 +13380,6 @@ list [
     "comment": "2011/12/29 この髭はぜったいワックス使ってる。",
     "name": "オズワルド",
     "order": 95,
-    "summary_url": "/summary/faces/show?id=c98",
     "tag_ids": Array [
       "animal",
       "school",
@@ -13492,7 +13412,6 @@ list [
     "comment": "2012/12/30 スポーツ系中学生くらいに見える",
     "name": "グレッグ",
     "order": 97,
-    "summary_url": "/summary/faces/show?id=c100",
     "tag_ids": Array [
       "animal",
       "school",
@@ -13524,7 +13443,6 @@ list [
     "comment": "2011/12/30 美人さん♪",
     "name": "クラリッサ",
     "order": 99,
-    "summary_url": "/summary/faces/show?id=c101",
     "tag_ids": Array [
       "animal",
       "school",
@@ -13557,7 +13475,6 @@ list [
     "comment": "！？",
     "name": "ニコラス",
     "order": 112,
-    "summary_url": "/summary/faces/show?id=c112",
     "tag_ids": Array [
       "giji",
       "elegant",
@@ -13587,7 +13504,6 @@ list [
     "comment": "８８件のご応募、ありがとう。そして、ありがとう。",
     "name": "モンド",
     "order": 114,
-    "summary_url": "/summary/faces/show?id=c114",
     "tag_ids": Array [
       "giji",
       "government",
@@ -13618,7 +13534,6 @@ list [
     "comment": "じつは、牧場育ちらしいよ。",
     "name": "マリオ",
     "order": 115,
-    "summary_url": "/summary/faces/show?id=c115",
     "tag_ids": Array [
       "giji",
       "guild",
@@ -13649,7 +13564,6 @@ list [
     "comment": "",
     "name": "メルヤ",
     "order": 116,
-    "summary_url": "/summary/faces/show?id=c116",
     "tag_ids": Array [
       "giji",
       "medical",
@@ -13680,7 +13594,6 @@ list [
     "comment": "",
     "name": "ルパート",
     "order": 117,
-    "summary_url": "/summary/faces/show?id=c117",
     "tag_ids": Array [
       "giji",
       "road",
@@ -13711,7 +13624,6 @@ list [
     "comment": "",
     "name": "ノア",
     "order": 120,
-    "summary_url": "/summary/faces/show?id=c120",
     "tag_ids": Array [
       "giji",
       "servant",
@@ -13742,7 +13654,6 @@ list [
     "comment": "かかとって意味らしい　フェチっぽいね！",
     "name": "フェルゼ",
     "order": 123,
-    "summary_url": "/summary/faces/show?id=c123",
     "tag_ids": Array [
       "giji",
       "young",
@@ -13772,7 +13683,6 @@ list [
     "comment": "",
     "name": "セイルズ",
     "order": 124,
-    "summary_url": "/summary/faces/show?id=c124",
     "tag_ids": Array [
       "giji",
       "middle",
@@ -13802,7 +13712,6 @@ list [
     "comment": "",
     "name": "ピスティオ",
     "order": 125,
-    "summary_url": "/summary/faces/show?id=c125",
     "tag_ids": Array [
       "giji",
       "young",
@@ -13832,7 +13741,6 @@ list [
     "comment": "2011/12/06",
     "name": "ケヴィン",
     "order": 125.2,
-    "summary_url": "/summary/faces/show?id=c90",
     "tag_ids": Array [
       "animal",
       "school",
@@ -13866,7 +13774,6 @@ list [
     "comment": "2011/12/05",
     "name": "ピエール",
     "order": 125.8,
-    "summary_url": "/summary/faces/show?id=c88",
     "tag_ids": Array [
       "animal",
       "school",
@@ -13899,7 +13806,6 @@ list [
     "comment": "",
     "name": "ロイエ",
     "order": 126,
-    "summary_url": "/summary/faces/show?id=c126",
     "tag_ids": Array [
       "giji",
       "young",
@@ -13929,7 +13835,6 @@ list [
     "comment": null,
     "name": "ザーゴ",
     "order": 127,
-    "summary_url": "/summary/faces/show?id=c127",
     "tag_ids": Array [
       "giji",
       "young",
@@ -13959,7 +13864,6 @@ list [
     "comment": null,
     "name": "ペトラ",
     "order": 128,
-    "summary_url": "/summary/faces/show?id=c128",
     "tag_ids": Array [
       "giji",
       "young",
@@ -13989,7 +13893,6 @@ list [
     "comment": null,
     "name": "ヌヴィル",
     "order": 129,
-    "summary_url": "/summary/faces/show?id=c129",
     "tag_ids": Array [
       "giji",
       "middle",
@@ -14018,7 +13921,6 @@ list [
     },
     "name": "マリアンヌ",
     "order": 900.127,
-    "summary_url": "/summary/faces/show?id=c16",
     "tag_ids": Array [
       "animal",
       "school",
@@ -14052,7 +13954,6 @@ list [
     "comment": "2011/12/06",
     "name": "カトリーナ",
     "order": 900.128,
-    "summary_url": "/summary/faces/show?id=c89",
     "tag_ids": Array [
       "animal",
       "school",
@@ -14084,7 +13985,6 @@ list [
     "comment": "2011/12/05",
     "name": "ブレンダ",
     "order": 900.129,
-    "summary_url": "/summary/faces/show?id=c84",
     "tag_ids": Array [
       "animal",
       "school",
@@ -14116,7 +14016,6 @@ list [
     "comment": "2011/12/05",
     "name": "ハナ",
     "order": 900.13,
-    "summary_url": "/summary/faces/show?id=c85",
     "tag_ids": Array [
       "animal",
       "school",
@@ -14149,7 +14048,6 @@ list [
     "comment": "2011/12/06 姦しい奥様♪",
     "name": "ドロシー",
     "order": 900.143,
-    "summary_url": "/summary/faces/show?id=c91",
     "tag_ids": Array [
       "animal",
       "school",
@@ -14182,7 +14080,6 @@ list [
     "comment": "2011/12/06 姦し娘ーず♪",
     "name": "セレスト",
     "order": 900.144,
-    "summary_url": "/summary/faces/show?id=c92",
     "tag_ids": Array [
       "animal",
       "school",
@@ -14215,7 +14112,6 @@ list [
     "comment": "2011/12/06 えー○○が許されるのは小学生までだよねー♪",
     "name": "ベッキー",
     "order": 900.145,
-    "summary_url": "/summary/faces/show?id=c93",
     "tag_ids": Array [
       "animal",
       "school",
@@ -14247,7 +14143,6 @@ list [
     },
     "name": "ロビン",
     "order": 900.148,
-    "summary_url": "/summary/faces/show?id=c82",
     "tag_ids": Array [
       "animal",
       "school",
@@ -14278,7 +14173,6 @@ list [
     },
     "name": "ネイサン",
     "order": 900.15,
-    "summary_url": "/summary/faces/show?id=c78",
     "tag_ids": Array [
       "animal",
       "school",
@@ -14310,7 +14204,6 @@ list [
     "comment": "年末カウントダウン♪",
     "name": "ウォーレン",
     "order": 900.155,
-    "summary_url": "/summary/faces/show?id=c102",
     "tag_ids": Array [
       "animal",
       "school",
@@ -14342,7 +14235,6 @@ list [
     "comment": "ー仁ー",
     "name": "ミナカタ",
     "order": 900.156,
-    "summary_url": "/summary/faces/show?id=t03",
     "tag_ids": Array [
       "travel",
     ],
@@ -14370,7 +14262,6 @@ list [
     "comment": "",
     "name": "ホウイチ",
     "order": 900.158,
-    "summary_url": "/summary/faces/show?id=t31",
     "tag_ids": Array [
       "travel",
     ],
@@ -14398,7 +14289,6 @@ list [
     "comment": "ブッカ・ホワイト氏から。",
     "name": "ブッカ",
     "order": 900.159,
-    "summary_url": "/summary/faces/show?id=c121",
     "tag_ids": Array [
       "giji",
       "farm",
@@ -14427,7 +14317,6 @@ list [
     "comment": "",
     "name": "ツヅラ",
     "order": 900.16,
-    "summary_url": "/summary/faces/show?id=t53",
     "tag_ids": Array [
       "travel",
     ],
@@ -14455,7 +14344,6 @@ list [
     "comment": "リニューアル記念！ 弟がいるという噂が…",
     "name": "スージー",
     "order": 900.165,
-    "summary_url": "/summary/faces/show?id=c111",
     "tag_ids": Array [
       "giji",
       "apartment",
@@ -14487,7 +14375,6 @@ list [
     "comment": "2011/12/11",
     "name": "ダーラ",
     "order": 900.17,
-    "summary_url": "/summary/faces/show?id=c94",
     "tag_ids": Array [
       "animal",
       "school",
@@ -14521,7 +14408,6 @@ list [
     "comment": "中国女性名",
     "name": "麻雀",
     "order": 900.175,
-    "summary_url": "/summary/faces/show?id=g05",
     "tag_ids": Array [
       "asia",
     ],
@@ -14549,7 +14435,6 @@ list [
     "comment": "年末カウントダウン♪",
     "name": "ラディスラヴァ",
     "order": 900.18,
-    "summary_url": "/summary/faces/show?id=c109",
     "tag_ids": Array [
       "animal",
       "school",
@@ -14580,7 +14465,6 @@ list [
     },
     "name": "ヘクター",
     "order": 900.185,
-    "summary_url": "/summary/faces/show?id=c64",
     "tag_ids": Array [
       "animal",
       "school",
@@ -14611,7 +14495,6 @@ list [
     },
     "name": "サイラス",
     "order": 900.19,
-    "summary_url": "/summary/faces/show?id=c81",
     "tag_ids": Array [
       "animal",
       "school",
@@ -14644,7 +14527,6 @@ list [
     },
     "name": "ローズマリー",
     "order": 900.195,
-    "summary_url": "/summary/faces/show?id=c73",
     "tag_ids": Array [
       "animal",
       "school",
@@ -14676,7 +14558,6 @@ list [
     },
     "name": "ポーチュラカ",
     "order": 900.197,
-    "summary_url": "/summary/faces/show?id=c60",
     "tag_ids": Array [
       "animal",
       "school",
@@ -14717,7 +14598,6 @@ list [
       ],
     },
     "order": 900.2,
-    "summary_url": "/summary/faces/show?id=c67",
     "tag_ids": Array [
       "animal",
       "school",
@@ -14749,7 +14629,6 @@ list [
     },
     "name": "ジョージ",
     "order": 900.202,
-    "summary_url": "/summary/faces/show?id=c76",
     "tag_ids": Array [
       "animal",
       "school",
@@ -14782,7 +14661,6 @@ list [
     "comment": "年末カウントダウン♪",
     "name": "イヴォン",
     "order": 900.205,
-    "summary_url": "/summary/faces/show?id=c107",
     "tag_ids": Array [
       "animal",
       "school",
@@ -14815,7 +14693,6 @@ list [
     "comment": "",
     "name": "イスルギ",
     "order": 900.208,
-    "summary_url": "/summary/faces/show?id=t35",
     "tag_ids": Array [
       "travel",
     ],
@@ -14843,7 +14720,6 @@ list [
     "comment": "",
     "name": "オーレリア",
     "order": 900.21,
-    "summary_url": "/summary/faces/show?id=c119",
     "tag_ids": Array [
       "giji",
       "ecclesia",
@@ -14873,7 +14749,6 @@ list [
     "comment": "阿片窟からきました",
     "name": "デメテル",
     "order": 900.213,
-    "summary_url": "/summary/faces/show?id=mad01",
     "tag_ids": Array [
       "marchen",
     ],
@@ -14901,7 +14776,6 @@ list [
     "comment": "台湾男性名 越南の名前も探したかったが、見つからぬ…",
     "name": "志偉",
     "order": 900.215,
-    "summary_url": "/summary/faces/show?id=g02",
     "tag_ids": Array [
       "asia",
     ],
@@ -14929,7 +14803,6 @@ list [
     "comment": "2011/12/05",
     "name": "エリアス",
     "order": 900.217,
-    "summary_url": "/summary/faces/show?id=c87",
     "tag_ids": Array [
       "animal",
       "school",
@@ -14962,7 +14835,6 @@ list [
     "comment": "阿片窟からきました",
     "name": "シーシャ",
     "order": 900.22,
-    "summary_url": "/summary/faces/show?id=mad03",
     "tag_ids": Array [
       "marchen",
     ],
@@ -14989,7 +14861,6 @@ list [
     },
     "name": "プリシラ",
     "order": 900.222,
-    "summary_url": "/summary/faces/show?id=c45",
     "tag_ids": Array [
       "animal",
       "school",
@@ -15021,7 +14892,6 @@ list [
     "comment": "海賊戦隊ゴーカイジャー",
     "name": "ミルフィ",
     "order": 900.224,
-    "summary_url": "/summary/faces/show?id=t08",
     "tag_ids": Array [
       "travel",
     ],
@@ -15049,7 +14919,6 @@ list [
     "comment": "",
     "name": "フローラ",
     "order": 900.226,
-    "summary_url": "/summary/faces/show?id=c122",
     "tag_ids": Array [
       "giji",
       "young",
@@ -15078,7 +14947,6 @@ list [
     },
     "name": "ビアンカ",
     "order": 900.228,
-    "summary_url": "/summary/faces/show?id=c48",
     "tag_ids": Array [
       "animal",
       "school",
@@ -15111,7 +14979,6 @@ list [
     "comment": "後悔あとをたたず",
     "name": "ルグレ",
     "order": 900.2302,
-    "summary_url": "/summary/faces/show?id=mad10",
     "tag_ids": Array [
       "marchen",
     ],
@@ -15139,7 +15006,6 @@ list [
     "comment": "ええじゃないかええじゃないかー！",
     "name": "オルギア",
     "order": 900.2304,
-    "summary_url": "/summary/faces/show?id=mad11",
     "tag_ids": Array [
       "marchen",
     ],
@@ -15167,7 +15033,6 @@ list [
     "comment": "",
     "name": "ユージン",
     "order": 900.2306,
-    "summary_url": "/summary/faces/show?id=c118",
     "tag_ids": Array [
       "giji",
       "river",
@@ -15198,7 +15063,6 @@ list [
     "comment": "リニューアル記念！",
     "name": "ジェレミー",
     "order": 900.2308,
-    "summary_url": "/summary/faces/show?id=c113",
     "tag_ids": Array [
       "giji",
       "apartment",
@@ -15230,7 +15094,6 @@ list [
     "comment": "2011/12/05",
     "name": "ホレーショー",
     "order": 900.233,
-    "summary_url": "/summary/faces/show?id=c86",
     "tag_ids": Array [
       "animal",
       "school",
@@ -15263,7 +15126,6 @@ list [
     "comment": "年末カウントダウン♪",
     "name": "ナンシー",
     "order": 900.234,
-    "summary_url": "/summary/faces/show?id=c103",
     "tag_ids": Array [
       "animal",
       "school",
@@ -15296,7 +15158,6 @@ list [
     "comment": "",
     "name": "パカロロ",
     "order": 900.235,
-    "summary_url": "/summary/faces/show?id=mad12",
     "tag_ids": Array [
       "marchen",
     ],
@@ -15324,7 +15185,6 @@ list [
     "comment": "阿片窟からきました",
     "name": "アヤワスカ",
     "order": 900.236,
-    "summary_url": "/summary/faces/show?id=mad06",
     "tag_ids": Array [
       "marchen",
     ],
@@ -15366,7 +15226,6 @@ list [
       ],
     },
     "order": 900.24,
-    "summary_url": "/summary/faces/show?id=c83",
     "tag_ids": Array [
       "marchen",
       "animal",
@@ -15400,7 +15259,6 @@ list [
     },
     "name": "ネル",
     "order": 900.25,
-    "summary_url": "/summary/faces/show?id=c31",
     "tag_ids": Array [
       "animal",
       "school",
@@ -15438,7 +15296,6 @@ list [
       ],
     },
     "order": 900.26,
-    "summary_url": "/summary/faces/show?id=c99",
     "tag_ids": Array [
       "animal",
       "school",
@@ -15472,7 +15329,6 @@ list [
     "comment": "阿片窟からきました",
     "name": "エルゴット",
     "order": 900.27,
-    "summary_url": "/summary/faces/show?id=mad02",
     "tag_ids": Array [
       "marchen",
     ],
@@ -15518,7 +15374,6 @@ list [
       ],
     },
     "order": 900.28,
-    "summary_url": "/summary/faces/show?id=mad05",
     "tag_ids": Array [
       "marchen",
     ],
@@ -15546,7 +15401,6 @@ list [
     "comment": "中国女性名",
     "name": "露蝶",
     "order": 10001,
-    "summary_url": "/summary/faces/show?id=g01",
     "tag_ids": Array [
       "asia",
     ],
@@ -15587,7 +15441,6 @@ list [
       ],
     },
     "order": 10003,
-    "summary_url": "/summary/faces/show?id=g03",
     "tag_ids": Array [
       "asia",
     ],
@@ -15615,7 +15468,6 @@ list [
     "comment": "里帰り",
     "name": "沼太郎",
     "order": 10004,
-    "summary_url": "/summary/faces/show?id=gc61",
     "tag_ids": Array [
       "asia",
     ],
@@ -15643,7 +15495,6 @@ list [
     "comment": "台湾男性名",
     "name": "攻芸",
     "order": 10005,
-    "summary_url": "/summary/faces/show?id=g04",
     "tag_ids": Array [
       "asia",
     ],
@@ -15671,7 +15522,6 @@ list [
     "comment": "ダリダイ・オッチギン",
     "name": "黍炉",
     "order": 10007,
-    "summary_url": "/summary/faces/show?id=g06",
     "tag_ids": Array [
       "asia",
     ],
@@ -15699,7 +15549,6 @@ list [
     "comment": "ロシア女性名",
     "name": "ジリヤ",
     "order": 10008,
-    "summary_url": "/summary/faces/show?id=g07",
     "tag_ids": Array [
       "asia",
     ],
@@ -15727,7 +15576,6 @@ list [
     "comment": "Иван-дурак",
     "name": "イワン",
     "order": 10009,
-    "summary_url": "/summary/faces/show?id=g08",
     "tag_ids": Array [
       "asia",
     ],
@@ -15755,7 +15603,6 @@ list [
     "comment": "阿片窟からきました",
     "name": "ドリベル",
     "order": 20004,
-    "summary_url": "/summary/faces/show?id=mad04",
     "tag_ids": Array [
       "marchen",
     ],
@@ -15783,7 +15630,6 @@ list [
     "comment": "阿片窟からきました",
     "name": "ダイミ",
     "order": 20007,
-    "summary_url": "/summary/faces/show?id=mad07",
     "tag_ids": Array [
       "marchen",
     ],
@@ -15811,7 +15657,6 @@ list [
     "comment": "阿片窟からきました",
     "name": "エフェドラ",
     "order": 20008,
-    "summary_url": "/summary/faces/show?id=mad08",
     "tag_ids": Array [
       "marchen",
     ],
@@ -15839,7 +15684,6 @@ list [
     "comment": "ウパニシャッドの精神で",
     "name": "カナビス",
     "order": 20009,
-    "summary_url": "/summary/faces/show?id=mad09",
     "tag_ids": Array [
       "marchen",
     ],
@@ -15867,7 +15711,6 @@ list [
     "comment": "時をかける少女",
     "name": "チアキ",
     "order": 30001,
-    "summary_url": "/summary/faces/show?id=t01",
     "tag_ids": Array [
       "travel",
     ],
@@ -15895,7 +15738,6 @@ list [
     "comment": "夏への扉",
     "name": "リッキィ",
     "order": 30002,
-    "summary_url": "/summary/faces/show?id=t02",
     "tag_ids": Array [
       "travel",
     ],
@@ -15923,7 +15765,6 @@ list [
     "comment": "サラ・コナー・クロニクルズ",
     "name": "カイル",
     "order": 30004,
-    "summary_url": "/summary/faces/show?id=t04",
     "tag_ids": Array [
       "travel",
     ],
@@ -15951,7 +15792,6 @@ list [
     "comment": "バック・トゥ・ザ・フューチャー",
     "name": "ジェニファー",
     "order": 30005,
-    "summary_url": "/summary/faces/show?id=t05",
     "tag_ids": Array [
       "travel",
     ],
@@ -15979,7 +15819,6 @@ list [
     "comment": "トランスフォーマー",
     "name": "サミュエル",
     "order": 30006,
-    "summary_url": "/summary/faces/show?id=t06",
     "tag_ids": Array [
       "travel",
     ],
@@ -16007,7 +15846,6 @@ list [
     "comment": "時をかける少女",
     "name": "ゴロウ",
     "order": 30009,
-    "summary_url": "/summary/faces/show?id=t09",
     "tag_ids": Array [
       "travel",
     ],
@@ -16035,7 +15873,6 @@ list [
     "comment": "",
     "name": "シュンタロ",
     "order": 30009,
-    "summary_url": "/summary/faces/show?id=t37",
     "tag_ids": Array [
       "travel",
     ],
@@ -16063,7 +15900,6 @@ list [
     "comment": "ゼルダの伝説 ムジュラの仮面",
     "name": "トレイル",
     "order": 30010,
-    "summary_url": "/summary/faces/show?id=t10",
     "tag_ids": Array [
       "travel",
     ],
@@ -16091,7 +15927,6 @@ list [
     "comment": "オーロラの彼方へ",
     "name": "フランク",
     "order": 30012,
-    "summary_url": "/summary/faces/show?id=t12",
     "tag_ids": Array [
       "travel",
     ],
@@ -16119,7 +15954,6 @@ list [
     "comment": "フラッシュフォワード",
     "name": "ジャニス",
     "order": 30013,
-    "summary_url": "/summary/faces/show?id=t13",
     "tag_ids": Array [
       "travel",
     ],
@@ -16147,7 +15981,6 @@ list [
     "comment": "吾輩は猫である。",
     "name": "クシャミ",
     "order": 30014,
-    "summary_url": "/summary/faces/show?id=t14",
     "tag_ids": Array [
       "travel",
     ],
@@ -16175,7 +16008,6 @@ list [
     "comment": "ベイカー街少年探偵団",
     "name": "ガーディ",
     "order": 30015,
-    "summary_url": "/summary/faces/show?id=t15",
     "tag_ids": Array [
       "travel",
     ],
@@ -16203,7 +16035,6 @@ list [
     "comment": "映画監督たちの共用偽名",
     "name": "アラン",
     "order": 30016,
-    "summary_url": "/summary/faces/show?id=t16",
     "tag_ids": Array [
       "travel",
     ],
@@ -16231,7 +16062,6 @@ list [
     "comment": "はるかリフレイン",
     "name": "ハルカ",
     "order": 30017,
-    "summary_url": "/summary/faces/show?id=t19",
     "tag_ids": Array [
       "travel",
     ],
@@ -16259,7 +16089,6 @@ list [
     "comment": "おもいっきり探偵団 覇悪怒組",
     "name": "ススム",
     "order": 30018,
-    "summary_url": "/summary/faces/show?id=t17",
     "tag_ids": Array [
       "travel",
     ],
@@ -16287,7 +16116,6 @@ list [
     "comment": "まんがはじめて物語（二代目）",
     "name": "マユミ",
     "order": 30018,
-    "summary_url": "/summary/faces/show?id=t18",
     "tag_ids": Array [
       "travel",
     ],
@@ -16315,7 +16143,6 @@ list [
     "comment": "",
     "name": "ガモウ",
     "order": 30018.1,
-    "summary_url": "/summary/faces/show?id=t39",
     "tag_ids": Array [
       "travel",
     ],
@@ -16343,7 +16170,6 @@ list [
     "comment": "",
     "name": "クロエ",
     "order": 30018.1,
-    "summary_url": "/summary/faces/show?id=t45",
     "tag_ids": Array [
       "travel",
     ],
@@ -16371,7 +16197,6 @@ list [
     "comment": "時をかける少女",
     "name": "アカリ",
     "order": 30019,
-    "summary_url": "/summary/faces/show?id=t07",
     "tag_ids": Array [
       "travel",
     ],
@@ -16399,7 +16224,6 @@ list [
     "comment": "宇宙戦艦ヤマモト・ヨーコ",
     "name": "マドカ",
     "order": 30019,
-    "summary_url": "/summary/faces/show?id=t11",
     "tag_ids": Array [
       "travel",
     ],
@@ -16427,7 +16251,6 @@ list [
     "comment": "代紋TAKE2",
     "name": "トシミ",
     "order": 30019,
-    "summary_url": "/summary/faces/show?id=t21",
     "tag_ids": Array [
       "travel",
     ],
@@ -16455,7 +16278,6 @@ list [
     "comment": "",
     "name": "ヒナコ",
     "order": 30020,
-    "summary_url": "/summary/faces/show?id=t29",
     "tag_ids": Array [
       "travel",
     ],
@@ -16483,7 +16305,6 @@ list [
     "comment": "ひぐらしのなく頃に",
     "name": "ケイイチ",
     "order": 30021,
-    "summary_url": "/summary/faces/show?id=t22",
     "tag_ids": Array [
       "travel",
     ],
@@ -16511,7 +16332,6 @@ list [
     "comment": "英国情報局秘密組織チェラブ (CHERUB)",
     "name": "エリ",
     "order": 30022,
-    "summary_url": "/summary/faces/show?id=t20",
     "tag_ids": Array [
       "travel",
     ],
@@ -16539,7 +16359,6 @@ list [
     "comment": "",
     "name": "ナナオ",
     "order": 30023,
-    "summary_url": "/summary/faces/show?id=t23",
     "tag_ids": Array [
       "travel",
     ],
@@ -16567,7 +16386,6 @@ list [
     "comment": "「キルロイここに現る」",
     "name": "キルロイ",
     "order": 30024,
-    "summary_url": "/summary/faces/show?id=t24",
     "tag_ids": Array [
       "travel",
     ],
@@ -16595,7 +16413,6 @@ list [
     "comment": "",
     "name": "ミサキ",
     "order": 30025,
-    "summary_url": "/summary/faces/show?id=t25",
     "tag_ids": Array [
       "travel",
     ],
@@ -16623,7 +16440,6 @@ list [
     "comment": "平田篤胤",
     "name": "アツタネ",
     "order": 30026,
-    "summary_url": "/summary/faces/show?id=t26",
     "tag_ids": Array [
       "travel",
     ],
@@ -16651,7 +16467,6 @@ list [
     "comment": "",
     "name": "みょんこ",
     "order": 30027,
-    "summary_url": "/summary/faces/show?id=t27",
     "tag_ids": Array [
       "travel",
     ],
@@ -16679,7 +16494,6 @@ list [
     "comment": "",
     "name": "リツ",
     "order": 30028,
-    "summary_url": "/summary/faces/show?id=t28",
     "tag_ids": Array [
       "travel",
     ],
@@ -16707,7 +16521,6 @@ list [
     "comment": "四月朔日",
     "name": "ワタヌキ",
     "order": 30030,
-    "summary_url": "/summary/faces/show?id=t30",
     "tag_ids": Array [
       "travel",
     ],
@@ -16735,7 +16548,6 @@ list [
     "comment": "洋画の日本人名",
     "name": "トヨタ",
     "order": 30032,
-    "summary_url": "/summary/faces/show?id=t32",
     "tag_ids": Array [
       "travel",
     ],
@@ -16763,7 +16575,6 @@ list [
     "comment": "",
     "name": "エツコ",
     "order": 30033,
-    "summary_url": "/summary/faces/show?id=t33",
     "tag_ids": Array [
       "travel",
     ],
@@ -16791,7 +16602,6 @@ list [
     "comment": "",
     "name": "イルマ",
     "order": 30036,
-    "summary_url": "/summary/faces/show?id=t36",
     "tag_ids": Array [
       "travel",
     ],
@@ -16819,7 +16629,6 @@ list [
     "comment": "",
     "name": "スズキ",
     "order": 30038,
-    "summary_url": "/summary/faces/show?id=t38",
     "tag_ids": Array [
       "travel",
     ],
@@ -16847,7 +16656,6 @@ list [
     "comment": "",
     "name": "マスタ",
     "order": 30039,
-    "summary_url": "/summary/faces/show?id=t40",
     "tag_ids": Array [
       "travel",
     ],
@@ -16875,7 +16683,6 @@ list [
     "comment": "",
     "name": "アオ",
     "order": 30041,
-    "summary_url": "/summary/faces/show?id=t41",
     "tag_ids": Array [
       "travel",
     ],
@@ -16903,7 +16710,6 @@ list [
     "comment": "",
     "name": "レン",
     "order": 30042,
-    "summary_url": "/summary/faces/show?id=t42",
     "tag_ids": Array [
       "travel",
     ],
@@ -16931,7 +16737,6 @@ list [
     "comment": "",
     "name": "こころ",
     "order": 30043,
-    "summary_url": "/summary/faces/show?id=t43",
     "tag_ids": Array [
       "travel",
     ],
@@ -16959,7 +16764,6 @@ list [
     "comment": "",
     "name": "ナツミ",
     "order": 30044,
-    "summary_url": "/summary/faces/show?id=t44",
     "tag_ids": Array [
       "travel",
     ],
@@ -16987,7 +16791,6 @@ list [
     "comment": "",
     "name": "サダミツ",
     "order": 30046,
-    "summary_url": "/summary/faces/show?id=t46",
     "tag_ids": Array [
       "travel",
     ],
@@ -17015,7 +16818,6 @@ list [
     "comment": "",
     "name": "ノッカ",
     "order": 30047,
-    "summary_url": "/summary/faces/show?id=t47",
     "tag_ids": Array [
       "travel",
     ],
@@ -17043,7 +16845,6 @@ list [
     "comment": "",
     "name": "Ａ",
     "order": 30048,
-    "summary_url": "/summary/faces/show?id=t48",
     "tag_ids": Array [
       "travel",
     ],
@@ -17071,7 +16872,6 @@ list [
     "comment": "",
     "name": "Ａ",
     "order": 30049,
-    "summary_url": "/summary/faces/show?id=t49",
     "tag_ids": Array [
       "travel",
     ],
@@ -17099,7 +16899,6 @@ list [
     "comment": "",
     "name": "ヨスガ",
     "order": 30050,
-    "summary_url": "/summary/faces/show?id=t50",
     "tag_ids": Array [
       "travel",
       "pair",
@@ -17128,7 +16927,6 @@ list [
     "comment": "",
     "name": "エニシ",
     "order": 30051,
-    "summary_url": "/summary/faces/show?id=t51",
     "tag_ids": Array [
       "travel",
       "pair",
@@ -17157,7 +16955,6 @@ list [
     "comment": "",
     "name": "ニトカ",
     "order": 30052,
-    "summary_url": "/summary/faces/show?id=t52",
     "tag_ids": Array [
       "travel",
     ],
@@ -17185,7 +16982,6 @@ list [
     "comment": "",
     "name": "ウツギ",
     "order": 30054,
-    "summary_url": "/summary/faces/show?id=t54",
     "tag_ids": Array [
       "travel",
     ],
@@ -17213,7 +17009,6 @@ list [
     "comment": "",
     "name": "セイカ",
     "order": 30055,
-    "summary_url": "/summary/faces/show?id=t55",
     "tag_ids": Array [
       "travel",
     ],
@@ -17241,7 +17036,6 @@ list [
     "comment": "",
     "name": "ヤスリ",
     "order": 30056,
-    "summary_url": "/summary/faces/show?id=t56",
     "tag_ids": Array [
       "travel",
     ],
@@ -17269,7 +17063,6 @@ list [
     "comment": "",
     "name": "はのん",
     "order": 30057,
-    "summary_url": "/summary/faces/show?id=t57",
     "tag_ids": Array [
       "travel",
     ],
@@ -17297,7 +17090,6 @@ list [
     "comment": "",
     "name": "シンイチ",
     "order": 30058,
-    "summary_url": "/summary/faces/show?id=t58",
     "tag_ids": Array [
       "travel",
     ],
@@ -17325,7 +17117,6 @@ list [
     "comment": "",
     "name": "メイ",
     "order": 30059,
-    "summary_url": "/summary/faces/show?id=t59",
     "tag_ids": Array [
       "travel",
     ],
@@ -17353,7 +17144,6 @@ list [
     "comment": "",
     "name": "タツミ",
     "order": 30060,
-    "summary_url": "/summary/faces/show?id=t60",
     "tag_ids": Array [
       "travel",
     ],
@@ -17381,7 +17171,6 @@ list [
     "comment": null,
     "name": "ムギタ",
     "order": 30061,
-    "summary_url": "/summary/faces/show?id=t61",
     "tag_ids": Array [
       "travel",
     ],
@@ -17409,7 +17198,6 @@ list [
     "comment": null,
     "name": "ヘイタロウ",
     "order": 30062,
-    "summary_url": "/summary/faces/show?id=t62",
     "tag_ids": Array [
       "travel",
     ],
@@ -17437,7 +17225,6 @@ list [
     "comment": null,
     "name": "ソウスケ",
     "order": 30063,
-    "summary_url": "/summary/faces/show?id=t63",
     "tag_ids": Array [
       "travel",
     ],
@@ -17465,7 +17252,6 @@ list [
     "comment": null,
     "name": "ユエ",
     "order": 30064,
-    "summary_url": "/summary/faces/show?id=t64",
     "tag_ids": Array [
       "travel",
     ],
@@ -17493,7 +17279,6 @@ list [
     "comment": null,
     "name": "カコ",
     "order": 30065,
-    "summary_url": "/summary/faces/show?id=t65",
     "tag_ids": Array [
       "travel",
     ],
@@ -17521,7 +17306,6 @@ list [
     "comment": null,
     "name": "ココア",
     "order": 30066,
-    "summary_url": "/summary/faces/show?id=t66",
     "tag_ids": Array [
       "travel",
     ],
@@ -17549,7 +17333,6 @@ list [
     "comment": null,
     "name": "マコト",
     "order": 30067,
-    "summary_url": "/summary/faces/show?id=t67",
     "tag_ids": Array [
       "travel",
     ],
@@ -17577,7 +17360,6 @@ list [
     "comment": null,
     "name": "ワカナ",
     "order": 30068,
-    "summary_url": "/summary/faces/show?id=t68",
     "tag_ids": Array [
       "travel",
     ],
@@ -17605,7 +17387,6 @@ list [
     "comment": null,
     "name": "ヤマト",
     "order": 30069,
-    "summary_url": "/summary/faces/show?id=t69",
     "tag_ids": Array [
       "travel",
     ],
@@ -17633,7 +17414,6 @@ list [
     "comment": null,
     "name": "ニジノ",
     "order": 30070,
-    "summary_url": "/summary/faces/show?id=t70",
     "tag_ids": Array [
       "travel",
     ],
@@ -17661,7 +17441,6 @@ list [
     "comment": "ズッコケ時間旅行記から。",
     "name": "ワカバヤシ",
     "order": 30071,
-    "summary_url": "/summary/faces/show?id=t71",
     "tag_ids": Array [
       "travel",
     ],
@@ -17689,7 +17468,6 @@ list [
     "comment": "推理小説の主人公から",
     "name": "カガ",
     "order": 30072,
-    "summary_url": "/summary/faces/show?id=t72",
     "tag_ids": Array [
       "travel",
     ],
@@ -17717,7 +17495,6 @@ list [
     "comment": null,
     "name": "ワタル",
     "order": 30073,
-    "summary_url": "/summary/faces/show?id=t73",
     "tag_ids": Array [
       "travel",
     ],
@@ -17745,7 +17522,6 @@ list [
     "comment": "カミナリに対して風っぽく",
     "name": "フウタ",
     "order": 30074,
-    "summary_url": "/summary/faces/show?id=t74",
     "tag_ids": Array [
       "travel",
     ],
@@ -17773,7 +17549,6 @@ list [
     "comment": "日本酒「瑠璃色の海」",
     "name": "ルリ",
     "order": 30075,
-    "summary_url": "/summary/faces/show?id=t75",
     "tag_ids": Array [
       "travel",
     ],
@@ -17801,7 +17576,6 @@ list [
     "comment": "",
     "name": "ロゴス",
     "order": 60000,
-    "summary_url": "/summary/faces/show?id=f000",
     "tag_ids": Array [
       "fable",
     ],
@@ -17829,7 +17603,6 @@ list [
     "comment": "凡ての哺乳類からの敬意をこめて。",
     "name": "ヨグラージ",
     "order": 60001,
-    "summary_url": "/summary/faces/show?id=f1",
     "tag_ids": Array [
       "fable",
     ],
@@ -17857,7 +17630,6 @@ list [
     "comment": "シリアスなりゅうきへい。コーラに乗るといい。",
     "name": "アーサー",
     "order": 60002,
-    "summary_url": "/summary/faces/show?id=f2",
     "tag_ids": Array [
       "fable",
     ],
@@ -17885,7 +17657,6 @@ list [
     "comment": "使役されたりする、楽園ではない感を出したいな。という肩書。",
     "name": "ロバート",
     "order": 60003,
-    "summary_url": "/summary/faces/show?id=f3",
     "tag_ids": Array [
       "fable",
     ],
@@ -17913,7 +17684,6 @@ list [
     "comment": "エジプト人名 犬なので、不動産業をやらせたかった。",
     "name": "ハラフ",
     "order": 60004,
-    "summary_url": "/summary/faces/show?id=f4",
     "tag_ids": Array [
       "fable",
     ],
@@ -17941,7 +17711,6 @@ list [
     "comment": "植物の実とそこから作る炭酸飲料 オークションにかけると高値が付きそうな命に見えるので。",
     "name": "コーラ",
     "order": 60005,
-    "summary_url": "/summary/faces/show?id=f5",
     "tag_ids": Array [
       "fable",
     ],
@@ -17969,7 +17738,6 @@ list [
     "comment": "一応鸚鵡の産地パプワニューギニア人名 伝令的なところを考えていて、こやつは文字通りの飛ぶ脚なのでは、と。タイムリミット指定をする（速達）と高い運び賃がとれる職業なので。",
     "name": "タイム",
     "order": 60006,
-    "summary_url": "/summary/faces/show?id=f6",
     "tag_ids": Array [
       "fable",
     ],
@@ -17997,7 +17765,6 @@ list [
     "comment": "幾何学、音楽用語でまとめたかった。 こいつには、？？？なんだこれ？？？と思ってほしい。",
     "name": "タプル",
     "order": 60007,
-    "summary_url": "/summary/faces/show?id=f7",
     "tag_ids": Array [
       "fable",
     ],
@@ -18025,7 +17792,6 @@ list [
     "comment": "（肩書）思春期の少女の身振り、態度又はユーモア",
     "name": "ソランジュ",
     "order": 60008,
-    "summary_url": "/summary/faces/show?id=f8",
     "tag_ids": Array [
       "fable",
     ],
@@ -18053,7 +17819,6 @@ list [
     "comment": "フィンランド人名　品物を経る魔法、というのをやらせたかった。",
     "name": "ヘリンヘイモ",
     "order": 60009,
-    "summary_url": "/summary/faces/show?id=f9",
     "tag_ids": Array [
       "fable",
     ],
@@ -18081,7 +17846,6 @@ list [
     "comment": "アフリカ人名  虹を肩書にいれたかったところと神話の虹蛇から。",
     "name": "ンゴティエク",
     "order": 60010,
-    "summary_url": "/summary/faces/show?id=f10",
     "tag_ids": Array [
       "fable",
     ],
@@ -18109,7 +17873,6 @@ list [
     "comment": "スペイン人名  領地をもった貴族であってほしいので、龍伝承のある土地に封じた。",
     "name": "D.バルベルデ",
     "order": 60011,
-    "summary_url": "/summary/faces/show?id=f11",
     "tag_ids": Array [
       "fable",
     ],
@@ -18137,7 +17900,6 @@ list [
     "comment": "イタリア人名",
     "name": "ソルフリッツィ",
     "order": 60013,
-    "summary_url": "/summary/faces/show?id=f12",
     "tag_ids": Array [
       "fable",
     ],
@@ -18165,7 +17927,6 @@ list [
     "comment": "冒険作家ティム・セヴェリン",
     "name": "ティム",
     "order": 60013,
-    "summary_url": "/summary/faces/show?id=f13",
     "tag_ids": Array [
       "fable",
     ],
@@ -18193,7 +17954,6 @@ list [
     "comment": "南米の太陽神「インティ」の息子、という意味のリングネーム",
     "name": "インティJr",
     "order": 60014,
-    "summary_url": "/summary/faces/show?id=f14",
     "tag_ids": Array [
       "fable",
     ],
@@ -18221,7 +17981,6 @@ list [
     "comment": "中国人名から。",
     "name": "ツェン",
     "order": 61001,
-    "summary_url": "/summary/faces/show?id=fw01",
     "tag_ids": Array [
       "fable",
     ],
@@ -18249,7 +18008,6 @@ list [
     "comment": "帝江（ていこう di4jiang1 ディジアン）から。",
     "name": "ディ♪ジアン",
     "order": 61002,
-    "summary_url": "/summary/faces/show?id=fw02",
     "tag_ids": Array [
       "fable",
     ],
@@ -18277,7 +18035,6 @@ list [
     "comment": null,
     "name": "ヤツデ",
     "order": 61003,
-    "summary_url": "/summary/faces/show?id=fw03",
     "tag_ids": Array [
       "fable",
     ],
@@ -18305,7 +18062,6 @@ list [
     "comment": "隠神刑部（ぎょうぶたぬき）",
     "name": "ギョウブ",
     "order": 61004,
-    "summary_url": "/summary/faces/show?id=fw04",
     "tag_ids": Array [
       "fable",
     ],
@@ -18333,7 +18089,6 @@ list [
     "comment": "稲荷神社",
     "name": "イナリ",
     "order": 61005,
-    "summary_url": "/summary/faces/show?id=fw05",
     "tag_ids": Array [
       "fable",
     ],
@@ -18360,7 +18115,6 @@ list [
     },
     "name": "パルック",
     "order": 70000.01,
-    "summary_url": "/summary/faces/show?id=m99",
     "tag_ids": Array [
       "myth",
     ],
@@ -18387,7 +18141,6 @@ list [
     },
     "name": "アリス",
     "order": 70000.11,
-    "summary_url": "/summary/faces/show?id=m07",
     "tag_ids": Array [
       "myth",
     ],
@@ -18414,7 +18167,6 @@ list [
     },
     "name": "ミケ",
     "order": 70000.12,
-    "summary_url": "/summary/faces/show?id=m13",
     "tag_ids": Array [
       "myth",
     ],
@@ -18441,7 +18193,6 @@ list [
     },
     "name": "リリンラ",
     "order": 70000.21,
-    "summary_url": "/summary/faces/show?id=m06",
     "tag_ids": Array [
       "myth",
     ],
@@ -18468,7 +18219,6 @@ list [
     },
     "name": "トノサマ",
     "order": 70000.22,
-    "summary_url": "/summary/faces/show?id=m03",
     "tag_ids": Array [
       "myth",
     ],
@@ -18507,7 +18257,6 @@ list [
       ],
     },
     "order": 70000.23,
-    "summary_url": "/summary/faces/show?id=m05",
     "tag_ids": Array [
       "myth",
     ],
@@ -18534,7 +18283,6 @@ list [
     },
     "name": "ミソチャ",
     "order": 70000.24,
-    "summary_url": "/summary/faces/show?id=m15",
     "tag_ids": Array [
       "myth",
     ],
@@ -18561,7 +18309,6 @@ list [
     },
     "name": "トリ",
     "order": 70000.31,
-    "summary_url": "/summary/faces/show?id=r30",
     "tag_ids": Array [
       "myth",
     ],
@@ -18588,7 +18335,6 @@ list [
     },
     "name": "ケムシ",
     "order": 70001,
-    "summary_url": "/summary/faces/show?id=m01",
     "tag_ids": Array [
       "myth",
     ],
@@ -18615,7 +18361,6 @@ list [
     },
     "name": "ポプラ",
     "order": 70002,
-    "summary_url": "/summary/faces/show?id=m02",
     "tag_ids": Array [
       "myth",
     ],
@@ -18642,7 +18387,6 @@ list [
     },
     "name": "アオイ",
     "order": 70004,
-    "summary_url": "/summary/faces/show?id=m04",
     "tag_ids": Array [
       "myth",
     ],
@@ -18670,7 +18414,6 @@ list [
     "comment": "",
     "name": "ドナルド",
     "order": 70007.9,
-    "summary_url": "/summary/faces/show?id=b44",
     "tag_ids": Array [
       "myth",
     ],
@@ -18704,7 +18447,6 @@ list [
       ],
     },
     "order": 70008,
-    "summary_url": "/summary/faces/show?id=m08",
     "tag_ids": Array [
       "myth",
     ],
@@ -18732,7 +18474,6 @@ list [
     "comment": "",
     "name": "ボリス",
     "order": 70008.1,
-    "summary_url": "/summary/faces/show?id=b49",
     "tag_ids": Array [
       "myth",
     ],
@@ -18759,7 +18500,6 @@ list [
     },
     "name": "カミジャー",
     "order": 70009,
-    "summary_url": "/summary/faces/show?id=m09",
     "tag_ids": Array [
       "myth",
     ],
@@ -18786,7 +18526,6 @@ list [
     },
     "name": "アチャポ",
     "order": 70010,
-    "summary_url": "/summary/faces/show?id=m10",
     "tag_ids": Array [
       "myth",
     ],
@@ -18813,7 +18552,6 @@ list [
     },
     "name": "ライトニング",
     "order": 70011,
-    "summary_url": "/summary/faces/show?id=m11",
     "tag_ids": Array [
       "myth",
       "pair",
@@ -18842,7 +18580,6 @@ list [
     "comment": "",
     "name": "トルニトス",
     "order": 70012,
-    "summary_url": "/summary/faces/show?id=m12",
     "tag_ids": Array [
       "myth",
       "pair",
@@ -18870,7 +18607,6 @@ list [
     },
     "name": "カリュクス",
     "order": 70014,
-    "summary_url": "/summary/faces/show?id=m14",
     "tag_ids": Array [
       "myth",
     ],
@@ -18898,7 +18634,6 @@ list [
     "comment": "円卓の騎士",
     "name": "アーサー",
     "order": 70016,
-    "summary_url": "/summary/faces/show?id=m16",
     "tag_ids": Array [
       "myth",
     ],
@@ -18926,7 +18661,6 @@ list [
     "comment": "インターネット・ミームから。 えんいー",
     "name": "ミーム",
     "order": 70018,
-    "summary_url": "/summary/faces/show?id=m18",
     "tag_ids": Array [
       "myth",
     ],
@@ -18954,7 +18688,6 @@ list [
     "comment": "https://twitter.com/7korobi/status/510069062974447617",
     "name": "タルト",
     "order": 70019,
-    "summary_url": "/summary/faces/show?id=m19",
     "tag_ids": Array [
       "myth",
       "pair",
@@ -18983,7 +18716,6 @@ list [
     "comment": "https://twitter.com/noa_marimo/status/510100541536358400",
     "name": "ショコラ",
     "order": 70020,
-    "summary_url": "/summary/faces/show?id=m20",
     "tag_ids": Array [
       "myth",
       "pair",
@@ -19012,7 +18744,6 @@ list [
     "comment": "りしあさん＆かれやなぎさん",
     "name": "ラッシード",
     "order": 80000,
-    "summary_url": "/summary/faces/show?id=sf01",
     "tag_ids": Array [
       "stratos",
     ],
@@ -19040,7 +18771,6 @@ list [
     "comment": "ふらぅさん＆かれやなぎさん",
     "name": "エスペラント",
     "order": 80001,
-    "summary_url": "/summary/faces/show?id=sf02",
     "tag_ids": Array [
       "stratos",
     ],
@@ -19068,7 +18798,6 @@ list [
     "comment": "たるっとさん＆りちゃさん",
     "name": "ピート",
     "order": 80002,
-    "summary_url": "/summary/faces/show?id=sf03",
     "tag_ids": Array [
       "stratos",
     ],
@@ -19108,7 +18837,6 @@ list [
       ],
     },
     "order": 80003,
-    "summary_url": "/summary/faces/show?id=sf04",
     "tag_ids": Array [
       "stratos",
     ],
@@ -19136,7 +18864,6 @@ list [
     "comment": "ななころび＆りりんら",
     "name": "モナリザ",
     "order": 80004,
-    "summary_url": "/summary/faces/show?id=sf05",
     "tag_ids": Array [
       "stratos",
     ],
@@ -19164,7 +18891,6 @@ list [
     "comment": "まりもさん＆あずまさん",
     "name": "ワレンチナ",
     "order": 80005,
-    "summary_url": "/summary/faces/show?id=sf06",
     "tag_ids": Array [
       "stratos",
     ],
@@ -19192,7 +18918,6 @@ list [
     "comment": "",
     "name": "アマルテア",
     "order": 80006,
-    "summary_url": "/summary/faces/show?id=sf025",
     "tag_ids": Array [
       "stratos",
     ],
@@ -19220,7 +18945,6 @@ list [
     "comment": "りしあさん＆はむおくん",
     "name": "ヤンファ",
     "order": 80007,
-    "summary_url": "/summary/faces/show?id=sf07",
     "tag_ids": Array [
       "stratos",
     ],
@@ -19248,7 +18972,6 @@ list [
     "comment": "りしあさん＆ふらぅさん",
     "name": "ＰＪ",
     "order": 80008,
-    "summary_url": "/summary/faces/show?id=sf08",
     "tag_ids": Array [
       "stratos",
     ],
@@ -19276,7 +18999,6 @@ list [
     "comment": "ななころび＆ふらぅさん",
     "name": "キリシマ",
     "order": 80009,
-    "summary_url": "/summary/faces/show?id=sf09",
     "tag_ids": Array [
       "stratos",
     ],
@@ -19321,7 +19043,6 @@ list [
       ],
     },
     "order": 80010,
-    "summary_url": "/summary/faces/show?id=sf10",
     "tag_ids": Array [
       "stratos",
     ],
@@ -19349,7 +19070,6 @@ list [
     "comment": "かれやなぎさん＆りちゃさん",
     "name": "イワノフ",
     "order": 80011,
-    "summary_url": "/summary/faces/show?id=sf11",
     "tag_ids": Array [
       "stratos",
     ],
@@ -19377,7 +19097,6 @@ list [
     "comment": null,
     "name": "†ルシフェル†",
     "order": 80012,
-    "summary_url": "/summary/faces/show?id=sf12",
     "tag_ids": Array [
       "stratos",
     ],
@@ -19405,7 +19124,6 @@ list [
     "comment": null,
     "name": "トルドヴィン",
     "order": 80013,
-    "summary_url": "/summary/faces/show?id=sf13",
     "tag_ids": Array [
       "stratos",
     ],
@@ -19433,7 +19151,6 @@ list [
     "comment": null,
     "name": "玖休",
     "order": 80014,
-    "summary_url": "/summary/faces/show?id=sf18",
     "tag_ids": Array [
       "stratos",
       "pair",
@@ -19462,7 +19179,6 @@ list [
     "comment": null,
     "name": "参休",
     "order": 80015,
-    "summary_url": "/summary/faces/show?id=sf19",
     "tag_ids": Array [
       "stratos",
       "pair",
@@ -19491,7 +19207,6 @@ list [
     "comment": null,
     "name": "クリスマス",
     "order": 80016,
-    "summary_url": "/summary/faces/show?id=sf14",
     "tag_ids": Array [
       "stratos",
     ],
@@ -19519,7 +19234,6 @@ list [
     "comment": null,
     "name": "ジェームス",
     "order": 80017,
-    "summary_url": "/summary/faces/show?id=sf15",
     "tag_ids": Array [
       "stratos",
     ],
@@ -19547,7 +19261,6 @@ list [
     "comment": null,
     "name": "ライジ",
     "order": 80018,
-    "summary_url": "/summary/faces/show?id=sf16",
     "tag_ids": Array [
       "stratos",
     ],
@@ -19575,7 +19288,6 @@ list [
     "comment": null,
     "name": "ジャック",
     "order": 80019,
-    "summary_url": "/summary/faces/show?id=sf17",
     "tag_ids": Array [
       "stratos",
     ],
@@ -19603,7 +19315,6 @@ list [
     "comment": null,
     "name": "ティソ",
     "order": 80020,
-    "summary_url": "/summary/faces/show?id=sf20",
     "tag_ids": Array [
       "stratos",
     ],
@@ -19631,7 +19342,6 @@ list [
     "comment": "",
     "name": "アンタレス",
     "order": 80022,
-    "summary_url": "/summary/faces/show?id=sf021",
     "tag_ids": Array [
       "stratos",
     ],
@@ -19659,7 +19369,6 @@ list [
     "comment": "",
     "name": "エフ",
     "order": 80023,
-    "summary_url": "/summary/faces/show?id=sf023",
     "tag_ids": Array [
       "stratos",
     ],
@@ -19687,7 +19396,6 @@ list [
     "comment": "",
     "name": "アイライト",
     "order": 80024,
-    "summary_url": "/summary/faces/show?id=sf024",
     "tag_ids": Array [
       "stratos",
     ],
@@ -19715,7 +19423,6 @@ list [
     "comment": "",
     "name": "ポーラ",
     "order": 80026,
-    "summary_url": "/summary/faces/show?id=sf026",
     "tag_ids": Array [
       "stratos",
     ],
@@ -19743,7 +19450,6 @@ list [
     "comment": "",
     "name": "チェビイ",
     "order": 80027,
-    "summary_url": "/summary/faces/show?id=sf022",
     "tag_ids": Array [
       "stratos",
     ],
@@ -19771,7 +19477,6 @@ list [
     "comment": "",
     "name": "モスキート",
     "order": 80028,
-    "summary_url": "/summary/faces/show?id=sf027",
     "tag_ids": Array [
       "stratos",
     ],
@@ -19799,7 +19504,6 @@ list [
     "comment": "",
     "name": "ワクラバ",
     "order": 80029,
-    "summary_url": "/summary/faces/show?id=sf032",
     "tag_ids": Array [
       "stratos",
     ],
@@ -19827,7 +19531,6 @@ list [
     "comment": "",
     "name": "コータ",
     "order": 80030,
-    "summary_url": "/summary/faces/show?id=sf028",
     "tag_ids": Array [
       "stratos",
     ],
@@ -19855,7 +19558,6 @@ list [
     "comment": "",
     "name": "ミツボシ",
     "order": 80031,
-    "summary_url": "/summary/faces/show?id=sf029",
     "tag_ids": Array [
       "stratos",
     ],
@@ -19883,7 +19585,6 @@ list [
     "comment": "",
     "name": "クレパスキュール",
     "order": 80032,
-    "summary_url": "/summary/faces/show?id=sf030",
     "tag_ids": Array [
       "stratos",
     ],
@@ -19911,7 +19612,6 @@ list [
     "comment": "",
     "name": "シルク",
     "order": 80033,
-    "summary_url": "/summary/faces/show?id=sf031",
     "tag_ids": Array [
       "stratos",
     ],
@@ -19939,7 +19639,6 @@ list [
     "comment": null,
     "name": "イースター",
     "order": 80033,
-    "summary_url": "/summary/faces/show?id=sf033",
     "tag_ids": Array [
       "stratos",
     ],
@@ -19966,7 +19665,6 @@ list [
     },
     "name": "アニュ",
     "order": 80034,
-    "summary_url": "/summary/faces/show?id=sf034",
     "tag_ids": Array [
       "stratos",
     ],
@@ -19994,7 +19692,6 @@ list [
     "comment": null,
     "name": "キャンディ",
     "order": 80035,
-    "summary_url": "/summary/faces/show?id=sf035",
     "tag_ids": Array [
       "stratos",
     ],
@@ -20021,7 +19718,6 @@ list [
     },
     "name": "キカ",
     "order": 80036,
-    "summary_url": "/summary/faces/show?id=sf036",
     "tag_ids": Array [
       "stratos",
     ],
@@ -20048,7 +19744,6 @@ list [
     },
     "name": "バンアレン",
     "order": 80037,
-    "summary_url": "/summary/faces/show?id=sf037",
     "tag_ids": Array [
       "stratos",
     ],
@@ -20075,7 +19770,6 @@ list [
     },
     "name": "パラチーノ",
     "order": 80038,
-    "summary_url": "/summary/faces/show?id=sf038",
     "tag_ids": Array [
       "stratos",
     ],
@@ -20103,7 +19797,6 @@ list [
     "comment": "ぷえるとりこの旅人　エージ―エー",
     "name": "定吉",
     "order": 90001,
-    "summary_url": "/summary/faces/show?id=w05",
     "tag_ids": Array [
       "shoji",
     ],
@@ -20131,7 +19824,6 @@ list [
     "comment": "日本の伝統　熊木彫",
     "name": "鉄平",
     "order": 90002,
-    "summary_url": "/summary/faces/show?id=w21",
     "tag_ids": Array [
       "shoji",
     ],
@@ -20159,7 +19851,6 @@ list [
     "comment": "雪国の風雅　熊木彫",
     "name": "竹三",
     "order": 90003,
-    "summary_url": "/summary/faces/show?id=w22",
     "tag_ids": Array [
       "shoji",
     ],
@@ -20186,7 +19877,6 @@ list [
     },
     "name": "ウト",
     "order": 90004,
-    "summary_url": "/summary/faces/show?id=w36",
     "tag_ids": Array [
       "shoji",
     ],
@@ -20214,7 +19904,6 @@ list [
     "comment": "ぶたさん印の　あおいジンギスカン",
     "name": "勢",
     "order": 90005,
-    "summary_url": "/summary/faces/show?id=w16",
     "tag_ids": Array [
       "shoji",
     ],
@@ -20241,7 +19930,6 @@ list [
     },
     "name": "菊",
     "order": 90006,
-    "summary_url": "/summary/faces/show?id=w18",
     "tag_ids": Array [
       "shoji",
     ],
@@ -20268,7 +19956,6 @@ list [
     },
     "name": "勝丸",
     "order": 90007,
-    "summary_url": "/summary/faces/show?id=w26",
     "tag_ids": Array [
       "shoji",
     ],
@@ -20296,7 +19983,6 @@ list [
     "comment": "",
     "name": "奈須麿",
     "order": 90008,
-    "summary_url": "/summary/faces/show?id=w35",
     "tag_ids": Array [
       "shoji",
     ],
@@ -20324,7 +20010,6 @@ list [
     "comment": "桃源郷ぐた国のめぐみ　ふらう乳業",
     "name": "辰次",
     "order": 90009,
-    "summary_url": "/summary/faces/show?id=w24",
     "tag_ids": Array [
       "shoji",
     ],
@@ -20351,7 +20036,6 @@ list [
     },
     "name": "芙蓉",
     "order": 90010,
-    "summary_url": "/summary/faces/show?id=w37",
     "tag_ids": Array [
       "shoji",
     ],
@@ -20378,7 +20062,6 @@ list [
     },
     "name": "志乃",
     "order": 90011,
-    "summary_url": "/summary/faces/show?id=w29",
     "tag_ids": Array [
       "shoji",
     ],
@@ -20405,7 +20088,6 @@ list [
     },
     "name": "藤之助",
     "order": 90012,
-    "summary_url": "/summary/faces/show?id=w20",
     "tag_ids": Array [
       "shoji",
     ],
@@ -20432,7 +20114,6 @@ list [
     },
     "name": "日向",
     "order": 90013,
-    "summary_url": "/summary/faces/show?id=w31",
     "tag_ids": Array [
       "shoji",
     ],
@@ -20460,7 +20141,6 @@ list [
     "comment": "道を外して60年　GEDOU協会",
     "name": "おみつ",
     "order": 90014,
-    "summary_url": "/summary/faces/show?id=w12",
     "tag_ids": Array [
       "shoji",
     ],
@@ -20487,7 +20167,6 @@ list [
     },
     "name": "博史",
     "order": 90015,
-    "summary_url": "/summary/faces/show?id=w10",
     "tag_ids": Array [
       "shoji",
     ],
@@ -20514,7 +20193,6 @@ list [
     },
     "name": "法泉",
     "order": 90016,
-    "summary_url": "/summary/faces/show?id=w25",
     "tag_ids": Array [
       "shoji",
     ],
@@ -20542,7 +20220,6 @@ list [
     "comment": "チャールズ派遣ならおまかせ　O-ririn",
     "name": "チャールズ",
     "order": 90017,
-    "summary_url": "/summary/faces/show?id=w09",
     "tag_ids": Array [
       "shoji",
     ],
@@ -20569,7 +20246,6 @@ list [
     },
     "name": "雪代",
     "order": 90018,
-    "summary_url": "/summary/faces/show?id=w30",
     "tag_ids": Array [
       "shoji",
     ],
@@ -20597,7 +20273,6 @@ list [
     "comment": "めげないゼラチン作り　MEGEゼラチン",
     "name": "華月斎",
     "order": 90019,
-    "summary_url": "/summary/faces/show?id=w14",
     "tag_ids": Array [
       "shoji",
     ],
@@ -20625,7 +20300,6 @@ list [
     "comment": "世界の道をつなぐ　議事国地図",
     "name": "たまこ",
     "order": 90020,
-    "summary_url": "/summary/faces/show?id=w13",
     "tag_ids": Array [
       "shoji",
     ],
@@ -20652,7 +20326,6 @@ list [
     },
     "name": "沼太郎",
     "order": 90021,
-    "summary_url": "/summary/faces/show?id=w11",
     "tag_ids": Array [
       "shoji",
     ],
@@ -20680,7 +20353,6 @@ list [
     "comment": "新しい議事をつくる　たき学会",
     "name": "朔",
     "order": 90022,
-    "summary_url": "/summary/faces/show?id=w03",
     "tag_ids": Array [
       "shoji",
     ],
@@ -20707,7 +20379,6 @@ list [
     },
     "name": "余四朗",
     "order": 90023,
-    "summary_url": "/summary/faces/show?id=w34",
     "tag_ids": Array [
       "shoji",
     ],
@@ -20734,7 +20405,6 @@ list [
     },
     "name": "源蔵",
     "order": 90024,
-    "summary_url": "/summary/faces/show?id=w27",
     "tag_ids": Array [
       "shoji",
     ],
@@ -20761,7 +20431,6 @@ list [
     },
     "name": "甚六",
     "order": 90025,
-    "summary_url": "/summary/faces/show?id=w28",
     "tag_ids": Array [
       "shoji",
     ],
@@ -20795,7 +20464,6 @@ list [
       ],
     },
     "order": 90026,
-    "summary_url": "/summary/faces/show?id=w17",
     "tag_ids": Array [
       "shoji",
     ],
@@ -20823,7 +20491,6 @@ list [
     "comment": "",
     "name": "沙耶",
     "order": 90027,
-    "summary_url": "/summary/faces/show?id=w39",
     "tag_ids": Array [
       "shoji",
     ],
@@ -20850,7 +20517,6 @@ list [
     },
     "name": "朝顔",
     "order": 90028,
-    "summary_url": "/summary/faces/show?id=w08",
     "tag_ids": Array [
       "shoji",
       "pair",
@@ -20878,7 +20544,6 @@ list [
     },
     "name": "春松",
     "order": 90029,
-    "summary_url": "/summary/faces/show?id=w43",
     "tag_ids": Array [
       "shoji",
     ],
@@ -20905,7 +20570,6 @@ list [
     },
     "name": "夕顔",
     "order": 90030,
-    "summary_url": "/summary/faces/show?id=w07",
     "tag_ids": Array [
       "shoji",
       "pair",
@@ -20933,7 +20597,6 @@ list [
     },
     "name": "朧",
     "order": 90031,
-    "summary_url": "/summary/faces/show?id=w40",
     "tag_ids": Array [
       "shoji",
     ],
@@ -20961,7 +20624,6 @@ list [
     "comment": "",
     "name": "団十郎",
     "order": 90032,
-    "summary_url": "/summary/faces/show?id=w33",
     "tag_ids": Array [
       "shoji",
     ],
@@ -20994,7 +20656,6 @@ list [
       ],
     },
     "order": 90033,
-    "summary_url": "/summary/faces/show?id=w23",
     "tag_ids": Array [
       "shoji",
     ],
@@ -21022,7 +20683,6 @@ list [
     "comment": "お口の愛人　タルッティ・タルット",
     "name": "小鈴",
     "order": 90034,
-    "summary_url": "/summary/faces/show?id=w04",
     "tag_ids": Array [
       "shoji",
     ],
@@ -21050,7 +20710,6 @@ list [
     "comment": "道を外して60年　GEDOU協会",
     "name": "ゆり",
     "order": 90035,
-    "summary_url": "/summary/faces/show?id=w06",
     "tag_ids": Array [
       "shoji",
     ],
@@ -21078,7 +20737,6 @@ list [
     "comment": "",
     "name": "一平太",
     "order": 90037,
-    "summary_url": "/summary/faces/show?id=w38",
     "tag_ids": Array [
       "shoji",
     ],
@@ -21106,7 +20764,6 @@ list [
     "comment": "輝く月に未来を託す　暁月商事",
     "name": "鏡花",
     "order": 90038,
-    "summary_url": "/summary/faces/show?id=w01",
     "tag_ids": Array [
       "shoji",
     ],
@@ -21134,7 +20791,6 @@ list [
     "comment": "桃源郷ぐた国のめぐみ　ふらう乳業",
     "name": "八重",
     "order": 90039,
-    "summary_url": "/summary/faces/show?id=w15",
     "tag_ids": Array [
       "shoji",
     ],
@@ -21161,7 +20817,6 @@ list [
     },
     "name": "明之進",
     "order": 90040,
-    "summary_url": "/summary/faces/show?id=w32",
     "tag_ids": Array [
       "shoji",
     ],
@@ -21189,7 +20844,6 @@ list [
     "comment": "カメラのことなら　MISEKI",
     "name": "慶三郎",
     "order": 90041,
-    "summary_url": "/summary/faces/show?id=w02",
     "tag_ids": Array [
       "shoji",
     ],
@@ -21217,7 +20871,6 @@ list [
     "comment": "りりんラハウス呑んだくれ大会",
     "name": "雪客",
     "order": 90042,
-    "summary_url": "/summary/faces/show?id=w44",
     "tag_ids": Array [
       "shoji",
     ],
@@ -21245,7 +20898,6 @@ list [
     "comment": "りりんラハウス呑んだくれ大会",
     "name": "亀吉",
     "order": 90043,
-    "summary_url": "/summary/faces/show?id=w45",
     "tag_ids": Array [
       "shoji",
     ],
@@ -21273,7 +20925,6 @@ list [
     "comment": "お誕生日記念☆",
     "name": "梅子",
     "order": 90044,
-    "summary_url": "/summary/faces/show?id=w46",
     "tag_ids": Array [
       "shoji",
     ],
@@ -21302,7 +20953,6 @@ list [
     "face_id": "w47",
     "name": "置壱",
     "order": 90045,
-    "summary_url": "/summary/faces/show?id=w47",
     "tag_ids": Array [
       "shoji",
     ],
@@ -21330,7 +20980,6 @@ list [
     "comment": "和算復活月間",
     "name": "直円",
     "order": 90048,
-    "summary_url": "/summary/faces/show?id=w48",
     "tag_ids": Array [
       "shoji",
     ],
@@ -21358,7 +21007,6 @@ list [
     "comment": "ポルトガル人にジオゴっているんだぜ。へー。かっこいー。",
     "name": "錠",
     "order": 90049,
-    "summary_url": "/summary/faces/show?id=w49",
     "tag_ids": Array [
       "shoji",
     ],
@@ -21386,7 +21034,6 @@ list [
     "comment": "負けるたびに追い博打",
     "name": "丁助",
     "order": 90050,
-    "summary_url": "/summary/faces/show?id=w50",
     "tag_ids": Array [
       "shoji",
     ],
@@ -21414,7 +21061,6 @@ list [
     "comment": "リニューアル記念！",
     "name": "鬼丞",
     "order": 90051,
-    "summary_url": "/summary/faces/show?id=w51",
     "tag_ids": Array [
       "shoji",
     ],
@@ -21442,7 +21088,6 @@ list [
     "comment": "リニューアル記念！",
     "name": "櫻子",
     "order": 90052,
-    "summary_url": "/summary/faces/show?id=w52",
     "tag_ids": Array [
       "shoji",
     ],
@@ -21470,7 +21115,6 @@ list [
     "comment": "三拾糎程の「もふもふねこひよこ」　せんいち",
     "name": "おもん",
     "order": 90053,
-    "summary_url": "/summary/faces/show?id=w53",
     "tag_ids": Array [
       "shoji",
     ],
@@ -21498,7 +21142,6 @@ list [
     "comment": "",
     "name": "舷之丈",
     "order": 90054,
-    "summary_url": "/summary/faces/show?id=w54",
     "tag_ids": Array [
       "shoji",
     ],
@@ -21526,7 +21169,6 @@ list [
     "comment": "",
     "name": "網斎",
     "order": 90055,
-    "summary_url": "/summary/faces/show?id=w55",
     "tag_ids": Array [
       "shoji",
     ],
@@ -21554,7 +21196,6 @@ list [
     "comment": "江戸時代の実業家からもじって。",
     "name": "大八郎",
     "order": 90056,
-    "summary_url": "/summary/faces/show?id=w56",
     "tag_ids": Array [
       "shoji",
     ],
@@ -21582,7 +21223,6 @@ list [
     "comment": "稲荷神社",
     "name": "稲荷",
     "order": 90057,
-    "summary_url": "/summary/faces/show?id=w57",
     "tag_ids": Array [
       "shoji",
     ],
@@ -21610,7 +21250,6 @@ list [
     "comment": "おまつり",
     "name": "ハロウィン",
     "order": 90057,
-    "summary_url": "/summary/faces/show?id=sf039",
     "tag_ids": Array [
       "stratos",
     ],
@@ -21650,7 +21289,6 @@ list [
       ],
     },
     "order": 99999,
-    "summary_url": "/summary/faces/show?id=all",
     "tag_ids": Array [
       "god",
     ],

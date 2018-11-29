@@ -244,6 +244,7 @@ new Rule("todo").schema(function() {
  . | clear_cache | recalculate query caches.
  . | refresh     | recalculate query caches.
  . | rehash      | recalculate query caches.
+ . | find | pick first data from all memory by ids. and mark for transaction.
 
 ```javascript
 const {
@@ -259,7 +260,7 @@ const {
     label: "新しい項目",
     checked: true
   })
-  Set.check.del({ _id: 10 })
+  Set.check.del({ _id: 10 })
 })
 State.store(JSON.parse(JSON.stringify({ checks: { $sort, $memory, $format }})))
 ```

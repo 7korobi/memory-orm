@@ -192,36 +192,36 @@ module.exports = class Rule
 
   relation_tree: (key, ik)->
     all = @all
-    @use_cache key, (_id, n)->
+    @use_cache key, (id, n)->
       if n
-        q = all.where "#{ik}": _id
+        q = all.where "#{ik}": id
         all[key] q.ids, n - 1
       else
-        all.where _id: _id
+        all.where { id }
 
     @model_property[key] =
       enumerable: true
       value: (n)->
-        all[key] [@_id], n
+        all[key] [@id], n
 
   relation_graph: (key, ik)->
     all = @all
-    @use_cache key, (_id, n)->
-      q = all.where _id: _id
+    @use_cache key, (id, n)->
+      q = all.where { id }
       if n
-        _ids = []
+        ids = []
         for a in q.pluck(ik) when a?
           for k in a when k?
-            _ids.push k
+            ids.push k
 
-        all[key] _.uniq(_ids), n - 1
+        all[key] _.uniq(ids), n - 1
       else
         q
 
     @model_property[key] =
       enumerable: true
       value: (n)->
-        all[key] [@_id], n
+        all[key] [@id], n
 
   use_cache: (key, val)->
     switch val?.constructor
@@ -235,7 +235,7 @@ module.exports = class Rule
     for key in keys
       @belongs_to key
     @deploy ->
-      subids = @_id.split("-")
+      subids = @id.split("-")
       @idx = subids[keys.length]
       for key, idx in keys
         @["#{key}_id"] = subids[0..idx].join '-'
@@ -257,15 +257,15 @@ module.exports = class Rule
     name = rename to
     if option.reverse
       { key = @$name.ids, target = to } = option
-      @relation_to_many name.list, target, "in", "_id", key
+      @relation_to_many name.list, target, "in", "id", key
     else
       { key = name.ids, target = name.list } = option
-      @relation_to_many name.list, target, "where", key, "_id"
+      @relation_to_many name.list, target, "where", key, "id"
 
   has_many: (to, option = {})->
     name = rename to
     { key = @$name.id, target = name.list } = option
-    @relation_to_many name.list, target, "where", "_id", key
+    @relation_to_many name.list, target, "where", "id", key
 
   tree: (option = {})->
     fk = @$name.id
@@ -276,12 +276,12 @@ module.exports = class Rule
       leaf:
         get: ->
           not_leaf = _.uniq @pluck fk
-          @where (o)-> o._id not in not_leaf
+          @where (o)-> o.id not in not_leaf
 
   graph: (option = {})->
     { directed, cost } = option
     ik = @$name.ids
-    @relation_to_many @$name.list, @$name.list, "where", ik, "_id"
+    @relation_to_many @$name.list, @$name.list, "where", ik, "id"
     @relation_graph "path", ik
     unless directed
       true # todo
