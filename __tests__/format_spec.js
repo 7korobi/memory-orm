@@ -112,9 +112,7 @@ var Mem, keys;
 __webpack_require__(/*! ./models/index */ "./__tests__/models/index.coffee");
 
 Mem = __webpack_require__(/*! ../src/index */ "./src/index.coffee");
-
 keys = ["tags", "faces", "chr_sets", "chr_npcs", "chr_jobs", "locales", "randoms", "folders", "roles", "traps", "ables", "sow_roletables"];
-
 keys.map(function (key) {
   return describe(key, function () {
     return test('format snapshot', function () {
@@ -136,11 +134,15 @@ keys.map(function (key) {
 
 
 var Model, Query, Rule, Set, game;
-
-({ Model, Query, Rule, Set } = __webpack_require__(/*! ../../src/index */ "./src/index.coffee"));
-
-({ game } = __webpack_require__(/*! ~/config/live.yml */ "./__tests__/config/live.yml"));
-
+({
+  Model,
+  Query,
+  Rule,
+  Set
+} = __webpack_require__(/*! ../../src/index */ "./src/index.coffee"));
+({
+  game
+} = __webpack_require__(/*! ~/config/live.yml */ "./__tests__/config/live.yml"));
 new Rule("book").schema(function () {
   this.order("write_at");
   this.path("folder");
@@ -161,15 +163,12 @@ new Rule("book").schema(function () {
     return {};
   });
 });
-
 new Rule("winner").schema(function () {
   return this.scope(function (all) {});
 });
-
 new Rule("option").schema(function () {
   return this.scope(function (all) {});
 });
-
 new Rule("say").schema(function () {
   this.scope(function (all) {
     return {
@@ -182,17 +181,12 @@ new Rule("say").schema(function () {
     return this.for != null ? this.for : this.for = [];
   });
 });
-
 new Rule("game").schema(function () {
   return this.scope(function (all) {});
 });
-
 Set.option.set(__webpack_require__(/*! ../yaml/set_option.yml */ "./__tests__/yaml/set_option.yml"));
-
 Set.winner.set(__webpack_require__(/*! ../yaml/set_winner.yml */ "./__tests__/yaml/set_winner.yml"));
-
 Set.say.set(__webpack_require__(/*! ../yaml/set_says.yml */ "./__tests__/yaml/set_says.yml"));
-
 Set.game.set(__webpack_require__(/*! ../yaml/sow_game.yml */ "./__tests__/yaml/sow_game.yml"));
 
 /***/ }),
@@ -208,9 +202,12 @@ Set.game.set(__webpack_require__(/*! ../yaml/sow_game.yml */ "./__tests__/yaml/s
 
 
 var Model, Query, Rule, Set;
-
-({ Set, Model, Query, Rule } = __webpack_require__(/*! ../../src/index */ "./src/index.coffee"));
-
+({
+  Set,
+  Model,
+  Query,
+  Rule
+} = __webpack_require__(/*! ../../src/index */ "./src/index.coffee"));
 new Rule("card").schema(function () {
   this.order("write_at");
   this.path("folder", "book", "potof");
@@ -225,15 +222,18 @@ new Rule("card").schema(function () {
   return this.scope(function (all) {
     return {
       for_part: function (part_id) {
-        return all.where({ part_id });
+        return all.where({
+          part_id
+        });
       },
       for_phase: function (phase_id) {
-        return all.where({ phase_id });
+        return all.where({
+          phase_id
+        });
       }
     };
   });
 });
-
 new Rule("stat").schema(function () {
   this.path("folder", "book", "potof");
   this.belongs_to("able");
@@ -248,7 +248,6 @@ new Rule("stat").schema(function () {
     }
   });
 });
-
 new Rule("role").schema(function () {
   this.habtm("ables");
   return this.model = class model extends this.model {
@@ -260,13 +259,11 @@ new Rule("role").schema(function () {
 
   };
 });
-
 new Rule("trap").schema(function () {
   this.order("write_at");
   this.belongs_to("book");
   return this.belongs_to("potof");
 });
-
 new Rule("able").schema(function () {
   this.habtm("roles", {
     reverse: true
@@ -280,11 +277,8 @@ new Rule("able").schema(function () {
 
   };
 });
-
 Set.role.set(__webpack_require__(/*! ../yaml/set_roles.yml */ "./__tests__/yaml/set_roles.yml"));
-
 Set.trap.set(__webpack_require__(/*! ../yaml/set_traps.yml */ "./__tests__/yaml/set_traps.yml"));
-
 Set.able.set(__webpack_require__(/*! ../yaml/set_ables.yml */ "./__tests__/yaml/set_ables.yml"));
 
 /***/ }),
@@ -303,9 +297,11 @@ var Model,
     Query,
     Rule,
     indexOf = [].indexOf;
-
-({ Model, Query, Rule } = __webpack_require__(/*! ../../src/index */ "./src/index.coffee"));
-
+({
+  Model,
+  Query,
+  Rule
+} = __webpack_require__(/*! ../../src/index */ "./src/index.coffee"));
 new Rule("chat").schema(function () {
   var anker;
   this.path("folder", "book", "part", "phase");
@@ -325,13 +321,17 @@ new Rule("chat").schema(function () {
       sow_cite: function (a) {
         var b, c;
         b = a.split('-');
+
         if ('TS' === b[3]) {
           b[3] = 'AIM';
         }
+
         c = a.split('-');
+
         if (c[2]) {
           c[2]--;
         }
+
         return all.find(a, b.join('-'), c.join('-'));
       },
       now: function (hides, words, page_by, mode, part_id) {
@@ -350,6 +350,7 @@ new Rule("chat").schema(function () {
     if (this.mention_ids == null) {
       this.mention_ids = [];
     }
+
     return this.q = {
       group: [this.potof_id, this.phase_id].join('+'),
       search_words: this.log
@@ -358,7 +359,9 @@ new Rule("chat").schema(function () {
   return this.model = class model extends this.model {
     make_ankers(...ids) {
       var book_id;
-      ({ book_id } = this);
+      ({
+        book_id
+      } = this);
       ids.push(this.id);
       ids = Array.from(new Set(ids));
       return [book_id, ids.map(function (id) {
@@ -368,29 +371,39 @@ new Rule("chat").schema(function () {
 
     anker(part_id) {
       var guide, mark;
-      ({ mark, guide } = this.phase);
+      ({
+        mark,
+        guide
+      } = this.phase);
+
       switch (false) {
         case !!guide:
           return "";
+
         case mark == null:
           if (part_id === this.part_id) {
             return `${mark}${this.idx}`;
           } else {
             return `${mark}${this.part.idx}:${this.idx}`;
           }
+
           break;
+
         default:
           if (part_id === this.part_id) {
             return this.id.slice(this.part_id.length);
           } else {
             return this.id.slice(this.book_id.length);
           }
+
       }
     }
 
     static map_partition(o, emit) {
       var group, handle, it, part_id;
-      ({ part_id } = o);
+      ({
+        part_id
+      } = o);
       it = {
         set: o.id,
         max: o.write_at + 1,
@@ -398,24 +411,35 @@ new Rule("chat").schema(function () {
       };
       emit(it);
       emit(part_id, "wiki", it);
+
       if (!o.phase) {
         return;
       }
-      ({ group, handle } = o.phase);
+
+      ({
+        group,
+        handle
+      } = o.phase);
+
       if ('M'.includes(group)) {
         emit(part_id, "memo", it);
       }
+
       if ('SAI'.includes(group)) {
         emit(part_id, "full", it);
+
         if (['SSAY', 'VSSAY', 'MAKER', 'ADMIN', 'public'].includes(handle)) {
           emit(part_id, "normal", it);
         }
+
         if (['TSAY', 'private'].includes(handle)) {
           emit(part_id, "solo", it);
         }
+
         if (!['SSAY', 'VSSAY', 'MAKER', 'ADMIN', 'dark', 'GSAY', 'TSAY', 'public'].includes(handle)) {
           emit(part_id, "extra", it);
         }
+
         if (['GSAY'].includes(handle)) {
           return emit(part_id, "rest", it);
         }
@@ -433,6 +457,7 @@ new Rule("chat").schema(function () {
         count: 1,
         all: o.log.length
       });
+
       if (o.phase_id.match(/-[SGV]S?$/)) {
         all = o.phase_id.split("-");
         all[2] = 'top';
@@ -450,13 +475,16 @@ new Rule("chat").schema(function () {
           min: o.write_at
         });
       }
+
       if (o.phase_id.match(/-.M?$/)) {
         emit("side", o.phase_id, o.potof_id, {
           max: o.write_at + 1
         });
       }
+
       ref = o.mention_ids;
       results = [];
+
       for (i = 0, len = ref.length; i < len; i++) {
         mention_id = ref[i];
         emit("mention", mention_id, {
@@ -466,6 +494,7 @@ new Rule("chat").schema(function () {
           count: 1
         }));
       }
+
       return results;
     }
 
@@ -483,10 +512,12 @@ new Rule("chat").schema(function () {
       emit("mention", anker);
       ref = o.mention_ids;
       results = [];
+
       for (i = 0, len = ref.length; i < len; i++) {
         mention_id = ref[i];
         results.push(emit("mention_to", mention_id, anker));
       }
+
       return results;
     }
 
@@ -506,11 +537,14 @@ new Rule("chat").schema(function () {
 
 
 var Model, Query, Rule, Set, State, order;
-
-({ Set, Model, Query, Rule, State } = __webpack_require__(/*! ../../src/index */ "./src/index.coffee"));
-
+({
+  Set,
+  Model,
+  Query,
+  Rule,
+  State
+} = __webpack_require__(/*! ../../src/index */ "./src/index.coffee"));
 order = ["ririnra", "wa", "time", "sf", "fable", "mad", "ger", "changed", "animal", "school", "all"];
-
 new Rule("tag").schema(function () {
   this.belongs_to("chr_set");
   this.habtm("faces", {
@@ -533,7 +567,6 @@ new Rule("tag").schema(function () {
     };
   });
 });
-
 new Rule("face").schema(function () {
   var map;
   this.habtm("tags");
@@ -547,13 +580,17 @@ new Rule("face").schema(function () {
       name_blank: function () {
         var i, idx, key, ref, ref1, results;
         results = [];
+
         for (idx = i = ref = "ア".charCodeAt(0), ref1 = "ン".charCodeAt(0); ref <= ref1 ? i <= ref1 : i >= ref1; idx = ref <= ref1 ? ++i : --i) {
           key = String.fromCharCode(idx);
+
           if (all.reduce.name_head.from[key]) {
             continue;
           }
+
           results.push(key);
         }
+
         return results;
       },
       name_head: function (tag_id = "all") {
@@ -586,22 +623,27 @@ new Rule("face").schema(function () {
       emit("tag", "all", it);
       ref = o.tag_ids;
       results = [];
+
       for (i = 0, len = ref.length; i < len; i++) {
         tag_id = ref[i];
         results.push(emit("tag", tag_id, it));
       }
+
       return results;
     }
 
     static map_reduce(o, emit) {
       var head;
       head = o.name[0];
+
       if (["†"].includes(o.name[0])) {
         head = o.name[1];
       }
+
       if (["D."].includes(o.name.slice(0, 2))) {
         head = o.name[2];
       }
+
       head = head.replace(/[\u3041-\u3096]/g, function (hira) {
         return String.fromCharCode(hira.charCodeAt(0) + 0x60);
       });
@@ -679,13 +721,11 @@ new Rule("face").schema(function () {
     }
   });
 });
-
 new Rule("chr_set").schema(function () {
   this.order("label");
   this.has_many("chr_jobs");
   return this.has_many("chr_npcs");
 });
-
 new Rule("chr_npc").schema(function () {
   this.order("label");
   this.belongs_to("chr_set");
@@ -695,7 +735,6 @@ new Rule("chr_npc").schema(function () {
     return this.chr_set_idx = order.indexOf(this.chr_set_id);
   });
 });
-
 new Rule("chr_job").schema(function () {
   this.belongs_to("chr_set");
   this.belongs_to("face");
@@ -710,12 +749,20 @@ new Rule("chr_job").schema(function () {
     return {
       tag: function (tag_id) {
         var chr_set_id;
-        ({ chr_set_id } = Query.tags.find(tag_id));
+        ({
+          chr_set_id
+        } = Query.tags.find(tag_id));
+
         switch (tag_id) {
           case "all":
-            return all.where({ chr_set_id });
+            return all.where({
+              chr_set_id
+            });
+
           default:
-            return all.where({ chr_set_id }).in({
+            return all.where({
+              chr_set_id
+            }).in({
               'face.tag_ids': tag_id
             });
         }
@@ -731,11 +778,11 @@ new Rule("chr_job").schema(function () {
 
   };
 });
-
 Query.transaction_chr = State.transaction(function () {
   var chr_set_id, cs_key, face, face_id, faces, i, j, job, k, key, len, len1, len2, list, o, ref, say;
   Set.tag.set(__webpack_require__(/*! ../yaml/chr_tag.yml */ "./__tests__/yaml/chr_tag.yml"));
   Set.face.set(faces = __webpack_require__(/*! ../yaml/chr_face.yml */ "./__tests__/yaml/chr_face.yml"));
+
   for (i = 0, len = faces.length; i < len; i++) {
     o = faces[i];
     o.aggregate = {
@@ -757,35 +804,57 @@ Query.transaction_chr = State.transaction(function () {
       }
     };
   }
+
   ref = __webpack_require__(/*! ../yaml/npc.yml */ "./__tests__/yaml/npc.yml");
+
   for (j = 0, len1 = ref.length; j < len1; j++) {
-    ({ face_id, say } = ref[j]);
-    Set.face.find(face_id).npc = { say };
+    ({
+      face_id,
+      say
+    } = ref[j]);
+    Set.face.find(face_id).npc = {
+      say
+    };
   }
+
   for (k = 0, len2 = order.length; k < len2; k++) {
     key = order[k];
     o = __webpack_require__("./__tests__/yaml sync recursive ^\\.\\/cs_.*\\.yml$")(`./cs_${key}.yml`);
     Set.chr_set.append(o.chr_set);
-    ({ chr_set_id } = o.chr_set);
-    cs_key = { chr_set_id };
+    ({
+      chr_set_id
+    } = o.chr_set);
+    cs_key = {
+      chr_set_id
+    };
     Set.chr_npc.merge(o.chr_npc, cs_key);
     Set.chr_job.merge(o.chr_job, cs_key);
   }
+
   list = function () {
     var l, len3, ref1, results;
     results = [];
+
     for (l = 0, len3 = faces.length; l < len3; l++) {
       face = faces[l];
       chr_set_id = "all";
       face_id = face._id;
       job = (ref1 = face.chr_jobs.list.sort("chr_set_idx")[0]) != null ? ref1.job : void 0;
+
       if (job == null) {
         continue;
       }
-      results.push({ chr_set_id, face_id, job });
+
+      results.push({
+        chr_set_id,
+        face_id,
+        job
+      });
     }
+
     return results;
   }();
+
   return Set.chr_job.merge(list);
 });
 
@@ -805,7 +874,9 @@ var Base, Base59, Set, edit;
 
 __webpack_require__(/*! ~/models/index */ "./__tests__/models/index.coffee");
 
-({ Set } = __webpack_require__(/*! ../../src/index */ "./src/index.coffee"));
+({
+  Set
+} = __webpack_require__(/*! ../../src/index */ "./src/index.coffee"));
 
 Base = function (table) {
   var size;
@@ -814,18 +885,19 @@ Base = function (table) {
     num2str: function (num) {
       var at, str;
       str = "";
+
       while (num) {
         at = num % size;
         str = table[at] + str;
         num = Math.floor(num / size);
       }
+
       return str;
     }
   };
 };
 
 Base59 = Base("ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz0123456789");
-
 module.exports = edit = {
   potof: {
     _id: 'edit-edit-self',
@@ -853,13 +925,9 @@ module.exports = edit = {
     }
   }
 };
-
 edit.org_chat = edit.chat;
-
 Set.chat.add(edit.chat);
-
 Set.phase.add(edit.phase);
-
 Set.potof.add(edit.potof);
 
 /***/ }),
@@ -913,11 +981,13 @@ __webpack_require__(/*! ./sow */ "./__tests__/models/sow.coffee");
 
 
 var Model, Query, Rule, Set;
-
-({ Set, Model, Query, Rule } = __webpack_require__(/*! ../../src/index */ "./src/index.coffee"));
-
+({
+  Set,
+  Model,
+  Query,
+  Rule
+} = __webpack_require__(/*! ../../src/index */ "./src/index.coffee"));
 new Rule("locale").schema(function () {});
-
 Set.locale.set(__webpack_require__(/*! ../yaml/locale.yml */ "./__tests__/yaml/locale.yml"));
 
 /***/ }),
@@ -933,9 +1003,11 @@ Set.locale.set(__webpack_require__(/*! ../yaml/locale.yml */ "./__tests__/yaml/l
 
 
 var Model, Query, Rule;
-
-({ Model, Query, Rule } = __webpack_require__(/*! ../../src/index */ "./src/index.coffee"));
-
+({
+  Model,
+  Query,
+  Rule
+} = __webpack_require__(/*! ../../src/index */ "./src/index.coffee"));
 new Rule("part").schema(function () {
   this.path("folder", "book");
   this.has_many("sections");
@@ -969,9 +1041,11 @@ new Rule("part").schema(function () {
 
 
 var Model, Query, Rule;
-
-({ Model, Query, Rule } = __webpack_require__(/*! ../../src/index */ "./src/index.coffee"));
-
+({
+  Model,
+  Query,
+  Rule
+} = __webpack_require__(/*! ../../src/index */ "./src/index.coffee"));
 new Rule("phase").schema(function () {
   this.path("folder", "book", "part");
   this.has_many("chats");
@@ -1017,9 +1091,12 @@ new Rule("phase").schema(function () {
 
 
 var Model, Query, Rule, Set;
-
-({ Set, Model, Query, Rule } = __webpack_require__(/*! ../../src/index */ "./src/index.coffee"));
-
+({
+  Set,
+  Model,
+  Query,
+  Rule
+} = __webpack_require__(/*! ../../src/index */ "./src/index.coffee"));
 new Rule("potof").schema(function () {
   this.order("write_at");
   this.path("folder", "book");
@@ -1034,67 +1111,93 @@ new Rule("potof").schema(function () {
   this.scope(function (all) {
     return {
       by_face: function (book_id, face_id) {
-        return all.where({ face_id, book_id });
+        return all.where({
+          face_id,
+          book_id
+        });
       },
       my: function (book_id, uid) {
-        return all.where({ book_id, uid }).order({
+        return all.where({
+          book_id,
+          uid
+        }).order({
           sort: ['write_at', 'desc']
         }).list[0];
       },
       catalog: function (book_id, part_id, sort, order) {
         var a1, a2;
         [a1, a2] = sort.split(".");
+
         if ("say" === a1) {
           sort = function (o) {
             return o.say(part_id)[a2];
           };
         }
+
         return Query.books.find(book_id).potofs.sort(sort, order);
       },
       sow_id: function (book_id, face_id, sign, is_merge) {
         var i, j, len, len1, list, o;
-        ({ list } = all.by_face(book_id, face_id));
+        ({
+          list
+        } = all.by_face(book_id, face_id));
+
         for (i = 0, len = list.length; i < len; i++) {
           o = list[i];
+
           if (o.sign === sign) {
             return o.id;
           }
         }
+
         if (is_merge) {
           for (j = 0, len1 = list.length; j < len1; j++) {
             o = list[j];
+
             if (o.cards.list.length) {
               return o.id;
             }
           }
         }
+
         return null;
       }
     };
   });
   this.deploy(function () {
     var _id, able_id_set, base, card, i, j, len, len1, ref, ref1, role_id_set;
+
     role_id_set = {};
     able_id_set = {};
     ref = this.cards.list;
+
     for (i = 0, len = ref.length; i < len; i++) {
       card = ref[i];
+
       if (!card.role) {
         continue;
       }
+
       role_id_set[card.role_id] = true;
+
       switch (card.idx) {
         case "request":
           delete role_id_set[card.role_id];
       }
+
       ref1 = card.role.ables.list;
+
       for (j = 0, len1 = ref1.length; j < len1; j++) {
-        ({ _id } = ref1[j]);
+        ({
+          _id
+        } = ref1[j]);
         able_id_set[_id] = true;
       }
     }
+
     this.role_ids = Object.keys(role_id_set);
     this.able_ids = Object.keys(able_id_set);
+
     if (this.live) {
       return (base = this.live).date != null ? base.date : base.date = 2e308;
     }
@@ -1105,27 +1208,34 @@ new Rule("potof").schema(function () {
         var head, i, len, o, ref, ref1, results, stat;
         ref = this.roles.list;
         results = [];
+
         for (i = 0, len = ref.length; i < len; i++) {
           o = ref[i];
+
           if (!("LIVE" !== o.group)) {
             continue;
           }
+
           stat = this.stats.find(`${this._id}-${o._id}`);
           head = (ref1 = stat != null ? stat.label : void 0) != null ? ref1 : "";
           results.push(`${head}${o.label}`);
         }
+
         return results;
       }
     },
     win: {
       get: function () {
         var ref, ref1;
+
         if (["suddendead", "leave"].includes((ref = this.live) != null ? ref.role_id : void 0)) {
           return "";
         }
+
         if (!this) {
           return "";
         }
+
         if ((ref1 = this.book) != null ? ref1.winner_id : void 0) {
           if (this.book.winner_id === this.winner_id) {
             return "勝利";
@@ -1168,9 +1278,14 @@ new Rule("potof").schema(function () {
     head: {
       get: function () {
         var job, name;
+
         if (this.face != null) {
-          ({ job, name } = this.face);
+          ({
+            job,
+            name
+          } = this.face);
         }
+
         return [this.job || job, this.name || name].join(" ");
       }
     }
@@ -1179,12 +1294,15 @@ new Rule("potof").schema(function () {
     side(part_id) {
       var i, idx, len, o, ref, ref1, ref2;
       ref = ["SM", "S", "GM", "G", "VM", "V"];
+
       for (i = 0, len = ref.length; i < len; i++) {
         idx = ref[i];
+
         if (o = (ref1 = this.book.chats.reduce.side) != null ? (ref2 = ref1[`${part_id}-${idx}`]) != null ? ref2[this.id] : void 0 : void 0) {
           return o;
         }
       }
+
       return {
         max_is: {}
       };
@@ -1193,12 +1311,15 @@ new Rule("potof").schema(function () {
     say(part_id) {
       var i, idx, len, o, ref, ref1, ref2;
       ref = ["SS", "S", "GS", "G", "VS", "V"];
+
       for (i = 0, len = ref.length; i < len; i++) {
         idx = ref[i];
+
         if (o = (ref1 = this.book.chats.reduce.potof) != null ? (ref2 = ref1[`${part_id}-${idx}`]) != null ? ref2[this.id] : void 0 : void 0) {
           return o;
         }
       }
+
       return {
         count: 0,
         all: 0,
@@ -1209,7 +1330,9 @@ new Rule("potof").schema(function () {
 
     say_handle(part_id) {
       var max_is, ref, ref1;
-      ({ max_is } = this.say(part_id));
+      ({
+        max_is
+      } = this.say(part_id));
       return (ref = max_is != null ? (ref1 = max_is.phase) != null ? ref1.handle : void 0 : void 0) != null ? ref : "TSAY";
     }
 
@@ -1217,16 +1340,21 @@ new Rule("potof").schema(function () {
       return o;
     }) {
       var i, key, len, o;
+
       for (i = 0, len = keys.length; i < len; i++) {
         key = keys[i];
         o = q.find(`${this._id}-${key}`);
+
         if (!o) {
           continue;
         }
+
         o = cb(o);
+
         if (!o) {
           continue;
         }
+
         return o;
       }
     }
@@ -1253,14 +1381,19 @@ new Rule("potof").schema(function () {
 var Model, Query, Rule, Set, _, _id, i, idx1, idx2, j, key, label, len, len1, number, o, oo, rank, ratio, ref, ref1, ref2, suite, suite_code, type;
 
 _ = __webpack_require__(/*! lodash */ "lodash");
-
-({ Set, Model, Query, Rule } = __webpack_require__(/*! ../../src/index */ "./src/index.coffee"));
-
+({
+  Set,
+  Model,
+  Query,
+  Rule
+} = __webpack_require__(/*! ../../src/index */ "./src/index.coffee"));
 new Rule("random").schema(function () {
   this.scope(function (all) {
     return {
       deck: function (type) {
-        return all.where({ type });
+        return all.where({
+          type
+        });
       }
     };
   });
@@ -1294,13 +1427,17 @@ new Rule("random").schema(function () {
       switch (this.type) {
         case 'chess':
           return `${this.symbols[side]} ${["白", "黒"][side]}${this.label}`;
+
         case 'tarot':
           return `${["正", "逆"][side]} ${this.roman}.${this.label}`;
+
         case 'zodiac':
           return `${this.symbol} ${this.roman}.${this.label}`;
+
         case 'planet':
         case 'weather':
           return `${this.symbol} ${this.label}`;
+
         default:
           return `${this.label}`;
       }
@@ -1311,34 +1448,48 @@ new Rule("random").schema(function () {
 
 Query.randoms.choice = function (type) {
   var at, i, len, list, o, reduce;
-  ({ list, reduce } = this.deck(type));
+  ({
+    list,
+    reduce
+  } = this.deck(type));
   at = _.random(0, reduce.ratio.all - 1);
   o = void 0;
+
   for (i = 0, len = list.length; i < len; i++) {
     o = list[i];
     at -= o.ratio;
+
     if (at < 0) {
       break;
     }
   }
+
   return o.toString(_.random(0, 1));
 };
 
 type = "trump";
-
 ratio = 1;
-
 ref = ["♢", "♡", "♣", "♠"];
+
 for (idx1 = i = 0, len = ref.length; i < len; idx1 = ++i) {
   suite = ref[idx1];
   ref1 = "A 2 3 4 5 6 7 8 9 10 J Q K".split(" ");
+
   for (idx2 = j = 0, len1 = ref1.length; j < len1; idx2 = ++j) {
     rank = ref1[idx2];
     label = `${suite}${rank}`;
     suite_code = idx1 + 1;
     number = idx2 + 1;
     _id = 100 * suite_code + number;
-    Set.random.add({ _id, type, ratio, number, suite, rank, label });
+    Set.random.add({
+      _id,
+      type,
+      ratio,
+      number,
+      suite,
+      rank,
+      label
+    });
   }
 }
 
@@ -1351,7 +1502,6 @@ Set.random.add({
   rank: "",
   label: "JOKER"
 });
-
 Set.random.add({
   _id: 502,
   type: "trump",
@@ -1361,17 +1511,20 @@ Set.random.add({
   rank: "",
   label: "joker"
 });
-
 ref2 = __webpack_require__(/*! ../yaml/random.yml */ "./__tests__/yaml/random.yml");
+
 for (type in ref2) {
   o = ref2[type];
+
   for (key in o) {
     oo = o[key];
     oo._id = `${type}_${key}`;
     oo.type = type;
+
     if (oo.ratio == null) {
       oo.ratio = 1;
     }
+
     Set.random.add(oo);
   }
 }
@@ -1389,9 +1542,11 @@ for (type in ref2) {
 
 
 var Model, Query, Rule, format;
-
-({ Model, Query, Rule } = __webpack_require__(/*! ../../src/index */ "./src/index.coffee"));
-
+({
+  Model,
+  Query,
+  Rule
+} = __webpack_require__(/*! ../../src/index */ "./src/index.coffee"));
 format = {
   head: new Intl.DateTimeFormat('ja-JP', {
     weekday: "short",
@@ -1401,7 +1556,6 @@ format = {
     hour: "2-digit"
   })
 };
-
 new Rule("section").schema(function () {
   this.order("write_at");
   this.path("folder", "book", "part");
@@ -1418,6 +1572,7 @@ new Rule("section").schema(function () {
         var begin, write;
         begin = format.head.format(this.begin_at);
         write = format.head.format(this.write_at);
+
         if (begin === write) {
           return begin;
         } else {
@@ -1442,17 +1597,18 @@ new Rule("section").schema(function () {
 
 
 var Mem, Model, Query, Rule, Set, format, locale, url, welcome;
-
-({ Set, Model, Query, Rule } = Mem = __webpack_require__(/*! ../../src/index */ "./src/index.coffee"));
-
-({ url } = __webpack_require__(/*! ~/config/live.yml */ "./__tests__/config/live.yml"));
-
+({
+  Set,
+  Model,
+  Query,
+  Rule
+} = Mem = __webpack_require__(/*! ../../src/index */ "./src/index.coffee"));
+({
+  url
+} = __webpack_require__(/*! ~/config/live.yml */ "./__tests__/config/live.yml"));
 format = __webpack_require__(/*! date-fns/format */ "date-fns/format");
-
 locale = __webpack_require__(/*! date-fns/locale/ja */ "date-fns/locale/ja");
-
 new Rule("sow_roletable").schema(function () {});
-
 new Rule("sow_turn").schema(function () {
   this.order("turn", "asc");
   return this.belongs_to("village", {
@@ -1460,7 +1616,6 @@ new Rule("sow_turn").schema(function () {
     key: "story_id"
   });
 });
-
 new Rule("sow_village").schema(function () {
   var cmd;
   this.has_many("turns", {
@@ -1488,10 +1643,14 @@ new Rule("sow_village").schema(function () {
       prologue: all.partition("prologue.set").sort("timer.nextcommitdt", "desc"),
       progress: all.partition("progress.set").sort("timer.nextcommitdt", "desc"),
       mode: function (mode) {
-        return all.where({ mode });
+        return all.where({
+          mode
+        });
       },
       summary: function (mode, query_in, query_where, search_word) {
-        return all.where({ mode }).in(query_in).where(query_where).search(search_word);
+        return all.where({
+          mode
+        }).in(query_in).where(query_where).search(search_word);
       },
       all_contents: function (mode, query_in, query_where, search_word, order, asc) {
         return all.partition(`${mode}.set`).in(query_in).where(query_where).search(search_word).page(25).order({
@@ -1503,17 +1662,28 @@ new Rule("sow_village").schema(function () {
   });
   this.deploy(function () {
     var hour, in_month, interval, list, minute, monthry, ref, ref1, ref2, ref3, updated_at, yeary;
-    ({ interval, hour, minute } = this.upd);
+    ({
+      interval,
+      hour,
+      minute
+    } = this.upd);
+
     if (hour < 10) {
       hour = `0${hour}`;
     }
+
     if (minute < 10) {
       minute = `0${minute}`;
     }
+
     updated_at = new Date(this.timer.updateddt);
     this.write_at = updated_at;
-    in_month = format(updated_at, 'MM月', { locale });
-    yeary = format(updated_at, 'YYYY年', { locale });
+    in_month = format(updated_at, 'MM月', {
+      locale
+    });
+    yeary = format(updated_at, 'YYYY年', {
+      locale
+    });
     monthry = yeary + in_month;
     this.q = {
       yeary,
@@ -1530,21 +1700,28 @@ new Rule("sow_village").schema(function () {
       rating: this.rating,
       search_words: this.name
     };
+
     if ((ref = this.rating) === null || ref === 0 || ref === "0" || ref === "null" || ref === "view") {
       this.q.rating = "default";
     }
+
     if ((ref1 = this.rating) === "R15" || ref1 === "r15" || ref1 === "r18") {
       this.q.rating = "alert";
     }
+
     if ((ref2 = this.rating) === "gro") {
       this.q.rating = "violence";
     }
+
     list = (ref3 = Query.sow_roletables.find(this.type.roletable).role_ids_list) != null ? ref3[this.q.size] : void 0;
+
     if ((list != null ? list.length : void 0) && !this.card.config.length) {
       this.card.config = list;
     }
+
     this.card.option = this.options;
     this.folder = Query.folders.find(this.q.folder_id);
+
     if (this.is_epilogue && this.is_finish) {
       this.href = `${url.store}/stories/${this._id}`;
       this.mode = "oldlog";
@@ -1555,6 +1732,7 @@ new Rule("sow_village").schema(function () {
         this.mode = "prologue";
       }
     }
+
     return this.aggregate = {
       face_ids: []
     };
@@ -1562,7 +1740,9 @@ new Rule("sow_village").schema(function () {
   this.property('model', {
     query: {
       get: function () {
-        return Query.sow_villages.where({ id: this.id });
+        return Query.sow_villages.where({
+          id: this.id
+        });
       }
     },
     roles: {
@@ -1639,7 +1819,10 @@ new Rule("sow_village").schema(function () {
 
     static map_partition(o, emit) {
       var id, part_id;
-      ({ id, part_id } = o);
+      ({
+        id,
+        part_id
+      } = o);
       emit({
         set: id
       });
@@ -1664,32 +1847,39 @@ new Rule("sow_village").schema(function () {
       emit("game", o.q.game, cmd);
       emit("mob", o.q.mob, cmd);
       ref = o.card.option;
+
       for (i = 0, len = ref.length; i < len; i++) {
         opt_id = ref[i];
         emit("option", opt_id, cmd);
       }
+
       ref1 = o.card.event;
+
       for (j = 0, len1 = ref1.length; j < len1; j++) {
         card_id = ref1[j];
         emit("event", card_id, cmd);
       }
+
       ref2 = o.card.discard;
+
       for (k = 0, len2 = ref2.length; k < len2; k++) {
         card_id = ref2[k];
         emit("discard", card_id, cmd);
       }
+
       ref3 = o.card.config;
       results = [];
+
       for (l = 0, len3 = ref3.length; l < len3; l++) {
         card_id = ref3[l];
         results.push(emit("config", card_id, cmd));
       }
+
       return results;
     }
 
   };
 });
-
 new Rule("folder").schema(function () {
   this.scope(function (all) {
     return {
@@ -1697,16 +1887,20 @@ new Rule("folder").schema(function () {
         return !o.disabled;
       }),
       host: function (hostname) {
-        return all.where({ hostname });
+        return all.where({
+          hostname
+        });
       }
     };
   });
   return this.deploy(function () {
     var _, hostname, o, path, path_dir, protocol, ref;
+
     if (o = (ref = this.config) != null ? ref.cfg : void 0) {
       this.rule = o.RULE;
       this.title = o.NAME_HOME;
       this.max_vils = o.MAX_VILLAGES;
+
       if (this.max_vils) {
         this.href = this.config.cfg.URL_SW + "/sow.cgi";
         [protocol, _, hostname, ...path_dir] = this.href.split("/");
@@ -1714,22 +1908,23 @@ new Rule("folder").schema(function () {
         path = "/" + path_dir.join("/");
       }
     }
+
     switch (this.folder) {
       case "LOBBY":
         this.max_vils = 0;
     }
+
     if (this.disabled = !path) {
       return;
     }
+
     return this.route = {
       path,
       name: this._id
     };
   });
 });
-
 Set.folder.set(__webpack_require__(/*! ../yaml/sow_folder.yml */ "./__tests__/yaml/sow_folder.yml"));
-
 Set.sow_roletable.set(__webpack_require__(/*! ../yaml/sow_roletables.yml */ "./__tests__/yaml/sow_roletables.yml"));
 
 welcome = function (h) {
@@ -1737,6 +1932,7 @@ welcome = function (h) {
   chats = {};
   phases = {};
   potofs = {};
+
   for (key in h) {
     face_id = h[key];
     potofs[key] = {
@@ -1758,6 +1954,7 @@ welcome = function (h) {
       log: "祝！人狼議事１０周年！"
     };
   }
+
   Set.phase.merge(phases);
   Set.potof.merge(potofs);
   return Set.chat.merge(chats);
@@ -1771,7 +1968,6 @@ welcome({
   "CABALA-top-0-0": "c78",
   "top-top-0-0": "t31"
 });
-
 Set.chat.merge({
   "LOBBY-top-0-0-2": {
     write_at: 1370662886000,
@@ -2165,62 +2361,82 @@ module.exports = {
 var $step, Finder, Format, Query, State, _, each, each_by_id, validate;
 
 _ = __webpack_require__(/*! lodash */ "lodash");
+({
+  State,
+  Query,
+  Format
+} = __webpack_require__(/*! ./mem.coffee */ "./src/mem.coffee"));
 
-({ State, Query, Format } = __webpack_require__(/*! ./mem.coffee */ "./src/mem.coffee"));
-
-each_by_id = function ({ list, depends }, from, process) {
+each_by_id = function ({
+  list,
+  depends
+}, from, process) {
   var f, i, item, j, len, len1;
+
   for (i = 0, len = depends.length; i < len; i++) {
     f = depends[i];
     f();
   }
+
   switch (from != null ? from.constructor : void 0) {
     case Array:
       for (j = 0, len1 = from.length; j < len1; j++) {
         item = from[j];
         process(item.id || item);
       }
+
   }
 };
 
-each = function ({ list, depends }, from, process) {
+each = function ({
+  list,
+  depends
+}, from, process) {
   var f, i, id, item, j, len, len1;
+
   for (i = 0, len = depends.length; i < len; i++) {
     f = depends[i];
     f();
   }
+
   switch (from != null ? from.constructor : void 0) {
     case Array:
       for (j = 0, len1 = from.length; j < len1; j++) {
         item = from[j];
         process(item);
       }
+
       break;
+
     case Object:
       for (id in from) {
         item = from[id];
         item._id = id;
         process(item);
       }
+
   }
 };
 
 validate = function (item, chklist) {
   var chk, i, len;
+
   if (!(item && chklist)) {
     return false;
   }
+
   for (i = 0, len = chklist.length; i < len; i++) {
     chk = chklist[i];
+
     if (!chk(item)) {
       return false;
     }
   }
+
   return true;
 };
 
 $step = 0;
-
 module.exports = Finder = class Finder {
   constructor($name) {
     this.$name = $name;
@@ -2230,9 +2446,11 @@ module.exports = Finder = class Finder {
 
   calculate(query, memory) {
     var cache, i, len, partition, paths, ref;
+
     if (!(query._step < State.step[this.$name.list])) {
       return;
     }
+
     delete query._reduce;
     query._step = ++$step;
     cache = _.cloneDeep(this.$format);
@@ -2242,6 +2460,7 @@ module.exports = Finder = class Finder {
         hash: {}
       }
     };
+
     if (query._all_ids) {
       this.reduce(this.map, cache, paths, query, memory, query._all_ids);
     } else {
@@ -2249,74 +2468,100 @@ module.exports = Finder = class Finder {
         this.reduce(this.map, cache, paths, query, memory, Object.keys(memory));
       } else {
         ref = query.$partition;
+
         for (i = 0, len = ref.length; i < len; i++) {
           partition = ref[i];
           this.reduce(this.map, cache, paths, query, memory, _.get(query.all, `reduce.${partition}`));
         }
       }
     }
+
     this.finish_order(this.map, cache, paths, query);
   }
 
   reduce(map, cache, paths, query, memory, ids) {
     var $group, a, i, id, item, len, o, path, results;
+
     if (!ids) {
       return;
     }
+
     results = [];
+
     for (i = 0, len = ids.length; i < len; i++) {
       id = ids[i];
+
       if (!(o = memory[id])) {
         continue;
       }
-      ({ item, $group } = o);
+
+      ({
+        item,
+        $group
+      } = o);
+
       if (!validate(item, query._filters)) {
         continue;
       }
+
       results.push(function () {
         var j, len1, results1;
         results1 = [];
+
         for (j = 0, len1 = $group.length; j < len1; j++) {
           [path, a] = $group[j];
           o = paths[path] = cache[path];
           results1.push(map.reduce(query, path, item, o, a));
         }
+
         return results1;
       }());
     }
+
     return results;
   }
 
   finish_order(map, cache, paths, query) {
     var cmd, from, o, path, ref, results;
+
     for (path in paths) {
       o = paths[path];
       map.finish(query, path, o, this.list);
+
       _.set(query, path, o);
     }
+
     ref = query.$sort;
     results = [];
+
     for (path in ref) {
       cmd = ref[path];
+
       if (!(o = from = _.get(query, path))) {
         continue;
       }
+
       o = map.order(query, path, o, cmd, this.list, target => {
         return this.list.bless(target, query);
       });
       o.from = from;
       results.push(_.set(query, path, o));
     }
+
     return results;
   }
 
   clear_cache(all = null) {
     var id, item, ref;
     State.step[this.$name.list] = ++$step;
+
     if (all) {
       ref = all.$memory;
+
       for (id in ref) {
-        ({ item } = ref[id]);
+        ({
+          item
+        } = ref[id]);
         this.map.$deploy_sort(this.model, item, all);
       }
     }
@@ -2324,26 +2569,33 @@ module.exports = Finder = class Finder {
 
   reset(journal, all, from, parent) {
     var $memory, item, key, news, old, results;
-    ({ $memory } = all);
+    ({
+      $memory
+    } = all);
     journal.$memory = new Object(null);
     State.base(this.$name).$memory = all.$memory = news = new Object(null);
     this.merge(journal, all, from, parent);
     results = [];
+
     for (key in $memory) {
       old = $memory[key];
       item = news[key];
+
       if (item == null) {
         results.push(this.model.delete(old));
       } else {
         results.push(void 0);
       }
     }
+
     return results;
   }
 
   merge(journal, all, from, parent) {
     var $memory;
-    ({ $memory } = all);
+    ({
+      $memory
+    } = all);
     each(this.$name, from, item => {
       var o, old;
       old = $memory[item.id];
@@ -2351,6 +2603,7 @@ module.exports = Finder = class Finder {
       o = this.map.$deploy(this.model, this.$format, all.$sort, journal, item, parent);
       journal.$memory[item.id] = o;
       $memory[item.id] = o;
+
       if (old != null) {
         return this.model.update(item, old.item);
       } else {
@@ -2363,11 +2616,14 @@ module.exports = Finder = class Finder {
 
   remove(journal, all, ids) {
     var $memory, hit;
-    ({ $memory } = all);
+    ({
+      $memory
+    } = all);
     hit = false;
     each_by_id(this.$name, ids, id => {
       var old;
       old = $memory[id];
+
       if (old != null) {
         this.model.delete(old.item);
         delete journal.$memory[id];
@@ -2375,6 +2631,7 @@ module.exports = Finder = class Finder {
         return hit = true;
       }
     });
+
     if (hit != null) {
       return this.clear_cache();
     }
@@ -2382,13 +2639,18 @@ module.exports = Finder = class Finder {
 
   update(journal, all, ids, parent) {
     var $memory;
-    ({ $memory } = all);
+    ({
+      $memory
+    } = all);
     each_by_id(this.$name, ids, id => {
       var o, old;
+
       if (!(old = $memory[id])) {
         return;
       }
+
       _.merge(old.item, parent);
+
       o = this.map.$deploy(this.model, this.$format, all.$sort, journal, old.item, parent);
       journal.$memory[id] = o;
       $memory[id] = o;
@@ -2412,11 +2674,8 @@ module.exports = Finder = class Finder {
 
 
 var Mem;
-
 module.exports = Mem = __webpack_require__(/*! ./mem.coffee */ "./src/mem.coffee");
-
 Mem.Rule = __webpack_require__(/*! ./rule.coffee */ "./src/rule.coffee");
-
 Mem.Base = __webpack_require__(/*! ./base.coffee */ "./src/base.coffee");
 
 /***/ }),
@@ -2434,11 +2693,8 @@ Mem.Base = __webpack_require__(/*! ./base.coffee */ "./src/base.coffee");
 var List, Mem, Query, _;
 
 _ = __webpack_require__(/*! lodash */ "lodash");
-
 Mem = __webpack_require__(/*! ./mem.coffee */ "./src/mem.coffee");
-
 Query = __webpack_require__(/*! ./query.coffee */ "./src/query.coffee");
-
 module.exports = List = class List extends Array {
   static bless(list, query) {
     list.__proto__ = this.prototype;
@@ -2456,10 +2712,12 @@ module.exports = List = class List extends Array {
   group_by(cb) {
     var key, o, oo;
     o = _.groupBy(this, cb);
+
     for (key in o) {
       oo = o[key];
       oo.__proto__ = this.__proto__;
     }
+
     return o;
   }
 
@@ -2501,16 +2759,19 @@ var Map,
     splice = [].splice;
 
 _ = __webpack_require__(/*! lodash */ "lodash");
-
-({ State, Query } = __webpack_require__(/*! ./mem.coffee */ "./src/mem.coffee"));
-
+({
+  State,
+  Query
+} = __webpack_require__(/*! ./mem.coffee */ "./src/mem.coffee"));
 matrix = {
   map: function (cb) {
     var a, i, item, j, len, len1, list, ref;
     list = [];
     ref = this;
+
     for (i = 0, len = ref.length; i < len; i++) {
       a = ref[i];
+
       if (a) {
         for (j = 0, len1 = a.length; j < len1; j++) {
           item = a[j];
@@ -2518,10 +2779,10 @@ matrix = {
         }
       }
     }
+
     return list;
   }
 };
-
 module.exports = Map = class Map {
   static bless(o) {
     o.__proto__ = this.prototype;
@@ -2541,6 +2802,7 @@ module.exports = Map = class Map {
 
   static $deploy_reduce(model, item, $format, journal, o) {
     var emit, emit_group;
+
     emit = target => {
       return (...keys) => {
         var base, cmd, map, map_j, path, ref;
@@ -2553,6 +2815,7 @@ module.exports = Map = class Map {
         return this.init(map_j, cmd);
       };
     };
+
     emit_group = emit(o.$group);
     emit_group({
       list: true
@@ -2563,6 +2826,7 @@ module.exports = Map = class Map {
 
   static $deploy_sort(model, item, $sort, journal) {
     var emit;
+
     emit = function (...keys) {
       var cmd, path, ref;
       ref = keys, [...keys] = ref, [cmd] = splice.call(keys, -1);
@@ -2570,6 +2834,7 @@ module.exports = Map = class Map {
       $sort[path] = cmd;
       return journal.$sort[path] = cmd;
     };
+
     emit("list", {});
     return model.order(item, emit);
   }
@@ -2578,15 +2843,19 @@ module.exports = Map = class Map {
     if (map.id) {
       o.id = map.id;
     }
+
     if (map.list) {
       o.list = [];
     }
+
     if (map.count) {
       o.count = 0;
     }
+
     if (map.all) {
       o.all = 0;
     }
+
     if (map.set) {
       return o.hash = {};
     }
@@ -2594,7 +2863,9 @@ module.exports = Map = class Map {
 
   static order(query, path, from, map, list, cb) {
     var ___, a, c, counts, i, id, idx, j, k, key, l, len, len1, len2, len3, o, oo, per, val;
+
     o = from;
+
     if (Object === from.constructor) {
       if (map.belongs_to) {
         for (id in from) {
@@ -2615,80 +2886,105 @@ module.exports = Map = class Map {
         }
       }
     }
+
     if (map.sort) {
       o = _.orderBy(o, ...map.sort);
     }
+
     if (map.pluck) {
       o = function () {
         var j, len1, results;
         results = [];
+
         for (j = 0, len1 = o.length; j < len1; j++) {
           oo = o[j];
+
           if (val = _.get(oo, map.pluck)) {
             results.push(val);
           }
         }
+
         return results;
       }();
     }
+
     if (key = map.group_by) {
       from = o;
       o = _.groupBy(o, function (oo) {
         return _.get(oo, key);
       });
+
       for (a in o) {
         if (a) {
           cb(a);
         }
       }
     }
+
     if (map.page && (per = query.$page_by)) {
       from = o;
       o = [];
       o.all = from.length;
+
       for (idx = j = 0, len1 = from.length; j < len1; idx = ++j) {
         oo = from[idx];
+
         if (!(idx % per)) {
           o.push(c = []);
         }
+
         c.push(oo);
       }
+
       o.page_idx = function (item) {
         var k, len2, page_idx, ref;
         ref = this;
+
         for (page_idx = k = 0, len2 = ref.length; k < len2; page_idx = ++k) {
           a = ref[page_idx];
+
           if (a.includes(item)) {
             return page_idx;
           }
         }
+
         return null;
       };
+
       for (k = 0, len2 = o.length; k < len2; k++) {
         a = o[k];
+
         if (a) {
           cb(a);
         }
       }
     }
+
     if (key = map.index) {
       counts = [];
+
       for (___ in o) {
         oo = o[___];
         idx = _.get(oo, key);
+
         if (counts[idx] == null) {
           counts[idx] = [];
         }
+
         counts[idx].push(oo);
       }
+
       o = counts;
+
       for (l = 0, len3 = o.length; l < len3; l++) {
         a = o[l];
+
         if (a) {
           cb(a);
         }
       }
     }
+
     cb(o);
     return o;
   }
@@ -2697,14 +2993,18 @@ module.exports = Map = class Map {
     if (o.hash) {
       o.set = Object.keys(o.hash);
     }
+
     if (o.count && o.pow != null) {
       o.avg = o.all ** (1 / o.count);
     }
+
     if (o.count && o.all != null) {
       o.avg = o.all * (1 / o.count);
     }
+
     if (o.min != null && o.max != null) {
       o.range = o.max - o.min;
+
       if (o.all) {
         return o.density = o.all / o.range;
       }
@@ -2715,24 +3015,30 @@ module.exports = Map = class Map {
     if (map.count) {
       o.count += map.count;
     }
+
     if (map.all) {
       o.all += map.all;
     }
+
     if (map.pow) {
       o.pow *= map.pow;
     }
+
     if (map.list) {
       o.list.push(item);
     }
+
     if (map.set) {
       o.hash[map.set] = item;
     }
+
     if (map.max) {
       if (!(map.max <= o.max)) {
         o.max_is = item;
         o.max = map.max;
       }
     }
+
     if (map.min) {
       if (!(o.min <= map.min)) {
         o.min_is = item;
@@ -2758,22 +3064,19 @@ module.exports = Map = class Map {
 var Finder, Map, Name, OBJ, Query, Set, State, _, cache, merge, set_depend, set_deploy;
 
 _ = __webpack_require__(/*! lodash */ "lodash");
-
 Set = {};
-
 Map = {};
-
 Name = {};
-
 Query = {};
-
 Finder = {};
 
 OBJ = function () {
   return new Object(null);
 };
 
-cache = function (type, { list }) {
+cache = function (type, {
+  list
+}) {
   var base1;
   return (base1 = State[type])[list] != null ? base1[list] : base1[list] = {
     $sort: OBJ(),
@@ -2797,25 +3100,39 @@ State = {
   $base: OBJ(),
   store: function (pack) {
     var $format, $memory, $sort, base, key, list, model, o;
+
     for (list in pack) {
-      ({ $sort, $memory, $format } = pack[list]);
-      ({ model } = Finder[list]);
-      base = State.base({ list });
+      ({
+        $sort,
+        $memory,
+        $format
+      } = pack[list]);
+      ({
+        model
+      } = Finder[list]);
+      base = State.base({
+        list
+      });
+
       for (key in $sort) {
         o = $sort[key];
         base.$sort[key] = o;
       }
+
       for (key in $format) {
         o = $format[key];
         base.$format[key] = o;
       }
+
       for (key in $memory) {
         o = $memory[key];
         model.bless(o.item);
         base.$memory[key] = o;
       }
+
       Finder[list].clear_cache();
     }
+
     return true;
   }
 };
@@ -2831,24 +3148,39 @@ set_depend = function (key, cb) {
 merge = function (o) {
   var key, results, val;
   results = [];
+
   for (key in o) {
     val = o[key];
+
     switch (false) {
       case Query[key] == null:
         key = Name[key].base;
         results.push(Set[key].merge(val));
         break;
+
       case Set[key] == null:
         results.push(Set[key].append(val));
         break;
+
       default:
         results.push(void 0);
     }
   }
+
   return results;
 };
 
-module.exports = { Set, Map, Name, State, Finder, Query, set_deploy, set_depend, merge };
+module.exports = {
+  Set,
+  Map,
+  Name,
+  State,
+  Finder,
+  Query,
+  set_deploy,
+  set_depend,
+  merge
+};
 
 /***/ }),
 
@@ -2876,14 +3208,18 @@ module.exports = Model = function () {
     static $deploy(item, parent) {
       var deploy, i, len, ref;
       this.bless(item);
+
       if (parent) {
         _.merge(item, parent);
       }
+
       ref = this.$name.deploys;
+
       for (i = 0, len = ref.length; i < len; i++) {
         deploy = ref[i];
         deploy.call(item, this);
       }
+
       if (!item.id) {
         throw new Error(`detect bad data: ${JSON.stringify(item)}`);
       }
@@ -2909,10 +3245,10 @@ module.exports = Model = function () {
       return void 0;
     }
 
-  };
+  }
 
+  ;
   Model.rowid = 0;
-
   return Model;
 }.call(undefined);
 
@@ -2935,10 +3271,12 @@ _ = __webpack_require__(/*! lodash */ "lodash");
 set_for = function (list) {
   var i, key, len, set;
   set = new Object(null);
+
   for (i = 0, len = list.length; i < len; i++) {
     key = list[i];
     set[key] = true;
   }
+
   return set;
 };
 
@@ -2946,39 +3284,57 @@ query_parser = function (base, req, cb) {
   if (!req) {
     return base;
   }
+
   return new Query(base, function () {
     var key, results, val;
     this._filters = base._filters.concat();
+
     switch (req && req.constructor) {
       case Object:
         results = [];
+
         for (key in req) {
           val = req[key];
           results.push(cb(this, key, val, _.property(key)));
         }
+
         return results;
         break;
+
       case Function:
       case Array:
       case String:
         return cb(this, null, req, function (o) {
           return o;
         });
+
       default:
-        return console.log({ req });
+        return console.log({
+          req
+        });
     }
   });
-};
+}; //throw Error 'unimplemented'
 
-//throw Error 'unimplemented'
+
 module.exports = Query = function () {
   class Query {
-    static build({ $sort, $memory }) {
+    static build({
+      $sort,
+      $memory
+    }) {
       var $partition, _all_ids, _filters, _group;
+
       _all_ids = _group = null;
       _filters = [];
       $partition = ["set"];
-      return new Query({ _all_ids, _group, _filters, $sort, $partition }, function () {
+      return new Query({
+        _all_ids,
+        _group,
+        _filters,
+        $sort,
+        $partition
+      }, function () {
         this.all = this;
         return this.$memory = $memory;
       });
@@ -2986,7 +3342,9 @@ module.exports = Query = function () {
 
     constructor(base, tap) {
       this._step = 0;
+
       this._copy(base);
+
       tap.call(this);
     }
 
@@ -3011,35 +3369,45 @@ module.exports = Query = function () {
     in(req) {
       return query_parser(this, req, function (q, target, req, path) {
         var add, ref, set;
+
         add = function (f) {
           return q._filters.push(f);
         };
+
         switch ((ref = req != null ? req.constructor : void 0) != null ? ref : req) {
           case Array:
             set = set_for(req);
             return add(function (o) {
               var i, key, len, ref1;
               ref1 = path(o);
+
               for (i = 0, len = ref1.length; i < len; i++) {
                 key = ref1[i];
+
                 if (set[key]) {
                   return true;
                 }
               }
+
               return false;
             });
+
           case RegExp:
             return add(function (o) {
               var i, len, ref1, val;
               ref1 = path(o);
+
               for (i = 0, len = ref1.length; i < len; i++) {
                 val = ref1[i];
+
                 if (req.test(val)) {
                   return true;
                 }
               }
+
               return false;
             });
+
           case null:
           case 0:
           case "":
@@ -3050,6 +3418,7 @@ module.exports = Query = function () {
               var ref1;
               return -1 < ((ref1 = path(o)) != null ? ref1.indexOf(req) : void 0);
             });
+
           default:
             console.log({
               target,
@@ -3069,12 +3438,15 @@ module.exports = Query = function () {
     where(req) {
       return query_parser(this, req, function (q, target, req, path) {
         var add, ref, set;
+
         add = function (f) {
           return q._filters.push(f);
         };
+
         switch ((ref = req != null ? req.constructor : void 0) != null ? ref : req) {
           case Function:
             return add(req);
+
           case Array:
             if ("_id" === target) {
               return q._all_ids = req;
@@ -3084,11 +3456,14 @@ module.exports = Query = function () {
                 return set[path(o)];
               });
             }
+
             break;
+
           case RegExp:
             return add(function (o) {
               return req.test(path(o));
             });
+
           case null:
           case 0:
           case "":
@@ -3102,7 +3477,9 @@ module.exports = Query = function () {
                 return req === path(o);
               });
             }
+
             break;
+
           default:
             console.log({
               target,
@@ -3115,26 +3492,34 @@ module.exports = Query = function () {
 
     search(text) {
       var item, list, regexp;
+
       if (!text) {
         return this;
       }
+
       list = function () {
         var i, len, ref, results;
         ref = text.split(/\s+/);
         results = [];
+
         for (i = 0, len = ref.length; i < len; i++) {
           item = ref[i];
           item = item.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+
           if (!item.length) {
             continue;
           }
+
           results.push(`(${item})`);
         }
+
         return results;
       }();
+
       if (!list.length) {
         return this;
       }
+
       regexp = new RegExp(list.join("|"), "ig");
       return this.where(function (o) {
         var s;
@@ -3151,6 +3536,7 @@ module.exports = Query = function () {
       if (_.isEqual(order, this.$sort['_reduce.list'])) {
         return this;
       }
+
       return new Query(this, function () {
         this.$sort = _.cloneDeep(this.$sort);
         return this.$sort['_reduce.list'] = order;
@@ -3158,7 +3544,9 @@ module.exports = Query = function () {
     }
 
     sort(...sort) {
-      return this.order({ sort });
+      return this.order({
+        sort
+      });
     }
 
     page(page_by) {
@@ -3170,6 +3558,7 @@ module.exports = Query = function () {
     form(...ids) {
       var base1, o, oo;
       oo = this.find(...ids);
+
       if (oo) {
         o = (base1 = this.all.$memory[oo.id]).form != null ? base1.form : base1.form = {};
         o.__proto__ = oo;
@@ -3181,24 +3570,30 @@ module.exports = Query = function () {
 
     find(...ids) {
       var i, id, len, o;
+
       for (i = 0, len = ids.length; i < len; i++) {
         id = ids[i];
+
         if (o = this.hash[id]) {
           return o;
         }
       }
+
       return null;
     }
 
     finds(ids) {
       var i, id, len, o, results;
       results = [];
+
       for (i = 0, len = ids.length; i < len; i++) {
         id = ids[i];
+
         if (o = this.hash[id]) {
           results.push(o);
         }
       }
+
       return results;
     }
 
@@ -3206,12 +3601,14 @@ module.exports = Query = function () {
       return this.list.pluck(...arguments);
     }
 
-  };
+  }
 
+  ;
   Object.defineProperties(Query.prototype, {
     reduce: {
       get: function () {
         this.all._finder.calculate(this, this.all.$memory);
+
         return this._reduce;
       }
     },
@@ -3236,7 +3633,6 @@ module.exports = Query = function () {
       }
     }
   });
-
   return Query;
 }.call(undefined);
 
@@ -3265,24 +3661,38 @@ var Finder,
     indexOf = [].indexOf;
 
 _ = __webpack_require__(/*! lodash */ "lodash");
-
 Mem = __webpack_require__(/*! ./mem.coffee */ "./src/mem.coffee");
-
-({ Finder, Query, Model, List, Set, Map } = __webpack_require__(/*! ./base.coffee */ "./src/base.coffee"));
+({
+  Finder,
+  Query,
+  Model,
+  List,
+  Set,
+  Map
+} = __webpack_require__(/*! ./base.coffee */ "./src/base.coffee"));
 
 rename = function (base) {
   var depends, deploys, id, ids, list, name;
   base = _.snakeCase(base).replace(/s$/, "");
   name = Mem.Name[base];
+
   if (name) {
     return name;
   }
+
   id = `${base}_id`;
   ids = `${base}_ids`;
   list = `${base}s`;
   deploys = [];
   depends = [];
-  return Mem.Name[list] = Mem.Name[base] = { id, ids, list, base, deploys, depends };
+  return Mem.Name[list] = Mem.Name[base] = {
+    id,
+    ids,
+    list,
+    base,
+    deploys,
+    depends
+  };
 };
 
 module.exports = Rule = class Rule {
@@ -3297,7 +3707,9 @@ module.exports = Rule = class Rule {
     this.all._finder = new Finder(this.$name);
     this.depend_on(base);
     this.map_property = {};
-    ({ base } = this.$name);
+    ({
+      base
+    } = this.$name);
     this.model_property = {
       id: {
         enumerable: true,
@@ -3328,12 +3740,15 @@ module.exports = Rule = class Rule {
         get: function () {
           var i, key, keys, len;
           keys = Object.keys(this);
+
           for (i = 0, len = keys.length; i < len; i++) {
             key = keys[i];
+
             if (!_.isEqual(this[key], this.$model[key])) {
               return true;
             }
           }
+
           return false;
         }
       }
@@ -3378,43 +3793,57 @@ module.exports = Rule = class Rule {
                 return function () {
                   return null;
                 };
+
               case 1:
                 return _.property(keys[0]);
+
               default:
                 return function (o) {
                   return _.at(o, ...keys);
                 };
             }
           }();
+
           return this.constructor.bless(this.map(cb));
         }
       }
     };
     this.set_property = {};
+
     if (cb) {
       this.schema(cb);
     }
+
     return;
   }
 
   schema(cb) {
     var _set, finder, list;
+
     cb.call(this);
+
     if (this.model === Model) {
       this.model = class model extends this.model {};
     }
+
     Object.defineProperties(this.model.prototype, this.model_property);
+
     if (this.list === List) {
       this.list = class list extends this.list {};
     }
+
     Object.defineProperties(this.list.prototype, this.list_property);
+
     if (this.set === Set) {
       this.set = class set extends this.set {};
     }
+
     Object.defineProperties(this.set.prototype, this.set_property);
+
     if (this.map === Map) {
       this.map = class map extends this.map {};
     }
+
     Object.defineProperties(this.map.prototype, this.map_property);
     this.model.$name = this.list.$name = this.set.$name = this.map.$name = this.$name;
     Mem.Query[this.$name.list] = this.all;
@@ -3433,21 +3862,26 @@ module.exports = Rule = class Rule {
 
   key_by(keys) {
     var cb;
+
     cb = function () {
       switch (keys != null ? keys.constructor : void 0) {
         case void 0:
           return function () {
             return this._id;
           };
+
         case Function:
           return keys;
+
         case String:
         case Array:
           return _.property(keys);
+
         default:
           throw Error(`unimplemented ${keys}`);
       }
     }();
+
     return this.model_property.id = {
       enumerable: true,
       get: cb
@@ -3460,7 +3894,10 @@ module.exports = Rule = class Rule {
 
   depend_on(parent) {
     var _finder;
-    ({ _finder } = this.all);
+
+    ({
+      _finder
+    } = this.all);
     return Mem.set_depend(parent, function () {
       return _finder.clear_cache();
     });
@@ -3470,10 +3907,12 @@ module.exports = Rule = class Rule {
     var key, ref, results, val;
     ref = cb(this.all);
     results = [];
+
     for (key in ref) {
       val = ref[key];
       results.push(this.use_cache(key, val));
     }
+
     return results;
   }
 
@@ -3483,7 +3922,9 @@ module.exports = Rule = class Rule {
 
   default_scope(scope) {
     var base;
+
     this.all._copy(scope(this.all));
+
     base = Mem.State.base(this.$name);
     return base.$sort = this.all.$sort;
   }
@@ -3532,13 +3973,16 @@ module.exports = Rule = class Rule {
     all = this.all;
     this.use_cache(key, function (id, n) {
       var q;
+
       if (n) {
         q = all.where({
           [`${ik}`]: id
         });
         return all[key](q.ids, n - 1);
       } else {
-        return all.where({ id });
+        return all.where({
+          id
+        });
       }
     });
     return this.model_property[key] = {
@@ -3554,21 +3998,28 @@ module.exports = Rule = class Rule {
     all = this.all;
     this.use_cache(key, function (id, n) {
       var a, i, ids, j, k, len, len1, q, ref;
-      q = all.where({ id });
+      q = all.where({
+        id
+      });
+
       if (n) {
         ids = [];
         ref = q.pluck(ik);
+
         for (i = 0, len = ref.length; i < len; i++) {
           a = ref[i];
+
           if (a != null) {
             for (j = 0, len1 = a.length; j < len1; j++) {
               k = a[j];
+
               if (k != null) {
                 ids.push(k);
               }
             }
           }
         }
+
         return all[key](_.uniq(ids), n - 1);
       } else {
         return q;
@@ -3589,6 +4040,7 @@ module.exports = Rule = class Rule {
           var base1, name1;
           return (base1 = this.all.cache)[name1 = `${key}:${JSON.stringify(args)}`] != null ? base1[name1] : base1[name1] = val(...args);
         };
+
       default:
         return this.all[key] = val;
     }
@@ -3596,22 +4048,28 @@ module.exports = Rule = class Rule {
 
   path(...keys) {
     var all, i, key, len, pk;
+
     for (i = 0, len = keys.length; i < len; i++) {
       key = keys[i];
       this.belongs_to(key);
     }
+
     this.deploy(function () {
       var idx, j, len1, results, subids;
       subids = this.id.split("-");
       this.idx = subids[keys.length];
       results = [];
+
       for (idx = j = 0, len1 = keys.length; j < len1; idx = ++j) {
         key = keys[idx];
         results.push(this[`${key}_id`] = subids.slice(0, +idx + 1 || 9e9).join('-'));
       }
+
       return results;
     });
-    ({ all } = this);
+    ({
+      all
+    } = this);
     pk = keys.slice(-1)[0] + "_id";
     return this.model_property.siblings = {
       get: function () {
@@ -3626,18 +4084,29 @@ module.exports = Rule = class Rule {
   belongs_to(to, option = {}) {
     var key, miss, name, target;
     name = rename(to);
-    ({ key = name.id, target = name.list, miss } = option);
+    ({
+      key = name.id,
+      target = name.list,
+      miss
+    } = option);
     return this.relation_to_one(name.base, target, key, miss);
   }
 
   habtm(to, option = {}) {
     var key, name, target;
     name = rename(to);
+
     if (option.reverse) {
-      ({ key = this.$name.ids, target = to } = option);
+      ({
+        key = this.$name.ids,
+        target = to
+      } = option);
       return this.relation_to_many(name.list, target, "in", "id", key);
     } else {
-      ({ key = name.ids, target = name.list } = option);
+      ({
+        key = name.ids,
+        target = name.list
+      } = option);
       return this.relation_to_many(name.list, target, "where", key, "id");
     }
   }
@@ -3645,7 +4114,10 @@ module.exports = Rule = class Rule {
   has_many(to, option = {}) {
     var key, name, target;
     name = rename(to);
-    ({ key = this.$name.id, target = name.list } = option);
+    ({
+      key = this.$name.id,
+      target = name.list
+    } = option);
     return this.relation_to_many(name.list, target, "where", "id", key);
   }
 
@@ -3670,10 +4142,14 @@ module.exports = Rule = class Rule {
 
   graph(option = {}) {
     var cost, directed, ik;
-    ({ directed, cost } = option);
+    ({
+      directed,
+      cost
+    } = option);
     ik = this.$name.ids;
     this.relation_to_many(this.$name.list, this.$name.list, "where", ik, "id");
     this.relation_graph("path", ik);
+
     if (!directed) {
       return true; // todo
     }
@@ -3696,9 +4172,9 @@ module.exports = Rule = class Rule {
 var Query, Set, State, _, f_clear, f_common, f_item, f_update;
 
 _ = __webpack_require__(/*! lodash */ "lodash");
-
-({ State } = __webpack_require__(/*! ./index.coffee */ "./src/index.coffee"));
-
+({
+  State
+} = __webpack_require__(/*! ./index.coffee */ "./src/index.coffee"));
 Query = __webpack_require__(/*! ./query.coffee */ "./src/query.coffee");
 
 f_common = function (type) {
@@ -3712,6 +4188,7 @@ f_common = function (type) {
 f_update = function (list, parent) {
   var journal;
   journal = State.journal(this.$name);
+
   if (parent != null) {
     return this.all._finder.update(journal, this.all, list, parent);
   }
@@ -3734,45 +4211,37 @@ module.exports = Set = function () {
     find(...ids) {
       var i, id, journal, len, o;
       journal = State.journal(this.$name);
+
       for (i = 0, len = ids.length; i < len; i++) {
         id = ids[i];
+
         if (!(o = this.all.$memory[id])) {
           continue;
         }
+
         journal.$memory[id] = o;
         return o.item;
       }
+
       return null;
     }
 
-  };
+  }
 
+  ;
   Set.prototype.set = f_common("reset");
-
   Set.prototype.reset = f_common("reset");
-
   Set.prototype.merge = f_common("merge");
-
   Set.prototype.add = f_item(f_common("merge"));
-
   Set.prototype.append = f_item(f_common("merge"));
-
   Set.prototype.reject = f_common("remove");
-
   Set.prototype.del = f_item(f_common("remove"));
-
   Set.prototype.remove = f_item(f_common("remove"));
-
   Set.prototype.updates = f_update;
-
   Set.prototype.update = f_item(f_update);
-
   Set.prototype.clear_cache = f_clear;
-
   Set.prototype.refresh = f_clear;
-
   Set.prototype.rehash = f_clear;
-
   return Set;
 }.call(undefined);
 

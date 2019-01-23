@@ -8,12 +8,12 @@ coffee =
   options:
     transpile:
       plugins: [
-        "transform-es2015-modules-commonjs"
+        "@babel/plugin-transform-modules-commonjs"
       ]
       presets: [
         ["env", 
           targets:
-            node: "10.4.1"
+            node: "6.11.5"
         ]
       ]
 
