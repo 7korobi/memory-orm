@@ -1,0 +1,6 @@
+__tests__
+config
+.babelrc
+.gitignore
+yarn.lock
+memory-orm-*.tgz
