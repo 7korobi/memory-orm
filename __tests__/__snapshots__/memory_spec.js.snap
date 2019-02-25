@@ -27760,6 +27760,7 @@ Object {
     ],
     "item": model {
       "_id": "all_all",
+      "chr_job_id": "all_all",
       "chr_set_id": "all",
       "chr_set_idx": 10,
       "csid": "all",
@@ -27792,6 +27793,7 @@ Object {
     ],
     "item": model {
       "_id": "animal_c99",
+      "chr_job_id": "animal_c99",
       "chr_set_id": "animal",
       "chr_set_idx": 8,
       "csid": "animal",
@@ -27799,38 +27801,6 @@ Object {
       "label": "うきうきサバンナ",
       "say_0": "嗚呼、聞こえる。やつの足音が聞こえる……。",
       "say_1": "逃げろ。逃げろ！おまえらだけでも逃げろ。",
-    },
-  },
-  "changed_m05": Object {
-    "$group": Array [
-      Array [
-        "_reduce",
-        Object {
-          "list": true,
-        },
-      ],
-      Array [
-        "_reduce",
-        Object {
-          "set": "changed_m05",
-        },
-      ],
-    ],
-    "item": model {
-      "_id": "changed_m05",
-      "chr_set_id": "changed",
-      "chr_set_idx": 7,
-      "csid": "changed_m05",
-      "face_id": "m05",
-      "label": "はおうの広場",
-      "say_0": "ママ？ママなの？
-…もう大丈夫なの？ここには人狼なんていないのかい？
-
-…そっかあ…
-
-
-人狼だって？！",
-      "say_1": "誰にも、腰抜けなんて…言わせないぞっ",
     },
   },
   "changed_m08": Object {
@@ -27850,6 +27820,7 @@ Object {
     ],
     "item": model {
       "_id": "changed_m08",
+      "chr_job_id": "changed_m08",
       "chr_set_id": "changed",
       "chr_set_idx": 7,
       "csid": "changed",
@@ -27877,6 +27848,7 @@ Object {
     ],
     "item": model {
       "_id": "fable_f000",
+      "chr_job_id": "fable_f000",
       "chr_set_id": "fable",
       "chr_set_idx": 4,
       "csid": "fable",
@@ -27913,6 +27885,7 @@ Object {
     ],
     "item": model {
       "_id": "ger_g03",
+      "chr_job_id": "ger_g03",
       "chr_set_id": "ger",
       "chr_set_idx": 6,
       "csid": "ger",
@@ -27927,6 +27900,39 @@ Object {
 
 ！　なんだ、猫か……。おどかさないでよ。
 ん？",
+    },
+  },
+  "m05": Object {
+    "$group": Array [
+      Array [
+        "_reduce",
+        Object {
+          "list": true,
+        },
+      ],
+      Array [
+        "_reduce",
+        Object {
+          "set": "m05",
+        },
+      ],
+    ],
+    "item": model {
+      "_id": "m05",
+      "chr_job_id": "changed_m05",
+      "chr_set_id": "changed",
+      "chr_set_idx": 7,
+      "csid": "changed_m05",
+      "face_id": "m05",
+      "label": "はおうの広場",
+      "say_0": "ママ？ママなの？
+…もう大丈夫なの？ここには人狼なんていないのかい？
+
+…そっかあ…
+
+
+人狼だって？！",
+      "say_1": "誰にも、腰抜けなんて…言わせないぞっ",
     },
   },
   "mad_c83": Object {
@@ -27946,6 +27952,7 @@ Object {
     ],
     "item": model {
       "_id": "mad_c83",
+      "chr_job_id": "mad_c83",
       "chr_set_id": "mad",
       "chr_set_idx": 5,
       "csid": "mad",
@@ -27981,6 +27988,7 @@ Object {
     ],
     "item": model {
       "_id": "mad_mad05",
+      "chr_job_id": "mad_mad05",
       "chr_set_id": "mad",
       "chr_set_idx": 5,
       "csid": "mad_mad05",
@@ -28019,6 +28027,7 @@ Object {
     ],
     "item": model {
       "_id": "ririnra_c05",
+      "chr_job_id": "ririnra_c05",
       "chr_set_id": "ririnra",
       "chr_set_idx": 0,
       "csid": "ririnra_c05",
@@ -28045,6 +28054,7 @@ Object {
     ],
     "item": model {
       "_id": "ririnra_c08",
+      "chr_job_id": "ririnra_c08",
       "chr_set_id": "ririnra",
       "chr_set_idx": 0,
       "csid": "ririnra_c08",
@@ -28074,6 +28084,7 @@ Object {
     ],
     "item": model {
       "_id": "ririnra_c19",
+      "chr_job_id": "ririnra_c19",
       "chr_set_id": "ririnra",
       "chr_set_idx": 0,
       "csid": "ririnra_c19",
@@ -28100,6 +28111,7 @@ Object {
     ],
     "item": model {
       "_id": "ririnra_c20",
+      "chr_job_id": "ririnra_c20",
       "chr_set_id": "ririnra",
       "chr_set_idx": 0,
       "csid": "ririnra_c20",
@@ -28128,6 +28140,7 @@ Object {
     ],
     "item": model {
       "_id": "ririnra_c32",
+      "chr_job_id": "ririnra_c32",
       "chr_set_id": "ririnra",
       "chr_set_idx": 0,
       "csid": "ririnra_c32",
@@ -28156,6 +28169,7 @@ Object {
     ],
     "item": model {
       "_id": "ririnra_c51",
+      "chr_job_id": "ririnra_c51",
       "chr_set_id": "ririnra",
       "chr_set_idx": 0,
       "csid": "ririnra_c51",
@@ -28183,6 +28197,7 @@ Object {
     ],
     "item": model {
       "_id": "ririnra_c67",
+      "chr_job_id": "ririnra_c67",
       "chr_set_id": "ririnra",
       "chr_set_idx": 0,
       "csid": "ririnra_c67",
@@ -28213,6 +28228,7 @@ Object {
     ],
     "item": model {
       "_id": "ririnra_c68",
+      "chr_job_id": "ririnra_c68",
       "chr_set_id": "ririnra",
       "chr_set_idx": 0,
       "csid": "ririnra_c68",
@@ -28239,6 +28255,7 @@ Object {
     ],
     "item": model {
       "_id": "ririnra_c72",
+      "chr_job_id": "ririnra_c72",
       "chr_set_id": "ririnra",
       "chr_set_idx": 0,
       "csid": "ririnra_c72",
@@ -28265,6 +28282,7 @@ Object {
     ],
     "item": model {
       "_id": "ririnra_c99",
+      "chr_job_id": "ririnra_c99",
       "chr_set_id": "ririnra",
       "chr_set_idx": 0,
       "csid": "ririnra",
@@ -28291,6 +28309,7 @@ Object {
     ],
     "item": model {
       "_id": "school_c99",
+      "chr_job_id": "school_c99",
       "chr_set_id": "school",
       "chr_set_idx": 9,
       "csid": "school",
@@ -28317,6 +28336,7 @@ Object {
     ],
     "item": model {
       "_id": "sf_sf032",
+      "chr_job_id": "sf_sf032",
       "chr_set_id": "sf",
       "chr_set_idx": 3,
       "csid": "SF_sf032",
@@ -28350,6 +28370,7 @@ Object {
     ],
     "item": model {
       "_id": "sf_sf04",
+      "chr_job_id": "sf_sf04",
       "chr_set_id": "sf",
       "chr_set_idx": 3,
       "csid": "SF",
@@ -28383,6 +28404,7 @@ Object {
     ],
     "item": model {
       "_id": "sf_sf10",
+      "chr_job_id": "sf_sf10",
       "chr_set_id": "sf",
       "chr_set_idx": 3,
       "csid": "SF_sf10",
@@ -28421,6 +28443,7 @@ Object {
     ],
     "item": model {
       "_id": "time_c10",
+      "chr_job_id": "time_c10",
       "chr_set_id": "time",
       "chr_set_idx": 2,
       "csid": "time",
@@ -28449,6 +28472,7 @@ Object {
     ],
     "item": model {
       "_id": "time_t44",
+      "chr_job_id": "time_t44",
       "chr_set_id": "time",
       "chr_set_idx": 2,
       "csid": "time_t44",
@@ -28488,6 +28512,7 @@ Object {
     ],
     "item": model {
       "_id": "time_t48",
+      "chr_job_id": "time_t48",
       "chr_set_id": "time",
       "chr_set_idx": 2,
       "csid": "time_t48",
@@ -28531,6 +28556,7 @@ Object {
     ],
     "item": model {
       "_id": "time_t49",
+      "chr_job_id": "time_t49",
       "chr_set_id": "time",
       "chr_set_idx": 2,
       "csid": "time",
@@ -28568,6 +28594,7 @@ Object {
     ],
     "item": model {
       "_id": "wa_w17",
+      "chr_job_id": "wa_w17",
       "chr_set_id": "wa",
       "chr_set_idx": 1,
       "csid": "wa",
@@ -28594,6 +28621,7 @@ Object {
     ],
     "item": model {
       "_id": "wa_w23",
+      "chr_job_id": "wa_w23",
       "chr_set_id": "wa",
       "chr_set_idx": 1,
       "csid": "wa_w23",

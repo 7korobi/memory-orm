@@ -4,6 +4,8 @@ format = require 'date-fns/format'
 locale = require "date-fns/locale/ja"
 
 new Rule("sow_roletable").schema ->
+new Rule("sow_village_plan").schema ->
+
 
 new Rule("sow_turn").schema ->
   @order "turn", "asc"
@@ -17,26 +19,25 @@ new Rule("sow_village").schema ->
   @belongs_to "game", target: "games", key: "q.game"
 
   @scope (all)->
-    prologue: all.partition("prologue.set").sort "timer.nextcommitdt", "desc"
-    progress: all.partition("progress.set").sort "timer.nextcommitdt", "desc"
+    prologue: all.partition("prologue.all.set").sort "timer.nextcommitdt", "desc"
+    progress: all.partition("progress.all.set").sort "timer.nextcommitdt", "desc"
 
     mode: ( mode )->
-      all
-      .where { mode }
+      all.partition("#{mode}.all.set")
 
-    summary: ( mode, query_in, query_where, search_word )->
+    summary: ( mode, folder_ids, query_in, query_where, search_word )->
+      unless folder_ids.length
+        folder_ids = ["all"]
+      parts = folder_ids.map (folder_id)-> "#{mode}.#{folder_id}.set"
       all
-      .where { mode }
+      .partition ...parts
       .in query_in
       .where query_where
       .search search_word
 
-    all_contents: ( mode, query_in, query_where, search_word, order, asc )->
+    all_contents: ( mode, folder_ids, query_in, query_where, search_word, order, asc )->
       all
-      .partition "#{mode}.set"
-      .in query_in
-      .where query_where
-      .search search_word
+      .summary mode, folder_ids, query_in, query_where, search_word
       .page 25
       .order
         sort: [order, asc]
@@ -124,11 +125,11 @@ new Rule("sow_village").schema ->
 
     @map_partition: (o, emit)->
       { id, part_id } = o
-      emit
+      it =
         set: id
-
-      emit o.mode,
-        set: id
+      emit it
+      emit o.mode, "all", it
+      emit o.mode, o.q.folder_id, it
 
     @map_reduce: (o, emit)->
       emit "mode", o.mode, o.q.folder_id,  cmd

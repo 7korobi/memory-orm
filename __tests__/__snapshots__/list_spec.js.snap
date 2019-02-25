@@ -10371,6 +10371,7 @@ exports[`chr_npcs list snapshot 1`] = `
 list [
   model {
     "_id": "ririnra_c05",
+    "chr_job_id": "ririnra_c05",
     "chr_set_id": "ririnra",
     "chr_set_idx": 0,
     "csid": "ririnra_c05",
@@ -10381,6 +10382,7 @@ list [
   },
   model {
     "_id": "ririnra_c08",
+    "chr_job_id": "ririnra_c08",
     "chr_set_id": "ririnra",
     "chr_set_idx": 0,
     "csid": "ririnra_c08",
@@ -10394,6 +10396,7 @@ list [
   },
   model {
     "_id": "ririnra_c19",
+    "chr_job_id": "ririnra_c19",
     "chr_set_id": "ririnra",
     "chr_set_idx": 0,
     "csid": "ririnra_c19",
@@ -10404,6 +10407,7 @@ list [
   },
   model {
     "_id": "ririnra_c67",
+    "chr_job_id": "ririnra_c67",
     "chr_set_id": "ririnra",
     "chr_set_idx": 0,
     "csid": "ririnra_c67",
@@ -10418,6 +10422,7 @@ list [
   },
   model {
     "_id": "ririnra_c68",
+    "chr_job_id": "ririnra_c68",
     "chr_set_id": "ririnra",
     "chr_set_idx": 0,
     "csid": "ririnra_c68",
@@ -10428,6 +10433,7 @@ list [
   },
   model {
     "_id": "ririnra_c72",
+    "chr_job_id": "ririnra_c72",
     "chr_set_id": "ririnra",
     "chr_set_idx": 0,
     "csid": "ririnra_c72",
@@ -10438,6 +10444,7 @@ list [
   },
   model {
     "_id": "ririnra_c51",
+    "chr_job_id": "ririnra_c51",
     "chr_set_id": "ririnra",
     "chr_set_idx": 0,
     "csid": "ririnra_c51",
@@ -10449,6 +10456,7 @@ list [
   },
   model {
     "_id": "ririnra_c20",
+    "chr_job_id": "ririnra_c20",
     "chr_set_id": "ririnra",
     "chr_set_idx": 0,
     "csid": "ririnra_c20",
@@ -10461,6 +10469,7 @@ list [
   },
   model {
     "_id": "ririnra_c32",
+    "chr_job_id": "ririnra_c32",
     "chr_set_id": "ririnra",
     "chr_set_idx": 0,
     "csid": "ririnra_c32",
@@ -10473,6 +10482,7 @@ list [
   },
   model {
     "_id": "ririnra_c99",
+    "chr_job_id": "ririnra_c99",
     "chr_set_id": "ririnra",
     "chr_set_idx": 0,
     "csid": "ririnra",
@@ -10483,6 +10493,7 @@ list [
   },
   model {
     "_id": "wa_w17",
+    "chr_job_id": "wa_w17",
     "chr_set_id": "wa",
     "chr_set_idx": 1,
     "csid": "wa",
@@ -10493,6 +10504,7 @@ list [
   },
   model {
     "_id": "wa_w23",
+    "chr_job_id": "wa_w23",
     "chr_set_id": "wa",
     "chr_set_idx": 1,
     "csid": "wa_w23",
@@ -10503,6 +10515,7 @@ list [
   },
   model {
     "_id": "time_c10",
+    "chr_job_id": "time_c10",
     "chr_set_id": "time",
     "chr_set_idx": 2,
     "csid": "time",
@@ -10515,6 +10528,7 @@ list [
   },
   model {
     "_id": "time_t44",
+    "chr_job_id": "time_t44",
     "chr_set_id": "time",
     "chr_set_idx": 2,
     "csid": "time_t44",
@@ -10538,6 +10552,7 @@ list [
   },
   model {
     "_id": "time_t48",
+    "chr_job_id": "time_t48",
     "chr_set_id": "time",
     "chr_set_idx": 2,
     "csid": "time_t48",
@@ -10565,6 +10580,7 @@ list [
   },
   model {
     "_id": "time_t49",
+    "chr_job_id": "time_t49",
     "chr_set_id": "time",
     "chr_set_idx": 2,
     "csid": "time",
@@ -10586,6 +10602,7 @@ list [
   },
   model {
     "_id": "sf_sf04",
+    "chr_job_id": "sf_sf04",
     "chr_set_id": "sf",
     "chr_set_idx": 3,
     "csid": "SF",
@@ -10603,6 +10620,7 @@ list [
   },
   model {
     "_id": "sf_sf10",
+    "chr_job_id": "sf_sf10",
     "chr_set_id": "sf",
     "chr_set_idx": 3,
     "csid": "SF_sf10",
@@ -10625,6 +10643,7 @@ list [
   },
   model {
     "_id": "sf_sf032",
+    "chr_job_id": "sf_sf032",
     "chr_set_id": "sf",
     "chr_set_idx": 3,
     "csid": "SF_sf032",
@@ -10642,6 +10661,7 @@ list [
   },
   model {
     "_id": "fable_f000",
+    "chr_job_id": "fable_f000",
     "chr_set_id": "fable",
     "chr_set_idx": 4,
     "csid": "fable",
@@ -10662,6 +10682,7 @@ list [
   },
   model {
     "_id": "mad_c83",
+    "chr_job_id": "mad_c83",
     "chr_set_id": "mad",
     "chr_set_idx": 5,
     "csid": "mad",
@@ -10681,6 +10702,7 @@ list [
   },
   model {
     "_id": "mad_mad05",
+    "chr_job_id": "mad_mad05",
     "chr_set_id": "mad",
     "chr_set_idx": 5,
     "csid": "mad_mad05",
@@ -10703,6 +10725,7 @@ list [
   },
   model {
     "_id": "ger_g03",
+    "chr_job_id": "ger_g03",
     "chr_set_id": "ger",
     "chr_set_idx": 6,
     "csid": "ger",
@@ -10720,6 +10743,7 @@ list [
   },
   model {
     "_id": "changed_m08",
+    "chr_job_id": "changed_m08",
     "chr_set_id": "changed",
     "chr_set_idx": 7,
     "csid": "changed",
@@ -10730,7 +10754,8 @@ list [
     "say_1": "さあ、ぼうやたちいらっしゃい。ごはんのじかんよ。",
   },
   model {
-    "_id": "changed_m05",
+    "_id": "m05",
+    "chr_job_id": "changed_m05",
     "chr_set_id": "changed",
     "chr_set_idx": 7,
     "csid": "changed_m05",
@@ -10747,6 +10772,7 @@ list [
   },
   model {
     "_id": "animal_c99",
+    "chr_job_id": "animal_c99",
     "chr_set_id": "animal",
     "chr_set_idx": 8,
     "csid": "animal",
@@ -10757,6 +10783,7 @@ list [
   },
   model {
     "_id": "school_c99",
+    "chr_job_id": "school_c99",
     "chr_set_id": "school",
     "chr_set_idx": 9,
     "csid": "school",
@@ -10767,6 +10794,7 @@ list [
   },
   model {
     "_id": "all_all",
+    "chr_job_id": "all_all",
     "chr_set_id": "all",
     "chr_set_idx": 10,
     "csid": "all",

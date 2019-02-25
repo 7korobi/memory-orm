@@ -502,6 +502,8 @@ new Rule("chat").schema(function () {
         group,
         handle
       } = o.phase);
+      emit("group", part_id, group, it);
+      emit("handle", part_id, handle, it);
 
       if ('M'.includes(group)) {
         emit(part_id, "memo", it);
@@ -510,7 +512,7 @@ new Rule("chat").schema(function () {
       if ('SAI'.includes(group)) {
         emit(part_id, "full", it);
 
-        if (['SSAY', 'VSSAY', 'MAKER', 'ADMIN', 'public'].includes(handle)) {
+        if (['SSAY', 'VSSAY', 'TITLE', 'MAKER', 'ADMIN', 'public'].includes(handle)) {
           emit(part_id, "normal", it);
         }
 
@@ -518,7 +520,7 @@ new Rule("chat").schema(function () {
           emit(part_id, "solo", it);
         }
 
-        if (!['SSAY', 'VSSAY', 'MAKER', 'ADMIN', 'dark', 'GSAY', 'TSAY', 'public'].includes(handle)) {
+        if (!['SSAY', 'VSSAY', 'TITLE', 'MAKER', 'ADMIN', 'dark', 'GSAY', 'TSAY', 'public'].includes(handle)) {
           emit(part_id, "extra", it);
         }
 
@@ -811,10 +813,23 @@ new Rule("chr_set").schema(function () {
 new Rule("chr_npc").schema(function () {
   this.order("label");
   this.belongs_to("chr_set");
+  this.belongs_to("chr_job");
   this.belongs_to("face");
-  return this.deploy(function () {
-    this._id = `${this.chr_set_id}_${this.face_id}`;
+  this.deploy(function () {
+    this.chr_job_id = `${this.chr_set_id}_${this.face_id}`;
+
+    if (this._id == null) {
+      this._id = this.chr_job_id;
+    }
+
     return this.chr_set_idx = order.indexOf(this.chr_set_id);
+  });
+  return this.property('model', {
+    head: {
+      get: function () {
+        return `${this.chr_job.job} ${this.face.name}`;
+      }
+    }
   });
 });
 new Rule("chr_job").schema(function () {
@@ -851,7 +866,7 @@ new Rule("chr_job").schema(function () {
       }
     };
   });
-  return this.model = class model extends this.model {
+  this.model = class model extends this.model {
     static order(o, emit) {
       return emit("list", {
         sort: ["face.order"]
@@ -859,6 +874,13 @@ new Rule("chr_job").schema(function () {
     }
 
   };
+  return this.property('model', {
+    chr_npc: {
+      get: function () {
+        return Query.chr_npcs.find(this.id);
+      }
+    }
+  });
 });
 Query.transaction_chr = State.transaction(function () {
   var chr_set_id, cs_key, face, face_id, faces, i, j, job, k, key, len, len1, len2, list, o, ref, say;
@@ -997,7 +1019,7 @@ module.exports = edit = {
     potof_id: "edit-edit-self",
     write_at: 0,
     show: "talk",
-    deco: "giji",
+    deco: "quill",
     to: null,
     head: "",
     log: "",
@@ -1050,6 +1072,8 @@ __webpack_require__(/*! ./editor */ "./__tests__/models/editor.coffee");
 
 __webpack_require__(/*! ./sow */ "./__tests__/models/sow.coffee");
 
+__webpack_require__(/*! ./marker */ "./__tests__/models/marker.coffee");
+
 /***/ }),
 
 /***/ "./__tests__/models/locale.coffee":
@@ -1071,6 +1095,55 @@ var Model, Query, Rule, Set;
 } = __webpack_require__(/*! ../../src/index */ "./src/index.coffee"));
 new Rule("locale").schema(function () {});
 Set.locale.set(__webpack_require__(/*! ../yaml/locale.yml */ "./__tests__/yaml/locale.yml"));
+
+/***/ }),
+
+/***/ "./__tests__/models/marker.coffee":
+/*!****************************************!*\
+  !*** ./__tests__/models/marker.coffee ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var Model, Query, Rule, Set, State;
+({
+  Set,
+  Model,
+  Query,
+  Rule,
+  State
+} = __webpack_require__(/*! ../../src/index */ "./src/index.coffee"));
+new Rule("marker").schema(function () {
+  this.scope(function (all) {
+    return {
+      own: function (uid) {
+        return all.where({
+          uid
+        });
+      }
+    };
+  });
+  return this.model = class model extends this.model {
+    static map_reduce(o, emit) {
+      return emit("mark_at", o.book_id, {
+        max: o.mark_at
+      });
+    }
+
+    static order(o, emit) {
+      emit("mark_at", {
+        sort: ["max", "desc"]
+      });
+      return emit("list", {
+        sort: ["write_at", "desc"]
+      });
+    }
+
+  };
+});
 
 /***/ }),
 
@@ -1691,6 +1764,7 @@ var Mem, Model, Query, Rule, Set, format, locale, url, welcome;
 format = __webpack_require__(/*! date-fns/format */ "date-fns/format");
 locale = __webpack_require__(/*! date-fns/locale/ja */ "date-fns/locale/ja");
 new Rule("sow_roletable").schema(function () {});
+new Rule("sow_village_plan").schema(function () {});
 new Rule("sow_turn").schema(function () {
   this.order("turn", "asc");
   return this.belongs_to("village", {
@@ -1722,20 +1796,25 @@ new Rule("sow_village").schema(function () {
   });
   this.scope(function (all) {
     return {
-      prologue: all.partition("prologue.set").sort("timer.nextcommitdt", "desc"),
-      progress: all.partition("progress.set").sort("timer.nextcommitdt", "desc"),
+      prologue: all.partition("prologue.all.set").sort("timer.nextcommitdt", "desc"),
+      progress: all.partition("progress.all.set").sort("timer.nextcommitdt", "desc"),
       mode: function (mode) {
-        return all.where({
-          mode
+        return all.partition(`${mode}.all.set`);
+      },
+      summary: function (mode, folder_ids, query_in, query_where, search_word) {
+        var parts;
+
+        if (!folder_ids.length) {
+          folder_ids = ["all"];
+        }
+
+        parts = folder_ids.map(function (folder_id) {
+          return `${mode}.${folder_id}.set`;
         });
+        return all.partition(...parts).in(query_in).where(query_where).search(search_word);
       },
-      summary: function (mode, query_in, query_where, search_word) {
-        return all.where({
-          mode
-        }).in(query_in).where(query_where).search(search_word);
-      },
-      all_contents: function (mode, query_in, query_where, search_word, order, asc) {
-        return all.partition(`${mode}.set`).in(query_in).where(query_where).search(search_word).page(25).order({
+      all_contents: function (mode, folder_ids, query_in, query_where, search_word, order, asc) {
+        return all.summary(mode, folder_ids, query_in, query_where, search_word).page(25).order({
           sort: [order, asc],
           page: true
         });
@@ -1900,17 +1979,17 @@ new Rule("sow_village").schema(function () {
     }
 
     static map_partition(o, emit) {
-      var id, part_id;
+      var id, it, part_id;
       ({
         id,
         part_id
       } = o);
-      emit({
+      it = {
         set: id
-      });
-      return emit(o.mode, {
-        set: id
-      });
+      };
+      emit(it);
+      emit(o.mode, "all", it);
+      return emit(o.mode, o.q.folder_id, it);
     }
 
     static map_reduce(o, emit) {
