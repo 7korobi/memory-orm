@@ -35,7 +35,7 @@ module.exports = class Rule
       id:
         enumerable: true
         get: -> @_id
-      "#{@$name.id}":
+      [@$name.id]:
         enumerable: true
         get: -> @_id
 
