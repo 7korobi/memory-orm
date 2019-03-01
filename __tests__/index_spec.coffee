@@ -28,7 +28,4 @@ describe "sow oldlog", ->
 
   # $memory check 省略
 
-  test 'reduce snapshot', ->
-    expect Mem.Query.sow_villages.reduce
-    .toMatchSnapshot()
 

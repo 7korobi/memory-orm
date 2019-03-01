@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ables sort snapshot 1`] = `
+Object {
+  "_reduce.list": Object {},
+}
+`;
+
+exports[`chr_jobs sort snapshot 1`] = `
+Object {
+  "_reduce.list": Object {
+    "sort": Array [
+      "face.order",
+    ],
+  },
+}
+`;
+
+exports[`chr_npcs sort snapshot 1`] = `
+Object {
+  "_reduce.list": Object {},
+}
+`;
+
+exports[`chr_sets sort snapshot 1`] = `
+Object {
+  "_reduce.list": Object {},
+}
+`;
+
+exports[`faces sort snapshot 1`] = `
+Object {
+  "_reduce.list": Object {
+    "sort": Array [
+      "order",
+    ],
+  },
+  "_reduce.name_head": Object {
+    "index": "set.length",
+    "sort": Array [
+      "id",
+    ],
+  },
+}
+`;
+
+exports[`folders sort snapshot 1`] = `
+Object {
+  "_reduce.list": Object {},
+}
+`;
+
+exports[`locales sort snapshot 1`] = `
+Object {
+  "_reduce.list": Object {},
+}
+`;
+
+exports[`randoms sort snapshot 1`] = `
+Object {
+  "_reduce.list": Object {
+    "sort": Array [
+      "ratio",
+      "desc",
+    ],
+  },
+  "_reduce.type": Object {
+    "sort": Array [
+      "count",
+      "asc",
+    ],
+  },
+}
+`;
+
+exports[`roles sort snapshot 1`] = `
+Object {
+  "_reduce.list": Object {},
+}
+`;
+
+exports[`sow_roletables sort snapshot 1`] = `
+Object {
+  "_reduce.list": Object {},
+}
+`;
+
+exports[`tags sort snapshot 1`] = `
+Object {
+  "_reduce.list": Object {},
+}
+`;
+
+exports[`traps sort snapshot 1`] = `
+Object {
+  "_reduce.list": Object {},
+}
+`;
