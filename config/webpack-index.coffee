@@ -11,7 +11,7 @@ coffee =
         "@babel/plugin-transform-modules-commonjs"
       ]
       presets: [
-        ["env", 
+        ["@babel/env", 
           targets:
             node: "6.11.5"
         ]

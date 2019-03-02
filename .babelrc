@@ -1,11 +1,15 @@
 {
+  "plugins": [
+    "@babel/plugin-transform-modules-commonjs"
+  ],
   "presets": [
-    ["env", {
-      "modules": false,
+    [ "@babel/env", {
       "targets": {
-        "node": "10.11.0"
-      }
+        "node": "6.11.5"
+      },
+      "browsers": [
+        ">0.5%",
+      ]
     }]
   ]
 }
-
