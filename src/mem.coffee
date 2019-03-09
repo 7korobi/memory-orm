@@ -9,8 +9,12 @@ Finder = {}
 OBJ = ->
   new Object null
 
+$step = 0
+step = -> ++$step
+
 cache = (type, { list })->
   State[type][list] ?=
+    _step: step()
     $sort:   OBJ()
     $memory: OBJ()
     $format:  OBJ()
@@ -58,4 +62,4 @@ merge = (o)->
       when Set[key]?
         Set[key].append val
 
-module.exports = { Set, Map, Name, State, Finder, Query, set_deploy, set_depend, merge }
+module.exports = { Set, Map, Name, State, Finder, Query, set_deploy, set_depend, merge, step }

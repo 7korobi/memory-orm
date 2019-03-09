@@ -28,6 +28,10 @@ new Rule("tag").schema ->
       all.where (o)->
         ! o.disabled
 
+katakanas =
+  for idx in ["ア".charCodeAt(0) .. "ン".charCodeAt(0)]
+    String.fromCharCode idx
+
 new Rule("face").schema ->
   @habtm "tags"
   @has_many "chr_jobs"
@@ -35,15 +39,12 @@ new Rule("face").schema ->
 
   @scope (all)->
     tag: (tag_id)->
-      all.partition "tag.#{tag_id}.set"
+      all.partition "tag.#{tag_id || "all"}.set"
 
     name_blank: ->
-      for idx in ["ア".charCodeAt(0) .. "ン".charCodeAt(0)]
-        key = String.fromCharCode idx
-        continue if all.reduce.name_head.from[key]
-        key
+      all.reduce.name_head.from.remain
 
-    name_head: (tag_id = "all")->
+    name_head: (tag_id)->
       all.tag(tag_id).reduce.name_head
 
   @deploy ->
@@ -57,6 +58,7 @@ new Rule("face").schema ->
       emit "name_head",
         sort: ["id"]
         index: "set.length"
+        cover: katakanas
 
     @map_partition: (o, emit)->
       it =

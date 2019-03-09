@@ -1,4 +1,4 @@
-{ Model, Query, Rule, Set } = require "../../src/index"
+{ Model, Query, Rule, Set, State } = require "../../src/index"
 { game } = require "~/config/live.yml"
 
 new Rule("book").schema ->
@@ -35,7 +35,8 @@ new Rule("say").schema ->
 new Rule("game").schema ->
   @scope (all)->
 
-Set.option.set require '../yaml/set_option.yml'
-Set.winner.set require '../yaml/set_winner.yml'
-Set.say.set    require '../yaml/set_says.yml'
-Set.game.set   require "../yaml/sow_game.yml"
+Query.transaction_book = State.transaction ->
+  Set.option.set require '../yaml/set_option.yml'
+  Set.winner.set require '../yaml/set_winner.yml'
+  Set.say.set    require '../yaml/set_says.yml'
+  Set.game.set   require "../yaml/sow_game.yml"

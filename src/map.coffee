@@ -1,14 +1,6 @@
 _ = require "lodash"
 { State, Query } = require "./mem.coffee"
 
-matrix =
-  map: (cb)->
-    list = []
-    for a in @ when a
-      for item in a
-        list.push cb item
-    list
-
 module.exports = class Map
   @bless: (o)->
     o.__proto__ = @::
@@ -22,18 +14,30 @@ module.exports = class Map
     o
 
   @$deploy_reduce: (model, item, $format, journal, o)->
+    emit_default = emit_default_origin = (keys, cmd)->
+      return cmd if keys.length
+      emit_default = (keys, cmd)-> cmd
+
+      base =
+        set: item.id
+        list: true
+      Object.assign base, cmd
+
     emit = (target)=> (keys..., cmd)=>
+      cmd = emit_default keys, cmd
       path = ["_reduce", keys...].join('.')
       target.push [path, cmd]
       map   = $format[path] ?= {}
-      @init map,   cmd
       map_j = journal.$format[path] ?= {}
+      @init map,   cmd
       @init map_j, cmd
+
     emit_group = emit o.$group
-    emit_group
-      list: true
     model.map_partition item, emit_group
     model.map_reduce    item, emit_group
+
+    if emit_default == emit_default_origin
+      emit_group {}
 
   @$deploy_sort: (model, item, $sort, journal)->
     emit = (keys..., cmd)->
@@ -55,7 +59,7 @@ module.exports = class Map
     if map.set
       o.hash = {}
 
-  @order: (query, path, from, map, list, cb)->
+  @order: (query, path, from, map, list, bless)->
     o = from
     if Object == from.constructor
       if map.belongs_to
@@ -70,6 +74,17 @@ module.exports = class Map
         for val in from
           val.__proto__ = Query[map.belongs_to].find val.id
 
+    if map.cover
+      remain = []
+      cover  = []
+      for id in map.cover
+        if from[id]
+          cover.push id
+        else
+          remain.push id
+      o.remain = remain
+      o.cover  = cover
+
     if map.sort
       o = _.orderBy o, map.sort...
     
@@ -80,8 +95,8 @@ module.exports = class Map
     if key = map.group_by
       from = o
       o = _.groupBy o, (oo)-> _.get oo, key
-      for a of o when a
-        cb a
+      for idx, a of o when a
+        bless a
 
     if map.page && per = query.$page_by
       from = o
@@ -90,25 +105,33 @@ module.exports = class Map
       for oo, idx in from
         unless idx % per
           o.push c = []
+          bless c
         c.push oo
       o.page_idx = (item)->
         for a, page_idx in @ when a.includes item
           return page_idx
         null
-      for a in o when a
-        cb a
 
     if key = map.index
-      counts = []
+      for ___, oo of o
+        is_ary = 'number' == typeof _.get oo, key
+        counts =
+          if is_ary
+            []
+          else
+            {}
+        break
+      
       for ___, oo of o
         idx = _.get oo, key
-        counts[idx] ?= []
+        unless counts[idx]
+          a = []
+          bless a
+          counts[idx] = a
         counts[idx].push oo
       o = counts
-      for a in o when a
-        cb a
 
-    cb o
+    bless o
     o
 
   @finish: (query, path, o, list)->

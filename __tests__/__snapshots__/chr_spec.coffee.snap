@@ -3,7 +3,7 @@
 exports[`faces .name_head(all) snapshot 1`] = `
 Array [
   undefined,
-  list [
+  Array [
     Array [
       "ゲ",
       Array [
@@ -365,7 +365,7 @@ Array [
       ],
     ],
   ],
-  list [
+  Array [
     Array [
       "ゴ",
       Array [
@@ -444,7 +444,7 @@ Array [
       ],
     ],
   ],
-  list [
+  Array [
     Array [
       "ガ",
       Array [
@@ -558,7 +558,7 @@ Array [
       ],
     ],
   ],
-  list [
+  Array [
     Array [
       "ウ",
       Array [
@@ -686,7 +686,7 @@ Array [
       ],
     ],
   ],
-  list [
+  Array [
     Array [
       "コ",
       Array [
@@ -748,7 +748,7 @@ Array [
       ],
     ],
   ],
-  list [
+  Array [
     Array [
       "キ",
       Array [
@@ -838,7 +838,7 @@ Array [
       ],
     ],
   ],
-  list [
+  Array [
     Array [
       "オ",
       Array [
@@ -876,7 +876,7 @@ Array [
       ],
     ],
   ],
-  list [
+  Array [
     Array [
       "カ",
       Array [
@@ -917,7 +917,7 @@ Array [
       ],
     ],
   ],
-  list [
+  Array [
     Array [
       "イ",
       Array [
@@ -981,7 +981,7 @@ Array [
   undefined,
   undefined,
   undefined,
-  list [
+  Array [
     Array [
       "ア",
       Array [
@@ -1010,7 +1010,7 @@ Array [
 exports[`faces .name_head(animal) snapshot 1`] = `
 Array [
   undefined,
-  list [
+  Array [
     Array [
       "ガ",
       Array [
@@ -1186,7 +1186,7 @@ Array [
       ],
     ],
   ],
-  list [
+  Array [
     Array [
       "ア",
       Array [
@@ -1440,7 +1440,7 @@ Array [
       ],
     ],
   ],
-  list [
+  Array [
     Array [
       "ブ",
       Array [
@@ -1464,7 +1464,7 @@ Array [
 exports[`faces .name_head(apartment) snapshot 1`] = `
 Array [
   undefined,
-  list [
+  Array [
     Array [
       "オ",
       Array [
@@ -1544,7 +1544,7 @@ Array [
       ],
     ],
   ],
-  list [
+  Array [
     Array [
       "カ",
       Array [
@@ -1594,7 +1594,7 @@ Array [
 exports[`faces .name_head(asia) snapshot 1`] = `
 Array [
   undefined,
-  list [
+  Array [
     Array [
       "イ",
       Array [
@@ -1656,7 +1656,7 @@ Array [
 exports[`faces .name_head(ecclesia) snapshot 1`] = `
 Array [
   undefined,
-  list [
+  Array [
     Array [
       "オ",
       Array [
@@ -1706,7 +1706,7 @@ Array [
       ],
     ],
   ],
-  list [
+  Array [
     Array [
       "ペ",
       Array [
@@ -1728,7 +1728,7 @@ Array [
 exports[`faces .name_head(elder) snapshot 1`] = `
 Array [
   undefined,
-  list [
+  Array [
     Array [
       "イ",
       Array [
@@ -1814,7 +1814,7 @@ Array [
 exports[`faces .name_head(elegant) snapshot 1`] = `
 Array [
   undefined,
-  list [
+  Array [
     Array [
       "イ",
       Array [
@@ -1906,7 +1906,7 @@ Array [
 exports[`faces .name_head(fable) snapshot 1`] = `
 Array [
   undefined,
-  list [
+  Array [
     Array [
       "ア",
       Array [
@@ -1980,7 +1980,7 @@ Array [
       ],
     ],
   ],
-  list [
+  Array [
     Array [
       "イ",
       Array [
@@ -2016,7 +2016,7 @@ Array [
 exports[`faces .name_head(farm) snapshot 1`] = `
 Array [
   undefined,
-  list [
+  Array [
     Array [
       "ガ",
       Array [
@@ -2090,7 +2090,7 @@ Array [
       ],
     ],
   ],
-  list [
+  Array [
     Array [
       "ブ",
       Array [
@@ -2105,7 +2105,7 @@ Array [
 exports[`faces .name_head(giji) snapshot 1`] = `
 Array [
   undefined,
-  list [
+  Array [
     Array [
       "ガ",
       Array [
@@ -2233,7 +2233,7 @@ Array [
       ],
     ],
   ],
-  list [
+  Array [
     Array [
       "ア",
       Array [
@@ -2487,7 +2487,7 @@ Array [
       ],
     ],
   ],
-  list [
+  Array [
     Array [
       "オ",
       Array [
@@ -2545,7 +2545,7 @@ Array [
       ],
     ],
   ],
-  list [
+  Array [
     Array [
       "ジ",
       Array [
@@ -2589,7 +2589,7 @@ Array [
 exports[`faces .name_head(god) snapshot 1`] = `
 Array [
   undefined,
-  list [
+  Array [
     Array [
       "パ",
       Array [
@@ -2603,7 +2603,7 @@ Array [
 exports[`faces .name_head(government) snapshot 1`] = `
 Array [
   undefined,
-  list [
+  Array [
     Array [
       "ア",
       Array [
@@ -2665,7 +2665,7 @@ Array [
       ],
     ],
   ],
-  list [
+  Array [
     Array [
       "ジ",
       Array [
@@ -2680,7 +2680,7 @@ Array [
 exports[`faces .name_head(guild) snapshot 1`] = `
 Array [
   undefined,
-  list [
+  Array [
     Array [
       "イ",
       Array [
@@ -2814,7 +2814,7 @@ Array [
       ],
     ],
   ],
-  list [
+  Array [
     Array [
       "ザ",
       Array [
@@ -2836,7 +2836,7 @@ Array [
 exports[`faces .name_head(immoral) snapshot 1`] = `
 Array [
   undefined,
-  list [
+  Array [
     Array [
       "オ",
       Array [
@@ -2958,7 +2958,7 @@ Array [
 exports[`faces .name_head(kid) snapshot 1`] = `
 Array [
   undefined,
-  list [
+  Array [
     Array [
       "オ",
       Array [
@@ -3032,7 +3032,7 @@ Array [
 exports[`faces .name_head(marchen) snapshot 1`] = `
 Array [
   undefined,
-  list [
+  Array [
     Array [
       "オ",
       Array [
@@ -3088,7 +3088,7 @@ Array [
       ],
     ],
   ],
-  list [
+  Array [
     Array [
       "ア",
       Array [
@@ -3110,7 +3110,7 @@ Array [
 exports[`faces .name_head(market) snapshot 1`] = `
 Array [
   undefined,
-  list [
+  Array [
     Array [
       "ア",
       Array [
@@ -3209,7 +3209,7 @@ Array [
     ],
   ],
   undefined,
-  list [
+  Array [
     Array [
       "フ",
       Array [
@@ -3225,7 +3225,7 @@ Array [
 exports[`faces .name_head(medical) snapshot 1`] = `
 Array [
   undefined,
-  list [
+  Array [
     Array [
       "ア",
       Array [
@@ -3299,7 +3299,7 @@ Array [
       ],
     ],
   ],
-  list [
+  Array [
     Array [
       "エ",
       Array [
@@ -3314,7 +3314,7 @@ Array [
 exports[`faces .name_head(middle) snapshot 1`] = `
 Array [
   undefined,
-  list [
+  Array [
     Array [
       "ア",
       Array [
@@ -3502,7 +3502,7 @@ Array [
       ],
     ],
   ],
-  list [
+  Array [
     Array [
       "ジ",
       Array [
@@ -3546,7 +3546,7 @@ Array [
       ],
     ],
   ],
-  list [
+  Array [
     Array [
       "ブ",
       Array [
@@ -3562,7 +3562,7 @@ Array [
 exports[`faces .name_head(myth) snapshot 1`] = `
 Array [
   undefined,
-  list [
+  Array [
     Array [
       "オ",
       Array [
@@ -3630,7 +3630,7 @@ Array [
       ],
     ],
   ],
-  list [
+  Array [
     Array [
       "カ",
       Array [
@@ -3639,7 +3639,7 @@ Array [
       ],
     ],
   ],
-  list [
+  Array [
     Array [
       "ト",
       Array [
@@ -3657,7 +3657,7 @@ Array [
       ],
     ],
   ],
-  list [
+  Array [
     Array [
       "ア",
       Array [
@@ -3674,7 +3674,7 @@ Array [
 exports[`faces .name_head(pair) snapshot 1`] = `
 Array [
   undefined,
-  list [
+  Array [
     Array [
       "エ",
       Array [
@@ -3802,7 +3802,7 @@ Array [
 exports[`faces .name_head(river) snapshot 1`] = `
 Array [
   undefined,
-  list [
+  Array [
     Array [
       "オ",
       Array [
@@ -3894,7 +3894,7 @@ Array [
 exports[`faces .name_head(road) snapshot 1`] = `
 Array [
   undefined,
-  list [
+  Array [
     Array [
       "ア",
       Array [
@@ -3980,7 +3980,7 @@ Array [
 exports[`faces .name_head(school) snapshot 1`] = `
 Array [
   undefined,
-  list [
+  Array [
     Array [
       "ガ",
       Array [
@@ -4162,7 +4162,7 @@ Array [
       ],
     ],
   ],
-  list [
+  Array [
     Array [
       "ア",
       Array [
@@ -4416,7 +4416,7 @@ Array [
       ],
     ],
   ],
-  list [
+  Array [
     Array [
       "ブ",
       Array [
@@ -4440,7 +4440,7 @@ Array [
 exports[`faces .name_head(servant) snapshot 1`] = `
 Array [
   undefined,
-  list [
+  Array [
     Array [
       "キ",
       Array [
@@ -4502,7 +4502,7 @@ Array [
       ],
     ],
   ],
-  list [
+  Array [
     Array [
       "ク",
       Array [
@@ -4545,7 +4545,7 @@ Array [
 exports[`faces .name_head(shoji) snapshot 1`] = `
 Array [
   undefined,
-  list [
+  Array [
     Array [
       "ウ",
       Array [
@@ -4847,7 +4847,7 @@ Array [
       ],
     ],
   ],
-  list [
+  Array [
     Array [
       "オ",
       Array [
@@ -4869,7 +4869,7 @@ Array [
 exports[`faces .name_head(stratos) snapshot 1`] = `
 Array [
   undefined,
-  list [
+  Array [
     Array [
       "コ",
       Array [
@@ -4973,7 +4973,7 @@ Array [
       ],
     ],
   ],
-  list [
+  Array [
     Array [
       "イ",
       Array [
@@ -5024,7 +5024,7 @@ Array [
       ],
     ],
   ],
-  list [
+  Array [
     Array [
       "キ",
       Array [
@@ -5035,7 +5035,7 @@ Array [
     ],
   ],
   undefined,
-  list [
+  Array [
     Array [
       "ア",
       Array [
@@ -5053,7 +5053,7 @@ Array [
 exports[`faces .name_head(travel) snapshot 1`] = `
 Array [
   undefined,
-  list [
+  Array [
     Array [
       "ウ",
       Array [
@@ -5181,7 +5181,7 @@ Array [
       ],
     ],
   ],
-  list [
+  Array [
     Array [
       "イ",
       Array [
@@ -5288,7 +5288,7 @@ Array [
       ],
     ],
   ],
-  list [
+  Array [
     Array [
       "エ",
       Array [
@@ -5314,7 +5314,7 @@ Array [
       ],
     ],
   ],
-  list [
+  Array [
     Array [
       "ア",
       Array [
@@ -5358,7 +5358,7 @@ Array [
 exports[`faces .name_head(young) snapshot 1`] = `
 Array [
   undefined,
-  list [
+  Array [
     Array [
       "ア",
       Array [
@@ -5546,7 +5546,7 @@ Array [
       ],
     ],
   ],
-  list [
+  Array [
     Array [
       "キ",
       Array [
@@ -5667,7 +5667,7 @@ Array [
       ],
     ],
   ],
-  list [
+  Array [
     Array [
       "ジ",
       Array [
@@ -5677,7 +5677,7 @@ Array [
       ],
     ],
   ],
-  list [
+  Array [
     Array [
       "フ",
       Array [
@@ -5692,7 +5692,7 @@ Array [
 `;
 
 exports[`faces .tag(all) id snapshot 1`] = `
-list [
+Array [
   "c49",
   "c38",
   "c77",
@@ -6061,1686 +6061,1686 @@ list [
 `;
 
 exports[`faces .tag(all) job snapshot 1`] = `
-list [
-  list [
+Array [
+  Array [
     "石工",
     "にほんざる",
     "技術教師",
     "石工",
   ],
-  list [
+  Array [
     "歌い手",
     "だいおういか",
     "軽音楽部",
     "歌い手",
   ],
-  list [
+  Array [
     "馬飼い",
     "にんじん",
     "いきもの係",
     "馬飼い",
   ],
-  list [
+  Array [
     "親方",
     "ごりら",
     "体育教師",
     "親方",
   ],
-  list [
+  Array [
     "大地主",
     "やみふくろう",
     "寮管理人",
     "大地主",
   ],
-  list [
+  Array [
     "踊り手",
     "はいびすかす",
     "社交ダンス部",
     "踊り手",
   ],
-  list [
+  Array [
     "会計士",
     "きつね",
     "風紀委員",
     "会計士",
   ],
-  list [
+  Array [
     "飾り職",
     "さらぶれっど",
     "美術部",
     "飾り職",
   ],
-  list [
+  Array [
     "楽器職人",
     "えりまきとかげ",
     "吹奏楽部",
     "楽器職人",
   ],
-  list [
+  Array [
     "刺客",
     "暗殺教団",
     "にほんおおかみ",
     "動く銅像",
     "刺客",
   ],
-  list [
+  Array [
     "寡婦",
     "もるふぉちょう",
     "肖像画",
     "寡婦",
   ],
-  list [
+  Array [
     "記者",
     "しまうま",
     "新聞部",
     "記者",
   ],
-  list [
+  Array [
     "御者",
     "用務員",
     "御者",
   ],
-  list [
+  Array [
     "うえきばち",
     "うえきばち",
   ],
-  list [
+  Array [
     "靴磨き",
     "すなねずみ",
     "球児",
     "靴磨き",
   ],
-  list [
+  Array [
     "小悪党",
     "いわとびぺんぎん",
     "問題児",
     "小悪党",
   ],
-  list [
+  Array [
     "小僧",
     "みけ",
     "優等生",
     "小僧",
   ],
-  list [
+  Array [
     "小娘",
     "小銃協会",
     "そまり",
     "ミーハー",
     "小娘",
   ],
-  list [
+  Array [
     "大銃協会",
     "大銃協会",
   ],
-  list [
+  Array [
     "子守り",
     "かんがるー",
     "先輩",
     "子守り",
   ],
-  list [
+  Array [
     "酒屋",
     "ぶた",
     "世界史教師",
     "酒屋",
   ],
-  list [
+  Array [
     "雑貨屋",
     "てのりぶんちょう",
     "歴史教師",
     "雑貨屋",
   ],
-  list [
+  Array [
     "さすらい人",
     "ろぶすたー",
     "登山部",
     "さすらい人",
   ],
-  list [
+  Array [
     "流浪者",
     "しろまどうし",
     "転校生",
     "流浪者",
   ],
-  list [
+  Array [
     "司祭",
     "ゆにこーん",
     "名誉教授",
     "司祭",
   ],
-  list [
+  Array [
     "詩人",
     "おらうーたん",
     "演劇部顧問",
     "詩人",
   ],
-  list [
+  Array [
     "仕立て屋",
     "もみのき",
     "家政科教師",
     "仕立て屋",
   ],
-  list [
+  Array [
     "執事",
     "らいおん",
     "教頭先生",
     "執事",
   ],
-  list [
+  Array [
     "始末屋",
     "ちすいこうもり",
     "教育実習",
     "始末屋",
   ],
-  list [
+  Array [
     "修道士",
     "れとりばー",
     "修士",
     "修道士",
   ],
-  list [
+  Array [
     "修道女",
     "らくだ",
     "修士",
     "修道女",
   ],
-  list [
+  Array [
     "女中",
     "くろひょう",
     "ＳＯＳ団",
     "女中",
   ],
-  list [
+  Array [
     "助手",
     "あらいぐま",
     "保険医",
     "助手",
   ],
-  list [
+  Array [
     "聖歌隊員",
     "くらげ",
     "コーラス部",
     "聖歌隊員",
   ],
-  list [
+  Array [
     "掃除夫",
     "みつりょうしゃ",
     "生徒会執行部",
     "掃除夫",
   ],
-  list [
+  Array [
     "奏者",
     "ぺるしゃ",
     "音楽教師",
     "奏者",
   ],
-  list [
+  Array [
     "奏者",
     "いえてぃ",
     "演奏講師",
     "奏者",
   ],
-  list [
+  Array [
     "双生児",
     "きんぎょ",
     "演劇部",
     "双生児",
   ],
-  list [
+  Array [
     "双生児",
     "ねったいぎょ",
     "演劇部",
     "双生児",
   ],
-  list [
+  Array [
     "村長",
     "よーくしゃーてりあ",
     "校長",
     "村長",
   ],
-  list [
+  Array [
     "紅茶屋",
     "ばいにん",
     "茶道部顧問",
     "紅茶屋",
   ],
-  list [
+  Array [
     "長老",
     "ぶるどっぐ",
     "理事長",
     "長老",
   ],
-  list [
+  Array [
     "長老の孫",
     "わかめ",
     "水泳部",
     "長老の孫",
   ],
-  list [
+  Array [
     "釣り師",
     "すっぽん",
     "魚拓部",
     "釣り師",
   ],
-  list [
+  Array [
     "伝道師",
     "ぱんだ",
     "現国教師",
     "伝道師",
   ],
-  list [
+  Array [
     "読書家",
     "うさぎ",
     "文芸部",
     "読書家",
   ],
-  list [
+  Array [
     "賭場の主",
     "なまこ",
     "後援者",
     "賭場の主",
   ],
-  list [
+  Array [
     "鳥使い",
     "おうむ",
     "飼育委員",
     "鳥使い",
   ],
-  list [
+  Array [
     "肉屋",
     "おおたこ",
     "球部顧問",
     "肉屋",
   ],
-  list [
+  Array [
     "墓堀",
     "ありじごく",
     "映画研究会",
     "墓堀",
   ],
-  list [
+  Array [
     "墓守",
     "かげろう",
     "幽霊部員",
     "墓守",
   ],
-  list [
+  Array [
     "花売り",
     "こじか",
     "華道部",
     "花売り",
   ],
-  list [
+  Array [
     "美術家",
     "びーる",
     "陶芸部",
     "美術家",
   ],
-  list [
+  Array [
     "漂白工",
     "おこじょ",
     "マネージャー",
     "漂白工",
   ],
-  list [
+  Array [
     "病人",
     "いとまきえい",
     "留年生",
     "病人",
   ],
-  list [
+  Array [
     "百姓",
     "うちゅうせん",
     "農業科",
     "百姓",
   ],
-  list [
+  Array [
     "風来坊",
     "きつねりす",
     "守衛",
     "風来坊",
   ],
-  list [
+  Array [
     "ベテラン医師",
     "かたつむり",
     "生物教師",
     "ベテラン医師",
   ],
-  list [
+  Array [
     "ベテラン看護婦",
     "かまきり",
     "数学教師",
     "ベテラン看護婦",
   ],
-  list [
+  Array [
     "牧人",
     "ひつじ",
     "手芸部",
     "牧人",
   ],
-  list [
+  Array [
     "本屋",
     "たぬき",
     "図書委員",
     "本屋",
   ],
-  list [
+  Array [
     "水商売",
     "あげはちょう",
     "チアリーダー",
     "水商売",
   ],
-  list [
+  Array [
     "道案内",
     "なまけもの",
     "帰宅部",
     "道案内",
   ],
-  list [
+  Array [
     "見習い医師",
     "かもすぞ",
     "化学教師",
     "見習い医師",
   ],
-  list [
+  Array [
     "森番",
     "くまー",
     "番長",
     "森番",
   ],
-  list [
+  Array [
     "郵便屋",
     "しゃち",
     "地理教師",
     "郵便屋",
   ],
-  list [
+  Array [
     "理髪師",
     "さめ",
     "野球部",
     "理髪師",
   ],
-  list [
+  Array [
     "良家の息子",
     "うし",
     "校長の孫",
     "良家の息子",
   ],
-  list [
+  Array [
     "良家の娘",
     "とら",
     "理事長の孫",
     "良家の娘",
   ],
-  list [
+  Array [
     "ランタン職人",
     "ほたる",
     "ヴィジュアル系バンド部",
     "ランタン職人",
   ],
-  list [
+  Array [
     "教え子",
     "うみねこ",
     "弓道部",
     "教え子",
   ],
-  list [
+  Array [
     "若者",
     "りかおん",
     "陸上部",
     "若者",
   ],
-  list [
+  Array [
     "学者",
     "せあかごけぐも",
     "助教授",
     "学者",
   ],
-  list [
+  Array [
     "負傷兵",
     "みいら",
     "剣道部",
     "負傷兵",
   ],
-  list [
+  Array [
     "魚屋",
     "まんぼう",
     "水泳部顧問",
     "魚屋",
   ],
-  list [
+  Array [
     "新聞配達",
     "やもり",
     "人体模型",
     "新聞配達",
   ],
-  list [
+  Array [
     "採集人",
     "ぶろっこりー",
     "無線部",
     "採集人",
   ],
-  list [
+  Array [
     "ろくでなし",
     "ろくでなし",
   ],
-  list [
+  Array [
     "捜査官",
     "しぇぱーど",
     "駐在さん",
     "捜査官",
   ],
-  list [
+  Array [
     "探偵",
     "はしびろこう",
     "教授",
     "探偵",
   ],
-  list [
+  Array [
     "徒弟",
     "びーばー",
     "サッカー部",
     "徒弟",
   ],
-  list [
+  Array [
     "手伝い",
     "すずらん",
     "園芸部",
     "手伝い",
   ],
-  list [
+  Array [
     "許婚",
     "許婚",
   ],
-  list [
+  Array [
     "革命家",
     "革命家",
   ],
-  list [
+  Array [
     "廃品回収",
     "廃品回収",
   ],
-  list [
+  Array [
     "逃亡者",
     "逃亡者",
   ],
-  list [
+  Array [
     "宿屋",
     "宿屋",
   ],
-  list [
+  Array [
     "庭師",
     "庭師",
   ],
-  list [
+  Array [
     "蝋燭職人",
     "蝋燭職人",
   ],
-  list [
+  Array [
     "公証人",
     "公証人",
   ],
-  list [
+  Array [
     "下働き",
     "下働き",
   ],
-  list [
+  Array [
     "粉ひき",
     "さい",
     "ラグビー部",
     "粉ひき",
   ],
-  list [
+  Array [
     "料理人",
     "ゆでたまご",
     "栄養士",
     "料理人",
   ],
-  list [
+  Array [
     "姉妹",
     "姉妹",
   ],
-  list [
+  Array [
     "銀行屋",
     "銀行屋",
   ],
-  list [
+  Array [
     "一日乞食",
     "一日乞食",
   ],
-  list [
+  Array [
     "奴隷運び",
     "奴隷運び",
   ],
-  list [
+  Array [
     "弁務官",
     "弁務官",
   ],
-  list [
+  Array [
     "山師",
     "山師",
   ],
-  list [
+  Array [
     "食いしん坊",
     "あふりかぞう",
     "食堂のおねいさん",
     "食いしん坊",
   ],
-  list [
+  Array [
     "新妻",
     "かば",
     "新任教師",
     "新妻",
   ],
-  list [
+  Array [
     "妻",
     "しろへび",
     "講師",
     "妻",
   ],
-  list [
+  Array [
     "お使い",
     "かみつきがめ",
     "おてんば",
     "お使い",
   ],
-  list [
+  Array [
     "洗濯婦",
     "あるぱか",
     "緑のおばさん",
     "洗濯婦",
   ],
-  list [
+  Array [
     "洗濯婦",
     "さば",
     "テニス部",
     "洗濯婦",
   ],
-  list [
+  Array [
     "洗濯婦",
     "わらいかわせみ",
     "書道部",
     "洗濯婦",
   ],
-  list [
+  Array [
     "執事見習い",
     "どぶねずみ",
     "ガリ勉",
     "執事見習い",
   ],
-  list [
+  Array [
     "道化師",
     "かめれおん",
     "演劇部",
     "道化師",
   ],
-  list [
+  Array [
     "指揮者",
     "さんた",
     "前校長",
     "指揮者",
   ],
-  list [
+  Array [
     "FSM団",
     "FSM団",
   ],
-  list [
+  Array [
     "呵呵老会",
     "呵呵老会",
   ],
-  list [
+  Array [
     "農薬売",
     "農薬売",
   ],
-  list [
+  Array [
     "独尊隊",
     "独尊隊",
   ],
-  list [
+  Array [
     "愛人",
     "愛人",
   ],
-  list [
+  Array [
     "女主人",
     "あかまむし",
     "PTA会長",
     "女主人",
   ],
-  list [
+  Array [
     "本草方士",
     "本草方士",
   ],
-  list [
+  Array [
     "村娘",
     "しろちゃとら",
     "占い研究会",
     "村娘",
   ],
-  list [
+  Array [
     "墓荒らし",
     "やまあらし",
     "格闘技同好会",
     "墓荒らし",
   ],
-  list [
+  Array [
     "薬屋",
     "ふぇねっく",
     "科学部",
     "薬屋",
   ],
-  list [
+  Array [
     "水商売",
     "くりおね",
     "チアガール",
     "水商売",
   ],
-  list [
+  Array [
     "良家の末娘",
     "はむすたー",
     "ラクロス部",
     "良家の末娘",
   ],
-  list [
+  Array [
     "店番",
     "りす",
     "購買部",
     "店番",
   ],
-  list [
+  Array [
     "留守番",
     "めがねざる",
     "委員長",
     "留守番",
   ],
-  list [
+  Array [
     "成金",
     "いぼいのしし",
     "前理事長",
     "成金",
   ],
-  list [
+  Array [
     "紅客連盟",
     "紅客連盟",
   ],
-  list [
+  Array [
     "信徒",
     "信徒",
   ],
-  list [
+  Array [
     "青い鳥",
     "青い鳥",
   ],
-  list [
+  Array [
     "白鶴拳",
     "白鶴拳",
   ],
-  list [
+  Array [
     "病人",
     "りゅう",
     "天文部",
     "病人",
   ],
-  list [
+  Array [
     "露店巡り",
     "露店巡り",
   ],
-  list [
+  Array [
     "博徒",
     "はいえな",
     "スケバン",
     "博徒",
   ],
-  list [
+  Array [
     "覆面嫉妬団",
     "覆面嫉妬団",
   ],
-  list [
+  Array [
     "ビール配り",
     "ビール配り",
   ],
-  list [
+  Array [
     "宝石収集家",
     "くじゃく",
     "美術教師",
     "宝石収集家",
   ],
-  list [
+  Array [
     "追憶探り",
     "追憶探り",
   ],
-  list [
+  Array [
     "乱痴気",
     "乱痴気",
   ],
-  list [
+  Array [
     "渡し船",
     "渡し船",
   ],
-  list [
+  Array [
     "紐",
     "紐",
   ],
-  list [
+  Array [
     "放蕩者",
     "かも",
     "柔道部",
     "放蕩者",
   ],
-  list [
+  Array [
     "厭世家",
     "厭世家",
     "おうむがい",
     "オカルト同好会",
     "厭世家",
   ],
-  list [
+  Array [
     "自由滑落",
     "自由滑落",
   ],
-  list [
+  Array [
     "隠れん坊",
     "隠れん坊",
   ],
-  list [
+  Array [
     "受付",
     "虹追い",
     "いそぎんちゃく",
     "放送部",
     "受付",
   ],
-  list [
+  Array [
     "童話作家",
     "かえる",
     "漫画研究部",
     "童話作家",
   ],
-  list [
+  Array [
     "厭世家",
     "しんかいぎょ",
     "不登校児",
     "厭世家",
   ],
-  list [
+  Array [
     "蟻塚崩し",
     "蟻塚崩し",
   ],
-  list [
+  Array [
     "天井手繰り",
     "天井手繰り",
   ],
-  list [
+  Array [
     "三元道士",
     "三元道士",
   ],
-  list [
+  Array [
     "吹牛方士",
     "吹牛方士",
   ],
-  list [
+  Array [
     "釣り師",
     "釣り師",
   ],
-  list [
+  Array [
     "心意六合拳",
     "心意六合拳",
   ],
-  list [
+  Array [
     "宝飾交易",
     "宝飾交易",
   ],
-  list [
+  Array [
     "お針子",
     "お針子",
   ],
-  list [
+  Array [
     "馬鹿",
     "馬鹿",
   ],
-  list [
+  Array [
     "酸味探し",
     "酸味探し",
   ],
-  list [
+  Array [
     "早口言葉",
     "早口言葉",
   ],
-  list [
+  Array [
     "妄執の誓い",
     "妄執の誓い",
   ],
-  list [
+  Array [
     "隣席座り",
     "隣席座り",
   ],
-  list [
+  Array [
     "友愛組合",
     "友愛組合",
   ],
-  list [
+  Array [
     "幸運の科学",
     "幸運の科学",
   ],
-  list [
+  Array [
     "截拳道",
     "截拳道",
   ],
-  list [
+  Array [
     "開放的市民",
     "開放的市民",
   ],
-  list [
+  Array [
     "死ね死ね団",
     "死ね死ね団",
   ],
-  list [
+  Array [
     "匿名軍団",
     "匿名軍団",
   ],
-  list [
+  Array [
     "素顔連盟",
     "素顔連盟",
   ],
-  list [
+  Array [
     "営利政府",
     "営利政府",
   ],
-  list [
+  Array [
     "地下鉄道",
     "地下鉄道",
   ],
-  list [
+  Array [
     "MNU機関",
     "MNU機関",
   ],
-  list [
+  Array [
     "猫の集会",
     "猫の集会",
   ],
-  list [
+  Array [
     "少年探偵団",
     "少年探偵団",
   ],
-  list [
+  Array [
     "安全保障局",
     "安全保障局",
   ],
-  list [
+  Array [
     "聖戦士募集",
     "聖戦士募集",
   ],
-  list [
+  Array [
     "薔薇∴十字",
     "薔薇∴十字",
   ],
-  list [
+  Array [
     "白銀∴秘星",
     "白銀∴秘星",
   ],
-  list [
+  Array [
     "黄金∴黎明",
     "黄金∴黎明",
   ],
-  list [
+  Array [
     "明仄∴暁星",
     "明仄∴暁星",
   ],
-  list [
+  Array [
     "勧善懲悪委",
     "勧善懲悪委",
   ],
-  list [
+  Array [
     "鷹の爪団",
     "鷹の爪団",
   ],
-  list [
+  Array [
     "九未知会",
     "九未知会",
   ],
-  list [
+  Array [
     "透明女子会",
     "透明女子会",
   ],
-  list [
+  Array [
     "学園特警",
     "学園特警",
   ],
-  list [
+  Array [
     "MI:18",
     "MI:18",
   ],
-  list [
+  Array [
     "孤高天使連合",
     "孤高天使連合",
   ],
-  list [
+  Array [
     "トレーサー",
     "トレーサー",
   ],
-  list [
+  Array [
     "2.14革命機構",
     "2.14革命機構",
   ],
-  list [
+  Array [
     "法隆寺",
     "法隆寺",
   ],
-  list [
+  Array [
     "硯友社",
     "硯友社",
   ],
-  list [
+  Array [
     "樫の樹の子ら",
     "樫の樹の子ら",
   ],
-  list [
+  Array [
     "旅団✡肘笠雨",
     "旅団✡肘笠雨",
   ],
-  list [
+  Array [
     "安全調査局",
     "安全調査局",
   ],
-  list [
+  Array [
     "亡命同盟",
     "亡命同盟",
   ],
-  list [
+  Array [
     "PPP",
     "PPP",
   ],
-  list [
+  Array [
     "北後家蜘蛛会",
     "北後家蜘蛛会",
   ],
-  list [
+  Array [
     "一杯と自由",
     "一杯と自由",
   ],
-  list [
+  Array [
     "常世倶楽部",
     "常世倶楽部",
   ],
-  list [
+  Array [
     "架空惑星",
     "架空惑星",
   ],
-  list [
+  Array [
     "季節巡回",
     "季節巡回",
   ],
-  list [
+  Array [
     "七星拳",
     "七星拳",
   ],
-  list [
+  Array [
     "革神会",
     "革神会",
   ],
-  list [
+  Array [
     "聖愛色同胞",
     "聖愛色同胞",
   ],
-  list [
+  Array [
     "少年",
     "少年",
   ],
-  list [
+  Array [
     "少女",
     "少女",
   ],
-  list [
+  Array [
     "天道居士",
     "天道居士",
   ],
-  list [
+  Array [
     "地道居士",
     "地道居士",
   ],
-  list [
+  Array [
     "忘我共同体",
     "忘我共同体",
   ],
-  list [
+  Array [
     "宇宙原理衆",
     "宇宙原理衆",
   ],
-  list [
+  Array [
     "鉄血の福音",
     "鉄血の福音",
   ],
-  list [
+  Array [
     "一切一門",
     "一切一門",
   ],
-  list [
+  Array [
     "共信の友",
     "共信の友",
   ],
-  list [
+  Array [
     "真向一気",
     "真向一気",
   ],
-  list [
+  Array [
     "夜笑国",
     "夜笑国",
   ],
-  list [
+  Array [
     "大太刀源流",
     "大太刀源流",
   ],
-  list [
+  Array [
     "愚連隊",
     "愚連隊",
   ],
-  list [
+  Array [
     "頭蓋骨と骨",
     "頭蓋骨と骨",
   ],
-  list [
+  Array [
     "朝茶会",
     "朝茶会",
   ],
-  list [
+  Array [
     "食養会",
     "食養会",
   ],
-  list [
+  Array [
     "啓明結社",
     "啓明結社",
   ],
-  list [
+  Array [
     "更なる前進",
     "更なる前進",
   ],
-  list [
+  Array [
     "領事裁判所",
     "領事裁判所",
   ],
-  list [
+  Array [
     "天文学会",
     "天文学会",
   ],
-  list [
+  Array [
     "校庭番長",
     "校庭番長",
   ],
-  list [
+  Array [
     "ラプター",
     "ラプター",
   ],
-  list [
+  Array [
     "月光学会",
     "月光学会",
   ],
-  list [
+  Array [
     "公安部",
     "公安部",
   ],
-  list [
+  Array [
     "会堂長老会",
     "会堂長老会",
   ],
-  list [
+  Array [
     "カミナリ族",
     "カミナリ族",
   ],
-  list [
+  Array [
     "珊瑚宮連邦",
     "珊瑚宮連邦",
   ],
-  list [
+  Array [
     "日輪代理",
     "日輪代理",
   ],
-  list [
+  Array [
     "酪農家",
     "酪農家",
   ],
-  list [
+  Array [
     "竜騎兵",
     "竜騎兵",
   ],
-  list [
+  Array [
     "三等兵",
     "三等兵",
   ],
-  list [
+  Array [
     "測量座",
     "測量座",
   ],
-  list [
+  Array [
     "宝珠",
     "宝珠",
   ],
-  list [
+  Array [
     "飛脚座",
     "飛脚座",
   ],
-  list [
+  Array [
     "八元ʃ∫干渉",
     "八元ʃ∫干渉",
   ],
-  list [
+  Array [
     "キンジン",
     "キンジン",
   ],
-  list [
+  Array [
     "類感呪術師",
     "類感呪術師",
   ],
-  list [
+  Array [
     "食通虹蛇",
     "食通虹蛇",
   ],
-  list [
+  Array [
     "アララー伯",
     "アララー伯",
   ],
-  list [
+  Array [
     "鉄騎兵",
     "鉄騎兵",
   ],
-  list [
+  Array [
     "空挺帆走",
     "空挺帆走",
   ],
-  list [
+  Array [
     "炎天の雷光",
     "炎天の雷光",
   ],
-  list [
+  Array [
     "尸解仙道",
     "尸解仙道",
   ],
-  list [
+  Array [
     "奏楽神",
     "奏楽神",
   ],
-  list [
+  Array [
     "護法善隊",
     "護法善隊",
   ],
-  list [
+  Array [
     "御免株",
     "御免株",
   ],
-  list [
+  Array [
     "羽化昇天道",
     "羽化昇天道",
   ],
-  list [
+  Array [
     "かみさま",
     "かみさま",
   ],
-  list [
+  Array [
     "こひつじ",
     "こひつじ",
   ],
-  list [
+  Array [
     "調律師",
     "調律師",
   ],
-  list [
+  Array [
     "きゅうていがか",
     "きゅうていがか",
   ],
-  list [
+  Array [
     "しょうぐん",
     "しょうぐん",
   ],
-  list [
+  Array [
     "はおう",
     "はおう",
   ],
-  list [
+  Array [
     "びじん",
     "びじん",
   ],
-  list [
+  Array [
     "ひとづかい",
     "ひとづかい",
   ],
-  list [
+  Array [
     "ようせい",
     "ようせい",
   ],
-  list [
+  Array [
     "ようせい",
     "ようせい",
   ],
-  list [
+  Array [
     "すくみず",
     "すくみず",
   ],
-  list [
+  Array [
     "こあくとう",
     "こあくとう",
   ],
-  list [
+  Array [
     "おふくろのあじ",
     "おふくろのあじ",
   ],
-  list [
+  Array [
     "いしく",
     "いしく",
   ],
-  list [
+  Array [
     "しーさー",
     "しーさー",
   ],
-  list [
+  Array [
     "ころぽっくる",
     "ころぽっくる",
   ],
-  list [
+  Array [
     "神聖騎士",
     "神聖騎士",
   ],
-  list [
+  Array [
     "暗黒騎士",
     "暗黒騎士",
   ],
-  list [
+  Array [
     "奇跡の子",
     "奇跡の子",
   ],
-  list [
+  Array [
     "りゅうきへい",
     "りゅうきへい",
   ],
-  list [
+  Array [
     "記号の妖精",
     "記号の妖精",
   ],
-  list [
+  Array [
     "おひめさま",
     "おひめさま",
   ],
-  list [
+  Array [
     "げぼく",
     "げぼく",
   ],
-  list [
+  Array [
     "通信士",
     "通信士",
   ],
-  list [
+  Array [
     "哲学者",
     "哲学者",
   ],
-  list [
+  Array [
     "道案内",
     "道案内",
   ],
-  list [
+  Array [
     "お散歩隊長",
     "お散歩隊長",
   ],
-  list [
+  Array [
     "新製品",
     "新製品",
   ],
-  list [
+  Array [
     "士官",
     "士官",
   ],
-  list [
+  Array [
     "救星隊",
     "救星隊",
   ],
-  list [
+  Array [
     "遊泳員",
     "遊泳員",
   ],
-  list [
+  Array [
     "服飾商",
     "服飾商",
   ],
-  list [
+  Array [
     "研修生",
     "研修生",
   ],
-  list [
+  Array [
     "保安技師",
     "保安技師",
   ],
-  list [
+  Array [
     "艇長",
     "艇長",
   ],
-  list [
+  Array [
     "廃神",
     "廃神",
   ],
-  list [
+  Array [
     "消防隊長",
     "消防隊長",
   ],
-  list [
+  Array [
     "感性子",
     "感性子",
   ],
-  list [
+  Array [
     "理性子",
     "理性子",
   ],
-  list [
+  Array [
     "対面販売",
     "対面販売",
   ],
-  list [
+  Array [
     "忍者隊",
     "忍者隊",
   ],
-  list [
+  Array [
     "保険調査",
     "保険調査",
   ],
-  list [
+  Array [
     "幽閉児",
     "幽閉児",
   ],
-  list [
+  Array [
     "測量士",
     "測量士",
   ],
-  list [
+  Array [
     "星間帆走",
     "星間帆走",
   ],
-  list [
+  Array [
     "地下軌道",
     "地下軌道",
   ],
-  list [
+  Array [
     "光彩楽団",
     "光彩楽団",
   ],
-  list [
+  Array [
     "星先案内",
     "星先案内",
   ],
-  list [
+  Array [
     "鉱滓地区",
     "鉱滓地区",
   ],
-  list [
+  Array [
     "鉱滓皇帝",
     "鉱滓皇帝",
   ],
-  list [
+  Array [
     "鉱滓地区",
     "鉱滓地区",
   ],
-  list [
+  Array [
     "溶接技師",
     "溶接技師",
   ],
-  list [
+  Array [
     "機巧忍軍",
     "機巧忍軍",
   ],
-  list [
+  Array [
     "閉鎖管理",
     "閉鎖管理",
   ],
-  list [
+  Array [
     "意匠造形",
     "意匠造形",
   ],
-  list [
+  Array [
     "重層培養",
     "重層培養",
   ],
-  list [
+  Array [
     "華美人",
     "華美人",
   ],
-  list [
+  Array [
     "銀河ギャル",
     "銀河ギャル",
   ],
-  list [
+  Array [
     "好奇診",
     "好奇診",
   ],
-  list [
+  Array [
     "執行隊",
     "執行隊",
   ],
-  list [
+  Array [
     "複眼レフ",
     "複眼レフ",
   ],
-  list [
+  Array [
     "飴師",
     "飴師",
   ],
-  list [
+  Array [
     "うどん職人",
     "うどん職人",
   ],
-  list [
+  Array [
     "そば職人",
     "そば職人",
   ],
-  list [
+  Array [
     "楽士",
     "楽士",
   ],
-  list [
+  Array [
     "髪結い",
     "髪結い",
   ],
-  list [
+  Array [
     "後妻",
     "後妻",
   ],
-  list [
+  Array [
     "餓鬼大将",
     "餓鬼大将",
   ],
-  list [
+  Array [
     "神主",
     "神主",
   ],
-  list [
+  Array [
     "喧嘩屋",
     "喧嘩屋",
   ],
-  list [
+  Array [
     "薬売り",
     "薬売り",
   ],
-  list [
+  Array [
     "琴弾き",
     "琴弾き",
   ],
-  list [
+  Array [
     "呉服問屋",
     "呉服問屋",
   ],
-  list [
+  Array [
     "子守り",
     "子守り",
   ],
-  list [
+  Array [
     "女中",
     "女中",
   ],
-  list [
+  Array [
     "刺客",
     "刺客",
   ],
-  list [
+  Array [
     "説法師",
     "説法師",
   ],
-  list [
+  Array [
     "宣教師",
     "宣教師",
   ],
-  list [
+  Array [
     "宗主",
     "宗主",
   ],
-  list [
+  Array [
     "手妻師",
     "手妻師",
   ],
-  list [
+  Array [
     "団子屋",
     "団子屋",
   ],
-  list [
+  Array [
     "釣り師",
     "釣り師",
   ],
-  list [
+  Array [
     "忍者",
     "忍者",
   ],
-  list [
+  Array [
     "野伏り",
     "野伏り",
   ],
-  list [
+  Array [
     "発明家",
     "発明家",
   ],
-  list [
+  Array [
     "飛脚",
     "飛脚",
   ],
-  list [
+  Array [
     "病人",
     "病人",
   ],
-  list [
+  Array [
     "武家の娘",
     "武家の娘",
   ],
-  list [
+  Array [
     "双子",
     "双子",
   ],
-  list [
+  Array [
     "丁稚",
     "丁稚",
   ],
-  list [
+  Array [
     "双子",
     "双子",
   ],
-  list [
+  Array [
     "懐刀",
     "懐刀",
   ],
-  list [
+  Array [
     "船大工",
     "船大工",
   ],
-  list [
+  Array [
     "弁士",
     "弁士",
   ],
-  list [
+  Array [
     "町娘",
     "町娘",
   ],
-  list [
+  Array [
     "巫女",
     "巫女",
   ],
-  list [
+  Array [
     "門下生",
     "門下生",
   ],
-  list [
+  Array [
     "役者",
     "役者",
   ],
-  list [
+  Array [
     "山姥",
     "山姥",
   ],
-  list [
+  Array [
     "落胤",
     "落胤",
   ],
-  list [
+  Array [
     "浪人",
     "浪人",
   ],
-  list [
+  Array [
     "機織り",
     "機織り",
   ],
-  list [
+  Array [
     "座敷守",
     "座敷守",
   ],
-  list [
+  Array [
     "屍漁り",
     "屍漁り",
   ],
-  list [
+  Array [
     "肥代取り",
     "肥代取り",
   ],
-  list [
+  Array [
     "和算家",
     "和算家",
   ],
-  list [
+  Array [
     "抜荷",
     "抜荷",
   ],
-  list [
+  Array [
     "半の目",
     "半の目",
   ],
-  list [
+  Array [
     "真剣師",
     "真剣師",
   ],
-  list [
+  Array [
     "看板娘",
     "看板娘",
   ],
-  list [
+  Array [
     "旅籠",
     "旅籠",
   ],
-  list [
+  Array [
     "大旦那",
     "大旦那",
   ],
-  list [
+  Array [
     "丑の刻参り",
     "丑の刻参り",
   ],
-  list [
+  Array [
     "御免株",
     "御免株",
   ],
-  list [
+  Array [
     "陰陽師",
     "陰陽師",
   ],
-  list [
+  Array [
     "秘術販売",
     "秘術販売",
   ],
-  list [
+  Array [
     "かみさま",
   ],
 ]
 `;
 
 exports[`faces .tag(all) name snapshot 1`] = `
-list [
+Array [
   "ボリス",
   "コリーン",
   "キャロライナ",
@@ -8109,25 +8109,25 @@ list [
 `;
 
 exports[`faces .tag(all) npc snapshot 1`] = `
-list [
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+Array [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "エクスパンション・セット「帰還者議事」",
       "M4ライフルを持ってさえいれば…、なーんて、思っててもしょうがないね。鍵かけとこう。",
@@ -8136,26 +8136,26 @@ list [
 ちょっと出かけてくる！プリン食べちゃダメだよ！",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "人狼議事（オスカー）",
       "…そっちじゃないよ、こっちだよ。
@@ -8164,25 +8164,25 @@ list [
 みんなにはナイショだよ？",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "人狼議事（ヨアヒム）",
       "ふひ、ふひひ！人狼になど……くれてやるものかヨ！",
       "人殺しと一緒にいるなんてごめんだヨ！へ…へっ、部屋に戻らせてもらうヨ！",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "人狼議事（ヨーランダ）",
       "夜風に乗って、遠くから声がとどきます。昨夜は幽かに。今夜は響き。きっと明日は……",
@@ -8190,22 +8190,22 @@ list [
 幼馴染から手紙が来たの。お金を貯めたから、遠くで一緒に暮らそうって。",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "人狼議事（キャサリン）",
       "たいへん、たいへん、たいへん！",
       "大変、人狼が出たよ！　いつもは嘘だけど、今度は本当の本当に本当！",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "人狼議事（ベネット）",
       "壁の向こうだ、やつの足音が聞こえる。いよいよ隣室に迫る。
@@ -8215,20 +8215,20 @@ list [
 <strong>日記はそこで途切れ、発見されるまで打ち捨てられていた。</strong>",
     ],
   ],
-  list [
+  Array [
     Array [
       "人狼議事（タバサ）",
       "ねぇ、遊んでかない？今夜はあなたが狼よ……",
       "人狼なんているわけないじゃん？みんな大げさなのさ。",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "人狼議事（グロリア）",
       "紳士ならびに淑女の皆様、わたくしの館へようこそ。
@@ -8237,65 +8237,65 @@ list [
 聞いたでしょう人狼がいるのよ、はやく見つけて処刑なさい！",
     ],
   ],
-  list [
+  Array [
     Array [
       "人狼議事（ヴェスパタイン）",
       "嗚呼、聞こえる。やつの足音が聞こえる……。",
       "逃げろ。逃げろ！おまえらだけでも逃げろ。",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "人狼議事（ソフィア）",
       "こんばんわ、こんな遅くにたいへんですね。
@@ -8306,27 +8306,27 @@ list [
 人殺しと一緒にいるなんて……！へや…、部屋に戻らせてもらいます！",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "エクスパンション・セット「狂騒議事」",
       "どうせ、殺されるわみんな。…みんな
@@ -8342,8 +8342,8 @@ list [
 <strong>日記はそこで途切れ、発見されるまで打ち捨てられていた。</strong>",
     ],
   ],
-  list [],
-  list [
+  Array [],
+  Array [
     Array [
       "人狼議事",
       "嗚呼、聞こえ る。やつの足音が聞こえる……。",
@@ -8360,8 +8360,8 @@ list [
       "逃げろ。逃げろ！おまえらだけでも逃げろ。",
     ],
   ],
-  list [],
-  list [
+  Array [],
+  Array [
     Array [
       "エクスパンション・セット「狂騒議事」（ヤヘイ）",
       "…うん。もうな、だいぶまえだ。
@@ -8380,8 +8380,8 @@ list [
 ウケッ、ウケッ、ウケコッ、ウコケ、ウコケ、ウヒャホ、コケコケコケ！",
     ],
   ],
-  list [],
-  list [
+  Array [],
+  Array [
     Array [
       "エクスパンション・セット「大陸議事」",
       "まさか……これは……？
@@ -8395,55 +8395,55 @@ list [
 ん？",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "エクスパンション・セット「帰還者議事」（ナツミ）",
       "<strong>日差しがプリーツからこぼれると、パンをくわえた黒髪はもう、庇からの校舎入りを達成していた。</strong>
@@ -8463,9 +8463,9 @@ list [
 呀！",
     ],
   ],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [
     Array [
       "エクスパンション・セット「帰還者議事」（少年Ａ）",
       "...",
@@ -8494,7 +8494,7 @@ list [
 <strong>（着信音）</strong>",
     ],
   ],
-  list [
+  Array [
     Array [
       "エクスパンション・セット「帰還者議事」（少女Ａ）",
       "...",
@@ -8517,32 +8517,32 @@ list [
 次は、…オマエダ…！",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "エクスパンション・セット「幻日世界」",
       "おはよう。熾火の子供達。
@@ -8559,37 +8559,37 @@ list [
 信じて待てば、かならず――",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "エクスパンション・セット「幻日世界」（ソランジュ）",
       "...",
       "...",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "はおうの広場",
       "ママ？ママなの？
@@ -8602,13 +8602,13 @@ list [
       "誰にも、腰抜けなんて…言わせないぞっ",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "とのさま広場",
       "じんろう？
@@ -8616,20 +8616,20 @@ list [
       "さあ、ぼうやたちいらっしゃい。ごはんのじかんよ。",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "明後日への道標",
       "とたたたたんっ。
@@ -8643,13 +8643,13 @@ list [
 <strong>がりがり、がりがり。ケージの縁をひっかくと、うろうろ、うろうろ右へ左へ駆け回る。木の洞に目もくれず、夜中じゅう走り続けるのだった……</strong>",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "明後日への道標（ナユタ）",
       "f*ck！またチオチモリンと二酸化炭素分圧だし！
@@ -8668,23 +8668,23 @@ list [
 ちょっと外の様子見てくる。俺のプリン残しといてくれよ。",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "明後日への道標（ワクラバ）",
       "待てよ。ちょっと待てって。
@@ -8698,84 +8698,84 @@ list [
 掟の３番を思い出せ！お前ならやれる！頑張るんだ！",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "和の国てやんでえ",
       "嗚呼、聞こえる。やつの足音が聞こえる……。",
       "逃げろ。逃げろ！おまえらだけでも逃げろ。",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "和の国てやんでえ（仁右衛門）",
       "なんと、これは奇っ怪……分かったゾ！",
       "やっぱり人狼は実在するんだヨ！　うっひょひょーい！",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "人狼議事 ちゃんぷる",
       "ちゃんとご注文通り、さまざまな人たちをお呼びしましたよ。
@@ -8792,7 +8792,7 @@ list [
 `;
 
 exports[`faces .tag(animal) id snapshot 1`] = `
-list [
+Array [
   "c49",
   "c38",
   "c77",
@@ -8904,648 +8904,648 @@ list [
 `;
 
 exports[`faces .tag(animal) job snapshot 1`] = `
-list [
-  list [
+Array [
+  Array [
     "石工",
     "にほんざる",
     "技術教師",
     "石工",
   ],
-  list [
+  Array [
     "歌い手",
     "だいおういか",
     "軽音楽部",
     "歌い手",
   ],
-  list [
+  Array [
     "馬飼い",
     "にんじん",
     "いきもの係",
     "馬飼い",
   ],
-  list [
+  Array [
     "親方",
     "ごりら",
     "体育教師",
     "親方",
   ],
-  list [
+  Array [
     "大地主",
     "やみふくろう",
     "寮管理人",
     "大地主",
   ],
-  list [
+  Array [
     "踊り手",
     "はいびすかす",
     "社交ダンス部",
     "踊り手",
   ],
-  list [
+  Array [
     "会計士",
     "きつね",
     "風紀委員",
     "会計士",
   ],
-  list [
+  Array [
     "飾り職",
     "さらぶれっど",
     "美術部",
     "飾り職",
   ],
-  list [
+  Array [
     "楽器職人",
     "えりまきとかげ",
     "吹奏楽部",
     "楽器職人",
   ],
-  list [
+  Array [
     "刺客",
     "暗殺教団",
     "にほんおおかみ",
     "動く銅像",
     "刺客",
   ],
-  list [
+  Array [
     "寡婦",
     "もるふぉちょう",
     "肖像画",
     "寡婦",
   ],
-  list [
+  Array [
     "記者",
     "しまうま",
     "新聞部",
     "記者",
   ],
-  list [
+  Array [
     "靴磨き",
     "すなねずみ",
     "球児",
     "靴磨き",
   ],
-  list [
+  Array [
     "小悪党",
     "いわとびぺんぎん",
     "問題児",
     "小悪党",
   ],
-  list [
+  Array [
     "小僧",
     "みけ",
     "優等生",
     "小僧",
   ],
-  list [
+  Array [
     "小娘",
     "小銃協会",
     "そまり",
     "ミーハー",
     "小娘",
   ],
-  list [
+  Array [
     "子守り",
     "かんがるー",
     "先輩",
     "子守り",
   ],
-  list [
+  Array [
     "酒屋",
     "ぶた",
     "世界史教師",
     "酒屋",
   ],
-  list [
+  Array [
     "雑貨屋",
     "てのりぶんちょう",
     "歴史教師",
     "雑貨屋",
   ],
-  list [
+  Array [
     "さすらい人",
     "ろぶすたー",
     "登山部",
     "さすらい人",
   ],
-  list [
+  Array [
     "流浪者",
     "しろまどうし",
     "転校生",
     "流浪者",
   ],
-  list [
+  Array [
     "司祭",
     "ゆにこーん",
     "名誉教授",
     "司祭",
   ],
-  list [
+  Array [
     "詩人",
     "おらうーたん",
     "演劇部顧問",
     "詩人",
   ],
-  list [
+  Array [
     "仕立て屋",
     "もみのき",
     "家政科教師",
     "仕立て屋",
   ],
-  list [
+  Array [
     "執事",
     "らいおん",
     "教頭先生",
     "執事",
   ],
-  list [
+  Array [
     "始末屋",
     "ちすいこうもり",
     "教育実習",
     "始末屋",
   ],
-  list [
+  Array [
     "修道士",
     "れとりばー",
     "修士",
     "修道士",
   ],
-  list [
+  Array [
     "修道女",
     "らくだ",
     "修士",
     "修道女",
   ],
-  list [
+  Array [
     "女中",
     "くろひょう",
     "ＳＯＳ団",
     "女中",
   ],
-  list [
+  Array [
     "助手",
     "あらいぐま",
     "保険医",
     "助手",
   ],
-  list [
+  Array [
     "聖歌隊員",
     "くらげ",
     "コーラス部",
     "聖歌隊員",
   ],
-  list [
+  Array [
     "掃除夫",
     "みつりょうしゃ",
     "生徒会執行部",
     "掃除夫",
   ],
-  list [
+  Array [
     "奏者",
     "ぺるしゃ",
     "音楽教師",
     "奏者",
   ],
-  list [
+  Array [
     "奏者",
     "いえてぃ",
     "演奏講師",
     "奏者",
   ],
-  list [
+  Array [
     "双生児",
     "きんぎょ",
     "演劇部",
     "双生児",
   ],
-  list [
+  Array [
     "双生児",
     "ねったいぎょ",
     "演劇部",
     "双生児",
   ],
-  list [
+  Array [
     "村長",
     "よーくしゃーてりあ",
     "校長",
     "村長",
   ],
-  list [
+  Array [
     "紅茶屋",
     "ばいにん",
     "茶道部顧問",
     "紅茶屋",
   ],
-  list [
+  Array [
     "長老",
     "ぶるどっぐ",
     "理事長",
     "長老",
   ],
-  list [
+  Array [
     "長老の孫",
     "わかめ",
     "水泳部",
     "長老の孫",
   ],
-  list [
+  Array [
     "釣り師",
     "すっぽん",
     "魚拓部",
     "釣り師",
   ],
-  list [
+  Array [
     "伝道師",
     "ぱんだ",
     "現国教師",
     "伝道師",
   ],
-  list [
+  Array [
     "読書家",
     "うさぎ",
     "文芸部",
     "読書家",
   ],
-  list [
+  Array [
     "賭場の主",
     "なまこ",
     "後援者",
     "賭場の主",
   ],
-  list [
+  Array [
     "鳥使い",
     "おうむ",
     "飼育委員",
     "鳥使い",
   ],
-  list [
+  Array [
     "肉屋",
     "おおたこ",
     "球部顧問",
     "肉屋",
   ],
-  list [
+  Array [
     "墓堀",
     "ありじごく",
     "映画研究会",
     "墓堀",
   ],
-  list [
+  Array [
     "墓守",
     "かげろう",
     "幽霊部員",
     "墓守",
   ],
-  list [
+  Array [
     "花売り",
     "こじか",
     "華道部",
     "花売り",
   ],
-  list [
+  Array [
     "美術家",
     "びーる",
     "陶芸部",
     "美術家",
   ],
-  list [
+  Array [
     "漂白工",
     "おこじょ",
     "マネージャー",
     "漂白工",
   ],
-  list [
+  Array [
     "病人",
     "いとまきえい",
     "留年生",
     "病人",
   ],
-  list [
+  Array [
     "百姓",
     "うちゅうせん",
     "農業科",
     "百姓",
   ],
-  list [
+  Array [
     "風来坊",
     "きつねりす",
     "守衛",
     "風来坊",
   ],
-  list [
+  Array [
     "ベテラン医師",
     "かたつむり",
     "生物教師",
     "ベテラン医師",
   ],
-  list [
+  Array [
     "ベテラン看護婦",
     "かまきり",
     "数学教師",
     "ベテラン看護婦",
   ],
-  list [
+  Array [
     "牧人",
     "ひつじ",
     "手芸部",
     "牧人",
   ],
-  list [
+  Array [
     "本屋",
     "たぬき",
     "図書委員",
     "本屋",
   ],
-  list [
+  Array [
     "水商売",
     "あげはちょう",
     "チアリーダー",
     "水商売",
   ],
-  list [
+  Array [
     "道案内",
     "なまけもの",
     "帰宅部",
     "道案内",
   ],
-  list [
+  Array [
     "見習い医師",
     "かもすぞ",
     "化学教師",
     "見習い医師",
   ],
-  list [
+  Array [
     "森番",
     "くまー",
     "番長",
     "森番",
   ],
-  list [
+  Array [
     "郵便屋",
     "しゃち",
     "地理教師",
     "郵便屋",
   ],
-  list [
+  Array [
     "理髪師",
     "さめ",
     "野球部",
     "理髪師",
   ],
-  list [
+  Array [
     "良家の息子",
     "うし",
     "校長の孫",
     "良家の息子",
   ],
-  list [
+  Array [
     "良家の娘",
     "とら",
     "理事長の孫",
     "良家の娘",
   ],
-  list [
+  Array [
     "ランタン職人",
     "ほたる",
     "ヴィジュアル系バンド部",
     "ランタン職人",
   ],
-  list [
+  Array [
     "教え子",
     "うみねこ",
     "弓道部",
     "教え子",
   ],
-  list [
+  Array [
     "若者",
     "りかおん",
     "陸上部",
     "若者",
   ],
-  list [
+  Array [
     "学者",
     "せあかごけぐも",
     "助教授",
     "学者",
   ],
-  list [
+  Array [
     "負傷兵",
     "みいら",
     "剣道部",
     "負傷兵",
   ],
-  list [
+  Array [
     "魚屋",
     "まんぼう",
     "水泳部顧問",
     "魚屋",
   ],
-  list [
+  Array [
     "新聞配達",
     "やもり",
     "人体模型",
     "新聞配達",
   ],
-  list [
+  Array [
     "採集人",
     "ぶろっこりー",
     "無線部",
     "採集人",
   ],
-  list [
+  Array [
     "捜査官",
     "しぇぱーど",
     "駐在さん",
     "捜査官",
   ],
-  list [
+  Array [
     "探偵",
     "はしびろこう",
     "教授",
     "探偵",
   ],
-  list [
+  Array [
     "徒弟",
     "びーばー",
     "サッカー部",
     "徒弟",
   ],
-  list [
+  Array [
     "手伝い",
     "すずらん",
     "園芸部",
     "手伝い",
   ],
-  list [
+  Array [
     "粉ひき",
     "さい",
     "ラグビー部",
     "粉ひき",
   ],
-  list [
+  Array [
     "料理人",
     "ゆでたまご",
     "栄養士",
     "料理人",
   ],
-  list [
+  Array [
     "食いしん坊",
     "あふりかぞう",
     "食堂のおねいさん",
     "食いしん坊",
   ],
-  list [
+  Array [
     "新妻",
     "かば",
     "新任教師",
     "新妻",
   ],
-  list [
+  Array [
     "妻",
     "しろへび",
     "講師",
     "妻",
   ],
-  list [
+  Array [
     "お使い",
     "かみつきがめ",
     "おてんば",
     "お使い",
   ],
-  list [
+  Array [
     "洗濯婦",
     "あるぱか",
     "緑のおばさん",
     "洗濯婦",
   ],
-  list [
+  Array [
     "洗濯婦",
     "さば",
     "テニス部",
     "洗濯婦",
   ],
-  list [
+  Array [
     "洗濯婦",
     "わらいかわせみ",
     "書道部",
     "洗濯婦",
   ],
-  list [
+  Array [
     "執事見習い",
     "どぶねずみ",
     "ガリ勉",
     "執事見習い",
   ],
-  list [
+  Array [
     "道化師",
     "かめれおん",
     "演劇部",
     "道化師",
   ],
-  list [
+  Array [
     "指揮者",
     "さんた",
     "前校長",
     "指揮者",
   ],
-  list [
+  Array [
     "女主人",
     "あかまむし",
     "PTA会長",
     "女主人",
   ],
-  list [
+  Array [
     "村娘",
     "しろちゃとら",
     "占い研究会",
     "村娘",
   ],
-  list [
+  Array [
     "墓荒らし",
     "やまあらし",
     "格闘技同好会",
     "墓荒らし",
   ],
-  list [
+  Array [
     "薬屋",
     "ふぇねっく",
     "科学部",
     "薬屋",
   ],
-  list [
+  Array [
     "水商売",
     "くりおね",
     "チアガール",
     "水商売",
   ],
-  list [
+  Array [
     "良家の末娘",
     "はむすたー",
     "ラクロス部",
     "良家の末娘",
   ],
-  list [
+  Array [
     "店番",
     "りす",
     "購買部",
     "店番",
   ],
-  list [
+  Array [
     "留守番",
     "めがねざる",
     "委員長",
     "留守番",
   ],
-  list [
+  Array [
     "成金",
     "いぼいのしし",
     "前理事長",
     "成金",
   ],
-  list [
+  Array [
     "病人",
     "りゅう",
     "天文部",
     "病人",
   ],
-  list [
+  Array [
     "博徒",
     "はいえな",
     "スケバン",
     "博徒",
   ],
-  list [
+  Array [
     "宝石収集家",
     "くじゃく",
     "美術教師",
     "宝石収集家",
   ],
-  list [
+  Array [
     "放蕩者",
     "かも",
     "柔道部",
     "放蕩者",
   ],
-  list [
+  Array [
     "厭世家",
     "厭世家",
     "おうむがい",
     "オカルト同好会",
     "厭世家",
   ],
-  list [
+  Array [
     "受付",
     "虹追い",
     "いそぎんちゃく",
     "放送部",
     "受付",
   ],
-  list [
+  Array [
     "童話作家",
     "かえる",
     "漫画研究部",
     "童話作家",
   ],
-  list [
+  Array [
     "厭世家",
     "しんかいぎょ",
     "不登校児",
@@ -9555,7 +9555,7 @@ list [
 `;
 
 exports[`faces .tag(animal) name snapshot 1`] = `
-list [
+Array [
   "ボリス",
   "コリーン",
   "キャロライナ",
@@ -9667,23 +9667,23 @@ list [
 `;
 
 exports[`faces .tag(animal) npc snapshot 1`] = `
-list [
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+Array [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "エクスパンション・セット「帰還者議事」",
       "M4ライフルを持ってさえいれば…、なーんて、思っててもしょうがないね。鍵かけとこう。",
@@ -9692,25 +9692,25 @@ list [
 ちょっと出かけてくる！プリン食べちゃダメだよ！",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "人狼議事（オスカー）",
       "…そっちじゃないよ、こっちだよ。
@@ -9719,25 +9719,25 @@ list [
 みんなにはナイショだよ？",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "人狼議事（ヨアヒム）",
       "ふひ、ふひひ！人狼になど……くれてやるものかヨ！",
       "人殺しと一緒にいるなんてごめんだヨ！へ…へっ、部屋に戻らせてもらうヨ！",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "人狼議事（ヨーランダ）",
       "夜風に乗って、遠くから声がとどきます。昨夜は幽かに。今夜は響き。きっと明日は……",
@@ -9745,22 +9745,22 @@ list [
 幼馴染から手紙が来たの。お金を貯めたから、遠くで一緒に暮らそうって。",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "人狼議事（キャサリン）",
       "たいへん、たいへん、たいへん！",
       "大変、人狼が出たよ！　いつもは嘘だけど、今度は本当の本当に本当！",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "人狼議事（ベネット）",
       "壁の向こうだ、やつの足音が聞こえる。いよいよ隣室に迫る。
@@ -9770,20 +9770,20 @@ list [
 <strong>日記はそこで途切れ、発見されるまで打ち捨てられていた。</strong>",
     ],
   ],
-  list [
+  Array [
     Array [
       "人狼議事（タバサ）",
       "ねぇ、遊んでかない？今夜はあなたが狼よ……",
       "人狼なんているわけないじゃん？みんな大げさなのさ。",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "人狼議事（グロリア）",
       "紳士ならびに淑女の皆様、わたくしの館へようこそ。
@@ -9792,43 +9792,43 @@ list [
 聞いたでしょう人狼がいるのよ、はやく見つけて処刑なさい！",
     ],
   ],
-  list [
+  Array [
     Array [
       "人狼議事（ヴェスパタイン）",
       "嗚呼、聞こえる。やつの足音が聞こえる……。",
       "逃げろ。逃げろ！おまえらだけでも逃げろ。",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "人狼議事（ソフィア）",
       "こんばんわ、こんな遅くにたいへんですね。
@@ -9839,14 +9839,14 @@ list [
 人殺しと一緒にいるなんて……！へや…、部屋に戻らせてもらいます！",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "エクスパンション・セット「狂騒議事」",
       "どうせ、殺されるわみんな。…みんな
@@ -9862,8 +9862,8 @@ list [
 <strong>日記はそこで途切れ、発見されるまで打ち捨てられていた。</strong>",
     ],
   ],
-  list [],
-  list [
+  Array [],
+  Array [
     Array [
       "人狼議事",
       "嗚呼、聞こえ る。やつの足音が聞こえる……。",
@@ -9884,7 +9884,7 @@ list [
 `;
 
 exports[`faces .tag(apartment) id snapshot 1`] = `
-list [
+Array [
   "c55",
   "c11",
   "c10",
@@ -9914,148 +9914,148 @@ list [
 `;
 
 exports[`faces .tag(apartment) job snapshot 1`] = `
-list [
-  list [
+Array [
+  Array [
     "寡婦",
     "もるふぉちょう",
     "肖像画",
     "寡婦",
   ],
-  list [
+  Array [
     "小僧",
     "みけ",
     "優等生",
     "小僧",
   ],
-  list [
+  Array [
     "小娘",
     "小銃協会",
     "そまり",
     "ミーハー",
     "小娘",
   ],
-  list [
+  Array [
     "子守り",
     "かんがるー",
     "先輩",
     "子守り",
   ],
-  list [
+  Array [
     "助手",
     "あらいぐま",
     "保険医",
     "助手",
   ],
-  list [
+  Array [
     "双生児",
     "きんぎょ",
     "演劇部",
     "双生児",
   ],
-  list [
+  Array [
     "双生児",
     "ねったいぎょ",
     "演劇部",
     "双生児",
   ],
-  list [
+  Array [
     "長老",
     "ぶるどっぐ",
     "理事長",
     "長老",
   ],
-  list [
+  Array [
     "長老の孫",
     "わかめ",
     "水泳部",
     "長老の孫",
   ],
-  list [
+  Array [
     "読書家",
     "うさぎ",
     "文芸部",
     "読書家",
   ],
-  list [
+  Array [
     "教え子",
     "うみねこ",
     "弓道部",
     "教え子",
   ],
-  list [
+  Array [
     "若者",
     "りかおん",
     "陸上部",
     "若者",
   ],
-  list [
+  Array [
     "ろくでなし",
     "ろくでなし",
   ],
-  list [
+  Array [
     "手伝い",
     "すずらん",
     "園芸部",
     "手伝い",
   ],
-  list [
+  Array [
     "食いしん坊",
     "あふりかぞう",
     "食堂のおねいさん",
     "食いしん坊",
   ],
-  list [
+  Array [
     "新妻",
     "かば",
     "新任教師",
     "新妻",
   ],
-  list [
+  Array [
     "妻",
     "しろへび",
     "講師",
     "妻",
   ],
-  list [
+  Array [
     "愛人",
     "愛人",
   ],
-  list [
+  Array [
     "村娘",
     "しろちゃとら",
     "占い研究会",
     "村娘",
   ],
-  list [
+  Array [
     "留守番",
     "めがねざる",
     "委員長",
     "留守番",
   ],
-  list [
+  Array [
     "紐",
     "紐",
   ],
-  list [
+  Array [
     "放蕩者",
     "かも",
     "柔道部",
     "放蕩者",
   ],
-  list [
+  Array [
     "厭世家",
     "厭世家",
     "おうむがい",
     "オカルト同好会",
     "厭世家",
   ],
-  list [
+  Array [
     "童話作家",
     "かえる",
     "漫画研究部",
     "童話作家",
   ],
-  list [
+  Array [
     "厭世家",
     "しんかいぎょ",
     "不登校児",
@@ -10065,7 +10065,7 @@ list [
 `;
 
 exports[`faces .tag(apartment) name snapshot 1`] = `
-list [
+Array [
   "パピヨン",
   "カルヴィン",
   "ゾーイ",
@@ -10095,10 +10095,10 @@ list [
 `;
 
 exports[`faces .tag(apartment) npc snapshot 1`] = `
-list [
-  list [],
-  list [],
-  list [
+Array [
+  Array [],
+  Array [],
+  Array [
     Array [
       "エクスパンション・セット「帰還者議事」",
       "M4ライフルを持ってさえいれば…、なーんて、思っててもしょうがないね。鍵かけとこう。",
@@ -10107,9 +10107,9 @@ list [
 ちょっと出かけてくる！プリン食べちゃダメだよ！",
     ],
   ],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [
     Array [
       "人狼議事（オスカー）",
       "…そっちじゃないよ、こっちだよ。
@@ -10118,25 +10118,25 @@ list [
 みんなにはナイショだよ？",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "人狼議事",
       "嗚呼、聞こえ る。やつの足音が聞こえる……。",
@@ -10157,7 +10157,7 @@ list [
 `;
 
 exports[`faces .tag(asia) id snapshot 1`] = `
-list [
+Array [
   "g05",
   "g02",
   "g01",
@@ -10171,40 +10171,40 @@ list [
 `;
 
 exports[`faces .tag(asia) job snapshot 1`] = `
-list [
-  list [
+Array [
+  Array [
     "本草方士",
     "本草方士",
   ],
-  list [
+  Array [
     "白鶴拳",
     "白鶴拳",
   ],
-  list [
+  Array [
     "三元道士",
     "三元道士",
   ],
-  list [
+  Array [
     "吹牛方士",
     "吹牛方士",
   ],
-  list [
+  Array [
     "釣り師",
     "釣り師",
   ],
-  list [
+  Array [
     "心意六合拳",
     "心意六合拳",
   ],
-  list [
+  Array [
     "宝飾交易",
     "宝飾交易",
   ],
-  list [
+  Array [
     "お針子",
     "お針子",
   ],
-  list [
+  Array [
     "馬鹿",
     "馬鹿",
   ],
@@ -10212,7 +10212,7 @@ list [
 `;
 
 exports[`faces .tag(asia) name snapshot 1`] = `
-list [
+Array [
   "麻雀",
   "志偉",
   "露蝶",
@@ -10226,11 +10226,11 @@ list [
 `;
 
 exports[`faces .tag(asia) npc snapshot 1`] = `
-list [
-  list [],
-  list [],
-  list [],
-  list [
+Array [
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "エクスパンション・セット「大陸議事」",
       "まさか……これは……？
@@ -10244,16 +10244,16 @@ list [
 ん？",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
 ]
 `;
 
 exports[`faces .tag(ecclesia) id snapshot 1`] = `
-list [
+Array [
   "c47",
   "c58",
   "c59",
@@ -10270,72 +10270,72 @@ list [
 `;
 
 exports[`faces .tag(ecclesia) job snapshot 1`] = `
-list [
-  list [
+Array [
+  Array [
     "流浪者",
     "しろまどうし",
     "転校生",
     "流浪者",
   ],
-  list [
+  Array [
     "司祭",
     "ゆにこーん",
     "名誉教授",
     "司祭",
   ],
-  list [
+  Array [
     "修道士",
     "れとりばー",
     "修士",
     "修道士",
   ],
-  list [
+  Array [
     "修道女",
     "らくだ",
     "修士",
     "修道女",
   ],
-  list [
+  Array [
     "聖歌隊員",
     "くらげ",
     "コーラス部",
     "聖歌隊員",
   ],
-  list [
+  Array [
     "伝道師",
     "ぱんだ",
     "現国教師",
     "伝道師",
   ],
-  list [
+  Array [
     "墓堀",
     "ありじごく",
     "映画研究会",
     "墓堀",
   ],
-  list [
+  Array [
     "墓守",
     "かげろう",
     "幽霊部員",
     "墓守",
   ],
-  list [
+  Array [
     "教え子",
     "うみねこ",
     "弓道部",
     "教え子",
   ],
-  list [
+  Array [
     "学者",
     "せあかごけぐも",
     "助教授",
     "学者",
   ],
-  list [
+  Array [
     "一日乞食",
     "一日乞食",
   ],
-  list [
+  Array [
     "信徒",
     "信徒",
   ],
@@ -10343,7 +10343,7 @@ list [
 `;
 
 exports[`faces .tag(ecclesia) name snapshot 1`] = `
-list [
+Array [
   "ペラジー",
   "ブルーノ",
   "ムパムピス",
@@ -10360,15 +10360,15 @@ list [
 `;
 
 exports[`faces .tag(ecclesia) npc snapshot 1`] = `
-list [
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+Array [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "人狼議事（ヨーランダ）",
       "夜風に乗って、遠くから声がとどきます。昨夜は幽かに。今夜は響き。きっと明日は……",
@@ -10376,15 +10376,15 @@ list [
 幼馴染から手紙が来たの。お金を貯めたから、遠くで一緒に暮らそうって。",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
 ]
 `;
 
 exports[`faces .tag(elder) id snapshot 1`] = `
-list [
+Array [
   "c53",
   "c07",
   "c58",
@@ -10402,78 +10402,78 @@ list [
 `;
 
 exports[`faces .tag(elder) job snapshot 1`] = `
-list [
-  list [
+Array [
+  Array [
     "大地主",
     "やみふくろう",
     "寮管理人",
     "大地主",
   ],
-  list [
+  Array [
     "雑貨屋",
     "てのりぶんちょう",
     "歴史教師",
     "雑貨屋",
   ],
-  list [
+  Array [
     "司祭",
     "ゆにこーん",
     "名誉教授",
     "司祭",
   ],
-  list [
+  Array [
     "執事",
     "らいおん",
     "教頭先生",
     "執事",
   ],
-  list [
+  Array [
     "長老",
     "ぶるどっぐ",
     "理事長",
     "長老",
   ],
-  list [
+  Array [
     "釣り師",
     "すっぽん",
     "魚拓部",
     "釣り師",
   ],
-  list [
+  Array [
     "賭場の主",
     "なまこ",
     "後援者",
     "賭場の主",
   ],
-  list [
+  Array [
     "ベテラン医師",
     "かたつむり",
     "生物教師",
     "ベテラン医師",
   ],
-  list [
+  Array [
     "ベテラン看護婦",
     "かまきり",
     "数学教師",
     "ベテラン看護婦",
   ],
-  list [
+  Array [
     "宿屋",
     "宿屋",
   ],
-  list [
+  Array [
     "指揮者",
     "さんた",
     "前校長",
     "指揮者",
   ],
-  list [
+  Array [
     "成金",
     "いぼいのしし",
     "前理事長",
     "成金",
   ],
-  list [
+  Array [
     "宝石収集家",
     "くじゃく",
     "美術教師",
@@ -10483,7 +10483,7 @@ list [
 `;
 
 exports[`faces .tag(elder) name snapshot 1`] = `
-list [
+Array [
   "ゼルダ",
   "ティモシー",
   "ブルーノ",
@@ -10501,31 +10501,31 @@ list [
 `;
 
 exports[`faces .tag(elder) npc snapshot 1`] = `
-list [
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+Array [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "人狼議事（ヨアヒム）",
       "ふひ、ふひひ！人狼になど……くれてやるものかヨ！",
       "人殺しと一緒にいるなんてごめんだヨ！へ…へっ、部屋に戻らせてもらうヨ！",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
 ]
 `;
 
 exports[`faces .tag(elegant) id snapshot 1`] = `
-list [
+Array [
   "c53",
   "c55",
   "c11",
@@ -10544,80 +10544,80 @@ list [
 `;
 
 exports[`faces .tag(elegant) job snapshot 1`] = `
-list [
-  list [
+Array [
+  Array [
     "大地主",
     "やみふくろう",
     "寮管理人",
     "大地主",
   ],
-  list [
+  Array [
     "寡婦",
     "もるふぉちょう",
     "肖像画",
     "寡婦",
   ],
-  list [
+  Array [
     "小僧",
     "みけ",
     "優等生",
     "小僧",
   ],
-  list [
+  Array [
     "賭場の主",
     "なまこ",
     "後援者",
     "賭場の主",
   ],
-  list [
+  Array [
     "良家の息子",
     "うし",
     "校長の孫",
     "良家の息子",
   ],
-  list [
+  Array [
     "良家の娘",
     "とら",
     "理事長の孫",
     "良家の娘",
   ],
-  list [
+  Array [
     "許婚",
     "許婚",
   ],
-  list [
+  Array [
     "弁務官",
     "弁務官",
   ],
-  list [
+  Array [
     "愛人",
     "愛人",
   ],
-  list [
+  Array [
     "女主人",
     "あかまむし",
     "PTA会長",
     "女主人",
   ],
-  list [
+  Array [
     "良家の末娘",
     "はむすたー",
     "ラクロス部",
     "良家の末娘",
   ],
-  list [
+  Array [
     "成金",
     "いぼいのしし",
     "前理事長",
     "成金",
   ],
-  list [
+  Array [
     "病人",
     "りゅう",
     "天文部",
     "病人",
   ],
-  list [
+  Array [
     "宝石収集家",
     "くじゃく",
     "美術教師",
@@ -10627,7 +10627,7 @@ list [
 `;
 
 exports[`faces .tag(elegant) name snapshot 1`] = `
-list [
+Array [
   "ゼルダ",
   "パピヨン",
   "カルヴィン",
@@ -10646,19 +10646,19 @@ list [
 `;
 
 exports[`faces .tag(elegant) npc snapshot 1`] = `
-list [
-  list [],
-  list [],
-  list [],
-  list [
+Array [
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "人狼議事（ヨアヒム）",
       "ふひ、ふひひ！人狼になど……くれてやるものかヨ！",
       "人殺しと一緒にいるなんてごめんだヨ！へ…へっ、部屋に戻らせてもらうヨ！",
     ],
   ],
-  list [],
-  list [
+  Array [],
+  Array [
     Array [
       "人狼議事（グロリア）",
       "紳士ならびに淑女の皆様、わたくしの館へようこそ。
@@ -10667,19 +10667,19 @@ list [
 聞いたでしょう人狼がいるのよ、はやく見つけて処刑なさい！",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
 ]
 `;
 
 exports[`faces .tag(fable) id snapshot 1`] = `
-list [
+Array [
   "f000",
   "f1",
   "f2",
@@ -10704,84 +10704,84 @@ list [
 `;
 
 exports[`faces .tag(fable) job snapshot 1`] = `
-list [
-  list [
+Array [
+  Array [
     "日輪代理",
     "日輪代理",
   ],
-  list [
+  Array [
     "酪農家",
     "酪農家",
   ],
-  list [
+  Array [
     "竜騎兵",
     "竜騎兵",
   ],
-  list [
+  Array [
     "三等兵",
     "三等兵",
   ],
-  list [
+  Array [
     "測量座",
     "測量座",
   ],
-  list [
+  Array [
     "宝珠",
     "宝珠",
   ],
-  list [
+  Array [
     "飛脚座",
     "飛脚座",
   ],
-  list [
+  Array [
     "八元ʃ∫干渉",
     "八元ʃ∫干渉",
   ],
-  list [
+  Array [
     "キンジン",
     "キンジン",
   ],
-  list [
+  Array [
     "類感呪術師",
     "類感呪術師",
   ],
-  list [
+  Array [
     "食通虹蛇",
     "食通虹蛇",
   ],
-  list [
+  Array [
     "アララー伯",
     "アララー伯",
   ],
-  list [
+  Array [
     "鉄騎兵",
     "鉄騎兵",
   ],
-  list [
+  Array [
     "空挺帆走",
     "空挺帆走",
   ],
-  list [
+  Array [
     "炎天の雷光",
     "炎天の雷光",
   ],
-  list [
+  Array [
     "尸解仙道",
     "尸解仙道",
   ],
-  list [
+  Array [
     "奏楽神",
     "奏楽神",
   ],
-  list [
+  Array [
     "護法善隊",
     "護法善隊",
   ],
-  list [
+  Array [
     "御免株",
     "御免株",
   ],
-  list [
+  Array [
     "羽化昇天道",
     "羽化昇天道",
   ],
@@ -10789,7 +10789,7 @@ list [
 `;
 
 exports[`faces .tag(fable) name snapshot 1`] = `
-list [
+Array [
   "ロゴス",
   "ヨグラージ",
   "アーサー",
@@ -10814,8 +10814,8 @@ list [
 `;
 
 exports[`faces .tag(fable) npc snapshot 1`] = `
-list [
-  list [
+Array [
+  Array [
     Array [
       "エクスパンション・セット「幻日世界」",
       "おはよう。熾火の子供達。
@@ -10832,36 +10832,36 @@ list [
 信じて待てば、かならず――",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "エクスパンション・セット「幻日世界」（ソランジュ）",
       "...",
       "...",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
 ]
 `;
 
 exports[`faces .tag(farm) id snapshot 1`] = `
-list [
+Array [
   "c77",
   "c53",
   "c66",
@@ -10880,82 +10880,82 @@ list [
 `;
 
 exports[`faces .tag(farm) job snapshot 1`] = `
-list [
-  list [
+Array [
+  Array [
     "馬飼い",
     "にんじん",
     "いきもの係",
     "馬飼い",
   ],
-  list [
+  Array [
     "大地主",
     "やみふくろう",
     "寮管理人",
     "大地主",
   ],
-  list [
+  Array [
     "紅茶屋",
     "ばいにん",
     "茶道部顧問",
     "紅茶屋",
   ],
-  list [
+  Array [
     "釣り師",
     "すっぽん",
     "魚拓部",
     "釣り師",
   ],
-  list [
+  Array [
     "肉屋",
     "おおたこ",
     "球部顧問",
     "肉屋",
   ],
-  list [
+  Array [
     "百姓",
     "うちゅうせん",
     "農業科",
     "百姓",
   ],
-  list [
+  Array [
     "牧人",
     "ひつじ",
     "手芸部",
     "牧人",
   ],
-  list [
+  Array [
     "道案内",
     "なまけもの",
     "帰宅部",
     "道案内",
   ],
-  list [
+  Array [
     "森番",
     "くまー",
     "番長",
     "森番",
   ],
-  list [
+  Array [
     "採集人",
     "ぶろっこりー",
     "無線部",
     "採集人",
   ],
-  list [
+  Array [
     "粉ひき",
     "さい",
     "ラグビー部",
     "粉ひき",
   ],
-  list [
+  Array [
     "山師",
     "山師",
   ],
-  list [
+  Array [
     "農薬売",
     "農薬売",
   ],
-  list [
+  Array [
     "薬屋",
     "ふぇねっく",
     "科学部",
@@ -10965,7 +10965,7 @@ list [
 `;
 
 exports[`faces .tag(farm) name snapshot 1`] = `
-list [
+Array [
   "キャロライナ",
   "ゼルダ",
   "クリストファー",
@@ -10984,26 +10984,26 @@ list [
 `;
 
 exports[`faces .tag(farm) npc snapshot 1`] = `
-list [
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
+Array [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
 ]
 `;
 
 exports[`faces .tag(giji) id snapshot 1`] = `
-list [
+Array [
   "c49",
   "c38",
   "c77",
@@ -11138,741 +11138,741 @@ list [
 `;
 
 exports[`faces .tag(giji) job snapshot 1`] = `
-list [
-  list [
+Array [
+  Array [
     "石工",
     "にほんざる",
     "技術教師",
     "石工",
   ],
-  list [
+  Array [
     "歌い手",
     "だいおういか",
     "軽音楽部",
     "歌い手",
   ],
-  list [
+  Array [
     "馬飼い",
     "にんじん",
     "いきもの係",
     "馬飼い",
   ],
-  list [
+  Array [
     "親方",
     "ごりら",
     "体育教師",
     "親方",
   ],
-  list [
+  Array [
     "大地主",
     "やみふくろう",
     "寮管理人",
     "大地主",
   ],
-  list [
+  Array [
     "踊り手",
     "はいびすかす",
     "社交ダンス部",
     "踊り手",
   ],
-  list [
+  Array [
     "会計士",
     "きつね",
     "風紀委員",
     "会計士",
   ],
-  list [
+  Array [
     "飾り職",
     "さらぶれっど",
     "美術部",
     "飾り職",
   ],
-  list [
+  Array [
     "楽器職人",
     "えりまきとかげ",
     "吹奏楽部",
     "楽器職人",
   ],
-  list [
+  Array [
     "刺客",
     "暗殺教団",
     "にほんおおかみ",
     "動く銅像",
     "刺客",
   ],
-  list [
+  Array [
     "寡婦",
     "もるふぉちょう",
     "肖像画",
     "寡婦",
   ],
-  list [
+  Array [
     "記者",
     "しまうま",
     "新聞部",
     "記者",
   ],
-  list [
+  Array [
     "御者",
     "用務員",
     "御者",
   ],
-  list [
+  Array [
     "靴磨き",
     "すなねずみ",
     "球児",
     "靴磨き",
   ],
-  list [
+  Array [
     "小悪党",
     "いわとびぺんぎん",
     "問題児",
     "小悪党",
   ],
-  list [
+  Array [
     "小僧",
     "みけ",
     "優等生",
     "小僧",
   ],
-  list [
+  Array [
     "小娘",
     "小銃協会",
     "そまり",
     "ミーハー",
     "小娘",
   ],
-  list [
+  Array [
     "子守り",
     "かんがるー",
     "先輩",
     "子守り",
   ],
-  list [
+  Array [
     "酒屋",
     "ぶた",
     "世界史教師",
     "酒屋",
   ],
-  list [
+  Array [
     "雑貨屋",
     "てのりぶんちょう",
     "歴史教師",
     "雑貨屋",
   ],
-  list [
+  Array [
     "さすらい人",
     "ろぶすたー",
     "登山部",
     "さすらい人",
   ],
-  list [
+  Array [
     "流浪者",
     "しろまどうし",
     "転校生",
     "流浪者",
   ],
-  list [
+  Array [
     "司祭",
     "ゆにこーん",
     "名誉教授",
     "司祭",
   ],
-  list [
+  Array [
     "詩人",
     "おらうーたん",
     "演劇部顧問",
     "詩人",
   ],
-  list [
+  Array [
     "仕立て屋",
     "もみのき",
     "家政科教師",
     "仕立て屋",
   ],
-  list [
+  Array [
     "執事",
     "らいおん",
     "教頭先生",
     "執事",
   ],
-  list [
+  Array [
     "始末屋",
     "ちすいこうもり",
     "教育実習",
     "始末屋",
   ],
-  list [
+  Array [
     "修道士",
     "れとりばー",
     "修士",
     "修道士",
   ],
-  list [
+  Array [
     "修道女",
     "らくだ",
     "修士",
     "修道女",
   ],
-  list [
+  Array [
     "女中",
     "くろひょう",
     "ＳＯＳ団",
     "女中",
   ],
-  list [
+  Array [
     "助手",
     "あらいぐま",
     "保険医",
     "助手",
   ],
-  list [
+  Array [
     "聖歌隊員",
     "くらげ",
     "コーラス部",
     "聖歌隊員",
   ],
-  list [
+  Array [
     "掃除夫",
     "みつりょうしゃ",
     "生徒会執行部",
     "掃除夫",
   ],
-  list [
+  Array [
     "奏者",
     "ぺるしゃ",
     "音楽教師",
     "奏者",
   ],
-  list [
+  Array [
     "奏者",
     "いえてぃ",
     "演奏講師",
     "奏者",
   ],
-  list [
+  Array [
     "双生児",
     "きんぎょ",
     "演劇部",
     "双生児",
   ],
-  list [
+  Array [
     "双生児",
     "ねったいぎょ",
     "演劇部",
     "双生児",
   ],
-  list [
+  Array [
     "村長",
     "よーくしゃーてりあ",
     "校長",
     "村長",
   ],
-  list [
+  Array [
     "紅茶屋",
     "ばいにん",
     "茶道部顧問",
     "紅茶屋",
   ],
-  list [
+  Array [
     "長老",
     "ぶるどっぐ",
     "理事長",
     "長老",
   ],
-  list [
+  Array [
     "長老の孫",
     "わかめ",
     "水泳部",
     "長老の孫",
   ],
-  list [
+  Array [
     "釣り師",
     "すっぽん",
     "魚拓部",
     "釣り師",
   ],
-  list [
+  Array [
     "伝道師",
     "ぱんだ",
     "現国教師",
     "伝道師",
   ],
-  list [
+  Array [
     "読書家",
     "うさぎ",
     "文芸部",
     "読書家",
   ],
-  list [
+  Array [
     "賭場の主",
     "なまこ",
     "後援者",
     "賭場の主",
   ],
-  list [
+  Array [
     "鳥使い",
     "おうむ",
     "飼育委員",
     "鳥使い",
   ],
-  list [
+  Array [
     "肉屋",
     "おおたこ",
     "球部顧問",
     "肉屋",
   ],
-  list [
+  Array [
     "墓堀",
     "ありじごく",
     "映画研究会",
     "墓堀",
   ],
-  list [
+  Array [
     "墓守",
     "かげろう",
     "幽霊部員",
     "墓守",
   ],
-  list [
+  Array [
     "花売り",
     "こじか",
     "華道部",
     "花売り",
   ],
-  list [
+  Array [
     "美術家",
     "びーる",
     "陶芸部",
     "美術家",
   ],
-  list [
+  Array [
     "漂白工",
     "おこじょ",
     "マネージャー",
     "漂白工",
   ],
-  list [
+  Array [
     "病人",
     "いとまきえい",
     "留年生",
     "病人",
   ],
-  list [
+  Array [
     "百姓",
     "うちゅうせん",
     "農業科",
     "百姓",
   ],
-  list [
+  Array [
     "風来坊",
     "きつねりす",
     "守衛",
     "風来坊",
   ],
-  list [
+  Array [
     "ベテラン医師",
     "かたつむり",
     "生物教師",
     "ベテラン医師",
   ],
-  list [
+  Array [
     "ベテラン看護婦",
     "かまきり",
     "数学教師",
     "ベテラン看護婦",
   ],
-  list [
+  Array [
     "牧人",
     "ひつじ",
     "手芸部",
     "牧人",
   ],
-  list [
+  Array [
     "本屋",
     "たぬき",
     "図書委員",
     "本屋",
   ],
-  list [
+  Array [
     "水商売",
     "あげはちょう",
     "チアリーダー",
     "水商売",
   ],
-  list [
+  Array [
     "道案内",
     "なまけもの",
     "帰宅部",
     "道案内",
   ],
-  list [
+  Array [
     "見習い医師",
     "かもすぞ",
     "化学教師",
     "見習い医師",
   ],
-  list [
+  Array [
     "森番",
     "くまー",
     "番長",
     "森番",
   ],
-  list [
+  Array [
     "郵便屋",
     "しゃち",
     "地理教師",
     "郵便屋",
   ],
-  list [
+  Array [
     "理髪師",
     "さめ",
     "野球部",
     "理髪師",
   ],
-  list [
+  Array [
     "良家の息子",
     "うし",
     "校長の孫",
     "良家の息子",
   ],
-  list [
+  Array [
     "良家の娘",
     "とら",
     "理事長の孫",
     "良家の娘",
   ],
-  list [
+  Array [
     "ランタン職人",
     "ほたる",
     "ヴィジュアル系バンド部",
     "ランタン職人",
   ],
-  list [
+  Array [
     "教え子",
     "うみねこ",
     "弓道部",
     "教え子",
   ],
-  list [
+  Array [
     "若者",
     "りかおん",
     "陸上部",
     "若者",
   ],
-  list [
+  Array [
     "学者",
     "せあかごけぐも",
     "助教授",
     "学者",
   ],
-  list [
+  Array [
     "負傷兵",
     "みいら",
     "剣道部",
     "負傷兵",
   ],
-  list [
+  Array [
     "魚屋",
     "まんぼう",
     "水泳部顧問",
     "魚屋",
   ],
-  list [
+  Array [
     "新聞配達",
     "やもり",
     "人体模型",
     "新聞配達",
   ],
-  list [
+  Array [
     "採集人",
     "ぶろっこりー",
     "無線部",
     "採集人",
   ],
-  list [
+  Array [
     "ろくでなし",
     "ろくでなし",
   ],
-  list [
+  Array [
     "捜査官",
     "しぇぱーど",
     "駐在さん",
     "捜査官",
   ],
-  list [
+  Array [
     "探偵",
     "はしびろこう",
     "教授",
     "探偵",
   ],
-  list [
+  Array [
     "徒弟",
     "びーばー",
     "サッカー部",
     "徒弟",
   ],
-  list [
+  Array [
     "手伝い",
     "すずらん",
     "園芸部",
     "手伝い",
   ],
-  list [
+  Array [
     "許婚",
     "許婚",
   ],
-  list [
+  Array [
     "革命家",
     "革命家",
   ],
-  list [
+  Array [
     "廃品回収",
     "廃品回収",
   ],
-  list [
+  Array [
     "逃亡者",
     "逃亡者",
   ],
-  list [
+  Array [
     "宿屋",
     "宿屋",
   ],
-  list [
+  Array [
     "庭師",
     "庭師",
   ],
-  list [
+  Array [
     "蝋燭職人",
     "蝋燭職人",
   ],
-  list [
+  Array [
     "公証人",
     "公証人",
   ],
-  list [
+  Array [
     "下働き",
     "下働き",
   ],
-  list [
+  Array [
     "粉ひき",
     "さい",
     "ラグビー部",
     "粉ひき",
   ],
-  list [
+  Array [
     "料理人",
     "ゆでたまご",
     "栄養士",
     "料理人",
   ],
-  list [
+  Array [
     "姉妹",
     "姉妹",
   ],
-  list [
+  Array [
     "銀行屋",
     "銀行屋",
   ],
-  list [
+  Array [
     "一日乞食",
     "一日乞食",
   ],
-  list [
+  Array [
     "奴隷運び",
     "奴隷運び",
   ],
-  list [
+  Array [
     "弁務官",
     "弁務官",
   ],
-  list [
+  Array [
     "山師",
     "山師",
   ],
-  list [
+  Array [
     "食いしん坊",
     "あふりかぞう",
     "食堂のおねいさん",
     "食いしん坊",
   ],
-  list [
+  Array [
     "新妻",
     "かば",
     "新任教師",
     "新妻",
   ],
-  list [
+  Array [
     "妻",
     "しろへび",
     "講師",
     "妻",
   ],
-  list [
+  Array [
     "お使い",
     "かみつきがめ",
     "おてんば",
     "お使い",
   ],
-  list [
+  Array [
     "洗濯婦",
     "あるぱか",
     "緑のおばさん",
     "洗濯婦",
   ],
-  list [
+  Array [
     "洗濯婦",
     "さば",
     "テニス部",
     "洗濯婦",
   ],
-  list [
+  Array [
     "洗濯婦",
     "わらいかわせみ",
     "書道部",
     "洗濯婦",
   ],
-  list [
+  Array [
     "執事見習い",
     "どぶねずみ",
     "ガリ勉",
     "執事見習い",
   ],
-  list [
+  Array [
     "道化師",
     "かめれおん",
     "演劇部",
     "道化師",
   ],
-  list [
+  Array [
     "指揮者",
     "さんた",
     "前校長",
     "指揮者",
   ],
-  list [
+  Array [
     "農薬売",
     "農薬売",
   ],
-  list [
+  Array [
     "愛人",
     "愛人",
   ],
-  list [
+  Array [
     "女主人",
     "あかまむし",
     "PTA会長",
     "女主人",
   ],
-  list [
+  Array [
     "村娘",
     "しろちゃとら",
     "占い研究会",
     "村娘",
   ],
-  list [
+  Array [
     "墓荒らし",
     "やまあらし",
     "格闘技同好会",
     "墓荒らし",
   ],
-  list [
+  Array [
     "薬屋",
     "ふぇねっく",
     "科学部",
     "薬屋",
   ],
-  list [
+  Array [
     "水商売",
     "くりおね",
     "チアガール",
     "水商売",
   ],
-  list [
+  Array [
     "良家の末娘",
     "はむすたー",
     "ラクロス部",
     "良家の末娘",
   ],
-  list [
+  Array [
     "店番",
     "りす",
     "購買部",
     "店番",
   ],
-  list [
+  Array [
     "留守番",
     "めがねざる",
     "委員長",
     "留守番",
   ],
-  list [
+  Array [
     "成金",
     "いぼいのしし",
     "前理事長",
     "成金",
   ],
-  list [
+  Array [
     "信徒",
     "信徒",
   ],
-  list [
+  Array [
     "病人",
     "りゅう",
     "天文部",
     "病人",
   ],
-  list [
+  Array [
     "博徒",
     "はいえな",
     "スケバン",
     "博徒",
   ],
-  list [
+  Array [
     "ビール配り",
     "ビール配り",
   ],
-  list [
+  Array [
     "宝石収集家",
     "くじゃく",
     "美術教師",
     "宝石収集家",
   ],
-  list [
+  Array [
     "渡し船",
     "渡し船",
   ],
-  list [
+  Array [
     "紐",
     "紐",
   ],
-  list [
+  Array [
     "放蕩者",
     "かも",
     "柔道部",
     "放蕩者",
   ],
-  list [
+  Array [
     "厭世家",
     "厭世家",
     "おうむがい",
     "オカルト同好会",
     "厭世家",
   ],
-  list [
+  Array [
     "受付",
     "虹追い",
     "いそぎんちゃく",
     "放送部",
     "受付",
   ],
-  list [
+  Array [
     "童話作家",
     "かえる",
     "漫画研究部",
     "童話作家",
   ],
-  list [
+  Array [
     "厭世家",
     "しんかいぎょ",
     "不登校児",
@@ -11882,7 +11882,7 @@ list [
 `;
 
 exports[`faces .tag(giji) name snapshot 1`] = `
-list [
+Array [
   "ボリス",
   "コリーン",
   "キャロライナ",
@@ -12017,24 +12017,24 @@ list [
 `;
 
 exports[`faces .tag(giji) npc snapshot 1`] = `
-list [
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+Array [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "エクスパンション・セット「帰還者議事」",
       "M4ライフルを持ってさえいれば…、なーんて、思っててもしょうがないね。鍵かけとこう。",
@@ -12043,25 +12043,25 @@ list [
 ちょっと出かけてくる！プリン食べちゃダメだよ！",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "人狼議事（オスカー）",
       "…そっちじゃないよ、こっちだよ。
@@ -12070,25 +12070,25 @@ list [
 みんなにはナイショだよ？",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "人狼議事（ヨアヒム）",
       "ふひ、ふひひ！人狼になど……くれてやるものかヨ！",
       "人殺しと一緒にいるなんてごめんだヨ！へ…へっ、部屋に戻らせてもらうヨ！",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "人狼議事（ヨーランダ）",
       "夜風に乗って、遠くから声がとどきます。昨夜は幽かに。今夜は響き。きっと明日は……",
@@ -12096,22 +12096,22 @@ list [
 幼馴染から手紙が来たの。お金を貯めたから、遠くで一緒に暮らそうって。",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "人狼議事（キャサリン）",
       "たいへん、たいへん、たいへん！",
       "大変、人狼が出たよ！　いつもは嘘だけど、今度は本当の本当に本当！",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "人狼議事（ベネット）",
       "壁の向こうだ、やつの足音が聞こえる。いよいよ隣室に迫る。
@@ -12121,20 +12121,20 @@ list [
 <strong>日記はそこで途切れ、発見されるまで打ち捨てられていた。</strong>",
     ],
   ],
-  list [
+  Array [
     Array [
       "人狼議事（タバサ）",
       "ねぇ、遊んでかない？今夜はあなたが狼よ……",
       "人狼なんているわけないじゃん？みんな大げさなのさ。",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "人狼議事（グロリア）",
       "紳士ならびに淑女の皆様、わたくしの館へようこそ。
@@ -12143,61 +12143,61 @@ list [
 聞いたでしょう人狼がいるのよ、はやく見つけて処刑なさい！",
     ],
   ],
-  list [
+  Array [
     Array [
       "人狼議事（ヴェスパタイン）",
       "嗚呼、聞こえる。やつの足音が聞こえる……。",
       "逃げろ。逃げろ！おまえらだけでも逃げろ。",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "人狼議事（ソフィア）",
       "こんばんわ、こんな遅くにたいへんですね。
@@ -12208,18 +12208,18 @@ list [
 人殺しと一緒にいるなんて……！へや…、部屋に戻らせてもらいます！",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "エクスパンション・セット「狂騒議事」",
       "どうせ、殺されるわみんな。…みんな
@@ -12235,8 +12235,8 @@ list [
 <strong>日記はそこで途切れ、発見されるまで打ち捨てられていた。</strong>",
     ],
   ],
-  list [],
-  list [
+  Array [],
+  Array [
     Array [
       "人狼議事",
       "嗚呼、聞こえ る。やつの足音が聞こえる……。",
@@ -12257,28 +12257,28 @@ list [
 `;
 
 exports[`faces .tag(god) id snapshot 1`] = `
-list [
+Array [
   "all",
 ]
 `;
 
 exports[`faces .tag(god) job snapshot 1`] = `
-list [
-  list [
+Array [
+  Array [
     "かみさま",
   ],
 ]
 `;
 
 exports[`faces .tag(god) name snapshot 1`] = `
-list [
+Array [
   "パルック",
 ]
 `;
 
 exports[`faces .tag(god) npc snapshot 1`] = `
-list [
-  list [
+Array [
+  Array [
     Array [
       "人狼議事 ちゃんぷる",
       "ちゃんとご注文通り、さまざまな人たちをお呼びしましたよ。
@@ -12295,7 +12295,7 @@ list [
 `;
 
 exports[`faces .tag(government) id snapshot 1`] = `
-list [
+Array [
   "c53",
   "c50",
   "c02",
@@ -12312,70 +12312,70 @@ list [
 `;
 
 exports[`faces .tag(government) job snapshot 1`] = `
-list [
-  list [
+Array [
+  Array [
     "大地主",
     "やみふくろう",
     "寮管理人",
     "大地主",
   ],
-  list [
+  Array [
     "会計士",
     "きつね",
     "風紀委員",
     "会計士",
   ],
-  list [
+  Array [
     "村長",
     "よーくしゃーてりあ",
     "校長",
     "村長",
   ],
-  list [
+  Array [
     "長老",
     "ぶるどっぐ",
     "理事長",
     "長老",
   ],
-  list [
+  Array [
     "長老の孫",
     "わかめ",
     "水泳部",
     "長老の孫",
   ],
-  list [
+  Array [
     "郵便屋",
     "しゃち",
     "地理教師",
     "郵便屋",
   ],
-  list [
+  Array [
     "学者",
     "せあかごけぐも",
     "助教授",
     "学者",
   ],
-  list [
+  Array [
     "捜査官",
     "しぇぱーど",
     "駐在さん",
     "捜査官",
   ],
-  list [
+  Array [
     "革命家",
     "革命家",
   ],
-  list [
+  Array [
     "公証人",
     "公証人",
   ],
-  list [
+  Array [
     "粉ひき",
     "さい",
     "ラグビー部",
     "粉ひき",
   ],
-  list [
+  Array [
     "弁務官",
     "弁務官",
   ],
@@ -12383,7 +12383,7 @@ list [
 `;
 
 exports[`faces .tag(government) name snapshot 1`] = `
-list [
+Array [
   "ゼルダ",
   "ディーン",
   "アルフレッド",
@@ -12400,24 +12400,24 @@ list [
 `;
 
 exports[`faces .tag(government) npc snapshot 1`] = `
-list [
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
+Array [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
 ]
 `;
 
 exports[`faces .tag(guild) id snapshot 1`] = `
-list [
+Array [
   "c49",
   "c35",
   "c50",
@@ -12448,150 +12448,150 @@ list [
 `;
 
 exports[`faces .tag(guild) job snapshot 1`] = `
-list [
-  list [
+Array [
+  Array [
     "石工",
     "にほんざる",
     "技術教師",
     "石工",
   ],
-  list [
+  Array [
     "親方",
     "ごりら",
     "体育教師",
     "親方",
   ],
-  list [
+  Array [
     "会計士",
     "きつね",
     "風紀委員",
     "会計士",
   ],
-  list [
+  Array [
     "飾り職",
     "さらぶれっど",
     "美術部",
     "飾り職",
   ],
-  list [
+  Array [
     "楽器職人",
     "えりまきとかげ",
     "吹奏楽部",
     "楽器職人",
   ],
-  list [
+  Array [
     "記者",
     "しまうま",
     "新聞部",
     "記者",
   ],
-  list [
+  Array [
     "酒屋",
     "ぶた",
     "世界史教師",
     "酒屋",
   ],
-  list [
+  Array [
     "雑貨屋",
     "てのりぶんちょう",
     "歴史教師",
     "雑貨屋",
   ],
-  list [
+  Array [
     "仕立て屋",
     "もみのき",
     "家政科教師",
     "仕立て屋",
   ],
-  list [
+  Array [
     "紅茶屋",
     "ばいにん",
     "茶道部顧問",
     "紅茶屋",
   ],
-  list [
+  Array [
     "肉屋",
     "おおたこ",
     "球部顧問",
     "肉屋",
   ],
-  list [
+  Array [
     "美術家",
     "びーる",
     "陶芸部",
     "美術家",
   ],
-  list [
+  Array [
     "漂白工",
     "おこじょ",
     "マネージャー",
     "漂白工",
   ],
-  list [
+  Array [
     "本屋",
     "たぬき",
     "図書委員",
     "本屋",
   ],
-  list [
+  Array [
     "理髪師",
     "さめ",
     "野球部",
     "理髪師",
   ],
-  list [
+  Array [
     "ランタン職人",
     "ほたる",
     "ヴィジュアル系バンド部",
     "ランタン職人",
   ],
-  list [
+  Array [
     "魚屋",
     "まんぼう",
     "水泳部顧問",
     "魚屋",
   ],
-  list [
+  Array [
     "新聞配達",
     "やもり",
     "人体模型",
     "新聞配達",
   ],
-  list [
+  Array [
     "徒弟",
     "びーばー",
     "サッカー部",
     "徒弟",
   ],
-  list [
+  Array [
     "廃品回収",
     "廃品回収",
   ],
-  list [
+  Array [
     "宿屋",
     "宿屋",
   ],
-  list [
+  Array [
     "蝋燭職人",
     "蝋燭職人",
   ],
-  list [
+  Array [
     "銀行屋",
     "銀行屋",
   ],
-  list [
+  Array [
     "薬屋",
     "ふぇねっく",
     "科学部",
     "薬屋",
   ],
-  list [
+  Array [
     "店番",
     "りす",
     "購買部",
     "店番",
   ],
-  list [
+  Array [
     "童話作家",
     "かえる",
     "漫画研究部",
@@ -12601,7 +12601,7 @@ list [
 `;
 
 exports[`faces .tag(guild) name snapshot 1`] = `
-list [
+Array [
   "ボリス",
   "ダン",
   "ディーン",
@@ -12632,21 +12632,21 @@ list [
 `;
 
 exports[`faces .tag(guild) npc snapshot 1`] = `
-list [
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+Array [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "人狼議事（ベネット）",
       "壁の向こうだ、やつの足音が聞こえる。いよいよ隣室に迫る。
@@ -12656,23 +12656,23 @@ list [
 <strong>日記はそこで途切れ、発見されるまで打ち捨てられていた。</strong>",
     ],
   ],
-  list [],
-  list [
+  Array [],
+  Array [
     Array [
       "人狼議事（ヴェスパタイン）",
       "嗚呼、聞こえる。やつの足音が聞こえる……。",
       "逃げろ。逃げろ！おまえらだけでも逃げろ。",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "人狼議事（ソフィア）",
       "こんばんわ、こんな遅くにたいへんですね。
@@ -12683,12 +12683,12 @@ list [
 人殺しと一緒にいるなんて……！へや…、部屋に戻らせてもらいます！",
     ],
   ],
-  list [],
+  Array [],
 ]
 `;
 
 exports[`faces .tag(immoral) id snapshot 1`] = `
-list [
+Array [
   "c09",
   "c44",
   "c41",
@@ -12712,105 +12712,105 @@ list [
 `;
 
 exports[`faces .tag(immoral) job snapshot 1`] = `
-list [
-  list [
+Array [
+  Array [
     "刺客",
     "暗殺教団",
     "にほんおおかみ",
     "動く銅像",
     "刺客",
   ],
-  list [
+  Array [
     "小悪党",
     "いわとびぺんぎん",
     "問題児",
     "小悪党",
   ],
-  list [
+  Array [
     "さすらい人",
     "ろぶすたー",
     "登山部",
     "さすらい人",
   ],
-  list [
+  Array [
     "始末屋",
     "ちすいこうもり",
     "教育実習",
     "始末屋",
   ],
-  list [
+  Array [
     "賭場の主",
     "なまこ",
     "後援者",
     "賭場の主",
   ],
-  list [
+  Array [
     "風来坊",
     "きつねりす",
     "守衛",
     "風来坊",
   ],
-  list [
+  Array [
     "水商売",
     "あげはちょう",
     "チアリーダー",
     "水商売",
   ],
-  list [
+  Array [
     "ろくでなし",
     "ろくでなし",
   ],
-  list [
+  Array [
     "探偵",
     "はしびろこう",
     "教授",
     "探偵",
   ],
-  list [
+  Array [
     "革命家",
     "革命家",
   ],
-  list [
+  Array [
     "逃亡者",
     "逃亡者",
   ],
-  list [
+  Array [
     "奴隷運び",
     "奴隷運び",
   ],
-  list [
+  Array [
     "愛人",
     "愛人",
   ],
-  list [
+  Array [
     "女主人",
     "あかまむし",
     "PTA会長",
     "女主人",
   ],
-  list [
+  Array [
     "墓荒らし",
     "やまあらし",
     "格闘技同好会",
     "墓荒らし",
   ],
-  list [
+  Array [
     "水商売",
     "くりおね",
     "チアガール",
     "水商売",
   ],
-  list [
+  Array [
     "博徒",
     "はいえな",
     "スケバン",
     "博徒",
   ],
-  list [
+  Array [
     "紐",
     "紐",
   ],
-  list [
+  Array [
     "放蕩者",
     "かも",
     "柔道部",
@@ -12820,7 +12820,7 @@ list [
 `;
 
 exports[`faces .tag(immoral) name snapshot 1`] = `
-list [
+Array [
   "ヒロシ",
   "ドナルド",
   "ヤニク",
@@ -12844,43 +12844,43 @@ list [
 `;
 
 exports[`faces .tag(immoral) npc snapshot 1`] = `
-list [
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+Array [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "人狼議事（ヨアヒム）",
       "ふひ、ふひひ！人狼になど……くれてやるものかヨ！",
       "人殺しと一緒にいるなんてごめんだヨ！へ…へっ、部屋に戻らせてもらうヨ！",
     ],
   ],
-  list [],
-  list [
+  Array [],
+  Array [
     Array [
       "人狼議事（タバサ）",
       "ねぇ、遊んでかない？今夜はあなたが狼よ……",
       "人狼なんているわけないじゃん？みんな大げさなのさ。",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
 ]
 `;
 
 exports[`faces .tag(kid) id snapshot 1`] = `
-list [
+Array [
   "c34",
   "c11",
   "c10",
@@ -12896,67 +12896,67 @@ list [
 `;
 
 exports[`faces .tag(kid) job snapshot 1`] = `
-list [
-  list [
+Array [
+  Array [
     "靴磨き",
     "すなねずみ",
     "球児",
     "靴磨き",
   ],
-  list [
+  Array [
     "小僧",
     "みけ",
     "優等生",
     "小僧",
   ],
-  list [
+  Array [
     "小娘",
     "小銃協会",
     "そまり",
     "ミーハー",
     "小娘",
   ],
-  list [
+  Array [
     "聖歌隊員",
     "くらげ",
     "コーラス部",
     "聖歌隊員",
   ],
-  list [
+  Array [
     "双生児",
     "きんぎょ",
     "演劇部",
     "双生児",
   ],
-  list [
+  Array [
     "双生児",
     "ねったいぎょ",
     "演劇部",
     "双生児",
   ],
-  list [
+  Array [
     "廃品回収",
     "廃品回収",
   ],
-  list [
+  Array [
     "お使い",
     "かみつきがめ",
     "おてんば",
     "お使い",
   ],
-  list [
+  Array [
     "執事見習い",
     "どぶねずみ",
     "ガリ勉",
     "執事見習い",
   ],
-  list [
+  Array [
     "良家の末娘",
     "はむすたー",
     "ラクロス部",
     "良家の末娘",
   ],
-  list [
+  Array [
     "留守番",
     "めがねざる",
     "委員長",
@@ -12966,7 +12966,7 @@ list [
 `;
 
 exports[`faces .tag(kid) name snapshot 1`] = `
-list [
+Array [
   "トニー",
   "カルヴィン",
   "ゾーイ",
@@ -12982,10 +12982,10 @@ list [
 `;
 
 exports[`faces .tag(kid) npc snapshot 1`] = `
-list [
-  list [],
-  list [],
-  list [
+Array [
+  Array [],
+  Array [],
+  Array [
     Array [
       "エクスパンション・セット「帰還者議事」",
       "M4ライフルを持ってさえいれば…、なーんて、思っててもしょうがないね。鍵かけとこう。",
@@ -12994,8 +12994,8 @@ list [
 ちょっと出かけてくる！プリン食べちゃダメだよ！",
     ],
   ],
-  list [],
-  list [
+  Array [],
+  Array [
     Array [
       "人狼議事（オスカー）",
       "…そっちじゃないよ、こっちだよ。
@@ -13004,17 +13004,17 @@ list [
 みんなにはナイショだよ？",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
 ]
 `;
 
 exports[`faces .tag(marchen) id snapshot 1`] = `
-list [
+Array [
   "mad01",
   "mad03",
   "mad10",
@@ -13032,59 +13032,59 @@ list [
 `;
 
 exports[`faces .tag(marchen) job snapshot 1`] = `
-list [
-  list [
+Array [
+  Array [
     "青い鳥",
     "青い鳥",
   ],
-  list [
+  Array [
     "露店巡り",
     "露店巡り",
   ],
-  list [
+  Array [
     "追憶探り",
     "追憶探り",
   ],
-  list [
+  Array [
     "乱痴気",
     "乱痴気",
   ],
-  list [
+  Array [
     "自由滑落",
     "自由滑落",
   ],
-  list [
+  Array [
     "隠れん坊",
     "隠れん坊",
   ],
-  list [
+  Array [
     "受付",
     "虹追い",
     "いそぎんちゃく",
     "放送部",
     "受付",
   ],
-  list [
+  Array [
     "蟻塚崩し",
     "蟻塚崩し",
   ],
-  list [
+  Array [
     "天井手繰り",
     "天井手繰り",
   ],
-  list [
+  Array [
     "酸味探し",
     "酸味探し",
   ],
-  list [
+  Array [
     "早口言葉",
     "早口言葉",
   ],
-  list [
+  Array [
     "妄執の誓い",
     "妄執の誓い",
   ],
-  list [
+  Array [
     "隣席座り",
     "隣席座り",
   ],
@@ -13092,7 +13092,7 @@ list [
 `;
 
 exports[`faces .tag(marchen) name snapshot 1`] = `
-list [
+Array [
   "デメテル",
   "シーシャ",
   "ルグレ",
@@ -13110,14 +13110,14 @@ list [
 `;
 
 exports[`faces .tag(marchen) npc snapshot 1`] = `
-list [
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+Array [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "エクスパンション・セット「狂騒議事」",
       "どうせ、殺されるわみんな。…みんな
@@ -13133,8 +13133,8 @@ list [
 <strong>日記はそこで途切れ、発見されるまで打ち捨てられていた。</strong>",
     ],
   ],
-  list [],
-  list [
+  Array [],
+  Array [
     Array [
       "エクスパンション・セット「狂騒議事」（ヤヘイ）",
       "…うん。もうな、だいぶまえだ。
@@ -13153,15 +13153,15 @@ list [
 ウケッ、ウケッ、ウケコッ、ウコケ、ウコケ、ウヒャホ、コケコケコケ！",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
 ]
 `;
 
 exports[`faces .tag(market) id snapshot 1`] = `
-list [
+Array [
   "c38",
   "c74",
   "c56",
@@ -13185,114 +13185,114 @@ list [
 `;
 
 exports[`faces .tag(market) job snapshot 1`] = `
-list [
-  list [
+Array [
+  Array [
     "歌い手",
     "だいおういか",
     "軽音楽部",
     "歌い手",
   ],
-  list [
+  Array [
     "踊り手",
     "はいびすかす",
     "社交ダンス部",
     "踊り手",
   ],
-  list [
+  Array [
     "酒屋",
     "ぶた",
     "世界史教師",
     "酒屋",
   ],
-  list [
+  Array [
     "詩人",
     "おらうーたん",
     "演劇部顧問",
     "詩人",
   ],
-  list [
+  Array [
     "奏者",
     "ぺるしゃ",
     "音楽教師",
     "奏者",
   ],
-  list [
+  Array [
     "奏者",
     "いえてぃ",
     "演奏講師",
     "奏者",
   ],
-  list [
+  Array [
     "賭場の主",
     "なまこ",
     "後援者",
     "賭場の主",
   ],
-  list [
+  Array [
     "鳥使い",
     "おうむ",
     "飼育委員",
     "鳥使い",
   ],
-  list [
+  Array [
     "花売り",
     "こじか",
     "華道部",
     "花売り",
   ],
-  list [
+  Array [
     "美術家",
     "びーる",
     "陶芸部",
     "美術家",
   ],
-  list [
+  Array [
     "水商売",
     "あげはちょう",
     "チアリーダー",
     "水商売",
   ],
-  list [
+  Array [
     "料理人",
     "ゆでたまご",
     "栄養士",
     "料理人",
   ],
-  list [
+  Array [
     "食いしん坊",
     "あふりかぞう",
     "食堂のおねいさん",
     "食いしん坊",
   ],
-  list [
+  Array [
     "道化師",
     "かめれおん",
     "演劇部",
     "道化師",
   ],
-  list [
+  Array [
     "指揮者",
     "さんた",
     "前校長",
     "指揮者",
   ],
-  list [
+  Array [
     "女主人",
     "あかまむし",
     "PTA会長",
     "女主人",
   ],
-  list [
+  Array [
     "水商売",
     "くりおね",
     "チアガール",
     "水商売",
   ],
-  list [
+  Array [
     "ビール配り",
     "ビール配り",
   ],
-  list [
+  Array [
     "受付",
     "虹追い",
     "いそぎんちゃく",
@@ -13303,7 +13303,7 @@ list [
 `;
 
 exports[`faces .tag(market) name snapshot 1`] = `
-list [
+Array [
   "コリーン",
   "フランシスカ",
   "ゴドウィン",
@@ -13327,38 +13327,38 @@ list [
 `;
 
 exports[`faces .tag(market) npc snapshot 1`] = `
-list [
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+Array [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "人狼議事（ヨアヒム）",
       "ふひ、ふひひ！人狼になど……くれてやるものかヨ！",
       "人殺しと一緒にいるなんてごめんだヨ！へ…へっ、部屋に戻らせてもらうヨ！",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "人狼議事（タバサ）",
       "ねぇ、遊んでかない？今夜はあなたが狼よ……",
       "人狼なんているわけないじゃん？みんな大げさなのさ。",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "エクスパンション・セット「狂騒議事」",
       "どうせ、殺されるわみんな。…みんな
@@ -13378,7 +13378,7 @@ list [
 `;
 
 exports[`faces .tag(medical) id snapshot 1`] = `
-list [
+Array [
   "c46",
   "c52",
   "c51",
@@ -13397,84 +13397,84 @@ list [
 `;
 
 exports[`faces .tag(medical) job snapshot 1`] = `
-list [
-  list [
+Array [
+  Array [
     "助手",
     "あらいぐま",
     "保険医",
     "助手",
   ],
-  list [
+  Array [
     "墓堀",
     "ありじごく",
     "映画研究会",
     "墓堀",
   ],
-  list [
+  Array [
     "墓守",
     "かげろう",
     "幽霊部員",
     "墓守",
   ],
-  list [
+  Array [
     "病人",
     "いとまきえい",
     "留年生",
     "病人",
   ],
-  list [
+  Array [
     "ベテラン医師",
     "かたつむり",
     "生物教師",
     "ベテラン医師",
   ],
-  list [
+  Array [
     "ベテラン看護婦",
     "かまきり",
     "数学教師",
     "ベテラン看護婦",
   ],
-  list [
+  Array [
     "見習い医師",
     "かもすぞ",
     "化学教師",
     "見習い医師",
   ],
-  list [
+  Array [
     "理髪師",
     "さめ",
     "野球部",
     "理髪師",
   ],
-  list [
+  Array [
     "負傷兵",
     "みいら",
     "剣道部",
     "負傷兵",
   ],
-  list [
+  Array [
     "逃亡者",
     "逃亡者",
   ],
-  list [
+  Array [
     "食いしん坊",
     "あふりかぞう",
     "食堂のおねいさん",
     "食いしん坊",
   ],
-  list [
+  Array [
     "薬屋",
     "ふぇねっく",
     "科学部",
     "薬屋",
   ],
-  list [
+  Array [
     "病人",
     "りゅう",
     "天文部",
     "病人",
   ],
-  list [
+  Array [
     "受付",
     "虹追い",
     "いそぎんちゃく",
@@ -13485,7 +13485,7 @@ list [
 `;
 
 exports[`faces .tag(medical) name snapshot 1`] = `
-list [
+Array [
   "ゲイル",
   "ギリアン",
   "ヨーランダ",
@@ -13504,10 +13504,10 @@ list [
 `;
 
 exports[`faces .tag(medical) npc snapshot 1`] = `
-list [
-  list [],
-  list [],
-  list [
+Array [
+  Array [],
+  Array [],
+  Array [
     Array [
       "人狼議事（ヨーランダ）",
       "夜風に乗って、遠くから声がとどきます。昨夜は幽かに。今夜は響き。きっと明日は……",
@@ -13515,23 +13515,23 @@ list [
 幼馴染から手紙が来たの。お金を貯めたから、遠くで一緒に暮らそうって。",
     ],
   ],
-  list [
+  Array [
     Array [
       "人狼議事（キャサリン）",
       "たいへん、たいへん、たいへん！",
       "大変、人狼が出たよ！　いつもは嘘だけど、今度は本当の本当に本当！",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "エクスパンション・セット「狂騒議事」",
       "どうせ、殺されるわみんな。…みんな
@@ -13551,7 +13551,7 @@ list [
 `;
 
 exports[`faces .tag(middle) id snapshot 1`] = `
-list [
+Array [
   "c35",
   "c09",
   "c55",
@@ -13602,264 +13602,264 @@ list [
 `;
 
 exports[`faces .tag(middle) job snapshot 1`] = `
-list [
-  list [
+Array [
+  Array [
     "親方",
     "ごりら",
     "体育教師",
     "親方",
   ],
-  list [
+  Array [
     "刺客",
     "暗殺教団",
     "にほんおおかみ",
     "動く銅像",
     "刺客",
   ],
-  list [
+  Array [
     "寡婦",
     "もるふぉちょう",
     "肖像画",
     "寡婦",
   ],
-  list [
+  Array [
     "御者",
     "用務員",
     "御者",
   ],
-  list [
+  Array [
     "酒屋",
     "ぶた",
     "世界史教師",
     "酒屋",
   ],
-  list [
+  Array [
     "司祭",
     "ゆにこーん",
     "名誉教授",
     "司祭",
   ],
-  list [
+  Array [
     "詩人",
     "おらうーたん",
     "演劇部顧問",
     "詩人",
   ],
-  list [
+  Array [
     "仕立て屋",
     "もみのき",
     "家政科教師",
     "仕立て屋",
   ],
-  list [
+  Array [
     "始末屋",
     "ちすいこうもり",
     "教育実習",
     "始末屋",
   ],
-  list [
+  Array [
     "修道女",
     "らくだ",
     "修士",
     "修道女",
   ],
-  list [
+  Array [
     "女中",
     "くろひょう",
     "ＳＯＳ団",
     "女中",
   ],
-  list [
+  Array [
     "助手",
     "あらいぐま",
     "保険医",
     "助手",
   ],
-  list [
+  Array [
     "奏者",
     "いえてぃ",
     "演奏講師",
     "奏者",
   ],
-  list [
+  Array [
     "村長",
     "よーくしゃーてりあ",
     "校長",
     "村長",
   ],
-  list [
+  Array [
     "紅茶屋",
     "ばいにん",
     "茶道部顧問",
     "紅茶屋",
   ],
-  list [
+  Array [
     "伝道師",
     "ぱんだ",
     "現国教師",
     "伝道師",
   ],
-  list [
+  Array [
     "賭場の主",
     "なまこ",
     "後援者",
     "賭場の主",
   ],
-  list [
+  Array [
     "肉屋",
     "おおたこ",
     "球部顧問",
     "肉屋",
   ],
-  list [
+  Array [
     "美術家",
     "びーる",
     "陶芸部",
     "美術家",
   ],
-  list [
+  Array [
     "百姓",
     "うちゅうせん",
     "農業科",
     "百姓",
   ],
-  list [
+  Array [
     "風来坊",
     "きつねりす",
     "守衛",
     "風来坊",
   ],
-  list [
+  Array [
     "見習い医師",
     "かもすぞ",
     "化学教師",
     "見習い医師",
   ],
-  list [
+  Array [
     "森番",
     "くまー",
     "番長",
     "森番",
   ],
-  list [
+  Array [
     "郵便屋",
     "しゃち",
     "地理教師",
     "郵便屋",
   ],
-  list [
+  Array [
     "学者",
     "せあかごけぐも",
     "助教授",
     "学者",
   ],
-  list [
+  Array [
     "魚屋",
     "まんぼう",
     "水泳部顧問",
     "魚屋",
   ],
-  list [
+  Array [
     "採集人",
     "ぶろっこりー",
     "無線部",
     "採集人",
   ],
-  list [
+  Array [
     "捜査官",
     "しぇぱーど",
     "駐在さん",
     "捜査官",
   ],
-  list [
+  Array [
     "探偵",
     "はしびろこう",
     "教授",
     "探偵",
   ],
-  list [
+  Array [
     "革命家",
     "革命家",
   ],
-  list [
+  Array [
     "庭師",
     "庭師",
   ],
-  list [
+  Array [
     "公証人",
     "公証人",
   ],
-  list [
+  Array [
     "料理人",
     "ゆでたまご",
     "栄養士",
     "料理人",
   ],
-  list [
+  Array [
     "奴隷運び",
     "奴隷運び",
   ],
-  list [
+  Array [
     "山師",
     "山師",
   ],
-  list [
+  Array [
     "妻",
     "しろへび",
     "講師",
     "妻",
   ],
-  list [
+  Array [
     "洗濯婦",
     "あるぱか",
     "緑のおばさん",
     "洗濯婦",
   ],
-  list [
+  Array [
     "道化師",
     "かめれおん",
     "演劇部",
     "道化師",
   ],
-  list [
+  Array [
     "女主人",
     "あかまむし",
     "PTA会長",
     "女主人",
   ],
-  list [
+  Array [
     "墓荒らし",
     "やまあらし",
     "格闘技同好会",
     "墓荒らし",
   ],
-  list [
+  Array [
     "成金",
     "いぼいのしし",
     "前理事長",
     "成金",
   ],
-  list [
+  Array [
     "宝石収集家",
     "くじゃく",
     "美術教師",
     "宝石収集家",
   ],
-  list [
+  Array [
     "渡し船",
     "渡し船",
   ],
-  list [
+  Array [
     "紐",
     "紐",
   ],
-  list [
+  Array [
     "放蕩者",
     "かも",
     "柔道部",
     "放蕩者",
   ],
-  list [
+  Array [
     "厭世家",
     "しんかいぎょ",
     "不登校児",
@@ -13869,7 +13869,7 @@ list [
 `;
 
 exports[`faces .tag(middle) name snapshot 1`] = `
-list [
+Array [
   "ダン",
   "ヒロシ",
   "パピヨン",
@@ -13920,59 +13920,59 @@ list [
 `;
 
 exports[`faces .tag(middle) npc snapshot 1`] = `
-list [
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+Array [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "人狼議事（ヨアヒム）",
       "ふひ、ふひひ！人狼になど……くれてやるものかヨ！",
       "人殺しと一緒にいるなんてごめんだヨ！へ…へっ、部屋に戻らせてもらうヨ！",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "人狼議事",
       "嗚呼、聞こえ る。やつの足音が聞こえる……。",
@@ -13993,7 +13993,7 @@ list [
 `;
 
 exports[`faces .tag(myth) id snapshot 1`] = `
-list [
+Array [
   "m99",
   "m07",
   "m13",
@@ -14021,96 +14021,96 @@ list [
 `;
 
 exports[`faces .tag(myth) job snapshot 1`] = `
-list [
-  list [
+Array [
+  Array [
     "かみさま",
     "かみさま",
   ],
-  list [
+  Array [
     "こひつじ",
     "こひつじ",
   ],
-  list [
+  Array [
     "調律師",
     "調律師",
   ],
-  list [
+  Array [
     "きゅうていがか",
     "きゅうていがか",
   ],
-  list [
+  Array [
     "しょうぐん",
     "しょうぐん",
   ],
-  list [
+  Array [
     "はおう",
     "はおう",
   ],
-  list [
+  Array [
     "びじん",
     "びじん",
   ],
-  list [
+  Array [
     "ひとづかい",
     "ひとづかい",
   ],
-  list [
+  Array [
     "ようせい",
     "ようせい",
   ],
-  list [
+  Array [
     "ようせい",
     "ようせい",
   ],
-  list [
+  Array [
     "すくみず",
     "すくみず",
   ],
-  list [
+  Array [
     "こあくとう",
     "こあくとう",
   ],
-  list [
+  Array [
     "おふくろのあじ",
     "おふくろのあじ",
   ],
-  list [
+  Array [
     "いしく",
     "いしく",
   ],
-  list [
+  Array [
     "しーさー",
     "しーさー",
   ],
-  list [
+  Array [
     "ころぽっくる",
     "ころぽっくる",
   ],
-  list [
+  Array [
     "神聖騎士",
     "神聖騎士",
   ],
-  list [
+  Array [
     "暗黒騎士",
     "暗黒騎士",
   ],
-  list [
+  Array [
     "奇跡の子",
     "奇跡の子",
   ],
-  list [
+  Array [
     "りゅうきへい",
     "りゅうきへい",
   ],
-  list [
+  Array [
     "記号の妖精",
     "記号の妖精",
   ],
-  list [
+  Array [
     "おひめさま",
     "おひめさま",
   ],
-  list [
+  Array [
     "げぼく",
     "げぼく",
   ],
@@ -14118,7 +14118,7 @@ list [
 `;
 
 exports[`faces .tag(myth) name snapshot 1`] = `
-list [
+Array [
   "パルック",
   "アリス",
   "ミケ",
@@ -14146,13 +14146,13 @@ list [
 `;
 
 exports[`faces .tag(myth) npc snapshot 1`] = `
-list [
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+Array [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "はおうの広場",
       "ママ？ママなの？
@@ -14165,13 +14165,13 @@ list [
       "誰にも、腰抜けなんて…言わせないぞっ",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "とのさま広場",
       "じんろう？
@@ -14179,21 +14179,21 @@ list [
       "さあ、ぼうやたちいらっしゃい。ごはんのじかんよ。",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
 ]
 `;
 
 exports[`faces .tag(pair) id snapshot 1`] = `
-list [
+Array [
   "c41",
   "c47",
   "c37",
@@ -14218,105 +14218,105 @@ list [
 `;
 
 exports[`faces .tag(pair) job snapshot 1`] = `
-list [
-  list [
+Array [
+  Array [
     "さすらい人",
     "ろぶすたー",
     "登山部",
     "さすらい人",
   ],
-  list [
+  Array [
     "流浪者",
     "しろまどうし",
     "転校生",
     "流浪者",
   ],
-  list [
+  Array [
     "奏者",
     "ぺるしゃ",
     "音楽教師",
     "奏者",
   ],
-  list [
+  Array [
     "奏者",
     "いえてぃ",
     "演奏講師",
     "奏者",
   ],
-  list [
+  Array [
     "双生児",
     "きんぎょ",
     "演劇部",
     "双生児",
   ],
-  list [
+  Array [
     "双生児",
     "ねったいぎょ",
     "演劇部",
     "双生児",
   ],
-  list [
+  Array [
     "店番",
     "りす",
     "購買部",
     "店番",
   ],
-  list [
+  Array [
     "留守番",
     "めがねざる",
     "委員長",
     "留守番",
   ],
-  list [
+  Array [
     "厭世家",
     "厭世家",
     "おうむがい",
     "オカルト同好会",
     "厭世家",
   ],
-  list [
+  Array [
     "厭世家",
     "しんかいぎょ",
     "不登校児",
     "厭世家",
   ],
-  list [
+  Array [
     "天道居士",
     "天道居士",
   ],
-  list [
+  Array [
     "地道居士",
     "地道居士",
   ],
-  list [
+  Array [
     "神聖騎士",
     "神聖騎士",
   ],
-  list [
+  Array [
     "暗黒騎士",
     "暗黒騎士",
   ],
-  list [
+  Array [
     "おひめさま",
     "おひめさま",
   ],
-  list [
+  Array [
     "げぼく",
     "げぼく",
   ],
-  list [
+  Array [
     "感性子",
     "感性子",
   ],
-  list [
+  Array [
     "理性子",
     "理性子",
   ],
-  list [
+  Array [
     "双子",
     "双子",
   ],
-  list [
+  Array [
     "双子",
     "双子",
   ],
@@ -14324,7 +14324,7 @@ list [
 `;
 
 exports[`faces .tag(pair) name snapshot 1`] = `
-list [
+Array [
   "ヤニク",
   "ペラジー",
   "セシル",
@@ -14349,12 +14349,12 @@ list [
 `;
 
 exports[`faces .tag(pair) npc snapshot 1`] = `
-list [
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+Array [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "人狼議事（オスカー）",
       "…そっちじゃないよ、こっちだよ。
@@ -14363,8 +14363,8 @@ list [
 みんなにはナイショだよ？",
     ],
   ],
-  list [],
-  list [
+  Array [],
+  Array [
     Array [
       "人狼議事（ソフィア）",
       "こんばんわ、こんな遅くにたいへんですね。
@@ -14375,9 +14375,9 @@ list [
 人殺しと一緒にいるなんて……！へや…、部屋に戻らせてもらいます！",
     ],
   ],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [
     Array [
       "人狼議事",
       "嗚呼、聞こえ る。やつの足音が聞こえる……。",
@@ -14394,21 +14394,21 @@ list [
       "逃げろ。逃げろ！おまえらだけでも逃げろ。",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
 ]
 `;
 
 exports[`faces .tag(river) id snapshot 1`] = `
-list [
+Array [
   "c09",
   "c41",
   "c47",
@@ -14427,87 +14427,87 @@ list [
 `;
 
 exports[`faces .tag(river) job snapshot 1`] = `
-list [
-  list [
+Array [
+  Array [
     "刺客",
     "暗殺教団",
     "にほんおおかみ",
     "動く銅像",
     "刺客",
   ],
-  list [
+  Array [
     "さすらい人",
     "ろぶすたー",
     "登山部",
     "さすらい人",
   ],
-  list [
+  Array [
     "流浪者",
     "しろまどうし",
     "転校生",
     "流浪者",
   ],
-  list [
+  Array [
     "釣り師",
     "すっぽん",
     "魚拓部",
     "釣り師",
   ],
-  list [
+  Array [
     "鳥使い",
     "おうむ",
     "飼育委員",
     "鳥使い",
   ],
-  list [
+  Array [
     "風来坊",
     "きつねりす",
     "守衛",
     "風来坊",
   ],
-  list [
+  Array [
     "魚屋",
     "まんぼう",
     "水泳部顧問",
     "魚屋",
   ],
-  list [
+  Array [
     "捜査官",
     "しぇぱーど",
     "駐在さん",
     "捜査官",
   ],
-  list [
+  Array [
     "探偵",
     "はしびろこう",
     "教授",
     "探偵",
   ],
-  list [
+  Array [
     "粉ひき",
     "さい",
     "ラグビー部",
     "粉ひき",
   ],
-  list [
+  Array [
     "洗濯婦",
     "あるぱか",
     "緑のおばさん",
     "洗濯婦",
   ],
-  list [
+  Array [
     "洗濯婦",
     "さば",
     "テニス部",
     "洗濯婦",
   ],
-  list [
+  Array [
     "洗濯婦",
     "わらいかわせみ",
     "書道部",
     "洗濯婦",
   ],
-  list [
+  Array [
     "渡し船",
     "渡し船",
   ],
@@ -14515,7 +14515,7 @@ list [
 `;
 
 exports[`faces .tag(river) name snapshot 1`] = `
-list [
+Array [
   "ヒロシ",
   "ヤニク",
   "ペラジー",
@@ -14534,26 +14534,26 @@ list [
 `;
 
 exports[`faces .tag(river) npc snapshot 1`] = `
-list [
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
+Array [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
 ]
 `;
 
 exports[`faces .tag(road) id snapshot 1`] = `
-list [
+Array [
   "c77",
   "c12",
   "c34",
@@ -14571,75 +14571,75 @@ list [
 `;
 
 exports[`faces .tag(road) job snapshot 1`] = `
-list [
-  list [
+Array [
+  Array [
     "馬飼い",
     "にんじん",
     "いきもの係",
     "馬飼い",
   ],
-  list [
+  Array [
     "御者",
     "用務員",
     "御者",
   ],
-  list [
+  Array [
     "靴磨き",
     "すなねずみ",
     "球児",
     "靴磨き",
   ],
-  list [
+  Array [
     "鳥使い",
     "おうむ",
     "飼育委員",
     "鳥使い",
   ],
-  list [
+  Array [
     "花売り",
     "こじか",
     "華道部",
     "花売り",
   ],
-  list [
+  Array [
     "道案内",
     "なまけもの",
     "帰宅部",
     "道案内",
   ],
-  list [
+  Array [
     "郵便屋",
     "しゃち",
     "地理教師",
     "郵便屋",
   ],
-  list [
+  Array [
     "若者",
     "りかおん",
     "陸上部",
     "若者",
   ],
-  list [
+  Array [
     "新聞配達",
     "やもり",
     "人体模型",
     "新聞配達",
   ],
-  list [
+  Array [
     "廃品回収",
     "廃品回収",
   ],
-  list [
+  Array [
     "宿屋",
     "宿屋",
   ],
-  list [
+  Array [
     "お使い",
     "かみつきがめ",
     "おてんば",
     "お使い",
   ],
-  list [
+  Array [
     "受付",
     "虹追い",
     "いそぎんちゃく",
@@ -14650,7 +14650,7 @@ list [
 `;
 
 exports[`faces .tag(road) name snapshot 1`] = `
-list [
+Array [
   "キャロライナ",
   "バーナバス",
   "トニー",
@@ -14668,20 +14668,20 @@ list [
 `;
 
 exports[`faces .tag(road) npc snapshot 1`] = `
-list [
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+Array [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "エクスパンション・セット「狂騒議事」",
       "どうせ、殺されるわみんな。…みんな
@@ -14701,7 +14701,7 @@ list [
 `;
 
 exports[`faces .tag(school) id snapshot 1`] = `
-list [
+Array [
   "c49",
   "c38",
   "c77",
@@ -14814,653 +14814,653 @@ list [
 `;
 
 exports[`faces .tag(school) job snapshot 1`] = `
-list [
-  list [
+Array [
+  Array [
     "石工",
     "にほんざる",
     "技術教師",
     "石工",
   ],
-  list [
+  Array [
     "歌い手",
     "だいおういか",
     "軽音楽部",
     "歌い手",
   ],
-  list [
+  Array [
     "馬飼い",
     "にんじん",
     "いきもの係",
     "馬飼い",
   ],
-  list [
+  Array [
     "親方",
     "ごりら",
     "体育教師",
     "親方",
   ],
-  list [
+  Array [
     "大地主",
     "やみふくろう",
     "寮管理人",
     "大地主",
   ],
-  list [
+  Array [
     "踊り手",
     "はいびすかす",
     "社交ダンス部",
     "踊り手",
   ],
-  list [
+  Array [
     "会計士",
     "きつね",
     "風紀委員",
     "会計士",
   ],
-  list [
+  Array [
     "飾り職",
     "さらぶれっど",
     "美術部",
     "飾り職",
   ],
-  list [
+  Array [
     "楽器職人",
     "えりまきとかげ",
     "吹奏楽部",
     "楽器職人",
   ],
-  list [
+  Array [
     "刺客",
     "暗殺教団",
     "にほんおおかみ",
     "動く銅像",
     "刺客",
   ],
-  list [
+  Array [
     "寡婦",
     "もるふぉちょう",
     "肖像画",
     "寡婦",
   ],
-  list [
+  Array [
     "記者",
     "しまうま",
     "新聞部",
     "記者",
   ],
-  list [
+  Array [
     "御者",
     "用務員",
     "御者",
   ],
-  list [
+  Array [
     "靴磨き",
     "すなねずみ",
     "球児",
     "靴磨き",
   ],
-  list [
+  Array [
     "小悪党",
     "いわとびぺんぎん",
     "問題児",
     "小悪党",
   ],
-  list [
+  Array [
     "小僧",
     "みけ",
     "優等生",
     "小僧",
   ],
-  list [
+  Array [
     "小娘",
     "小銃協会",
     "そまり",
     "ミーハー",
     "小娘",
   ],
-  list [
+  Array [
     "子守り",
     "かんがるー",
     "先輩",
     "子守り",
   ],
-  list [
+  Array [
     "酒屋",
     "ぶた",
     "世界史教師",
     "酒屋",
   ],
-  list [
+  Array [
     "雑貨屋",
     "てのりぶんちょう",
     "歴史教師",
     "雑貨屋",
   ],
-  list [
+  Array [
     "さすらい人",
     "ろぶすたー",
     "登山部",
     "さすらい人",
   ],
-  list [
+  Array [
     "流浪者",
     "しろまどうし",
     "転校生",
     "流浪者",
   ],
-  list [
+  Array [
     "司祭",
     "ゆにこーん",
     "名誉教授",
     "司祭",
   ],
-  list [
+  Array [
     "詩人",
     "おらうーたん",
     "演劇部顧問",
     "詩人",
   ],
-  list [
+  Array [
     "仕立て屋",
     "もみのき",
     "家政科教師",
     "仕立て屋",
   ],
-  list [
+  Array [
     "執事",
     "らいおん",
     "教頭先生",
     "執事",
   ],
-  list [
+  Array [
     "始末屋",
     "ちすいこうもり",
     "教育実習",
     "始末屋",
   ],
-  list [
+  Array [
     "修道士",
     "れとりばー",
     "修士",
     "修道士",
   ],
-  list [
+  Array [
     "修道女",
     "らくだ",
     "修士",
     "修道女",
   ],
-  list [
+  Array [
     "女中",
     "くろひょう",
     "ＳＯＳ団",
     "女中",
   ],
-  list [
+  Array [
     "助手",
     "あらいぐま",
     "保険医",
     "助手",
   ],
-  list [
+  Array [
     "聖歌隊員",
     "くらげ",
     "コーラス部",
     "聖歌隊員",
   ],
-  list [
+  Array [
     "掃除夫",
     "みつりょうしゃ",
     "生徒会執行部",
     "掃除夫",
   ],
-  list [
+  Array [
     "奏者",
     "ぺるしゃ",
     "音楽教師",
     "奏者",
   ],
-  list [
+  Array [
     "奏者",
     "いえてぃ",
     "演奏講師",
     "奏者",
   ],
-  list [
+  Array [
     "双生児",
     "きんぎょ",
     "演劇部",
     "双生児",
   ],
-  list [
+  Array [
     "双生児",
     "ねったいぎょ",
     "演劇部",
     "双生児",
   ],
-  list [
+  Array [
     "村長",
     "よーくしゃーてりあ",
     "校長",
     "村長",
   ],
-  list [
+  Array [
     "紅茶屋",
     "ばいにん",
     "茶道部顧問",
     "紅茶屋",
   ],
-  list [
+  Array [
     "長老",
     "ぶるどっぐ",
     "理事長",
     "長老",
   ],
-  list [
+  Array [
     "長老の孫",
     "わかめ",
     "水泳部",
     "長老の孫",
   ],
-  list [
+  Array [
     "釣り師",
     "すっぽん",
     "魚拓部",
     "釣り師",
   ],
-  list [
+  Array [
     "伝道師",
     "ぱんだ",
     "現国教師",
     "伝道師",
   ],
-  list [
+  Array [
     "読書家",
     "うさぎ",
     "文芸部",
     "読書家",
   ],
-  list [
+  Array [
     "賭場の主",
     "なまこ",
     "後援者",
     "賭場の主",
   ],
-  list [
+  Array [
     "鳥使い",
     "おうむ",
     "飼育委員",
     "鳥使い",
   ],
-  list [
+  Array [
     "肉屋",
     "おおたこ",
     "球部顧問",
     "肉屋",
   ],
-  list [
+  Array [
     "墓堀",
     "ありじごく",
     "映画研究会",
     "墓堀",
   ],
-  list [
+  Array [
     "墓守",
     "かげろう",
     "幽霊部員",
     "墓守",
   ],
-  list [
+  Array [
     "花売り",
     "こじか",
     "華道部",
     "花売り",
   ],
-  list [
+  Array [
     "美術家",
     "びーる",
     "陶芸部",
     "美術家",
   ],
-  list [
+  Array [
     "漂白工",
     "おこじょ",
     "マネージャー",
     "漂白工",
   ],
-  list [
+  Array [
     "病人",
     "いとまきえい",
     "留年生",
     "病人",
   ],
-  list [
+  Array [
     "百姓",
     "うちゅうせん",
     "農業科",
     "百姓",
   ],
-  list [
+  Array [
     "風来坊",
     "きつねりす",
     "守衛",
     "風来坊",
   ],
-  list [
+  Array [
     "ベテラン医師",
     "かたつむり",
     "生物教師",
     "ベテラン医師",
   ],
-  list [
+  Array [
     "ベテラン看護婦",
     "かまきり",
     "数学教師",
     "ベテラン看護婦",
   ],
-  list [
+  Array [
     "牧人",
     "ひつじ",
     "手芸部",
     "牧人",
   ],
-  list [
+  Array [
     "本屋",
     "たぬき",
     "図書委員",
     "本屋",
   ],
-  list [
+  Array [
     "水商売",
     "あげはちょう",
     "チアリーダー",
     "水商売",
   ],
-  list [
+  Array [
     "道案内",
     "なまけもの",
     "帰宅部",
     "道案内",
   ],
-  list [
+  Array [
     "見習い医師",
     "かもすぞ",
     "化学教師",
     "見習い医師",
   ],
-  list [
+  Array [
     "森番",
     "くまー",
     "番長",
     "森番",
   ],
-  list [
+  Array [
     "郵便屋",
     "しゃち",
     "地理教師",
     "郵便屋",
   ],
-  list [
+  Array [
     "理髪師",
     "さめ",
     "野球部",
     "理髪師",
   ],
-  list [
+  Array [
     "良家の息子",
     "うし",
     "校長の孫",
     "良家の息子",
   ],
-  list [
+  Array [
     "良家の娘",
     "とら",
     "理事長の孫",
     "良家の娘",
   ],
-  list [
+  Array [
     "ランタン職人",
     "ほたる",
     "ヴィジュアル系バンド部",
     "ランタン職人",
   ],
-  list [
+  Array [
     "教え子",
     "うみねこ",
     "弓道部",
     "教え子",
   ],
-  list [
+  Array [
     "若者",
     "りかおん",
     "陸上部",
     "若者",
   ],
-  list [
+  Array [
     "学者",
     "せあかごけぐも",
     "助教授",
     "学者",
   ],
-  list [
+  Array [
     "負傷兵",
     "みいら",
     "剣道部",
     "負傷兵",
   ],
-  list [
+  Array [
     "魚屋",
     "まんぼう",
     "水泳部顧問",
     "魚屋",
   ],
-  list [
+  Array [
     "新聞配達",
     "やもり",
     "人体模型",
     "新聞配達",
   ],
-  list [
+  Array [
     "採集人",
     "ぶろっこりー",
     "無線部",
     "採集人",
   ],
-  list [
+  Array [
     "捜査官",
     "しぇぱーど",
     "駐在さん",
     "捜査官",
   ],
-  list [
+  Array [
     "探偵",
     "はしびろこう",
     "教授",
     "探偵",
   ],
-  list [
+  Array [
     "徒弟",
     "びーばー",
     "サッカー部",
     "徒弟",
   ],
-  list [
+  Array [
     "手伝い",
     "すずらん",
     "園芸部",
     "手伝い",
   ],
-  list [
+  Array [
     "粉ひき",
     "さい",
     "ラグビー部",
     "粉ひき",
   ],
-  list [
+  Array [
     "料理人",
     "ゆでたまご",
     "栄養士",
     "料理人",
   ],
-  list [
+  Array [
     "食いしん坊",
     "あふりかぞう",
     "食堂のおねいさん",
     "食いしん坊",
   ],
-  list [
+  Array [
     "新妻",
     "かば",
     "新任教師",
     "新妻",
   ],
-  list [
+  Array [
     "妻",
     "しろへび",
     "講師",
     "妻",
   ],
-  list [
+  Array [
     "お使い",
     "かみつきがめ",
     "おてんば",
     "お使い",
   ],
-  list [
+  Array [
     "洗濯婦",
     "あるぱか",
     "緑のおばさん",
     "洗濯婦",
   ],
-  list [
+  Array [
     "洗濯婦",
     "さば",
     "テニス部",
     "洗濯婦",
   ],
-  list [
+  Array [
     "洗濯婦",
     "わらいかわせみ",
     "書道部",
     "洗濯婦",
   ],
-  list [
+  Array [
     "執事見習い",
     "どぶねずみ",
     "ガリ勉",
     "執事見習い",
   ],
-  list [
+  Array [
     "道化師",
     "かめれおん",
     "演劇部",
     "道化師",
   ],
-  list [
+  Array [
     "指揮者",
     "さんた",
     "前校長",
     "指揮者",
   ],
-  list [
+  Array [
     "女主人",
     "あかまむし",
     "PTA会長",
     "女主人",
   ],
-  list [
+  Array [
     "村娘",
     "しろちゃとら",
     "占い研究会",
     "村娘",
   ],
-  list [
+  Array [
     "墓荒らし",
     "やまあらし",
     "格闘技同好会",
     "墓荒らし",
   ],
-  list [
+  Array [
     "薬屋",
     "ふぇねっく",
     "科学部",
     "薬屋",
   ],
-  list [
+  Array [
     "水商売",
     "くりおね",
     "チアガール",
     "水商売",
   ],
-  list [
+  Array [
     "良家の末娘",
     "はむすたー",
     "ラクロス部",
     "良家の末娘",
   ],
-  list [
+  Array [
     "店番",
     "りす",
     "購買部",
     "店番",
   ],
-  list [
+  Array [
     "留守番",
     "めがねざる",
     "委員長",
     "留守番",
   ],
-  list [
+  Array [
     "成金",
     "いぼいのしし",
     "前理事長",
     "成金",
   ],
-  list [
+  Array [
     "病人",
     "りゅう",
     "天文部",
     "病人",
   ],
-  list [
+  Array [
     "博徒",
     "はいえな",
     "スケバン",
     "博徒",
   ],
-  list [
+  Array [
     "宝石収集家",
     "くじゃく",
     "美術教師",
     "宝石収集家",
   ],
-  list [
+  Array [
     "放蕩者",
     "かも",
     "柔道部",
     "放蕩者",
   ],
-  list [
+  Array [
     "厭世家",
     "厭世家",
     "おうむがい",
     "オカルト同好会",
     "厭世家",
   ],
-  list [
+  Array [
     "受付",
     "虹追い",
     "いそぎんちゃく",
     "放送部",
     "受付",
   ],
-  list [
+  Array [
     "童話作家",
     "かえる",
     "漫画研究部",
     "童話作家",
   ],
-  list [
+  Array [
     "厭世家",
     "しんかいぎょ",
     "不登校児",
@@ -15470,7 +15470,7 @@ list [
 `;
 
 exports[`faces .tag(school) name snapshot 1`] = `
-list [
+Array [
   "ボリス",
   "コリーン",
   "キャロライナ",
@@ -15583,24 +15583,24 @@ list [
 `;
 
 exports[`faces .tag(school) npc snapshot 1`] = `
-list [
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+Array [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "エクスパンション・セット「帰還者議事」",
       "M4ライフルを持ってさえいれば…、なーんて、思っててもしょうがないね。鍵かけとこう。",
@@ -15609,25 +15609,25 @@ list [
 ちょっと出かけてくる！プリン食べちゃダメだよ！",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "人狼議事（オスカー）",
       "…そっちじゃないよ、こっちだよ。
@@ -15636,25 +15636,25 @@ list [
 みんなにはナイショだよ？",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "人狼議事（ヨアヒム）",
       "ふひ、ふひひ！人狼になど……くれてやるものかヨ！",
       "人殺しと一緒にいるなんてごめんだヨ！へ…へっ、部屋に戻らせてもらうヨ！",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "人狼議事（ヨーランダ）",
       "夜風に乗って、遠くから声がとどきます。昨夜は幽かに。今夜は響き。きっと明日は……",
@@ -15662,22 +15662,22 @@ list [
 幼馴染から手紙が来たの。お金を貯めたから、遠くで一緒に暮らそうって。",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "人狼議事（キャサリン）",
       "たいへん、たいへん、たいへん！",
       "大変、人狼が出たよ！　いつもは嘘だけど、今度は本当の本当に本当！",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "人狼議事（ベネット）",
       "壁の向こうだ、やつの足音が聞こえる。いよいよ隣室に迫る。
@@ -15687,20 +15687,20 @@ list [
 <strong>日記はそこで途切れ、発見されるまで打ち捨てられていた。</strong>",
     ],
   ],
-  list [
+  Array [
     Array [
       "人狼議事（タバサ）",
       "ねぇ、遊んでかない？今夜はあなたが狼よ……",
       "人狼なんているわけないじゃん？みんな大げさなのさ。",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "人狼議事（グロリア）",
       "紳士ならびに淑女の皆様、わたくしの館へようこそ。
@@ -15709,43 +15709,43 @@ list [
 聞いたでしょう人狼がいるのよ、はやく見つけて処刑なさい！",
     ],
   ],
-  list [
+  Array [
     Array [
       "人狼議事（ヴェスパタイン）",
       "嗚呼、聞こえる。やつの足音が聞こえる……。",
       "逃げろ。逃げろ！おまえらだけでも逃げろ。",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "人狼議事（ソフィア）",
       "こんばんわ、こんな遅くにたいへんですね。
@@ -15756,14 +15756,14 @@ list [
 人殺しと一緒にいるなんて……！へや…、部屋に戻らせてもらいます！",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "エクスパンション・セット「狂騒議事」",
       "どうせ、殺されるわみんな。…みんな
@@ -15779,8 +15779,8 @@ list [
 <strong>日記はそこで途切れ、発見されるまで打ち捨てられていた。</strong>",
     ],
   ],
-  list [],
-  list [
+  Array [],
+  Array [
     Array [
       "人狼議事",
       "嗚呼、聞こえ る。やつの足音が聞こえる……。",
@@ -15801,7 +15801,7 @@ list [
 `;
 
 exports[`faces .tag(servant) id snapshot 1`] = `
-list [
+Array [
   "c77",
   "c36",
   "c12",
@@ -15826,115 +15826,115 @@ list [
 `;
 
 exports[`faces .tag(servant) job snapshot 1`] = `
-list [
-  list [
+Array [
+  Array [
     "馬飼い",
     "にんじん",
     "いきもの係",
     "馬飼い",
   ],
-  list [
+  Array [
     "飾り職",
     "さらぶれっど",
     "美術部",
     "飾り職",
   ],
-  list [
+  Array [
     "御者",
     "用務員",
     "御者",
   ],
-  list [
+  Array [
     "靴磨き",
     "すなねずみ",
     "球児",
     "靴磨き",
   ],
-  list [
+  Array [
     "子守り",
     "かんがるー",
     "先輩",
     "子守り",
   ],
-  list [
+  Array [
     "仕立て屋",
     "もみのき",
     "家政科教師",
     "仕立て屋",
   ],
-  list [
+  Array [
     "執事",
     "らいおん",
     "教頭先生",
     "執事",
   ],
-  list [
+  Array [
     "女中",
     "くろひょう",
     "ＳＯＳ団",
     "女中",
   ],
-  list [
+  Array [
     "掃除夫",
     "みつりょうしゃ",
     "生徒会執行部",
     "掃除夫",
   ],
-  list [
+  Array [
     "紅茶屋",
     "ばいにん",
     "茶道部顧問",
     "紅茶屋",
   ],
-  list [
+  Array [
     "手伝い",
     "すずらん",
     "園芸部",
     "手伝い",
   ],
-  list [
+  Array [
     "庭師",
     "庭師",
   ],
-  list [
+  Array [
     "下働き",
     "下働き",
   ],
-  list [
+  Array [
     "料理人",
     "ゆでたまご",
     "栄養士",
     "料理人",
   ],
-  list [
+  Array [
     "姉妹",
     "姉妹",
   ],
-  list [
+  Array [
     "お使い",
     "かみつきがめ",
     "おてんば",
     "お使い",
   ],
-  list [
+  Array [
     "洗濯婦",
     "あるぱか",
     "緑のおばさん",
     "洗濯婦",
   ],
-  list [
+  Array [
     "洗濯婦",
     "さば",
     "テニス部",
     "洗濯婦",
   ],
-  list [
+  Array [
     "洗濯婦",
     "わらいかわせみ",
     "書道部",
     "洗濯婦",
   ],
-  list [
+  Array [
     "執事見習い",
     "どぶねずみ",
     "ガリ勉",
@@ -15944,7 +15944,7 @@ list [
 `;
 
 exports[`faces .tag(servant) name snapshot 1`] = `
-list [
+Array [
   "キャロライナ",
   "ミッシェル",
   "バーナバス",
@@ -15969,32 +15969,32 @@ list [
 `;
 
 exports[`faces .tag(servant) npc snapshot 1`] = `
-list [
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
+Array [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
 ]
 `;
 
 exports[`faces .tag(shoji) id snapshot 1`] = `
-list [
+Array [
   "w05",
   "w21",
   "w22",
@@ -16053,220 +16053,220 @@ list [
 `;
 
 exports[`faces .tag(shoji) job snapshot 1`] = `
-list [
-  list [
+Array [
+  Array [
     "飴師",
     "飴師",
   ],
-  list [
+  Array [
     "うどん職人",
     "うどん職人",
   ],
-  list [
+  Array [
     "そば職人",
     "そば職人",
   ],
-  list [
+  Array [
     "楽士",
     "楽士",
   ],
-  list [
+  Array [
     "髪結い",
     "髪結い",
   ],
-  list [
+  Array [
     "後妻",
     "後妻",
   ],
-  list [
+  Array [
     "餓鬼大将",
     "餓鬼大将",
   ],
-  list [
+  Array [
     "神主",
     "神主",
   ],
-  list [
+  Array [
     "喧嘩屋",
     "喧嘩屋",
   ],
-  list [
+  Array [
     "薬売り",
     "薬売り",
   ],
-  list [
+  Array [
     "琴弾き",
     "琴弾き",
   ],
-  list [
+  Array [
     "呉服問屋",
     "呉服問屋",
   ],
-  list [
+  Array [
     "子守り",
     "子守り",
   ],
-  list [
+  Array [
     "女中",
     "女中",
   ],
-  list [
+  Array [
     "刺客",
     "刺客",
   ],
-  list [
+  Array [
     "説法師",
     "説法師",
   ],
-  list [
+  Array [
     "宣教師",
     "宣教師",
   ],
-  list [
+  Array [
     "宗主",
     "宗主",
   ],
-  list [
+  Array [
     "手妻師",
     "手妻師",
   ],
-  list [
+  Array [
     "団子屋",
     "団子屋",
   ],
-  list [
+  Array [
     "釣り師",
     "釣り師",
   ],
-  list [
+  Array [
     "忍者",
     "忍者",
   ],
-  list [
+  Array [
     "野伏り",
     "野伏り",
   ],
-  list [
+  Array [
     "発明家",
     "発明家",
   ],
-  list [
+  Array [
     "飛脚",
     "飛脚",
   ],
-  list [
+  Array [
     "病人",
     "病人",
   ],
-  list [
+  Array [
     "武家の娘",
     "武家の娘",
   ],
-  list [
+  Array [
     "双子",
     "双子",
   ],
-  list [
+  Array [
     "丁稚",
     "丁稚",
   ],
-  list [
+  Array [
     "双子",
     "双子",
   ],
-  list [
+  Array [
     "懐刀",
     "懐刀",
   ],
-  list [
+  Array [
     "船大工",
     "船大工",
   ],
-  list [
+  Array [
     "弁士",
     "弁士",
   ],
-  list [
+  Array [
     "町娘",
     "町娘",
   ],
-  list [
+  Array [
     "巫女",
     "巫女",
   ],
-  list [
+  Array [
     "門下生",
     "門下生",
   ],
-  list [
+  Array [
     "役者",
     "役者",
   ],
-  list [
+  Array [
     "山姥",
     "山姥",
   ],
-  list [
+  Array [
     "落胤",
     "落胤",
   ],
-  list [
+  Array [
     "浪人",
     "浪人",
   ],
-  list [
+  Array [
     "機織り",
     "機織り",
   ],
-  list [
+  Array [
     "座敷守",
     "座敷守",
   ],
-  list [
+  Array [
     "屍漁り",
     "屍漁り",
   ],
-  list [
+  Array [
     "肥代取り",
     "肥代取り",
   ],
-  list [
+  Array [
     "和算家",
     "和算家",
   ],
-  list [
+  Array [
     "抜荷",
     "抜荷",
   ],
-  list [
+  Array [
     "半の目",
     "半の目",
   ],
-  list [
+  Array [
     "真剣師",
     "真剣師",
   ],
-  list [
+  Array [
     "看板娘",
     "看板娘",
   ],
-  list [
+  Array [
     "旅籠",
     "旅籠",
   ],
-  list [
+  Array [
     "大旦那",
     "大旦那",
   ],
-  list [
+  Array [
     "丑の刻参り",
     "丑の刻参り",
   ],
-  list [
+  Array [
     "御免株",
     "御免株",
   ],
-  list [
+  Array [
     "陰陽師",
     "陰陽師",
   ],
@@ -16274,7 +16274,7 @@ list [
 `;
 
 exports[`faces .tag(shoji) name snapshot 1`] = `
-list [
+Array [
   "定吉",
   "鉄平",
   "竹三",
@@ -16333,78 +16333,78 @@ list [
 `;
 
 exports[`faces .tag(shoji) npc snapshot 1`] = `
-list [
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+Array [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "和の国てやんでえ",
       "嗚呼、聞こえる。やつの足音が聞こえる……。",
       "逃げろ。逃げろ！おまえらだけでも逃げろ。",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "和の国てやんでえ（仁右衛門）",
       "なんと、これは奇っ怪……分かったゾ！",
       "やっぱり人狼は実在するんだヨ！　うっひょひょーい！",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
 ]
 `;
 
 exports[`faces .tag(stratos) id snapshot 1`] = `
-list [
+Array [
   "sf01",
   "sf02",
   "sf03",
@@ -16448,160 +16448,160 @@ list [
 `;
 
 exports[`faces .tag(stratos) job snapshot 1`] = `
-list [
-  list [
+Array [
+  Array [
     "通信士",
     "通信士",
   ],
-  list [
+  Array [
     "哲学者",
     "哲学者",
   ],
-  list [
+  Array [
     "道案内",
     "道案内",
   ],
-  list [
+  Array [
     "お散歩隊長",
     "お散歩隊長",
   ],
-  list [
+  Array [
     "新製品",
     "新製品",
   ],
-  list [
+  Array [
     "士官",
     "士官",
   ],
-  list [
+  Array [
     "救星隊",
     "救星隊",
   ],
-  list [
+  Array [
     "遊泳員",
     "遊泳員",
   ],
-  list [
+  Array [
     "服飾商",
     "服飾商",
   ],
-  list [
+  Array [
     "研修生",
     "研修生",
   ],
-  list [
+  Array [
     "保安技師",
     "保安技師",
   ],
-  list [
+  Array [
     "艇長",
     "艇長",
   ],
-  list [
+  Array [
     "廃神",
     "廃神",
   ],
-  list [
+  Array [
     "消防隊長",
     "消防隊長",
   ],
-  list [
+  Array [
     "感性子",
     "感性子",
   ],
-  list [
+  Array [
     "理性子",
     "理性子",
   ],
-  list [
+  Array [
     "対面販売",
     "対面販売",
   ],
-  list [
+  Array [
     "忍者隊",
     "忍者隊",
   ],
-  list [
+  Array [
     "保険調査",
     "保険調査",
   ],
-  list [
+  Array [
     "幽閉児",
     "幽閉児",
   ],
-  list [
+  Array [
     "測量士",
     "測量士",
   ],
-  list [
+  Array [
     "星間帆走",
     "星間帆走",
   ],
-  list [
+  Array [
     "地下軌道",
     "地下軌道",
   ],
-  list [
+  Array [
     "光彩楽団",
     "光彩楽団",
   ],
-  list [
+  Array [
     "星先案内",
     "星先案内",
   ],
-  list [
+  Array [
     "鉱滓地区",
     "鉱滓地区",
   ],
-  list [
+  Array [
     "鉱滓皇帝",
     "鉱滓皇帝",
   ],
-  list [
+  Array [
     "鉱滓地区",
     "鉱滓地区",
   ],
-  list [
+  Array [
     "溶接技師",
     "溶接技師",
   ],
-  list [
+  Array [
     "機巧忍軍",
     "機巧忍軍",
   ],
-  list [
+  Array [
     "閉鎖管理",
     "閉鎖管理",
   ],
-  list [
+  Array [
     "意匠造形",
     "意匠造形",
   ],
-  list [
+  Array [
     "重層培養",
     "重層培養",
   ],
-  list [
+  Array [
     "華美人",
     "華美人",
   ],
-  list [
+  Array [
     "銀河ギャル",
     "銀河ギャル",
   ],
-  list [
+  Array [
     "好奇診",
     "好奇診",
   ],
-  list [
+  Array [
     "執行隊",
     "執行隊",
   ],
-  list [
+  Array [
     "複眼レフ",
     "複眼レフ",
   ],
-  list [
+  Array [
     "秘術販売",
     "秘術販売",
   ],
@@ -16609,7 +16609,7 @@ list [
 `;
 
 exports[`faces .tag(stratos) name snapshot 1`] = `
-list [
+Array [
   "ラッシード",
   "エスペラント",
   "ピート",
@@ -16653,11 +16653,11 @@ list [
 `;
 
 exports[`faces .tag(stratos) npc snapshot 1`] = `
-list [
-  list [],
-  list [],
-  list [],
-  list [
+Array [
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "明後日への道標",
       "とたたたたんっ。
@@ -16671,13 +16671,13 @@ list [
 <strong>がりがり、がりがり。ケージの縁をひっかくと、うろうろ、うろうろ右へ左へ駆け回る。木の洞に目もくれず、夜中じゅう走り続けるのだった……</strong>",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "明後日への道標（ナユタ）",
       "f*ck！またチオチモリンと二酸化炭素分圧だし！
@@ -16696,23 +16696,23 @@ list [
 ちょっと外の様子見てくる。俺のプリン残しといてくれよ。",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "明後日への道標（ワクラバ）",
       "待てよ。ちょっと待てって。
@@ -16726,22 +16726,22 @@ list [
 掟の３番を思い出せ！お前ならやれる！頑張るんだ！",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
 ]
 `;
 
 exports[`faces .tag(travel) id snapshot 1`] = `
-list [
+Array [
   "c09",
   "c10",
   "t34",
@@ -16823,318 +16823,318 @@ list [
 `;
 
 exports[`faces .tag(travel) job snapshot 1`] = `
-list [
-  list [
+Array [
+  Array [
     "刺客",
     "暗殺教団",
     "にほんおおかみ",
     "動く銅像",
     "刺客",
   ],
-  list [
+  Array [
     "小娘",
     "小銃協会",
     "そまり",
     "ミーハー",
     "小娘",
   ],
-  list [
+  Array [
     "大銃協会",
     "大銃協会",
   ],
-  list [
+  Array [
     "FSM団",
     "FSM団",
   ],
-  list [
+  Array [
     "呵呵老会",
     "呵呵老会",
   ],
-  list [
+  Array [
     "独尊隊",
     "独尊隊",
   ],
-  list [
+  Array [
     "紅客連盟",
     "紅客連盟",
   ],
-  list [
+  Array [
     "覆面嫉妬団",
     "覆面嫉妬団",
   ],
-  list [
+  Array [
     "友愛組合",
     "友愛組合",
   ],
-  list [
+  Array [
     "幸運の科学",
     "幸運の科学",
   ],
-  list [
+  Array [
     "截拳道",
     "截拳道",
   ],
-  list [
+  Array [
     "開放的市民",
     "開放的市民",
   ],
-  list [
+  Array [
     "死ね死ね団",
     "死ね死ね団",
   ],
-  list [
+  Array [
     "匿名軍団",
     "匿名軍団",
   ],
-  list [
+  Array [
     "素顔連盟",
     "素顔連盟",
   ],
-  list [
+  Array [
     "営利政府",
     "営利政府",
   ],
-  list [
+  Array [
     "地下鉄道",
     "地下鉄道",
   ],
-  list [
+  Array [
     "MNU機関",
     "MNU機関",
   ],
-  list [
+  Array [
     "猫の集会",
     "猫の集会",
   ],
-  list [
+  Array [
     "少年探偵団",
     "少年探偵団",
   ],
-  list [
+  Array [
     "安全保障局",
     "安全保障局",
   ],
-  list [
+  Array [
     "聖戦士募集",
     "聖戦士募集",
   ],
-  list [
+  Array [
     "薔薇∴十字",
     "薔薇∴十字",
   ],
-  list [
+  Array [
     "白銀∴秘星",
     "白銀∴秘星",
   ],
-  list [
+  Array [
     "黄金∴黎明",
     "黄金∴黎明",
   ],
-  list [
+  Array [
     "明仄∴暁星",
     "明仄∴暁星",
   ],
-  list [
+  Array [
     "勧善懲悪委",
     "勧善懲悪委",
   ],
-  list [
+  Array [
     "鷹の爪団",
     "鷹の爪団",
   ],
-  list [
+  Array [
     "九未知会",
     "九未知会",
   ],
-  list [
+  Array [
     "透明女子会",
     "透明女子会",
   ],
-  list [
+  Array [
     "学園特警",
     "学園特警",
   ],
-  list [
+  Array [
     "MI:18",
     "MI:18",
   ],
-  list [
+  Array [
     "孤高天使連合",
     "孤高天使連合",
   ],
-  list [
+  Array [
     "トレーサー",
     "トレーサー",
   ],
-  list [
+  Array [
     "2.14革命機構",
     "2.14革命機構",
   ],
-  list [
+  Array [
     "法隆寺",
     "法隆寺",
   ],
-  list [
+  Array [
     "硯友社",
     "硯友社",
   ],
-  list [
+  Array [
     "樫の樹の子ら",
     "樫の樹の子ら",
   ],
-  list [
+  Array [
     "旅団✡肘笠雨",
     "旅団✡肘笠雨",
   ],
-  list [
+  Array [
     "安全調査局",
     "安全調査局",
   ],
-  list [
+  Array [
     "亡命同盟",
     "亡命同盟",
   ],
-  list [
+  Array [
     "PPP",
     "PPP",
   ],
-  list [
+  Array [
     "北後家蜘蛛会",
     "北後家蜘蛛会",
   ],
-  list [
+  Array [
     "一杯と自由",
     "一杯と自由",
   ],
-  list [
+  Array [
     "常世倶楽部",
     "常世倶楽部",
   ],
-  list [
+  Array [
     "架空惑星",
     "架空惑星",
   ],
-  list [
+  Array [
     "季節巡回",
     "季節巡回",
   ],
-  list [
+  Array [
     "七星拳",
     "七星拳",
   ],
-  list [
+  Array [
     "革神会",
     "革神会",
   ],
-  list [
+  Array [
     "聖愛色同胞",
     "聖愛色同胞",
   ],
-  list [
+  Array [
     "少年",
     "少年",
   ],
-  list [
+  Array [
     "少女",
     "少女",
   ],
-  list [
+  Array [
     "天道居士",
     "天道居士",
   ],
-  list [
+  Array [
     "地道居士",
     "地道居士",
   ],
-  list [
+  Array [
     "忘我共同体",
     "忘我共同体",
   ],
-  list [
+  Array [
     "宇宙原理衆",
     "宇宙原理衆",
   ],
-  list [
+  Array [
     "鉄血の福音",
     "鉄血の福音",
   ],
-  list [
+  Array [
     "一切一門",
     "一切一門",
   ],
-  list [
+  Array [
     "共信の友",
     "共信の友",
   ],
-  list [
+  Array [
     "真向一気",
     "真向一気",
   ],
-  list [
+  Array [
     "夜笑国",
     "夜笑国",
   ],
-  list [
+  Array [
     "大太刀源流",
     "大太刀源流",
   ],
-  list [
+  Array [
     "愚連隊",
     "愚連隊",
   ],
-  list [
+  Array [
     "頭蓋骨と骨",
     "頭蓋骨と骨",
   ],
-  list [
+  Array [
     "朝茶会",
     "朝茶会",
   ],
-  list [
+  Array [
     "食養会",
     "食養会",
   ],
-  list [
+  Array [
     "啓明結社",
     "啓明結社",
   ],
-  list [
+  Array [
     "更なる前進",
     "更なる前進",
   ],
-  list [
+  Array [
     "領事裁判所",
     "領事裁判所",
   ],
-  list [
+  Array [
     "天文学会",
     "天文学会",
   ],
-  list [
+  Array [
     "校庭番長",
     "校庭番長",
   ],
-  list [
+  Array [
     "ラプター",
     "ラプター",
   ],
-  list [
+  Array [
     "月光学会",
     "月光学会",
   ],
-  list [
+  Array [
     "公安部",
     "公安部",
   ],
-  list [
+  Array [
     "会堂長老会",
     "会堂長老会",
   ],
-  list [
+  Array [
     "カミナリ族",
     "カミナリ族",
   ],
-  list [
+  Array [
     "珊瑚宮連邦",
     "珊瑚宮連邦",
   ],
@@ -17142,7 +17142,7 @@ list [
 `;
 
 exports[`faces .tag(travel) name snapshot 1`] = `
-list [
+Array [
   "ヒロシ",
   "ゾーイ",
   "ドン",
@@ -17224,9 +17224,9 @@ list [
 `;
 
 exports[`faces .tag(travel) npc snapshot 1`] = `
-list [
-  list [],
-  list [
+Array [
+  Array [],
+  Array [
     Array [
       "エクスパンション・セット「帰還者議事」",
       "M4ライフルを持ってさえいれば…、なーんて、思っててもしょうがないね。鍵かけとこう。",
@@ -17235,52 +17235,52 @@ list [
 ちょっと出かけてくる！プリン食べちゃダメだよ！",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "エクスパンション・セット「帰還者議事」（ナツミ）",
       "<strong>日差しがプリーツからこぼれると、パンをくわえた黒髪はもう、庇からの校舎入りを達成していた。</strong>
@@ -17300,9 +17300,9 @@ list [
 呀！",
     ],
   ],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [
     Array [
       "エクスパンション・セット「帰還者議事」（少年Ａ）",
       "...",
@@ -17331,7 +17331,7 @@ list [
 <strong>（着信音）</strong>",
     ],
   ],
-  list [
+  Array [
     Array [
       "エクスパンション・セット「帰還者議事」（少女Ａ）",
       "...",
@@ -17354,36 +17354,36 @@ list [
 次は、…オマエダ…！",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
 ]
 `;
 
 exports[`faces .tag(young) id snapshot 1`] = `
-list [
+Array [
   "c49",
   "c38",
   "c77",
@@ -17460,406 +17460,406 @@ list [
 `;
 
 exports[`faces .tag(young) job snapshot 1`] = `
-list [
-  list [
+Array [
+  Array [
     "石工",
     "にほんざる",
     "技術教師",
     "石工",
   ],
-  list [
+  Array [
     "歌い手",
     "だいおういか",
     "軽音楽部",
     "歌い手",
   ],
-  list [
+  Array [
     "馬飼い",
     "にんじん",
     "いきもの係",
     "馬飼い",
   ],
-  list [
+  Array [
     "踊り手",
     "はいびすかす",
     "社交ダンス部",
     "踊り手",
   ],
-  list [
+  Array [
     "会計士",
     "きつね",
     "風紀委員",
     "会計士",
   ],
-  list [
+  Array [
     "飾り職",
     "さらぶれっど",
     "美術部",
     "飾り職",
   ],
-  list [
+  Array [
     "楽器職人",
     "えりまきとかげ",
     "吹奏楽部",
     "楽器職人",
   ],
-  list [
+  Array [
     "記者",
     "しまうま",
     "新聞部",
     "記者",
   ],
-  list [
+  Array [
     "小悪党",
     "いわとびぺんぎん",
     "問題児",
     "小悪党",
   ],
-  list [
+  Array [
     "子守り",
     "かんがるー",
     "先輩",
     "子守り",
   ],
-  list [
+  Array [
     "さすらい人",
     "ろぶすたー",
     "登山部",
     "さすらい人",
   ],
-  list [
+  Array [
     "流浪者",
     "しろまどうし",
     "転校生",
     "流浪者",
   ],
-  list [
+  Array [
     "修道士",
     "れとりばー",
     "修士",
     "修道士",
   ],
-  list [
+  Array [
     "修道女",
     "らくだ",
     "修士",
     "修道女",
   ],
-  list [
+  Array [
     "助手",
     "あらいぐま",
     "保険医",
     "助手",
   ],
-  list [
+  Array [
     "掃除夫",
     "みつりょうしゃ",
     "生徒会執行部",
     "掃除夫",
   ],
-  list [
+  Array [
     "奏者",
     "ぺるしゃ",
     "音楽教師",
     "奏者",
   ],
-  list [
+  Array [
     "長老の孫",
     "わかめ",
     "水泳部",
     "長老の孫",
   ],
-  list [
+  Array [
     "読書家",
     "うさぎ",
     "文芸部",
     "読書家",
   ],
-  list [
+  Array [
     "鳥使い",
     "おうむ",
     "飼育委員",
     "鳥使い",
   ],
-  list [
+  Array [
     "肉屋",
     "おおたこ",
     "球部顧問",
     "肉屋",
   ],
-  list [
+  Array [
     "墓堀",
     "ありじごく",
     "映画研究会",
     "墓堀",
   ],
-  list [
+  Array [
     "墓守",
     "かげろう",
     "幽霊部員",
     "墓守",
   ],
-  list [
+  Array [
     "花売り",
     "こじか",
     "華道部",
     "花売り",
   ],
-  list [
+  Array [
     "漂白工",
     "おこじょ",
     "マネージャー",
     "漂白工",
   ],
-  list [
+  Array [
     "病人",
     "いとまきえい",
     "留年生",
     "病人",
   ],
-  list [
+  Array [
     "牧人",
     "ひつじ",
     "手芸部",
     "牧人",
   ],
-  list [
+  Array [
     "本屋",
     "たぬき",
     "図書委員",
     "本屋",
   ],
-  list [
+  Array [
     "水商売",
     "あげはちょう",
     "チアリーダー",
     "水商売",
   ],
-  list [
+  Array [
     "道案内",
     "なまけもの",
     "帰宅部",
     "道案内",
   ],
-  list [
+  Array [
     "理髪師",
     "さめ",
     "野球部",
     "理髪師",
   ],
-  list [
+  Array [
     "良家の息子",
     "うし",
     "校長の孫",
     "良家の息子",
   ],
-  list [
+  Array [
     "良家の娘",
     "とら",
     "理事長の孫",
     "良家の娘",
   ],
-  list [
+  Array [
     "ランタン職人",
     "ほたる",
     "ヴィジュアル系バンド部",
     "ランタン職人",
   ],
-  list [
+  Array [
     "教え子",
     "うみねこ",
     "弓道部",
     "教え子",
   ],
-  list [
+  Array [
     "若者",
     "りかおん",
     "陸上部",
     "若者",
   ],
-  list [
+  Array [
     "負傷兵",
     "みいら",
     "剣道部",
     "負傷兵",
   ],
-  list [
+  Array [
     "新聞配達",
     "やもり",
     "人体模型",
     "新聞配達",
   ],
-  list [
+  Array [
     "採集人",
     "ぶろっこりー",
     "無線部",
     "採集人",
   ],
-  list [
+  Array [
     "ろくでなし",
     "ろくでなし",
   ],
-  list [
+  Array [
     "捜査官",
     "しぇぱーど",
     "駐在さん",
     "捜査官",
   ],
-  list [
+  Array [
     "徒弟",
     "びーばー",
     "サッカー部",
     "徒弟",
   ],
-  list [
+  Array [
     "手伝い",
     "すずらん",
     "園芸部",
     "手伝い",
   ],
-  list [
+  Array [
     "許婚",
     "許婚",
   ],
-  list [
+  Array [
     "逃亡者",
     "逃亡者",
   ],
-  list [
+  Array [
     "庭師",
     "庭師",
   ],
-  list [
+  Array [
     "蝋燭職人",
     "蝋燭職人",
   ],
-  list [
+  Array [
     "下働き",
     "下働き",
   ],
-  list [
+  Array [
     "粉ひき",
     "さい",
     "ラグビー部",
     "粉ひき",
   ],
-  list [
+  Array [
     "姉妹",
     "姉妹",
   ],
-  list [
+  Array [
     "銀行屋",
     "銀行屋",
   ],
-  list [
+  Array [
     "一日乞食",
     "一日乞食",
   ],
-  list [
+  Array [
     "弁務官",
     "弁務官",
   ],
-  list [
+  Array [
     "食いしん坊",
     "あふりかぞう",
     "食堂のおねいさん",
     "食いしん坊",
   ],
-  list [
+  Array [
     "新妻",
     "かば",
     "新任教師",
     "新妻",
   ],
-  list [
+  Array [
     "洗濯婦",
     "さば",
     "テニス部",
     "洗濯婦",
   ],
-  list [
+  Array [
     "洗濯婦",
     "わらいかわせみ",
     "書道部",
     "洗濯婦",
   ],
-  list [
+  Array [
     "愛人",
     "愛人",
   ],
-  list [
+  Array [
     "村娘",
     "しろちゃとら",
     "占い研究会",
     "村娘",
   ],
-  list [
+  Array [
     "薬屋",
     "ふぇねっく",
     "科学部",
     "薬屋",
   ],
-  list [
+  Array [
     "水商売",
     "くりおね",
     "チアガール",
     "水商売",
   ],
-  list [
+  Array [
     "店番",
     "りす",
     "購買部",
     "店番",
   ],
-  list [
+  Array [
     "信徒",
     "信徒",
   ],
-  list [
+  Array [
     "病人",
     "りゅう",
     "天文部",
     "病人",
   ],
-  list [
+  Array [
     "博徒",
     "はいえな",
     "スケバン",
     "博徒",
   ],
-  list [
+  Array [
     "ビール配り",
     "ビール配り",
   ],
-  list [
+  Array [
     "渡し船",
     "渡し船",
   ],
-  list [
+  Array [
     "紐",
     "紐",
   ],
-  list [
+  Array [
     "厭世家",
     "厭世家",
     "おうむがい",
     "オカルト同好会",
     "厭世家",
   ],
-  list [
+  Array [
     "受付",
     "虹追い",
     "いそぎんちゃく",
     "放送部",
     "受付",
   ],
-  list [
+  Array [
     "童話作家",
     "かえる",
     "漫画研究部",
     "童話作家",
   ],
-  list [
+  Array [
     "厭世家",
     "しんかいぎょ",
     "不登校児",
@@ -17869,7 +17869,7 @@ list [
 `;
 
 exports[`faces .tag(young) name snapshot 1`] = `
-list [
+Array [
   "ボリス",
   "コリーン",
   "キャロライナ",
@@ -17946,30 +17946,30 @@ list [
 `;
 
 exports[`faces .tag(young) npc snapshot 1`] = `
-list [
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+Array [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "人狼議事（ヨーランダ）",
       "夜風に乗って、遠くから声がとどきます。昨夜は幽かに。今夜は響き。きっと明日は……",
@@ -17977,17 +17977,17 @@ list [
 幼馴染から手紙が来たの。お金を貯めたから、遠くで一緒に暮らそうって。",
     ],
   ],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [
     Array [
       "人狼議事（キャサリン）",
       "たいへん、たいへん、たいへん！",
       "大変、人狼が出たよ！　いつもは嘘だけど、今度は本当の本当に本当！",
     ],
   ],
-  list [],
-  list [
+  Array [],
+  Array [
     Array [
       "人狼議事（ベネット）",
       "壁の向こうだ、やつの足音が聞こえる。いよいよ隣室に迫る。
@@ -17997,17 +17997,17 @@ list [
 <strong>日記はそこで途切れ、発見されるまで打ち捨てられていた。</strong>",
     ],
   ],
-  list [
+  Array [
     Array [
       "人狼議事（タバサ）",
       "ねぇ、遊んでかない？今夜はあなたが狼よ……",
       "人狼なんているわけないじゃん？みんな大げさなのさ。",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "人狼議事（グロリア）",
       "紳士ならびに淑女の皆様、わたくしの館へようこそ。
@@ -18016,41 +18016,41 @@ list [
 聞いたでしょう人狼がいるのよ、はやく見つけて処刑なさい！",
     ],
   ],
-  list [
+  Array [
     Array [
       "人狼議事（ヴェスパタイン）",
       "嗚呼、聞こえる。やつの足音が聞こえる……。",
       "逃げろ。逃げろ！おまえらだけでも逃げろ。",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "人狼議事（ソフィア）",
       "こんばんわ、こんな遅くにたいへんですね。
@@ -18061,14 +18061,14 @@ list [
 人殺しと一緒にいるなんて……！へや…、部屋に戻らせてもらいます！",
     ],
   ],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [],
-  list [
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [],
+  Array [
     Array [
       "エクスパンション・セット「狂騒議事」",
       "どうせ、殺されるわみんな。…みんな
@@ -18084,8 +18084,8 @@ list [
 <strong>日記はそこで途切れ、発見されるまで打ち捨てられていた。</strong>",
     ],
   ],
-  list [],
-  list [
+  Array [],
+  Array [
     Array [
       "人狼議事",
       "嗚呼、聞こえ る。やつの足音が聞こえる……。",
@@ -18105,10 +18105,29 @@ list [
 ]
 `;
 
+exports[`faces name_blank snapshot 1`] = `
+Array [
+  "ィ",
+  "ゥ",
+  "ェ",
+  "ォ",
+  "ヂ",
+  "ッ",
+  "ヅ",
+  "ャ",
+  "ュ",
+  "ョ",
+  "ヮ",
+  "ヰ",
+  "ヱ",
+  "ヲ",
+]
+`;
+
 exports[`faces reduce name_head snapshot 1`] = `
 Array [
   undefined,
-  list [
+  Array [
     Array [
       "ゲ",
       Array [
@@ -18470,7 +18489,7 @@ Array [
       ],
     ],
   ],
-  list [
+  Array [
     Array [
       "ゴ",
       Array [
@@ -18549,7 +18568,7 @@ Array [
       ],
     ],
   ],
-  list [
+  Array [
     Array [
       "ガ",
       Array [
@@ -18663,7 +18682,7 @@ Array [
       ],
     ],
   ],
-  list [
+  Array [
     Array [
       "ウ",
       Array [
@@ -18791,7 +18810,7 @@ Array [
       ],
     ],
   ],
-  list [
+  Array [
     Array [
       "コ",
       Array [
@@ -18853,7 +18872,7 @@ Array [
       ],
     ],
   ],
-  list [
+  Array [
     Array [
       "キ",
       Array [
@@ -18943,7 +18962,7 @@ Array [
       ],
     ],
   ],
-  list [
+  Array [
     Array [
       "オ",
       Array [
@@ -18981,7 +19000,7 @@ Array [
       ],
     ],
   ],
-  list [
+  Array [
     Array [
       "カ",
       Array [
@@ -19022,7 +19041,7 @@ Array [
       ],
     ],
   ],
-  list [
+  Array [
     Array [
       "イ",
       Array [
@@ -19086,7 +19105,7 @@ Array [
   undefined,
   undefined,
   undefined,
-  list [
+  Array [
     Array [
       "ア",
       Array [

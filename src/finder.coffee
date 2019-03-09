@@ -1,5 +1,5 @@
 _ = require "lodash"
-{ State, Query, Format } = require "./mem.coffee"
+{ State, Query, Format, step } = require "./mem.coffee"
 
 each_by_id = ({ list, depends }, from, process)->
   f() for f in depends
@@ -27,18 +27,17 @@ validate = (item, chklist)->
     return false
   true
 
-$step = 0
 
 module.exports = class Finder
   constructor: (@$name)->
-    State.step[@$name.list] = ++$step
+    State.step[@$name.list] = step()
     State.base(@$name)
 
   calculate: (query, memory)->
     return unless query._step < State.step[@$name.list]
 
     delete query._reduce
-    query._step = ++$step
+    query._step = step()
 
     cache = _.cloneDeep @$format
     paths =
@@ -79,7 +78,7 @@ module.exports = class Finder
       _.set query, path, o
 
   clear_cache: (all = null)->
-    State.step[@$name.list] = ++$step
+    State.step[@$name.list] = step()
     if all
       for id, { item } of all.$memory
         @map.$deploy_sort @model, item, all
@@ -108,7 +107,6 @@ module.exports = class Finder
         @model.update item, old.item
       else
         @model.create item
-        @model.rowid++
     @clear_cache()
 
   remove: (journal, all, ids)->

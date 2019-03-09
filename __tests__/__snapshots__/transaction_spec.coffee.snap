@@ -1,0 +1,174 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`transaction book $format games 1`] = `
+Object {
+  "_reduce": Object {
+    "hash": Object {},
+    "list": Array [],
+  },
+}
+`;
+
+exports[`transaction book $format options 1`] = `
+Object {
+  "_reduce": Object {
+    "hash": Object {},
+    "list": Array [],
+  },
+}
+`;
+
+exports[`transaction book $format says 1`] = `
+Object {
+  "_reduce": Object {
+    "hash": Object {},
+    "list": Array [],
+  },
+}
+`;
+
+exports[`transaction book $format winners 1`] = `
+Object {
+  "_reduce": Object {
+    "hash": Object {},
+    "list": Array [],
+  },
+}
+`;
+
+exports[`transaction book $sort games 1`] = `
+Object {
+  "_reduce.list": Object {},
+}
+`;
+
+exports[`transaction book $sort options 1`] = `
+Object {
+  "_reduce.list": Object {},
+}
+`;
+
+exports[`transaction book $sort says 1`] = `
+Object {
+  "_reduce.list": Object {},
+}
+`;
+
+exports[`transaction book $sort winners 1`] = `
+Object {
+  "_reduce.list": Object {},
+}
+`;
+
+exports[`transaction book _step games 1`] = `760`;
+
+exports[`transaction book _step options 1`] = `760`;
+
+exports[`transaction book _step says 1`] = `760`;
+
+exports[`transaction book _step winners 1`] = `760`;
+
+exports[`transaction chr $format chr_jobs 1`] = `
+Object {
+  "_reduce": Object {
+    "hash": Object {},
+    "list": Array [],
+  },
+}
+`;
+
+exports[`transaction chr $format chr_npcs 1`] = `
+Object {
+  "_reduce": Object {
+    "hash": Object {},
+    "list": Array [],
+  },
+}
+`;
+
+exports[`transaction chr $format chr_sets 1`] = `
+Object {
+  "_reduce": Object {
+    "hash": Object {},
+    "list": Array [],
+  },
+}
+`;
+
+exports[`transaction chr $format faces 1`] = `
+Object {
+  "_reduce": Object {
+    "hash": Object {},
+    "list": Array [],
+  },
+}
+`;
+
+exports[`transaction chr $format tags 1`] = `
+Object {
+  "_reduce": Object {
+    "hash": Object {},
+    "list": Array [],
+  },
+}
+`;
+
+exports[`transaction chr $sort chr_jobs 1`] = `
+Object {
+  "_reduce.list": Object {
+    "sort": Array [
+      "face.order",
+    ],
+  },
+}
+`;
+
+exports[`transaction chr $sort chr_npcs 1`] = `
+Object {
+  "_reduce.list": Object {
+    "sort": Array [
+      "face.order",
+    ],
+  },
+}
+`;
+
+exports[`transaction chr $sort chr_sets 1`] = `
+Object {
+  "_reduce.list": Object {
+    "sort": Array [
+      "face.order",
+    ],
+  },
+}
+`;
+
+exports[`transaction chr $sort faces 1`] = `
+Object {
+  "_reduce.list": Object {
+    "sort": Array [
+      "face.order",
+    ],
+  },
+}
+`;
+
+exports[`transaction chr $sort tags 1`] = `
+Object {
+  "_reduce.list": Object {
+    "sort": Array [
+      "face.order",
+    ],
+  },
+}
+`;
+
+exports[`transaction chr _step chr_jobs 1`] = `289`;
+
+exports[`transaction chr _step chr_npcs 1`] = `289`;
+
+exports[`transaction chr _step chr_sets 1`] = `289`;
+
+exports[`transaction chr _step faces 1`] = `289`;
+
+exports[`transaction chr _step tags 1`] = `289`;

@@ -66,6 +66,21 @@ Query.todos.find(3).checks.where({ checked: false }).list;
 
 ## map reduce
 
+ name | target | action
+ :-- | :-- | :--
+ count | count | reduce +
+ all | all | reduce +
+ all, count | avg | all / count
+ pow | pow | reduce *
+ pow, count | avg | pow / count
+ list | list | listup object ( key is not use )
+ set | set, hash | hash has item by key. set is unique keys.
+ min | min, min_is | pick min key. min_is is item.
+ max | max, max_is | pick max key. max_is is item.
+ min, max | range | max - min
+ min, max, all | range, density | all / range
+
+
 ```javascript
 const { Rule, Set, Query } = require("memory-orm");
 
@@ -97,6 +112,18 @@ Set.position.merge([{
 ```
 
 ## order
+
+ name | target | action
+ :-- | :-- | :--
+ belongs_to | data's prototype is Query[key].find( object index or item.id )
+ page |  | separate by size. size already set by Query.page(size)
+ sort |  | lodash.orderBy(...key)
+ cover | remain, cover | key has full index. cover has index. remain not has index.
+ pluck |  | get path data by list values.
+ index |  | group by item[key].
+ group_by |  | group by item[key]. item[key] is String
+ 
+
 
 ```javascript
 const { Rule, Set, Query } = require("memory-orm");
@@ -156,7 +183,7 @@ Query.checks.reduce.desc.list.pluck("label");
  static | create | event when add data not exist.
  static | delete | event when del data exist.
  static | bless  | value become extends this
- static | map_partition | define map reduce for partition.
+ static | map_partition | define map reduce.
  static | map_reduce    | define map reduce.
  static | order         | define order process for reduced value.
 

@@ -2,8 +2,6 @@ _ = require "lodash"
 
 
 module.exports = class Model
-  @rowid = 0
-
   @bless: (o)->
     o.__proto__ = @::
     o
@@ -22,8 +20,7 @@ module.exports = class Model
   @delete: (old)->
 
   @map_partition:  (item, emit)->
-    emit
-      set: item.id
+    undefined
 
   @map_reduce: (item, emit)->
     undefined

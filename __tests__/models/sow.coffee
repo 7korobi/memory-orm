@@ -127,7 +127,6 @@ new Rule("sow_village").schema ->
       { id, part_id } = o
       it =
         set: id
-      emit it
       emit o.mode, "all", it
       emit o.mode, o.q.folder_id, it
 

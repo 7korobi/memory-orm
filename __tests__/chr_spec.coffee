@@ -1,60 +1,66 @@
 require "./models/index"
 Mem = require "../src/index"
 
-test_is = (target, list, key, o)->
-  test "#{target} #{list} #{key}", ->
-    base = Mem.State.base { list }
-    expect(
-      base[target][key]
-    ).toEqual o
-
-describe "transaction", ->
-  json = JSON.parse JSON.stringify Mem.Query.transaction_chr
-  Mem.State.store json
-  for list_id, { $sort, $memory, $format } of json
-    for key, o of $sort
-      test_is "$sort", list_id, key, o
-
-  for list_id, { $sort, $memory, $format } of json
-    for key, o of $format
-      test_is "$format", list_id, key, o
-
-  for list_id, { $sort, $memory, $format } of json
-    for key, o of $memory
-      test_is "$memory", list_id, key, o
-
-
 describe "faces", ->
+  name_head = Mem.Query.faces.reduce.name_head
+  test 'name_blank snapshot', ->
+    expect Mem.Query.faces.name_blank()
+    .toMatchSnapshot()
+
   test 'reduce name_head snapshot', ->
-    expect(
-      for o in Mem.Query.faces.reduce.name_head
-        o?.map (oo)-> [oo.id, oo.set]
-    ).toMatchSnapshot()
+    _data =
+      for o in name_head
+        if o
+          for oo in o
+            [oo.id, oo.set]
+    expect _data
+    .toMatchSnapshot()
 
   Mem.Query.tags.ids.map (tag)->
+    data = Mem.Query.faces.tag(tag).pluck("id", "name", "chr_jobs.list", "chr_npcs.list")
+
     test "reduce.tag[#{tag}] snapshot", ->
       o = Mem.Query.faces.reduce.tag[tag]
       expect [tag, o.count, o.set]
       .toMatchSnapshot()
+
     test ".tag(#{tag}) id snapshot", ->
-      expect Mem.Query.faces.tag(tag).pluck("id")
+      _data =
+        for o in data
+          o[0]
+      expect _data
       .toMatchSnapshot()
 
     test ".tag(#{tag}) name snapshot", ->
-      expect Mem.Query.faces.tag(tag).pluck("name")
+      _data =
+        for o in data
+          o[1]
+      expect _data
       .toMatchSnapshot()
 
     test ".tag(#{tag}) job snapshot", ->
-      expect Mem.Query.faces.tag(tag).pluck("chr_jobs.list").map (o)-> o.map (oo)-> oo.job
+      _data =
+        for o in data
+          for oo in o[2]
+            oo.job
+      expect _data
       .toMatchSnapshot()
 
     test ".tag(#{tag}) npc snapshot", ->
-      expect Mem.Query.faces.tag(tag).pluck("chr_npcs.list").map (o)-> o.map (oo)-> [oo.label, oo.say_0, oo.say_1]
+      _data =
+        for o in data
+          for oo in o[3]
+            [oo.label, oo.say_0, oo.say_1]
+      expect _data
       .toMatchSnapshot()
 
+  Mem.Query.tags.ids.map (tag)->
+    data = Mem.Query.faces.name_head(tag)
     test ".name_head(#{tag}) snapshot", ->
-      expect(
-        for o in Mem.Query.faces.name_head(tag)
-          o?.map (oo)-> [oo.id, oo.set]
-      ).toMatchSnapshot()
-
+      _data =
+        for o in data
+          if o
+            for oo in o
+              [oo.id, oo.set]
+      expect _data
+      .toMatchSnapshot()
