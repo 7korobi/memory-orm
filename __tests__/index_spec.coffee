@@ -28,4 +28,4 @@ describe "sow oldlog", ->
 
   # $memory check 省略
 
-
+  undefined

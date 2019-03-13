@@ -11,3 +11,4 @@ test_is = (target, list, key, o)->
 describe "___", ->
   test "___", ->
     expect(1).toEqual(1)
+  undefined

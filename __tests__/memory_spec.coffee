@@ -12,3 +12,4 @@ keys.map (key)->
     test 'memory snapshot', ->
       expect Mem.Query[key].memory
       .toMatchSnapshot()
+    undefined

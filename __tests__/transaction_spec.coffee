@@ -26,6 +26,7 @@ transaction_spec = (name, data)->
         test_is "$format", list_id, key, o
       for key, o of $memory
         test_is "$memory", list_id, key, o
+    undefined
 
 transaction_spec "book", Mem.Query.transaction_book
 transaction_spec "chr",  Mem.Query.transaction_chr

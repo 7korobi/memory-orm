@@ -64,3 +64,4 @@ describe "faces", ->
               [oo.id, oo.set]
       expect _data
       .toMatchSnapshot()
+  undefined

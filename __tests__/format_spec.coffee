@@ -12,3 +12,4 @@ keys.map (key)->
     test 'format snapshot', ->
       expect Mem.Query[key]._finder.format
       .toMatchSnapshot()
+    undefined
