@@ -1,4 +1,4 @@
-{ Set, Model, Query, Rule, State } = require "../../src/index"
+{ Set, Model, Query, Rule } = require "../../src/index"
 
 new Rule("marker").schema ->
   @scope (all)->
@@ -15,3 +15,10 @@ new Rule("marker").schema ->
 
       emit "list",
         sort: ["write_at", "desc"]
+
+new Rule("icon").schema ->
+  @belongs_to "book"
+  @belongs_to "potof"
+
+  @scope (all)->
+    own: ( _id )-> all.where { _id }

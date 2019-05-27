@@ -1,6 +1,8 @@
-require "./locale"
+{ Query } = require "../../src/index"
+Query.static =
+  meta: {}
+
 require "./random"
-require "./locale"
 
 require "./chr"
 require "./potof"
@@ -12,7 +14,8 @@ require "./phase"
 require "./section"
 require "./chat"
 
-require "./editor"
 require "./sow"
 
-require "./marker"
+
+require "./activity"
+require "./workflow"

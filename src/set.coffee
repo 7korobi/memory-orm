@@ -3,13 +3,15 @@ _ = require "lodash"
 Query = require "./query.coffee"
 
 f_common = (type)-> (list, parent)->
-  journal = State.journal(@$name)
-  @all._finder[type] journal, @all, list, parent
+  meta = State.meta()
+  journal = State.journal @$name
+  @all._finder[type] meta, journal, @all, list, parent
 
 f_update = (list, parent)->
-  journal = State.journal(@$name)
+  meta = State.meta()
+  journal = State.journal @$name
   if parent?
-    @all._finder.update journal, @all, list, parent
+    @all._finder.update meta, journal, @all, list, parent
 
 f_item = (cb)->
   (item, parent)->
@@ -39,7 +41,7 @@ module.exports = class Set
   rehash:        f_clear
 
   find: (...ids)->
-    journal = State.journal(@$name)
+    journal = State.journal @$name
     for id in ids when o = @all.$memory[id]
       journal.$memory[id] = o
       return o.item

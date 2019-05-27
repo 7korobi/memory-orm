@@ -21,5 +21,3 @@ exports[`roles format snapshot 1`] = `undefined`;
 exports[`sow_roletables format snapshot 1`] = `undefined`;
 
 exports[`tags format snapshot 1`] = `undefined`;
-
-exports[`traps format snapshot 1`] = `undefined`;

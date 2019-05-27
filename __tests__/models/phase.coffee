@@ -1,6 +1,5 @@
 { Model, Query, Rule } = require "../../src/index"
 
-
 new Rule("phase").schema ->
   @path "folder", "book", "part"
   @has_many "chats"

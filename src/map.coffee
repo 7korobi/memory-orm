@@ -1,13 +1,14 @@
 _ = require "lodash"
 { State, Query } = require "./mem.coffee"
+Datum = require './datum.coffee'
 
 module.exports = class Map
   @bless: (o)->
     o.__proto__ = @::
     o
 
-  @$deploy: (model, $format, $sort, journal, item, parent)->
-    o = { item, $group: [] }
+  @$deploy: (model, $format, $sort, meta, journal, item)->
+    o = new Datum( meta, item )
 
     @$deploy_reduce model, item, $format, journal, o
     @$deploy_sort   model, item, $sort,   journal

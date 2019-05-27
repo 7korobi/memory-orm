@@ -171,12 +171,55 @@ Object {
 
 exports[`tags sort snapshot 1`] = `
 Object {
-  "_reduce.list": Object {},
-}
-`;
-
-exports[`traps sort snapshot 1`] = `
-Object {
-  "_reduce.list": Object {},
+  "_reduce.group.1.list": Object {
+    "sort": Array [
+      "order",
+    ],
+  },
+  "_reduce.group.10.list": Object {
+    "sort": Array [
+      "order",
+    ],
+  },
+  "_reduce.group.2.list": Object {
+    "sort": Array [
+      "order",
+    ],
+  },
+  "_reduce.group.4.list": Object {
+    "sort": Array [
+      "order",
+    ],
+  },
+  "_reduce.group.5.list": Object {
+    "sort": Array [
+      "order",
+    ],
+  },
+  "_reduce.group.6.list": Object {
+    "sort": Array [
+      "order",
+    ],
+  },
+  "_reduce.group.7.list": Object {
+    "sort": Array [
+      "order",
+    ],
+  },
+  "_reduce.group.8.list": Object {
+    "sort": Array [
+      "order",
+    ],
+  },
+  "_reduce.group.9.list": Object {
+    "sort": Array [
+      "order",
+    ],
+  },
+  "_reduce.list": Object {
+    "sort": Array [
+      "order",
+    ],
+  },
 }
 `;

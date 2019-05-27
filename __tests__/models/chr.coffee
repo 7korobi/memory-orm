@@ -28,6 +28,20 @@ new Rule("tag").schema ->
       all.where (o)->
         ! o.disabled
 
+  class @model extends @model
+    @map_reduce: (o, emit)->
+      group = o.order // 1000
+      emit "group", group,
+        set: o.id
+        list: true
+
+    @order: (o, emit)->
+      group = o.order // 1000
+      emit "list",
+        sort: ["order"]
+      emit "group", group, "list",
+        sort: ["order"]
+
 katakanas =
   for idx in ["ア".charCodeAt(0) .. "ン".charCodeAt(0)]
     String.fromCharCode idx
@@ -39,7 +53,7 @@ new Rule("face").schema ->
 
   @scope (all)->
     tag: (tag_id)->
-      all.partition "tag.#{tag_id || "all"}.set"
+      all.partition "tag.#{tag_id}.set"
 
     name_blank: ->
       all.reduce.name_head.from.remain
@@ -48,6 +62,7 @@ new Rule("face").schema ->
       all.tag(tag_id).reduce.name_head
 
   @deploy ->
+    @tag_ids.unshift "all"
 
   map =
     count: 1
@@ -74,6 +89,7 @@ new Rule("face").schema ->
       head = o.name[0]
       head = o.name[1] if ["†"].includes o.name[0]
       head = o.name[2] if ["D."].includes o.name[0..1]
+      head = o.name[3] if ["Dr."].includes o.name[0..2]
       head = head.replace /[\u3041-\u3096]/g, (hira)->
         String.fromCharCode hira.charCodeAt(0) + 0x60
 
@@ -181,7 +197,7 @@ new Rule("chr_job").schema ->
       get: ->
         Query.chr_npcs.find @id
 
-Query.transaction_chr = State.transaction ->
+State.transaction (m)->
   Set.tag.set  require "../yaml/chr_tag.yml"
 
   Set.face.set faces = require "../yaml/chr_face.yml"
@@ -224,3 +240,4 @@ Query.transaction_chr = State.transaction ->
       { chr_set_id, face_id, job }
 
   Set.chr_job.merge list
+, Query.static.meta

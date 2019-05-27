@@ -22,7 +22,7 @@ module.exports = class Rule
     @set   = Set
     @map   = Map
 
-    @all = Query.build Mem.State.base(@$name)
+    @all = Query.build Mem.State.base @$name
     @all.cache = {}
     @all._finder = new Finder @$name
 

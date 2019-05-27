@@ -46,7 +46,7 @@ new Rule("chat").schema ->
 
 
     anker: (part_id)->
-      { mark, guide } = @phase
+      { mark, guide } = @phase ? {}
       switch
         when ! guide
           ""
@@ -95,6 +95,8 @@ new Rule("chat").schema ->
           emit part_id, "rest", it
 
     @map_reduce: (o, emit)->
+      emit "index", o.phase_id,
+        max: parseInt o.idx
       emit "last", o.q.group,
         max: o.write_at
 

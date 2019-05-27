@@ -18,11 +18,11 @@ json = JSON.parse JSON.stringify Mem.State.transaction ->
 Mem.State.store json
 
 describe "sow oldlog", ->
-  for list_id, { $sort, $memory, $format } of json
+  for list_id, { $sort, $memory, $format } of json.pack
     for key, o of $sort
       test_is "$sort", list_id, key, o
 
-  for list_id, { $sort, $memory, $format } of json
+  for list_id, { $sort, $memory, $format } of json.pack
     for key, o of $format
       test_is "$format", list_id, key, o
 

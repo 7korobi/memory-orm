@@ -1,5 +1,7 @@
 _ = require 'lodash'
 
+Datum = require './datum.coffee'
+
 Set = {}
 Map = {}
 Name = {}
@@ -9,43 +11,51 @@ Finder = {}
 OBJ = ->
   new Object null
 
+META = (meta = OBJ())->
+  meta.pack ?= OBJ()
+  meta
+
 $step = 0
 step = -> ++$step
 
-cache = (type, { list })->
-  State[type][list] ?=
-    _step: step()
+cache = (type)-> ({ list })->
+  State[type].pack[list] ?=
     $sort:   OBJ()
     $memory: OBJ()
     $format:  OBJ()
 
 State =
-  transaction: (cb)->
-    State.$journal = result = OBJ()
-    cb()
-    State.$journal = OBJ()
-    result
+  transaction: (cb, meta)->
+    State.$journal = pack = META meta
+    cb meta
+    State.$journal = META()
+    pack
 
-  journal: cache.bind null, '$journal'
-  base:    cache.bind null, '$base'
+  journal: cache '$journal'
+  base:    cache '$base'
+  meta: -> State.$journal
   step:     OBJ()
-  $journal: OBJ()
-  $base:    OBJ()
+  $journal: META()
+  $base:    META()
 
-  store: (pack)->
-    for list, { $sort, $memory, $format } of pack
+  store: (meta)->
+    for list, { $sort, $memory, $format } of meta.pack
       { model } = Finder[list]
       base = State.base { list }
+      journal = State.journal { list }
 
       for key, o of $sort
         base.$sort[key] = o
+        journal.$sort[key] = o
 
       for key, o of $format
         base.$format[key] = o
+        journal.$format[key] = o
 
       for key, o of $memory
-        model.bless o.item
+        Datum.bless o, meta, model
         base.$memory[key] = o
+        journal.$memory[key] = o
 
       Finder[list].clear_cache()
 

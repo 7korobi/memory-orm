@@ -7815,9 +7815,9 @@ Object {
       "_id": "alien",
       "help": "宇宙時代に突入した「全部入り」のセットです。村落共同体は渓谷や高原ではなく、小惑星帯や移民船、軌道エレベーターの途中にあるでしょう。事件が始まるまでは、とても充実した近代的なインフラが整っていたのですが……",
       "intro": Array [
-        "この村落共同体にも恐るべき噂が流れてきた。ライフラインを寸断し、軌道変更の推進力を奪う**人狼**の脅威。ひそかに人間と入れ替わり、夜になると人間を襲う未知の生命体。なぜか単純な直接通信の機能しか果たさなくなった携帯を携え、不安に駆られた村人たちは集会所へと集まった。",
+        "この村落共同体にも恐るべき噂が流れてきた。ライフラインを寸断し、軌道変更の推進力を奪う<strong>人狼</strong>の脅威。ひそかに人間と入れ替わり、夜になると人間を襲う未知の生命体。なぜか単純な直接通信の機能しか果たさなくなった携帯を携え、不安に駆られた村人たちは集会所へと集まった。",
         "きみは自らの正体を知った。さあ、村人なら敵である人狼を退治しよう。人狼なら……狡猾に振る舞って人間たちを確実に仕留めていくのだ。",
-        "噂は現実だった。血塗られた活動を開始した未知の生命体**人狼**は、確かにこの中にいるのだ。
+        "噂は現実だった。血塗られた活動を開始した未知の生命体<strong>人狼</strong>は、確かにこの中にいるのだ。
 
 非力な人間が人狼に対抗するため、村人たちは一つのルールを定めた。投票により怪しい者を処刑していこうと。罪のない者を処刑してしまう事もあるだろうが、それも共同体のためにはやむを得ないと……。",
       ],
@@ -7845,11 +7845,10 @@ R&Dは、結社対抗措置の一環として新装備を開発しました。
 善良な市民はPLCから装備を受領、フィールドテストし、結社を発見しましょう。
 
 支給品の機密は善良に管理されているので、口を滑らせないことですね。次のニュース。ゴシゴシボット量産工場で、大量のチョコレートが……",
-        "*[培養槽]: ほいくえん
-_HOUR_時のニュースです。
-昨夜未明、培養槽が襲撃を受けました。_NPC_が破壊され、クローンと記憶の備蓄は失われました。
+        "_HOUR_時のニュースです。
+昨夜未明、<span data-ruby=\\"ほいくえん\\">培養槽</span>が襲撃を受けました。_NPC_が破壊され、クローンと記憶の備蓄は失われました。
 次のクローンはなにひとつうまくやることができないので、今日からの▼zap▼は~ブツン~
-（**すべてのニュース**・**チャンネルは沈黙し**、**天井は真っ暗に消灯した**。）
+（すべてのニュース・チャンネルは沈黙し、天井は真っ暗に消灯した。）
 
 そして静寂の中、誰かが言い出します。今日からは、▼zap▼は一日ひとりに制限しよう。厳しい制限だが、我慢するんだ。",
       ],
@@ -7860,7 +7859,7 @@ _HOUR_時のニュースです。
       "_id": "heavy",
       "help": "すべての役職、恩恵、事件を楽しむことができる、「全部入り」のセットです。",
       "intro": Array [
-        "狩人も立ち入らない深い森の奥からやってくる、**人狼**は、ひそかに人間と入れ替わり夜になると人間を襲うという。隣国の出身でありながら戦功名高く、Sirの称号を賜った若き英雄、Cointossと配下の聖貨騎士団は、この魔物の噂を重く見ていた。
+        "狩人も立ち入らない深い森の奥からやってくる、<strong>人狼</strong>は、ひそかに人間と入れ替わり夜になると人間を襲うという。隣国の出身でありながら戦功名高く、Sirの称号を賜った若き英雄、Cointossと配下の聖貨騎士団は、この魔物の噂を重く見ていた。
 
 恒例になりつつあった臨時徴税を収めた村人たちは、水車小屋で招集の命令を受け、不安を覚えつつも集会所へと集まるのだった……。",
         "教会の鐘が鳴らされ、聖貨騎士団が到着した。村の名士が応対する中、集まった人々はわけも知らされず、言い知れぬ不安を感じていた……。
@@ -7879,7 +7878,7 @@ _HOUR_時のニュースです。
       "intro": Array [
         "夜更けに響いた破滅の音に起こされ、不安に駆られた乗客たちは集会所へと集まった。単純な直接通信の機能しか果たさなくなった携帯を携えて。",
         "送信機は作動しない。救助には何日もかかる。それが結論だった。
-実りのない努力を尽くした末に、誰もが厳しい状況を理解し、きみは自らの使命に目覚めた。しかし、未知の生命体**人狼**は、確かにこの中にいるのだ。
+実りのない努力を尽くした末に、誰もが厳しい状況を理解し、きみは自らの使命に目覚めた。しかし、未知の生命体<strong>人狼</strong>は、確かにこの中にいるのだ。
 さあ、人間なら敵である人狼を退治しよう。人狼なら……狡猾に振る舞って人間たちを確実に仕留めていくのだ。",
         "物資もエネルギーも限られた中、人狼に対抗するために乗客たちは一つのルールを定めた。投票により怪しい者をここから放り出そうと。宇宙服ひとつでは命の保証がないが、それもやむを得ないと……。",
       ],
@@ -7899,7 +7898,7 @@ _HOUR_時のニュースです。
 閉じ込められたプレイヤーたち。
 トランプを模した仕掛けが外れない。
 与えられたゲームの条件をクリアしなければ、この仕掛けは爆発するという。プレイヤーたちは突如突きつけられた条件に半信半疑ながらも、互いに情報を交換するべく集い始めた。",
-        "**ゲームの開始が告げられた**。
+        "<strong>ゲームの開始が告げられた</strong>。
 このようなゲームが現実なわけがない。そう理性を働かせながらも、プレイヤーたちは自らに与えられた勝利条件を確認した。心の片隅から湧きあがる不安に突き動かされ、生き残るために行動を開始したのだ。",
         "目の前に転がる、かつて人間だったモノ。
 ゲームは現実だった。プレイヤーは否応なくこの状況を受け入れる。それは仕掛けの解除条件はそれぞれ異なり、誰がどの仕掛けを持っているのかわからないというゲーム。
@@ -7916,9 +7915,9 @@ _HOUR_時のニュースです。
       "_id": "village",
       "help": "すべての役職、恩恵、事件を楽しむことができる、「全部入り」のセットです。",
       "intro": Array [
-        "この村にも恐るべき**人狼**の噂が流れてきた。ひそかに人間と入れ替わり、夜になると人間を襲うという魔物。不安に駆られた村人たちは、集会所へと集まるのだった……。",
+        "この村にも恐るべき<strong>人狼</strong>の噂が流れてきた。ひそかに人間と入れ替わり、夜になると人間を襲うという魔物。不安に駆られた村人たちは、集会所へと集まるのだった……。",
         "きみは自らの正体を知った。さあ、村人なら敵である人狼を退治しよう。人狼なら……狡猾に振る舞って人間たちを確実に仕留めていくのだ。",
-        "噂は現実だった。血塗られた定めに従う魔物**人狼**は、確かにこの中にいるのだ。
+        "噂は現実だった。血塗られた定めに従う魔物<strong>人狼</strong>は、確かにこの中にいるのだ。
 
 非力な人間が人狼に対抗するため、村人たちは一つのルールを定めた。投票により怪しい者を処刑していこうと。罪のない者を処刑してしまう事もあるだろうが、それも村のためにはやむを得ないと……。",
       ],
@@ -7936,9 +7935,9 @@ _HOUR_時のニュースです。
       "_id": "village",
       "help": "すべての役職、恩恵、事件を楽しむことができる、「全部入り」のセットです。",
       "intro": Array [
-        "この村にも恐るべき**人狼**の噂が流れてきた。ひそかに人間と入れ替わり、夜になると人間を襲うという魔物。不安に駆られた村人たちは、集会所へと集まるのだった……。",
+        "この村にも恐るべき<strong>人狼</strong>の噂が流れてきた。ひそかに人間と入れ替わり、夜になると人間を襲うという魔物。不安に駆られた村人たちは、集会所へと集まるのだった……。",
         "きみは自らの正体を知った。さあ、村人なら敵である人狼を退治しよう。人狼なら……狡猾に振る舞って人間たちを確実に仕留めていくのだ。",
-        "噂は現実だった。血塗られた定めに従う魔物**人狼**は、確かにこの中にいるのだ。
+        "噂は現実だった。血塗られた定めに従う魔物<strong>人狼</strong>は、確かにこの中にいるのだ。
 
 非力な人間が人狼に対抗するため、村人たちは一つのルールを定めた。投票により怪しい者を処刑していこうと。罪のない者を処刑してしまう事もあるだろうが、それも村のためにはやむを得ないと……。",
       ],
@@ -7949,7 +7948,7 @@ _HOUR_時のニュースです。
       "_id": "heavy",
       "help": "すべての役職、恩恵、事件を楽しむことができる、「全部入り」のセットです。",
       "intro": Array [
-        "狩人も立ち入らない深い森の奥からやってくる、**人狼**は、ひそかに人間と入れ替わり夜になると人間を襲うという。隣国の出身でありながら戦功名高く、Sirの称号を賜った若き英雄、Cointossと配下の聖貨騎士団は、この魔物の噂を重く見ていた。
+        "狩人も立ち入らない深い森の奥からやってくる、<strong>人狼</strong>は、ひそかに人間と入れ替わり夜になると人間を襲うという。隣国の出身でありながら戦功名高く、Sirの称号を賜った若き英雄、Cointossと配下の聖貨騎士団は、この魔物の噂を重く見ていた。
 
 恒例になりつつあった臨時徴税を収めた村人たちは、水車小屋で招集の命令を受け、不安を覚えつつも集会所へと集まるのだった……。",
         "教会の鐘が鳴らされ、聖貨騎士団が到着した。村の名士が応対する中、集まった人々はわけも知らされず、言い知れぬ不安を感じていた……。
@@ -7970,7 +7969,7 @@ _HOUR_時のニュースです。
 閉じ込められたプレイヤーたち。
 トランプを模した仕掛けが外れない。
 与えられたゲームの条件をクリアしなければ、この仕掛けは爆発するという。プレイヤーたちは突如突きつけられた条件に半信半疑ながらも、互いに情報を交換するべく集い始めた。",
-        "**ゲームの開始が告げられた**。
+        "<strong>ゲームの開始が告げられた</strong>。
 このようなゲームが現実なわけがない。そう理性を働かせながらも、プレイヤーたちは自らに与えられた勝利条件を確認した。心の片隅から湧きあがる不安に突き動かされ、生き残るために行動を開始したのだ。",
         "目の前に転がる、かつて人間だったモノ。
 ゲームは現実だった。プレイヤーは否応なくこの状況を受け入れる。それは仕掛けの解除条件はそれぞれ異なり、誰がどの仕掛けを持っているのかわからないというゲーム。
@@ -8005,11 +8004,10 @@ R&Dは、結社対抗措置の一環として新装備を開発しました。
 善良な市民はPLCから装備を受領、フィールドテストし、結社を発見しましょう。
 
 支給品の機密は善良に管理されているので、口を滑らせないことですね。次のニュース。ゴシゴシボット量産工場で、大量のチョコレートが……",
-        "*[培養槽]: ほいくえん
-_HOUR_時のニュースです。
-昨夜未明、培養槽が襲撃を受けました。_NPC_が破壊され、クローンと記憶の備蓄は失われました。
+        "_HOUR_時のニュースです。
+昨夜未明、<span data-ruby=\\"ほいくえん\\">培養槽</span>が襲撃を受けました。_NPC_が破壊され、クローンと記憶の備蓄は失われました。
 次のクローンはなにひとつうまくやることができないので、今日からの▼zap▼は~ブツン~
-（**すべてのニュース**・**チャンネルは沈黙し**、**天井は真っ暗に消灯した**。）
+（すべてのニュース・チャンネルは沈黙し、天井は真っ暗に消灯した。）
 
 そして静寂の中、誰かが言い出します。今日からは、▼zap▼は一日ひとりに制限しよう。厳しい制限だが、我慢するんだ。",
       ],
@@ -8022,7 +8020,7 @@ _HOUR_時のニュースです。
       "intro": Array [
         "夜更けに響いた破滅の音に起こされ、不安に駆られた乗客たちは集会所へと集まった。単純な直接通信の機能しか果たさなくなった携帯を携えて。",
         "送信機は作動しない。救助には何日もかかる。それが結論だった。
-実りのない努力を尽くした末に、誰もが厳しい状況を理解し、きみは自らの使命に目覚めた。しかし、未知の生命体**人狼**は、確かにこの中にいるのだ。
+実りのない努力を尽くした末に、誰もが厳しい状況を理解し、きみは自らの使命に目覚めた。しかし、未知の生命体<strong>人狼</strong>は、確かにこの中にいるのだ。
 さあ、人間なら敵である人狼を退治しよう。人狼なら……狡猾に振る舞って人間たちを確実に仕留めていくのだ。",
         "物資もエネルギーも限られた中、人狼に対抗するために乗客たちは一つのルールを定めた。投票により怪しい者をここから放り出そうと。宇宙服ひとつでは命の保証がないが、それもやむを得ないと……。",
       ],
@@ -8033,9 +8031,9 @@ _HOUR_時のニュースです。
       "_id": "alien",
       "help": "宇宙時代に突入した「全部入り」のセットです。村落共同体は渓谷や高原ではなく、小惑星帯や移民船、軌道エレベーターの途中にあるでしょう。事件が始まるまでは、とても充実した近代的なインフラが整っていたのですが……",
       "intro": Array [
-        "この村落共同体にも恐るべき噂が流れてきた。ライフラインを寸断し、軌道変更の推進力を奪う**人狼**の脅威。ひそかに人間と入れ替わり、夜になると人間を襲う未知の生命体。なぜか単純な直接通信の機能しか果たさなくなった携帯を携え、不安に駆られた村人たちは集会所へと集まった。",
+        "この村落共同体にも恐るべき噂が流れてきた。ライフラインを寸断し、軌道変更の推進力を奪う<strong>人狼</strong>の脅威。ひそかに人間と入れ替わり、夜になると人間を襲う未知の生命体。なぜか単純な直接通信の機能しか果たさなくなった携帯を携え、不安に駆られた村人たちは集会所へと集まった。",
         "きみは自らの正体を知った。さあ、村人なら敵である人狼を退治しよう。人狼なら……狡猾に振る舞って人間たちを確実に仕留めていくのだ。",
-        "噂は現実だった。血塗られた活動を開始した未知の生命体**人狼**は、確かにこの中にいるのだ。
+        "噂は現実だった。血塗られた活動を開始した未知の生命体<strong>人狼</strong>は、確かにこの中にいるのだ。
 
 非力な人間が人狼に対抗するため、村人たちは一つのルールを定めた。投票により怪しい者を処刑していこうと。罪のない者を処刑してしまう事もあるだろうが、それも共同体のためにはやむを得ないと……。",
       ],
@@ -11308,7 +11306,7 @@ Object {
           "_id": "nothing",
           "able_ids": Array [],
           "group": "EVENT",
-          "help": "",
+          "help": "今日は、特別なことのない一日のようだ。さあ普段通り、誰かを処刑台にかけよう。",
           "label": "普通の日",
           "win": null,
         },
@@ -11316,7 +11314,9 @@ Object {
           "_id": "aprilfool",
           "able_ids": Array [],
           "group": "EVENT",
-          "help": "",
+          "help": "<h3><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_APRIL_FOOL\\" TARGET=\\"_blank\\">四月馬鹿</A></h3>
+大変、大変、大変なことになった。きみの役職は変化しているかもしれない。もしも誰かと絆を結んでいるなら、急に相手が憎くなってしまい、絆の相手だけにしか投票できない。 そして悟ってしまった。今夜だけは、相方の後を追うことはないと……。
+<table> <tr> <th colspan=3>役職の変貌 <th rowspan=4>※一日で元に戻る <tr> <td>賢者 <td>←→ <td>魔女 <tr> <td>守護者 <td>←→ <td>長老 <tr> <td>賞金稼 <td>←→ <td>少女 </table>",
           "label": "四月馬鹿",
           "win": null,
         },
@@ -11324,7 +11324,9 @@ Object {
           "_id": "turnfink",
           "able_ids": Array [],
           "group": "EVENT",
-          "help": "",
+          "help": "<h3><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_TURN_FINK\\" TARGET=\\"_blank\\">二重スパイ</A></h3>
+なんということだろう！一人が村側を裏切り、狼に与する半端者になってしまった。明日以降も、彼は村人を裏切り続けるだろう……。
+決定者や光の輪の持ち主なら、このときにその力を手放してしまう。",
           "label": "二重スパイ",
           "win": null,
         },
@@ -11332,7 +11334,9 @@ Object {
           "_id": "turnfairy",
           "able_ids": Array [],
           "group": "EVENT",
-          "help": "",
+          "help": "<h3><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_TURN_FAIRY\\" TARGET=\\"_blank\\">妖精の輪</A></h3>
+なんということだろう！一人が森に立ち入り、妖精の養子になってしまった。明日以降も、彼は村人を裏切り続けるだろう……。
+決定者や光の輪の持ち主なら、このときにその力を手放してしまう。",
           "label": "妖精の輪",
           "win": null,
         },
@@ -11340,7 +11344,8 @@ Object {
           "_id": "eclipse",
           "able_ids": Array [],
           "group": "EVENT",
-          "help": "",
+          "help": "<h3><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_ECLIPSE\\" TARGET=\\"_blank\\">日蝕</A></h3>
+暗い日蝕が村中を覆い、お互い顔も名前も解らない。この闇夜は丸一日続くだろう。他人になりすまし、議論を混乱させることもできてしまうかもしれない。",
           "label": "日蝕",
           "win": null,
         },
@@ -11348,7 +11353,8 @@ Object {
           "_id": "cointoss",
           "able_ids": Array [],
           "group": "EVENT",
-          "help": "",
+          "help": "<h3><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_COINTOSS\\" TARGET=\\"_blank\\">Sir Cointoss</A></h3>
+お控えなさい。お控えなさい。コイントス卿はこの村の投票結果に意見があるようでございます。 卿の御意向によっては、投票結果に基づいた処刑を取り止めにすることもあります。 五分五分くらいかな。",
           "label": "Sir Cointoss",
           "win": null,
         },
@@ -11356,7 +11362,8 @@ Object {
           "_id": "force",
           "able_ids": Array [],
           "group": "EVENT",
-          "help": "",
+          "help": "<h3><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_FORCE\\" TARGET=\\"_blank\\">影響力</A></h3>
+今日の投票箱は無色透明だ。だれかが投票した瞬間にその内容はハッキリと見えるから、投票をセットするときは気を付けて！",
           "label": "影響力",
           "win": null,
         },
@@ -11364,7 +11371,9 @@ Object {
           "_id": "miracle",
           "able_ids": Array [],
           "group": "EVENT",
-          "help": "",
+          "help": "<h3><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_MIRACLE\\" TARGET=\\"_blank\\">奇跡</A></h3>
+帰ってきた！黄泉の国から、今日の襲撃で死んだ犠牲者がかえってきた！能力を失ったかもしれないけれど、それは些細なことだよ！ね！
+人狼、一匹狼、賞金稼ぎなどに襲われた死者は生き返る。ただし、その能力は失われる。",
           "label": "奇跡",
           "win": null,
         },
@@ -11372,7 +11381,8 @@ Object {
           "_id": "prophecy",
           "able_ids": Array [],
           "group": "EVENT",
-          "help": "",
+          "help": "<h3><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_PROPHECY\\" TARGET=\\"_blank\\">聖者のお告げ</A></h3>
+聖者は民の夢枕に告げられました。今の任より、<h3>決定者</h3>にふさわしい人物がいると。 旧き任務は解かれ、あたらしい<h3>決定者</h3>は皆に喝采で迎え入れられるだろう。",
           "label": "聖者のお告げ",
           "win": null,
         },
@@ -11380,7 +11390,8 @@ Object {
           "_id": "clamor",
           "able_ids": Array [],
           "group": "EVENT",
-          "help": "",
+          "help": "<h3><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_CLAMOR\\" TARGET=\\"_blank\\">不満</A></h3>
+村には不満が鬱屈している。今夜の投票でまた人間を処刑してしまったら……悪夢が始まる。 はじけた不満に背中を押され、話し合いもなしに、さらに一人の首を必要とするだろう。",
           "label": "不満",
           "win": null,
         },
@@ -11388,7 +11399,8 @@ Object {
           "_id": "fire",
           "able_ids": Array [],
           "group": "EVENT",
-          "help": "",
+          "help": "<h3><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_FIRE\\" TARGET=\\"_blank\\">熱意</A></h3>
+村には期待に満ちた熱意が渦巻いている。今夜の投票がひとならぬものを処刑できたなら……悪夢が始まるのだ。 はじけた熱意に背中を押され、話し合いもなしに、さらに一人の首を必要とするだろう。",
           "label": "熱意",
           "win": null,
         },
@@ -11396,7 +11408,9 @@ Object {
           "_id": "nightmare",
           "able_ids": Array [],
           "group": "EVENT",
-          "help": "",
+          "help": "<h3><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_NIGHTMARE\\" TARGET=\\"_blank\\">悪夢</A></h3>
+恐ろしい一日が始まる。今日は投票だけができる。発言も、能力も使えない。そして、突然死は発生しない。
+さあ投票して、こんな日が早く過ぎ去ってしまうよう、ひとり祈りを捧げよう。",
           "label": "悪夢",
           "win": null,
         },
@@ -11404,7 +11418,9 @@ Object {
           "_id": "ghost",
           "able_ids": Array [],
           "group": "EVENT",
-          "help": "",
+          "help": "<h3><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_GHOST\\" TARGET=\\"_blank\\">亡霊</A></h3>
+今夜、人狼に殺された人は人狼になる。また、襲撃を実行した人狼は命を落としてしまうだろう。人狼となった者は報復行動を行わない。ただし、命拾いをしたならば人狼にはならない。
+一匹狼は亡霊を作らない。",
           "label": "亡霊",
           "win": null,
         },
@@ -11412,7 +11428,9 @@ Object {
           "_id": "escape",
           "able_ids": Array [],
           "group": "EVENT",
-          "help": "",
+          "help": "<h3>逃亡</h3>
+せめて一人だけでも、なんとかして逃がそう。今夜の投票で逃亡者を一人決め、夜中の処刑のかわりに密かに逃がすのだ。
+しかし逃亡者は一日のあいだ逃亡生活を続け、ついに村へと帰還してしまう。帰還者の票は通常の三倍尊重されるだろう。 実装がめんどうだから、このまま未定義にしておこうかな。",
           "label": "逃亡",
           "win": null,
         },
@@ -11420,7 +11438,8 @@ Object {
           "_id": "seance",
           "able_ids": Array [],
           "group": "EVENT",
-          "help": "",
+          "help": "<h3><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_SEANSE\\" TARGET=\\"_blank\\">降霊会</A></h3>
+こっくりさん、こっくりさん…… 秘密の儀式で、墓場の霊魂がかえってきた。今日に限り、生者も姿の見えぬ死者も屋根を共にし、議論するだろう。",
           "label": "降霊会",
           "win": null,
         },
@@ -12945,7 +12964,9 @@ Object {
       "_id": "aprilfool",
       "able_ids": Array [],
       "group": "EVENT",
-      "help": "",
+      "help": "<h3><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_APRIL_FOOL\\" TARGET=\\"_blank\\">四月馬鹿</A></h3>
+大変、大変、大変なことになった。きみの役職は変化しているかもしれない。もしも誰かと絆を結んでいるなら、急に相手が憎くなってしまい、絆の相手だけにしか投票できない。 そして悟ってしまった。今夜だけは、相方の後を追うことはないと……。
+<table> <tr> <th colspan=3>役職の変貌 <th rowspan=4>※一日で元に戻る <tr> <td>賢者 <td>←→ <td>魔女 <tr> <td>守護者 <td>←→ <td>長老 <tr> <td>賞金稼 <td>←→ <td>少女 </table>",
       "label": "四月馬鹿",
       "win": null,
     },
@@ -13045,7 +13066,8 @@ Object {
       "_id": "clamor",
       "able_ids": Array [],
       "group": "EVENT",
-      "help": "",
+      "help": "<h3><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_CLAMOR\\" TARGET=\\"_blank\\">不満</A></h3>
+村には不満が鬱屈している。今夜の投票でまた人間を処刑してしまったら……悪夢が始まる。 はじけた不満に背中を押され、話し合いもなしに、さらに一人の首を必要とするだろう。",
       "label": "不満",
       "win": null,
     },
@@ -13053,7 +13075,8 @@ Object {
       "_id": "cointoss",
       "able_ids": Array [],
       "group": "EVENT",
-      "help": "",
+      "help": "<h3><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_COINTOSS\\" TARGET=\\"_blank\\">Sir Cointoss</A></h3>
+お控えなさい。お控えなさい。コイントス卿はこの村の投票結果に意見があるようでございます。 卿の御意向によっては、投票結果に基づいた処刑を取り止めにすることもあります。 五分五分くらいかな。",
       "label": "Sir Cointoss",
       "win": null,
     },
@@ -13265,7 +13288,8 @@ Object {
       "_id": "eclipse",
       "able_ids": Array [],
       "group": "EVENT",
-      "help": "",
+      "help": "<h3><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_ECLIPSE\\" TARGET=\\"_blank\\">日蝕</A></h3>
+暗い日蝕が村中を覆い、お互い顔も名前も解らない。この闇夜は丸一日続くだろう。他人になりすまし、議論を混乱させることもできてしまうかもしれない。",
       "label": "日蝕",
       "win": null,
     },
@@ -13308,7 +13332,9 @@ Object {
       "_id": "escape",
       "able_ids": Array [],
       "group": "EVENT",
-      "help": "",
+      "help": "<h3>逃亡</h3>
+せめて一人だけでも、なんとかして逃がそう。今夜の投票で逃亡者を一人決め、夜中の処刑のかわりに密かに逃がすのだ。
+しかし逃亡者は一日のあいだ逃亡生活を続け、ついに村へと帰還してしまう。帰還者の票は通常の三倍尊重されるだろう。 実装がめんどうだから、このまま未定義にしておこうかな。",
       "label": "逃亡",
       "win": null,
     },
@@ -13392,7 +13418,8 @@ Object {
       "_id": "fire",
       "able_ids": Array [],
       "group": "EVENT",
-      "help": "",
+      "help": "<h3><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_FIRE\\" TARGET=\\"_blank\\">熱意</A></h3>
+村には期待に満ちた熱意が渦巻いている。今夜の投票がひとならぬものを処刑できたなら……悪夢が始まるのだ。 はじけた熱意に背中を押され、話し合いもなしに、さらに一人の首を必要とするだろう。",
       "label": "熱意",
       "win": null,
     },
@@ -13428,7 +13455,8 @@ Object {
       "_id": "force",
       "able_ids": Array [],
       "group": "EVENT",
-      "help": "",
+      "help": "<h3><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_FORCE\\" TARGET=\\"_blank\\">影響力</A></h3>
+今日の投票箱は無色透明だ。だれかが投票した瞬間にその内容はハッキリと見えるから、投票をセットするときは気を付けて！",
       "label": "影響力",
       "win": null,
     },
@@ -13451,7 +13479,9 @@ Object {
       "_id": "ghost",
       "able_ids": Array [],
       "group": "EVENT",
-      "help": "",
+      "help": "<h3><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_GHOST\\" TARGET=\\"_blank\\">亡霊</A></h3>
+今夜、人狼に殺された人は人狼になる。また、襲撃を実行した人狼は命を落としてしまうだろう。人狼となった者は報復行動を行わない。ただし、命拾いをしたならば人狼にはならない。
+一匹狼は亡霊を作らない。",
       "label": "亡霊",
       "win": null,
     },
@@ -13862,7 +13892,9 @@ Object {
       "_id": "miracle",
       "able_ids": Array [],
       "group": "EVENT",
-      "help": "",
+      "help": "<h3><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_MIRACLE\\" TARGET=\\"_blank\\">奇跡</A></h3>
+帰ってきた！黄泉の国から、今日の襲撃で死んだ犠牲者がかえってきた！能力を失ったかもしれないけれど、それは些細なことだよ！ね！
+人狼、一匹狼、賞金稼ぎなどに襲われた死者は生き返る。ただし、その能力は失われる。",
       "label": "奇跡",
       "win": null,
     },
@@ -13911,7 +13943,9 @@ Object {
       "_id": "nightmare",
       "able_ids": Array [],
       "group": "EVENT",
-      "help": "",
+      "help": "<h3><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_NIGHTMARE\\" TARGET=\\"_blank\\">悪夢</A></h3>
+恐ろしい一日が始まる。今日は投票だけができる。発言も、能力も使えない。そして、突然死は発生しない。
+さあ投票して、こんな日が早く過ぎ去ってしまうよう、ひとり祈りを捧げよう。",
       "label": "悪夢",
       "win": null,
     },
@@ -13927,7 +13961,7 @@ Object {
       "_id": "nothing",
       "able_ids": Array [],
       "group": "EVENT",
-      "help": "",
+      "help": "今日は、特別なことのない一日のようだ。さあ普段通り、誰かを処刑台にかけよう。",
       "label": "普通の日",
       "win": null,
     },
@@ -14038,7 +14072,8 @@ Object {
       "_id": "prophecy",
       "able_ids": Array [],
       "group": "EVENT",
-      "help": "",
+      "help": "<h3><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_PROPHECY\\" TARGET=\\"_blank\\">聖者のお告げ</A></h3>
+聖者は民の夢枕に告げられました。今の任より、<h3>決定者</h3>にふさわしい人物がいると。 旧き任務は解かれ、あたらしい<h3>決定者</h3>は皆に喝采で迎え入れられるだろう。",
       "label": "聖者のお告げ",
       "win": null,
     },
@@ -14093,7 +14128,8 @@ Object {
       "_id": "seance",
       "able_ids": Array [],
       "group": "EVENT",
-      "help": "",
+      "help": "<h3><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_SEANSE\\" TARGET=\\"_blank\\">降霊会</A></h3>
+こっくりさん、こっくりさん…… 秘密の儀式で、墓場の霊魂がかえってきた。今日に限り、生者も姿の見えぬ死者も屋根を共にし、議論するだろう。",
       "label": "降霊会",
       "win": null,
     },
@@ -14332,7 +14368,9 @@ Object {
       "_id": "turnfairy",
       "able_ids": Array [],
       "group": "EVENT",
-      "help": "",
+      "help": "<h3><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_TURN_FAIRY\\" TARGET=\\"_blank\\">妖精の輪</A></h3>
+なんということだろう！一人が森に立ち入り、妖精の養子になってしまった。明日以降も、彼は村人を裏切り続けるだろう……。
+決定者や光の輪の持ち主なら、このときにその力を手放してしまう。",
       "label": "妖精の輪",
       "win": null,
     },
@@ -14340,7 +14378,9 @@ Object {
       "_id": "turnfink",
       "able_ids": Array [],
       "group": "EVENT",
-      "help": "",
+      "help": "<h3><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_TURN_FINK\\" TARGET=\\"_blank\\">二重スパイ</A></h3>
+なんということだろう！一人が村側を裏切り、狼に与する半端者になってしまった。明日以降も、彼は村人を裏切り続けるだろう……。
+決定者や光の輪の持ち主なら、このときにその力を手放してしまう。",
       "label": "二重スパイ",
       "win": null,
     },
@@ -14549,7 +14589,7 @@ Object {
       "_id": "nothing",
       "able_ids": Array [],
       "group": "EVENT",
-      "help": "",
+      "help": "今日は、特別なことのない一日のようだ。さあ普段通り、誰かを処刑台にかけよう。",
       "label": "普通の日",
       "win": null,
     },
@@ -14557,7 +14597,9 @@ Object {
       "_id": "aprilfool",
       "able_ids": Array [],
       "group": "EVENT",
-      "help": "",
+      "help": "<h3><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_APRIL_FOOL\\" TARGET=\\"_blank\\">四月馬鹿</A></h3>
+大変、大変、大変なことになった。きみの役職は変化しているかもしれない。もしも誰かと絆を結んでいるなら、急に相手が憎くなってしまい、絆の相手だけにしか投票できない。 そして悟ってしまった。今夜だけは、相方の後を追うことはないと……。
+<table> <tr> <th colspan=3>役職の変貌 <th rowspan=4>※一日で元に戻る <tr> <td>賢者 <td>←→ <td>魔女 <tr> <td>守護者 <td>←→ <td>長老 <tr> <td>賞金稼 <td>←→ <td>少女 </table>",
       "label": "四月馬鹿",
       "win": null,
     },
@@ -14565,7 +14607,9 @@ Object {
       "_id": "turnfink",
       "able_ids": Array [],
       "group": "EVENT",
-      "help": "",
+      "help": "<h3><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_TURN_FINK\\" TARGET=\\"_blank\\">二重スパイ</A></h3>
+なんということだろう！一人が村側を裏切り、狼に与する半端者になってしまった。明日以降も、彼は村人を裏切り続けるだろう……。
+決定者や光の輪の持ち主なら、このときにその力を手放してしまう。",
       "label": "二重スパイ",
       "win": null,
     },
@@ -14573,7 +14617,9 @@ Object {
       "_id": "turnfairy",
       "able_ids": Array [],
       "group": "EVENT",
-      "help": "",
+      "help": "<h3><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_TURN_FAIRY\\" TARGET=\\"_blank\\">妖精の輪</A></h3>
+なんということだろう！一人が森に立ち入り、妖精の養子になってしまった。明日以降も、彼は村人を裏切り続けるだろう……。
+決定者や光の輪の持ち主なら、このときにその力を手放してしまう。",
       "label": "妖精の輪",
       "win": null,
     },
@@ -14581,7 +14627,8 @@ Object {
       "_id": "eclipse",
       "able_ids": Array [],
       "group": "EVENT",
-      "help": "",
+      "help": "<h3><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_ECLIPSE\\" TARGET=\\"_blank\\">日蝕</A></h3>
+暗い日蝕が村中を覆い、お互い顔も名前も解らない。この闇夜は丸一日続くだろう。他人になりすまし、議論を混乱させることもできてしまうかもしれない。",
       "label": "日蝕",
       "win": null,
     },
@@ -14589,7 +14636,8 @@ Object {
       "_id": "cointoss",
       "able_ids": Array [],
       "group": "EVENT",
-      "help": "",
+      "help": "<h3><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_COINTOSS\\" TARGET=\\"_blank\\">Sir Cointoss</A></h3>
+お控えなさい。お控えなさい。コイントス卿はこの村の投票結果に意見があるようでございます。 卿の御意向によっては、投票結果に基づいた処刑を取り止めにすることもあります。 五分五分くらいかな。",
       "label": "Sir Cointoss",
       "win": null,
     },
@@ -14597,7 +14645,8 @@ Object {
       "_id": "force",
       "able_ids": Array [],
       "group": "EVENT",
-      "help": "",
+      "help": "<h3><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_FORCE\\" TARGET=\\"_blank\\">影響力</A></h3>
+今日の投票箱は無色透明だ。だれかが投票した瞬間にその内容はハッキリと見えるから、投票をセットするときは気を付けて！",
       "label": "影響力",
       "win": null,
     },
@@ -14605,7 +14654,9 @@ Object {
       "_id": "miracle",
       "able_ids": Array [],
       "group": "EVENT",
-      "help": "",
+      "help": "<h3><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_MIRACLE\\" TARGET=\\"_blank\\">奇跡</A></h3>
+帰ってきた！黄泉の国から、今日の襲撃で死んだ犠牲者がかえってきた！能力を失ったかもしれないけれど、それは些細なことだよ！ね！
+人狼、一匹狼、賞金稼ぎなどに襲われた死者は生き返る。ただし、その能力は失われる。",
       "label": "奇跡",
       "win": null,
     },
@@ -14613,7 +14664,8 @@ Object {
       "_id": "prophecy",
       "able_ids": Array [],
       "group": "EVENT",
-      "help": "",
+      "help": "<h3><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_PROPHECY\\" TARGET=\\"_blank\\">聖者のお告げ</A></h3>
+聖者は民の夢枕に告げられました。今の任より、<h3>決定者</h3>にふさわしい人物がいると。 旧き任務は解かれ、あたらしい<h3>決定者</h3>は皆に喝采で迎え入れられるだろう。",
       "label": "聖者のお告げ",
       "win": null,
     },
@@ -14621,7 +14673,8 @@ Object {
       "_id": "clamor",
       "able_ids": Array [],
       "group": "EVENT",
-      "help": "",
+      "help": "<h3><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_CLAMOR\\" TARGET=\\"_blank\\">不満</A></h3>
+村には不満が鬱屈している。今夜の投票でまた人間を処刑してしまったら……悪夢が始まる。 はじけた不満に背中を押され、話し合いもなしに、さらに一人の首を必要とするだろう。",
       "label": "不満",
       "win": null,
     },
@@ -14629,7 +14682,8 @@ Object {
       "_id": "fire",
       "able_ids": Array [],
       "group": "EVENT",
-      "help": "",
+      "help": "<h3><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_FIRE\\" TARGET=\\"_blank\\">熱意</A></h3>
+村には期待に満ちた熱意が渦巻いている。今夜の投票がひとならぬものを処刑できたなら……悪夢が始まるのだ。 はじけた熱意に背中を押され、話し合いもなしに、さらに一人の首を必要とするだろう。",
       "label": "熱意",
       "win": null,
     },
@@ -14637,7 +14691,9 @@ Object {
       "_id": "nightmare",
       "able_ids": Array [],
       "group": "EVENT",
-      "help": "",
+      "help": "<h3><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_NIGHTMARE\\" TARGET=\\"_blank\\">悪夢</A></h3>
+恐ろしい一日が始まる。今日は投票だけができる。発言も、能力も使えない。そして、突然死は発生しない。
+さあ投票して、こんな日が早く過ぎ去ってしまうよう、ひとり祈りを捧げよう。",
       "label": "悪夢",
       "win": null,
     },
@@ -14645,7 +14701,9 @@ Object {
       "_id": "ghost",
       "able_ids": Array [],
       "group": "EVENT",
-      "help": "",
+      "help": "<h3><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_GHOST\\" TARGET=\\"_blank\\">亡霊</A></h3>
+今夜、人狼に殺された人は人狼になる。また、襲撃を実行した人狼は命を落としてしまうだろう。人狼となった者は報復行動を行わない。ただし、命拾いをしたならば人狼にはならない。
+一匹狼は亡霊を作らない。",
       "label": "亡霊",
       "win": null,
     },
@@ -14653,7 +14711,9 @@ Object {
       "_id": "escape",
       "able_ids": Array [],
       "group": "EVENT",
-      "help": "",
+      "help": "<h3>逃亡</h3>
+せめて一人だけでも、なんとかして逃がそう。今夜の投票で逃亡者を一人決め、夜中の処刑のかわりに密かに逃がすのだ。
+しかし逃亡者は一日のあいだ逃亡生活を続け、ついに村へと帰還してしまう。帰還者の票は通常の三倍尊重されるだろう。 実装がめんどうだから、このまま未定義にしておこうかな。",
       "label": "逃亡",
       "win": null,
     },
@@ -14661,7 +14721,8 @@ Object {
       "_id": "seance",
       "able_ids": Array [],
       "group": "EVENT",
-      "help": "",
+      "help": "<h3><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_SEANSE\\" TARGET=\\"_blank\\">降霊会</A></h3>
+こっくりさん、こっくりさん…… 秘密の儀式で、墓場の霊魂がかえってきた。今日に限り、生者も姿の見えぬ死者も屋根を共にし、議論するだろう。",
       "label": "降霊会",
       "win": null,
     },
@@ -19848,351 +19909,6 @@ Object {
     "wbbs_c",
     "wbbs_f",
     "wbbs_g",
-  ],
-}
-`;
-
-exports[`traps reduce snapshot 1`] = `
-Object {
-  "hash": Object {
-    "aprilfool": model {
-      "_id": "aprilfool",
-      "cmd": "trap",
-      "help": "<b><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_APRIL_FOOL\\" TARGET=\\"_blank\\">四月馬鹿</A></b>
-<br>
-大変、大変、大変なことになった。きみの役職は変化しているかもしれない。もしも誰かと絆を結んでいるなら、急に相手が憎くなってしまい、絆の相手だけにしか投票できない。
-そして悟ってしまった。今夜だけは、相方の後を追うことはないと……。
-<br>
-<table class=\\"table\\">
-<tr>
-<th colspan=3>役職の変貌
-<th rowspan=4>※一日で元に戻る
-<tr>
-<td>賢者
-<td>←→
-<td>魔女
-<tr>
-<td>守護者
-<td>←→
-<td>長老
-<tr>
-<td>賞金稼
-<td>←→
-<td>少女
-</table>",
-      "label": "四月馬鹿",
-    },
-    "blank": model {
-      "_id": "blank",
-      "help": "",
-      "label": "普通の日",
-    },
-    "clamor": model {
-      "_id": "clamor",
-      "cmd": "trap",
-      "help": "<b><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_CLAMOR\\" TARGET=\\"_blank\\">不満</A></b>
-<br>
-村には不満が鬱屈している。今夜の投票でまた人間を処刑してしまったら……悪夢が始まる。
-はじけた不満に背中を押され、話し合いもなしに、さらに一人の首を必要とするだろう。",
-      "label": "不満",
-    },
-    "cointoss": model {
-      "_id": "cointoss",
-      "cmd": "trap",
-      "help": "<b><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_COINTOSS\\" TARGET=\\"_blank\\">Sir Cointoss</A></b>
-<br>
-お控えなさい。お控えなさい。コイントス卿はこの村の投票結果に意見があるようでございます。
-卿の御意向によっては、投票結果に基づいた処刑を取り止めにすることもあります。
-五分五分くらいかな。",
-      "label": "Sir Cointoss",
-    },
-    "eclipse": model {
-      "_id": "eclipse",
-      "cmd": "trap",
-      "help": "<b><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_ECLIPSE\\" TARGET=\\"_blank\\">日蝕</A></b>
-<br>
-暗い日蝕が村中を覆い、お互い顔も名前も解らない。この闇夜は丸一日続くだろう。他人になりすまし、議論を混乱させることもできてしまうかもしれない。",
-      "label": "日蝕",
-    },
-    "escape": model {
-      "_id": "escape",
-      "cmd": null,
-      "help": "<b>逃亡</b>
-<br>
-せめて一人だけでも、なんとかして逃がそう。今夜の投票で逃亡者を一人決め、夜中の処刑のかわりに密かに逃がすのだ。
-<br>
-しかし逃亡者は一日のあいだ逃亡生活を続け、ついに村へと帰還してしまう。帰還者の票は通常の三倍尊重されるだろう。
-実装がめんどうだから、このまま未定義にしておこうかな。",
-      "label": "逃亡",
-    },
-    "fire": model {
-      "_id": "fire",
-      "cmd": "trap",
-      "help": "<b><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_FIRE\\" TARGET=\\"_blank\\">熱意</A></b>
-<br>
-村には期待に満ちた熱意が渦巻いている。今夜の投票がひとならぬものを処刑できたなら……悪夢が始まるのだ。
-はじけた熱意に背中を押され、話し合いもなしに、さらに一人の首を必要とするだろう。",
-      "label": "熱意",
-    },
-    "force": model {
-      "_id": "force",
-      "cmd": "trap",
-      "help": "<b><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_FORCE\\" TARGET=\\"_blank\\">影響力</A></b>
-<br>
-今日の投票箱は無色透明だ。だれかが投票した瞬間にその内容はハッキリと見えるから、投票をセットするときは気を付けて！",
-      "label": "影響力",
-    },
-    "ghost": model {
-      "_id": "ghost",
-      "cmd": "trap",
-      "help": "<b><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_GHOST\\" TARGET=\\"_blank\\">亡霊</A></b>
-<br>
-今夜、人狼に殺された人は人狼になる。また、襲撃を実行した人狼は命を落としてしまうだろう。人狼となった者は報復行動を行わない。ただし、命拾いをしたならば人狼にはならない。
-<br>
-一匹狼は亡霊を作らない。",
-      "label": "亡霊",
-    },
-    "miracle": model {
-      "_id": "miracle",
-      "cmd": "trap",
-      "help": "<b><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_MIRACLE\\" TARGET=\\"_blank\\">奇跡</A></b>
-<br>
-帰ってきた！黄泉の国から、今日の襲撃で死んだ犠牲者がかえってきた！能力を失ったかもしれないけれど、それは些細なことだよ！ね！
-<br>
-人狼、一匹狼、賞金稼ぎなどに襲われた死者は生き返る。ただし、その能力は失われる。",
-      "label": "奇跡",
-    },
-    "nightmare": model {
-      "_id": "nightmare",
-      "help": "<b><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_NIGHTMARE\\" TARGET=\\"_blank\\">悪夢</A></b>
-<br>
-恐ろしい一日が始まる。今日は投票だけができる。発言も、能力も使えない。そして、突然死は発生しない。
-<br>
-さあ投票して、こんな日が早く過ぎ去ってしまうよう、ひとり祈りを捧げよう。",
-      "label": "悪夢",
-    },
-    "nothing": model {
-      "_id": "nothing",
-      "cmd": "trap",
-      "help": "今日は、特別なことのない一日のようだ。さあ普段通り、誰かを処刑台にかけよう。",
-      "label": "普通の日",
-    },
-    "prophecy": model {
-      "_id": "prophecy",
-      "cmd": "trap",
-      "help": "<b><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_PROPHECY\\" TARGET=\\"_blank\\">聖者のお告げ</A></b>
-<br>
-聖者は民の夢枕に告げられました。今の任より、<b>決定者</b>にふさわしい人物がいると。
-旧き任務は解かれ、あたらしい<b>決定者</b>は皆に喝采で迎え入れられるだろう。",
-      "label": "聖者のお告げ",
-    },
-    "seance": model {
-      "_id": "seance",
-      "cmd": "trap",
-      "help": "<b><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_SEANSE\\" TARGET=\\"_blank\\">降霊会</A></b>
-<br>
-こっくりさん、こっくりさん……<br>秘密の儀式で、墓場の霊魂がかえってきた。今日に限り、生者も姿の見えぬ死者も屋根を共にし、議論するだろう。",
-      "label": "降霊会",
-    },
-    "turnfairy": model {
-      "_id": "turnfairy",
-      "cmd": "trap",
-      "help": "<b><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_TURN_FAIRY\\" TARGET=\\"_blank\\">妖精の輪</A></b>
-<br>
-なんということだろう！一人が森に立ち入り、妖精の養子になってしまった。明日以降も、彼は村人を裏切り続けるだろう……。
-<br>
-決定者や光の輪の持ち主なら、このときにその力を手放してしまう。",
-      "label": "妖精の輪",
-    },
-    "turnfink": model {
-      "_id": "turnfink",
-      "cmd": "trap",
-      "help": "<b><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_TURN_FINK\\" TARGET=\\"_blank\\">二重スパイ</A></b>
-<br>
-なんということだろう！一人が村側を裏切り、狼に与する半端者になってしまった。明日以降も、彼は村人を裏切り続けるだろう……。
-<br>
-決定者や光の輪の持ち主なら、このときにその力を手放してしまう。",
-      "label": "二重スパイ",
-    },
-  },
-  "list": list [
-    model {
-      "_id": "blank",
-      "help": "",
-      "label": "普通の日",
-    },
-    model {
-      "_id": "nothing",
-      "cmd": "trap",
-      "help": "今日は、特別なことのない一日のようだ。さあ普段通り、誰かを処刑台にかけよう。",
-      "label": "普通の日",
-    },
-    model {
-      "_id": "aprilfool",
-      "cmd": "trap",
-      "help": "<b><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_APRIL_FOOL\\" TARGET=\\"_blank\\">四月馬鹿</A></b>
-<br>
-大変、大変、大変なことになった。きみの役職は変化しているかもしれない。もしも誰かと絆を結んでいるなら、急に相手が憎くなってしまい、絆の相手だけにしか投票できない。
-そして悟ってしまった。今夜だけは、相方の後を追うことはないと……。
-<br>
-<table class=\\"table\\">
-<tr>
-<th colspan=3>役職の変貌
-<th rowspan=4>※一日で元に戻る
-<tr>
-<td>賢者
-<td>←→
-<td>魔女
-<tr>
-<td>守護者
-<td>←→
-<td>長老
-<tr>
-<td>賞金稼
-<td>←→
-<td>少女
-</table>",
-      "label": "四月馬鹿",
-    },
-    model {
-      "_id": "turnfink",
-      "cmd": "trap",
-      "help": "<b><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_TURN_FINK\\" TARGET=\\"_blank\\">二重スパイ</A></b>
-<br>
-なんということだろう！一人が村側を裏切り、狼に与する半端者になってしまった。明日以降も、彼は村人を裏切り続けるだろう……。
-<br>
-決定者や光の輪の持ち主なら、このときにその力を手放してしまう。",
-      "label": "二重スパイ",
-    },
-    model {
-      "_id": "turnfairy",
-      "cmd": "trap",
-      "help": "<b><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_TURN_FAIRY\\" TARGET=\\"_blank\\">妖精の輪</A></b>
-<br>
-なんということだろう！一人が森に立ち入り、妖精の養子になってしまった。明日以降も、彼は村人を裏切り続けるだろう……。
-<br>
-決定者や光の輪の持ち主なら、このときにその力を手放してしまう。",
-      "label": "妖精の輪",
-    },
-    model {
-      "_id": "eclipse",
-      "cmd": "trap",
-      "help": "<b><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_ECLIPSE\\" TARGET=\\"_blank\\">日蝕</A></b>
-<br>
-暗い日蝕が村中を覆い、お互い顔も名前も解らない。この闇夜は丸一日続くだろう。他人になりすまし、議論を混乱させることもできてしまうかもしれない。",
-      "label": "日蝕",
-    },
-    model {
-      "_id": "cointoss",
-      "cmd": "trap",
-      "help": "<b><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_COINTOSS\\" TARGET=\\"_blank\\">Sir Cointoss</A></b>
-<br>
-お控えなさい。お控えなさい。コイントス卿はこの村の投票結果に意見があるようでございます。
-卿の御意向によっては、投票結果に基づいた処刑を取り止めにすることもあります。
-五分五分くらいかな。",
-      "label": "Sir Cointoss",
-    },
-    model {
-      "_id": "force",
-      "cmd": "trap",
-      "help": "<b><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_FORCE\\" TARGET=\\"_blank\\">影響力</A></b>
-<br>
-今日の投票箱は無色透明だ。だれかが投票した瞬間にその内容はハッキリと見えるから、投票をセットするときは気を付けて！",
-      "label": "影響力",
-    },
-    model {
-      "_id": "miracle",
-      "cmd": "trap",
-      "help": "<b><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_MIRACLE\\" TARGET=\\"_blank\\">奇跡</A></b>
-<br>
-帰ってきた！黄泉の国から、今日の襲撃で死んだ犠牲者がかえってきた！能力を失ったかもしれないけれど、それは些細なことだよ！ね！
-<br>
-人狼、一匹狼、賞金稼ぎなどに襲われた死者は生き返る。ただし、その能力は失われる。",
-      "label": "奇跡",
-    },
-    model {
-      "_id": "prophecy",
-      "cmd": "trap",
-      "help": "<b><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_PROPHECY\\" TARGET=\\"_blank\\">聖者のお告げ</A></b>
-<br>
-聖者は民の夢枕に告げられました。今の任より、<b>決定者</b>にふさわしい人物がいると。
-旧き任務は解かれ、あたらしい<b>決定者</b>は皆に喝采で迎え入れられるだろう。",
-      "label": "聖者のお告げ",
-    },
-    model {
-      "_id": "clamor",
-      "cmd": "trap",
-      "help": "<b><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_CLAMOR\\" TARGET=\\"_blank\\">不満</A></b>
-<br>
-村には不満が鬱屈している。今夜の投票でまた人間を処刑してしまったら……悪夢が始まる。
-はじけた不満に背中を押され、話し合いもなしに、さらに一人の首を必要とするだろう。",
-      "label": "不満",
-    },
-    model {
-      "_id": "fire",
-      "cmd": "trap",
-      "help": "<b><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_FIRE\\" TARGET=\\"_blank\\">熱意</A></b>
-<br>
-村には期待に満ちた熱意が渦巻いている。今夜の投票がひとならぬものを処刑できたなら……悪夢が始まるのだ。
-はじけた熱意に背中を押され、話し合いもなしに、さらに一人の首を必要とするだろう。",
-      "label": "熱意",
-    },
-    model {
-      "_id": "nightmare",
-      "help": "<b><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_NIGHTMARE\\" TARGET=\\"_blank\\">悪夢</A></b>
-<br>
-恐ろしい一日が始まる。今日は投票だけができる。発言も、能力も使えない。そして、突然死は発生しない。
-<br>
-さあ投票して、こんな日が早く過ぎ去ってしまうよう、ひとり祈りを捧げよう。",
-      "label": "悪夢",
-    },
-    model {
-      "_id": "ghost",
-      "cmd": "trap",
-      "help": "<b><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_GHOST\\" TARGET=\\"_blank\\">亡霊</A></b>
-<br>
-今夜、人狼に殺された人は人狼になる。また、襲撃を実行した人狼は命を落としてしまうだろう。人狼となった者は報復行動を行わない。ただし、命拾いをしたならば人狼にはならない。
-<br>
-一匹狼は亡霊を作らない。",
-      "label": "亡霊",
-    },
-    model {
-      "_id": "escape",
-      "cmd": null,
-      "help": "<b>逃亡</b>
-<br>
-せめて一人だけでも、なんとかして逃がそう。今夜の投票で逃亡者を一人決め、夜中の処刑のかわりに密かに逃がすのだ。
-<br>
-しかし逃亡者は一日のあいだ逃亡生活を続け、ついに村へと帰還してしまう。帰還者の票は通常の三倍尊重されるだろう。
-実装がめんどうだから、このまま未定義にしておこうかな。",
-      "label": "逃亡",
-    },
-    model {
-      "_id": "seance",
-      "cmd": "trap",
-      "help": "<b><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_SEANSE\\" TARGET=\\"_blank\\">降霊会</A></b>
-<br>
-こっくりさん、こっくりさん……<br>秘密の儀式で、墓場の霊魂がかえってきた。今日に限り、生者も姿の見えぬ死者も屋根を共にし、議論するだろう。",
-      "label": "降霊会",
-    },
-  ],
-  "set": Array [
-    "blank",
-    "nothing",
-    "aprilfool",
-    "turnfink",
-    "turnfairy",
-    "eclipse",
-    "cointoss",
-    "force",
-    "miracle",
-    "prophecy",
-    "clamor",
-    "fire",
-    "nightmare",
-    "ghost",
-    "escape",
-    "seance",
   ],
 }
 `;

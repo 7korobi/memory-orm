@@ -39,21 +39,41 @@ chr_npc:
   - label: "エクスパンション・セット「帰還者議事」（少年Ａ）"
     csid: time_t48
     face_id: t48
-    _id: time_t48_b
+    _id: time_t48_wash
     say_0: |-
-      ...
+      ここ、秘密基地ってやつなのかな。
+      おじゃまします……
+
+      ……けっこう広いぞ。すげえ、マンガ隠そうかな
+
+      <strong>（着信音）</strong>
+      
+      やべっ、母さんだ！
     say_1: |-
-      ...
+      ごめん！忘れ物してた！先行ってて！
+
+      ……
+
+      うひひ、この、鞄いっぱいの秘蔵の名作を、そうだな。あっちと、こっちと、
+      いてっ。
+
+      えっ誰
+
 
   - label: "エクスパンション・セット「帰還者議事」（少女Ａ）"
     csid: time_t49
     face_id: t49
-    _id: time_t49_b
+    _id: time_t49_wash
     say_0: |-
-      ...
+      遅くなっちゃったから、直接塾行きます。夕御飯残しといてね。
+
+      <strong>すっかり日が暮れた、いつもの帰り道。けれど通話を切るとすぐ、横道に入っていった。</strong>
 
     say_1: |-
-      ...
+      遅くなっちゃったから、直接塾行きます。夕御飯残しといてね。
+
+      <strong>すっかり日が暮れた、いつもの帰り道。</strong>
+
 
   - label: "エクスパンション・セット「帰還者議事」（少年Ａ/ホラー）"
     csid: time_t48
@@ -369,3 +389,59 @@ chr_job:
   - face_id: t75
     job: 珊瑚宮連邦
     comment: 由来：海底都市、冷泉山龍宮寺、八尾比丘尼伝説
+
+  - face_id: t76
+    job: R団
+    comment: なんだかんだと聞かれたら、答えてあげる人達
+
+  - face_id: t77
+    job: 俺に気がある
+    comment: いや、俺だよ。いやいや、俺だって。いや〜、俺だろう？
+
+  - face_id: t78
+    job: 諸葛八卦村
+    comment: 御先祖様が赤壁をやきつくしました。
+
+  - face_id: t79
+    job: 超心理学会
+    comment: parapsychology.
+
+  - face_id: t80
+    job: EO LLC
+    comment: Executive Outcomes Limited Liability Company. EO(1989〜1998)解散後なんか頑張りがあった設定で。
+
+  - face_id: t81
+    job: 太陽神殿
+    comment: 由来：太陽伝説国際騎士団
+
+  - face_id: t82
+    job: 子ども食堂
+    comment: 由来：気まぐれ八百屋だんだん こども食堂 　など
+
+  - face_id: t83
+    job: ニビル星
+    comment: 由来：架空の惑星
+
+  - face_id: t84
+    job: 黒い取引先
+    comment: 由来：黒幇。すこしふわっとした言葉。
+
+  - face_id: t85
+    job: 白菊会
+    comment: 由来：白菊遺族会。篤志献体組織の白菊会でもまあ。よし。
+
+  - face_id: t86
+    job: 人工知能研
+    comment: 由来：人工知能研究所（MIT, つくば大学, ドワンゴなど）
+
+  - face_id: t87
+    job: CC
+    comment: 由来：2001/12/22 体細胞クローン猫誕生
+
+  - face_id: t88
+    job: 倫理委員会
+    comment: 字面のパワーに惚れて。いちおう由来：臨床研究の審査機関
+
+  - face_id: t89
+    job: 時間貯蓄銀行
+    comment: 由来：ミヒャエル・エンデの児童文学

@@ -10,6 +10,7 @@ new Rule("potof").schema ->
   @has_many "cards"
   @has_many "stats"
   @has_many "chats"
+  @has_many "icons"
   @habtm "roles"
   @habtm "ables"
 
@@ -17,16 +18,20 @@ new Rule("potof").schema ->
     by_face: ( book_id, face_id )->
       all.where({ face_id, book_id })
 
-    my: (book_id, uid)->
-      all.where({ book_id, uid }).order
-        sort: ['write_at', 'desc']
-      .list[0]
-    
+    cast: (book_id)->
+      sort = (o)-> o.say("#{book_id}-top").all
+      Query.books.find(book_id)
+      .potofs
+      .where (o)-> 'leave' != o.live
+      .sort(sort, "desc")
+
     catalog: (book_id, part_id, sort, order)->
       [a1, a2] = sort.split(".")
       if "say" == a1
         sort = (o)-> o.say(part_id)[a2]
-      Query.books.find(book_id).potofs.sort(sort, order)
+      Query.books.find(book_id)
+      .potofs
+      .sort(sort, order)
 
     sow_id: ( book_id, face_id, sign, is_merge )->
       { list } = all.by_face book_id, face_id
@@ -96,11 +101,15 @@ new Rule("potof").schema ->
     head:
       get: ->
         if @face?
-          { job, name } = @face
+          { name } = @face
         [
-          @job  || job
+          @job
           @name || name
         ].join(" ")
+
+    icon_mdi:
+      get: ->
+        @icons.list[0]?.mdi
 
   class @model extends @model
     side: (part_id)->

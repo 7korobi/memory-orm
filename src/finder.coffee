@@ -21,9 +21,9 @@ each = ({ list, depends }, from, process)->
         process item
   return
 
-validate = (item, chklist)->
+validate = (item, meta, chklist)->
   return false unless item and chklist
-  for chk in chklist when ! chk item
+  for chk in chklist when ! chk item, meta
     return false
   true
 
@@ -31,7 +31,6 @@ validate = (item, chklist)->
 module.exports = class Finder
   constructor: (@$name)->
     State.step[@$name.list] = step()
-    State.base(@$name)
 
   calculate: (query, memory)->
     return unless query._step < State.step[@$name.list]
@@ -60,8 +59,8 @@ module.exports = class Finder
   reduce: (map, cache, paths, query, memory, ids)->
     return unless ids
     for id in ids when o = memory[id]
-      { item, $group } = o
-      continue unless validate item, query._filters
+      { meta, item, $group } = o
+      continue unless validate item, meta, query._filters
       for [path, a] in $group
         o = paths[path] = cache[path]
         map.reduce query, path, item, o, a
@@ -84,23 +83,23 @@ module.exports = class Finder
         @map.$deploy_sort @model, item, all
     return
 
-  reset: (journal, all, from, parent)->
+  reset: (meta, journal, all, from, parent)->
     { $memory } = all
     journal.$memory = new Object null
     State.base(@$name).$memory = all.$memory = news = new Object null
-    @merge journal, all, from, parent
+    @merge meta, journal, all, from, parent
 
     for key, old of $memory
       item = news[key]
       unless item?
         @model.delete old
 
-  merge: (journal, all, from, parent)->
+  merge: (meta, journal, all, from, parent)->
     { $memory } = all
     each @$name, from, (item)=>
       old = $memory[item.id]
       @model.$deploy item, parent
-      o = @map.$deploy @model, @$format, all.$sort, journal, item, parent
+      o = @map.$deploy @model, @$format, all.$sort, meta, journal, item
       journal.$memory[item.id] = o
       $memory[item.id] = o
       if old?
@@ -109,7 +108,7 @@ module.exports = class Finder
         @model.create item
     @clear_cache()
 
-  remove: (journal, all, ids)->
+  remove: (meta, journal, all, ids)->
     { $memory } = all
     hit = false
     each_by_id @$name, ids, (id)=>
@@ -122,12 +121,12 @@ module.exports = class Finder
     if hit?
       @clear_cache()
 
-  update: (journal, all, ids, parent)->
+  update: (meta, journal, all, ids, parent)->
     { $memory } = all
     each_by_id @$name, ids, (id)=>
       return unless old = $memory[id]
       _.merge old.item, parent
-      o = @map.$deploy @model, @$format, all.$sort, journal, old.item, parent
+      o = @map.$deploy @model, @$format, all.$sort, meta, journal, old.item
       journal.$memory[id] = o
       $memory[id] = o
 

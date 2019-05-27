@@ -4357,6 +4357,166 @@ list [
     },
   },
   model {
+    "_id": "ririnra_c132",
+    "chr_set_id": "ririnra",
+    "chr_set_idx": 0,
+    "face_id": "c132",
+    "job": "皮鞣工",
+    "q": Object {
+      "search_words": "皮鞣工 ルイン",
+    },
+  },
+  model {
+    "_id": "all_c132",
+    "chr_set_id": "all",
+    "chr_set_idx": 10,
+    "face_id": "c132",
+    "job": "皮鞣工",
+    "q": Object {
+      "search_words": "皮鞣工 ルイン",
+    },
+  },
+  model {
+    "_id": "ririnra_c133",
+    "chr_set_id": "ririnra",
+    "chr_set_idx": 0,
+    "face_id": "c133",
+    "job": "徴税団",
+    "q": Object {
+      "search_words": "徴税団 クレステフ",
+    },
+  },
+  model {
+    "_id": "all_c133",
+    "chr_set_id": "all",
+    "chr_set_idx": 10,
+    "face_id": "c133",
+    "job": "徴税団",
+    "q": Object {
+      "search_words": "徴税団 クレステフ",
+    },
+  },
+  model {
+    "_id": "ririnra_c134",
+    "chr_set_id": "ririnra",
+    "chr_set_idx": 0,
+    "face_id": "c134",
+    "job": "干拓民",
+    "q": Object {
+      "search_words": "干拓民 ズッテル",
+    },
+  },
+  model {
+    "_id": "all_c134",
+    "chr_set_id": "all",
+    "chr_set_idx": 10,
+    "face_id": "c134",
+    "job": "干拓民",
+    "q": Object {
+      "search_words": "干拓民 ズッテル",
+    },
+  },
+  model {
+    "_id": "ririnra_c135",
+    "chr_set_id": "ririnra",
+    "chr_set_idx": 0,
+    "face_id": "c135",
+    "job": "迷い人",
+    "q": Object {
+      "search_words": "迷い人 ヘザー",
+    },
+  },
+  model {
+    "_id": "all_c135",
+    "chr_set_id": "all",
+    "chr_set_idx": 10,
+    "face_id": "c135",
+    "job": "迷い人",
+    "q": Object {
+      "search_words": "迷い人 ヘザー",
+    },
+  },
+  model {
+    "_id": "ririnra_c136",
+    "chr_set_id": "ririnra",
+    "chr_set_idx": 0,
+    "face_id": "c136",
+    "job": "剪毛工",
+    "q": Object {
+      "search_words": "剪毛工 レナータ",
+    },
+  },
+  model {
+    "_id": "all_c136",
+    "chr_set_id": "all",
+    "chr_set_idx": 10,
+    "face_id": "c136",
+    "job": "剪毛工",
+    "q": Object {
+      "search_words": "剪毛工 レナータ",
+    },
+  },
+  model {
+    "_id": "ririnra_c137",
+    "chr_set_id": "ririnra",
+    "chr_set_idx": 0,
+    "face_id": "c137",
+    "job": "甲板員",
+    "q": Object {
+      "search_words": "甲板員 デリクソン",
+    },
+  },
+  model {
+    "_id": "all_c137",
+    "chr_set_id": "all",
+    "chr_set_idx": 10,
+    "face_id": "c137",
+    "job": "甲板員",
+    "q": Object {
+      "search_words": "甲板員 デリクソン",
+    },
+  },
+  model {
+    "_id": "ririnra_c138",
+    "chr_set_id": "ririnra",
+    "chr_set_idx": 0,
+    "face_id": "c138",
+    "job": "代執筆",
+    "q": Object {
+      "search_words": "代執筆 レックス",
+    },
+  },
+  model {
+    "_id": "all_c138",
+    "chr_set_id": "all",
+    "chr_set_idx": 10,
+    "face_id": "c138",
+    "job": "代執筆",
+    "q": Object {
+      "search_words": "代執筆 レックス",
+    },
+  },
+  model {
+    "_id": "ririnra_c139",
+    "chr_set_id": "ririnra",
+    "chr_set_idx": 0,
+    "face_id": "c139",
+    "job": "優等生",
+    "q": Object {
+      "search_words": "優等生 ヨリック",
+    },
+  },
+  model {
+    "_id": "all_c139",
+    "chr_set_id": "all",
+    "chr_set_idx": 10,
+    "face_id": "c139",
+    "job": "優等生",
+    "q": Object {
+      "search_words": "優等生 ヨリック",
+    },
+  },
+  model {
     "_id": "ririnra_c16",
     "chr_set_id": "ririnra",
     "chr_set_idx": 0,
@@ -6008,6 +6168,17 @@ list [
     },
   },
   model {
+    "_id": "ger_g09",
+    "chr_set_id": "ger",
+    "chr_set_idx": 6,
+    "comment": "末っ子なのです。モンゴルの末子相続制度では、オッチギン（火の王子、炉の番人）と呼ばれる。",
+    "face_id": "g09",
+    "job": "炉の番",
+    "q": Object {
+      "search_words": "炉の番 チトフ",
+    },
+  },
+  model {
     "_id": "all_g08",
     "chr_set_id": "all",
     "chr_set_idx": 10,
@@ -6015,6 +6186,16 @@ list [
     "job": "馬鹿",
     "q": Object {
       "search_words": "馬鹿 イワン",
+    },
+  },
+  model {
+    "_id": "all_g09",
+    "chr_set_id": "all",
+    "chr_set_idx": 10,
+    "face_id": "g09",
+    "job": "炉の番",
+    "q": Object {
+      "search_words": "炉の番 チトフ",
     },
   },
   model {
@@ -7515,6 +7696,300 @@ list [
     },
   },
   model {
+    "_id": "time_t76",
+    "chr_set_id": "time",
+    "chr_set_idx": 2,
+    "comment": "なんだかんだと聞かれたら、答えてあげる人達",
+    "face_id": "t76",
+    "job": "R団",
+    "q": Object {
+      "search_words": "R団 タカモト",
+    },
+  },
+  model {
+    "_id": "all_t76",
+    "chr_set_id": "all",
+    "chr_set_idx": 10,
+    "face_id": "t76",
+    "job": "R団",
+    "q": Object {
+      "search_words": "R団 タカモト",
+    },
+  },
+  model {
+    "_id": "time_t77",
+    "chr_set_id": "time",
+    "chr_set_idx": 2,
+    "comment": "いや、俺だよ。いやいや、俺だって。いや〜、俺だろう？",
+    "face_id": "t77",
+    "job": "俺に気がある",
+    "q": Object {
+      "search_words": "俺に気がある ヨーコ",
+    },
+  },
+  model {
+    "_id": "all_t77",
+    "chr_set_id": "all",
+    "chr_set_idx": 10,
+    "face_id": "t77",
+    "job": "俺に気がある",
+    "q": Object {
+      "search_words": "俺に気がある ヨーコ",
+    },
+  },
+  model {
+    "_id": "time_t78",
+    "chr_set_id": "time",
+    "chr_set_idx": 2,
+    "comment": "御先祖様が赤壁をやきつくしました。",
+    "face_id": "t78",
+    "job": "諸葛八卦村",
+    "q": Object {
+      "search_words": "諸葛八卦村 ヤン",
+    },
+  },
+  model {
+    "_id": "all_t78",
+    "chr_set_id": "all",
+    "chr_set_idx": 10,
+    "face_id": "t78",
+    "job": "諸葛八卦村",
+    "q": Object {
+      "search_words": "諸葛八卦村 ヤン",
+    },
+  },
+  model {
+    "_id": "time_t79",
+    "chr_set_id": "time",
+    "chr_set_idx": 2,
+    "comment": "parapsychology.",
+    "face_id": "t79",
+    "job": "超心理学会",
+    "q": Object {
+      "search_words": "超心理学会 ヒイラギ",
+    },
+  },
+  model {
+    "_id": "all_t79",
+    "chr_set_id": "all",
+    "chr_set_idx": 10,
+    "face_id": "t79",
+    "job": "超心理学会",
+    "q": Object {
+      "search_words": "超心理学会 ヒイラギ",
+    },
+  },
+  model {
+    "_id": "time_t80",
+    "chr_set_id": "time",
+    "chr_set_idx": 2,
+    "comment": "Executive Outcomes Limited Liability Company. EO(1989〜1998)解散後なんか頑張りがあった設定で。",
+    "face_id": "t80",
+    "job": "EO LLC",
+    "q": Object {
+      "search_words": "EO LLC ナオシゲ",
+    },
+  },
+  model {
+    "_id": "all_t80",
+    "chr_set_id": "all",
+    "chr_set_idx": 10,
+    "face_id": "t80",
+    "job": "EO LLC",
+    "q": Object {
+      "search_words": "EO LLC ナオシゲ",
+    },
+  },
+  model {
+    "_id": "time_t81",
+    "chr_set_id": "time",
+    "chr_set_idx": 2,
+    "comment": "由来：太陽伝説国際騎士団",
+    "face_id": "t81",
+    "job": "太陽神殿",
+    "q": Object {
+      "search_words": "太陽神殿 ケント",
+    },
+  },
+  model {
+    "_id": "all_t81",
+    "chr_set_id": "all",
+    "chr_set_idx": 10,
+    "face_id": "t81",
+    "job": "太陽神殿",
+    "q": Object {
+      "search_words": "太陽神殿 ケント",
+    },
+  },
+  model {
+    "_id": "time_t82",
+    "chr_set_id": "time",
+    "chr_set_idx": 2,
+    "comment": "由来：気まぐれ八百屋だんだん こども食堂 　など",
+    "face_id": "t82",
+    "job": "子ども食堂",
+    "q": Object {
+      "search_words": "子ども食堂 サガタ",
+    },
+  },
+  model {
+    "_id": "all_t82",
+    "chr_set_id": "all",
+    "chr_set_idx": 10,
+    "face_id": "t82",
+    "job": "子ども食堂",
+    "q": Object {
+      "search_words": "子ども食堂 サガタ",
+    },
+  },
+  model {
+    "_id": "time_t83",
+    "chr_set_id": "time",
+    "chr_set_idx": 2,
+    "comment": "由来：架空の惑星",
+    "face_id": "t83",
+    "job": "ニビル星",
+    "q": Object {
+      "search_words": "ニビル星 キョウスケ",
+    },
+  },
+  model {
+    "_id": "all_t83",
+    "chr_set_id": "all",
+    "chr_set_idx": 10,
+    "face_id": "t83",
+    "job": "ニビル星",
+    "q": Object {
+      "search_words": "ニビル星 キョウスケ",
+    },
+  },
+  model {
+    "_id": "time_t84",
+    "chr_set_id": "time",
+    "chr_set_idx": 2,
+    "comment": "由来：黒幇。すこしふわっとした言葉。",
+    "face_id": "t84",
+    "job": "黒い取引先",
+    "q": Object {
+      "search_words": "黒い取引先 アリババ",
+    },
+  },
+  model {
+    "_id": "all_t84",
+    "chr_set_id": "all",
+    "chr_set_idx": 10,
+    "face_id": "t84",
+    "job": "黒い取引先",
+    "q": Object {
+      "search_words": "黒い取引先 アリババ",
+    },
+  },
+  model {
+    "_id": "time_t85",
+    "chr_set_id": "time",
+    "chr_set_idx": 2,
+    "comment": "由来：白菊遺族会。篤志献体組織の白菊会でもまあ。よし。",
+    "face_id": "t85",
+    "job": "白菊会",
+    "q": Object {
+      "search_words": "白菊会 ミサ",
+    },
+  },
+  model {
+    "_id": "all_t85",
+    "chr_set_id": "all",
+    "chr_set_idx": 10,
+    "face_id": "t85",
+    "job": "白菊会",
+    "q": Object {
+      "search_words": "白菊会 ミサ",
+    },
+  },
+  model {
+    "_id": "time_t86",
+    "chr_set_id": "time",
+    "chr_set_idx": 2,
+    "comment": "由来：人工知能研究所（MIT, つくば大学, ドワンゴなど）",
+    "face_id": "t86",
+    "job": "人工知能研",
+    "q": Object {
+      "search_words": "人工知能研 Dr.コトリン",
+    },
+  },
+  model {
+    "_id": "all_t86",
+    "chr_set_id": "all",
+    "chr_set_idx": 10,
+    "face_id": "t86",
+    "job": "人工知能研",
+    "q": Object {
+      "search_words": "人工知能研 Dr.コトリン",
+    },
+  },
+  model {
+    "_id": "time_t87",
+    "chr_set_id": "time",
+    "chr_set_idx": 2,
+    "comment": "由来：2001/12/22 体細胞クローン猫誕生",
+    "face_id": "t87",
+    "job": "CC",
+    "q": Object {
+      "search_words": "CC レイ",
+    },
+  },
+  model {
+    "_id": "all_t87",
+    "chr_set_id": "all",
+    "chr_set_idx": 10,
+    "face_id": "t87",
+    "job": "CC",
+    "q": Object {
+      "search_words": "CC レイ",
+    },
+  },
+  model {
+    "_id": "time_t88",
+    "chr_set_id": "time",
+    "chr_set_idx": 2,
+    "comment": "字面のパワーに惚れて。いちおう由来：臨床研究の審査機関",
+    "face_id": "t88",
+    "job": "倫理委員会",
+    "q": Object {
+      "search_words": "倫理委員会 アトレイユ",
+    },
+  },
+  model {
+    "_id": "all_t88",
+    "chr_set_id": "all",
+    "chr_set_idx": 10,
+    "face_id": "t88",
+    "job": "倫理委員会",
+    "q": Object {
+      "search_words": "倫理委員会 アトレイユ",
+    },
+  },
+  model {
+    "_id": "time_t89",
+    "chr_set_id": "time",
+    "chr_set_idx": 2,
+    "comment": "由来：ミヒャエル・エンデの児童文学",
+    "face_id": "t89",
+    "job": "時間貯蓄銀行",
+    "q": Object {
+      "search_words": "時間貯蓄銀行 ヤカモト",
+    },
+  },
+  model {
+    "_id": "all_t89",
+    "chr_set_id": "all",
+    "chr_set_idx": 10,
+    "face_id": "t89",
+    "job": "時間貯蓄銀行",
+    "q": Object {
+      "search_words": "時間貯蓄銀行 ヤカモト",
+    },
+  },
+  model {
     "_id": "fable_f000",
     "chr_set_id": "fable",
     "chr_set_idx": 4,
@@ -7815,6 +8290,110 @@ list [
     },
   },
   model {
+    "_id": "fable_f15",
+    "chr_set_id": "fable",
+    "chr_set_idx": 4,
+    "face_id": "f15",
+    "job": "憑依呪術師",
+    "q": Object {
+      "search_words": "憑依呪術師 ケトゥートゥ",
+    },
+  },
+  model {
+    "_id": "all_f15",
+    "chr_set_id": "all",
+    "chr_set_idx": 10,
+    "face_id": "f15",
+    "job": "憑依呪術師",
+    "q": Object {
+      "search_words": "憑依呪術師 ケトゥートゥ",
+    },
+  },
+  model {
+    "_id": "fable_f16",
+    "chr_set_id": "fable",
+    "chr_set_idx": 4,
+    "comment": "おにっこは従う立場寄り。まわりの妖精みたいな。",
+    "face_id": "f16",
+    "job": "鉄騎従兵",
+    "q": Object {
+      "search_words": "鉄騎従兵 イェンキンス",
+    },
+  },
+  model {
+    "_id": "all_f16",
+    "chr_set_id": "all",
+    "chr_set_idx": 10,
+    "face_id": "f16",
+    "job": "鉄騎従兵",
+    "q": Object {
+      "search_words": "鉄騎従兵 イェンキンス",
+    },
+  },
+  model {
+    "_id": "fable_f17",
+    "chr_set_id": "fable",
+    "chr_set_idx": 4,
+    "comment": "南国に咲く鳳凰樹をヒントに。",
+    "face_id": "f17",
+    "job": "鳳凰の実",
+    "q": Object {
+      "search_words": "鳳凰の実 モイ",
+    },
+  },
+  model {
+    "_id": "all_f17",
+    "chr_set_id": "all",
+    "chr_set_idx": 10,
+    "face_id": "f17",
+    "job": "鳳凰の実",
+    "q": Object {
+      "search_words": "鳳凰の実 モイ",
+    },
+  },
+  model {
+    "_id": "fable_f18",
+    "chr_set_id": "fable",
+    "chr_set_idx": 4,
+    "comment": "人間の精液を４０日密閉 ＋ rectification（精留） ＋ 純米本醸造",
+    "face_id": "f18",
+    "job": "精留醸造",
+    "q": Object {
+      "search_words": "精留醸造 ミタシュ",
+    },
+  },
+  model {
+    "_id": "all_f18",
+    "chr_set_id": "all",
+    "chr_set_idx": 10,
+    "face_id": "f18",
+    "job": "精留醸造",
+    "q": Object {
+      "search_words": "精留醸造 ミタシュ",
+    },
+  },
+  model {
+    "_id": "fable_f20",
+    "chr_set_id": "fable",
+    "chr_set_idx": 4,
+    "comment": "仲買人、だけだと議事標準には各店舗があるし、モノにならないので、呪術師にしてみた。",
+    "face_id": "f20",
+    "job": "仲買呪術師",
+    "q": Object {
+      "search_words": "仲買呪術師 ジェルマン",
+    },
+  },
+  model {
+    "_id": "all_f20",
+    "chr_set_id": "all",
+    "chr_set_idx": 10,
+    "face_id": "f20",
+    "job": "仲買呪術師",
+    "q": Object {
+      "search_words": "仲買呪術師 ジェルマン",
+    },
+  },
+  model {
     "_id": "fable_fw01",
     "chr_set_id": "fable",
     "chr_set_idx": 4,
@@ -7912,6 +8491,26 @@ list [
     "job": "羽化昇天道",
     "q": Object {
       "search_words": "羽化昇天道 イナリ",
+    },
+  },
+  model {
+    "_id": "fable_fw06",
+    "chr_set_id": "fable",
+    "chr_set_idx": 4,
+    "face_id": "fw06",
+    "job": "経凛々",
+    "q": Object {
+      "search_words": "経凛々 ストラピタカ",
+    },
+  },
+  model {
+    "_id": "all_fw06",
+    "chr_set_id": "all",
+    "chr_set_idx": 10,
+    "face_id": "fw06",
+    "job": "経凛々",
+    "q": Object {
+      "search_words": "経凛々 ストラピタカ",
     },
   },
   model {
@@ -9135,6 +9734,26 @@ list [
     },
   },
   model {
+    "_id": "sf_sf039",
+    "chr_set_id": "sf",
+    "chr_set_idx": 3,
+    "face_id": "sf039",
+    "job": "秘術販売",
+    "q": Object {
+      "search_words": "秘術販売 ハロウィン",
+    },
+  },
+  model {
+    "_id": "all_sf039",
+    "chr_set_id": "all",
+    "chr_set_idx": 10,
+    "face_id": "sf039",
+    "job": "秘術販売",
+    "q": Object {
+      "search_words": "秘術販売 ハロウィン",
+    },
+  },
+  model {
     "_id": "wa_w05",
     "chr_set_id": "wa",
     "chr_set_idx": 1,
@@ -10205,16 +10824,6 @@ list [
     },
   },
   model {
-    "_id": "sf_sf039",
-    "chr_set_id": "sf",
-    "chr_set_idx": 3,
-    "face_id": "sf039",
-    "job": "秘術販売",
-    "q": Object {
-      "search_words": "秘術販売 ハロウィン",
-    },
-  },
-  model {
     "_id": "all_w57",
     "chr_set_id": "all",
     "chr_set_idx": 10,
@@ -10222,16 +10831,6 @@ list [
     "job": "陰陽師",
     "q": Object {
       "search_words": "陰陽師 稲荷",
-    },
-  },
-  model {
-    "_id": "all_sf039",
-    "chr_set_id": "all",
-    "chr_set_idx": 10,
-    "face_id": "sf039",
-    "job": "秘術販売",
-    "q": Object {
-      "search_words": "秘術販売 ハロウィン",
     },
   },
   model {
@@ -10591,26 +11190,44 @@ list [
 呀！",
   },
   model {
-    "_id": "time_t48_b",
+    "_id": "time_t48_wash",
     "chr_job_id": "time_t48",
     "chr_set_id": "time",
     "chr_set_idx": 2,
     "csid": "time_t48",
     "face_id": "t48",
     "label": "エクスパンション・セット「帰還者議事」（少年Ａ）",
-    "say_0": "...",
-    "say_1": "...",
+    "say_0": "ここ、秘密基地ってやつなのかな。
+おじゃまします……
+
+……けっこう広いぞ。すげえ、マンガ隠そうかな
+
+<strong>（着信音）</strong>
+
+やべっ、母さんだ！",
+    "say_1": "ごめん！忘れ物してた！先行ってて！
+
+……
+
+うひひ、この、鞄いっぱいの秘蔵の名作を、そうだな。あっちと、こっちと、
+いてっ。
+
+えっ誰",
   },
   model {
-    "_id": "time_t49_b",
+    "_id": "time_t49_wash",
     "chr_job_id": "time_t49",
     "chr_set_id": "time",
     "chr_set_idx": 2,
     "csid": "time_t49",
     "face_id": "t49",
     "label": "エクスパンション・セット「帰還者議事」（少女Ａ）",
-    "say_0": "...",
-    "say_1": "...",
+    "say_0": "遅くなっちゃったから、直接塾行きます。夕御飯残しといてね。
+
+<strong>すっかり日が暮れた、いつもの帰り道。けれど通話を切るとすぐ、横道に入っていった。</strong>",
+    "say_1": "遅くなっちゃったから、直接塾行きます。夕御飯残しといてね。
+
+<strong>すっかり日が暮れた、いつもの帰り道。</strong>",
   },
   model {
     "_id": "time_t48",
@@ -10982,10 +11599,12 @@ list [
     "name": "ボリス",
     "order": 1,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
       "guild",
+      "ecclesia",
       "young",
     ],
   },
@@ -11012,6 +11631,7 @@ list [
     "name": "コリーン",
     "order": 2,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -11042,12 +11662,14 @@ list [
     "name": "キャロライナ",
     "order": 3,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
       "servant",
       "road",
       "farm",
+      "kid",
       "young",
     ],
   },
@@ -11074,6 +11696,7 @@ list [
     "name": "ダン",
     "order": 4,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -11104,6 +11727,7 @@ list [
     "name": "ゼルダ",
     "order": 5,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -11136,6 +11760,7 @@ list [
     "name": "フランシスカ",
     "order": 6,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -11166,11 +11791,12 @@ list [
     "name": "ディーン",
     "order": 8,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
       "government",
-      "guild",
+      "office",
       "young",
     ],
   },
@@ -11197,6 +11823,7 @@ list [
     "name": "ミッシェル",
     "order": 8.1,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -11228,6 +11855,7 @@ list [
     "name": "モニカ",
     "order": 8.2,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -11258,6 +11886,7 @@ list [
     "name": "ヒロシ",
     "order": 9,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -11290,6 +11919,7 @@ list [
     "name": "パピヨン",
     "order": 10,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -11321,10 +11951,11 @@ list [
     "name": "イアン",
     "order": 11,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
-      "guild",
+      "office",
       "young",
     ],
   },
@@ -11351,6 +11982,7 @@ list [
     "name": "バーナバス",
     "order": 12,
     "tag_ids": Array [
+      "all",
       "school",
       "giji",
       "servant",
@@ -11380,7 +12012,9 @@ list [
     },
     "name": "バーナバス",
     "order": 12,
-    "tag_ids": Array [],
+    "tag_ids": Array [
+      "all",
+    ],
   },
   model {
     "_id": "c34",
@@ -11405,6 +12039,7 @@ list [
     "name": "トニー",
     "order": 14,
     "tag_ids": Array [
+      "all",
       "animal",
       "animal",
       "school",
@@ -11437,6 +12072,7 @@ list [
     "name": "ドナルド",
     "order": 15,
     "tag_ids": Array [
+      "all",
       "animal",
       "animal",
       "school",
@@ -11468,12 +12104,13 @@ list [
     "name": "カルヴィン",
     "order": 16,
     "tag_ids": Array [
+      "all",
       "animal",
       "animal",
       "school",
       "giji",
       "elegant",
-      "apartment",
+      "office",
       "kid",
     ],
   },
@@ -11508,11 +12145,13 @@ list [
     },
     "order": 17,
     "tag_ids": Array [
+      "all",
       "animal",
       "travel",
       "animal",
       "school",
       "giji",
+      "farm",
       "apartment",
       "kid",
     ],
@@ -11541,6 +12180,7 @@ list [
     "name": "ドン",
     "order": 17.1,
     "tag_ids": Array [
+      "all",
       "travel",
     ],
   },
@@ -11567,6 +12207,7 @@ list [
     "name": "パティ",
     "order": 18,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -11598,6 +12239,7 @@ list [
     "name": "ゴドウィン",
     "order": 19,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -11629,6 +12271,7 @@ list [
     "name": "ティモシー",
     "order": 20,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -11659,13 +12302,13 @@ list [
     "name": "ヤニク",
     "order": 21,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
       "immoral",
       "river",
       "young",
-      "pair",
     ],
   },
   model {
@@ -11691,13 +12334,13 @@ list [
     "name": "ペラジー",
     "order": 21.1,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
       "ecclesia",
       "river",
       "young",
-      "pair",
     ],
   },
   model {
@@ -11723,6 +12366,7 @@ list [
     "name": "ブルーノ",
     "order": 22,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -11754,6 +12398,7 @@ list [
     "name": "ユリシーズ",
     "order": 23,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -11784,6 +12429,7 @@ list [
     "name": "シビル",
     "order": 24,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -11815,6 +12461,7 @@ list [
     "name": "ハワード",
     "order": 25,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -11845,6 +12492,7 @@ list [
     "name": "ズリエル",
     "order": 26,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -11875,6 +12523,7 @@ list [
     "name": "ムパムピス",
     "order": 27,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -11905,6 +12554,7 @@ list [
     "name": "ツェツィーリヤ",
     "order": 28,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -11936,6 +12586,7 @@ list [
     "name": "ノーリーン",
     "order": 29,
     "tag_ids": Array [
+      "all",
       "animal",
       "animal",
       "school",
@@ -11967,10 +12618,11 @@ list [
     "name": "ゲイル",
     "order": 30,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
-      "apartment",
+      "office",
       "medical",
       "young",
       "middle",
@@ -11999,6 +12651,7 @@ list [
     "name": "レティーシャ",
     "order": 31,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -12029,6 +12682,7 @@ list [
     "name": "ラルフ",
     "order": 33,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -12059,12 +12713,12 @@ list [
     "name": "セシル",
     "order": 34,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
       "market",
       "young",
-      "pair",
     ],
   },
   model {
@@ -12090,12 +12744,12 @@ list [
     "name": "ビリー",
     "order": 35,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
       "market",
       "middle",
-      "pair",
     ],
   },
   model {
@@ -12129,12 +12783,12 @@ list [
     },
     "order": 36,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
       "apartment",
       "kid",
-      "pair",
     ],
   },
   model {
@@ -12160,12 +12814,12 @@ list [
     "name": "ホリー",
     "order": 37,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
       "apartment",
       "kid",
-      "pair",
     ],
   },
   model {
@@ -12191,6 +12845,7 @@ list [
     "name": "アルフレッド",
     "order": 38,
     "tag_ids": Array [
+      "all",
       "animal",
       "animal",
       "school",
@@ -12222,6 +12877,7 @@ list [
     "name": "クリストファー",
     "order": 39,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -12254,6 +12910,7 @@ list [
     "name": "ナタリア",
     "order": 41,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -12285,6 +12942,7 @@ list [
     "name": "マーゴ",
     "order": 42,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -12316,6 +12974,7 @@ list [
     "name": "ヌマタロウ",
     "order": 43,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -12347,6 +13006,7 @@ list [
     "name": "チャールズ",
     "order": 44,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -12378,6 +13038,7 @@ list [
     "name": "ケイト",
     "order": 47,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -12414,6 +13075,7 @@ list [
     },
     "order": 48,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -12447,6 +13109,7 @@ list [
     "name": "フィリップ",
     "order": 49,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -12479,6 +13142,7 @@ list [
     "name": "ニール",
     "order": 50,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -12511,6 +13175,7 @@ list [
     "name": "ギリアン",
     "order": 52,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -12549,6 +13214,7 @@ list [
     },
     "order": 53,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -12581,6 +13247,7 @@ list [
     "name": "メアリー",
     "order": 55,
     "tag_ids": Array [
+      "all",
       "animal",
       "animal",
       "school",
@@ -12613,6 +13280,7 @@ list [
     "name": "ギネス",
     "order": 56,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -12644,6 +13312,7 @@ list [
     "name": "ピッパ",
     "order": 57,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -12680,6 +13349,7 @@ list [
     },
     "order": 59,
     "tag_ids": Array [
+      "all",
       "animal",
       "animal",
       "school",
@@ -12711,6 +13381,7 @@ list [
     "name": "ワット",
     "order": 60,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -12741,6 +13412,7 @@ list [
     "name": "ヴェラ",
     "order": 61,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -12772,6 +13444,7 @@ list [
     "name": "ロミオ",
     "order": 62,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -12802,6 +13475,7 @@ list [
     "name": "エマ",
     "order": 63,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -12832,6 +13506,7 @@ list [
     "name": "リンダ",
     "order": 65,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -12871,10 +13546,11 @@ list [
     },
     "order": 66,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
-      "guild",
+      "office",
       "young",
     ],
   },
@@ -12907,6 +13583,7 @@ list [
     },
     "order": 67,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -12938,6 +13615,7 @@ list [
     "name": "ノックス",
     "order": 70,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -12969,6 +13647,7 @@ list [
     "name": "スティーブン",
     "order": 71,
     "tag_ids": Array [
+      "all",
       "animal",
       "animal",
       "school",
@@ -13000,6 +13679,7 @@ list [
     "name": "ガストン",
     "order": 72,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -13030,6 +13710,7 @@ list [
     "name": "ウェーズリー",
     "order": 73,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -13061,6 +13742,7 @@ list [
     "name": "ザック",
     "order": 75,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -13092,6 +13774,7 @@ list [
     "name": "ルーカス",
     "order": 77,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -13130,6 +13813,7 @@ list [
     },
     "order": 79,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -13166,6 +13850,7 @@ list [
     },
     "order": 81,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -13197,10 +13882,10 @@ list [
     "name": "シメオン",
     "order": 82,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
-      "apartment",
       "ecclesia",
       "young",
     ],
@@ -13228,11 +13913,11 @@ list [
     "name": "テッド",
     "order": 87,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
       "road",
-      "apartment",
       "young",
     ],
   },
@@ -13260,11 +13945,13 @@ list [
     "name": "レオナルド",
     "order": 89,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
       "government",
       "ecclesia",
+      "office",
       "middle",
     ],
   },
@@ -13292,6 +13979,7 @@ list [
     "name": "ヒュー",
     "order": 89,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -13323,6 +14011,7 @@ list [
     "name": "ワンダ",
     "order": 90,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -13355,10 +14044,11 @@ list [
     "name": "モリス",
     "order": 91,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
-      "guild",
+      "office",
       "road",
       "young",
     ],
@@ -13387,6 +14077,7 @@ list [
     "name": "ブローリン",
     "order": 91,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -13419,9 +14110,9 @@ list [
     "name": "リー",
     "order": 92,
     "tag_ids": Array [
+      "all",
       "giji",
       "immoral",
-      "apartment",
       "young",
     ],
   },
@@ -13449,6 +14140,7 @@ list [
     "name": "ジェフ",
     "order": 93,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -13482,6 +14174,7 @@ list [
     "name": "オズワルド",
     "order": 95,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -13514,6 +14207,7 @@ list [
     "name": "グレッグ",
     "order": 97,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -13545,6 +14239,7 @@ list [
     "name": "クラリッサ",
     "order": 99,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -13577,6 +14272,7 @@ list [
     "name": "ニコラス",
     "order": 112,
     "tag_ids": Array [
+      "all",
       "giji",
       "elegant",
       "young",
@@ -13606,6 +14302,7 @@ list [
     "name": "モンド",
     "order": 114,
     "tag_ids": Array [
+      "all",
       "giji",
       "government",
       "immoral",
@@ -13636,8 +14333,10 @@ list [
     "name": "マリオ",
     "order": 115,
     "tag_ids": Array [
+      "all",
       "giji",
       "guild",
+      "office",
       "road",
       "kid",
     ],
@@ -13666,6 +14365,7 @@ list [
     "name": "メルヤ",
     "order": 116,
     "tag_ids": Array [
+      "all",
       "giji",
       "medical",
       "immoral",
@@ -13696,6 +14396,7 @@ list [
     "name": "ルパート",
     "order": 117,
     "tag_ids": Array [
+      "all",
       "giji",
       "road",
       "guild",
@@ -13726,6 +14427,7 @@ list [
     "name": "ノア",
     "order": 120,
     "tag_ids": Array [
+      "all",
       "giji",
       "servant",
       "young",
@@ -13756,6 +14458,7 @@ list [
     "name": "フェルゼ",
     "order": 123,
     "tag_ids": Array [
+      "all",
       "giji",
       "young",
       "guild",
@@ -13785,8 +14488,10 @@ list [
     "name": "セイルズ",
     "order": 124,
     "tag_ids": Array [
+      "all",
       "giji",
       "middle",
+      "office",
       "government",
     ],
   },
@@ -13814,6 +14519,7 @@ list [
     "name": "ピスティオ",
     "order": 125,
     "tag_ids": Array [
+      "all",
       "giji",
       "young",
       "servant",
@@ -13843,6 +14549,7 @@ list [
     "name": "ケヴィン",
     "order": 125.2,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -13876,6 +14583,7 @@ list [
     "name": "ピエール",
     "order": 125.8,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -13908,9 +14616,11 @@ list [
     "name": "ロイエ",
     "order": 126,
     "tag_ids": Array [
+      "all",
       "giji",
       "young",
       "servant",
+      "ecclesia",
     ],
   },
   model {
@@ -13937,9 +14647,10 @@ list [
     "name": "ザーゴ",
     "order": 127,
     "tag_ids": Array [
+      "all",
       "giji",
       "young",
-      "guild",
+      "office",
     ],
   },
   model {
@@ -13966,6 +14677,7 @@ list [
     "name": "ペトラ",
     "order": 128,
     "tag_ids": Array [
+      "all",
       "giji",
       "young",
       "ecclesia",
@@ -13995,6 +14707,7 @@ list [
     "name": "ヌヴィル",
     "order": 129,
     "tag_ids": Array [
+      "all",
       "giji",
       "middle",
       "immoral",
@@ -14024,9 +14737,11 @@ list [
     "name": "ジャーディン",
     "order": 130,
     "tag_ids": Array [
+      "all",
       "giji",
       "young",
       "government",
+      "office",
       "elegant",
     ],
   },
@@ -14054,9 +14769,249 @@ list [
     "name": "グスタフ",
     "order": 131,
     "tag_ids": Array [
+      "all",
       "giji",
       "middle",
       "farm",
+    ],
+  },
+  model {
+    "_id": "c132",
+    "aggregate": Object {
+      "fav": Object {
+        "_id": Object {
+          "sow_auth_id": null,
+        },
+        "count": 0,
+      },
+      "folders": Array [],
+      "lives": Array [],
+      "log": Object {
+        "date_max": -4503599627370495,
+        "date_min": 4503599627370495,
+        "story_ids": Array [],
+      },
+      "mestypes": Array [],
+      "roles": Array [],
+      "sow_auths": Array [],
+    },
+    "comment": null,
+    "name": "ルイン",
+    "order": 132,
+    "tag_ids": Array [
+      "all",
+      "giji",
+      "young",
+      "road",
+    ],
+  },
+  model {
+    "_id": "c133",
+    "aggregate": Object {
+      "fav": Object {
+        "_id": Object {
+          "sow_auth_id": null,
+        },
+        "count": 0,
+      },
+      "folders": Array [],
+      "lives": Array [],
+      "log": Object {
+        "date_max": -4503599627370495,
+        "date_min": 4503599627370495,
+        "story_ids": Array [],
+      },
+      "mestypes": Array [],
+      "roles": Array [],
+      "sow_auths": Array [],
+    },
+    "comment": null,
+    "name": "クレステフ",
+    "order": 133,
+    "tag_ids": Array [
+      "all",
+      "giji",
+      "middle",
+      "road",
+    ],
+  },
+  model {
+    "_id": "c134",
+    "aggregate": Object {
+      "fav": Object {
+        "_id": Object {
+          "sow_auth_id": null,
+        },
+        "count": 0,
+      },
+      "folders": Array [],
+      "lives": Array [],
+      "log": Object {
+        "date_max": -4503599627370495,
+        "date_min": 4503599627370495,
+        "story_ids": Array [],
+      },
+      "mestypes": Array [],
+      "roles": Array [],
+      "sow_auths": Array [],
+    },
+    "comment": null,
+    "name": "ズッテル",
+    "order": 134,
+    "tag_ids": Array [
+      "all",
+      "giji",
+      "young",
+      "river",
+    ],
+  },
+  model {
+    "_id": "c135",
+    "aggregate": Object {
+      "fav": Object {
+        "_id": Object {
+          "sow_auth_id": null,
+        },
+        "count": 0,
+      },
+      "folders": Array [],
+      "lives": Array [],
+      "log": Object {
+        "date_max": -4503599627370495,
+        "date_min": 4503599627370495,
+        "story_ids": Array [],
+      },
+      "mestypes": Array [],
+      "roles": Array [],
+      "sow_auths": Array [],
+    },
+    "comment": null,
+    "name": "ヘザー",
+    "order": 135,
+    "tag_ids": Array [
+      "all",
+      "giji",
+      "young",
+      "river",
+      "farm",
+    ],
+  },
+  model {
+    "_id": "c136",
+    "aggregate": Object {
+      "fav": Object {
+        "_id": Object {
+          "sow_auth_id": null,
+        },
+        "count": 0,
+      },
+      "folders": Array [],
+      "lives": Array [],
+      "log": Object {
+        "date_max": -4503599627370495,
+        "date_min": 4503599627370495,
+        "story_ids": Array [],
+      },
+      "mestypes": Array [],
+      "roles": Array [],
+      "sow_auths": Array [],
+    },
+    "comment": null,
+    "name": "レナータ",
+    "order": 136,
+    "tag_ids": Array [
+      "all",
+      "giji",
+      "young",
+      "farm",
+    ],
+  },
+  model {
+    "_id": "c137",
+    "aggregate": Object {
+      "fav": Object {
+        "_id": Object {
+          "sow_auth_id": null,
+        },
+        "count": 0,
+      },
+      "folders": Array [],
+      "lives": Array [],
+      "log": Object {
+        "date_max": -4503599627370495,
+        "date_min": 4503599627370495,
+        "story_ids": Array [],
+      },
+      "mestypes": Array [],
+      "roles": Array [],
+      "sow_auths": Array [],
+    },
+    "name": "デリクソン",
+    "order": 137,
+    "tag_ids": Array [
+      "all",
+      "giji",
+      "young",
+      "river",
+    ],
+  },
+  model {
+    "_id": "c138",
+    "aggregate": Object {
+      "fav": Object {
+        "_id": Object {
+          "sow_auth_id": null,
+        },
+        "count": 0,
+      },
+      "folders": Array [],
+      "lives": Array [],
+      "log": Object {
+        "date_max": -4503599627370495,
+        "date_min": 4503599627370495,
+        "story_ids": Array [],
+      },
+      "mestypes": Array [],
+      "roles": Array [],
+      "sow_auths": Array [],
+    },
+    "name": "レックス",
+    "order": 138,
+    "tag_ids": Array [
+      "all",
+      "giji",
+      "young",
+      "office",
+    ],
+  },
+  model {
+    "_id": "c139",
+    "aggregate": Object {
+      "fav": Object {
+        "_id": Object {
+          "sow_auth_id": null,
+        },
+        "count": 0,
+      },
+      "folders": Array [],
+      "lives": Array [],
+      "log": Object {
+        "date_max": -4503599627370495,
+        "date_min": 4503599627370495,
+        "story_ids": Array [],
+      },
+      "mestypes": Array [],
+      "roles": Array [],
+      "sow_auths": Array [],
+    },
+    "name": "ヨリック",
+    "order": 139,
+    "tag_ids": Array [
+      "all",
+      "giji",
+      "young",
+      "ecclesia",
+      "kid",
     ],
   },
   model {
@@ -14082,10 +15037,10 @@ list [
     "name": "マリアンヌ",
     "order": 900.127,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
-      "apartment",
       "market",
       "medical",
       "young",
@@ -14115,6 +15070,7 @@ list [
     "name": "カトリーナ",
     "order": 900.128,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -14146,6 +15102,7 @@ list [
     "name": "ブレンダ",
     "order": 900.129,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -14177,6 +15134,7 @@ list [
     "name": "ハナ",
     "order": 900.13,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -14209,6 +15167,7 @@ list [
     "name": "ドロシー",
     "order": 900.143,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -14241,6 +15200,7 @@ list [
     "name": "セレスト",
     "order": 900.144,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -14273,6 +15233,7 @@ list [
     "name": "ベッキー",
     "order": 900.145,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -14304,6 +15265,7 @@ list [
     "name": "ロビン",
     "order": 900.148,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -14334,6 +15296,7 @@ list [
     "name": "ネイサン",
     "order": 900.15,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -14365,6 +15328,7 @@ list [
     "name": "ウォーレン",
     "order": 900.155,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -14396,6 +15360,7 @@ list [
     "name": "ミナカタ",
     "order": 900.156,
     "tag_ids": Array [
+      "all",
       "travel",
     ],
   },
@@ -14423,7 +15388,9 @@ list [
     "name": "ホウイチ",
     "order": 900.158,
     "tag_ids": Array [
+      "all",
       "travel",
+      "student",
     ],
   },
   model {
@@ -14450,6 +15417,7 @@ list [
     "name": "ブッカ",
     "order": 900.159,
     "tag_ids": Array [
+      "all",
       "giji",
       "farm",
     ],
@@ -14478,6 +15446,7 @@ list [
     "name": "ツヅラ",
     "order": 900.16,
     "tag_ids": Array [
+      "all",
       "travel",
     ],
   },
@@ -14505,6 +15474,7 @@ list [
     "name": "スージー",
     "order": 900.165,
     "tag_ids": Array [
+      "all",
       "giji",
       "apartment",
       "elegant",
@@ -14536,6 +15506,7 @@ list [
     "name": "ダーラ",
     "order": 900.17,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -14569,6 +15540,7 @@ list [
     "name": "麻雀",
     "order": 900.175,
     "tag_ids": Array [
+      "all",
       "asia",
     ],
   },
@@ -14596,6 +15568,7 @@ list [
     "name": "ラディスラヴァ",
     "order": 900.18,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -14626,6 +15599,7 @@ list [
     "name": "ヘクター",
     "order": 900.185,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -14656,6 +15630,7 @@ list [
     "name": "サイラス",
     "order": 900.19,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -14688,6 +15663,7 @@ list [
     "name": "ローズマリー",
     "order": 900.195,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -14719,6 +15695,7 @@ list [
     "name": "ポーチュラカ",
     "order": 900.197,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -14759,12 +15736,13 @@ list [
     },
     "order": 900.2,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
       "guild",
+      "office",
       "young",
-      "pair",
     ],
   },
   model {
@@ -14790,12 +15768,12 @@ list [
     "name": "ジョージ",
     "order": 900.202,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
       "apartment",
       "kid",
-      "pair",
     ],
   },
   model {
@@ -14822,6 +15800,7 @@ list [
     "name": "イヴォン",
     "order": 900.205,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -14854,6 +15833,7 @@ list [
     "name": "イスルギ",
     "order": 900.208,
     "tag_ids": Array [
+      "all",
       "travel",
     ],
   },
@@ -14881,6 +15861,7 @@ list [
     "name": "オーレリア",
     "order": 900.21,
     "tag_ids": Array [
+      "all",
       "giji",
       "ecclesia",
       "young",
@@ -14910,6 +15891,7 @@ list [
     "name": "デメテル",
     "order": 900.213,
     "tag_ids": Array [
+      "all",
       "marchen",
     ],
   },
@@ -14937,6 +15919,7 @@ list [
     "name": "志偉",
     "order": 900.215,
     "tag_ids": Array [
+      "all",
       "asia",
     ],
   },
@@ -14964,6 +15947,7 @@ list [
     "name": "エリアス",
     "order": 900.217,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -14996,6 +15980,7 @@ list [
     "name": "シーシャ",
     "order": 900.22,
     "tag_ids": Array [
+      "all",
       "marchen",
     ],
   },
@@ -15022,6 +16007,7 @@ list [
     "name": "プリシラ",
     "order": 900.222,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -15053,7 +16039,9 @@ list [
     "name": "ミルフィ",
     "order": 900.224,
     "tag_ids": Array [
+      "all",
       "travel",
+      "student",
     ],
   },
   model {
@@ -15080,6 +16068,7 @@ list [
     "name": "フローラ",
     "order": 900.226,
     "tag_ids": Array [
+      "all",
       "giji",
       "young",
       "market",
@@ -15108,6 +16097,7 @@ list [
     "name": "ビアンカ",
     "order": 900.228,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
@@ -15140,6 +16130,7 @@ list [
     "name": "ルグレ",
     "order": 900.2302,
     "tag_ids": Array [
+      "all",
       "marchen",
     ],
   },
@@ -15167,6 +16158,7 @@ list [
     "name": "オルギア",
     "order": 900.2304,
     "tag_ids": Array [
+      "all",
       "marchen",
     ],
   },
@@ -15194,6 +16186,7 @@ list [
     "name": "ユージン",
     "order": 900.2306,
     "tag_ids": Array [
+      "all",
       "giji",
       "river",
       "young",
@@ -15224,6 +16217,7 @@ list [
     "name": "ジェレミー",
     "order": 900.2308,
     "tag_ids": Array [
+      "all",
       "giji",
       "apartment",
       "immoral",
@@ -15255,11 +16249,11 @@ list [
     "name": "ホレーショー",
     "order": 900.233,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
       "immoral",
-      "apartment",
       "middle",
     ],
   },
@@ -15287,12 +16281,12 @@ list [
     "name": "ナンシー",
     "order": 900.234,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
       "apartment",
       "young",
-      "pair",
     ],
   },
   model {
@@ -15319,6 +16313,7 @@ list [
     "name": "パカロロ",
     "order": 900.235,
     "tag_ids": Array [
+      "all",
       "marchen",
     ],
   },
@@ -15346,6 +16341,7 @@ list [
     "name": "アヤワスカ",
     "order": 900.236,
     "tag_ids": Array [
+      "all",
       "marchen",
     ],
   },
@@ -15387,13 +16383,14 @@ list [
     },
     "order": 900.24,
     "tag_ids": Array [
+      "all",
       "marchen",
       "animal",
       "school",
       "giji",
       "road",
+      "office",
       "medical",
-      "market",
       "young",
     ],
   },
@@ -15420,11 +16417,11 @@ list [
     "name": "ネル",
     "order": 900.25,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
-      "guild",
-      "apartment",
+      "office",
       "young",
     ],
   },
@@ -15457,13 +16454,13 @@ list [
     },
     "order": 900.26,
     "tag_ids": Array [
+      "all",
       "animal",
       "school",
       "giji",
       "apartment",
       "young",
       "middle",
-      "pair",
     ],
   },
   model {
@@ -15490,6 +16487,7 @@ list [
     "name": "エルゴット",
     "order": 900.27,
     "tag_ids": Array [
+      "all",
       "marchen",
     ],
   },
@@ -15535,6 +16533,7 @@ list [
     },
     "order": 900.28,
     "tag_ids": Array [
+      "all",
       "marchen",
     ],
   },
@@ -15562,6 +16561,7 @@ list [
     "name": "露蝶",
     "order": 10001,
     "tag_ids": Array [
+      "all",
       "asia",
     ],
   },
@@ -15602,6 +16602,7 @@ list [
     },
     "order": 10003,
     "tag_ids": Array [
+      "all",
       "asia",
     ],
   },
@@ -15629,6 +16630,7 @@ list [
     "name": "沼太郎",
     "order": 10004,
     "tag_ids": Array [
+      "all",
       "asia",
     ],
   },
@@ -15656,6 +16658,7 @@ list [
     "name": "攻芸",
     "order": 10005,
     "tag_ids": Array [
+      "all",
       "asia",
     ],
   },
@@ -15683,6 +16686,7 @@ list [
     "name": "黍炉",
     "order": 10007,
     "tag_ids": Array [
+      "all",
       "asia",
     ],
   },
@@ -15710,6 +16714,7 @@ list [
     "name": "ジリヤ",
     "order": 10008,
     "tag_ids": Array [
+      "all",
       "asia",
     ],
   },
@@ -15737,6 +16742,35 @@ list [
     "name": "イワン",
     "order": 10009,
     "tag_ids": Array [
+      "all",
+      "asia",
+    ],
+  },
+  model {
+    "_id": "g09",
+    "aggregate": Object {
+      "fav": Object {
+        "_id": Object {
+          "sow_auth_id": null,
+        },
+        "count": 0,
+      },
+      "folders": Array [],
+      "lives": Array [],
+      "log": Object {
+        "date_max": -4503599627370495,
+        "date_min": 4503599627370495,
+        "story_ids": Array [],
+      },
+      "mestypes": Array [],
+      "roles": Array [],
+      "sow_auths": Array [],
+    },
+    "comment": "ロシア人名。末っ子の可愛らしさを。",
+    "name": "チトフ",
+    "order": 10009,
+    "tag_ids": Array [
+      "all",
       "asia",
     ],
   },
@@ -15764,6 +16798,7 @@ list [
     "name": "ドリベル",
     "order": 20004,
     "tag_ids": Array [
+      "all",
       "marchen",
     ],
   },
@@ -15791,6 +16826,7 @@ list [
     "name": "ダイミ",
     "order": 20007,
     "tag_ids": Array [
+      "all",
       "marchen",
     ],
   },
@@ -15818,6 +16854,7 @@ list [
     "name": "エフェドラ",
     "order": 20008,
     "tag_ids": Array [
+      "all",
       "marchen",
     ],
   },
@@ -15845,6 +16882,7 @@ list [
     "name": "カナビス",
     "order": 20009,
     "tag_ids": Array [
+      "all",
       "marchen",
     ],
   },
@@ -15872,7 +16910,9 @@ list [
     "name": "チアキ",
     "order": 30001,
     "tag_ids": Array [
+      "all",
       "travel",
+      "student",
     ],
   },
   model {
@@ -15899,7 +16939,9 @@ list [
     "name": "リッキィ",
     "order": 30002,
     "tag_ids": Array [
+      "all",
       "travel",
+      "student",
     ],
   },
   model {
@@ -15926,7 +16968,9 @@ list [
     "name": "カイル",
     "order": 30004,
     "tag_ids": Array [
+      "all",
       "travel",
+      "student",
     ],
   },
   model {
@@ -15953,6 +16997,7 @@ list [
     "name": "ジェニファー",
     "order": 30005,
     "tag_ids": Array [
+      "all",
       "travel",
     ],
   },
@@ -15980,7 +17025,9 @@ list [
     "name": "サミュエル",
     "order": 30006,
     "tag_ids": Array [
+      "all",
       "travel",
+      "student",
     ],
   },
   model {
@@ -16007,6 +17054,7 @@ list [
     "name": "ゴロウ",
     "order": 30009,
     "tag_ids": Array [
+      "all",
       "travel",
     ],
   },
@@ -16034,7 +17082,9 @@ list [
     "name": "シュンタロ",
     "order": 30009,
     "tag_ids": Array [
+      "all",
       "travel",
+      "student",
     ],
   },
   model {
@@ -16061,7 +17111,9 @@ list [
     "name": "トレイル",
     "order": 30010,
     "tag_ids": Array [
+      "all",
       "travel",
+      "student",
     ],
   },
   model {
@@ -16088,6 +17140,7 @@ list [
     "name": "フランク",
     "order": 30012,
     "tag_ids": Array [
+      "all",
       "travel",
     ],
   },
@@ -16115,6 +17168,7 @@ list [
     "name": "ジャニス",
     "order": 30013,
     "tag_ids": Array [
+      "all",
       "travel",
     ],
   },
@@ -16142,7 +17196,9 @@ list [
     "name": "クシャミ",
     "order": 30014,
     "tag_ids": Array [
+      "all",
       "travel",
+      "student",
     ],
   },
   model {
@@ -16169,7 +17225,9 @@ list [
     "name": "ガーディ",
     "order": 30015,
     "tag_ids": Array [
+      "all",
       "travel",
+      "student",
     ],
   },
   model {
@@ -16196,6 +17254,7 @@ list [
     "name": "アラン",
     "order": 30016,
     "tag_ids": Array [
+      "all",
       "travel",
     ],
   },
@@ -16223,7 +17282,9 @@ list [
     "name": "ハルカ",
     "order": 30017,
     "tag_ids": Array [
+      "all",
       "travel",
+      "student",
     ],
   },
   model {
@@ -16250,7 +17311,9 @@ list [
     "name": "ススム",
     "order": 30018,
     "tag_ids": Array [
+      "all",
       "travel",
+      "student",
     ],
   },
   model {
@@ -16277,7 +17340,9 @@ list [
     "name": "マユミ",
     "order": 30018,
     "tag_ids": Array [
+      "all",
       "travel",
+      "student",
     ],
   },
   model {
@@ -16304,7 +17369,9 @@ list [
     "name": "ガモウ",
     "order": 30018.1,
     "tag_ids": Array [
+      "all",
       "travel",
+      "student",
     ],
   },
   model {
@@ -16331,7 +17398,9 @@ list [
     "name": "クロエ",
     "order": 30018.1,
     "tag_ids": Array [
+      "all",
       "travel",
+      "student",
     ],
   },
   model {
@@ -16358,7 +17427,9 @@ list [
     "name": "アカリ",
     "order": 30019,
     "tag_ids": Array [
+      "all",
       "travel",
+      "student",
     ],
   },
   model {
@@ -16385,7 +17456,9 @@ list [
     "name": "マドカ",
     "order": 30019,
     "tag_ids": Array [
+      "all",
       "travel",
+      "student",
     ],
   },
   model {
@@ -16412,7 +17485,9 @@ list [
     "name": "トシミ",
     "order": 30019,
     "tag_ids": Array [
+      "all",
       "travel",
+      "student",
     ],
   },
   model {
@@ -16439,7 +17514,9 @@ list [
     "name": "ヒナコ",
     "order": 30020,
     "tag_ids": Array [
+      "all",
       "travel",
+      "student",
     ],
   },
   model {
@@ -16466,7 +17543,9 @@ list [
     "name": "ケイイチ",
     "order": 30021,
     "tag_ids": Array [
+      "all",
       "travel",
+      "student",
     ],
   },
   model {
@@ -16493,7 +17572,9 @@ list [
     "name": "エリ",
     "order": 30022,
     "tag_ids": Array [
+      "all",
       "travel",
+      "student",
     ],
   },
   model {
@@ -16520,7 +17601,9 @@ list [
     "name": "ナナオ",
     "order": 30023,
     "tag_ids": Array [
+      "all",
       "travel",
+      "student",
     ],
   },
   model {
@@ -16547,7 +17630,9 @@ list [
     "name": "キルロイ",
     "order": 30024,
     "tag_ids": Array [
+      "all",
       "travel",
+      "student",
     ],
   },
   model {
@@ -16574,7 +17659,9 @@ list [
     "name": "ミサキ",
     "order": 30025,
     "tag_ids": Array [
+      "all",
       "travel",
+      "student",
     ],
   },
   model {
@@ -16601,6 +17688,7 @@ list [
     "name": "アツタネ",
     "order": 30026,
     "tag_ids": Array [
+      "all",
       "travel",
     ],
   },
@@ -16628,6 +17716,7 @@ list [
     "name": "みょんこ",
     "order": 30027,
     "tag_ids": Array [
+      "all",
       "travel",
     ],
   },
@@ -16655,7 +17744,9 @@ list [
     "name": "リツ",
     "order": 30028,
     "tag_ids": Array [
+      "all",
       "travel",
+      "student",
     ],
   },
   model {
@@ -16682,6 +17773,7 @@ list [
     "name": "ワタヌキ",
     "order": 30030,
     "tag_ids": Array [
+      "all",
       "travel",
     ],
   },
@@ -16709,6 +17801,7 @@ list [
     "name": "トヨタ",
     "order": 30032,
     "tag_ids": Array [
+      "all",
       "travel",
     ],
   },
@@ -16736,6 +17829,7 @@ list [
     "name": "エツコ",
     "order": 30033,
     "tag_ids": Array [
+      "all",
       "travel",
     ],
   },
@@ -16763,7 +17857,9 @@ list [
     "name": "イルマ",
     "order": 30036,
     "tag_ids": Array [
+      "all",
       "travel",
+      "student",
     ],
   },
   model {
@@ -16790,6 +17886,7 @@ list [
     "name": "スズキ",
     "order": 30038,
     "tag_ids": Array [
+      "all",
       "travel",
     ],
   },
@@ -16817,6 +17914,7 @@ list [
     "name": "マスタ",
     "order": 30039,
     "tag_ids": Array [
+      "all",
       "travel",
     ],
   },
@@ -16844,7 +17942,9 @@ list [
     "name": "アオ",
     "order": 30041,
     "tag_ids": Array [
+      "all",
       "travel",
+      "student",
     ],
   },
   model {
@@ -16871,7 +17971,9 @@ list [
     "name": "レン",
     "order": 30042,
     "tag_ids": Array [
+      "all",
       "travel",
+      "student",
     ],
   },
   model {
@@ -16898,7 +18000,9 @@ list [
     "name": "こころ",
     "order": 30043,
     "tag_ids": Array [
+      "all",
       "travel",
+      "student",
     ],
   },
   model {
@@ -16925,7 +18029,9 @@ list [
     "name": "ナツミ",
     "order": 30044,
     "tag_ids": Array [
+      "all",
       "travel",
+      "student",
     ],
   },
   model {
@@ -16952,7 +18058,9 @@ list [
     "name": "サダミツ",
     "order": 30046,
     "tag_ids": Array [
+      "all",
       "travel",
+      "student",
     ],
   },
   model {
@@ -16979,7 +18087,9 @@ list [
     "name": "ノッカ",
     "order": 30047,
     "tag_ids": Array [
+      "all",
       "travel",
+      "student",
     ],
   },
   model {
@@ -17006,7 +18116,9 @@ list [
     "name": "Ａ",
     "order": 30048,
     "tag_ids": Array [
+      "all",
       "travel",
+      "student",
     ],
   },
   model {
@@ -17033,7 +18145,9 @@ list [
     "name": "Ａ",
     "order": 30049,
     "tag_ids": Array [
+      "all",
       "travel",
+      "student",
     ],
   },
   model {
@@ -17060,8 +18174,9 @@ list [
     "name": "ヨスガ",
     "order": 30050,
     "tag_ids": Array [
+      "all",
       "travel",
-      "pair",
+      "student",
     ],
   },
   model {
@@ -17088,8 +18203,9 @@ list [
     "name": "エニシ",
     "order": 30051,
     "tag_ids": Array [
+      "all",
       "travel",
-      "pair",
+      "student",
     ],
   },
   model {
@@ -17116,7 +18232,9 @@ list [
     "name": "ニトカ",
     "order": 30052,
     "tag_ids": Array [
+      "all",
       "travel",
+      "student",
     ],
   },
   model {
@@ -17143,7 +18261,9 @@ list [
     "name": "ウツギ",
     "order": 30054,
     "tag_ids": Array [
+      "all",
       "travel",
+      "student",
     ],
   },
   model {
@@ -17170,7 +18290,9 @@ list [
     "name": "セイカ",
     "order": 30055,
     "tag_ids": Array [
+      "all",
       "travel",
+      "student",
     ],
   },
   model {
@@ -17197,7 +18319,9 @@ list [
     "name": "ヤスリ",
     "order": 30056,
     "tag_ids": Array [
+      "all",
       "travel",
+      "student",
     ],
   },
   model {
@@ -17224,7 +18348,9 @@ list [
     "name": "はのん",
     "order": 30057,
     "tag_ids": Array [
+      "all",
       "travel",
+      "student",
     ],
   },
   model {
@@ -17251,7 +18377,9 @@ list [
     "name": "シンイチ",
     "order": 30058,
     "tag_ids": Array [
+      "all",
       "travel",
+      "student",
     ],
   },
   model {
@@ -17278,7 +18406,9 @@ list [
     "name": "メイ",
     "order": 30059,
     "tag_ids": Array [
+      "all",
       "travel",
+      "student",
     ],
   },
   model {
@@ -17305,6 +18435,7 @@ list [
     "name": "タツミ",
     "order": 30060,
     "tag_ids": Array [
+      "all",
       "travel",
     ],
   },
@@ -17332,7 +18463,9 @@ list [
     "name": "ムギタ",
     "order": 30061,
     "tag_ids": Array [
+      "all",
       "travel",
+      "student",
     ],
   },
   model {
@@ -17359,7 +18492,9 @@ list [
     "name": "ヘイタロウ",
     "order": 30062,
     "tag_ids": Array [
+      "all",
       "travel",
+      "student",
     ],
   },
   model {
@@ -17386,6 +18521,7 @@ list [
     "name": "ソウスケ",
     "order": 30063,
     "tag_ids": Array [
+      "all",
       "travel",
     ],
   },
@@ -17413,6 +18549,7 @@ list [
     "name": "ユエ",
     "order": 30064,
     "tag_ids": Array [
+      "all",
       "travel",
     ],
   },
@@ -17440,6 +18577,7 @@ list [
     "name": "カコ",
     "order": 30065,
     "tag_ids": Array [
+      "all",
       "travel",
     ],
   },
@@ -17467,6 +18605,7 @@ list [
     "name": "ココア",
     "order": 30066,
     "tag_ids": Array [
+      "all",
       "travel",
     ],
   },
@@ -17494,6 +18633,7 @@ list [
     "name": "マコト",
     "order": 30067,
     "tag_ids": Array [
+      "all",
       "travel",
     ],
   },
@@ -17521,7 +18661,9 @@ list [
     "name": "ワカナ",
     "order": 30068,
     "tag_ids": Array [
+      "all",
       "travel",
+      "student",
     ],
   },
   model {
@@ -17548,7 +18690,9 @@ list [
     "name": "ヤマト",
     "order": 30069,
     "tag_ids": Array [
+      "all",
       "travel",
+      "student",
     ],
   },
   model {
@@ -17575,7 +18719,9 @@ list [
     "name": "ニジノ",
     "order": 30070,
     "tag_ids": Array [
+      "all",
       "travel",
+      "student",
     ],
   },
   model {
@@ -17602,7 +18748,9 @@ list [
     "name": "ワカバヤシ",
     "order": 30071,
     "tag_ids": Array [
+      "all",
       "travel",
+      "student",
     ],
   },
   model {
@@ -17629,6 +18777,7 @@ list [
     "name": "カガ",
     "order": 30072,
     "tag_ids": Array [
+      "all",
       "travel",
     ],
   },
@@ -17656,7 +18805,9 @@ list [
     "name": "ワタル",
     "order": 30073,
     "tag_ids": Array [
+      "all",
       "travel",
+      "student",
     ],
   },
   model {
@@ -17683,7 +18834,9 @@ list [
     "name": "フウタ",
     "order": 30074,
     "tag_ids": Array [
+      "all",
       "travel",
+      "student",
     ],
   },
   model {
@@ -17710,6 +18863,404 @@ list [
     "name": "ルリ",
     "order": 30075,
     "tag_ids": Array [
+      "all",
+      "travel",
+      "student",
+    ],
+  },
+  model {
+    "_id": "t76",
+    "aggregate": Object {
+      "fav": Object {
+        "_id": Object {
+          "sow_auth_id": null,
+        },
+        "count": 0,
+      },
+      "folders": Array [],
+      "lives": Array [],
+      "log": Object {
+        "date_max": -4503599627370495,
+        "date_min": 4503599627370495,
+        "story_ids": Array [],
+      },
+      "mestypes": Array [],
+      "roles": Array [],
+      "sow_auths": Array [],
+    },
+    "comment": "塚原新右衛門高幹（塚原卜伝）。",
+    "name": "タカモト",
+    "order": 30076,
+    "tag_ids": Array [
+      "all",
+      "travel",
+      "student",
+    ],
+  },
+  model {
+    "_id": "t77",
+    "aggregate": Object {
+      "fav": Object {
+        "_id": Object {
+          "sow_auth_id": null,
+        },
+        "count": 0,
+      },
+      "folders": Array [],
+      "lives": Array [],
+      "log": Object {
+        "date_max": -4503599627370495,
+        "date_min": 4503599627370495,
+        "story_ids": Array [],
+      },
+      "mestypes": Array [],
+      "roles": Array [],
+      "sow_auths": Array [],
+    },
+    "comment": "オノヨーコさんを参照。",
+    "name": "ヨーコ",
+    "order": 30077,
+    "tag_ids": Array [
+      "all",
+      "travel",
+    ],
+  },
+  model {
+    "_id": "t78",
+    "aggregate": Object {
+      "fav": Object {
+        "_id": Object {
+          "sow_auth_id": null,
+        },
+        "count": 0,
+      },
+      "folders": Array [],
+      "lives": Array [],
+      "log": Object {
+        "date_max": -4503599627370495,
+        "date_min": 4503599627370495,
+        "story_ids": Array [],
+      },
+      "mestypes": Array [],
+      "roles": Array [],
+      "sow_auths": Array [],
+    },
+    "comment": "中国人名。",
+    "name": "ヤン",
+    "order": 30078,
+    "tag_ids": Array [
+      "all",
+      "travel",
+    ],
+  },
+  model {
+    "_id": "t79",
+    "aggregate": Object {
+      "fav": Object {
+        "_id": Object {
+          "sow_auth_id": null,
+        },
+        "count": 0,
+      },
+      "folders": Array [],
+      "lives": Array [],
+      "log": Object {
+        "date_max": -4503599627370495,
+        "date_min": 4503599627370495,
+        "story_ids": Array [],
+      },
+      "mestypes": Array [],
+      "roles": Array [],
+      "sow_auths": Array [],
+    },
+    "comment": null,
+    "name": "ヒイラギ",
+    "order": 30079,
+    "tag_ids": Array [
+      "all",
+      "travel",
+      "student",
+    ],
+  },
+  model {
+    "_id": "t80",
+    "aggregate": Object {
+      "fav": Object {
+        "_id": Object {
+          "sow_auth_id": null,
+        },
+        "count": 0,
+      },
+      "folders": Array [],
+      "lives": Array [],
+      "log": Object {
+        "date_max": -4503599627370495,
+        "date_min": 4503599627370495,
+        "story_ids": Array [],
+      },
+      "mestypes": Array [],
+      "roles": Array [],
+      "sow_auths": Array [],
+    },
+    "comment": null,
+    "name": "ナオシゲ",
+    "order": 30080,
+    "tag_ids": Array [
+      "all",
+      "travel",
+    ],
+  },
+  model {
+    "_id": "t81",
+    "aggregate": Object {
+      "fav": Object {
+        "_id": Object {
+          "sow_auth_id": null,
+        },
+        "count": 0,
+      },
+      "folders": Array [],
+      "lives": Array [],
+      "log": Object {
+        "date_max": -4503599627370495,
+        "date_min": 4503599627370495,
+        "story_ids": Array [],
+      },
+      "mestypes": Array [],
+      "roles": Array [],
+      "sow_auths": Array [],
+    },
+    "comment": "アメリカ人名。WASPっぽくしたかったのです。",
+    "name": "ケント",
+    "order": 30081,
+    "tag_ids": Array [
+      "all",
+      "travel",
+      "student",
+    ],
+  },
+  model {
+    "_id": "t82",
+    "aggregate": Object {
+      "fav": Object {
+        "_id": Object {
+          "sow_auth_id": null,
+        },
+        "count": 0,
+      },
+      "folders": Array [],
+      "lives": Array [],
+      "log": Object {
+        "date_max": -4503599627370495,
+        "date_min": 4503599627370495,
+        "story_ids": Array [],
+      },
+      "mestypes": Array [],
+      "roles": Array [],
+      "sow_auths": Array [],
+    },
+    "comment": "個人が善意で行なう喜捨。をあらわすアラビア語",
+    "name": "サガタ",
+    "order": 30082,
+    "tag_ids": Array [
+      "all",
+      "travel",
+    ],
+  },
+  model {
+    "_id": "t83",
+    "aggregate": Object {
+      "fav": Object {
+        "_id": Object {
+          "sow_auth_id": null,
+        },
+        "count": 0,
+      },
+      "folders": Array [],
+      "lives": Array [],
+      "log": Object {
+        "date_max": -4503599627370495,
+        "date_min": 4503599627370495,
+        "story_ids": Array [],
+      },
+      "mestypes": Array [],
+      "roles": Array [],
+      "sow_auths": Array [],
+    },
+    "comment": "魔毛狂介から。",
+    "name": "キョウスケ",
+    "order": 30083,
+    "tag_ids": Array [
+      "all",
+      "travel",
+      "student",
+    ],
+  },
+  model {
+    "_id": "t84",
+    "aggregate": Object {
+      "fav": Object {
+        "_id": Object {
+          "sow_auth_id": null,
+        },
+        "count": 0,
+      },
+      "folders": Array [],
+      "lives": Array [],
+      "log": Object {
+        "date_max": -4503599627370495,
+        "date_min": 4503599627370495,
+        "story_ids": Array [],
+      },
+      "mestypes": Array [],
+      "roles": Array [],
+      "sow_auths": Array [],
+    },
+    "comment": "アリババと４０人の盗賊。",
+    "name": "アリババ",
+    "order": 30084,
+    "tag_ids": Array [
+      "all",
+      "travel",
+    ],
+  },
+  model {
+    "_id": "t85",
+    "aggregate": Object {
+      "fav": Object {
+        "_id": Object {
+          "sow_auth_id": null,
+        },
+        "count": 0,
+      },
+      "folders": Array [],
+      "lives": Array [],
+      "log": Object {
+        "date_max": -4503599627370495,
+        "date_min": 4503599627370495,
+        "story_ids": Array [],
+      },
+      "mestypes": Array [],
+      "roles": Array [],
+      "sow_auths": Array [],
+    },
+    "comment": "由来：弥 海砂",
+    "name": "ミサ",
+    "order": 30085,
+    "tag_ids": Array [
+      "all",
+      "travel",
+    ],
+  },
+  model {
+    "_id": "t86",
+    "aggregate": Object {
+      "fav": Object {
+        "_id": Object {
+          "sow_auth_id": null,
+        },
+        "count": 0,
+      },
+      "folders": Array [],
+      "lives": Array [],
+      "log": Object {
+        "date_max": -4503599627370495,
+        "date_min": 4503599627370495,
+        "story_ids": Array [],
+      },
+      "mestypes": Array [],
+      "roles": Array [],
+      "sow_auths": Array [],
+    },
+    "comment": "由来：プログラム言語 kotlin",
+    "name": "Dr.コトリン",
+    "order": 30086,
+    "tag_ids": Array [
+      "all",
+      "travel",
+    ],
+  },
+  model {
+    "_id": "t87",
+    "aggregate": Object {
+      "fav": Object {
+        "_id": Object {
+          "sow_auth_id": null,
+        },
+        "count": 0,
+      },
+      "folders": Array [],
+      "lives": Array [],
+      "log": Object {
+        "date_max": -4503599627370495,
+        "date_min": 4503599627370495,
+        "story_ids": Array [],
+      },
+      "mestypes": Array [],
+      "roles": Array [],
+      "sow_auths": Array [],
+    },
+    "comment": "由来：綾波レイ",
+    "name": "レイ",
+    "order": 30087,
+    "tag_ids": Array [
+      "all",
+      "travel",
+    ],
+  },
+  model {
+    "_id": "t88",
+    "aggregate": Object {
+      "fav": Object {
+        "_id": Object {
+          "sow_auth_id": null,
+        },
+        "count": 0,
+      },
+      "folders": Array [],
+      "lives": Array [],
+      "log": Object {
+        "date_max": -4503599627370495,
+        "date_min": 4503599627370495,
+        "story_ids": Array [],
+      },
+      "mestypes": Array [],
+      "roles": Array [],
+      "sow_auths": Array [],
+    },
+    "name": "アトレイユ",
+    "order": 30088,
+    "tag_ids": Array [
+      "all",
+      "travel",
+      "student",
+    ],
+  },
+  model {
+    "_id": "t89",
+    "aggregate": Object {
+      "fav": Object {
+        "_id": Object {
+          "sow_auth_id": null,
+        },
+        "count": 0,
+      },
+      "folders": Array [],
+      "lives": Array [],
+      "log": Object {
+        "date_max": -4503599627370495,
+        "date_min": 4503599627370495,
+        "story_ids": Array [],
+      },
+      "mestypes": Array [],
+      "roles": Array [],
+      "sow_auths": Array [],
+    },
+    "comment": "欧米ドラマで見かけるちょっと勘違いしてる日本人名。",
+    "name": "ヤカモト",
+    "order": 30089,
+    "tag_ids": Array [
+      "all",
       "travel",
     ],
   },
@@ -17737,6 +19288,7 @@ list [
     "name": "ロゴス",
     "order": 60000,
     "tag_ids": Array [
+      "all",
       "fable",
     ],
   },
@@ -17764,6 +19316,7 @@ list [
     "name": "ヨグラージ",
     "order": 60001,
     "tag_ids": Array [
+      "all",
       "fable",
     ],
   },
@@ -17791,6 +19344,7 @@ list [
     "name": "アーサー",
     "order": 60002,
     "tag_ids": Array [
+      "all",
       "fable",
     ],
   },
@@ -17818,6 +19372,7 @@ list [
     "name": "ロバート",
     "order": 60003,
     "tag_ids": Array [
+      "all",
       "fable",
     ],
   },
@@ -17845,6 +19400,7 @@ list [
     "name": "ハラフ",
     "order": 60004,
     "tag_ids": Array [
+      "all",
       "fable",
     ],
   },
@@ -17872,6 +19428,7 @@ list [
     "name": "コーラ",
     "order": 60005,
     "tag_ids": Array [
+      "all",
       "fable",
     ],
   },
@@ -17899,6 +19456,7 @@ list [
     "name": "タイム",
     "order": 60006,
     "tag_ids": Array [
+      "all",
       "fable",
     ],
   },
@@ -17926,6 +19484,7 @@ list [
     "name": "タプル",
     "order": 60007,
     "tag_ids": Array [
+      "all",
       "fable",
     ],
   },
@@ -17953,6 +19512,7 @@ list [
     "name": "ソランジュ",
     "order": 60008,
     "tag_ids": Array [
+      "all",
       "fable",
     ],
   },
@@ -17980,6 +19540,7 @@ list [
     "name": "ヘリンヘイモ",
     "order": 60009,
     "tag_ids": Array [
+      "all",
       "fable",
     ],
   },
@@ -18007,6 +19568,7 @@ list [
     "name": "ンゴティエク",
     "order": 60010,
     "tag_ids": Array [
+      "all",
       "fable",
     ],
   },
@@ -18034,6 +19596,7 @@ list [
     "name": "D.バルベルデ",
     "order": 60011,
     "tag_ids": Array [
+      "all",
       "fable",
     ],
   },
@@ -18061,6 +19624,7 @@ list [
     "name": "ソルフリッツィ",
     "order": 60013,
     "tag_ids": Array [
+      "all",
       "fable",
     ],
   },
@@ -18088,6 +19652,7 @@ list [
     "name": "ティム",
     "order": 60013,
     "tag_ids": Array [
+      "all",
       "fable",
     ],
   },
@@ -18115,6 +19680,147 @@ list [
     "name": "インティJr",
     "order": 60014,
     "tag_ids": Array [
+      "all",
+      "fable",
+    ],
+  },
+  model {
+    "_id": "f15",
+    "aggregate": Object {
+      "fav": Object {
+        "_id": Object {
+          "sow_auth_id": null,
+        },
+        "count": 0,
+      },
+      "folders": Array [],
+      "lives": Array [],
+      "log": Object {
+        "date_max": -4503599627370495,
+        "date_min": 4503599627370495,
+        "story_ids": Array [],
+      },
+      "mestypes": Array [],
+      "roles": Array [],
+      "sow_auths": Array [],
+    },
+    "comment": "インドネシア人名。（いろんなものとの）お友達感を狙う。",
+    "name": "ケトゥートゥ",
+    "order": 60015,
+    "tag_ids": Array [
+      "all",
+      "fable",
+    ],
+  },
+  model {
+    "_id": "f16",
+    "aggregate": Object {
+      "fav": Object {
+        "_id": Object {
+          "sow_auth_id": null,
+        },
+        "count": 0,
+      },
+      "folders": Array [],
+      "lives": Array [],
+      "log": Object {
+        "date_max": -4503599627370495,
+        "date_min": 4503599627370495,
+        "story_ids": Array [],
+      },
+      "mestypes": Array [],
+      "roles": Array [],
+      "sow_auths": Array [],
+    },
+    "comment": "スイス人名。おにっこは従者寄りにしていこう。",
+    "name": "イェンキンス",
+    "order": 60016,
+    "tag_ids": Array [
+      "all",
+      "fable",
+    ],
+  },
+  model {
+    "_id": "f17",
+    "aggregate": Object {
+      "fav": Object {
+        "_id": Object {
+          "sow_auth_id": null,
+        },
+        "count": 0,
+      },
+      "folders": Array [],
+      "lives": Array [],
+      "log": Object {
+        "date_max": -4503599627370495,
+        "date_min": 4503599627370495,
+        "story_ids": Array [],
+      },
+      "mestypes": Array [],
+      "roles": Array [],
+      "sow_auths": Array [],
+    },
+    "comment": "アイスランド人名。雪景色の中、火のまほうが灯っている喜び。",
+    "name": "モイ",
+    "order": 60017,
+    "tag_ids": Array [
+      "all",
+      "fable",
+    ],
+  },
+  model {
+    "_id": "f18",
+    "aggregate": Object {
+      "fav": Object {
+        "_id": Object {
+          "sow_auth_id": null,
+        },
+        "count": 0,
+      },
+      "folders": Array [],
+      "lives": Array [],
+      "log": Object {
+        "date_max": -4503599627370495,
+        "date_min": 4503599627370495,
+        "story_ids": Array [],
+      },
+      "mestypes": Array [],
+      "roles": Array [],
+      "sow_auths": Array [],
+    },
+    "comment": "チェコ人名。被造物（神によるものではなく）らしさを。",
+    "name": "ミタシュ",
+    "order": 60018,
+    "tag_ids": Array [
+      "all",
+      "fable",
+    ],
+  },
+  model {
+    "_id": "f20",
+    "aggregate": Object {
+      "fav": Object {
+        "_id": Object {
+          "sow_auth_id": null,
+        },
+        "count": 0,
+      },
+      "folders": Array [],
+      "lives": Array [],
+      "log": Object {
+        "date_max": -4503599627370495,
+        "date_min": 4503599627370495,
+        "story_ids": Array [],
+      },
+      "mestypes": Array [],
+      "roles": Array [],
+      "sow_auths": Array [],
+    },
+    "comment": "フランス人名ですが、まあ、つまり、あの人。",
+    "name": "ジェルマン",
+    "order": 60020,
+    "tag_ids": Array [
+      "all",
       "fable",
     ],
   },
@@ -18142,6 +19848,7 @@ list [
     "name": "ツェン",
     "order": 61001,
     "tag_ids": Array [
+      "all",
       "fable",
     ],
   },
@@ -18169,6 +19876,7 @@ list [
     "name": "ディ♪ジアン",
     "order": 61002,
     "tag_ids": Array [
+      "all",
       "fable",
     ],
   },
@@ -18196,6 +19904,7 @@ list [
     "name": "ヤツデ",
     "order": 61003,
     "tag_ids": Array [
+      "all",
       "fable",
     ],
   },
@@ -18223,6 +19932,7 @@ list [
     "name": "ギョウブ",
     "order": 61004,
     "tag_ids": Array [
+      "all",
       "fable",
     ],
   },
@@ -18250,6 +19960,35 @@ list [
     "name": "イナリ",
     "order": 61005,
     "tag_ids": Array [
+      "all",
+      "fable",
+    ],
+  },
+  model {
+    "_id": "fw06",
+    "aggregate": Object {
+      "fav": Object {
+        "_id": Object {
+          "sow_auth_id": null,
+        },
+        "count": 0,
+      },
+      "folders": Array [],
+      "lives": Array [],
+      "log": Object {
+        "date_max": -4503599627370495,
+        "date_min": 4503599627370495,
+        "story_ids": Array [],
+      },
+      "mestypes": Array [],
+      "roles": Array [],
+      "sow_auths": Array [],
+    },
+    "comment": "守敏's コレクションという解説から。三蔵のひとつ、経蔵（スートラ・ピタカ）",
+    "name": "ストラピタカ",
+    "order": 61006,
+    "tag_ids": Array [
+      "all",
       "fable",
     ],
   },
@@ -18276,6 +20015,7 @@ list [
     "name": "パルック",
     "order": 70000.01,
     "tag_ids": Array [
+      "all",
       "myth",
     ],
   },
@@ -18302,6 +20042,7 @@ list [
     "name": "アリス",
     "order": 70000.11,
     "tag_ids": Array [
+      "all",
       "myth",
     ],
   },
@@ -18328,6 +20069,7 @@ list [
     "name": "ミケ",
     "order": 70000.12,
     "tag_ids": Array [
+      "all",
       "myth",
     ],
   },
@@ -18354,6 +20096,7 @@ list [
     "name": "リリンラ",
     "order": 70000.21,
     "tag_ids": Array [
+      "all",
       "myth",
     ],
   },
@@ -18380,6 +20123,7 @@ list [
     "name": "トノサマ",
     "order": 70000.22,
     "tag_ids": Array [
+      "all",
       "myth",
     ],
   },
@@ -18418,6 +20162,7 @@ list [
     },
     "order": 70000.23,
     "tag_ids": Array [
+      "all",
       "myth",
     ],
   },
@@ -18444,6 +20189,7 @@ list [
     "name": "ミソチャ",
     "order": 70000.24,
     "tag_ids": Array [
+      "all",
       "myth",
     ],
   },
@@ -18470,6 +20216,7 @@ list [
     "name": "トリ",
     "order": 70000.31,
     "tag_ids": Array [
+      "all",
       "myth",
     ],
   },
@@ -18496,6 +20243,7 @@ list [
     "name": "ケムシ",
     "order": 70001,
     "tag_ids": Array [
+      "all",
       "myth",
     ],
   },
@@ -18522,6 +20270,7 @@ list [
     "name": "ポプラ",
     "order": 70002,
     "tag_ids": Array [
+      "all",
       "myth",
     ],
   },
@@ -18548,6 +20297,7 @@ list [
     "name": "アオイ",
     "order": 70004,
     "tag_ids": Array [
+      "all",
       "myth",
     ],
   },
@@ -18575,6 +20325,7 @@ list [
     "name": "ドナルド",
     "order": 70007.9,
     "tag_ids": Array [
+      "all",
       "myth",
     ],
   },
@@ -18608,6 +20359,7 @@ list [
     },
     "order": 70008,
     "tag_ids": Array [
+      "all",
       "myth",
     ],
   },
@@ -18635,6 +20387,7 @@ list [
     "name": "ボリス",
     "order": 70008.1,
     "tag_ids": Array [
+      "all",
       "myth",
     ],
   },
@@ -18661,6 +20414,7 @@ list [
     "name": "カミジャー",
     "order": 70009,
     "tag_ids": Array [
+      "all",
       "myth",
     ],
   },
@@ -18687,6 +20441,7 @@ list [
     "name": "アチャポ",
     "order": 70010,
     "tag_ids": Array [
+      "all",
       "myth",
     ],
   },
@@ -18713,8 +20468,8 @@ list [
     "name": "ライトニング",
     "order": 70011,
     "tag_ids": Array [
+      "all",
       "myth",
-      "pair",
     ],
   },
   model {
@@ -18741,8 +20496,8 @@ list [
     "name": "トルニトス",
     "order": 70012,
     "tag_ids": Array [
+      "all",
       "myth",
-      "pair",
     ],
   },
   model {
@@ -18768,6 +20523,7 @@ list [
     "name": "カリュクス",
     "order": 70014,
     "tag_ids": Array [
+      "all",
       "myth",
     ],
   },
@@ -18795,6 +20551,7 @@ list [
     "name": "アーサー",
     "order": 70016,
     "tag_ids": Array [
+      "all",
       "myth",
     ],
   },
@@ -18822,6 +20579,7 @@ list [
     "name": "ミーム",
     "order": 70018,
     "tag_ids": Array [
+      "all",
       "myth",
     ],
   },
@@ -18849,8 +20607,8 @@ list [
     "name": "タルト",
     "order": 70019,
     "tag_ids": Array [
+      "all",
       "myth",
-      "pair",
     ],
   },
   model {
@@ -18877,8 +20635,8 @@ list [
     "name": "ショコラ",
     "order": 70020,
     "tag_ids": Array [
+      "all",
       "myth",
-      "pair",
     ],
   },
   model {
@@ -18905,6 +20663,7 @@ list [
     "name": "ラッシード",
     "order": 80000,
     "tag_ids": Array [
+      "all",
       "stratos",
     ],
   },
@@ -18932,6 +20691,7 @@ list [
     "name": "エスペラント",
     "order": 80001,
     "tag_ids": Array [
+      "all",
       "stratos",
     ],
   },
@@ -18959,6 +20719,7 @@ list [
     "name": "ピート",
     "order": 80002,
     "tag_ids": Array [
+      "all",
       "stratos",
     ],
   },
@@ -18998,6 +20759,7 @@ list [
     },
     "order": 80003,
     "tag_ids": Array [
+      "all",
       "stratos",
     ],
   },
@@ -19025,6 +20787,7 @@ list [
     "name": "モナリザ",
     "order": 80004,
     "tag_ids": Array [
+      "all",
       "stratos",
     ],
   },
@@ -19052,6 +20815,7 @@ list [
     "name": "ワレンチナ",
     "order": 80005,
     "tag_ids": Array [
+      "all",
       "stratos",
     ],
   },
@@ -19079,6 +20843,7 @@ list [
     "name": "アマルテア",
     "order": 80006,
     "tag_ids": Array [
+      "all",
       "stratos",
     ],
   },
@@ -19106,6 +20871,7 @@ list [
     "name": "ヤンファ",
     "order": 80007,
     "tag_ids": Array [
+      "all",
       "stratos",
     ],
   },
@@ -19133,6 +20899,7 @@ list [
     "name": "ＰＪ",
     "order": 80008,
     "tag_ids": Array [
+      "all",
       "stratos",
     ],
   },
@@ -19160,6 +20927,7 @@ list [
     "name": "キリシマ",
     "order": 80009,
     "tag_ids": Array [
+      "all",
       "stratos",
     ],
   },
@@ -19204,6 +20972,7 @@ list [
     },
     "order": 80010,
     "tag_ids": Array [
+      "all",
       "stratos",
     ],
   },
@@ -19231,6 +21000,7 @@ list [
     "name": "イワノフ",
     "order": 80011,
     "tag_ids": Array [
+      "all",
       "stratos",
     ],
   },
@@ -19258,6 +21028,7 @@ list [
     "name": "†ルシフェル†",
     "order": 80012,
     "tag_ids": Array [
+      "all",
       "stratos",
     ],
   },
@@ -19285,6 +21056,7 @@ list [
     "name": "トルドヴィン",
     "order": 80013,
     "tag_ids": Array [
+      "all",
       "stratos",
     ],
   },
@@ -19312,8 +21084,8 @@ list [
     "name": "玖休",
     "order": 80014,
     "tag_ids": Array [
+      "all",
       "stratos",
-      "pair",
     ],
   },
   model {
@@ -19340,8 +21112,8 @@ list [
     "name": "参休",
     "order": 80015,
     "tag_ids": Array [
+      "all",
       "stratos",
-      "pair",
     ],
   },
   model {
@@ -19368,6 +21140,7 @@ list [
     "name": "クリスマス",
     "order": 80016,
     "tag_ids": Array [
+      "all",
       "stratos",
     ],
   },
@@ -19395,6 +21168,7 @@ list [
     "name": "ジェームス",
     "order": 80017,
     "tag_ids": Array [
+      "all",
       "stratos",
     ],
   },
@@ -19422,6 +21196,7 @@ list [
     "name": "ライジ",
     "order": 80018,
     "tag_ids": Array [
+      "all",
       "stratos",
     ],
   },
@@ -19449,6 +21224,7 @@ list [
     "name": "ジャック",
     "order": 80019,
     "tag_ids": Array [
+      "all",
       "stratos",
     ],
   },
@@ -19476,6 +21252,7 @@ list [
     "name": "ティソ",
     "order": 80020,
     "tag_ids": Array [
+      "all",
       "stratos",
     ],
   },
@@ -19503,6 +21280,7 @@ list [
     "name": "アンタレス",
     "order": 80022,
     "tag_ids": Array [
+      "all",
       "stratos",
     ],
   },
@@ -19530,6 +21308,7 @@ list [
     "name": "エフ",
     "order": 80023,
     "tag_ids": Array [
+      "all",
       "stratos",
     ],
   },
@@ -19557,6 +21336,7 @@ list [
     "name": "アイライト",
     "order": 80024,
     "tag_ids": Array [
+      "all",
       "stratos",
     ],
   },
@@ -19584,6 +21364,7 @@ list [
     "name": "ポーラ",
     "order": 80026,
     "tag_ids": Array [
+      "all",
       "stratos",
     ],
   },
@@ -19611,6 +21392,7 @@ list [
     "name": "チェビイ",
     "order": 80027,
     "tag_ids": Array [
+      "all",
       "stratos",
     ],
   },
@@ -19638,6 +21420,7 @@ list [
     "name": "モスキート",
     "order": 80028,
     "tag_ids": Array [
+      "all",
       "stratos",
     ],
   },
@@ -19665,6 +21448,7 @@ list [
     "name": "ワクラバ",
     "order": 80029,
     "tag_ids": Array [
+      "all",
       "stratos",
     ],
   },
@@ -19692,6 +21476,7 @@ list [
     "name": "コータ",
     "order": 80030,
     "tag_ids": Array [
+      "all",
       "stratos",
     ],
   },
@@ -19719,6 +21504,7 @@ list [
     "name": "ミツボシ",
     "order": 80031,
     "tag_ids": Array [
+      "all",
       "stratos",
     ],
   },
@@ -19746,6 +21532,7 @@ list [
     "name": "クレパスキュール",
     "order": 80032,
     "tag_ids": Array [
+      "all",
       "stratos",
     ],
   },
@@ -19773,6 +21560,7 @@ list [
     "name": "シルク",
     "order": 80033,
     "tag_ids": Array [
+      "all",
       "stratos",
     ],
   },
@@ -19800,6 +21588,7 @@ list [
     "name": "イースター",
     "order": 80033,
     "tag_ids": Array [
+      "all",
       "stratos",
     ],
   },
@@ -19826,6 +21615,7 @@ list [
     "name": "アニュ",
     "order": 80034,
     "tag_ids": Array [
+      "all",
       "stratos",
     ],
   },
@@ -19853,6 +21643,7 @@ list [
     "name": "キャンディ",
     "order": 80035,
     "tag_ids": Array [
+      "all",
       "stratos",
     ],
   },
@@ -19879,6 +21670,7 @@ list [
     "name": "キカ",
     "order": 80036,
     "tag_ids": Array [
+      "all",
       "stratos",
     ],
   },
@@ -19905,6 +21697,7 @@ list [
     "name": "バンアレン",
     "order": 80037,
     "tag_ids": Array [
+      "all",
       "stratos",
     ],
   },
@@ -19931,6 +21724,35 @@ list [
     "name": "パラチーノ",
     "order": 80038,
     "tag_ids": Array [
+      "all",
+      "stratos",
+    ],
+  },
+  model {
+    "_id": "sf039",
+    "aggregate": Object {
+      "fav": Object {
+        "_id": Object {
+          "sow_auth_id": null,
+        },
+        "count": 0,
+      },
+      "folders": Array [],
+      "lives": Array [],
+      "log": Object {
+        "date_max": -4503599627370495,
+        "date_min": 4503599627370495,
+        "story_ids": Array [],
+      },
+      "mestypes": Array [],
+      "roles": Array [],
+      "sow_auths": Array [],
+    },
+    "comment": "おまつり",
+    "name": "ハロウィン",
+    "order": 80039,
+    "tag_ids": Array [
+      "all",
       "stratos",
     ],
   },
@@ -19958,6 +21780,7 @@ list [
     "name": "定吉",
     "order": 90001,
     "tag_ids": Array [
+      "all",
       "shoji",
     ],
   },
@@ -19985,6 +21808,7 @@ list [
     "name": "鉄平",
     "order": 90002,
     "tag_ids": Array [
+      "all",
       "shoji",
     ],
   },
@@ -20012,6 +21836,7 @@ list [
     "name": "竹三",
     "order": 90003,
     "tag_ids": Array [
+      "all",
       "shoji",
     ],
   },
@@ -20038,6 +21863,7 @@ list [
     "name": "ウト",
     "order": 90004,
     "tag_ids": Array [
+      "all",
       "shoji",
     ],
   },
@@ -20065,6 +21891,7 @@ list [
     "name": "勢",
     "order": 90005,
     "tag_ids": Array [
+      "all",
       "shoji",
     ],
   },
@@ -20091,6 +21918,7 @@ list [
     "name": "菊",
     "order": 90006,
     "tag_ids": Array [
+      "all",
       "shoji",
     ],
   },
@@ -20117,6 +21945,7 @@ list [
     "name": "勝丸",
     "order": 90007,
     "tag_ids": Array [
+      "all",
       "shoji",
     ],
   },
@@ -20144,6 +21973,7 @@ list [
     "name": "奈須麿",
     "order": 90008,
     "tag_ids": Array [
+      "all",
       "shoji",
     ],
   },
@@ -20171,6 +22001,7 @@ list [
     "name": "辰次",
     "order": 90009,
     "tag_ids": Array [
+      "all",
       "shoji",
     ],
   },
@@ -20197,6 +22028,7 @@ list [
     "name": "芙蓉",
     "order": 90010,
     "tag_ids": Array [
+      "all",
       "shoji",
     ],
   },
@@ -20223,6 +22055,7 @@ list [
     "name": "志乃",
     "order": 90011,
     "tag_ids": Array [
+      "all",
       "shoji",
     ],
   },
@@ -20249,6 +22082,7 @@ list [
     "name": "藤之助",
     "order": 90012,
     "tag_ids": Array [
+      "all",
       "shoji",
     ],
   },
@@ -20275,6 +22109,7 @@ list [
     "name": "日向",
     "order": 90013,
     "tag_ids": Array [
+      "all",
       "shoji",
     ],
   },
@@ -20302,6 +22137,7 @@ list [
     "name": "おみつ",
     "order": 90014,
     "tag_ids": Array [
+      "all",
       "shoji",
     ],
   },
@@ -20328,6 +22164,7 @@ list [
     "name": "博史",
     "order": 90015,
     "tag_ids": Array [
+      "all",
       "shoji",
     ],
   },
@@ -20354,6 +22191,7 @@ list [
     "name": "法泉",
     "order": 90016,
     "tag_ids": Array [
+      "all",
       "shoji",
     ],
   },
@@ -20381,6 +22219,7 @@ list [
     "name": "チャールズ",
     "order": 90017,
     "tag_ids": Array [
+      "all",
       "shoji",
     ],
   },
@@ -20407,6 +22246,7 @@ list [
     "name": "雪代",
     "order": 90018,
     "tag_ids": Array [
+      "all",
       "shoji",
     ],
   },
@@ -20434,6 +22274,7 @@ list [
     "name": "華月斎",
     "order": 90019,
     "tag_ids": Array [
+      "all",
       "shoji",
     ],
   },
@@ -20461,6 +22302,7 @@ list [
     "name": "たまこ",
     "order": 90020,
     "tag_ids": Array [
+      "all",
       "shoji",
     ],
   },
@@ -20487,6 +22329,7 @@ list [
     "name": "沼太郎",
     "order": 90021,
     "tag_ids": Array [
+      "all",
       "shoji",
     ],
   },
@@ -20514,6 +22357,7 @@ list [
     "name": "朔",
     "order": 90022,
     "tag_ids": Array [
+      "all",
       "shoji",
     ],
   },
@@ -20540,6 +22384,7 @@ list [
     "name": "余四朗",
     "order": 90023,
     "tag_ids": Array [
+      "all",
       "shoji",
     ],
   },
@@ -20566,6 +22411,7 @@ list [
     "name": "源蔵",
     "order": 90024,
     "tag_ids": Array [
+      "all",
       "shoji",
     ],
   },
@@ -20592,6 +22438,7 @@ list [
     "name": "甚六",
     "order": 90025,
     "tag_ids": Array [
+      "all",
       "shoji",
     ],
   },
@@ -20625,6 +22472,7 @@ list [
     },
     "order": 90026,
     "tag_ids": Array [
+      "all",
       "shoji",
     ],
   },
@@ -20652,6 +22500,7 @@ list [
     "name": "沙耶",
     "order": 90027,
     "tag_ids": Array [
+      "all",
       "shoji",
     ],
   },
@@ -20678,8 +22527,8 @@ list [
     "name": "朝顔",
     "order": 90028,
     "tag_ids": Array [
+      "all",
       "shoji",
-      "pair",
     ],
   },
   model {
@@ -20705,6 +22554,7 @@ list [
     "name": "春松",
     "order": 90029,
     "tag_ids": Array [
+      "all",
       "shoji",
     ],
   },
@@ -20731,8 +22581,8 @@ list [
     "name": "夕顔",
     "order": 90030,
     "tag_ids": Array [
+      "all",
       "shoji",
-      "pair",
     ],
   },
   model {
@@ -20758,6 +22608,7 @@ list [
     "name": "朧",
     "order": 90031,
     "tag_ids": Array [
+      "all",
       "shoji",
     ],
   },
@@ -20785,6 +22636,7 @@ list [
     "name": "団十郎",
     "order": 90032,
     "tag_ids": Array [
+      "all",
       "shoji",
     ],
   },
@@ -20817,6 +22669,7 @@ list [
     },
     "order": 90033,
     "tag_ids": Array [
+      "all",
       "shoji",
     ],
   },
@@ -20844,6 +22697,7 @@ list [
     "name": "小鈴",
     "order": 90034,
     "tag_ids": Array [
+      "all",
       "shoji",
     ],
   },
@@ -20871,6 +22725,7 @@ list [
     "name": "ゆり",
     "order": 90035,
     "tag_ids": Array [
+      "all",
       "shoji",
     ],
   },
@@ -20898,6 +22753,7 @@ list [
     "name": "一平太",
     "order": 90037,
     "tag_ids": Array [
+      "all",
       "shoji",
     ],
   },
@@ -20925,6 +22781,7 @@ list [
     "name": "鏡花",
     "order": 90038,
     "tag_ids": Array [
+      "all",
       "shoji",
     ],
   },
@@ -20952,6 +22809,7 @@ list [
     "name": "八重",
     "order": 90039,
     "tag_ids": Array [
+      "all",
       "shoji",
     ],
   },
@@ -20978,6 +22836,7 @@ list [
     "name": "明之進",
     "order": 90040,
     "tag_ids": Array [
+      "all",
       "shoji",
     ],
   },
@@ -21005,6 +22864,7 @@ list [
     "name": "慶三郎",
     "order": 90041,
     "tag_ids": Array [
+      "all",
       "shoji",
     ],
   },
@@ -21032,6 +22892,7 @@ list [
     "name": "雪客",
     "order": 90042,
     "tag_ids": Array [
+      "all",
       "shoji",
     ],
   },
@@ -21059,6 +22920,7 @@ list [
     "name": "亀吉",
     "order": 90043,
     "tag_ids": Array [
+      "all",
       "shoji",
     ],
   },
@@ -21086,6 +22948,7 @@ list [
     "name": "梅子",
     "order": 90044,
     "tag_ids": Array [
+      "all",
       "shoji",
     ],
   },
@@ -21114,6 +22977,7 @@ list [
     "name": "置壱",
     "order": 90045,
     "tag_ids": Array [
+      "all",
       "shoji",
     ],
   },
@@ -21141,6 +23005,7 @@ list [
     "name": "直円",
     "order": 90048,
     "tag_ids": Array [
+      "all",
       "shoji",
     ],
   },
@@ -21168,6 +23033,7 @@ list [
     "name": "錠",
     "order": 90049,
     "tag_ids": Array [
+      "all",
       "shoji",
     ],
   },
@@ -21195,6 +23061,7 @@ list [
     "name": "丁助",
     "order": 90050,
     "tag_ids": Array [
+      "all",
       "shoji",
     ],
   },
@@ -21222,6 +23089,7 @@ list [
     "name": "鬼丞",
     "order": 90051,
     "tag_ids": Array [
+      "all",
       "shoji",
     ],
   },
@@ -21249,6 +23117,7 @@ list [
     "name": "櫻子",
     "order": 90052,
     "tag_ids": Array [
+      "all",
       "shoji",
     ],
   },
@@ -21276,6 +23145,7 @@ list [
     "name": "おもん",
     "order": 90053,
     "tag_ids": Array [
+      "all",
       "shoji",
     ],
   },
@@ -21303,6 +23173,7 @@ list [
     "name": "舷之丈",
     "order": 90054,
     "tag_ids": Array [
+      "all",
       "shoji",
     ],
   },
@@ -21330,6 +23201,7 @@ list [
     "name": "網斎",
     "order": 90055,
     "tag_ids": Array [
+      "all",
       "shoji",
     ],
   },
@@ -21357,6 +23229,7 @@ list [
     "name": "大八郎",
     "order": 90056,
     "tag_ids": Array [
+      "all",
       "shoji",
     ],
   },
@@ -21384,34 +23257,8 @@ list [
     "name": "稲荷",
     "order": 90057,
     "tag_ids": Array [
+      "all",
       "shoji",
-    ],
-  },
-  model {
-    "_id": "sf039",
-    "aggregate": Object {
-      "fav": Object {
-        "_id": Object {
-          "sow_auth_id": null,
-        },
-        "count": 0,
-      },
-      "folders": Array [],
-      "lives": Array [],
-      "log": Object {
-        "date_max": -4503599627370495,
-        "date_min": 4503599627370495,
-        "story_ids": Array [],
-      },
-      "mestypes": Array [],
-      "roles": Array [],
-      "sow_auths": Array [],
-    },
-    "comment": "おまつり",
-    "name": "ハロウィン",
-    "order": 90057,
-    "tag_ids": Array [
-      "stratos",
     ],
   },
   model {
@@ -21450,6 +23297,7 @@ list [
     },
     "order": 99999,
     "tag_ids": Array [
+      "all",
       "god",
     ],
   },
@@ -24188,9 +26036,9 @@ list [
     "_id": "village",
     "help": "すべての役職、恩恵、事件を楽しむことができる、「全部入り」のセットです。",
     "intro": Array [
-      "この村にも恐るべき**人狼**の噂が流れてきた。ひそかに人間と入れ替わり、夜になると人間を襲うという魔物。不安に駆られた村人たちは、集会所へと集まるのだった……。",
+      "この村にも恐るべき<strong>人狼</strong>の噂が流れてきた。ひそかに人間と入れ替わり、夜になると人間を襲うという魔物。不安に駆られた村人たちは、集会所へと集まるのだった……。",
       "きみは自らの正体を知った。さあ、村人なら敵である人狼を退治しよう。人狼なら……狡猾に振る舞って人間たちを確実に仕留めていくのだ。",
-      "噂は現実だった。血塗られた定めに従う魔物**人狼**は、確かにこの中にいるのだ。
+      "噂は現実だった。血塗られた定めに従う魔物<strong>人狼</strong>は、確かにこの中にいるのだ。
 
 非力な人間が人狼に対抗するため、村人たちは一つのルールを定めた。投票により怪しい者を処刑していこうと。罪のない者を処刑してしまう事もあるだろうが、それも村のためにはやむを得ないと……。",
     ],
@@ -24201,7 +26049,7 @@ list [
     "_id": "heavy",
     "help": "すべての役職、恩恵、事件を楽しむことができる、「全部入り」のセットです。",
     "intro": Array [
-      "狩人も立ち入らない深い森の奥からやってくる、**人狼**は、ひそかに人間と入れ替わり夜になると人間を襲うという。隣国の出身でありながら戦功名高く、Sirの称号を賜った若き英雄、Cointossと配下の聖貨騎士団は、この魔物の噂を重く見ていた。
+      "狩人も立ち入らない深い森の奥からやってくる、<strong>人狼</strong>は、ひそかに人間と入れ替わり夜になると人間を襲うという。隣国の出身でありながら戦功名高く、Sirの称号を賜った若き英雄、Cointossと配下の聖貨騎士団は、この魔物の噂を重く見ていた。
 
 恒例になりつつあった臨時徴税を収めた村人たちは、水車小屋で招集の命令を受け、不安を覚えつつも集会所へと集まるのだった……。",
       "教会の鐘が鳴らされ、聖貨騎士団が到着した。村の名士が応対する中、集まった人々はわけも知らされず、言い知れぬ不安を感じていた……。
@@ -24222,7 +26070,7 @@ list [
 閉じ込められたプレイヤーたち。
 トランプを模した仕掛けが外れない。
 与えられたゲームの条件をクリアしなければ、この仕掛けは爆発するという。プレイヤーたちは突如突きつけられた条件に半信半疑ながらも、互いに情報を交換するべく集い始めた。",
-      "**ゲームの開始が告げられた**。
+      "<strong>ゲームの開始が告げられた</strong>。
 このようなゲームが現実なわけがない。そう理性を働かせながらも、プレイヤーたちは自らに与えられた勝利条件を確認した。心の片隅から湧きあがる不安に突き動かされ、生き残るために行動を開始したのだ。",
       "目の前に転がる、かつて人間だったモノ。
 ゲームは現実だった。プレイヤーは否応なくこの状況を受け入れる。それは仕掛けの解除条件はそれぞれ異なり、誰がどの仕掛けを持っているのかわからないというゲーム。
@@ -24257,11 +26105,10 @@ R&Dは、結社対抗措置の一環として新装備を開発しました。
 善良な市民はPLCから装備を受領、フィールドテストし、結社を発見しましょう。
 
 支給品の機密は善良に管理されているので、口を滑らせないことですね。次のニュース。ゴシゴシボット量産工場で、大量のチョコレートが……",
-      "*[培養槽]: ほいくえん
-_HOUR_時のニュースです。
-昨夜未明、培養槽が襲撃を受けました。_NPC_が破壊され、クローンと記憶の備蓄は失われました。
+      "_HOUR_時のニュースです。
+昨夜未明、<span data-ruby=\\"ほいくえん\\">培養槽</span>が襲撃を受けました。_NPC_が破壊され、クローンと記憶の備蓄は失われました。
 次のクローンはなにひとつうまくやることができないので、今日からの▼zap▼は~ブツン~
-（**すべてのニュース**・**チャンネルは沈黙し**、**天井は真っ暗に消灯した**。）
+（すべてのニュース・チャンネルは沈黙し、天井は真っ暗に消灯した。）
 
 そして静寂の中、誰かが言い出します。今日からは、▼zap▼は一日ひとりに制限しよう。厳しい制限だが、我慢するんだ。",
     ],
@@ -24274,7 +26121,7 @@ _HOUR_時のニュースです。
     "intro": Array [
       "夜更けに響いた破滅の音に起こされ、不安に駆られた乗客たちは集会所へと集まった。単純な直接通信の機能しか果たさなくなった携帯を携えて。",
       "送信機は作動しない。救助には何日もかかる。それが結論だった。
-実りのない努力を尽くした末に、誰もが厳しい状況を理解し、きみは自らの使命に目覚めた。しかし、未知の生命体**人狼**は、確かにこの中にいるのだ。
+実りのない努力を尽くした末に、誰もが厳しい状況を理解し、きみは自らの使命に目覚めた。しかし、未知の生命体<strong>人狼</strong>は、確かにこの中にいるのだ。
 さあ、人間なら敵である人狼を退治しよう。人狼なら……狡猾に振る舞って人間たちを確実に仕留めていくのだ。",
       "物資もエネルギーも限られた中、人狼に対抗するために乗客たちは一つのルールを定めた。投票により怪しい者をここから放り出そうと。宇宙服ひとつでは命の保証がないが、それもやむを得ないと……。",
     ],
@@ -24285,9 +26132,9 @@ _HOUR_時のニュースです。
     "_id": "alien",
     "help": "宇宙時代に突入した「全部入り」のセットです。村落共同体は渓谷や高原ではなく、小惑星帯や移民船、軌道エレベーターの途中にあるでしょう。事件が始まるまでは、とても充実した近代的なインフラが整っていたのですが……",
     "intro": Array [
-      "この村落共同体にも恐るべき噂が流れてきた。ライフラインを寸断し、軌道変更の推進力を奪う**人狼**の脅威。ひそかに人間と入れ替わり、夜になると人間を襲う未知の生命体。なぜか単純な直接通信の機能しか果たさなくなった携帯を携え、不安に駆られた村人たちは集会所へと集まった。",
+      "この村落共同体にも恐るべき噂が流れてきた。ライフラインを寸断し、軌道変更の推進力を奪う<strong>人狼</strong>の脅威。ひそかに人間と入れ替わり、夜になると人間を襲う未知の生命体。なぜか単純な直接通信の機能しか果たさなくなった携帯を携え、不安に駆られた村人たちは集会所へと集まった。",
       "きみは自らの正体を知った。さあ、村人なら敵である人狼を退治しよう。人狼なら……狡猾に振る舞って人間たちを確実に仕留めていくのだ。",
-      "噂は現実だった。血塗られた活動を開始した未知の生命体**人狼**は、確かにこの中にいるのだ。
+      "噂は現実だった。血塗られた活動を開始した未知の生命体<strong>人狼</strong>は、確かにこの中にいるのだ。
 
 非力な人間が人狼に対抗するため、村人たちは一つのルールを定めた。投票により怪しい者を処刑していこうと。罪のない者を処刑してしまう事もあるだろうが、それも共同体のためにはやむを得ないと……。",
     ],
@@ -25851,7 +27698,7 @@ list [
     "_id": "nothing",
     "able_ids": Array [],
     "group": "EVENT",
-    "help": "",
+    "help": "今日は、特別なことのない一日のようだ。さあ普段通り、誰かを処刑台にかけよう。",
     "label": "普通の日",
     "win": null,
   },
@@ -25859,7 +27706,9 @@ list [
     "_id": "aprilfool",
     "able_ids": Array [],
     "group": "EVENT",
-    "help": "",
+    "help": "<h3><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_APRIL_FOOL\\" TARGET=\\"_blank\\">四月馬鹿</A></h3>
+大変、大変、大変なことになった。きみの役職は変化しているかもしれない。もしも誰かと絆を結んでいるなら、急に相手が憎くなってしまい、絆の相手だけにしか投票できない。 そして悟ってしまった。今夜だけは、相方の後を追うことはないと……。
+<table> <tr> <th colspan=3>役職の変貌 <th rowspan=4>※一日で元に戻る <tr> <td>賢者 <td>←→ <td>魔女 <tr> <td>守護者 <td>←→ <td>長老 <tr> <td>賞金稼 <td>←→ <td>少女 </table>",
     "label": "四月馬鹿",
     "win": null,
   },
@@ -25867,7 +27716,9 @@ list [
     "_id": "turnfink",
     "able_ids": Array [],
     "group": "EVENT",
-    "help": "",
+    "help": "<h3><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_TURN_FINK\\" TARGET=\\"_blank\\">二重スパイ</A></h3>
+なんということだろう！一人が村側を裏切り、狼に与する半端者になってしまった。明日以降も、彼は村人を裏切り続けるだろう……。
+決定者や光の輪の持ち主なら、このときにその力を手放してしまう。",
     "label": "二重スパイ",
     "win": null,
   },
@@ -25875,7 +27726,9 @@ list [
     "_id": "turnfairy",
     "able_ids": Array [],
     "group": "EVENT",
-    "help": "",
+    "help": "<h3><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_TURN_FAIRY\\" TARGET=\\"_blank\\">妖精の輪</A></h3>
+なんということだろう！一人が森に立ち入り、妖精の養子になってしまった。明日以降も、彼は村人を裏切り続けるだろう……。
+決定者や光の輪の持ち主なら、このときにその力を手放してしまう。",
     "label": "妖精の輪",
     "win": null,
   },
@@ -25883,7 +27736,8 @@ list [
     "_id": "eclipse",
     "able_ids": Array [],
     "group": "EVENT",
-    "help": "",
+    "help": "<h3><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_ECLIPSE\\" TARGET=\\"_blank\\">日蝕</A></h3>
+暗い日蝕が村中を覆い、お互い顔も名前も解らない。この闇夜は丸一日続くだろう。他人になりすまし、議論を混乱させることもできてしまうかもしれない。",
     "label": "日蝕",
     "win": null,
   },
@@ -25891,7 +27745,8 @@ list [
     "_id": "cointoss",
     "able_ids": Array [],
     "group": "EVENT",
-    "help": "",
+    "help": "<h3><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_COINTOSS\\" TARGET=\\"_blank\\">Sir Cointoss</A></h3>
+お控えなさい。お控えなさい。コイントス卿はこの村の投票結果に意見があるようでございます。 卿の御意向によっては、投票結果に基づいた処刑を取り止めにすることもあります。 五分五分くらいかな。",
     "label": "Sir Cointoss",
     "win": null,
   },
@@ -25899,7 +27754,8 @@ list [
     "_id": "force",
     "able_ids": Array [],
     "group": "EVENT",
-    "help": "",
+    "help": "<h3><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_FORCE\\" TARGET=\\"_blank\\">影響力</A></h3>
+今日の投票箱は無色透明だ。だれかが投票した瞬間にその内容はハッキリと見えるから、投票をセットするときは気を付けて！",
     "label": "影響力",
     "win": null,
   },
@@ -25907,7 +27763,9 @@ list [
     "_id": "miracle",
     "able_ids": Array [],
     "group": "EVENT",
-    "help": "",
+    "help": "<h3><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_MIRACLE\\" TARGET=\\"_blank\\">奇跡</A></h3>
+帰ってきた！黄泉の国から、今日の襲撃で死んだ犠牲者がかえってきた！能力を失ったかもしれないけれど、それは些細なことだよ！ね！
+人狼、一匹狼、賞金稼ぎなどに襲われた死者は生き返る。ただし、その能力は失われる。",
     "label": "奇跡",
     "win": null,
   },
@@ -25915,7 +27773,8 @@ list [
     "_id": "prophecy",
     "able_ids": Array [],
     "group": "EVENT",
-    "help": "",
+    "help": "<h3><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_PROPHECY\\" TARGET=\\"_blank\\">聖者のお告げ</A></h3>
+聖者は民の夢枕に告げられました。今の任より、<h3>決定者</h3>にふさわしい人物がいると。 旧き任務は解かれ、あたらしい<h3>決定者</h3>は皆に喝采で迎え入れられるだろう。",
     "label": "聖者のお告げ",
     "win": null,
   },
@@ -25923,7 +27782,8 @@ list [
     "_id": "clamor",
     "able_ids": Array [],
     "group": "EVENT",
-    "help": "",
+    "help": "<h3><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_CLAMOR\\" TARGET=\\"_blank\\">不満</A></h3>
+村には不満が鬱屈している。今夜の投票でまた人間を処刑してしまったら……悪夢が始まる。 はじけた不満に背中を押され、話し合いもなしに、さらに一人の首を必要とするだろう。",
     "label": "不満",
     "win": null,
   },
@@ -25931,7 +27791,8 @@ list [
     "_id": "fire",
     "able_ids": Array [],
     "group": "EVENT",
-    "help": "",
+    "help": "<h3><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_FIRE\\" TARGET=\\"_blank\\">熱意</A></h3>
+村には期待に満ちた熱意が渦巻いている。今夜の投票がひとならぬものを処刑できたなら……悪夢が始まるのだ。 はじけた熱意に背中を押され、話し合いもなしに、さらに一人の首を必要とするだろう。",
     "label": "熱意",
     "win": null,
   },
@@ -25939,7 +27800,9 @@ list [
     "_id": "nightmare",
     "able_ids": Array [],
     "group": "EVENT",
-    "help": "",
+    "help": "<h3><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_NIGHTMARE\\" TARGET=\\"_blank\\">悪夢</A></h3>
+恐ろしい一日が始まる。今日は投票だけができる。発言も、能力も使えない。そして、突然死は発生しない。
+さあ投票して、こんな日が早く過ぎ去ってしまうよう、ひとり祈りを捧げよう。",
     "label": "悪夢",
     "win": null,
   },
@@ -25947,7 +27810,9 @@ list [
     "_id": "ghost",
     "able_ids": Array [],
     "group": "EVENT",
-    "help": "",
+    "help": "<h3><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_GHOST\\" TARGET=\\"_blank\\">亡霊</A></h3>
+今夜、人狼に殺された人は人狼になる。また、襲撃を実行した人狼は命を落としてしまうだろう。人狼となった者は報復行動を行わない。ただし、命拾いをしたならば人狼にはならない。
+一匹狼は亡霊を作らない。",
     "label": "亡霊",
     "win": null,
   },
@@ -25955,7 +27820,9 @@ list [
     "_id": "escape",
     "able_ids": Array [],
     "group": "EVENT",
-    "help": "",
+    "help": "<h3>逃亡</h3>
+せめて一人だけでも、なんとかして逃がそう。今夜の投票で逃亡者を一人決め、夜中の処刑のかわりに密かに逃がすのだ。
+しかし逃亡者は一日のあいだ逃亡生活を続け、ついに村へと帰還してしまう。帰還者の票は通常の三倍尊重されるだろう。 実装がめんどうだから、このまま未定義にしておこうかな。",
     "label": "逃亡",
     "win": null,
   },
@@ -25963,7 +27830,8 @@ list [
     "_id": "seance",
     "able_ids": Array [],
     "group": "EVENT",
-    "help": "",
+    "help": "<h3><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_SEANSE\\" TARGET=\\"_blank\\">降霊会</A></h3>
+こっくりさん、こっくりさん…… 秘密の儀式で、墓場の霊魂がかえってきた。今日に限り、生者も姿の見えぬ死者も屋根を共にし、議論するだろう。",
     "label": "降霊会",
     "win": null,
   },
@@ -29221,33 +31089,14 @@ list [
     "chr_set_id": "all",
     "label": "すべて",
     "long": "「人狼議事 ちゃんぷる」のキャラクター",
+    "order": 1001,
   },
   model {
     "_id": "giji",
     "chr_set_id": "ririnra",
     "label": "人狼議事",
     "long": "「人狼議事」のキャラクター",
-    "tag_id": "all",
-  },
-  model {
-    "_id": "animal",
-    "chr_set_id": "animal",
-    "label": "うきうきサバンナ",
-    "long": "「うきうきサバンナ」のキャラクター",
-    "tag_id": "all",
-  },
-  model {
-    "_id": "school",
-    "chr_set_id": "school",
-    "label": "私立七転学園",
-    "long": "「私立七転学園」のキャラクター",
-    "tag_id": "all",
-  },
-  model {
-    "_id": "shoji",
-    "chr_set_id": "wa",
-    "label": "てやんでえ",
-    "long": "「和の国てやんでえ」のキャラクター",
+    "order": 1002,
     "tag_id": "all",
   },
   model {
@@ -29255,6 +31104,15 @@ list [
     "chr_set_id": "time",
     "label": "帰還者議事",
     "long": "「帰還者議事」のキャラクター",
+    "order": 1003,
+    "tag_id": "all",
+  },
+  model {
+    "_id": "shoji",
+    "chr_set_id": "wa",
+    "label": "てやんでえ",
+    "long": "「和の国てやんでえ」のキャラクター",
+    "order": 1004,
     "tag_id": "all",
   },
   model {
@@ -29262,20 +31120,7 @@ list [
     "chr_set_id": "sf",
     "label": "明後日への道標",
     "long": "「明後日への道標」のキャラクター",
-    "tag_id": "all",
-  },
-  model {
-    "_id": "myth",
-    "chr_set_id": "changed",
-    "label": "はおうのひろば",
-    "long": "「はおうのひろば」のキャラクター",
-    "tag_id": "all",
-  },
-  model {
-    "_id": "asia",
-    "chr_set_id": "ger",
-    "label": "大陸議事",
-    "long": "「大陸議事」のキャラクター",
+    "order": 1005,
     "tag_id": "all",
   },
   model {
@@ -29283,6 +31128,15 @@ list [
     "chr_set_id": "fable",
     "label": "幻日世界",
     "long": "「幻日世界」のキャラクター",
+    "order": 1006,
+    "tag_id": "all",
+  },
+  model {
+    "_id": "myth",
+    "chr_set_id": "changed",
+    "label": "はおうのひろば",
+    "long": "「はおうのひろば」のキャラクター",
+    "order": 1007,
     "tag_id": "all",
   },
   model {
@@ -29290,6 +31144,31 @@ list [
     "chr_set_id": "mad",
     "label": "狂騒議事",
     "long": "「狂騒議事」のキャラクター",
+    "order": 1008,
+    "tag_id": "all",
+  },
+  model {
+    "_id": "asia",
+    "chr_set_id": "ger",
+    "label": "大陸議事",
+    "long": "「大陸議事」のキャラクター",
+    "order": 1009,
+    "tag_id": "all",
+  },
+  model {
+    "_id": "animal",
+    "chr_set_id": "animal",
+    "label": "うきうきサバンナ",
+    "long": "「うきうきサバンナ」のキャラクター",
+    "order": 2001,
+    "tag_id": "all",
+  },
+  model {
+    "_id": "school",
+    "chr_set_id": "school",
+    "label": "私立七転学園",
+    "long": "「私立七転学園」のキャラクター",
+    "order": 2002,
     "tag_id": "all",
   },
   model {
@@ -29297,6 +31176,7 @@ list [
     "chr_set_id": "ririnra",
     "label": "(児童)",
     "long": "児童のキャラクター",
+    "order": 4001,
     "tag_id": "giji",
   },
   model {
@@ -29304,6 +31184,7 @@ list [
     "chr_set_id": "ririnra",
     "label": "(若者)",
     "long": "若者のキャラクター",
+    "order": 4002,
     "tag_id": "giji",
   },
   model {
@@ -29311,6 +31192,7 @@ list [
     "chr_set_id": "ririnra",
     "label": "(中年)",
     "long": "中年のキャラクター",
+    "order": 4003,
     "tag_id": "giji",
   },
   model {
@@ -29318,20 +31200,23 @@ list [
     "chr_set_id": "ririnra",
     "label": "(老人)",
     "long": "老人のキャラクター",
+    "order": 4004,
     "tag_id": "giji",
   },
   model {
-    "_id": "pair",
-    "chr_set_id": "all",
-    "label": "=双対=",
-    "long": "お揃いのキャラクター",
-    "tag_id": "pair",
+    "_id": "student",
+    "chr_set_id": "time",
+    "label": "-学徒-",
+    "long": "学園で学ぶ人",
+    "order": 5001,
+    "tag_id": "travel",
   },
   model {
     "_id": "river",
     "chr_set_id": "ririnra",
     "label": "-運河-",
     "long": "往く人来る人休む人",
+    "order": 6001,
     "tag_id": "giji",
   },
   model {
@@ -29339,6 +31224,7 @@ list [
     "chr_set_id": "ririnra",
     "label": "-往来-",
     "long": "往く人来る人休む人",
+    "order": 6002,
     "tag_id": "giji",
   },
   model {
@@ -29346,6 +31232,15 @@ list [
     "chr_set_id": "ririnra",
     "label": "-裏道-",
     "long": "街灯の裏の背徳達",
+    "order": 6003,
+    "tag_id": "giji",
+  },
+  model {
+    "_id": "office",
+    "chr_set_id": "ririnra",
+    "label": "-事務所-",
+    "long": "帳簿と写本と印刷と",
+    "order": 7001,
     "tag_id": "giji",
   },
   model {
@@ -29353,6 +31248,7 @@ list [
     "chr_set_id": "ririnra",
     "label": "-商工会-",
     "long": "商人と職人の集うギルド",
+    "order": 7002,
     "tag_id": "giji",
   },
   model {
@@ -29360,6 +31256,7 @@ list [
     "chr_set_id": "ririnra",
     "label": "-舞踏会-",
     "long": "瀟洒な館の舞踏会",
+    "order": 7003,
     "tag_id": "giji",
   },
   model {
@@ -29367,6 +31264,7 @@ list [
     "chr_set_id": "ririnra",
     "label": "-公教会-",
     "long": "信仰と道徳と学識の源泉",
+    "order": 7004,
     "tag_id": "giji",
   },
   model {
@@ -29374,6 +31272,7 @@ list [
     "chr_set_id": "ririnra",
     "label": "-施療院-",
     "long": "病苦毒霊と戦う砦",
+    "order": 8001,
     "tag_id": "giji",
   },
   model {
@@ -29381,6 +31280,7 @@ list [
     "chr_set_id": "ririnra",
     "label": "-歌劇酒場-",
     "long": "芸の極みに華が咲く",
+    "order": 8002,
     "tag_id": "giji",
   },
   model {
@@ -29388,6 +31288,7 @@ list [
     "chr_set_id": "ririnra",
     "label": "-自室の窓-",
     "long": "窓から外を眺めると",
+    "order": 9001,
     "tag_id": "giji",
   },
   model {
@@ -29395,6 +31296,7 @@ list [
     "chr_set_id": "ririnra",
     "label": "-使用人-",
     "long": "良家を支えるスタッフ",
+    "order": 9002,
     "tag_id": "giji",
   },
   model {
@@ -29402,6 +31304,7 @@ list [
     "chr_set_id": "ririnra",
     "label": "-森の農場-",
     "long": "森に接する田畑",
+    "order": 9003,
     "tag_id": "giji",
   },
   model {
@@ -29409,6 +31312,7 @@ list [
     "chr_set_id": "ririnra",
     "label": "-統治公共-",
     "long": "所領を治める権能者",
+    "order": 9004,
     "tag_id": "giji",
   },
   model {
@@ -29416,171 +31320,8 @@ list [
     "chr_set_id": "all",
     "label": "-かみさま-",
     "long": "かみさま",
+    "order": 10001,
     "tag_id": "all",
-  },
-]
-`;
-
-exports[`traps list snapshot 1`] = `
-list [
-  model {
-    "_id": "blank",
-    "help": "",
-    "label": "普通の日",
-  },
-  model {
-    "_id": "nothing",
-    "cmd": "trap",
-    "help": "今日は、特別なことのない一日のようだ。さあ普段通り、誰かを処刑台にかけよう。",
-    "label": "普通の日",
-  },
-  model {
-    "_id": "aprilfool",
-    "cmd": "trap",
-    "help": "<b><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_APRIL_FOOL\\" TARGET=\\"_blank\\">四月馬鹿</A></b>
-<br>
-大変、大変、大変なことになった。きみの役職は変化しているかもしれない。もしも誰かと絆を結んでいるなら、急に相手が憎くなってしまい、絆の相手だけにしか投票できない。
-そして悟ってしまった。今夜だけは、相方の後を追うことはないと……。
-<br>
-<table class=\\"table\\">
-<tr>
-<th colspan=3>役職の変貌
-<th rowspan=4>※一日で元に戻る
-<tr>
-<td>賢者
-<td>←→
-<td>魔女
-<tr>
-<td>守護者
-<td>←→
-<td>長老
-<tr>
-<td>賞金稼
-<td>←→
-<td>少女
-</table>",
-    "label": "四月馬鹿",
-  },
-  model {
-    "_id": "turnfink",
-    "cmd": "trap",
-    "help": "<b><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_TURN_FINK\\" TARGET=\\"_blank\\">二重スパイ</A></b>
-<br>
-なんということだろう！一人が村側を裏切り、狼に与する半端者になってしまった。明日以降も、彼は村人を裏切り続けるだろう……。
-<br>
-決定者や光の輪の持ち主なら、このときにその力を手放してしまう。",
-    "label": "二重スパイ",
-  },
-  model {
-    "_id": "turnfairy",
-    "cmd": "trap",
-    "help": "<b><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_TURN_FAIRY\\" TARGET=\\"_blank\\">妖精の輪</A></b>
-<br>
-なんということだろう！一人が森に立ち入り、妖精の養子になってしまった。明日以降も、彼は村人を裏切り続けるだろう……。
-<br>
-決定者や光の輪の持ち主なら、このときにその力を手放してしまう。",
-    "label": "妖精の輪",
-  },
-  model {
-    "_id": "eclipse",
-    "cmd": "trap",
-    "help": "<b><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_ECLIPSE\\" TARGET=\\"_blank\\">日蝕</A></b>
-<br>
-暗い日蝕が村中を覆い、お互い顔も名前も解らない。この闇夜は丸一日続くだろう。他人になりすまし、議論を混乱させることもできてしまうかもしれない。",
-    "label": "日蝕",
-  },
-  model {
-    "_id": "cointoss",
-    "cmd": "trap",
-    "help": "<b><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_COINTOSS\\" TARGET=\\"_blank\\">Sir Cointoss</A></b>
-<br>
-お控えなさい。お控えなさい。コイントス卿はこの村の投票結果に意見があるようでございます。
-卿の御意向によっては、投票結果に基づいた処刑を取り止めにすることもあります。
-五分五分くらいかな。",
-    "label": "Sir Cointoss",
-  },
-  model {
-    "_id": "force",
-    "cmd": "trap",
-    "help": "<b><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_FORCE\\" TARGET=\\"_blank\\">影響力</A></b>
-<br>
-今日の投票箱は無色透明だ。だれかが投票した瞬間にその内容はハッキリと見えるから、投票をセットするときは気を付けて！",
-    "label": "影響力",
-  },
-  model {
-    "_id": "miracle",
-    "cmd": "trap",
-    "help": "<b><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_MIRACLE\\" TARGET=\\"_blank\\">奇跡</A></b>
-<br>
-帰ってきた！黄泉の国から、今日の襲撃で死んだ犠牲者がかえってきた！能力を失ったかもしれないけれど、それは些細なことだよ！ね！
-<br>
-人狼、一匹狼、賞金稼ぎなどに襲われた死者は生き返る。ただし、その能力は失われる。",
-    "label": "奇跡",
-  },
-  model {
-    "_id": "prophecy",
-    "cmd": "trap",
-    "help": "<b><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_PROPHECY\\" TARGET=\\"_blank\\">聖者のお告げ</A></b>
-<br>
-聖者は民の夢枕に告げられました。今の任より、<b>決定者</b>にふさわしい人物がいると。
-旧き任務は解かれ、あたらしい<b>決定者</b>は皆に喝采で迎え入れられるだろう。",
-    "label": "聖者のお告げ",
-  },
-  model {
-    "_id": "clamor",
-    "cmd": "trap",
-    "help": "<b><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_CLAMOR\\" TARGET=\\"_blank\\">不満</A></b>
-<br>
-村には不満が鬱屈している。今夜の投票でまた人間を処刑してしまったら……悪夢が始まる。
-はじけた不満に背中を押され、話し合いもなしに、さらに一人の首を必要とするだろう。",
-    "label": "不満",
-  },
-  model {
-    "_id": "fire",
-    "cmd": "trap",
-    "help": "<b><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_FIRE\\" TARGET=\\"_blank\\">熱意</A></b>
-<br>
-村には期待に満ちた熱意が渦巻いている。今夜の投票がひとならぬものを処刑できたなら……悪夢が始まるのだ。
-はじけた熱意に背中を押され、話し合いもなしに、さらに一人の首を必要とするだろう。",
-    "label": "熱意",
-  },
-  model {
-    "_id": "nightmare",
-    "help": "<b><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_NIGHTMARE\\" TARGET=\\"_blank\\">悪夢</A></b>
-<br>
-恐ろしい一日が始まる。今日は投票だけができる。発言も、能力も使えない。そして、突然死は発生しない。
-<br>
-さあ投票して、こんな日が早く過ぎ去ってしまうよう、ひとり祈りを捧げよう。",
-    "label": "悪夢",
-  },
-  model {
-    "_id": "ghost",
-    "cmd": "trap",
-    "help": "<b><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_GHOST\\" TARGET=\\"_blank\\">亡霊</A></b>
-<br>
-今夜、人狼に殺された人は人狼になる。また、襲撃を実行した人狼は命を落としてしまうだろう。人狼となった者は報復行動を行わない。ただし、命拾いをしたならば人狼にはならない。
-<br>
-一匹狼は亡霊を作らない。",
-    "label": "亡霊",
-  },
-  model {
-    "_id": "escape",
-    "cmd": null,
-    "help": "<b>逃亡</b>
-<br>
-せめて一人だけでも、なんとかして逃がそう。今夜の投票で逃亡者を一人決め、夜中の処刑のかわりに密かに逃がすのだ。
-<br>
-しかし逃亡者は一日のあいだ逃亡生活を続け、ついに村へと帰還してしまう。帰還者の票は通常の三倍尊重されるだろう。
-実装がめんどうだから、このまま未定義にしておこうかな。",
-    "label": "逃亡",
-  },
-  model {
-    "_id": "seance",
-    "cmd": "trap",
-    "help": "<b><A href=\\"http://crazy-crazy.sakura.ne.jp/giji/?(Event)EVENTID_SEANSE\\" TARGET=\\"_blank\\">降霊会</A></b>
-<br>
-こっくりさん、こっくりさん……<br>秘密の儀式で、墓場の霊魂がかえってきた。今日に限り、生者も姿の見えぬ死者も屋根を共にし、議論するだろう。",
-    "label": "降霊会",
   },
 ]
 `;

@@ -1,5 +1,4 @@
 { Model, Query, Rule } = require "../../src/index"
-
 format =
   head: new Intl.DateTimeFormat 'ja-JP',
     weekday: "short"

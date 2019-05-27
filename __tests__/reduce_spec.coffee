@@ -3,7 +3,7 @@ Mem = require "../src/index"
 
 keys = [
   "locales", "randoms",
-  "folders", "roles", "traps", "ables",
+  "folders", "roles", "ables",
   "sow_roletables"]
 
 keys.map (key)->
