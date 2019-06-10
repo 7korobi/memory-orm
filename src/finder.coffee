@@ -30,7 +30,7 @@ validate = (item, meta, chklist)->
 
 module.exports = class Finder
   constructor: (@$name)->
-    State.step[@$name.list] = step()
+    State.notify @$name.list
 
   calculate: (query, memory)->
     return unless query._step < State.step[@$name.list]
@@ -77,7 +77,7 @@ module.exports = class Finder
       _.set query, path, o
 
   clear_cache: (all = null)->
-    State.step[@$name.list] = step()
+    State.notify @$name.list
     if all
       for id, { item } of all.$memory
         @map.$deploy_sort @model, item, all

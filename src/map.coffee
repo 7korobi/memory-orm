@@ -8,11 +8,11 @@ module.exports = class Map
     o
 
   @$deploy: (model, $format, $sort, meta, journal, item)->
-    o = new Datum( meta, item )
+    datum = new Datum( meta, item )
 
-    @$deploy_reduce model, item, $format, journal, o
+    @$deploy_reduce model, item, $format, journal, datum
     @$deploy_sort   model, item, $sort,   journal
-    o
+    datum
 
   @$deploy_reduce: (model, item, $format, journal, o)->
     emit_default = emit_default_origin = (keys, cmd)->
@@ -61,6 +61,10 @@ module.exports = class Map
       o.hash = {}
 
   @order: (query, path, from, map, list, bless)->
+    unless from
+      console.error "not found $sort", path, map, query, list
+      return
+
     o = from
     if Object == from.constructor
       if map.belongs_to
@@ -136,6 +140,9 @@ module.exports = class Map
     o
 
   @finish: (query, path, o, list)->
+    unless o
+      console.error "not found $format", path, query, list
+      return
     if o.hash
       o.set = Object.keys o.hash
     if o.count && o.pow?
@@ -148,6 +155,9 @@ module.exports = class Map
         o.density = o.all / o.range
 
   @reduce: (query, path, item, o, map)->
+    unless o
+      console.error "not found $format", path, map, query, item
+      return
     if map.count
       o.count += map.count
     if map.all

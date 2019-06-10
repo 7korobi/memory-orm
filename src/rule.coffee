@@ -180,7 +180,7 @@ module.exports = class Rule
         id = _.get @, ik
         Mem.Query[target].find id, else_id
 
-  relation_to_many: (key, target, cmd, ik, qk)->
+  relation_to_many: (key, target, ik, cmd, qk)->
     all = @all
     @use_cache key, (id)->
       Mem.Query[target][cmd] "#{qk}": id
@@ -257,15 +257,15 @@ module.exports = class Rule
     name = rename to
     if option.reverse
       { key = @$name.ids, target = to } = option
-      @relation_to_many name.list, target, "in", "id", key
+      @relation_to_many name.list, target, "id", "in", key
     else
       { key = name.ids, target = name.list } = option
-      @relation_to_many name.list, target, "where", key, "id"
+      @relation_to_many name.list, target, key, "where", "id"
 
   has_many: (to, option = {})->
     name = rename to
     { key = @$name.id, target = name.list } = option
-    @relation_to_many name.list, target, "where", "id", key
+    @relation_to_many name.list, target, "id", "where", key
 
   tree: (option = {})->
     fk = @$name.id
@@ -281,7 +281,7 @@ module.exports = class Rule
   graph: (option = {})->
     { directed, cost } = option
     ik = @$name.ids
-    @relation_to_many @$name.list, @$name.list, "where", ik, "id"
+    @relation_to_many @$name.list, @$name.list, ik, "where", "id"
     @relation_graph "path", ik
     unless directed
       true # todo

@@ -44,5 +44,6 @@ module.exports = class Set
     journal = State.journal @$name
     for id in ids when o = @all.$memory[id]
       journal.$memory[id] = o
+      @all._finder.clear_cache()
       return o.item
     null

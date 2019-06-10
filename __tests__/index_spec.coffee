@@ -10,11 +10,12 @@ test_is = (target, list, key, o)->
       base[target][key]
     ).toEqual o
 
-json = JSON.parse JSON.stringify Mem.State.transaction ->
+meta = Mem.State.transaction ->
   Mem.Set.sow_village.merge stories
   for { _id, story_ids } in faces
     for story_id in story_ids when vil = Mem.Query.sow_villages.find story_id
       vil.aggregate.face_ids.push _id.face_id
+json = JSON.parse meta.json()
 Mem.State.store json
 
 describe "sow oldlog", ->

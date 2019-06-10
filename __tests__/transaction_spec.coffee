@@ -8,8 +8,11 @@ test_is = (target, list, key, o)->
       base[target][key]
     ).toEqual o
 
-json = JSON.parse JSON.stringify Mem.Query.static.meta
+json = JSON.parse Mem.Query.static.meta.json()
 Mem.State.store json
+
+# cleanup process keep last meta. it seems NOP.
+# Mem.State.cleanup json
 
 do_test = (list_id,{ $sort, $memory, $format })->
   test "$sort #{list_id}", ->
