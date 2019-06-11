@@ -16,6 +16,7 @@ order = [
 
 
 new Rule("tag").schema ->
+  @sort "order"
   @belongs_to "chr_set"
   @habtm "faces", reverse: true
   @tree()
@@ -37,8 +38,6 @@ new Rule("tag").schema ->
 
     @order: (o, emit)->
       group = o.order // 1000
-      emit "list",
-        sort: ["order"]
       emit "group", group, "list",
         sort: ["order"]
 
@@ -47,6 +46,11 @@ katakanas =
     String.fromCharCode idx
 
 new Rule("face").schema ->
+  @sort "order"
+  @order "name_head",
+    sort: ["id"]
+    index: "set.length"
+    cover: katakanas
   @habtm "tags"
   @has_many "chr_jobs"
   @has_many "chr_npcs"
@@ -67,14 +71,6 @@ new Rule("face").schema ->
   map =
     count: 1
   class @model extends @model
-    @order: (o, emit)->
-      emit "list",
-        sort: ["order"]
-      emit "name_head",
-        sort: ["id"]
-        index: "set.length"
-        cover: katakanas
-
     @map_partition: (o, emit)->
       it =
         set: o.id
@@ -139,12 +135,12 @@ new Rule("face").schema ->
         @chr_jobs.pluck("job").uniq
 
 new Rule("chr_set").schema ->
-  @order "label"
+  @sort "label"
   @has_many "chr_jobs"
   @has_many "chr_npcs"
 
 new Rule("chr_npc").schema ->
-  @order "label"
+  @sort "label"
   @belongs_to "chr_set"
   @belongs_to "chr_job"
   @belongs_to "face"
@@ -159,6 +155,7 @@ new Rule("chr_npc").schema ->
         "#{@chr_job.job} #{@face.name}"
 
 new Rule("chr_job").schema ->
+  @sort "face.order"
   @belongs_to "chr_set"
   @belongs_to "face"
 
@@ -188,10 +185,6 @@ new Rule("chr_job").schema ->
           .in 'face.tag_ids': tag_id
 
   class @model extends @model
-    @order: (o, emit)->
-      emit "list",
-        sort: ["face.order"]
-
   @property 'model',
     chr_npc:
       get: ->

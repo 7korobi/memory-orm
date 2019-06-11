@@ -662,174 +662,25 @@ Object {
 }
 `;
 
-exports[`transaction $sort chr_jobs 1`] = `
-Object {
-  "_reduce.list": Object {
-    "sort": Array [
-      "face.order",
-    ],
-  },
-}
-`;
+exports[`transaction $sort chr_jobs 1`] = `Object {}`;
 
-exports[`transaction $sort chr_npcs 1`] = `
-Object {
-  "_reduce.list": Object {},
-}
-`;
+exports[`transaction $sort chr_npcs 1`] = `Object {}`;
 
-exports[`transaction $sort chr_sets 1`] = `
-Object {
-  "_reduce.list": Object {},
-}
-`;
+exports[`transaction $sort chr_sets 1`] = `Object {}`;
 
-exports[`transaction $sort faces 1`] = `
-Object {
-  "_reduce.list": Object {
-    "sort": Array [
-      "order",
-    ],
-  },
-  "_reduce.name_head": Object {
-    "cover": Array [
-      "ア",
-      "ィ",
-      "イ",
-      "ゥ",
-      "ウ",
-      "ェ",
-      "エ",
-      "ォ",
-      "オ",
-      "カ",
-      "ガ",
-      "キ",
-      "ギ",
-      "ク",
-      "グ",
-      "ケ",
-      "ゲ",
-      "コ",
-      "ゴ",
-      "サ",
-      "ザ",
-      "シ",
-      "ジ",
-      "ス",
-      "ズ",
-      "セ",
-      "ゼ",
-      "ソ",
-      "ゾ",
-      "タ",
-      "ダ",
-      "チ",
-      "ヂ",
-      "ッ",
-      "ツ",
-      "ヅ",
-      "テ",
-      "デ",
-      "ト",
-      "ド",
-      "ナ",
-      "ニ",
-      "ヌ",
-      "ネ",
-      "ノ",
-      "ハ",
-      "バ",
-      "パ",
-      "ヒ",
-      "ビ",
-      "ピ",
-      "フ",
-      "ブ",
-      "プ",
-      "ヘ",
-      "ベ",
-      "ペ",
-      "ホ",
-      "ボ",
-      "ポ",
-      "マ",
-      "ミ",
-      "ム",
-      "メ",
-      "モ",
-      "ャ",
-      "ヤ",
-      "ュ",
-      "ユ",
-      "ョ",
-      "ヨ",
-      "ラ",
-      "リ",
-      "ル",
-      "レ",
-      "ロ",
-      "ヮ",
-      "ワ",
-      "ヰ",
-      "ヱ",
-      "ヲ",
-      "ン",
-    ],
-    "index": "set.length",
-    "sort": Array [
-      "id",
-    ],
-  },
-}
-`;
+exports[`transaction $sort faces 1`] = `Object {}`;
 
-exports[`transaction $sort games 1`] = `
-Object {
-  "_reduce.list": Object {},
-}
-`;
+exports[`transaction $sort games 1`] = `Object {}`;
 
-exports[`transaction $sort locales 1`] = `
-Object {
-  "_reduce.list": Object {},
-}
-`;
+exports[`transaction $sort locales 1`] = `Object {}`;
 
-exports[`transaction $sort marks 1`] = `
-Object {
-  "_reduce.list": Object {},
-}
-`;
+exports[`transaction $sort marks 1`] = `Object {}`;
 
-exports[`transaction $sort options 1`] = `
-Object {
-  "_reduce.list": Object {},
-}
-`;
+exports[`transaction $sort options 1`] = `Object {}`;
 
-exports[`transaction $sort randoms 1`] = `
-Object {
-  "_reduce.list": Object {
-    "sort": Array [
-      "ratio",
-      "desc",
-    ],
-  },
-  "_reduce.type": Object {
-    "sort": Array [
-      "count",
-      "asc",
-    ],
-  },
-}
-`;
+exports[`transaction $sort randoms 1`] = `Object {}`;
 
-exports[`transaction $sort says 1`] = `
-Object {
-  "_reduce.list": Object {},
-}
-`;
+exports[`transaction $sort says 1`] = `Object {}`;
 
 exports[`transaction $sort tags 1`] = `
 Object {
@@ -878,19 +729,10 @@ Object {
       "order",
     ],
   },
-  "_reduce.list": Object {
-    "sort": Array [
-      "order",
-    ],
-  },
 }
 `;
 
-exports[`transaction $sort winners 1`] = `
-Object {
-  "_reduce.list": Object {},
-}
-`;
+exports[`transaction $sort winners 1`] = `Object {}`;
 
 exports[`transaction _step 1`] = `
 Object {

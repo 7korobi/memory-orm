@@ -1,5 +1,5 @@
 _ = require "lodash"
-{ State } = require "./index.coffee"
+{ State, Set } = require "./mem.coffee"
 Query = require "./query.coffee"
 
 f_common = (type)-> (list, parent)->
@@ -23,6 +23,8 @@ f_clear = ->
 
 
 module.exports = class Set
+  constructor: ({ @all, @$name })->
+
   set:           f_common "reset"
   reset:         f_common "reset"
 

@@ -17,14 +17,17 @@ rename = (base)->
 module.exports = class Rule
   constructor: (base, cb)->
     @$name = rename base
+    @state = Mem.State.base @$name
+
     @model = Model
     @list  = List
     @set   = Set
     @map   = Map
 
-    @all = Query.build Mem.State.base @$name
-    @all.cache = {}
-    @all._finder = new Finder @$name
+    @all = Query.build @state
+    @all.$sort["_reduce.list"] = {}
+    @all._cache = {}
+    @all._finder = new Finder @$name, @state
 
     @depend_on base
 
@@ -112,19 +115,13 @@ module.exports = class Rule
 
     @model.$name = @list.$name = @set.$name = @map.$name = @$name
 
+
+    @list.bless [], @all
+    @all._finder.deploy @
+
+    Mem.Set[@$name.base] = new @set @
     Mem.Query[@$name.list] = @all
-
-    Mem.Set[@$name.base] = _set = new @set
-    _set.all = @all
-    _set.$name = @$name
-    list = @list.bless [], @all
-
-    Mem.Finder[@$name.list] = finder = @all._finder
-    finder.set = @set
-    finder.map = @map
-    finder.list = @list
-    finder.model = @model
-    finder.$format = Mem.State.base(@$name).$format
+    Mem.Finder[@$name.list] = @all._finder
     @
 
   key_by: (keys)->
@@ -168,10 +165,11 @@ module.exports = class Rule
   shuffle: ->
     @default_scope (all)-> all.shuffle()
 
-  order: (sort...)->
-    @default_scope (all)-> all.sort sort...
+  sort: (...sort)->
+    @default_scope (all)-> all.sort ...sort
 
-  
+  order: (...order)->
+    @default_scope (all)-> all.order ...order
 
   relation_to_one: (key, target, ik, else_id)->
     @model_property[key] =
@@ -227,7 +225,7 @@ module.exports = class Rule
     switch val?.constructor
       when Function
         @all[key] = (args...)=>
-          @all.cache["#{key}:#{JSON.stringify args}"] ?= val args...
+          @all._cache["#{key}:#{JSON.stringify args}"] ?= val args...
       else
         @all[key] = val
 

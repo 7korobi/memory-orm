@@ -1,6 +1,13 @@
 { Model, Query, Rule } = require "../../src/index"
 
 new Rule("chat").schema ->
+  @order
+    sort: ["write_at", "asc"]
+    page: true
+  @order "last",
+    sort: [["max_is.phase.id", "max_is.write_at"], ["desc", "desc"]]
+    pluck: 'max_is'
+    page: true
   @path "folder", "book", "part", "phase"
   @belongs_to "section"
   @belongs_to "potof"
@@ -133,13 +140,6 @@ new Rule("chat").schema ->
           count: 1
 
     @order: (o, emit)->
-      emit "last",
-        pluck: "max_is"
-        sort: [["max_is.phase.id", "max_is.write_at"], ["desc", "desc"]]
-        page: true
-      emit "list",
-        sort: ["write_at", "asc"]
-        page: true
       emit "mention", anker
       for mention_id in o.mention_ids
         emit "mention_to", mention_id, anker

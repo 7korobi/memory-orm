@@ -2,6 +2,8 @@ _ = require 'lodash'
 { Set, Model, Query, Rule, State } = require "../../src/index"
 
 new Rule("random").schema ->
+  @sort "ratio", "desc"
+  @order 'type', sort: ["count", "asc"]
   @scope (all)->
     deck: (type)->
       all.where({ type })
@@ -16,12 +18,6 @@ new Rule("random").schema ->
         [t0]
 
   class @model extends @model
-    @order: (o, emit)->
-      emit "list",
-        sort: ['ratio', 'desc']
-      emit "type",
-        sort: ['count', 'asc']
-
     @map_reduce: (o, emit)->
       emit "type", o.type,
         count: 1

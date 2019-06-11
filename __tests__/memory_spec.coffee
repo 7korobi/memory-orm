@@ -10,6 +10,9 @@ keys = [
 keys.map (key)->
   describe key, ->
     test 'memory snapshot', ->
-      expect Mem.Query[key].memory
+      _memory = {}
+      for key, { $group, item, meta } of Mem.Query[key].memory
+        _memory[key] = { $group, item }
+      expect _memory
       .toMatchSnapshot()
     undefined

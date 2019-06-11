@@ -2,7 +2,7 @@
 { Set, Model, Query, Rule } = require "../../src/index"
 
 new Rule("potof").schema ->
-  @order "write_at"
+  @sort "write_at"
   @path "folder", "book"
   @belongs_to "part"
   @belongs_to "face"
@@ -137,5 +137,4 @@ new Rule("potof").schema ->
         return o
 
     @map_reduce: (o, emit)->
-
     @order: (o, emit)->

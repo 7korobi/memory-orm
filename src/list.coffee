@@ -4,19 +4,19 @@ Query = require "./query.coffee"
 
 module.exports = class List extends Array
   @bless: (list, query)->
-    list.__proto__ = @::
+    Reflect.setPrototypeOf list, @::
     list.query = query
     list
 
   sort: (sort...)->
     o = _.orderBy @, sort...
-    o.__proto__ = @__proto__
+    Reflect.setPrototypeOf o, Reflect.getPrototypeOf @
     o
 
   group_by: (cb)->
     o = _.groupBy @, cb
     for key, oo of o
-      oo.__proto__ = @__proto__
+      Reflect.setPrototypeOf oo, Reflect.getPrototypeOf @
     o
 
   page_by: (per)->

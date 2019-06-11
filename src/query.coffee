@@ -2,7 +2,8 @@ _ = require "lodash"
 
 
 set_for = (list)->
-  set = new Object null
+  set = {}
+  Reflect.setPrototypeOf set, null
   for key in list
     set[key] = true
   set
@@ -105,15 +106,18 @@ module.exports = class Query
   shuffle: ->
     @sort Math.random
 
-  order: (order)->
-    return @ if _.isEqual order, @$sort['_reduce.list']
+  order: (...keys, order)->
+    keys.push "list" unless keys.length
+    path = ["_reduce", ...keys].join('.')
+
+    return @ if _.isEqual order, @$sort[path]
     new Query @, ->
       @$sort = _.cloneDeep @$sort
-      @$sort['_reduce.list'] = order
+      @$sort[path] = order
 
-  sort: (sort...)->
+  sort: (...sort)->
     @order { sort }
-  
+
   page: (page_by)->
     new Query @, ->
       @$page_by = page_by
@@ -122,7 +126,7 @@ module.exports = class Query
     oo = @find ...ids
     if oo
       o = @all.$memory[oo.id].form ?= {}
-      o.__proto__ = oo
+      Reflect.setPrototypeOf o, oo
       o
     else
       oo

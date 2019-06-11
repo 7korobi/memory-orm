@@ -12,11 +12,13 @@ $react_listeners = []
 $step = 0
 
 OBJ = ->
-  new Object null
+  o = {}
+  Reflect.setPrototypeOf o, null
+  o
 
 class Metadata
   @bless: (o)->
-    o.__proto__ = @::
+    Reflect.setPrototypeOf o, @::
     o.pack ?= OBJ()
     o
 
@@ -36,9 +38,9 @@ step = -> ++$step
 
 cache = (type)-> ({ list })->
   State[type].pack[list] ?=
-    $sort:   OBJ()
+    $sort: OBJ()
     $memory: OBJ()
-    $format:  OBJ()
+    $format: OBJ()
 
 
 State =
@@ -58,12 +60,19 @@ State =
   store: (meta)->
     return false unless meta?.pack
     for list, { $sort, $memory, $format } of meta.pack
-      unless Finder[list]
-        console.error "not found Finder", list, meta.pack
+      #all = Query[list]
+      finder = Finder[list]
+      unless finder
+        console.error "not found Finder and Query", list, meta.pack
         continue
-      { model } = Finder[list]
+      { model } = finder
       base = State.base { list }
       journal = State.journal { list }
+
+      #all.$sort = base.$sort
+      #all.$memory = base.$memory
+      #finder.$format = base.$format
+
 
       for key, o of $sort
         base.$sort[key] = o
@@ -78,7 +87,7 @@ State =
         base.$memory[key] = o
         journal.$memory[key] = o
 
-      Finder[list].clear_cache()
+      finder.clear_cache()
     true
 
   join: ({react})->

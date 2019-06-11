@@ -1,5 +1,10 @@
 _ = require "lodash"
-{ State, Query, Format, step } = require "./mem.coffee"
+{ Finder, State, Query, Format, step } = require "./mem.coffee"
+
+OBJ = ->
+  o = {}
+  Reflect.setPrototypeOf o, null
+  o
 
 each_by_id = ({ list, depends }, from, process)->
   f() for f in depends
@@ -29,8 +34,10 @@ validate = (item, meta, chklist)->
 
 
 module.exports = class Finder
-  constructor: (@$name)->
+  constructor: (@$name, { @$format })->
     State.notify @$name.list
+
+  deploy: ({@set, @map, @list, @model})->
 
   calculate: (query, memory)->
     return unless query._step < State.step[@$name.list]
@@ -85,8 +92,8 @@ module.exports = class Finder
 
   reset: (meta, journal, all, from, parent)->
     { $memory } = all
-    journal.$memory = new Object null
-    State.base(@$name).$memory = all.$memory = news = new Object null
+    journal.$memory = OBJ()
+    State.base(@$name).$memory = all.$memory = news = OBJ()
     @merge meta, journal, all, from, parent
 
     for key, old of $memory

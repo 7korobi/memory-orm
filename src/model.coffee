@@ -3,7 +3,7 @@ _ = require "lodash"
 
 module.exports = class Model
   @bless: (o)->
-    o.__proto__ = @::
+    Reflect.setPrototypeOf o, @::
     o
 
   @$deploy: (item, parent)->

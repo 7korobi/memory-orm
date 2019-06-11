@@ -1,7 +1,7 @@
 { Set, Model, Query, Rule } = require "../../src/index"
 
 new Rule("card").schema ->
-  @order "write_at"
+  @sort "write_at"
   @path "folder", "book", "potof"
   @belongs_to "role"
 

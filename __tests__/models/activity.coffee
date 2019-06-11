@@ -1,6 +1,9 @@
 { Set, Model, Query, Rule } = require "../../src/index"
 
 new Rule("marker").schema ->
+  @sort "write_at", "desc"
+  @order "mark_at",
+    sort: ["max", "desc"]
   @scope (all)->
     own: ( uid )-> all.where { uid }
 
@@ -8,13 +11,6 @@ new Rule("marker").schema ->
     @map_reduce: (o, emit)->
       emit "mark_at", o.book_id,
         max: o.mark_at
-
-    @order: (o, emit)->
-      emit "mark_at",
-        sort: ["max", "desc"]
-
-      emit "list",
-        sort: ["write_at", "desc"]
 
 new Rule("icon").schema ->
   @belongs_to "book"

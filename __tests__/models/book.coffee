@@ -4,7 +4,7 @@ format = require 'date-fns/format'
 locale = require "date-fns/locale/ja"
 
 new Rule("book").schema ->
-  @order "write_at"
+  @sort "write_at"
   @path "folder"
   @has_many "parts"
   @has_many "phases"

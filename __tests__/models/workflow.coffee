@@ -12,6 +12,7 @@ new Rule("work_country").schema ->
 
 idx = 0
 new Rule("work_name").schema ->
+  @order "spot_size", sort: ["count", "desc"]
   @belongs_to "work_country"
   @deploy ->
     ascii = @spell.normalize('NFKD').replace /[\u0300-\u036F]/g, ''
@@ -40,5 +41,3 @@ new Rule("work_name").schema ->
     @order: (o, emit)->
       emit "spot", o.key, "list",
         sort: ["name", "asc"]
-      emit "spot_size",
-        sort: ["count", "desc"]

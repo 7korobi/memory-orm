@@ -18,13 +18,21 @@ Object {
 
 exports[`chr_npcs sort snapshot 1`] = `
 Object {
-  "_reduce.list": Object {},
+  "_reduce.list": Object {
+    "sort": Array [
+      "label",
+    ],
+  },
 }
 `;
 
 exports[`chr_sets sort snapshot 1`] = `
 Object {
-  "_reduce.list": Object {},
+  "_reduce.list": Object {
+    "sort": Array [
+      "label",
+    ],
+  },
 }
 `;
 

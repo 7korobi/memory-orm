@@ -7,7 +7,7 @@ format =
     hour:    "2-digit"
 
 new Rule("section").schema ->
-  @order "write_at"
+  @sort "write_at"
   @path "folder", "book", "part"
   @has_many "chats"
 

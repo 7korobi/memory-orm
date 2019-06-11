@@ -1,6 +1,9 @@
 { Model, Query, Rule } = require "../../src/index"
 
 new Rule("phase").schema ->
+  @order "write_at"
+  @order 'group',  sort: ["count", "desc"]
+  @order 'handle', sort: ["count", "desc"]
   @path "folder", "book", "part"
   @has_many "chats"
 
@@ -15,11 +18,3 @@ new Rule("phase").schema ->
         count: 1
       emit "handle", o.handle,
         count: 1
-
-    @order: (o, emit)->
-      emit "list",
-        sort: ["write_at"]
-      emit "group",
-        sort: ["count", "desc"]
-      emit "handle",
-        sort: ["count", "desc"]

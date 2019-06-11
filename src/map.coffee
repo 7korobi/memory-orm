@@ -4,11 +4,11 @@ Datum = require './datum.coffee'
 
 module.exports = class Map
   @bless: (o)->
-    o.__proto__ = @::
+    Reflect.setPrototypeOf o, @::
     o
 
   @$deploy: (model, $format, $sort, meta, journal, item)->
-    datum = new Datum( meta, item )
+    datum = Datum( meta, item )
 
     @$deploy_reduce model, item, $format, journal, datum
     @$deploy_sort   model, item, $sort,   journal
@@ -45,7 +45,6 @@ module.exports = class Map
       path = ["_reduce", keys...].join('.')
       $sort[path] = cmd
       journal.$sort[path] = cmd
-    emit "list", {}
     model.order item, emit
 
   @init: (o, map)->
@@ -69,7 +68,7 @@ module.exports = class Map
     if Object == from.constructor
       if map.belongs_to
         for id, val of from
-          val.__proto__ = Query[map.belongs_to].find id
+          Reflect.setPrototypeOf val, Query[map.belongs_to].find id
       else
         for id, val of from
           val.id = id
@@ -77,7 +76,7 @@ module.exports = class Map
     else
       if map.belongs_to
         for val in from
-          val.__proto__ = Query[map.belongs_to].find val.id
+          Reflect.setPrototypeOf val, Query[map.belongs_to].find val.id
 
     if map.cover
       remain = []
