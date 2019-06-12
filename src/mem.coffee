@@ -11,15 +11,13 @@ Finder = {}
 $react_listeners = []
 $step = 0
 
-OBJ = ->
-  o = {}
-  Reflect.setPrototypeOf o, null
-  o
+PureObject = ->
+  Object.create null
 
 class Metadata
   @bless: (o)->
     Reflect.setPrototypeOf o, @::
-    o.pack ?= OBJ()
+    o.pack ?= PureObject()
     o
 
   json: ->
@@ -37,10 +35,15 @@ META = (meta = {})->
 step = -> ++$step
 
 cache = (type)-> ({ list })->
-  State[type].pack[list] ?=
-    $sort: OBJ()
-    $memory: OBJ()
-    $format: OBJ()
+  o = State[type].pack
+  if o[list]
+    o[list]
+  else
+    oo = o[list] = PureObject()
+    oo.$sort   = PureObject()
+    oo.$memory = PureObject()
+    oo.$format = PureObject()
+    oo
 
 
 State =
@@ -53,14 +56,13 @@ State =
   journal: cache '$journal'
   base:    cache '$base'
   meta: -> State.$journal
-  step:     OBJ()
+  step:     PureObject()
   $journal: META()
   $base:    META()
 
   store: (meta)->
     return false unless meta?.pack
     for list, { $sort, $memory, $format } of meta.pack
-      #all = Query[list]
       finder = Finder[list]
       unless finder
         console.error "not found Finder and Query", list, meta.pack
@@ -68,11 +70,6 @@ State =
       { model } = finder
       base = State.base { list }
       journal = State.journal { list }
-
-      #all.$sort = base.$sort
-      #all.$memory = base.$memory
-      #finder.$format = base.$format
-
 
       for key, o of $sort
         base.$sort[key] = o
@@ -110,32 +107,6 @@ State =
       o.setState e
     return
 
-  ###
-  cleanup: (old, meta = State.meta() )->
-    return false unless old?.pack
-
-    for list, { $sort, $memory, $format } of old.pack
-      keep = meta?.pack[list]
-      { model } = Finder[list]
-      base = State.base { list }
-      journal = State.journal { list }
-
-      for key, o of $sort when ! keep.$sort[key]
-        delete base.$sort[key]
-        delete journal.$sort[key]
-
-      for key, o of $format when ! keep.$format[key]
-        delete base.$format[key]
-        delete journal.$format[key]
-
-      for key, o of $memory when ! keep.$memory[key]
-        delete base.$memory[key]
-        delete journal.$memory[key]
-
-      Finder[list].clear_cache()
-    true
-    ###
-
 set_deploy = (key, cb)-> Name[key].deploys.push cb
 set_depend = (key, cb)-> Name[key].depends.push cb
 merge = (o)->
@@ -147,4 +118,4 @@ merge = (o)->
       when Set[key]?
         Set[key].append val
 
-module.exports = { Set, Map, Name, State, Finder, Query, set_deploy, set_depend, merge, step }
+module.exports = { Set, Map, Name, State, Finder, Query, PureObject, set_deploy, set_depend, merge, step }

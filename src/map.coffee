@@ -8,7 +8,7 @@ module.exports = class Map
     o
 
   @$deploy: (model, $format, $sort, meta, journal, item)->
-    datum = Datum( meta, item )
+    datum = new Datum( meta, item )
 
     @$deploy_reduce model, item, $format, journal, datum
     @$deploy_sort   model, item, $sort,   journal

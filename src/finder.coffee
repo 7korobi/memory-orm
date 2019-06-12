@@ -1,10 +1,5 @@
 _ = require "lodash"
-{ Finder, State, Query, Format, step } = require "./mem.coffee"
-
-OBJ = ->
-  o = {}
-  Reflect.setPrototypeOf o, null
-  o
+{ Finder, State, Query, Format, PureObject, step } = require "./mem.coffee"
 
 each_by_id = ({ list, depends }, from, process)->
   f() for f in depends
@@ -92,8 +87,8 @@ module.exports = class Finder
 
   reset: (meta, journal, all, from, parent)->
     { $memory } = all
-    journal.$memory = OBJ()
-    State.base(@$name).$memory = all.$memory = news = OBJ()
+    journal.$memory = PureObject()
+    State.base(@$name).$memory = all.$memory = news = PureObject()
     @merge meta, journal, all, from, parent
 
     for key, old of $memory
