@@ -4,14 +4,16 @@ Query = require "./query.coffee"
 
 f_common = (type)-> (list, parent)->
   meta = State.meta()
-  journal = State.journal @$name
-  @all._finder[type] meta, journal, @all, list, parent
+  base = State.base @$name.list
+  journal = State.journal @$name.list
+  @all._finder[type] meta, base, journal, @all, list, parent
 
 f_update = (list, parent)->
   meta = State.meta()
-  journal = State.journal @$name
+  base = State.base @$name.list
+  journal = State.journal @$name.list
   if parent?
-    @all._finder.update meta, journal, @all, list, parent
+    @all._finder.update meta, base, journal, @all, list, parent
 
 f_item = (cb)->
   (item, parent)->
@@ -19,11 +21,10 @@ f_item = (cb)->
       cb.call @, [item], parent
 
 f_clear = ->
-  @all._finder.clear_cach @all
-
+  @all._finder.clear_cach()
 
 module.exports = class Set
-  constructor: ({ @all, @$name })->
+  constructor: ({ @all, @model, @$name })->
 
   set:           f_common "reset"
   reset:         f_common "reset"
@@ -43,8 +44,10 @@ module.exports = class Set
   rehash:        f_clear
 
   find: (...ids)->
-    journal = State.journal @$name
+    meta = State.meta()
+    journal = State.journal @$name.list
     for id in ids when o = @all.$memory[id]
+      o.meta = meta
       journal.$memory[id] = o
       @all._finder.clear_cache()
       return o.item

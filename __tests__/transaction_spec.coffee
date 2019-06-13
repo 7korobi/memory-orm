@@ -3,7 +3,7 @@ Mem = require "../src/index"
 
 test_is = (target, list, key, src)->
   test "#{target} #{list} #{key}", ->
-    base = Mem.State.base { list }
+    base = Mem.State.base list
     tgt = JSON.parse JSON.stringify base[target][key]
     expect( tgt ).toEqual src
 

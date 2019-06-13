@@ -7,17 +7,20 @@ rename = (base)->
   name = Mem.Name[base]
   return name if name
 
-  id =   "#{base}_id"
-  ids =  "#{base}_ids"
   list = "#{base}s"
-  deploys = []
-  depends = []
-  Mem.Name[list] = Mem.Name[base] = { id, ids, list, base, deploys, depends }
+  Mem.Name[list] = Mem.Name[base] = o = Mem.PureObject()
+  o.base = base
+  o.list = list
+  o.id =   "#{base}_id"
+  o.ids =  "#{base}_ids"
+  o.deploys = []
+  o.depends = []
+  o
 
 module.exports = class Rule
   constructor: (base, cb)->
     @$name = rename base
-    @state = Mem.State.base @$name
+    @state = Mem.State.base @$name.list
 
     @model = Model
     @list  = List
@@ -29,8 +32,7 @@ module.exports = class Rule
     @all._cache = {}
     @all._finder = new Finder @$name, @state
 
-    @depend_on base
-
+    @depend_on @$name.list
     @map_property = {}
 
     { base } = @$name
@@ -141,12 +143,10 @@ module.exports = class Rule
       get: cb
 
   deploy: (cb)->
-    Mem.set_deploy @$name.base, cb
+    @$name.deploys.push cb
 
   depend_on: (parent)->
-    { _finder } = @all
-    Mem.set_depend parent, ->
-      _finder.clear_cache()
+    Mem.Name[parent].depends.push parent
 
   scope: (cb)->
     for key, val of cb @all
@@ -159,7 +159,7 @@ module.exports = class Rule
 
   default_scope: (scope)->
     @all._copy scope @all
-    base = Mem.State.base(@$name)
+    base = Mem.State.base @$name.list
     base.$sort = @all.$sort
 
   shuffle: ->

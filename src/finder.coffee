@@ -1,16 +1,14 @@
 _ = require "lodash"
 { Finder, State, Query, Format, PureObject, step } = require "./mem.coffee"
 
-each_by_id = ({ list, depends }, from, process)->
-  f() for f in depends
+each_by_id = ({ list }, from, process)->
   switch from?.constructor
     when Array
       for item in from
         process item.id || item
   return
 
-each = ({ list, depends }, from, process)->
-  f() for f in depends
+each = ({ list }, from, process)->
   switch from?.constructor
     when Array
       for item in from
@@ -78,60 +76,61 @@ module.exports = class Finder
       o.from = from
       _.set query, path, o
 
-  clear_cache: (all = null)->
-    State.notify @$name.list
-    if all
-      for id, { item } of all.$memory
-        @map.$deploy_sort @model, item, all
+  clear_cache: (hit = true)->
+    if hit?
+      for name in @$name.depends
+        State.notify name
     return
 
-  reset: (meta, journal, all, from, parent)->
-    { $memory } = all
+  reset: (meta, base, journal, all, from, parent)->
     journal.$memory = PureObject()
-    State.base(@$name).$memory = all.$memory = news = PureObject()
-    @merge meta, journal, all, from, parent
+    base.$memory = all.$memory = news = PureObject()
 
-    for key, old of $memory
+    @merge meta, base, journal, all, from, parent
+
+    for key, old of base.$memory
       item = news[key]
       unless item?
         @model.delete old
+    @clear_cache true
 
-  merge: (meta, journal, all, from, parent)->
-    { $memory } = all
+  merge: (meta, base, journal, all, from, parent)->
+    hit = false
     each @$name, from, (item)=>
-      old = $memory[item.id]
+      old = base.$memory[item.id]
       @model.$deploy item, parent
       o = @map.$deploy @model, @$format, all.$sort, meta, journal, item
       journal.$memory[item.id] = o
-      $memory[item.id] = o
+      base.$memory[item.id] = o
       if old?
         @model.update item, old.item
       else
         @model.create item
-    @clear_cache()
+      hit = true
+    @clear_cache hit
 
-  remove: (meta, journal, all, ids)->
-    { $memory } = all
+  remove: (meta, base, journal, all, ids)->
     hit = false
     each_by_id @$name, ids, (id)=>
-      old = $memory[id]
+      old = base.$memory[id]
       if old?
         @model.delete old.item
         delete journal.$memory[id]
-        delete $memory[id]
+        delete base.$memory[id]
         hit = true
-    if hit?
-      @clear_cache()
+    @clear_cache hit
 
-  update: (meta, journal, all, ids, parent)->
+  update: (meta, base, journal, all, ids, parent)->
     { $memory } = all
+    hit = false
     each_by_id @$name, ids, (id)=>
-      return unless old = $memory[id]
+      return unless old = base.$memory[id]
       _.merge old.item, parent
       o = @map.$deploy @model, @$format, all.$sort, meta, journal, old.item
       journal.$memory[id] = o
-      $memory[id] = o
+      base.$memory[id] = o
 
       @model.update old.item, old.item
-    @clear_cache()
+      hit = true
+    @clear_cache hit
       

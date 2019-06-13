@@ -1,0 +1,154 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`able $name snapshot 1`] = `
+Object {
+  "base": "able",
+  "depends": Array [
+    "ables",
+  ],
+  "deploys": Array [],
+  "id": "able_id",
+  "ids": "able_ids",
+  "list": "ables",
+}
+`;
+
+exports[`chr_job $name snapshot 1`] = `
+Object {
+  "base": "chr_job",
+  "depends": Array [
+    "chr_jobs",
+  ],
+  "deploys": Array [
+    [Function],
+  ],
+  "id": "chr_job_id",
+  "ids": "chr_job_ids",
+  "list": "chr_jobs",
+}
+`;
+
+exports[`chr_npc $name snapshot 1`] = `
+Object {
+  "base": "chr_npc",
+  "depends": Array [
+    "chr_npcs",
+  ],
+  "deploys": Array [
+    [Function],
+  ],
+  "id": "chr_npc_id",
+  "ids": "chr_npc_ids",
+  "list": "chr_npcs",
+}
+`;
+
+exports[`chr_set $name snapshot 1`] = `
+Object {
+  "base": "chr_set",
+  "depends": Array [
+    "chr_sets",
+  ],
+  "deploys": Array [],
+  "id": "chr_set_id",
+  "ids": "chr_set_ids",
+  "list": "chr_sets",
+}
+`;
+
+exports[`face $name snapshot 1`] = `
+Object {
+  "base": "face",
+  "depends": Array [
+    "faces",
+  ],
+  "deploys": Array [
+    [Function],
+  ],
+  "id": "face_id",
+  "ids": "face_ids",
+  "list": "faces",
+}
+`;
+
+exports[`folder $name snapshot 1`] = `
+Object {
+  "base": "folder",
+  "depends": Array [
+    "folders",
+  ],
+  "deploys": Array [
+    [Function],
+  ],
+  "id": "folder_id",
+  "ids": "folder_ids",
+  "list": "folders",
+}
+`;
+
+exports[`locale $name snapshot 1`] = `
+Object {
+  "base": "locale",
+  "depends": Array [
+    "locales",
+  ],
+  "deploys": Array [],
+  "id": "locale_id",
+  "ids": "locale_ids",
+  "list": "locales",
+}
+`;
+
+exports[`random $name snapshot 1`] = `
+Object {
+  "base": "random",
+  "depends": Array [
+    "randoms",
+  ],
+  "deploys": Array [
+    [Function],
+  ],
+  "id": "random_id",
+  "ids": "random_ids",
+  "list": "randoms",
+}
+`;
+
+exports[`role $name snapshot 1`] = `
+Object {
+  "base": "role",
+  "depends": Array [
+    "roles",
+  ],
+  "deploys": Array [],
+  "id": "role_id",
+  "ids": "role_ids",
+  "list": "roles",
+}
+`;
+
+exports[`sow_roletable $name snapshot 1`] = `
+Object {
+  "base": "sow_roletable",
+  "depends": Array [
+    "sow_roletables",
+  ],
+  "deploys": Array [],
+  "id": "sow_roletable_id",
+  "ids": "sow_roletable_ids",
+  "list": "sow_roletables",
+}
+`;
+
+exports[`tag $name snapshot 1`] = `
+Object {
+  "base": "tag",
+  "depends": Array [
+    "tags",
+  ],
+  "deploys": Array [],
+  "id": "tag_id",
+  "ids": "tag_ids",
+  "list": "tags",
+}
+`;

@@ -34,7 +34,7 @@ META = (meta = {})->
 
 step = -> ++$step
 
-cache = (type)-> ({ list })->
+cache = (type)-> (list)->
   o = State[type].pack
   if o[list]
     o[list]
@@ -68,8 +68,8 @@ State =
         console.error "not found Finder and Query", list, meta.pack
         continue
       { model } = finder
-      base = State.base { list }
-      journal = State.journal { list }
+      base = State.base list
+      journal = State.journal list
 
       for key, o of $sort
         base.$sort[key] = o
@@ -107,8 +107,6 @@ State =
       o.setState e
     return
 
-set_deploy = (key, cb)-> Name[key].deploys.push cb
-set_depend = (key, cb)-> Name[key].depends.push cb
 merge = (o)->
   for key, val of o
     switch
@@ -118,4 +116,4 @@ merge = (o)->
       when Set[key]?
         Set[key].append val
 
-module.exports = { Set, Map, Name, State, Finder, Query, PureObject, set_deploy, set_depend, merge, step }
+module.exports = { Set, Map, Name, State, Finder, Query, PureObject, merge, step }

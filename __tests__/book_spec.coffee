@@ -3,7 +3,7 @@ Mem = require "../src/index"
 
 test_is = (target, list, key, o)->
   test "#{target} #{list} #{key}", ->
-    base = Mem.State.base { list }
+    base = Mem.State.base list
     expect(
       base[target][key]
     ).toEqual o
