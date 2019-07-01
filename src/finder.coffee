@@ -53,7 +53,7 @@ module.exports = class Finder
         for partition in query.$partition
           @reduce @map, cache, paths, query, memory, _.get query.all, "reduce.#{partition}"
 
-    @finish_order @map, cache, paths, query
+    @finish @map, cache, paths, query
     return
 
   reduce: (map, cache, paths, query, memory, ids)->
@@ -65,16 +65,18 @@ module.exports = class Finder
         o = paths[path] = cache[path]
         map.reduce query, path, item, o, a
 
-  finish_order: (map, cache, paths, query)->
+  finish: (map, cache, paths, query)->
     for path, o of paths
       map.finish query, path, o, @list
       _.set query, path, o
 
-    for path, cmd of query.$sort when o = from = _.get(query, path)
-      o = map.order query, path, o, cmd, @list, (target)=>
-        @list.bless target, query
-      o.from = from
-      _.set query, path, o
+    for path, cmd of query.$sort when from = _.get(query, path)
+      sorted = map.order     query, path, from,   cmd, @list
+      dashed = map.dash      query, path, sorted, cmd, @list
+      result = map.post_proc query, path, dashed, cmd, @list
+      @list.bless result, query
+      result.from = from
+      _.set query, path, result
 
   clear_cache: (hit = true)->
     if hit?

@@ -48,14 +48,14 @@ cache = (type)-> (list)->
 
 State =
   transaction: (cb, meta)->
-    State.$journal = pack = META meta
+    @$journal = pack = META meta
     cb meta
-    State.$journal = META()
+    @$journal = META()
     pack
 
   journal: cache '$journal'
   base:    cache '$base'
-  meta: -> State.$journal
+  meta: -> @$journal
   step:     PureObject()
   $journal: META()
   $base:    META()
@@ -68,8 +68,8 @@ State =
         console.error "not found Finder and Query", list, meta.pack
         continue
       { model } = finder
-      base = State.base list
-      journal = State.journal list
+      base = @base list
+      journal = @journal list
 
       for key, o of $sort
         base.$sort[key] = o
@@ -87,6 +87,10 @@ State =
       finder.clear_cache()
     true
 
+  mixin:
+    data: ->
+      $step: State.step
+
   join: ({react})->
     if react
       $react_listeners.push react
@@ -98,14 +102,24 @@ State =
     return
 
   notify: ( list )->
-    State.step[list] = val = step()
-    return unless $react_listeners.length
-
-    key = "step_#{list}"
-    e = { [key]: val }
-    for o in $react_listeners when o.state[key] < val
-      o.setState e
-    return
+    @step[list] = val = step()
+    if $react_listeners.length
+      @notify_for_react()
+  
+  notify_for_react: _.debounce ->
+    for o in $react_listeners
+      e = {}
+      changed = false
+      for key, val of o.state 
+        continue unless "step_" == key[0..4]
+        list = key[5..]
+        val = @step[list]
+        if o.state[key] < val
+          e[key] = val
+          changed = true
+      if changed
+        o.setState e
+  , 1
 
 merge = (o)->
   for key, val of o

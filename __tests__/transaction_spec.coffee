@@ -26,6 +26,11 @@ do_test = (list_id,{ $sort, $memory, $format })->
 describe "transaction", ->
   test "_step", ->
     expect( Mem.State.step ).toMatchSnapshot()
+    new Promise (ok, ng)->
+      setTimeout ->
+        expect( Mem.Query.static.react ).toMatchSnapshot()
+        ok()
+      , 10
   undefined
 
 describe "stringify", ->

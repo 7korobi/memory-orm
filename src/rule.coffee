@@ -118,7 +118,6 @@ module.exports = class Rule
     @model.$name = @list.$name = @set.$name = @map.$name = @$name
 
 
-    @list.bless [], @all
     @all._finder.deploy @
 
     Mem.Set[@$name.base] = new @set @

@@ -12,6 +12,7 @@ new Rule("sow_turn").schema ->
   @belongs_to "village", target: "sow_villages", key: "story_id"
 
 new Rule("sow_village").schema ->
+  @order "list",        sort: ['write_at','desc'], diff: ['write_at']
   @order "yeary",       sort: ['id','desc']
   @order "in_month",    sort: ['id','asc']
   @order "upd_at",      sort: ['id','asc']
@@ -27,6 +28,7 @@ new Rule("sow_village").schema ->
   @order "event",       sort: ['count', 'desc'], belongs_to: "roles"
   @order "discard",     sort: ['count', 'desc'], belongs_to: "roles"
   @order "config",      sort: ['count', 'desc'], belongs_to: "roles"
+
   @has_many "turns", target: "sow_turns", key: "story_id"
   @habtm "option_datas", target: "options", key: "options"
   @belongs_to "say",  target: "says",  key: "q.say"
@@ -64,7 +66,7 @@ new Rule("sow_village").schema ->
     minute = "0#{minute}" if minute < 10
     updated_at = new Date @timer.updateddt
 
-    @write_at = updated_at
+    @write_at = updated_at - 0
 
     in_month = format updated_at, 'MM月', { locale }
     yeary = format updated_at, 'YYYY年', { locale }

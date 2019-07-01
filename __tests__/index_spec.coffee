@@ -29,4 +29,20 @@ describe "sow oldlog", ->
 
   # $memory check 省略
 
+  test "list' sow_villages", ->
+    expect Mem.Query.sow_villages.list.diff
+    .toMatchSnapshot()
+
+  test "list'' sow_villages", ->
+    expect Mem.Query.sow_villages.list.diff.diff
+    .toMatchSnapshot()
+
+  test "list''' sow_villages", ->
+    expect Mem.Query.sow_villages.list.diff.diff.diff
+    .toMatchSnapshot()
+
+  test "list'''' sow_villages", ->
+    expect Mem.Query.sow_villages.list.diff.diff.diff.diff
+    .toMatchSnapshot()
+
   undefined

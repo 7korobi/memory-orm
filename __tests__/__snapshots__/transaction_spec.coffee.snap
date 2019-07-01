@@ -75249,3 +75249,12 @@ Object {
   "work_names": 646,
 }
 `;
+
+exports[`transaction _step 2`] = `
+Object {
+  "step_chr_jobs": 589,
+  "step_chr_sets": 192,
+  "step_faces": 160,
+  "step_tags": 137,
+}
+`;

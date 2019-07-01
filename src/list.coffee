@@ -8,6 +8,10 @@ module.exports = class List extends Array
     list.query = query
     list
 
+  constructor: (query)->
+    super()
+    @query = query
+
   sort: (sort...)->
     o = _.orderBy @, sort...
     Reflect.setPrototypeOf o, Reflect.getPrototypeOf @
