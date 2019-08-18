@@ -139,7 +139,13 @@ module.exports = class Map
 
     if map.sort
       o = _.orderBy o, map.sort...
-    
+
+    if size = map.quantile
+      pad = ( o.length - 1 ) / size
+      box = [0..size].map (i)=>
+        o[ Math.floor i * pad ]
+      o.quantile = box
+
     if map.pluck
       o = for oo in o when val = _.get oo, map.pluck
         val
@@ -156,10 +162,25 @@ module.exports = class Map
       
       for ___, oo of o
         idx = _.get oo, key
-        unless counts[idx]
+        a = counts[idx]
+        unless a
           counts[idx] = a = new list query
         a.push oo
+
+      if map.mode
+        max_idx = null
+        max_is = []
+        if is_ary
+          for a, idx in counts when a && max_is.length < a.length
+            max_idx = idx
+            max_is = a
+        else
+          for idx, a of counts when a && max_is.length < a.length
+            max_idx = idx
+            max_is = a
+        max_is.is_mode = max_idx
       o = counts
+
     o
 
   @dash: (query, path, from, map, list)->
@@ -168,6 +189,7 @@ module.exports = class Map
     o = from
     if keys = map.diff
       o = Dash o, keys
+
     o
 
   @post_proc: (query, path, from, map, list)->
