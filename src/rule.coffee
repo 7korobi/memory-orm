@@ -37,9 +37,6 @@ module.exports = class Rule
 
     { base } = @$name
     @model_property =
-      id:
-        enumerable: true
-        get: -> @_id
       [@$name.id]:
         enumerable: true
         get: -> @_id
@@ -60,38 +57,7 @@ module.exports = class Rule
             return true unless _.isEqual @[key], @$model[key]
           return false
 
-    @list_property =
-      first:
-        enumerable: false
-        get: -> @[0]
-      head:
-        enumerable: false
-        get: -> @[0]
-      tail:
-        enumerable: false
-        get: -> @[@length - 1]
-      last:
-        enumerable: false
-        get: -> @[@length - 1]
-
-      uniq:
-        enumerable: false
-        get: ->
-          @constructor.bless _.uniq @
-
-      pluck:
-        enumerable: false
-        value: (keys...)->
-          cb =
-            switch keys.length
-              when 0
-                -> null
-              when 1
-                _.property keys[0]
-              else
-                (o)-> _.at(o, keys...)
-          @constructor.bless @map cb
-
+    @list_property = {}
     @set_property = {}
 
     @schema cb if cb
@@ -101,18 +67,22 @@ module.exports = class Rule
     cb.call @
     if @model == Model
       class @model extends @model
+    Object.assign @model_property, @model::
     Object.defineProperties @model::, @model_property
 
     if @list == List
       class @list extends @list
+    Object.assign @list_property, @list::
     Object.defineProperties @list::, @list_property
 
     if @set == Set
       class @set extends @set
+    Object.assign @set_property, @set::
     Object.defineProperties @set::, @set_property
 
     if @map == Map
       class @map extends @map
+    Object.assign @map_property, @map::
     Object.defineProperties @map::, @map_property
 
     @model.$name = @list.$name = @set.$name = @map.$name = @$name

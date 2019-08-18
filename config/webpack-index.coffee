@@ -17,6 +17,10 @@ coffee =
         ]
       ]
 
+typescript =
+  test: /\.ts$/
+  loader: 'ts-loader'
+
 module.exports =
   mode: 'production'
   target: 'node' # Important
