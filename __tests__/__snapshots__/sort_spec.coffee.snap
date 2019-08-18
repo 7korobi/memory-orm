@@ -129,6 +129,8 @@ Object {
       "ン",
     ],
     "index": "set.length",
+    "mode": true,
+    "quantile": 4,
     "sort": Array [
       "id",
     ],

@@ -50,6 +50,8 @@ new Rule("face").schema ->
   @order "name_head",
     sort: ["id"]
     index: "set.length"
+    quantile: 4
+    mode: true
     cover: katakanas
   @habtm "tags"
   @has_many "chr_jobs"

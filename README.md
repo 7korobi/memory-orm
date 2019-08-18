@@ -221,6 +221,7 @@ list.last
  . | default_scope | root Query replace.
  . | shuffle | root Query replace. and replace sort order by Math.random.
  . | order | root Query replace. and replace order.
+ . | sort | root Query replace. and replace order.
  . | path | set name property. for id separate by '-'.
  . | belongs_to | set target property. find by `${target}_id` 
  . | habtm | set target property. finds by `${target}_ids`
