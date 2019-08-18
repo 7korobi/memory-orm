@@ -57,11 +57,14 @@ describe "faces", ->
   Mem.Query.tags.ids.map (tag)->
     data = Mem.Query.faces.name_head(tag)
     test ".name_head(#{tag}) snapshot", ->
+      { cover, remain } = data
       _data =
         for o in data
           if o
             for oo in o
               [oo.id, oo.set]
+      expect { cover, remain }
+      .toMatchSnapshot()
       expect _data
       .toMatchSnapshot()
   undefined

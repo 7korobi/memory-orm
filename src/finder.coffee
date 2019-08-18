@@ -71,9 +71,9 @@ module.exports = class Finder
       _.set query, path, o
 
     for path, cmd of query.$sort when from = _.get(query, path)
-      sorted = map.order     query, path, from,   cmd, @list
-      dashed = map.dash      query, path, sorted, cmd, @list
-      result = map.post_proc query, path, dashed, cmd, @list
+      sorted = map.order     query, path, from,   from, cmd, @list
+      dashed = map.dash      query, path, sorted, from, cmd, @list
+      result = map.post_proc query, path, dashed, from, cmd, @list
       @list.bless result, query
       result.from = from
       _.set query, path, result

@@ -54,7 +54,9 @@ module.exports = class List extends Array {
 
   constructor(query) {
     super();
-    this.query = query;
+    if ( query && query.where && query.in ) {
+      this.query = query;
+    }
   }
 
   sort(...sort) {

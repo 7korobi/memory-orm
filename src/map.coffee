@@ -122,7 +122,7 @@ module.exports = class Map
       if o.all
         o.density = o.all / o.range
 
-  @order: (query, path, from, map, list)->
+  @order: (query, path, from, origin, map, list)->
     o = from
     if map.belongs_to
       if o instanceof Array
@@ -183,7 +183,7 @@ module.exports = class Map
 
     o
 
-  @dash: (query, path, from, map, list)->
+  @dash: (query, path, from, origin, map, list)->
     return unless from instanceof Array
 
     o = from
@@ -192,13 +192,13 @@ module.exports = class Map
 
     o
 
-  @post_proc: (query, path, from, map, list)->
+  @post_proc: (query, path, from, origin, map, list)->
     o = from
     if map.cover
       remain = []
       cover  = []
       for id in map.cover
-        if from[id]
+        if origin[id]
           cover.push id
         else
           remain.push id

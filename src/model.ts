@@ -1,11 +1,6 @@
 const _ = require("lodash");
 
-module.exports = class Model {
-
-  get id() {
-    return this._id;
-  }
-
+const model = class Model {
   static bless(o) {
     Reflect.setPrototypeOf(o, this.prototype);
     return o;
@@ -45,3 +40,14 @@ module.exports = class Model {
   }
 
 };
+
+module.exports = model
+
+Object.defineProperties(model.prototype, {
+  id: {
+    enumerable: true,
+    get: function() {
+      return this._id;
+    },
+  }
+})

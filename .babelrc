@@ -4,11 +4,10 @@
   ],
   "presets": [
     [ "@babel/env", {
-      "targets": {
-        "node": "6.11.5"
-      },
-      "browsers": [
-        ">0.5%",
+      "targets": [
+        ">0.5%", {
+          "node": "6.11.5",
+        }
       ]
     }]
   ]

@@ -4,7 +4,7 @@
   "author": "7korobi",
   "main": "lib/index.min.js",
   "typings": "lib/typings.d.ts",
-  "version": "0.4.6",
+  "version": "0.4.8",
   "preferGlobal": true,
   "repository": "git@github.com:7korobi/memory-orm.git",
   "homepage": "https://github.com/7korobi/memory-orm",
