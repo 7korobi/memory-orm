@@ -100,7 +100,15 @@ module.exports = class Finder
     hit = false
     each @$name, from, (item)=>
       old = base.$memory[item.id]
-      @model.$deploy item, parent
+
+      @model.bless item
+      parent && _.merge item, parent
+      @model.deploy.call item, @model
+      for deploy in @$name.deploys
+        deploy.call item, @model
+      unless item.id
+        throw new Error "detect bad data: #{ JSON.stringify item }"
+
       o = @map.$deploy @model, @$format, all.$sort, meta, journal, item
       journal.$memory[item.id] = o
       base.$memory[item.id] = o

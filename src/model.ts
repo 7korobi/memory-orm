@@ -6,20 +6,7 @@ const model = class Model {
     return o;
   }
 
-  static $deploy(item, parent) {
-    this.bless(item);
-    if (parent) {
-      _.merge(item, parent);
-    }
-    const ref = this.$name.deploys
-    for (let i = 0, len = ref.length; i < len; i++) {
-      const deploy = ref[i];
-      deploy.call(item, this);
-    }
-    if (!item.id) {
-      throw new Error(`detect bad data: ${JSON.stringify(item)}`);
-    }
-  }
+  static deploy(item, parent) {}
 
   static update(item, old) {}
 

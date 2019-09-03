@@ -1,6 +1,6 @@
 { Model, Query, Rule, Set, State } = require "../../src/index"
 { game } = require "~/config/live.yml"
-format = require 'date-fns/format'
+format = require 'date-fns/format/index'
 locale = require "date-fns/locale/ja"
 
 new Rule("book").schema ->
@@ -36,7 +36,7 @@ new Rule("book").schema ->
 
   @deploy ->
     in_month = format @write_at, 'MM月', { locale }
-    yeary = format @write_at, 'YYYY年', { locale }
+    yeary = format @write_at, 'yyyy年', { locale }
     monthry = yeary + in_month
     @q = {
       yeary

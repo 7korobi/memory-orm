@@ -1,0 +1,122 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`path children snapshot 1`] = `
+list [
+  Array [
+    "book-1-aaa",
+    Object {},
+  ],
+  Array [
+    "book-1-bbb",
+    Object {
+      "book-1-bbb-ccc": model {
+        "_id": "book-1-bbb-ccc",
+        "book_id": "book-1",
+        "folder_id": "book",
+        "idx": "ccc",
+        "path_id": "book-1-bbb",
+      },
+      "book-1-bbb-ddd": model {
+        "_id": "book-1-bbb-ddd",
+        "book_id": "book-1",
+        "folder_id": "book",
+        "idx": "ddd",
+        "path_id": "book-1-bbb",
+      },
+    },
+  ],
+  Array [
+    "book-1-bbb-ccc",
+    Object {},
+  ],
+  Array [
+    "book-1-bbb-ddd",
+    Object {
+      "book-1-bbb-ddd-eee": model {
+        "_id": "book-1-bbb-ddd-eee",
+        "book_id": "book-1",
+        "folder_id": "book",
+        "idx": "eee",
+        "path_id": "book-1-bbb-ddd",
+      },
+    },
+  ],
+  Array [
+    "book-1-bbb-ddd-eee",
+    Object {},
+  ],
+  Array [
+    "book-1-ccc-ddd",
+    Object {},
+  ],
+  Array [
+    "book-1-ccc-eee",
+    Object {},
+  ],
+  Array [
+    "book-1-ddd-eee",
+    Object {},
+  ],
+  Array [
+    "book-1-fff-ggg-hhh-iii",
+    Object {},
+  ],
+]
+`;
+
+exports[`path parent snapshot 1`] = `
+list [
+  Array [
+    "book-1-aaa",
+    null,
+  ],
+  Array [
+    "book-1-bbb",
+    null,
+  ],
+  Array [
+    "book-1-bbb-ccc",
+    model {
+      "_id": "book-1-bbb",
+      "book_id": "book-1",
+      "folder_id": "book",
+      "idx": "bbb",
+    },
+  ],
+  Array [
+    "book-1-bbb-ddd",
+    model {
+      "_id": "book-1-bbb",
+      "book_id": "book-1",
+      "folder_id": "book",
+      "idx": "bbb",
+    },
+  ],
+  Array [
+    "book-1-bbb-ddd-eee",
+    model {
+      "_id": "book-1-bbb-ddd",
+      "book_id": "book-1",
+      "folder_id": "book",
+      "idx": "ddd",
+      "path_id": "book-1-bbb",
+    },
+  ],
+  Array [
+    "book-1-ccc-ddd",
+    null,
+  ],
+  Array [
+    "book-1-ccc-eee",
+    null,
+  ],
+  Array [
+    "book-1-ddd-eee",
+    null,
+  ],
+  Array [
+    "book-1-fff-ggg-hhh-iii",
+    null,
+  ],
+]
+`;

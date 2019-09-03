@@ -17,15 +17,13 @@ rename = (base)->
   o.depends = []
   o
 
+method = (r, key, o)->
+  Object.defineProperty r.model::, key, o
+
 module.exports = class Rule
   constructor: (base, cb)->
     @$name = rename base
     @state = Mem.State.base @$name.list
-
-    @model = Model
-    @list  = List
-    @set   = Set
-    @map   = Map
 
     @all = Query.build @state
     @all.$sort["_reduce.list"] = {}
@@ -33,15 +31,13 @@ module.exports = class Rule
     @all._finder = new Finder @$name, @state
 
     @depend_on @$name.list
-    @map_property = {}
 
-    { base } = @$name
-    @model_property =
-      [@$name.id]:
-        enumerable: true
-        get: -> @_id
+    class @model extends Model
+    class @list  extends List
+    class @set   extends Set
+    class @map   extends Map
 
-    @form_property =
+    __form_property__ =
       changes:
         enumerable: true
         value: (key)->
@@ -57,37 +53,12 @@ module.exports = class Rule
             return true unless _.isEqual @[key], @$model[key]
           return false
 
-    @list_property = {}
-    @set_property = {}
-
     @schema cb if cb
     return
 
   schema: (cb)->
     cb.call @
-    if @model == Model
-      class @model extends @model
-    Object.assign @model_property, @model::
-    Object.defineProperties @model::, @model_property
-
-    if @list == List
-      class @list extends @list
-    Object.assign @list_property, @list::
-    Object.defineProperties @list::, @list_property
-
-    if @set == Set
-      class @set extends @set
-    Object.assign @set_property, @set::
-    Object.defineProperties @set::, @set_property
-
-    if @map == Map
-      class @map extends @map
-    Object.assign @map_property, @map::
-    Object.defineProperties @map::, @map_property
-
     @model.$name = @list.$name = @set.$name = @map.$name = @$name
-
-
     @all._finder.deploy @
 
     Mem.Set[@$name.base] = new @set @
@@ -107,7 +78,7 @@ module.exports = class Rule
         else
           throw Error "unimplemented #{keys}"
 
-    @model_property.id =
+    method @, 'id',
       enumerable: true
       get: cb
 
@@ -117,14 +88,17 @@ module.exports = class Rule
   depend_on: (parent)->
     Mem.Name[parent].depends.push parent
 
+  scope_without_cache: (cb)->
+    for key, val of cb @all
+      @all[key] = val
+
   scope: (cb)->
     for key, val of cb @all
       @use_cache key, val
 
 
   property: (type, o)->
-    Object.assign @["#{type}_property"], o
-
+    Object.defineProperties @[type]::, o
 
   default_scope: (scope)->
     @all._copy scope @all
@@ -141,7 +115,7 @@ module.exports = class Rule
     @default_scope (all)-> all.order ...order
 
   relation_to_one: (key, target, ik, else_id)->
-    @model_property[key] =
+    method @, key,
       enumerable: true
       get: ->
         id = _.get @, ik
@@ -152,7 +126,7 @@ module.exports = class Rule
     @use_cache key, (id)->
       Mem.Query[target][cmd] "#{qk}": id
 
-    @model_property[key] =
+    method @, key,
       enumerable: true
       get: ->
         all[key](@[ik])
@@ -166,7 +140,7 @@ module.exports = class Rule
       else
         all.where { id }
 
-    @model_property[key] =
+    method @, key,
       enumerable: true
       value: (n)->
         all[key] [@id], n
@@ -185,7 +159,7 @@ module.exports = class Rule
       else
         q
 
-    @model_property[key] =
+    method @, key,
       enumerable: true
       value: (n)->
         all[key] [@id], n
@@ -199,17 +173,27 @@ module.exports = class Rule
         @all[key] = val
 
   path: (keys...)->
+    if '*' == keys[-1..][0]
+      { base, list } = @$name
+      @belongs_to base
+      @has_many   list
+      keys.pop()
+
     for key in keys
       @belongs_to key
+
     @deploy ->
       subids = @id.split("-")
-      @idx = subids[keys.length]
+      @idx = subids[-1..][0]
       for key, idx in keys
         @["#{key}_id"] = subids[0..idx].join '-'
 
+      if base && keys.length + 1 < subids.length
+        @["#{base}_id"] = subids[..-2].join '-'
+
     { all } = @
     pk = keys[-1..][0] + "_id"
-    @model_property.siblings =
+    method @, 'siblings',
       get: ->
         q = {}
         q[pk] = @[pk]

@@ -1,6 +1,6 @@
 { Set, Model, Query, Rule } = Mem = require "../../src/index"
 { url } = require "~/config/live.yml"
-format = require 'date-fns/format'
+format = require 'date-fns/format/index'
 locale = require "date-fns/locale/ja"
 
 new Rule("sow_roletable").schema ->
@@ -69,7 +69,7 @@ new Rule("sow_village").schema ->
     @write_at = updated_at - 0
 
     in_month = format updated_at, 'MM月', { locale }
-    yeary = format updated_at, 'YYYY年', { locale }
+    yeary = format updated_at, 'yyyy年', { locale }
     monthry = yeary + in_month
     @q = {
       yeary
