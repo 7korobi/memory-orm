@@ -8,6 +8,6 @@ describe "path", ->
   test "parent snapshot", ->
     expect Mem.Query.paths.pluck("id", "path")
     .toMatchSnapshot()
-  undefined
+  return
 
 

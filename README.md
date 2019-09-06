@@ -115,14 +115,13 @@ Set.position.merge([{
 
  name | target | action
  :-- | :-- | :--
- belongs_to | data's prototype is Query[key].find( object index or item.id )
- page |  | separate by size. size already set by Query.page(size)
+ belongs_to | | data's prototype is Query[key].find( object index or item.id )
+ page |  | separate by page-size. see: `Query.page(size)`
  sort |  | lodash.orderBy(...key)
+ diff | diff | calculate differential. use with sort.
  cover | remain, cover | key has full index. cover has index. remain not has index.
  pluck |  | get path data by list values.
  index |  | group by item[key].
- group_by |  | group by item[key]. item[key] is String
- 
 
 
 ```javascript
@@ -179,20 +178,23 @@ Query.checks.reduce.desc.list.pluck("label");
  style | name | action
  :-- | :-- | :--
  get | id | same as _id
- static | update | event when add data exist.
- static | create | event when add data not exist.
- static | delete | event when del data exist.
- static | bless  | value become extends this
- static | map_partition | define map reduce.
- static | map_reduce    | define map reduce.
- static | order         | define order process for reduced value.
+ static | deploy(model) | event when Set item. this is item. model is class.
+ static | update(item, old_item) | event when add data exist.
+ static | create(item) | event when add data not exist.
+ static | delete(old_item) | event when del data exist.
+ static | bless(item)  | value become extends this
+ static | map_partition(item, emit) | define map reduce. emit is function.
+ static | map_reduce(item, emit)    | define map reduce. emit is function.
+ static | order(item, emit) | define order process for reduced value.
 
 
 ### List
 
  style | name | action
  :-- | :-- | :--
- . | pluck | get path data
+ . | pluck(...keys) | listup by keys for item.
+ . | where(...) | create query. see Query#where
+ . | in(...) | create query. see Query#in
  get | first | [0]
  get | head  | [0]
  get | tail  | [length - 1]
@@ -213,21 +215,22 @@ list.last
 
  style | name | action
  :-- | :-- | :--
- . | schema | execute schema definition block.
- . | key_by | id value. default: _id
- . | deploy | data adjust before Set.
- . | scope  | define query shorthand.
- . | property | define property shorthand.
- . | default_scope | root Query replace.
- . | shuffle | root Query replace. and replace sort order by Math.random.
- . | order | root Query replace. and replace order.
- . | sort | root Query replace. and replace order.
- . | path | set name property. for id separate by '-'.
- . | belongs_to | set target property. find by `${target}_id` 
- . | habtm | set target property. finds by `${target}_ids`
- . | has_many | set target property. find from `${target}_id` by _id
- . | tree | set 'nodes' method. scan recursivery by `${target}_id`
- . | graph | set 'path' method. scan recursivery by `${target}_id`
+ . | schema(dsl) | execute schema definition dsl.
+ . | key_by(keys) | id value. default: `_id`
+ . | key_by(callback) | callback return id. default: `this._id`
+ . | deploy(callback) | data adjust before Set. 
+ . | scope(callback)  | define query shorthand and cached.
+ . | property(...) | define property shorthand.
+ . | default_scope(callback) | root Query replace.
+ . | shuffle() | root Query replace. and replace sort order by Math.random.
+ . | order(...) | root Query replace. and replace order.
+ . | sort(...) | root Query replace. and replace order.
+ . | path(...keys) | set name property. for id separate by '-'. add argument '*', tree structure by id.
+ . | belongs_to(to, options) | set target property. find by `${target}_id` 
+ . | habtm(to, option) | set target property. finds by `${target}_ids`
+ . | has_many(to, option) | set target property. find from `${target}_id` by _id
+ . | tree(option) | set 'nodes' method. scan recursivery by `${target}_id`
+ . | graph(option) | set 'path' method. scan recursivery by `${target}_id`
  . | model | Model base class ( need extends )
  . | list  | List base class ( need extends )
  . | set  | Set base class ( need extends )
@@ -252,9 +255,10 @@ new Rule("todo").schema(function() {
 
  style | name | action
  :-- | :-- | :--
- . | transaction | get transaction diff data.
- . | store       | merge transaction diff data. 
+ . | transaction(callback, meta) | get transaction diff data.
+ . | store(meta)            | merge transaction diff data. 
  . | step.< plural name > | countup if data manipulation.
+ get | mixin | for vue.js mixin.
 
 
 ### Set.< base name >
@@ -298,20 +302,26 @@ State.store(JSON.parse(JSON.stringify({ checks: { $sort, $memory, $format }})))
 
  style | name | action
  :-- | :-- | :--
- . | where | copy Query and add conditions.
- . | in | copy Query and add conditions. (includes algorythm.)
- . | partition | copy Query and replace partition.
- . | search | copy Query and add conditions. for data search_words value.
- . | shuffle | copy Query and replace sort order by Math.random.
- . | order | copy Query and replace order.
- . | sort | copy Query and replace order's sort parameter.
- . | page | copy Query and replace page_by.
- . | find | pick first data from hash by ids.
- . | finds | pick all data from hash by ids.
- . | pluck | get path data by list values.
+ . | where({ [key]: val }) | copy Query and add conditions. same `(o)=> val === o[key]`
+ . | where({ [key]: /regexp/ }) | copy Query and add conditions. same `(o)=> (/regexp/).test( o[key] )`
+ . | where({ [key]: [...args] }) | copy Query and add conditions. same `(o)=> args.includes( o[key] )`
+ . | in({ [key]: val }) | copy Query and add conditions. same `(o)=> o[key].includes( val )`
+ . | in({ [key]: /regexp/ }) | copy Query and add conditions. same `(o)=> o[key].find((oo)=> (/regexp/).test( oo ))`
+ . | in({ [key]: [...args] }) | copy Query and add conditions. same `(o)=> o[key].find((oo)=> args.find((arg)=> oo == arg))`
+ . | partition(keys) | copy Query and replace partition keys. default: `["set"]`
+ . | search(text) | copy Query and add conditions. for "q.search_words"
+ . | shuffle() | copy Query and replace sort order by Math.random.
+ . | distance(key, "asc", [...point]) | copy Query and replace order. near `o[key]` is top.
+ . | distance(key, "desc", [...point]) | copy Query and replace order. far `o[key]` is top.
+ . | order(keys, order) | copy Query and replace order.
+ . | sort(...sort) | copy Query and replace order's sort parameter. same `this.order({ sort })`
+ . | page(size) | copy Query and replace page_by. if order option set page: true, resuls page separated list.
+ . | find(...ids) | pick first data from hash by ids.
+ . | finds(ids) | pick all data from hash by ids.
+ . | pluck(...keys) | get path data by keys.
  get | reduce | calculate map reduce.
- get | list | calculate list. ( same as reduce.list )
- get | hash | calculate hash. ( same as reduce.hash )
+ get | list | calculate list. ( same `reduce.list` )
+ get | hash | calculate hash. ( same `reduce.hash` )
  get | ids | calculate hash and get keys.
  get | memory | all stored data.
  

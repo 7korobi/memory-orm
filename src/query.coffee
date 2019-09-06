@@ -90,6 +90,17 @@ module.exports = class Query
           console.log { target, req: [req, req?.constructor] }
           throw Error 'unimplemented'
 
+  distance: (key, order, point)->
+    @order "list", sort: [
+      (o)=>
+        sum = 0
+        for xp, idx in point
+          xa = _.get( o, key )[idx]
+          sum += (xa - xp) ** 2
+        sum ** 0.5
+      , order
+    ]
+
   search: (text)->
     return @ unless text
     list =

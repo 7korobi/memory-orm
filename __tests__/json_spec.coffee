@@ -28,5 +28,5 @@ Mem.State.store json
 describe "stringify json", ->
   do_test "faces", json.pack.faces
   do_test "tags",  json.pack.tags
-  undefined
+  return
 

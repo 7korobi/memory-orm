@@ -6,7 +6,7 @@ const model = class Model {
     return o;
   }
 
-  static deploy(item, parent) {}
+  static deploy(model) {}
 
   static update(item, old) {}
 
@@ -22,7 +22,7 @@ const model = class Model {
     return void 0;
   }
 
-  static order(reduce, emit) {
+  static order(item, emit) {
     return void 0;
   }
 

@@ -1,0 +1,151 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`work location query size 1`] = `130953`;
+
+exports[`work location query size no zip 1`] = `
+model {
+  "_id": "熊本県-葦北郡-芦北町-芦-北-（松崎）",
+  "idx": "（松崎）",
+  "label": "（松崎）",
+  "name": "熊本県葦北郡芦北町芦北（松崎）",
+  "ruby": "くまもとけんあしきたぐんあしきたまちあしきたまつざき",
+  "unit": null,
+  "work_location_id": "熊本県-葦北郡-芦北町-芦-北",
+}
+`;
+
+exports[`work location query size no zip 2`] = `
+model {
+  "_id": "熊本県-葦北郡-芦北町-芦-北",
+  "idx": "北",
+  "jiscode": "43482",
+  "label": "北",
+  "name": "熊本県葦北郡芦北町芦北",
+  "ruby": "くまもとけんあしきたぐんあしきたまちあしきた",
+  "unit": null,
+  "work_location_id": "熊本県-葦北郡-芦北町-芦",
+  "zipcode": "8695461",
+}
+`;
+
+exports[`work location query size no zip 3`] = `
+model {
+  "_id": "熊本県-葦北郡-芦北町-芦",
+  "idx": "芦",
+  "label": "芦",
+  "name": "熊本県葦北郡芦北町芦",
+  "unit": null,
+  "work_location_id": "熊本県-葦北郡-芦北町",
+}
+`;
+
+exports[`work location query size no zip 4`] = `
+model {
+  "_id": "熊本県-葦北郡-芦北町",
+  "idx": "芦北町",
+  "label": "芦北",
+  "name": "熊本県葦北郡芦北町",
+  "unit": "町",
+  "work_location_id": "熊本県-葦北郡",
+}
+`;
+
+exports[`work location query size no zip 5`] = `
+model {
+  "_id": "熊本県-葦北郡",
+  "idx": "葦北郡",
+  "label": "葦北",
+  "name": "熊本県葦北郡",
+  "unit": "郡",
+  "work_location_id": "熊本県",
+}
+`;
+
+exports[`work location query size no zip 6`] = `
+model {
+  "_id": "熊本県",
+  "idx": "熊本県",
+  "label": "熊本",
+  "name": "熊本県",
+  "unit": "県",
+}
+`;
+
+exports[`work location query size with zip 1`] = `
+model {
+  "_id": "京都府-京都市-右京区-嵯峨-二尊院門前-善光寺-山町",
+  "idx": "山町",
+  "jiscode": "26108",
+  "label": "山",
+  "name": "京都府京都市右京区嵯峨二尊院門前善光寺山町",
+  "ruby": "きようとふきようとしうきようくさがにそんいんもんぜんぜんこうじやまちよう",
+  "unit": "町",
+  "work_location_id": "京都府-京都市-右京区-嵯峨-二尊院門前-善光寺",
+  "zipcode": "6168427",
+}
+`;
+
+exports[`work location query size with zip 2`] = `
+model {
+  "_id": "京都府-京都市-右京区-嵯峨-二尊院門前-善光寺",
+  "idx": "善光寺",
+  "label": "善光寺",
+  "name": "京都府京都市右京区嵯峨二尊院門前善光寺",
+  "unit": null,
+  "work_location_id": "京都府-京都市-右京区-嵯峨-二尊院門前",
+}
+`;
+
+exports[`work location query size with zip 3`] = `
+model {
+  "_id": "京都府-京都市-右京区-嵯峨-二尊院門前",
+  "idx": "二尊院門前",
+  "label": "二尊院門前",
+  "name": "京都府京都市右京区嵯峨二尊院門前",
+  "unit": null,
+  "work_location_id": "京都府-京都市-右京区-嵯峨",
+}
+`;
+
+exports[`work location query size with zip 4`] = `
+model {
+  "_id": "京都府-京都市-右京区-嵯峨",
+  "idx": "嵯峨",
+  "label": "嵯峨",
+  "name": "京都府京都市右京区嵯峨",
+  "unit": null,
+  "work_location_id": "京都府-京都市-右京区",
+}
+`;
+
+exports[`work location query size with zip 5`] = `
+model {
+  "_id": "京都府-京都市-右京区",
+  "idx": "右京区",
+  "label": "右京",
+  "name": "京都府京都市右京区",
+  "unit": "区",
+  "work_location_id": "京都府-京都市",
+}
+`;
+
+exports[`work location query size with zip 6`] = `
+model {
+  "_id": "京都府-京都市",
+  "idx": "京都市",
+  "label": "京都",
+  "name": "京都府京都市",
+  "unit": "市",
+  "work_location_id": "京都府",
+}
+`;
+
+exports[`work location query size with zip 7`] = `
+model {
+  "_id": "京都府",
+  "idx": "京都府",
+  "label": "京都",
+  "name": "京都府",
+  "unit": "府",
+}
+`;

@@ -45,4 +45,4 @@ describe "sow oldlog", ->
     expect Mem.Query.sow_villages.list.diff.diff.diff.diff
     .toMatchSnapshot()
 
-  undefined
+  return

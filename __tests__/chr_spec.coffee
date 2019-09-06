@@ -67,4 +67,4 @@ describe "faces", ->
       .toMatchSnapshot()
       expect _data
       .toMatchSnapshot()
-  undefined
+  return

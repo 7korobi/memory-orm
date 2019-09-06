@@ -15,4 +15,4 @@ keys.map (key)->
         _memory[key] = { $group, item }
       expect _memory
       .toMatchSnapshot()
-    undefined
+    return

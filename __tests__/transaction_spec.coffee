@@ -31,18 +31,18 @@ describe "transaction", ->
         expect( Mem.Query.static.react ).toMatchSnapshot()
         ok()
       , 10
-  undefined
+  return
 
 describe "stringify", ->
   json = JSON.parse JSON.stringify Mem.Query.static.meta
   do_test "randoms", json.pack.randoms
   do_test "faces",   json.pack.faces
   do_test "tags",    json.pack.tags
-  undefined
+  return
 
 describe "json", ->
   json = JSON.parse Mem.Query.static.meta.json()
   do_test "randoms", json.pack.randoms
   do_test "faces",   json.pack.faces
   do_test "tags",    json.pack.tags
-  undefined
+  return

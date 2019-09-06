@@ -11,4 +11,4 @@ keys.map (key)->
     test 'reduce snapshot', ->
       expect Mem.Query[key].reduce
       .toMatchSnapshot()
-    undefined
+    return

@@ -75232,7 +75232,7 @@ Object {
   "marks": 615,
   "options": 609,
   "parts": 618,
-  "paths": 656,
+  "paths": 657,
   "phases": 631,
   "potofs": 639,
   "randoms": 130,
@@ -75246,8 +75246,9 @@ Object {
   "stats": 592,
   "tags": 137,
   "winners": 611,
-  "work_countrys": 645,
-  "work_names": 646,
+  "work_countrys": 646,
+  "work_locations": 645,
+  "work_names": 647,
 }
 `;
 

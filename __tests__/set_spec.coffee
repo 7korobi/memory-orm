@@ -18,4 +18,4 @@ keys.map (key)->
     test '$name snapshot', ->
       expect Mem.Set[key].$name
       .toMatchSnapshot()
-    undefined
+    return

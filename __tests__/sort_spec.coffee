@@ -12,4 +12,4 @@ keys.map (key)->
     test 'sort snapshot', ->
       expect Mem.Query[key].$sort
       .toMatchSnapshot()
-    undefined
+    return

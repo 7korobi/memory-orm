@@ -1,22 +1,33 @@
 { Set, Model, Query, Rule } = require "../../src/index"
 
+new Rule("work_location").schema ->
+  @path '*'
+  @property 'model',
+    id_ary:
+      get: ->
+        @id.split("-")
+    prefecture:
+      get: ->
+        @id_ary[0]
+
 new Rule("work_country").schema ->
   @has_many "work_names"
   @deploy ->
     @q =
       search_words: @country.join(" ")
-  class @model extends @model
-    @order: (o, emit)->
-      emit "list",
-        sort: ["country.length", "desc"]
+  @order "list", sort: ["country.length", "desc"]
 
 idx = 0
 new Rule("work_name").schema ->
-  @order "spot_size", sort: ["count", "desc"]
   @belongs_to "work_country"
   @deploy ->
-    ascii = @spell.normalize('NFKD').replace /[\u0300-\u036F]/g, ''
+    ascii =
+      if @spell
+        @spell.normalize('NFKD').replace /[\u0300-\u036F]/g, ''
+      else
+        ""
     @_id = "#{@key}-#{++idx}"
+    @spot = @mark || @key
     @work_country_id = @key
     @q =
       search_words: ["<#{@name}>", "<#{ascii}>"].join(" ")
@@ -25,19 +36,22 @@ new Rule("work_name").schema ->
     by_page: (spot_id, search)->
       q =
         if spot_id != "all"
-          all.partition "spot.#{spot_id}.set"
+          all.partition "code.#{spot_id}.set"
         else
           all
       q.search search
 
+  @order "spot_size", sort: ["count", "desc"]
   class @model extends @model
     @map_partition: (o, emit)->
-      emit "spot", o.key,
+      emit "code", o.key,
+        set: o.id
+      emit "spot", o.spot,
         set: o.id
         list: true
-      emit "spot_size", o.key,
+      emit "spot_size", o.spot,
         count: 1
 
     @order: (o, emit)->
-      emit "spot", o.key, "list",
-        sort: ["name", "asc"]
+      emit "spot", o.spot, "list",
+        sort: [["side","name"], ["asc","asc"]]
