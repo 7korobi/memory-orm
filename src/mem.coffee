@@ -53,6 +53,7 @@ State =
     @$journal = pack = META meta
     if pack.depth++
       console.warn("nested transaction");
+    cb pack
     pack.depth--
     @$journal = META()
     pack
