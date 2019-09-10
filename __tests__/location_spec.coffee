@@ -10,11 +10,11 @@ drillup = (item)->
     .toMatchSnapshot()
     item = item.work_location
 
-drilldown = (item, idx)->
-  while item
-    expect item
+drilldown = (list, idx)->
+  while list?.length
+    expect list.pluck("idx")
     .toMatchSnapshot()
-    item = item.work_locations.list[idx]
+    list = list[idx].work_locations.list
 
 describe "work location", ->
   test 'query size', ->
@@ -31,7 +31,7 @@ describe "work location", ->
     return
 
   test 'query for toplevel', ->
-    drilldown Query.work_locations.where((o)-> ! o.work_location_id ).sort("id_ary.length","desc").list[10], 0
+    drilldown Query.work_locations.where((o)-> ! o.work_location_id ).sort("id_ary.length","desc").list, 0
     return
 
 
