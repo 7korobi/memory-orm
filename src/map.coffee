@@ -23,6 +23,24 @@ Dash = (o, keys)->
         Dash @_diff, keys
   o
 
+navi_reduce = (root)->
+  is_did = false
+  for root_key in Object.keys root when child = root[root_key]
+    child_keys = Object.keys child
+    switch child_keys.length
+      when 0
+        is_did = true
+        root[root_key] = 0
+      when 1
+        is_did = true
+        new_key = child_keys[0]
+        new_val = child[new_key]
+        delete root[root_key]
+        root[new_key] = new_val
+      else
+        navi_reduce child
+  navi_reduce root if is_did
+  root
 
 module.exports = class Map
   @bless: (o)->
@@ -78,8 +96,12 @@ module.exports = class Map
       o.count = 0
     if map.all
       o.all = 0
+    if map.pow
+      o.pow = 0
     if map.set
       o.hash = {}
+    if map.navi
+      o.navi = {}
 
   @reduce: (query, path, item, o, map)->
     unless o
@@ -106,6 +128,14 @@ module.exports = class Map
       unless o.min <= map.min
         o.min_is = item
         o.min = map.min
+    if map.navi
+      head = []
+      back = navi = o.navi
+      for idx in map.navi
+        head.push idx
+        key = head.join "-"
+        back = navi
+        navi = navi[key] ||= {}
 
   @finish: (query, path, o, list)->
     unless o
@@ -114,13 +144,15 @@ module.exports = class Map
     if o.hash
       o.set = Object.keys o.hash
     if o.count && o.pow?
-      o.avg = o.all ** (1 / o.count)
+      o.avg = o.pow ** (1 / o.count)
     if o.count && o.all?
       o.avg = o.all * (1 / o.count)
     if o.min? && o.max?
       o.range = o.max - o.min
       if o.all
         o.density = o.all / o.range
+    if o.navi
+      navi_reduce o.navi
 
   @order: (query, path, from, origin, map, list)->
     o = from

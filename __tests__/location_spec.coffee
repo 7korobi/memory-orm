@@ -10,28 +10,48 @@ drillup = (item)->
     .toMatchSnapshot()
     item = item.work_location
 
-drilldown = (list, idx)->
-  while list?.length
-    expect list.pluck("idx")
-    .toMatchSnapshot()
-    list = list[idx].work_locations.list
-
 describe "work location", ->
   test 'query size', ->
     expect Query.work_locations.list.length
     .toMatchSnapshot()
     return
 
-  test 'query size with zip', ->
-    drillup Query.work_locations.sort("id_ary.length","desc").list[0]
+  test '埼玉県-さいたま市 navi', ->
+    expect Query.work_locations.where(_id: /^埼玉県-さいたま市/).reduce.id_tree
+    .toMatchSnapshot()
     return
 
-  test 'query size no zip', ->
+  test 'id longest with zip', ->
+    drillup Query.work_locations.where((o)-> o.zipcode).sort("id_ary.length","desc").list[0]
+    return
+
+  test 'id longest no zip', ->
     drillup Query.work_locations.where((o)-> ! o.zipcode ).sort("id_ary.length","desc").list[0]
     return
 
-  test 'query for toplevel', ->
-    drilldown Query.work_locations.where((o)-> ! o.work_location_id ).sort("id_ary.length","desc").list, 0
+  test 'drill-down UI query', ->
+    q = Query.work_locations.where((o)-> ! o.work_location_id)
+    expect( q.pluck("label") ).toMatchSnapshot()
+    item = q.where(idx: '埼玉県').list[0]
+    expect( item ).toMatchSnapshot()
+
+    q = item.work_locations.sort(["id_ary.length", "name.length", "name"], ["desc", "desc", "asc"])
+    expect( q.pluck("label") ).toMatchSnapshot()
+    item = q.where(idx: 'さいたま市').list[0]
+    expect( item ).toMatchSnapshot()
+
+    q = item.work_locations.sort(["id_ary.length", "name.length", "name"], ["desc", "desc", "asc"])
+    expect( q.pluck("label") ).toMatchSnapshot()
+    item = q.where(idx: '北区').list[0]
+    expect( item ).toMatchSnapshot()
+
+    q = item.work_locations.sort(["id_ary.length", "name.length", "name"], ["desc", "desc", "asc"])
+    expect( q.pluck("label") ).toMatchSnapshot()
+    item = q.where(idx: '宮原町').list[0]
+    expect( item ).toMatchSnapshot()
+
+    q = item.work_locations.sort(["id_ary.length", "name.length", "name"], ["desc", "desc", "asc"])
+    expect( q.pluck("label") ).toMatchSnapshot()
     return
 
 
