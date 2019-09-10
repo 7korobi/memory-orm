@@ -17,6 +17,8 @@ PureObject = ->
 class Metadata
   @bless: (o)->
     Reflect.setPrototypeOf o, @::
+    o.write_at = 0
+    o.depth = 0
     o.pack ?= PureObject()
     o
 
@@ -49,7 +51,9 @@ cache = (type)-> (list)->
 State =
   transaction: (cb, meta)->
     @$journal = pack = META meta
-    cb meta
+    if pack.depth++
+      console.warn("nested transaction");
+    pack.depth--
     @$journal = META()
     pack
 
