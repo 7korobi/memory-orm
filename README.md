@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/7korobi/memory-orm.svg?branch=master)](https://travis-ci.org/7korobi/memory-orm)
+
 ## Install
 
 ```shell
