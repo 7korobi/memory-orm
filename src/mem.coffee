@@ -69,10 +69,11 @@ State =
     return false unless meta?.pack
     for list, { $sort, $memory, $format } of meta.pack
       finder = Finder[list]
-      unless finder
+      set = Set[finder.$name.base]
+      unless finder && set
         console.error "not found Finder and Query", list, meta.pack
         continue
-      { model } = finder
+      { model } = set
       base = @base list
       journal = @journal list
 
@@ -89,7 +90,7 @@ State =
         base.$memory[key] = o
         journal.$memory[key] = o
 
-      finder.clear_cache()
+      set.clear_cache()
     true
 
   mixin:
@@ -107,7 +108,7 @@ State =
     return
 
   notify: ( list )->
-    @step[list] = val = step()
+    @step[list] = step()
     if $react_listeners.length
       @notify_for_react()
   

@@ -59,7 +59,7 @@ module.exports = class Rule
   schema: (cb)->
     cb.call @
     @model.$name = @list.$name = @set.$name = @map.$name = @$name
-    @all._finder.deploy @
+    @all._finder.join @
 
     Mem.Set[@$name.base] = new @set @
     Mem.Query[@$name.list] = @all
@@ -182,7 +182,7 @@ module.exports = class Rule
     for key in keys
       @belongs_to key
 
-    @deploy ->
+    @deploy (model, reduce, order)->
       subids = @id.split("-")
       @idx = subids[-1..][0]
       for key, idx in keys
@@ -190,6 +190,9 @@ module.exports = class Rule
 
       if base && keys.length + 1 < subids.length
         @["#{base}_id"] = subids[..-2].join '-'
+
+      reduce "id_tree",
+        navi: subids
 
     { all } = @
     pk = keys[-1..][0] + "_id"

@@ -9,11 +9,6 @@ new Rule("work_location").schema ->
     prefecture:
       get: ->
         @id_ary[0]
-  class @model extends @model
-    @map_reduce: (o, emit)->
-      emit "id_tree",
-        navi: o.id_ary
-  
 
 new Rule("work_country").schema ->
   @has_many "work_names"

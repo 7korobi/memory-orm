@@ -3,28 +3,29 @@ _ = require "lodash"
 Query = require "./query.coffee"
 
 f_common = (type)-> (list, parent)->
-  meta = State.meta()
-  base = State.base @$name.list
-  journal = State.journal @$name.list
-  @all._finder[type] meta, base, journal, @all, list, parent
+  is_hit = @finder.data_set type, list, parent
+  @clear_cache is_hit
 
 f_update = (list, parent)->
-  meta = State.meta()
-  base = State.base @$name.list
-  journal = State.journal @$name.list
   if parent?
-    @all._finder.update meta, base, journal, @all, list, parent
+    is_hit = @finder.data_set 'update', list, parent
+    @clear_cache is_hit
+
 
 f_item = (cb)->
   (item, parent)->
     if item?
       cb.call @, [item], parent
 
-f_clear = ->
-  @all._finder.clear_cach()
+f_clear = (is_hit = true)->
+  if is_hit?
+    for name in @$name.depends
+      State.notify name
+  return
 
 module.exports = class Set
-  constructor: ({ @all, @model, @$name })->
+  constructor: ({ @$name, @all, @model })->
+    @finder = @all._finder
 
   set:           f_common "reset"
   reset:         f_common "reset"
@@ -49,6 +50,6 @@ module.exports = class Set
     for id in ids when o = @all.$memory[id]
       o.meta = meta
       journal.$memory[id] = o
-      @all._finder.clear_cache()
+      @clear_cache true
       return o.item
     null

@@ -12,9 +12,6 @@ keys.map (key)->
     test 'all is query', ->
       expect Mem.Set[key].all
       .toEqual Mem.Query[key + 's']
-    test 'model', ->
-      expect Mem.Set[key].model
-      .toEqual Mem.Query[key + 's']._finder.model
     test '$name snapshot', ->
       expect Mem.Set[key].$name
       .toMatchSnapshot()

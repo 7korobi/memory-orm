@@ -17,7 +17,12 @@ describe "work location", ->
     return
 
   test '埼玉県-さいたま市 navi', ->
-    expect Query.work_locations.where(_id: /^埼玉県-さいたま市/).reduce.id_tree
+    expect Query.work_locations.where(_id: /^埼玉県-さいたま市-/).reduce.id_tree
+    .toMatchSnapshot()
+    return
+
+  test 'all 宮町 navi', ->
+    expect Query.work_locations.where(_id: /-宮町/).reduce.id_tree
     .toMatchSnapshot()
     return
 

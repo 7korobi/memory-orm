@@ -1,14 +1,15 @@
 _ = require "lodash"
 { Finder, State, Query, Format, PureObject, step } = require "./mem.coffee"
+Datum = require './datum.coffee'
 
-each_by_id = ({ list }, from, process)->
+each_by_id = ({ from }, process)->
   switch from?.constructor
     when Array
       for item in from
         process item.id || item
   return
 
-each = ({ list }, from, process)->
+each = ({ from }, process)->
   switch from?.constructor
     when Array
       for item in from
@@ -27,36 +28,39 @@ validate = (item, meta, chklist)->
 
 
 module.exports = class Finder
-  constructor: (@$name, { @$format })->
+  constructor: (@$name)->
     State.notify @$name.list
 
-  deploy: ({@set, @map, @list, @model})->
+  join: ({ @all, @map, @list, @model })->
 
   calculate: (query, memory)->
     return unless query._step < State.step[@$name.list]
-
+    base = State.base @$name.list
     delete query._reduce
     query._step = step()
-
-    cache = _.cloneDeep @$format
-    paths =
-      _reduce:
-        list: []
-        hash: {}
+    ctx =
+      map: @map
+      query: query
+      memory: memory
+      cache: _.cloneDeep base.$format
+      paths:
+        _reduce:
+          list: []
+          hash: {}
 
     if query._all_ids
-      @reduce @map, cache, paths, query, memory, query._all_ids
+      @reduce ctx, query._all_ids
     else
       if query == query.all
-        @reduce @map, cache, paths, query, memory, Object.keys memory
+        @reduce ctx, Object.keys memory
       else
         for partition in query.$partition
-          @reduce @map, cache, paths, query, memory, _.get query.all, "reduce.#{partition}"
+          @reduce ctx, _.get query.all, "reduce.#{partition}"
 
-    @finish @map, cache, paths, query
+    @finish ctx
     return
 
-  reduce: (map, cache, paths, query, memory, ids)->
+  reduce: ({ map, cache, paths, query, memory }, ids)->
     return unless ids
     for id in ids when o = memory[id]
       { meta, item, $group } = o
@@ -65,7 +69,7 @@ module.exports = class Finder
         o = paths[path] = cache[path]
         map.reduce query, path, item, o, a
 
-  finish: (map, cache, paths, query)->
+  finish: ({ map, cache, paths, query })->
     for path, o of paths
       map.finish query, path, o, @list
       _.set query, path, o
@@ -78,69 +82,109 @@ module.exports = class Finder
       result.from = from
       _.set query, path, result
 
-  clear_cache: (hit = true)->
-    if hit?
-      for name in @$name.depends
-        State.notify name
-    return
+  data_set: (type, from, parent)->
+    meta    = State.meta()
+    base    = State.base    @$name.list
+    journal = State.journal @$name.list
+    { deploys } = @$name
 
-  reset: (meta, base, journal, all, from, parent)->
-    journal.$memory = PureObject()
-    base.$memory = all.$memory = news = PureObject()
+    @[type] { base, journal, meta,  @model, @all, deploys, from, parent }
 
-    @merge meta, base, journal, all, from, parent
+  data_emitter: ({ base, journal }, { item, $group })->
+    throw new Error "bad context." unless base.$format
+    order = (keys..., cmd)=>
+      path = ["_reduce", keys...].join('.')
+      base.$sort[path] = cmd
+      journal.$sort[path] = cmd
 
-    for key, old of base.$memory
+    reduce = (keys..., cmd)=>
+      cmd = reduce.default keys, cmd
+      path = ["_reduce", keys...].join('.')
+      $group.push [path, cmd]
+      map   = base.$format[path] ?= {}
+      map_j = journal.$format[path] ?= {}
+      @map.init map,   cmd
+      @map.init map_j, cmd
+
+    reduce.default = reduce.default_origin = (keys, cmd)->
+      return cmd if keys.length
+      reduce.default = (keys, cmd)-> cmd
+
+      bare =
+        set: item.id
+        list: true
+      Object.assign bare, cmd
+
+    { reduce, order }
+
+  data_init: ({ model, parent, deploys }, { item }, { reduce, order })->
+    model.bless item
+    parent && _.merge item, parent
+    model.deploy.call item, model
+    for deploy in deploys
+      deploy.call item, model, reduce, order
+
+  data_entry: ({ model }, { item }, { reduce, order })->
+    model.map_partition item, reduce
+    model.map_reduce    item, reduce
+    if reduce.default == reduce.default_origin
+      reduce {}
+    model.order item, order
+
+  reset: (ctx)->
+    ctx.journal.$memory = PureObject()
+    ctx.base.$memory = ctx.all.$memory = news = PureObject()
+
+    @merge ctx
+
+    for key, old of ctx.base.$memory
       item = news[key]
       unless item?
-        @model.delete old
-    @clear_cache true
+        ctx.model.delete old
+    true
 
-  merge: (meta, base, journal, all, from, parent)->
-    hit = false
-    each @$name, from, (item)=>
-      old = base.$memory[item.id]
+  merge: (ctx)->
+    is_hit = false
+    each ctx, (item)=>
+      old = ctx.base.$memory[item.id]
+      o = new Datum ctx.meta, item
+      emit = @data_emitter ctx, o
+      @data_init ctx, o, emit
+      @data_entry ctx, o, emit
 
-      @model.bless item
-      parent && _.merge item, parent
-      @model.deploy.call item, @model
-      for deploy in @$name.deploys
-        deploy.call item, @model
-      unless item.id
+      unless id = item.id
         throw new Error "detect bad data: #{ JSON.stringify item }"
+      ctx.journal.$memory[id] = o
+      ctx.base.$memory[id] = o
 
-      o = @map.$deploy @model, @$format, all.$sort, meta, journal, item
-      journal.$memory[item.id] = o
-      base.$memory[item.id] = o
       if old?
-        @model.update item, old.item
+        ctx.model.update item, old.item
       else
-        @model.create item
-      hit = true
-    @clear_cache hit
+        ctx.model.create item
+      is_hit = true
+    is_hit
 
-  remove: (meta, base, journal, all, ids)->
-    hit = false
-    each_by_id @$name, ids, (id)=>
-      old = base.$memory[id]
+  remove: (ctx)->
+    is_hit = false
+    each_by_id ctx, (id)=>
+      old = ctx.base.$memory[id]
       if old?
-        @model.delete old.item
-        delete journal.$memory[id]
-        delete base.$memory[id]
-        hit = true
-    @clear_cache hit
+        ctx.model.delete old.item
+        delete ctx.journal.$memory[id]
+        delete ctx.base.$memory[id]
+        is_hit = true
+    is_hit
 
-  update: (meta, base, journal, all, ids, parent)->
-    { $memory } = all
-    hit = false
-    each_by_id @$name, ids, (id)=>
-      return unless old = base.$memory[id]
+  update: (ctx, parent)->
+    is_hit = false
+    each_by_id ctx, (id)=>
+      return unless old = ctx.base.$memory[id]
       _.merge old.item, parent
-      o = @map.$deploy @model, @$format, all.$sort, meta, journal, old.item
-      journal.$memory[id] = o
-      base.$memory[id] = o
+      old.$group = []
+      emit = @data_emitter ctx, o
+      @data_entry ctx, old, emit
 
-      @model.update old.item, old.item
-      hit = true
-    @clear_cache hit
+      ctx.model.update old.item, old.item
+      is_hit = true
+    is_hit
       

@@ -1,6 +1,5 @@
 _ = require "lodash"
 { State, Query } = require "./mem.coffee"
-Datum = require './datum.coffee'
 
 Dash = (o, keys)->
   Object.defineProperties o,
@@ -46,46 +45,6 @@ module.exports = class Map
   @bless: (o)->
     Reflect.setPrototypeOf o, @::
     o
-
-  @$deploy: (model, $format, $sort, meta, journal, item)->
-    datum = new Datum( meta, item )
-
-    @$deploy_reduce model, item, $format, journal, datum
-    @$deploy_sort   model, item, $sort,   journal
-    datum
-
-  @$deploy_reduce: (model, item, $format, journal, o)->
-    emit_default = emit_default_origin = (keys, cmd)->
-      return cmd if keys.length
-      emit_default = (keys, cmd)-> cmd
-
-      base =
-        set: item.id
-        list: true
-      Object.assign base, cmd
-
-    emit = (target)=> (keys..., cmd)=>
-      cmd = emit_default keys, cmd
-      path = ["_reduce", keys...].join('.')
-      target.push [path, cmd]
-      map   = $format[path] ?= {}
-      map_j = journal.$format[path] ?= {}
-      @init map,   cmd
-      @init map_j, cmd
-
-    emit_group = emit o.$group
-    model.map_partition item, emit_group
-    model.map_reduce    item, emit_group
-
-    if emit_default == emit_default_origin
-      emit_group {}
-
-  @$deploy_sort: (model, item, $sort, journal)->
-    emit = (keys..., cmd)->
-      path = ["_reduce", keys...].join('.')
-      $sort[path] = cmd
-      journal.$sort[path] = cmd
-    model.order item, emit
 
   @init: (o, map)->
     if map.id
