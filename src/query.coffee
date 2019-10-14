@@ -1,5 +1,9 @@
 _ = require "lodash"
 
+type_chk = (req)->
+  return req unless req
+  return Array if Array.isArray req
+  req.constructor
 
 set_for = (list)->
   set = {}
@@ -13,7 +17,7 @@ query_parser = (base, req, cb)->
 
   new Query base, ->
     @_filters = base._filters.concat()
-    switch req && req.constructor
+    switch type_chk req
       when Object
         for key, val of req
           cb @, key, val, _.property key
@@ -44,7 +48,7 @@ module.exports = class Query
   in: (req)->
     query_parser @, req, (q, target, req, path)->
       add = (f)-> q._filters.push f
-      switch req?.constructor ? req
+      switch type_chk req
         when Array
           set = set_for req
           add (o)->
@@ -59,6 +63,8 @@ module.exports = class Query
         when null, 0, "", Boolean, String, Number
           add (o)->
             -1 < path(o)?.indexOf req
+        when undefined
+          # nop
         else
           console.log { target, req: [req, req?.constructor] }
           throw Error 'unimplemented'
@@ -70,7 +76,7 @@ module.exports = class Query
   where: (req)->
     query_parser @, req, (q, target, req, path)->
       add = (f)-> q._filters.push f
-      switch req?.constructor ? req
+      switch type_chk req
         when Function
           add req
         when Array
@@ -86,6 +92,8 @@ module.exports = class Query
             q._all_ids = [req]
           else
             add (o)-> req == path o
+        when undefined
+          # nop
         else
           console.log { target, req: [req, req?.constructor] }
           throw Error 'unimplemented'
