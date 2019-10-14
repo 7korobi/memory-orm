@@ -25891,7 +25891,6 @@ Object {
   "all": 26603,
   "avg": 12.327618164967562,
   "count": 2158,
-  "path": "_reduce.size_sd",
   "sd": 4.313802171889149,
   "standard": [Function],
   "variance": 18.60888917819554,
