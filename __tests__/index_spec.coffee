@@ -29,6 +29,15 @@ describe "sow oldlog", ->
 
   # $memory check 省略
 
+  test "sd sow_villages", ->
+    expect Mem.Query.sow_villages.reduce.size_sd
+    .toMatchSnapshot()
+
+  test "sd sow_villages", ->
+    data = Mem.Query.sow_villages.pluck "id", "vpl.0"
+    expect data.map ([id, size])=> [id, size, Mem.Query.sow_villages.reduce.size_sd.standard size]
+    .toMatchSnapshot()
+
   test "list' sow_villages", ->
     expect Mem.Query.sow_villages.list.diff
     .toMatchSnapshot()

@@ -1,6 +1,6 @@
 _ = require "lodash"
 Mem = require "./mem.coffee"
-{ Finder, Query, Model, List, Set, Map } = require "./base.coffee"
+{ Finder, Query, Model, Struct, List, Set, Map } = require "./base.coffee"
 
 rename = (base)->
   base = _.snakeCase(base).replace /s$/, ""
@@ -78,6 +78,16 @@ module.exports = class Rule
         else
           throw Error "unimplemented #{keys}"
 
+    method @, 'id',
+      enumerable: true
+      get: cb
+
+  struct: (...keys, cb)->
+    class @model extends Struct
+    keys.forEach (key, idx)=>
+      method @, key,
+        enumerable: true
+        get: -> @[idx]
     method @, 'id',
       enumerable: true
       get: cb

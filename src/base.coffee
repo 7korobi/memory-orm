@@ -5,4 +5,5 @@ module.exports =
   Map:    require "./map.coffee"
   List:   require "./list.ts"
   Model:  require "./model.ts"
+  Struct: require "./struct.ts"
   Finder: require "./finder.coffee"

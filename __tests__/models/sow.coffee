@@ -132,6 +132,9 @@ new Rule("sow_village").schema ->
       emit o.mode, o.q.folder_id, it
 
     @map_reduce: (o, emit)->
+      emit "size_sd",
+        count: 1
+        all: o.vpl[0]
       emit "mode", o.mode, o.q.folder_id,  cmd
       emit "in_month", o.q.in_month, cmd
       emit "yeary",    o.q.yeary,    cmd

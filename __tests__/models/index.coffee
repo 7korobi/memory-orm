@@ -14,6 +14,7 @@ Query.static =
   react: {}
   meta: {}
 
+require "./gryph"
 require "./random"
 
 require "./chr"

@@ -4,7 +4,7 @@
   "author": "7korobi",
   "main": "lib/index.min.js",
   "typings": "lib/typings.d.ts",
-  "version": "0.4.16",
+  "version": "0.4.17",
   "preferGlobal": true,
   "repository": "git@github.com:7korobi/memory-orm.git",
   "homepage": "https://github.com/7korobi/memory-orm",
@@ -21,6 +21,8 @@
     "map-reduce"
   ],
   "devDependencies": {
+    "@types/lodash": "^4.14.138",
+    "@types/node": "^12.7.8",
     "@babel/core": "^7.6.0",
     "@babel/plugin-transform-modules-commonjs": "^7.6.0",
     "@babel/preset-env": "^7.6.0",
@@ -48,7 +50,6 @@
     "g:npm": "npm install -g npm-check-updates"
   },
   "dependencies": {
-    "@types/lodash": "^4.14.138",
     "lodash": "^4.17.15",
     "ts-loader": "^6.1.0",
     "typescript": "^3.6.3"

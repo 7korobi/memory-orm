@@ -73,6 +73,8 @@ Query.todos.find(3).checks.where({ checked: false }).list;
  count | count | reduce +
  all | all | reduce +
  all, count | avg | all / count
+ all, count | variance | variance sample.
+ all, count | sd | standard deviation.
  pow | pow | reduce *
  pow, count | avg | pow / count
  list | list | listup object ( key is not use )

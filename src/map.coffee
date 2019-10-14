@@ -46,51 +46,55 @@ module.exports = class Map
     Reflect.setPrototypeOf o, @::
     o
 
-  @init: (o, map)->
-    if map.id
-      o.id = map.id
-    if map.list
+  @init: (o, cmd)->
+    if cmd.id
+      o.id = cmd.id
+    if cmd.list
       o.list = []
-    if map.count
+    if cmd.count
       o.count = 0
-    if map.all
+    if cmd.all
       o.all = 0
-    if map.pow
+    if cmd.count && cmd.all?
+      o.variance = []
+    if cmd.pow
       o.pow = 0
-    if map.set
+    if cmd.set
       o.hash = {}
-    if map.navi
+    if cmd.navi
       o.navi = {}
 
-  @reduce: (query, path, item, o, map)->
+  @reduce: (query, path, item, o, cmd)->
     unless o
-      console.error "not found $format", path, map, query, item
+      console.error "not found $format", path, cmd, query, item
       return
-    if map.count
-      o.count += map.count
-    if map.all
-      o.all += map.all
-    if map.pow
-      o.pow *= map.pow
+    if cmd.count
+      o.count += cmd.count
+    if cmd.all
+      o.all += cmd.all
+    if cmd.count && cmd.all?
+      o.variance.push cmd.all
+    if cmd.pow
+      o.pow *= cmd.pow
 
-    if map.list
+    if cmd.list
       o.list.push item
 
-    if map.set
-      o.hash[map.set] = item
+    if cmd.set
+      o.hash[cmd.set] = item
 
-    if map.max
-      unless map.max <= o.max
+    if cmd.max
+      unless cmd.max <= o.max
         o.max_is = item
-        o.max = map.max
-    if map.min
-      unless o.min <= map.min
+        o.max = cmd.max
+    if cmd.min
+      unless o.min <= cmd.min
         o.min_is = item
-        o.min = map.min
-    if map.navi
+        o.min = cmd.min
+    if cmd.navi
       head = []
       back = navi = o.navi
-      for idx in map.navi
+      for idx in cmd.navi
         head.push idx
         key = head.join "-"
         back = navi
@@ -106,6 +110,16 @@ module.exports = class Map
       o.avg = o.pow ** (1 / o.count)
     if o.count && o.all?
       o.avg = o.all * (1 / o.count)
+
+    if a = o.variance
+      sum = 0
+      for data in a
+        sum += (data - o.avg) ** 2
+      o.variance = sum / ( o.count - 1 )
+      o.sd = o.variance ** 0.5
+      o.standard = (data)->
+        ( data - @avg ) / @sd
+
     if o.min? && o.max?
       o.range = o.max - o.min
       if o.all
@@ -113,35 +127,35 @@ module.exports = class Map
     if o.navi
       navi_reduce o.navi
 
-  @order: (query, path, from, origin, map, list)->
+  @order: (query, path, from, origin, cmd, list)->
     o = from
-    if map.belongs_to
+    if cmd.belongs_to
       if o instanceof Array
         for val in o
-          Reflect.setPrototypeOf val, Query[map.belongs_to].find val.id
+          Reflect.setPrototypeOf val, Query[cmd.belongs_to].find val.id
       else
         for id, val of o
-          Reflect.setPrototypeOf val, Query[map.belongs_to].find id
+          Reflect.setPrototypeOf val, Query[cmd.belongs_to].find id
 
     else
       if o.constructor == Object
         for id, val of o
           val.id = id
 
-    if map.sort
-      o = _.orderBy o, map.sort...
+    if cmd.sort
+      o = _.orderBy o, cmd.sort...
 
-    if size = map.quantile
+    if size = cmd.quantile
       pad = ( o.length - 1 ) / size
-      box = [0..size].map (i)=>
+      box = for i in [0..size]
         o[ Math.floor i * pad ]
       o.quantile = box
 
-    if map.pluck
-      o = for oo in o when val = _.get oo, map.pluck
+    if cmd.pluck
+      o = for oo in o when val = _.get oo, cmd.pluck
         val
 
-    if key = map.index
+    if key = cmd.index
       for ___, oo of o
         is_ary = 'number' == typeof _.get oo, key
         counts =
@@ -158,7 +172,7 @@ module.exports = class Map
           counts[idx] = a = new list query
         a.push oo
 
-      if map.mode
+      if cmd.mode
         max_idx = null
         max_is = []
         if is_ary
@@ -174,21 +188,20 @@ module.exports = class Map
 
     o
 
-  @dash: (query, path, from, origin, map, list)->
+  @dash: (query, path, from, origin, cmd, list)->
     return unless from instanceof Array
 
     o = from
-    if keys = map.diff
+    if keys = cmd.diff
       o = Dash o, keys
-
     o
 
-  @post_proc: (query, path, from, origin, map, list)->
+  @post_proc: (query, path, from, origin, cmd, list)->
     o = from
-    if map.cover
+    if cmd.cover
       remain = []
       cover  = []
-      for id in map.cover
+      for id in cmd.cover
         if origin[id]
           cover.push id
         else
@@ -196,7 +209,7 @@ module.exports = class Map
       o.remain = remain
       o.cover  = cover
 
-    if map.page && per = query.$page_by
+    if cmd.page && per = query.$page_by
       o = []
       o.all = from.length
       for oo, idx in from

@@ -1,4 +1,4 @@
-const model = class Model extends Object {
+const struct = class Struct extends Array {
   static bless(o) {
     Reflect.setPrototypeOf(o, this.prototype);
     return o;
@@ -26,13 +26,13 @@ const model = class Model extends Object {
 
 };
 
-module.exports = model
+module.exports = struct
 
-Object.defineProperties(model.prototype, {
+Object.defineProperties(struct.prototype, {
   id: {
     enumerable: true,
-    get: function() {
-      return this._id;
+    get: function () {
+      return this[0];
     },
   }
 })

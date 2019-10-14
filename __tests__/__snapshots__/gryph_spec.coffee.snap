@@ -1,0 +1,171 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gryph deltas snapshot 1`] = `
+Object {
+  "hash": Object {},
+  "list": list [],
+  "set": Array [],
+}
+`;
+
+exports[`gryph lines snapshot 1`] = `
+Object {
+  "hash": Object {
+    "1,-1*-1,1": model [
+      Array [
+        1,
+        -1,
+      ],
+      Array [
+        -1,
+        1,
+      ],
+    ],
+    "1,1*-1,-1": model [
+      Array [
+        1,
+        1,
+      ],
+      Array [
+        -1,
+        -1,
+      ],
+    ],
+    "1,1*1,-1*-1,1*-1,-1": model [
+      Array [
+        1,
+        1,
+      ],
+      Array [
+        1,
+        -1,
+      ],
+      Array [
+        -1,
+        1,
+      ],
+      Array [
+        -1,
+        -1,
+      ],
+    ],
+  },
+  "list": list [
+    model [
+      Array [
+        1,
+        1,
+      ],
+      Array [
+        -1,
+        -1,
+      ],
+    ],
+    model [
+      Array [
+        1,
+        -1,
+      ],
+      Array [
+        -1,
+        1,
+      ],
+    ],
+    model [
+      Array [
+        1,
+        1,
+      ],
+      Array [
+        1,
+        -1,
+      ],
+      Array [
+        -1,
+        1,
+      ],
+      Array [
+        -1,
+        -1,
+      ],
+    ],
+  ],
+  "set": Array [
+    "1,1*-1,-1",
+    "1,-1*-1,1",
+    "1,1*1,-1*-1,1*-1,-1",
+  ],
+}
+`;
+
+exports[`gryph point structure snapshot 1`] = `
+list [
+  Array [
+    "1*1",
+    1,
+    1,
+  ],
+  Array [
+    "1*-1",
+    1,
+    -1,
+  ],
+  Array [
+    "-1*1",
+    -1,
+    1,
+  ],
+  Array [
+    "-1*-1",
+    -1,
+    -1,
+  ],
+]
+`;
+
+exports[`gryph points snapshot 1`] = `
+Object {
+  "hash": Object {
+    "-1*-1": model [
+      -1,
+      -1,
+    ],
+    "-1*1": model [
+      -1,
+      1,
+    ],
+    "1*-1": model [
+      1,
+      -1,
+    ],
+    "1*1": model [
+      1,
+      1,
+    ],
+  },
+  "list": list [
+    model [
+      1,
+      1,
+    ],
+    model [
+      1,
+      -1,
+    ],
+    model [
+      -1,
+      1,
+    ],
+    model [
+      -1,
+      -1,
+    ],
+  ],
+  "set": Array [
+    "1*1",
+    "1*-1",
+    "-1*1",
+    "-1*-1",
+  ],
+}
+`;
