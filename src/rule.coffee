@@ -134,7 +134,7 @@ module.exports = class Rule
   relation_to_many: (key, target, ik, cmd, qk)->
     all = @all
     @use_cache key, (id)->
-      Mem.Query[target][cmd] "#{qk}": id
+      Mem.Query[target].distinct(false)[cmd] "#{qk}": id
 
     method @, key,
       enumerable: true

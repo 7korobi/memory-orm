@@ -17,4 +17,4 @@ new Rule("icon").schema ->
   @belongs_to "potof"
 
   @scope (all)->
-    own: ( _id )-> all.where { _id }
+    own: ( id )-> all.where { id }

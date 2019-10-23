@@ -32,9 +32,10 @@ query_parser = (base, req, cb)->
 module.exports = class Query
   @build: ({ $sort, $memory })->
     _all_ids = _group = null
+    _is_uniq = true
     _filters = []
     $partition = ["set"]
-    new Query { _all_ids, _group, _filters, $sort, $partition }, ->
+    new Query { _all_ids, _group, _is_uniq, _filters, $sort, $partition }, ->
       @all = @
       @$memory = $memory
 
@@ -43,7 +44,7 @@ module.exports = class Query
     @_copy base
     tap.call @
 
-  _copy: ({ @all, @_all_ids, @_group, @_filters, @$sort, @$partition, @$page_by })->
+  _copy: ({ @all, @_all_ids, @_group, @_is_uniq, @_filters, @$sort, @$partition, @$page_by })->
 
   in: (req)->
     query_parser @, req, (q, target, req, path)->
@@ -69,10 +70,6 @@ module.exports = class Query
           console.log { target, req: [req, req?.constructor] }
           throw Error 'unimplemented'
 
-  partition: (...ary)->
-    new Query @, ->
-      @$partition = ary
-
   where: (req)->
     query_parser @, req, (q, target, req, path)->
       add = (f)-> q._filters.push f
@@ -80,7 +77,7 @@ module.exports = class Query
         when Function
           add req
         when Array
-          if "_id" == target
+          if "id" == target
             q._all_ids = req
           else
             set = set_for req
@@ -88,7 +85,7 @@ module.exports = class Query
         when RegExp
           add (o)-> req.test path o
         when null, 0, "", Boolean, String, Number
-          if "_id" == target
+          if "id" == target
             q._all_ids = [req]
           else
             add (o)-> req == path o
@@ -97,6 +94,17 @@ module.exports = class Query
         else
           console.log { target, req: [req, req?.constructor] }
           throw Error 'unimplemented'
+
+  partition: (...ary)->
+    new Query @, ->
+      @$partition = ary
+
+  distinct: (b = true)->
+    return @ if b == @_is_uniq
+    new Query @, ->
+      @_is_uniq = b
+      if b && @_all_ids
+        @_all_ids = _.uniq @_all_ids
 
   distance: (key, order, point)->
     @order "list", sort: [
@@ -109,7 +117,7 @@ module.exports = class Query
       , order
     ]
 
-  search: (text)->
+  search: (text, target = "q.search_words")->
     return @ unless text
     list =
       for item in text.split(/\s+/)
@@ -119,7 +127,7 @@ module.exports = class Query
     return @ unless list.length
     regexp = (new RegExp list.join("|"), "ig")
     @where (o)->
-      s = o.q.search_words
+      s = _.get( o, target )
       (!s) || regexp.test s
 
   shuffle: ->

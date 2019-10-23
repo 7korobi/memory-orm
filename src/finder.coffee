@@ -48,14 +48,27 @@ module.exports = class Finder
           list: []
           hash: {}
 
-    if query._all_ids
-      @reduce ctx, query._all_ids
-    else
-      if query == query.all
+    switch
+      when query._all_ids
+        ids = query._all_ids
+        if query._is_uniq
+          ids = _.uniq ids
+        @reduce ctx, ids
+
+      when query == query.all
         @reduce ctx, Object.keys memory
+
       else
-        for partition in query.$partition
-          @reduce ctx, _.get query.all, "reduce.#{partition}"
+        if query._is_uniq
+          ids = []
+          for partition in query.$partition
+            tgt = _.get query.all, "reduce.#{partition}"
+            ids = _.union ids, tgt
+          @reduce ctx, ids
+        else
+          for partition in query.$partition
+            tgt = _.get query.all, "reduce.#{partition}"
+            @reduce ctx, tgt
 
     @finish ctx
     return
