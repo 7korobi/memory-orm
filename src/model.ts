@@ -4,26 +4,19 @@ const model = class Model extends Object {
     return o;
   }
 
-  static deploy(struct) { }
+  static deploy(struct) {}
 
-  static update(item, old) { }
+  static update(item, old) {}
 
-  static create(item) { }
+  static create(item) {}
 
-  static delete(old) { }
+  static delete(old) {}
 
-  static map_partition(item, emit) {
-    return void 0;
-  }
+  static map_partition(item, emit) {}
 
-  static map_reduce(item, emit) {
-    return void 0;
-  }
+  static map_reduce(item, emit) {}
 
-  static order(item, emit) {
-    return void 0;
-  }
-
+  static order(item, emit) {}
 };
 
 module.exports = model

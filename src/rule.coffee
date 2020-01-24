@@ -183,18 +183,20 @@ module.exports = class Rule
         @all[key] = val
 
   path: (keys...)->
-    if '*' == keys[-1..][0]
+    [..., tail_key] = keys
+    if '*' == tail_key
       { base, list } = @$name
       @belongs_to base
       @has_many   list
       keys.pop()
+      [..., tail_key] = keys
 
     for key in keys
       @belongs_to key
 
     @deploy (model, reduce, order)->
       subids = @id.split("-")
-      @idx = subids[-1..][0]
+      [..., @idx] = subids
       for key, idx in keys
         @["#{key}_id"] = subids[0..idx].join '-'
 
@@ -205,7 +207,7 @@ module.exports = class Rule
         navi: subids
 
     { all } = @
-    pk = keys[-1..][0] + "_id"
+    pk = "#{tail_key}_id"
     method @, 'siblings',
       get: ->
         q = {}
