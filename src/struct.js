@@ -1,4 +1,8 @@
-const model = class Model extends Object {
+module.exports = class Struct extends Array {
+  get id() {
+    return this[0];
+  }
+
   static bless(o) {
     Reflect.setPrototypeOf(o, this.prototype);
     return o;
@@ -18,14 +22,3 @@ const model = class Model extends Object {
 
   static order(item, emit) {}
 };
-
-module.exports = model
-
-Object.defineProperties(model.prototype, {
-  id: {
-    enumerable: true,
-    get: function() {
-      return this._id;
-    },
-  }
-})

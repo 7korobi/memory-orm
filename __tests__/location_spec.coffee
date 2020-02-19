@@ -1,7 +1,7 @@
 require "./models/index"
 { Query, Set } = require "../src/index"
 
-geo = require '~/yaml/work_geo_orm.yml'
+geo = require './yaml/work_geo_orm.yml'
 Set.work_location.reset geo
 
 drillup = (item)->

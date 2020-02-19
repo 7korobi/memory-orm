@@ -1,5 +1,5 @@
 { Set, Model, Query, Rule } = Mem = require "../../src/index"
-{ url } = require "~/config/live.yml"
+{ url } = require "../config/live.yml"
 format = require 'date-fns/format/index'
 locale = require "date-fns/locale/ja"
 

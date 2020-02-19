@@ -1,7 +1,34 @@
 {
   "compilerOptions": {
-    "target": "esnext",    // esnextに変換する
-    "module": "commonjs",  // commonjs方式のモジュールシステム(import/export)を使う
-    "noImplicitAny": true, // TypeScriptでは型定義がない変数はany型になる(暗黙のany型)のでこれを禁止する
-  }
+    "target": "ES2018", // esnextに変換する
+    "module": "commonjs", // commonjs方式のモジュールシステム(import/export)を使う
+    "moduleResolution": "node",
+    "strict": true,
+    "allowJs": true,
+    "sourceMap": true,
+    "experimentalDecorators": true,
+    
+    "noEmit": false,
+    "noImplicitAny": false, // TypeScriptでは型定義がない変数はany型になる(暗黙のany型)のでこれを禁止する
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": false,
+    
+    "baseUrl": "./",
+    "paths": {
+      "memory-orm": ["lib/typings.d.ts"]
+    },
+    "typeRoots": ["./lib/"],
+    "lib": [
+      "esnext",
+      "esnext.asynciterable",
+      "dom"
+    ],
+    "types": [
+      "@types/node",
+      "jest",
+    ]
+  },
+  "exclude": [
+    "node_modules"
+  ]
 }

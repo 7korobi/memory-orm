@@ -3,28 +3,27 @@ const Mem = require("./mem.coffee");
 const Query = require("./query.coffee");
 
 module.exports = class List extends Array {
-
-  get first(){
+  get first() {
     return this[0];
   }
 
-  get last(){
+  get last() {
     return this[this.length - 1];
   }
 
-  get head(){
+  get head() {
     return this[0];
   }
 
-  get tail(){
+  get tail() {
     return this[this.length - 1];
   }
 
-  get uniq(){
+  get uniq() {
     return this.constructor.bless(_.uniq(this));
   }
 
-  pluck(...keys){
+  pluck(...keys) {
     let cb;
     switch (keys.length) {
       case 0:
@@ -40,13 +39,13 @@ module.exports = class List extends Array {
           return _.at(o, ...keys);
         };
         break;
-    };
-    return this.constructor.bless(this.map(cb))
+    }
+    return this.constructor.bless(this.map(cb));
   }
 
   static bless(list, query) {
     Reflect.setPrototypeOf(list, this.prototype);
-    if ( query && query.where && query.in ) {
+    if (query && query.where && query.in) {
       list.query = query;
     }
     return list;
@@ -54,7 +53,7 @@ module.exports = class List extends Array {
 
   constructor(query) {
     super();
-    if ( query && query.where && query.in ) {
+    if (query && query.where && query.in) {
       this.query = query;
     }
   }
@@ -76,9 +75,11 @@ module.exports = class List extends Array {
 
   page_by(per) {
     let idx = 0;
-    return Object.values(this.group_by(function(o) {
-      return Math.floor(idx++ / per);
-    }));
+    return Object.values(
+      this.group_by(function(o) {
+        return Math.floor(idx++ / per);
+      })
+    );
   }
 
   where(req) {
@@ -88,5 +89,4 @@ module.exports = class List extends Array {
   in(req) {
     return this.query.in(req);
   }
-
 };

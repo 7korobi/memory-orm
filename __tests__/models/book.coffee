@@ -1,5 +1,5 @@
 { Model, Query, Rule, Set, State } = require "../../src/index"
-{ game } = require "~/config/live.yml"
+{ game } = require "../config/live.yml"
 format = require 'date-fns/format/index'
 locale = require "date-fns/locale/ja"
 

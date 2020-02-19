@@ -125,6 +125,7 @@ State =
           changed = true
       if changed
         o.setState e
+    return
   , 1
 
 merge = (o)->
@@ -135,5 +136,6 @@ merge = (o)->
         Set[key].merge val
       when Set[key]?
         Set[key].append val
+  return
 
 module.exports = { Set, Map, Name, State, Finder, Query, PureObject, merge, step }
