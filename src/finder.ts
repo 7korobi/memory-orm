@@ -28,9 +28,9 @@ type Emitters = {
   order: Emitter<OrderCmd>
   reduce: Emitter<LeafCmd> & { default: Emitter<LeafCmd>; default_origin: Emitter<LeafCmd> }
 }
-type ReduceContext<M extends MODEL> = {
+type ReduceContext<O extends MODEL> = {
   map: typeof Map
-  query: Query<M>
+  query: Query<O>
   memory: Memory
   cache: Cache['$format']
   paths: {
@@ -38,7 +38,7 @@ type ReduceContext<M extends MODEL> = {
   }
 }
 
-function each_by_id<M extends MODEL>({ from }: SetContext<M>, process: IdProcess) {
+function each_by_id<O extends MODEL>({ from }: SetContext<O>, process: IdProcess) {
   if (from instanceof Array) {
     for (const item of from) {
       process((item as any).id || item)
@@ -46,7 +46,7 @@ function each_by_id<M extends MODEL>({ from }: SetContext<M>, process: IdProcess
   }
 }
 
-function each<M extends MODEL>({ from }: SetContext<M>, process: PlainProcess) {
+function each<O extends MODEL>({ from }: SetContext<O>, process: PlainProcess) {
   if (from instanceof Array) {
     for (const item of from) {
       process(item as PlainDatum)
@@ -72,9 +72,9 @@ function validate(item: any, meta: Metadata, chklist: Filter[]): boolean {
   return true
 }
 
-export class Finder<M extends MODEL> {
+export class Finder<O extends MODEL> {
   $name: Name
-  all!: Query<M>
+  all!: Query<O>
   model!: typeof Model | typeof Struct
   list!: typeof List
   map!: typeof Map
@@ -90,7 +90,7 @@ export class Finder<M extends MODEL> {
     list,
     model,
   }: {
-    all: Query<M>
+    all: Query<O>
     map: typeof Map
     list: typeof List
     model: typeof Model | typeof Struct
@@ -101,14 +101,14 @@ export class Finder<M extends MODEL> {
     this.model = model
   }
 
-  calculate(query: Query<M>, memory: Memory) {
+  calculate(query: Query<O>, memory: Memory) {
     if (query._step >= State.step[this.$name.list]) {
       return
     }
     const base = State.base(this.$name.list)
     delete query._reduce
     query._step = step()
-    const ctx: ReduceContext<M> = {
+    const ctx: ReduceContext<O> = {
       map: this.map,
       query,
       memory,
@@ -145,7 +145,7 @@ export class Finder<M extends MODEL> {
     this.finish(ctx)
   }
 
-  reduce({ map, cache, paths, query, memory }: ReduceContext<M>, ids: string[]) {
+  reduce({ map, cache, paths, query, memory }: ReduceContext<O>, ids: string[]) {
     if (!ids) {
       return
     }
@@ -164,7 +164,7 @@ export class Finder<M extends MODEL> {
     }
   }
 
-  finish({ map, paths, query }: ReduceContext<M>) {
+  finish({ map, paths, query }: ReduceContext<O>) {
     for (const path in paths) {
       const o = paths[path]
       map.finish(query, path, o, this.list)
@@ -203,7 +203,7 @@ export class Finder<M extends MODEL> {
     })
   }
 
-  data_emitter({ base, journal }: SetContext<M>, { item, $group }): Emitters {
+  data_emitter({ base, journal }: SetContext<O>, { item, $group }): Emitters {
     if (!base.$format) {
       throw new Error('bad context.')
     }
@@ -248,7 +248,7 @@ export class Finder<M extends MODEL> {
   }
 
   data_init(
-    { model, parent, deploys }: SetContext<M>,
+    { model, parent, deploys }: SetContext<O>,
     { item }: Datum,
     { reduce, order }: Emitters
   ) {
@@ -260,7 +260,7 @@ export class Finder<M extends MODEL> {
     }
   }
 
-  data_entry({ model }: SetContext<M>, { item }: Datum, { reduce, order }: Emitters) {
+  data_entry({ model }: SetContext<O>, { item }: Datum, { reduce, order }: Emitters) {
     model.map_partition(item, reduce)
     model.map_reduce(item, reduce)
     if (reduce.default === reduce.default_origin) {
@@ -269,7 +269,7 @@ export class Finder<M extends MODEL> {
     model.order(item, order)
   }
 
-  reset(ctx: SetContext<M>) {
+  reset(ctx: SetContext<O>) {
     ctx.journal.$memory = PureObject()
     const news = (ctx.base.$memory = ctx.all.$memory = PureObject())
 
@@ -285,7 +285,7 @@ export class Finder<M extends MODEL> {
     return true
   }
 
-  merge(ctx: SetContext<M>) {
+  merge(ctx: SetContext<O>) {
     let is_hit = false
     each(ctx, (item) => {
       const o = new Datum(ctx.meta, item)
@@ -311,7 +311,7 @@ export class Finder<M extends MODEL> {
     return is_hit
   }
 
-  remove(ctx: SetContext<M>) {
+  remove(ctx: SetContext<O>) {
     let is_hit = false
     each_by_id(ctx, (id) => {
       const old = ctx.base.$memory[id]
@@ -325,7 +325,7 @@ export class Finder<M extends MODEL> {
     return is_hit
   }
 
-  update(ctx: SetContext<M>, parent: Object) {
+  update(ctx: SetContext<O>, parent: Object) {
     let is_hit = false
     each_by_id(ctx, (id) => {
       const old = ctx.base.$memory[id]

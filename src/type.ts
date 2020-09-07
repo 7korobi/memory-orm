@@ -7,8 +7,6 @@ import { Datum } from './datum'
 
 type NAVI_LEAF = number
 
-export type MODEL = typeof Model | typeof Struct
-
 export type NAVI = {
   [key: string]: NAVI | NAVI_LEAF
 }
@@ -19,8 +17,11 @@ export type DIC<T> = {
   [key: string]: T
 }
 
-export type DEPLOY = {
-  (this: Model | Struct, model: MODEL, reduce: Emitter<LeafCmd>, order: Emitter<OrderCmd>): void
+export type LeafEmitter = Emitter<LeafCmd>
+export type OrderEmitter = Emitter<OrderCmd>
+
+export type DEPLOY<O, M> = {
+  (this: O, model: M, reduce: LeafEmitter, order: OrderEmitter): void
 }
 
 export type Emitter<T> = {
@@ -38,7 +39,7 @@ export type Name = {
   list: string
   id: ID
   ids: string
-  deploys: DEPLOY[]
+  deploys: DEPLOY<any, any>[]
   depends: (() => void)[]
 }
 
@@ -83,15 +84,15 @@ export type OrderCmd = Partial<{
   sort: [Many<ObjectIteratee<any>>, Many<boolean | 'asc' | 'desc'>]
 }>
 
-export type ReduceOrder<M extends MODEL> = (number | Reduce)[] &
+export type ReduceOrder<O extends MODEL> = (number | Reduce)[] &
   Partial<{
     id: ID
-    query: Query<M>
+    query: Query<O>
     from: ReduceLeaf
     all: number
     remain: string[]
     cover: string[]
-    quantile: ReduceOrder<M>
+    quantile: ReduceOrder<O>
     page_idx(this: Reduce[][], item: Object): number | null
   }>
 
@@ -144,19 +145,27 @@ export type Reduce =
 export interface PlainDatum {
   _id?: ID
   id?: ID
+  idx?: string
 }
 
 export interface Memory {
   [key: string]: Datum
 }
 
-export interface SetContext<M extends MODEL> {
+export interface SetContext<O extends MODEL> {
   model: typeof Model | typeof Struct
-  all: Query<M>
+  all: Query<O>
   base: Cache
   journal: Cache
   meta: Metadata
   deploys: Name['deploys']
   from: PlainData | string[]
   parent: Object | undefined
+}
+
+export type MODEL_CLASS = typeof Model | typeof Struct
+
+export interface MODEL {
+  idx?: string
+  id: string
 }

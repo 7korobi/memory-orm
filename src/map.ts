@@ -63,7 +63,7 @@ function navi_reduce(root) {
   return root
 }
 
-export class Map<M extends MODEL> {
+export class Map<O extends MODEL> {
   static $name: Name
   static bless(o) {
     Reflect.setPrototypeOf(o, this.prototype)
@@ -97,8 +97,8 @@ export class Map<M extends MODEL> {
     }
   }
 
-  static reduce<M extends MODEL>(
-    query: Query<M>,
+  static reduce<O extends MODEL>(
+    query: Query<O>,
     path: string,
     item: any,
     o: ReduceLeaf,
@@ -154,7 +154,7 @@ export class Map<M extends MODEL> {
     }
   }
 
-  static finish<M extends MODEL>(query: Query<M>, path: string, o: ReduceLeaf, list: typeof List) {
+  static finish<O extends MODEL>(query: Query<O>, path: string, o: ReduceLeaf, list: typeof List) {
     if (!o) {
       console.error('not found $format', path, query, list)
       return
@@ -194,8 +194,8 @@ export class Map<M extends MODEL> {
     }
   }
 
-  static order<M extends MODEL>(
-    query: Query<M>,
+  static order<O extends MODEL>(
+    query: Query<O>,
     path: string,
     from: Reduce,
     origin,
@@ -223,7 +223,7 @@ export class Map<M extends MODEL> {
       }
     }
 
-    let o: ReduceOrder<M> = o1
+    let o: ReduceOrder<O> = o1
     if (cmd.sort) {
       o = _.orderBy(o, ...cmd.sort)
     }
@@ -231,7 +231,7 @@ export class Map<M extends MODEL> {
     const size = cmd.quantile
     if (size) {
       const pad = (o.length - 1) / size
-      const box: ReduceOrder<M> = []
+      const box: ReduceOrder<O> = []
       const end = size + 1
       for (let i = 0; i < end; i++) {
         box.push(o[Math.floor(i * pad)])
@@ -301,10 +301,10 @@ export class Map<M extends MODEL> {
     return o
   }
 
-  static dash<M extends MODEL>(
-    query: Query<M>,
+  static dash<O extends MODEL>(
+    query: Query<O>,
     path: string,
-    from: ReduceOrder<M>,
+    from: ReduceOrder<O>,
     origin,
     cmd: OrderCmd,
     list: typeof List
@@ -321,10 +321,10 @@ export class Map<M extends MODEL> {
     return o
   }
 
-  static post_proc<M extends MODEL>(
-    query: Query<M>,
+  static post_proc<O extends MODEL>(
+    query: Query<O>,
     path: string,
-    from: ReduceOrder<M>,
+    from: ReduceOrder<O>,
     origin,
     cmd: OrderCmd,
     list: typeof List
@@ -349,7 +349,7 @@ export class Map<M extends MODEL> {
       o = []
       o.all = from.length
       for (let idx = 0; idx < from.length; idx++) {
-        let c: ReduceOrder<M>
+        let c: ReduceOrder<O>
         if (!(idx % per)) {
           c = new list(query)
           o.push(c)

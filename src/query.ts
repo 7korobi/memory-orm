@@ -14,16 +14,16 @@ function set_for(list: string[]) {
   return set
 }
 
-function query_parser<M extends MODEL>(
-  base: Query<M>,
+function query_parser<O extends MODEL>(
+  base: Query<O>,
   req: any,
-  cb: (q: Query<M>, target: string | null, request: any, path: (o: Model | Struct) => any) => void
+  cb: (q: Query<O>, target: string | null, request: any, path: (o: Model | Struct) => any) => void
 ) {
   if (!req) {
     return base
   }
 
-  return new Query<M>(base, function (this: Query<M>) {
+  return new Query<O>(base, function (this: Query<O>) {
     this._filters = base._filters.concat()
     if (req instanceof Function || req instanceof Array || 'string' === typeof req) {
       cb(this, null, req, (o) => o)
@@ -39,13 +39,13 @@ function query_parser<M extends MODEL>(
   })
 }
 
-export class Query<M extends MODEL> {
+export class Query<O extends MODEL> {
   _is_uniq!: boolean
   _all_ids!: string[]
   _reduce?: Reduce
   _step!: number
   _filters!: Filter[]
-  _finder!: Finder<M>
+  _finder!: Finder<O>
   _group: any
   _cache!: {
     [idx: string]: any
@@ -56,18 +56,18 @@ export class Query<M extends MODEL> {
   $partition: any
   $page_by: any
   $memory!: Memory
-  all!: Query<M>
+  all!: Query<O>
 
   get reduce() {
     this.all._finder.calculate(this, this.all.$memory)
     return this._reduce!
   }
 
-  get list(): List<M> {
+  get list(): List<O> {
     return this.reduce.list as any
   }
 
-  get hash(): DIC<M> {
+  get hash(): DIC<O> {
     return this.reduce.hash as any
   }
 
@@ -79,19 +79,19 @@ export class Query<M extends MODEL> {
     return Object.keys(this.hash)
   }
 
-  static build<M extends MODEL>({ $sort, $memory }) {
+  static build<O extends MODEL>({ $sort, $memory }) {
     const _group = null
     const _all_ids = null
     const _is_uniq = true
     const _filters = []
     const $partition = ['set']
-    return new Query<M>({ _all_ids, _group, _is_uniq, _filters, $sort, $partition }, function () {
+    return new Query<O>({ _all_ids, _group, _is_uniq, _filters, $sort, $partition }, function () {
       this.all = this
       this.$memory = $memory
     })
   }
 
-  public constructor(base, tap: (this: Query<M>) => void) {
+  public constructor(base, tap: (this: Query<O>) => void) {
     this._step = 0
     this._copy(base)
     tap.call(this)
@@ -138,7 +138,9 @@ export class Query<M extends MODEL> {
     })
   }
 
-  where(req) {
+  where(req: { [path: string]: any }): Query<O>
+  where(req: (o: O) => any): Query<O>
+  where(req: any): Query<O> {
     return query_parser(this, req, function (q, target, req, path) {
       if (req instanceof Array) {
         if ('id' === target) {
@@ -237,14 +239,14 @@ export class Query<M extends MODEL> {
     if (_.isEqual(order, this.$sort[path])) {
       return this
     }
-    return new Query<M>(this, function () {
+    return new Query<O>(this, function () {
       this.$sort = _.cloneDeep(this.$sort)
       this.$sort[path] = order
     })
   }
 
-  sort(...sort): Query<M> {
-    return this.order({ sort }) as Query<M>
+  sort(...sort): Query<O> {
+    return this.order({ sort }) as Query<O>
   }
 
   page(page_by: number) {
@@ -276,7 +278,7 @@ export class Query<M extends MODEL> {
   }
 
   finds(ids: ID[]) {
-    const result: M[] = []
+    const result: O[] = []
     for (let id of ids) {
       const o = this.hash[id]
       if (o) {

@@ -1,10 +1,10 @@
 import { Model } from './model'
 import { Struct } from './struct'
 import { Metadata } from './mem'
-import { LeafCmd, PlainDatum } from './type'
+import { LeafCmd, PlainDatum, MODEL } from './type'
 
 export class Datum {
-  item!: Model | Struct
+  item!: MODEL
   meta!: Metadata
   $group: [string, LeafCmd][]
   static bless(o: Datum, meta: Metadata, model: typeof Model | typeof Struct) {

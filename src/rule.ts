@@ -3,7 +3,7 @@ import * as Mem from './mem'
 import { Model } from './model'
 import { List } from './list'
 import { Struct } from './struct'
-import { Name, Cache, DEPLOY, RelationCmd, DIC, MODEL } from './type'
+import { Name, Cache, DEPLOY, RelationCmd, DIC, MODEL, MODEL_CLASS } from './type'
 import { Set } from './set'
 import { Map } from './map'
 import { Query } from './query'
@@ -27,14 +27,14 @@ function rename(base: string) {
   return o
 }
 
-function method<M extends MODEL>(r: Rule<M>, key: string, o: Object) {
+function method<O extends MODEL, M extends MODEL_CLASS>(r: Rule<O, M>, key: string, o: Object) {
   Object.defineProperty(r.model.prototype, key, o)
 }
 
-export class Rule<M extends MODEL> {
+export class Rule<O extends MODEL, M extends MODEL_CLASS> {
   $name: Name
   state: Cache
-  all: Query<M>
+  all: Query<O>
 
   model!: any
   list!: any
@@ -45,7 +45,7 @@ export class Rule<M extends MODEL> {
     this.$name = rename(base)
     this.state = Mem.State.base(this.$name.list)
 
-    this.all = Query.build<M>(this.state)
+    this.all = Query.build<O>(this.state)
     this.all.$sort['_reduce.list'] = {}
     this.all._cache = {}
     this.all._finder = new Finder(this.$name)
@@ -53,12 +53,12 @@ export class Rule<M extends MODEL> {
     this.depend_on(this.$name.list)
 
     this.model = modelClass || class model extends Model {}
-    this.list = class list extends List<M> {}
-    this.set = class set extends Set<M> {}
-    this.map = class map extends Map<M> {}
+    this.list = class list extends List<O> {}
+    this.set = class set extends Set<O> {}
+    this.map = class map extends Map<O> {}
   }
 
-  schema(cb: (this: Rule<M>) => void) {
+  schema(cb: (this: Rule<O, M>) => void) {
     cb.call(this)
     this.model.$name = this.list.$name = this.set.$name = this.map.$name = this.$name
     this.all._finder.join(this)
@@ -113,7 +113,7 @@ export class Rule<M extends MODEL> {
     })
   }
 
-  deploy(cb: DEPLOY) {
+  deploy(cb: DEPLOY<O, M>) {
     this.$name.deploys.push(cb)
   }
 
@@ -121,7 +121,7 @@ export class Rule<M extends MODEL> {
     Mem.Name[parent].depends.push(parent)
   }
 
-  scope_without_cache(cb: (all: Query<M>) => DIC<any>) {
+  scope_without_cache(cb: (all: Query<O>) => DIC<any>) {
     const cmd = cb(this.all)
     for (const key in cmd) {
       const val = cmd[key]
@@ -129,7 +129,7 @@ export class Rule<M extends MODEL> {
     }
   }
 
-  scope(cb: (all: Query<M>) => DIC<any>) {
+  scope(cb: (all: Query<O>) => DIC<any>) {
     const cmd = cb(this.all)
     for (const key in cmd) {
       const val = cmd[key]
@@ -141,7 +141,7 @@ export class Rule<M extends MODEL> {
     Object.defineProperties(this[type].prototype, o)
   }
 
-  default_scope(scope: (all: Query<M>) => Query<M>) {
+  default_scope(scope: (all: Query<O>) => Query<O>) {
     this.all._copy(scope(this.all))
     const base = Mem.State.base(this.$name.list)
     base.$sort = this.all.$sort
@@ -256,7 +256,7 @@ export class Rule<M extends MODEL> {
     }
 
     this.deploy(function (model, reduce, order) {
-      const subids = this.id.split('-')
+      const subids = this.id!.split('-')
       this.idx = subids[subids.length - 1]
       for (let idx = 0; idx < keys.length; idx++) {
         const key = keys[idx]
@@ -309,7 +309,7 @@ export class Rule<M extends MODEL> {
 
     Object.defineProperties(this.all, {
       leaf: {
-        get(this: Query<M>) {
+        get(this: Query<O>) {
           const not_leaf = _.uniq(this.pluck(fk))
           return this.where((o) => !not_leaf.includes(o.id))
         },

@@ -6,12 +6,12 @@ import { Model } from './model'
 import { Struct } from './struct'
 import { Name, PlainDatum, PlainData, MODEL } from './type'
 
-export class Set<M extends MODEL> {
+export class Set<O extends MODEL> {
   static $name: Name
 
   $name: Name
-  all: Query<M>
-  finder: Finder<M>
+  all: Query<O>
+  finder: Finder<O>
   model: typeof Model | typeof Struct
 
   constructor({ $name, all, model }) {
@@ -21,18 +21,18 @@ export class Set<M extends MODEL> {
     this.finder = all._finder
   }
 
-  set = f_common<M>('reset')
-  reset = f_common<M>('reset')
-  merge = f_common<M>('merge')
-  add = f_item(f_common<M>('merge'))
-  append = f_item(f_common<M>('merge'))
+  set = f_common<O>('reset')
+  reset = f_common<O>('reset')
+  merge = f_common<O>('merge')
+  add = f_item(f_common<O>('merge'))
+  append = f_item(f_common<O>('merge'))
 
-  reject = f_common<M>('remove')
-  del = f_item(f_common<M>('remove'))
-  remove = f_item(f_common<M>('remove'))
+  reject = f_common<O>('remove')
+  del = f_item(f_common<O>('remove'))
+  remove = f_item(f_common<O>('remove'))
 
   updates = f_update
-  update = f_item<M>(f_update)
+  update = f_item<O>(f_update)
 
   clear_cache = f_clear
   refresh = f_clear
@@ -53,29 +53,29 @@ export class Set<M extends MODEL> {
   }
 }
 
-function f_common<M extends MODEL>(type: string) {
-  return function (this: Set<M>, list: PlainData, parent?: Object) {
+function f_common<O extends MODEL>(type: string) {
+  return function (this: Set<O>, list: PlainData, parent?: Object) {
     const is_hit = this.finder.data_set(type, list, parent)
     this.clear_cache(is_hit)
   }
 }
 
-function f_update<M extends MODEL>(this: Set<M>, list: PlainData, parent: Object) {
+function f_update<O extends MODEL>(this: Set<O>, list: PlainData, parent: Object) {
   if (parent) {
     const is_hit = this.finder.data_set('update', list, parent)
     this.clear_cache(is_hit)
   }
 }
 
-function f_item<M extends MODEL>(cb) {
-  return function (this: Set<M>, item: PlainDatum, parent?: Object) {
+function f_item<O extends MODEL>(cb) {
+  return function (this: Set<O>, item: PlainDatum, parent?: Object) {
     if (item) {
       cb.call(this, [item], parent)
     }
   }
 }
 
-function f_clear<M extends MODEL>(this: Set<M>, is_hit = true) {
+function f_clear<O extends MODEL>(this: Set<O>, is_hit = true) {
   if (is_hit) {
     for (const name of this.$name.depends) {
       State.notify(name)

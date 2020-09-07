@@ -3,7 +3,7 @@ import { Name } from './type'
 export class Model extends Object {
   idx?: string
   static $name: Name
-  private _id!: string
+  _id!: string
   get id() {
     return this._id
   }

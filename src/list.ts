@@ -2,8 +2,8 @@ import _ from 'lodash'
 import { Query } from './query'
 import { ReduceOrder, Name, MODEL } from './type'
 
-export class List<M extends MODEL> extends Array {
-  query!: Query<M>
+export class List<O extends MODEL> extends Array {
+  query!: Query<O>
   static $name: Name
   get first() {
     return this[0]
@@ -45,7 +45,7 @@ export class List<M extends MODEL> extends Array {
     return (this.constructor as typeof List).bless(this.map(cb), this.query)
   }
 
-  static bless<M extends MODEL>(list: ReduceOrder<M>, query: Query<M>) {
+  static bless<O extends MODEL>(list: ReduceOrder<O>, query: Query<O>) {
     Reflect.setPrototypeOf(list, this.prototype)
     if (query && query.where && query.in) {
       list.query = query
@@ -53,7 +53,7 @@ export class List<M extends MODEL> extends Array {
     return list
   }
 
-  constructor(query: Query<M>) {
+  constructor(query: Query<O>) {
     super()
     if (query && query.where && query.in) {
       this.query = query

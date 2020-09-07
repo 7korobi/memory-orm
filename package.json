@@ -1,6 +1,6 @@
 {
   "name": "memory-orm",
-  "version": "0.5.2",
+  "version": "0.5.4",
   "description": "client side ORM + map reduce",
   "author": "7korobi",
   "main": "lib/index.js",
