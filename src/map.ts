@@ -1,7 +1,7 @@
 import _ from 'lodash'
 import { Query } from './query'
 import * as Mem from './mem'
-import { LeafCmd, ReduceLeaf, OrderCmd, Reduce, ReduceOrder, Name } from './type'
+import { LeafCmd, ReduceLeaf, OrderCmd, Reduce, ReduceOrder, Name, MODEL } from './type'
 import { List } from './list'
 
 function Dash(o, keys) {
@@ -63,7 +63,7 @@ function navi_reduce(root) {
   return root
 }
 
-export class Map {
+export class Map<M extends MODEL> {
   static $name: Name
   static bless(o) {
     Reflect.setPrototypeOf(o, this.prototype)
@@ -97,7 +97,13 @@ export class Map {
     }
   }
 
-  static reduce(query: Query, path: string, item: any, o: ReduceLeaf, cmd: LeafCmd) {
+  static reduce<M extends MODEL>(
+    query: Query<M>,
+    path: string,
+    item: any,
+    o: ReduceLeaf,
+    cmd: LeafCmd
+  ) {
     if (!o) {
       console.error('not found $format', path, cmd, query, item)
       return
@@ -148,7 +154,7 @@ export class Map {
     }
   }
 
-  static finish(query: Query, path: string, o: ReduceLeaf, list: typeof List) {
+  static finish<M extends MODEL>(query: Query<M>, path: string, o: ReduceLeaf, list: typeof List) {
     if (!o) {
       console.error('not found $format', path, query, list)
       return
@@ -188,7 +194,14 @@ export class Map {
     }
   }
 
-  static order(query: Query, path: string, from: Reduce, origin, cmd: OrderCmd, list: typeof List) {
+  static order<M extends MODEL>(
+    query: Query<M>,
+    path: string,
+    from: Reduce,
+    origin,
+    cmd: OrderCmd,
+    list: typeof List
+  ) {
     let o1: Reduce[] = from as any
     if (cmd.belongs_to) {
       if (o1 instanceof Array) {
@@ -210,7 +223,7 @@ export class Map {
       }
     }
 
-    let o: ReduceOrder = o1
+    let o: ReduceOrder<M> = o1
     if (cmd.sort) {
       o = _.orderBy(o, ...cmd.sort)
     }
@@ -218,7 +231,7 @@ export class Map {
     const size = cmd.quantile
     if (size) {
       const pad = (o.length - 1) / size
-      const box: ReduceOrder = []
+      const box: ReduceOrder<M> = []
       const end = size + 1
       for (let i = 0; i < end; i++) {
         box.push(o[Math.floor(i * pad)])
@@ -288,10 +301,10 @@ export class Map {
     return o
   }
 
-  static dash(
-    query: Query,
+  static dash<M extends MODEL>(
+    query: Query<M>,
     path: string,
-    from: ReduceOrder,
+    from: ReduceOrder<M>,
     origin,
     cmd: OrderCmd,
     list: typeof List
@@ -308,10 +321,10 @@ export class Map {
     return o
   }
 
-  static post_proc(
-    query: Query,
+  static post_proc<M extends MODEL>(
+    query: Query<M>,
     path: string,
-    from: ReduceOrder,
+    from: ReduceOrder<M>,
     origin,
     cmd: OrderCmd,
     list: typeof List
@@ -336,7 +349,7 @@ export class Map {
       o = []
       o.all = from.length
       for (let idx = 0; idx < from.length; idx++) {
-        let c: ReduceOrder
+        let c: ReduceOrder<M>
         if (!(idx % per)) {
           c = new list(query)
           o.push(c)

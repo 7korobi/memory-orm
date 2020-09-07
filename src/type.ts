@@ -7,6 +7,8 @@ import { Datum } from './datum'
 
 type NAVI_LEAF = number
 
+export type MODEL = typeof Model | typeof Struct
+
 export type NAVI = {
   [key: string]: NAVI | NAVI_LEAF
 }
@@ -18,12 +20,7 @@ export type DIC<T> = {
 }
 
 export type DEPLOY = {
-  (
-    this: Model | Struct,
-    model: typeof Model | typeof Struct,
-    reduce: Emitter<LeafCmd>,
-    order: Emitter<OrderCmd>
-  ): void
+  (this: Model | Struct, model: MODEL, reduce: Emitter<LeafCmd>, order: Emitter<OrderCmd>): void
 }
 
 export type Emitter<T> = {
@@ -86,15 +83,15 @@ export type OrderCmd = Partial<{
   sort: [Many<ObjectIteratee<any>>, Many<boolean | 'asc' | 'desc'>]
 }>
 
-export type ReduceOrder = (number | Reduce)[] &
+export type ReduceOrder<M extends MODEL> = (number | Reduce)[] &
   Partial<{
     id: ID
-    query: Query
+    query: Query<M>
     from: ReduceLeaf
     all: number
     remain: string[]
     cover: string[]
-    quantile: ReduceOrder
+    quantile: ReduceOrder<M>
     page_idx(this: Reduce[][], item: Object): number | null
   }>
 
@@ -153,9 +150,9 @@ export interface Memory {
   [key: string]: Datum
 }
 
-export interface SetContext {
+export interface SetContext<M extends MODEL> {
   model: typeof Model | typeof Struct
-  all: Query
+  all: Query<M>
   base: Cache
   journal: Cache
   meta: Metadata

@@ -6,11 +6,11 @@ import { Query as Q } from './query'
 import { Finder as F } from './finder'
 import { Datum } from './datum'
 
-export const Set: DIC<S> = {}
-export const Map: DIC<M> = {}
+export const Set: DIC<S<any>> = {}
+export const Map: DIC<M<any>> = {}
 export const Name: DIC<N> = {}
-export const Query: DIC<Q> = {}
-export const Finder: DIC<F> = {}
+export const Query: DIC<Q<any>> = {}
+export const Finder: DIC<F<any>> = {}
 
 let $react_listeners: any[] = []
 let $step = 0
@@ -78,7 +78,7 @@ class StateManager {
   $journal = META()
   $base = META()
 
-  transaction(cb, meta) {
+  transaction(cb: (pack: Metadata) => void, meta: Metadata) {
     const pack = (this.$journal = META(meta))
     if (pack.depth++) {
       console.warn('nested transactions.')

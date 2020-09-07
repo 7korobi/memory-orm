@@ -1,5 +1,5 @@
 import _ from 'lodash'
-import { Reduce, Memory, Filter, OrderCmd, ID, DIC } from './type'
+import { Reduce, Memory, Filter, OrderCmd, ID, DIC, MODEL } from './type'
 import { Model } from './model'
 import { Struct } from './struct'
 import { Finder } from './finder'
@@ -14,16 +14,16 @@ function set_for(list: string[]) {
   return set
 }
 
-function query_parser(
-  base: Query,
+function query_parser<M extends MODEL>(
+  base: Query<M>,
   req: any,
-  cb: (q: Query, target: string | null, request: any, path: (o: Model | Struct) => any) => void
+  cb: (q: Query<M>, target: string | null, request: any, path: (o: Model | Struct) => any) => void
 ) {
   if (!req) {
     return base
   }
 
-  return new Query(base, function (this: Query) {
+  return new Query<M>(base, function (this: Query<M>) {
     this._filters = base._filters.concat()
     if (req instanceof Function || req instanceof Array || 'string' === typeof req) {
       cb(this, null, req, (o) => o)
@@ -39,13 +39,13 @@ function query_parser(
   })
 }
 
-export class Query {
+export class Query<M extends MODEL> {
   _is_uniq!: boolean
   _all_ids!: string[]
   _reduce?: Reduce
   _step!: number
   _filters!: Filter[]
-  _finder!: Finder
+  _finder!: Finder<M>
   _group: any
   _cache!: {
     [idx: string]: any
@@ -56,18 +56,18 @@ export class Query {
   $partition: any
   $page_by: any
   $memory!: Memory
-  all!: Query
+  all!: Query<M>
 
   get reduce() {
     this.all._finder.calculate(this, this.all.$memory)
     return this._reduce!
   }
 
-  get list(): List {
+  get list(): List<M> {
     return this.reduce.list as any
   }
 
-  get hash(): DIC<Model | Struct> {
+  get hash(): DIC<M> {
     return this.reduce.hash as any
   }
 
@@ -79,19 +79,19 @@ export class Query {
     return Object.keys(this.hash)
   }
 
-  static build({ $sort, $memory }) {
+  static build<M extends MODEL>({ $sort, $memory }) {
     const _group = null
     const _all_ids = null
     const _is_uniq = true
     const _filters = []
     const $partition = ['set']
-    return new Query({ _all_ids, _group, _is_uniq, _filters, $sort, $partition }, function () {
+    return new Query<M>({ _all_ids, _group, _is_uniq, _filters, $sort, $partition }, function () {
       this.all = this
       this.$memory = $memory
     })
   }
 
-  public constructor(base, tap: (this: Query) => void) {
+  public constructor(base, tap: (this: Query<M>) => void) {
     this._step = 0
     this._copy(base)
     tap.call(this)
@@ -237,14 +237,14 @@ export class Query {
     if (_.isEqual(order, this.$sort[path])) {
       return this
     }
-    return new Query(this, function () {
+    return new Query<M>(this, function () {
       this.$sort = _.cloneDeep(this.$sort)
       this.$sort[path] = order
     })
   }
 
-  sort(...sort) {
-    return this.order({ sort })
+  sort(...sort): Query<M> {
+    return this.order({ sort }) as Query<M>
   }
 
   page(page_by: number) {
@@ -256,7 +256,7 @@ export class Query {
   form(...ids: ID[]) {
     const oo = this.find(...ids)
     if (oo) {
-      const datum: any = this.all.$memory[oo.id]
+      const datum: any = this.all.$memory[(oo as any).id]
       const o = datum.form || (datum.form = {})
       Reflect.setPrototypeOf(o, oo)
       return o
@@ -276,7 +276,7 @@ export class Query {
   }
 
   finds(ids: ID[]) {
-    const result: (Model | Struct)[] = []
+    const result: M[] = []
     for (let id of ids) {
       const o = this.hash[id]
       if (o) {
