@@ -23,15 +23,18 @@ typescript =
 
 module.exports =
   mode: 'production'
-  target: 'node' # Important
   devtool: 'source-map'
+
+  target: 'node'
+  externals: [nodeExternals()]
+
   entry:
-    "lib/index.min":  './src/index.coffee'
+    "lib/index.min":  './lib/index.coffee'
   output:
     path: current
-    filename: '[name].js' # Important
+    filename: '[name].js'
     library: 'Mem'
-    libraryTarget: 'umd' # Important
+    libraryTarget: 'umd'
 
   module:
     rules: [
@@ -41,4 +44,4 @@ module.exports =
   resolve:
     extensions: [ '.coffee', '.js' ]
 
-  externals: [nodeExternals()] # Important
+
