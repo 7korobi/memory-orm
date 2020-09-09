@@ -1,5 +1,5 @@
 import _ from 'lodash'
-import { Reduce, Memory, Filter, OrderCmd, ID, DIC, MODEL } from './type'
+import { Reduce, Memory, Filter, OrderCmd, ID, DIC, MODEL_DATA, QUERY } from './type'
 import { Model } from './model'
 import { Struct } from './struct'
 import { Finder } from './finder'
@@ -14,7 +14,7 @@ function set_for(list: string[]) {
   return set
 }
 
-function query_parser<O extends MODEL>(
+function query_parser<O extends MODEL_DATA>(
   base: Query<O>,
   req: any,
   cb: (q: Query<O>, target: string | null, request: any, path: (o: Model | Struct) => any) => void
@@ -39,7 +39,7 @@ function query_parser<O extends MODEL>(
   })
 }
 
-export class Query<O extends MODEL> {
+export class Query<O extends MODEL_DATA> {
   _is_uniq!: boolean
   _all_ids!: string[]
   _reduce?: Reduce
@@ -79,7 +79,7 @@ export class Query<O extends MODEL> {
     return Object.keys(this.hash)
   }
 
-  static build<O extends MODEL>({ $sort, $memory }) {
+  static build<O extends MODEL_DATA>({ $sort, $memory }) {
     const _group = null
     const _all_ids = null
     const _is_uniq = true
@@ -108,6 +108,7 @@ export class Query<O extends MODEL> {
     this.$page_by = $page_by
   }
 
+  in(req: QUERY): Query<O>
   in(req) {
     return query_parser(this, req, function (q, target, req, path) {
       if (req instanceof Array) {
@@ -138,9 +139,9 @@ export class Query<O extends MODEL> {
     })
   }
 
-  where(req: { [path: string]: any }): Query<O>
   where(req: (o: O) => any): Query<O>
-  where(req: any): Query<O> {
+  where(req: QUERY): Query<O>
+  where(req) {
     return query_parser(this, req, function (q, target, req, path) {
       if (req instanceof Array) {
         if ('id' === target) {

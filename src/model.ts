@@ -2,15 +2,15 @@ import { Name } from './type'
 
 export class Model extends Object {
   idx?: string
-  static $name: Name
   _id!: string
   get id() {
     return this._id
   }
 
-  static bless(o) {
+  static $name: Name
+
+  static bless(o: Object) {
     Reflect.setPrototypeOf(o, this.prototype)
-    return o
   }
 
   static deploy(struct) {}

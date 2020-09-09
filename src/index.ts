@@ -1,3 +1,2 @@
 export * from './mem'
-export { Rule } from './rule'
-export { Base } from './base'
+export * as Base from './base'

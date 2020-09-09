@@ -45,7 +45,7 @@ describe('work location', function () {
 
   test('drill-down UI query', function () {
     let q, item
-    q = Query.work_locations.where((o) => !o.work_location_id)
+    q = Query.work_locations.where((o) => !o.work_location_id).sort('zipcode', 'asc')
     expect(q.pluck('label')).toMatchSnapshot()
     item = q.where({ idx: '埼玉県' }).list[0]
     expect(item).toMatchSnapshot()

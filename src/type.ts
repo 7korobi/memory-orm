@@ -1,4 +1,4 @@
-import { Metadata } from './mem'
+import { Metadata, Rule } from './mem'
 import { Model } from './model'
 import { Struct } from './struct'
 import { Many, ObjectIteratee } from 'lodash'
@@ -21,7 +21,7 @@ export type LeafEmitter = Emitter<LeafCmd>
 export type OrderEmitter = Emitter<OrderCmd>
 
 export type DEPLOY<O, M> = {
-  (this: O, model: M, reduce: LeafEmitter, order: OrderEmitter): void
+  (this: O, cmd: { o: O; model: M; reduce: LeafEmitter; order: OrderEmitter }): void
 }
 
 export type Emitter<T> = {
@@ -84,7 +84,7 @@ export type OrderCmd = Partial<{
   sort: [Many<ObjectIteratee<any>>, Many<boolean | 'asc' | 'desc'>]
 }>
 
-export type ReduceOrder<O extends MODEL> = (number | Reduce)[] &
+export type ReduceOrder<O extends MODEL_DATA> = (number | Reduce)[] &
   Partial<{
     id: ID
     query: Query<O>
@@ -98,7 +98,7 @@ export type ReduceOrder<O extends MODEL> = (number | Reduce)[] &
 
 export type LeafCmd = Partial<{
   id: ID
-  list: string
+  list: boolean
   navi: string[]
   set: string | number
 
@@ -143,6 +143,7 @@ export type Reduce =
   | ReduceLeaf
 
 export interface PlainDatum {
+  [key: string]: any
   _id?: ID
   id?: ID
   idx?: string
@@ -152,7 +153,7 @@ export interface Memory {
   [key: string]: Datum
 }
 
-export interface SetContext<O extends MODEL> {
+export interface SetContext<O extends MODEL_DATA> {
   model: typeof Model | typeof Struct
   all: Query<O>
   base: Cache
@@ -163,9 +164,20 @@ export interface SetContext<O extends MODEL> {
   parent: Object | undefined
 }
 
-export type MODEL_CLASS = typeof Model | typeof Struct
+export type CLASS<O> = {
+  $name: Name
+  bless(data: any, query?: any): asserts data is O
+  new (): O
+  new (rule: any): O
+}
 
-export interface MODEL {
+export type QUERY = {
+  [path: string]: (string | number)[] | RegExp | string | number | boolean | null
+}
+
+export type MODEL = Model | Struct
+
+export interface MODEL_DATA {
   idx?: string
   id: string
 }

@@ -12,7 +12,7 @@ const { stories, faces } = require('./json/index.json')
 const test_is = (target, list, key, o) =>
   test(`${target} ${list} ${key}`, function () {
     const base = Mem.State.base(list)
-    return expect(base[target][key]).toEqual(o)
+    expect(base[target][key]).toEqual(o)
   })
 
 const meta = Mem.State.transaction(function () {
@@ -53,7 +53,7 @@ describe('sow oldlog', function () {
 
   test('sd sow_villages', function () {
     const data = Mem.Query.sow_villages.pluck('id', 'vpl.0')
-    return expect(
+    expect(
       data.map(([id, size]) => [id, size, Mem.Query.sow_villages.reduce.size_sd.standard(size)])
     ).toMatchSnapshot()
   })

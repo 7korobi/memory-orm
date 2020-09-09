@@ -1,9 +1,6 @@
-/*
- * decaffeinate suggestions:
- * DS102: Remove unnecessary code created because of implicit returns
- * Full docs: https://github.com/decaffeinate/decaffeinate/blob/master/docs/suggestions.md
- */
-const { Query, State } = require('../../lib/index')
+'use strict'
+Object.defineProperty(exports, '__esModule', { value: true })
+const index_1 = require('../../lib/index')
 const react = {
   state: {
     step_faces: 0,
@@ -12,12 +9,11 @@ const react = {
     step_chr_jobs: 0,
   },
   setState(state) {
-    return (Query.static.react = state)
+    return (index_1.Query.static.react = state)
   },
 }
-State.join({ react })
-
-Query.static = {
+index_1.State.join({ react })
+index_1.Query.static = {
   react: {},
   meta: {},
 }

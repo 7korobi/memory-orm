@@ -14,7 +14,7 @@ import {
   SetContext,
   Emitter,
   LeafCmd,
-  MODEL,
+  MODEL_DATA,
 } from './type'
 import { Model } from './model'
 import { Map } from './map'
@@ -28,7 +28,7 @@ type Emitters = {
   order: Emitter<OrderCmd>
   reduce: Emitter<LeafCmd> & { default: Emitter<LeafCmd>; default_origin: Emitter<LeafCmd> }
 }
-type ReduceContext<O extends MODEL> = {
+type ReduceContext<O extends MODEL_DATA> = {
   map: typeof Map
   query: Query<O>
   memory: Memory
@@ -38,7 +38,7 @@ type ReduceContext<O extends MODEL> = {
   }
 }
 
-function each_by_id<O extends MODEL>({ from }: SetContext<O>, process: IdProcess) {
+function each_by_id<O extends MODEL_DATA>({ from }: SetContext<O>, process: IdProcess) {
   if (from instanceof Array) {
     for (const item of from) {
       process((item as any).id || item)
@@ -46,7 +46,7 @@ function each_by_id<O extends MODEL>({ from }: SetContext<O>, process: IdProcess
   }
 }
 
-function each<O extends MODEL>({ from }: SetContext<O>, process: PlainProcess) {
+function each<O extends MODEL_DATA>({ from }: SetContext<O>, process: PlainProcess) {
   if (from instanceof Array) {
     for (const item of from) {
       process(item as PlainDatum)
@@ -72,33 +72,34 @@ function validate(item: any, meta: Metadata, chklist: Filter[]): boolean {
   return true
 }
 
-export class Finder<O extends MODEL> {
-  $name: Name
+export class Finder<O extends MODEL_DATA> {
+  $name!: Name
   all!: Query<O>
   model!: typeof Model | typeof Struct
   list!: typeof List
   map!: typeof Map
 
-  constructor($name: Name) {
-    this.$name = $name
-    State.notify(this.$name.list)
-  }
+  constructor() {}
 
   join({
+    $name,
+    model,
     all,
     map,
     list,
-    model,
   }: {
+    $name: Name
     all: Query<O>
     map: typeof Map
     list: typeof List
     model: typeof Model | typeof Struct
   }) {
+    this.$name = $name
     this.all = all
     this.map = map
     this.list = list
     this.model = model
+    State.notify(this.$name.list)
   }
 
   calculate(query: Query<O>, memory: Memory) {
@@ -252,11 +253,11 @@ export class Finder<O extends MODEL> {
     { item }: Datum,
     { reduce, order }: Emitters
   ) {
-    model.bless(item)
+    model.bless(item as any)
     parent && _.merge(item, parent)
     model.deploy.call(item, model)
     for (const deploy of deploys) {
-      deploy.call(item, model, reduce, order)
+      deploy.call(item, { o: item, model, reduce, order })
     }
   }
 

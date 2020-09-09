@@ -1,17 +1,7 @@
-import { Query } from './query'
-import { Set } from './set'
-import { Map } from './map'
-import { List } from './list'
-import { Model } from './model'
-import { Struct } from './struct'
-import { Finder } from './finder'
-
-export const Base = {
-  Finder,
-  Query,
-  Set,
-  Map,
-  List,
-  Model,
-  Struct,
-}
+export { Query } from './query'
+export { Set } from './set'
+export { Map } from './map'
+export { List } from './list'
+export { Model } from './model'
+export { Struct } from './struct'
+export { Finder } from './finder'

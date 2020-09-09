@@ -23306,7 +23306,7 @@ list [
 
 exports[`folders list snapshot 1`] = `
 list [
-  model {
+  Folder {
     "_id": "PERL_DEFAULT",
     "config": Object {
       "csid": Array [
@@ -23398,7 +23398,7 @@ list [
     },
     "disabled": true,
   },
-  model {
+  Folder {
     "_id": "PERL_NEW",
     "config": Object {
       "game": Array [
@@ -23421,7 +23421,7 @@ list [
     },
     "disabled": true,
   },
-  model {
+  Folder {
     "_id": "PERL_GAME",
     "config": Object {
       "cd_default": "戦",
@@ -23491,7 +23491,7 @@ list [
     },
     "disabled": true,
   },
-  model {
+  Folder {
     "_id": "UNION",
     "config": Object {
       "cd_default": "戦",
@@ -23582,7 +23582,7 @@ list [
     "rule": "UNION",
     "title": undefined,
   },
-  model {
+  Folder {
     "_id": "BRAID",
     "config": Object {
       "cd_default": "演",
@@ -23713,12 +23713,12 @@ list [
     },
     "title": undefined,
   },
-  model {
+  Folder {
     "_id": "all",
     "disabled": true,
     "nation": "- すべて -",
   },
-  model {
+  Folder {
     "_id": "TEST",
     "config": Object {
       "cd_default": "戦",
@@ -23880,7 +23880,7 @@ list [
     },
     "title": "人狼議事 手元テスト",
   },
-  model {
+  Folder {
     "_id": "PERJURY_OLD",
     "config": Object {
       "cd_default": "演",
@@ -24027,7 +24027,7 @@ list [
     "title": "人狼議事 Role Play braid perjury",
     "vid_code": "Bp",
   },
-  model {
+  Folder {
     "_id": "PRETENSE",
     "disabled": true,
     "epi_url": "/pretense/sow.cgi?ua=mb&vid=%s&turn=%s&move=page&pageno=1&row=50",
@@ -24042,7 +24042,7 @@ list [
     },
     "vid_code": "A",
   },
-  model {
+  Folder {
     "_id": "RP",
     "disabled": true,
     "epi_url": "/rp/sow.cgi?ua=mb&vid=%s&turn=%s&move=page&pageno=1&row=50",
@@ -24057,7 +24057,7 @@ list [
     },
     "vid_code": "",
   },
-  model {
+  Folder {
     "_id": "CABALA_OLD",
     "config": Object {
       "cd_default": "戦",
@@ -24210,7 +24210,7 @@ list [
     "title": "人狼議事 陰謀の苑",
     "vid_code": "C",
   },
-  model {
+  Folder {
     "_id": "ALLSTAR_OLD",
     "config": Object {
       "cd_default": "戦",
@@ -24368,7 +24368,7 @@ list [
     "title": "人狼議事 大乱闘オールスター",
     "vid_code": "A",
   },
-  model {
+  Folder {
     "_id": "ULTIMATE",
     "disabled": true,
     "epi_url": "/ultimate/sow.cgi?ua=mb&vid=%s&turn=%s&move=page&pageno=1&row=50",
@@ -24383,7 +24383,7 @@ list [
     },
     "vid_code": "",
   },
-  model {
+  Folder {
     "_id": "WOLF",
     "disabled": true,
     "epi_url": "/wolf/sow.cgi?ua=mb&vid=%s&turn=%s&move=page&pageno=1&row=50",
@@ -24399,7 +24399,7 @@ list [
     },
     "vid_code": "",
   },
-  model {
+  Folder {
     "_id": "PAN",
     "config": Object {
       "cd_default": "戦",
@@ -24557,7 +24557,7 @@ list [
     },
     "title": "似顔絵人狼",
   },
-  model {
+  Folder {
     "_id": "MORPHE",
     "config": Object {
       "cd_default": "戦",
@@ -24714,7 +24714,7 @@ list [
     "title": "人狼議事 夢の形",
     "vid_code": "M",
   },
-  model {
+  Folder {
     "_id": "SOYBEAN",
     "config": Object {
       "cd_default": "演",
@@ -24880,7 +24880,7 @@ list [
     "title": "人狼議事 鯖の味噌煮",
     "vid_code": "Bs",
   },
-  model {
+  Folder {
     "_id": "CIEL",
     "config": Object {
       "cd_default": "演",
@@ -25040,7 +25040,7 @@ list [
 - Role Play Cheat -",
     "vid_code": "Cc",
   },
-  model {
+  Folder {
     "_id": "PERJURY",
     "config": Object {
       "cd_default": "演",
@@ -25199,7 +25199,7 @@ list [
 - Role Play braid -",
     "vid_code": "Bp",
   },
-  model {
+  Folder {
     "_id": "XEBEC",
     "config": Object {
       "cd_default": "演",
@@ -25357,7 +25357,7 @@ list [
 - Role Play braid -",
     "vid_code": "Bx",
   },
-  model {
+  Folder {
     "_id": "CRAZY",
     "config": Object {
       "cd_default": "演",
@@ -25513,7 +25513,7 @@ list [
 - Role Play braid -",
     "vid_code": "Bc",
   },
-  model {
+  Folder {
     "_id": "CABALA",
     "config": Object {
       "cd_default": "戦",
@@ -25670,7 +25670,7 @@ list [
     "title": "人狼議事 Cabala Cafe",
     "vid_code": "C",
   },
-  model {
+  Folder {
     "_id": "ALLSTAR",
     "config": Object {
       "cd_default": "戦",
@@ -25832,14 +25832,14 @@ list [
     "title": "人狼議事 大乱闘All☆Star",
     "vid_code": "A",
   },
-  model {
+  Folder {
     "_id": "LOBBY_OLD",
     "disabled": true,
     "folder": "LOBBY_OLD",
     "nation": "人狼議事旧ロビー",
     "vid_code": "O",
   },
-  model {
+  Folder {
     "_id": "LOBBY",
     "config": Object {
       "cd_default": "戦",
@@ -26006,7 +26006,7 @@ list [
     "title": "人狼議事 ロビー",
     "vid_code": "L",
   },
-  model {
+  Folder {
     "_id": "OFFPARTY",
     "disabled": true,
     "epi_url": "/kitchen/sow.cgi?ua=mb&vid=%s&turn=%s&move=page&pageno=1&row=50",

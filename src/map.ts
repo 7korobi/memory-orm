@@ -1,7 +1,7 @@
 import _ from 'lodash'
 import { Query } from './query'
 import * as Mem from './mem'
-import { LeafCmd, ReduceLeaf, OrderCmd, Reduce, ReduceOrder, Name, MODEL } from './type'
+import { LeafCmd, ReduceLeaf, OrderCmd, Reduce, ReduceOrder, Name, MODEL_DATA, CLASS } from './type'
 import { List } from './list'
 
 function Dash(o, keys) {
@@ -63,7 +63,7 @@ function navi_reduce(root) {
   return root
 }
 
-export class Map<O extends MODEL> {
+export class Map<O extends MODEL_DATA> {
   static $name: Name
   static bless(o) {
     Reflect.setPrototypeOf(o, this.prototype)
@@ -97,7 +97,7 @@ export class Map<O extends MODEL> {
     }
   }
 
-  static reduce<O extends MODEL>(
+  static reduce<O extends MODEL_DATA>(
     query: Query<O>,
     path: string,
     item: any,
@@ -154,7 +154,12 @@ export class Map<O extends MODEL> {
     }
   }
 
-  static finish<O extends MODEL>(query: Query<O>, path: string, o: ReduceLeaf, list: typeof List) {
+  static finish<O extends MODEL_DATA>(
+    query: Query<O>,
+    path: string,
+    o: ReduceLeaf,
+    list: typeof List
+  ) {
     if (!o) {
       console.error('not found $format', path, query, list)
       return
@@ -194,7 +199,7 @@ export class Map<O extends MODEL> {
     }
   }
 
-  static order<O extends MODEL>(
+  static order<O extends MODEL_DATA>(
     query: Query<O>,
     path: string,
     from: Reduce,
@@ -301,7 +306,7 @@ export class Map<O extends MODEL> {
     return o
   }
 
-  static dash<O extends MODEL>(
+  static dash<O extends MODEL_DATA>(
     query: Query<O>,
     path: string,
     from: ReduceOrder<O>,
@@ -321,7 +326,7 @@ export class Map<O extends MODEL> {
     return o
   }
 
-  static post_proc<O extends MODEL>(
+  static post_proc<O extends MODEL_DATA>(
     query: Query<O>,
     path: string,
     from: ReduceOrder<O>,

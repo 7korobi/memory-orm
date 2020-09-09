@@ -3,13 +3,13 @@ import * as Mem from './mem'
 import { Model } from './model'
 import { List } from './list'
 import { Struct } from './struct'
-import { Name, Cache, DEPLOY, RelationCmd, DIC, MODEL, MODEL_CLASS } from './type'
+import { Name, Cache, DEPLOY, RelationCmd, DIC, CLASS, MODEL_DATA } from './type'
 import { Set } from './set'
 import { Map } from './map'
 import { Query } from './query'
 import { Finder } from './finder'
 
-function rename(base: string) {
+function rename(base: string): Name {
   base = _.snakeCase(base).replace(/s$/, '')
   const name = Mem.Name[base]
   if (name) {
@@ -27,11 +27,11 @@ function rename(base: string) {
   return o
 }
 
-function method<O extends MODEL, M extends MODEL_CLASS>(r: Rule<O, M>, key: string, o: Object) {
+function method<O extends MODEL_DATA, M extends CLASS<O>>(r: Rule<O, M>, key: string, o: Object) {
   Object.defineProperty(r.model.prototype, key, o)
 }
 
-export class Rule<O extends MODEL, M extends MODEL_CLASS> {
+export class Rule<O extends MODEL_DATA, M extends CLASS<O>> {
   $name: Name
   state: Cache
   all: Query<O>
@@ -41,14 +41,14 @@ export class Rule<O extends MODEL, M extends MODEL_CLASS> {
   set!: any
   map!: any
 
-  constructor(base: string, modelClass?: M) {
+  constructor(base: string, modelClass?: CLASS<O>) {
     this.$name = rename(base)
     this.state = Mem.State.base(this.$name.list)
 
     this.all = Query.build<O>(this.state)
     this.all.$sort['_reduce.list'] = {}
     this.all._cache = {}
-    this.all._finder = new Finder(this.$name)
+    this.all._finder = new Finder<O>()
 
     this.depend_on(this.$name.list)
 
@@ -255,16 +255,16 @@ export class Rule<O extends MODEL, M extends MODEL_CLASS> {
       this.belongs_to(key)
     }
 
-    this.deploy(function (model, reduce, order) {
-      const subids = this.id!.split('-')
-      this.idx = subids[subids.length - 1]
+    this.deploy(({ o, reduce }) => {
+      const subids = o.id!.split('-')
+      o.idx = subids[subids.length - 1]
       for (let idx = 0; idx < keys.length; idx++) {
         const key = keys[idx]
-        this[`${key}_id`] = subids.slice(0, idx + 1).join('-')
+        o[`${key}_id`] = subids.slice(0, idx + 1).join('-')
       }
 
       if (base && keys.length + 1 < subids.length) {
-        this[`${base}_id`] = subids.slice(0, -1).join('-')
+        o[`${base}_id`] = subids.slice(0, -1).join('-')
       }
 
       reduce('id_tree', { navi: subids })

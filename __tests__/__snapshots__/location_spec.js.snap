@@ -144,7 +144,7 @@ list [
 `;
 
 exports[`work location drill-down UI query 2`] = `
-model {
+WorkLocation {
   "_id": "埼玉県",
   "idx": "埼玉県",
   "label": "埼玉",
@@ -208,7 +208,7 @@ list [
 `;
 
 exports[`work location drill-down UI query 4`] = `
-model {
+WorkLocation {
   "_id": "埼玉県-さいたま市",
   "idx": "さいたま市",
   "label": "さいたま",
@@ -235,7 +235,7 @@ list [
 `;
 
 exports[`work location drill-down UI query 6`] = `
-model {
+WorkLocation {
   "_id": "埼玉県-さいたま市-北区",
   "idx": "北区",
   "label": "北",
@@ -266,7 +266,7 @@ list [
 `;
 
 exports[`work location drill-down UI query 8`] = `
-model {
+WorkLocation {
   "_id": "埼玉県-さいたま市-北区-宮原町",
   "idx": "宮原町",
   "jiscode": "11102",
@@ -282,7 +282,7 @@ model {
 exports[`work location drill-down UI query 9`] = `list []`;
 
 exports[`work location id longest no zip 1`] = `
-model {
+WorkLocation {
   "_id": "大阪府-大阪市-北区-大淀中-梅田-スカイビルタワー-イースト",
   "idx": "イースト",
   "label": "イースト",
@@ -293,7 +293,7 @@ model {
 `;
 
 exports[`work location id longest no zip 2`] = `
-model {
+WorkLocation {
   "_id": "大阪府-大阪市-北区-大淀中-梅田-スカイビルタワー",
   "idx": "スカイビルタワー",
   "label": "スカイビルタワー",
@@ -304,7 +304,7 @@ model {
 `;
 
 exports[`work location id longest no zip 3`] = `
-model {
+WorkLocation {
   "_id": "大阪府-大阪市-北区-大淀中-梅田",
   "idx": "梅田",
   "label": "梅田",
@@ -315,7 +315,7 @@ model {
 `;
 
 exports[`work location id longest no zip 4`] = `
-model {
+WorkLocation {
   "_id": "大阪府-大阪市-北区-大淀中",
   "idx": "大淀中",
   "label": "大淀中",
@@ -326,7 +326,7 @@ model {
 `;
 
 exports[`work location id longest no zip 5`] = `
-model {
+WorkLocation {
   "_id": "大阪府-大阪市-北区",
   "idx": "北区",
   "label": "北",
@@ -337,7 +337,7 @@ model {
 `;
 
 exports[`work location id longest no zip 6`] = `
-model {
+WorkLocation {
   "_id": "大阪府-大阪市",
   "idx": "大阪市",
   "label": "大阪",
@@ -348,7 +348,7 @@ model {
 `;
 
 exports[`work location id longest no zip 7`] = `
-model {
+WorkLocation {
   "_id": "大阪府",
   "idx": "大阪府",
   "label": "大阪",
@@ -358,7 +358,7 @@ model {
 `;
 
 exports[`work location id longest with zip 1`] = `
-model {
+WorkLocation {
   "_id": "大阪府-大阪市-北区-大淀中-梅田-スカイビルタワー-イースト-（１階）",
   "idx": "（１階）",
   "jiscode": "27127",
@@ -372,7 +372,7 @@ model {
 `;
 
 exports[`work location id longest with zip 2`] = `
-model {
+WorkLocation {
   "_id": "大阪府-大阪市-北区-大淀中-梅田-スカイビルタワー-イースト",
   "idx": "イースト",
   "label": "イースト",
@@ -383,7 +383,7 @@ model {
 `;
 
 exports[`work location id longest with zip 3`] = `
-model {
+WorkLocation {
   "_id": "大阪府-大阪市-北区-大淀中-梅田-スカイビルタワー",
   "idx": "スカイビルタワー",
   "label": "スカイビルタワー",
@@ -394,7 +394,7 @@ model {
 `;
 
 exports[`work location id longest with zip 4`] = `
-model {
+WorkLocation {
   "_id": "大阪府-大阪市-北区-大淀中-梅田",
   "idx": "梅田",
   "label": "梅田",
@@ -405,7 +405,7 @@ model {
 `;
 
 exports[`work location id longest with zip 5`] = `
-model {
+WorkLocation {
   "_id": "大阪府-大阪市-北区-大淀中",
   "idx": "大淀中",
   "label": "大淀中",
@@ -416,7 +416,7 @@ model {
 `;
 
 exports[`work location id longest with zip 6`] = `
-model {
+WorkLocation {
   "_id": "大阪府-大阪市-北区",
   "idx": "北区",
   "label": "北",
@@ -427,7 +427,7 @@ model {
 `;
 
 exports[`work location id longest with zip 7`] = `
-model {
+WorkLocation {
   "_id": "大阪府-大阪市",
   "idx": "大阪市",
   "label": "大阪",
@@ -438,7 +438,7 @@ model {
 `;
 
 exports[`work location id longest with zip 8`] = `
-model {
+WorkLocation {
   "_id": "大阪府",
   "idx": "大阪府",
   "label": "大阪",

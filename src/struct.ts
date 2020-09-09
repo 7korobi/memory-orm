@@ -1,15 +1,15 @@
 import { Name } from './type'
 
 export class Struct extends Array {
-  static $name: Name
   idx?: string
   get id() {
     return this[0]
   }
 
-  static bless(o) {
+  static $name: Name
+
+  static bless(o: any[]) {
     Reflect.setPrototypeOf(o, this.prototype)
-    return o
   }
 
   static deploy(struct) {}

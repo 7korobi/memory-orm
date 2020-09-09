@@ -1,33 +1,37 @@
-/*
- * decaffeinate suggestions:
- * DS102: Remove unnecessary code created because of implicit returns
- * Full docs: https://github.com/decaffeinate/decaffeinate/blob/master/docs/suggestions.md
- */
-const { Set, Model, Query, Rule } = require('../../lib/index')
+'use strict'
 
-new Rule('marker').schema(function () {
-  this.sort('write_at', 'desc')
-  this.order('mark_at', { sort: ['max', 'desc'] })
+const { Rule } = require('../../lib/index')
+const { Model } = require('../../lib/base')
+
+class Marker extends Model {
+  get anker() {
+    return '-' + this.id.split('-').slice(2, 5).join('-')
+  }
+}
+class Icon extends Model {}
+
+exports.Marker = Marker
+exports.Icon = Icon
+
+new Rule('marker', Marker).schema(function () {
   this.scope((all) => ({
     own(uid) {
       return all.where({ uid })
     },
   }))
-
-  return (this.model = class model extends this.model {
-    static map_reduce(o, emit) {
-      return emit('mark_at', o.book_id, { max: o.mark_at })
-    }
+  this.order('mark_at', { sort: ['max', 'desc'] })
+  this.order('list', { sort: ['write_at', 'desc'] })
+  this.deploy(({ o, reduce }) => {
+    reduce('mark_at', o.book_id, { max: o.mark_at })
   })
 })
-
-new Rule('icon').schema(function () {
+new Rule('icon', Icon).schema(function () {
   this.belongs_to('book')
   this.belongs_to('potof')
-
-  return this.scope((all) => ({
-    own(id) {
-      return all.where({ id })
+  this.scope((all) => ({
+    own(_id) {
+      return all.where({ _id })
     },
   }))
 })
+//# sourceMappingURL=activity.js.map

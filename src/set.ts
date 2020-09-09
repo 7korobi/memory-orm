@@ -4,15 +4,15 @@ import { Query } from './query'
 import { Finder } from './finder'
 import { Model } from './model'
 import { Struct } from './struct'
-import { Name, PlainDatum, PlainData, MODEL } from './type'
+import { Name, PlainDatum, PlainData, MODEL_DATA, CLASS } from './type'
 
-export class Set<O extends MODEL> {
+export class Set<O extends MODEL_DATA> {
   static $name: Name
 
   $name: Name
   all: Query<O>
   finder: Finder<O>
-  model: typeof Model | typeof Struct
+  model: CLASS<O>
 
   constructor({ $name, all, model }) {
     this.$name = $name
@@ -53,29 +53,29 @@ export class Set<O extends MODEL> {
   }
 }
 
-function f_common<O extends MODEL>(type: string) {
-  return function (this: Set<O>, list: PlainData, parent?: Object) {
+function f_common<O extends MODEL_DATA>(type: string) {
+  return function (this: Set<O>, list: Partial<O>[], parent?: Object) {
     const is_hit = this.finder.data_set(type, list, parent)
     this.clear_cache(is_hit)
   }
 }
 
-function f_update<O extends MODEL>(this: Set<O>, list: PlainData, parent: Object) {
+function f_update<O extends MODEL_DATA>(this: Set<O>, list: Partial<O>[], parent: Object) {
   if (parent) {
     const is_hit = this.finder.data_set('update', list, parent)
     this.clear_cache(is_hit)
   }
 }
 
-function f_item<O extends MODEL>(cb) {
-  return function (this: Set<O>, item: PlainDatum, parent?: Object) {
+function f_item<O extends MODEL_DATA>(cb) {
+  return function (this: Set<O>, item: Partial<O>, parent?: Object) {
     if (item) {
       cb.call(this, [item], parent)
     }
   }
 }
 
-function f_clear<O extends MODEL>(this: Set<O>, is_hit = true) {
+function f_clear<O extends MODEL_DATA>(this: Set<O>, is_hit = true) {
   if (is_hit) {
     for (const name of this.$name.depends) {
       State.notify(name)

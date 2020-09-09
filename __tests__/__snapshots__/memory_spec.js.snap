@@ -56442,7 +56442,7 @@ Object {
         },
       ],
     ],
-    "item": model {
+    "item": Folder {
       "_id": "ALLSTAR",
       "config": Object {
         "cd_default": "戦",
@@ -56615,7 +56615,7 @@ Object {
         },
       ],
     ],
-    "item": model {
+    "item": Folder {
       "_id": "ALLSTAR_OLD",
       "config": Object {
         "cd_default": "戦",
@@ -56784,7 +56784,7 @@ Object {
         },
       ],
     ],
-    "item": model {
+    "item": Folder {
       "_id": "BRAID",
       "config": Object {
         "cd_default": "演",
@@ -56926,7 +56926,7 @@ Object {
         },
       ],
     ],
-    "item": model {
+    "item": Folder {
       "_id": "CABALA",
       "config": Object {
         "cd_default": "戦",
@@ -57094,7 +57094,7 @@ Object {
         },
       ],
     ],
-    "item": model {
+    "item": Folder {
       "_id": "CABALA_OLD",
       "config": Object {
         "cd_default": "戦",
@@ -57258,7 +57258,7 @@ Object {
         },
       ],
     ],
-    "item": model {
+    "item": Folder {
       "_id": "CIEL",
       "config": Object {
         "cd_default": "演",
@@ -57429,7 +57429,7 @@ Object {
         },
       ],
     ],
-    "item": model {
+    "item": Folder {
       "_id": "CRAZY",
       "config": Object {
         "cd_default": "演",
@@ -57596,7 +57596,7 @@ Object {
         },
       ],
     ],
-    "item": model {
+    "item": Folder {
       "_id": "LOBBY",
       "config": Object {
         "cd_default": "戦",
@@ -57774,7 +57774,7 @@ Object {
         },
       ],
     ],
-    "item": model {
+    "item": Folder {
       "_id": "LOBBY_OLD",
       "disabled": true,
       "folder": "LOBBY_OLD",
@@ -57792,7 +57792,7 @@ Object {
         },
       ],
     ],
-    "item": model {
+    "item": Folder {
       "_id": "MORPHE",
       "config": Object {
         "cd_default": "戦",
@@ -57960,7 +57960,7 @@ Object {
         },
       ],
     ],
-    "item": model {
+    "item": Folder {
       "_id": "OFFPARTY",
       "disabled": true,
       "epi_url": "/kitchen/sow.cgi?ua=mb&vid=%s&turn=%s&move=page&pageno=1&row=50",
@@ -57987,7 +57987,7 @@ Object {
         },
       ],
     ],
-    "item": model {
+    "item": Folder {
       "_id": "PAN",
       "config": Object {
         "cd_default": "戦",
@@ -58156,7 +58156,7 @@ Object {
         },
       ],
     ],
-    "item": model {
+    "item": Folder {
       "_id": "PERJURY",
       "config": Object {
         "cd_default": "演",
@@ -58326,7 +58326,7 @@ Object {
         },
       ],
     ],
-    "item": model {
+    "item": Folder {
       "_id": "PERJURY_OLD",
       "config": Object {
         "cd_default": "演",
@@ -58484,7 +58484,7 @@ Object {
         },
       ],
     ],
-    "item": model {
+    "item": Folder {
       "_id": "PERL_DEFAULT",
       "config": Object {
         "csid": Array [
@@ -58587,7 +58587,7 @@ Object {
         },
       ],
     ],
-    "item": model {
+    "item": Folder {
       "_id": "PERL_GAME",
       "config": Object {
         "cd_default": "戦",
@@ -58668,7 +58668,7 @@ Object {
         },
       ],
     ],
-    "item": model {
+    "item": Folder {
       "_id": "PERL_NEW",
       "config": Object {
         "game": Array [
@@ -58702,7 +58702,7 @@ Object {
         },
       ],
     ],
-    "item": model {
+    "item": Folder {
       "_id": "PRETENSE",
       "disabled": true,
       "epi_url": "/pretense/sow.cgi?ua=mb&vid=%s&turn=%s&move=page&pageno=1&row=50",
@@ -58728,7 +58728,7 @@ Object {
         },
       ],
     ],
-    "item": model {
+    "item": Folder {
       "_id": "RP",
       "disabled": true,
       "epi_url": "/rp/sow.cgi?ua=mb&vid=%s&turn=%s&move=page&pageno=1&row=50",
@@ -58754,7 +58754,7 @@ Object {
         },
       ],
     ],
-    "item": model {
+    "item": Folder {
       "_id": "SOYBEAN",
       "config": Object {
         "cd_default": "演",
@@ -58931,7 +58931,7 @@ Object {
         },
       ],
     ],
-    "item": model {
+    "item": Folder {
       "_id": "TEST",
       "config": Object {
         "cd_default": "戦",
@@ -59104,7 +59104,7 @@ Object {
         },
       ],
     ],
-    "item": model {
+    "item": Folder {
       "_id": "ULTIMATE",
       "disabled": true,
       "epi_url": "/ultimate/sow.cgi?ua=mb&vid=%s&turn=%s&move=page&pageno=1&row=50",
@@ -59130,7 +59130,7 @@ Object {
         },
       ],
     ],
-    "item": model {
+    "item": Folder {
       "_id": "UNION",
       "config": Object {
         "cd_default": "戦",
@@ -59232,7 +59232,7 @@ Object {
         },
       ],
     ],
-    "item": model {
+    "item": Folder {
       "_id": "WOLF",
       "disabled": true,
       "epi_url": "/wolf/sow.cgi?ua=mb&vid=%s&turn=%s&move=page&pageno=1&row=50",
@@ -59259,7 +59259,7 @@ Object {
         },
       ],
     ],
-    "item": model {
+    "item": Folder {
       "_id": "XEBEC",
       "config": Object {
         "cd_default": "演",
@@ -59428,7 +59428,7 @@ Object {
         },
       ],
     ],
-    "item": model {
+    "item": Folder {
       "_id": "all",
       "disabled": true,
       "nation": "- すべて -",
