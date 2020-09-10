@@ -4,7 +4,6 @@ import { Datum } from './datum'
 import {
   Name,
   PlainData,
-  PlainDatum,
   Memory,
   Reduce,
   Filter,
@@ -23,7 +22,7 @@ import { List } from './list'
 import { Query } from './query'
 
 type IdProcess = (item: string) => void
-type PlainProcess = (item: PlainDatum) => void
+type PlainProcess<O> = (item: Partial<O>) => void
 type Emitters = {
   order: Emitter<OrderCmd>
   reduce: Emitter<LeafCmd> & { default: Emitter<LeafCmd>; default_origin: Emitter<LeafCmd> }
@@ -46,14 +45,14 @@ function each_by_id<O extends MODEL_DATA>({ from }: SetContext<O>, process: IdPr
   }
 }
 
-function each<O extends MODEL_DATA>({ from }: SetContext<O>, process: PlainProcess) {
+function each<O extends MODEL_DATA>({ from }: SetContext<O>, process: PlainProcess<O>) {
   if (from instanceof Array) {
     for (const item of from) {
-      process(item as PlainDatum)
+      process(item)
     }
   } else if (from instanceof Object) {
     for (const id in from) {
-      const item: PlainDatum = from[id]
+      const item = from[id]
       item._id = id
       process(item)
     }
@@ -186,7 +185,7 @@ export class Finder<O extends MODEL_DATA> {
     }
   }
 
-  data_set(type: string, from: PlainData, parent: Object | undefined) {
+  data_set(type: string, from: PlainData<O>, parent: Object | undefined) {
     const meta = State.meta()
     const base = State.base(this.$name.list)
     const journal = State.journal(this.$name.list)
@@ -289,7 +288,7 @@ export class Finder<O extends MODEL_DATA> {
   merge(ctx: SetContext<O>) {
     let is_hit = false
     each(ctx, (item) => {
-      const o = new Datum(ctx.meta, item)
+      const o = new Datum(ctx.meta, item as any)
       const emit = this.data_emitter(ctx, o)
       this.data_init(ctx, o, emit)
       this.data_entry(ctx, o, emit)

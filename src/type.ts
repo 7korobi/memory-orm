@@ -7,18 +7,18 @@ import { Datum } from './datum'
 
 type NAVI_LEAF = number
 
+export type ID = string
+export type PATH = string | number
+export type LeafEmitter = Emitter<LeafCmd>
+export type OrderEmitter = Emitter<OrderCmd>
+
 export type NAVI = {
   [key: string]: NAVI | NAVI_LEAF
 }
 
-export type ID = string
-
 export type DIC<T> = {
   [key: string]: T
 }
-
-export type LeafEmitter = Emitter<LeafCmd>
-export type OrderEmitter = Emitter<OrderCmd>
 
 export type DEPLOY<O, M> = {
   (this: O, cmd: { o: O; model: M; reduce: LeafEmitter; order: OrderEmitter }): void
@@ -26,12 +26,12 @@ export type DEPLOY<O, M> = {
 
 export type Emitter<T> = {
   (cmd: T): void
-  (k1: string, cmd: T): void
-  (k1: string, k2: string, cmd: T): void
-  (k1: string, k2: string, k3: string, cmd: T): void
-  (k1: string, k2: string, k3: string, k4: string, cmd: T): void
-  (k1: string, k2: string, k3: string, k4: string, k5: string, cmd: T): void
-  (k1: string, k2: string, k3: string, k4: string, k5: string, k6: string, cmd: T): void
+  (k1: PATH, cmd: T): void
+  (k1: PATH, k2: PATH, cmd: T): void
+  (k1: PATH, k2: PATH, k3: PATH, cmd: T): void
+  (k1: PATH, k2: PATH, k3: PATH, k4: PATH, cmd: T): void
+  (k1: PATH, k2: PATH, k3: PATH, k4: PATH, k5: PATH, cmd: T): void
+  (k1: PATH, k2: PATH, k3: PATH, k4: PATH, k5: PATH, k6: PATH, cmd: T): void
 }
 
 export type Name = {
@@ -52,12 +52,6 @@ export type Cache = {
     [path: string]: OrderCmd
   }
 }
-
-export type PlainData =
-  | PlainDatum[]
-  | {
-      [id: string]: PlainDatum
-    }
 
 export type Filter = {
   (item: any, meta: Metadata): boolean
@@ -142,12 +136,7 @@ export type Reduce =
     }
   | ReduceLeaf
 
-export interface PlainDatum {
-  [key: string]: any
-  _id?: ID
-  id?: ID
-  idx?: string
-}
+export type PlainData<O> = Partial<O>[] | { [id: string]: Partial<O> }
 
 export interface Memory {
   [key: string]: Datum
@@ -160,7 +149,7 @@ export interface SetContext<O extends MODEL_DATA> {
   journal: Cache
   meta: Metadata
   deploys: Name['deploys']
-  from: PlainData | string[]
+  from: PlainData<O>
   parent: Object | undefined
 }
 
@@ -179,5 +168,6 @@ export type MODEL = Model | Struct
 
 export interface MODEL_DATA {
   idx?: string
+  _id?: string
   id: string
 }

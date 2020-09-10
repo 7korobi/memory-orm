@@ -1,5 +1,5 @@
 import { Metadata } from './mem'
-import { LeafCmd, PlainDatum, MODEL, CLASS } from './type'
+import { LeafCmd, MODEL, CLASS, MODEL_DATA } from './type'
 
 export class Datum {
   item!: MODEL
@@ -10,7 +10,7 @@ export class Datum {
     o.meta = meta
   }
 
-  constructor(meta: Metadata, item: PlainDatum) {
+  constructor(meta: Metadata, item: MODEL_DATA) {
     this.meta = meta
     this.item = item as any
     this.$group = []

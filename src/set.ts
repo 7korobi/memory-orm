@@ -2,9 +2,7 @@ import _ from 'lodash'
 import { State } from './mem'
 import { Query } from './query'
 import { Finder } from './finder'
-import { Model } from './model'
-import { Struct } from './struct'
-import { Name, PlainDatum, PlainData, MODEL_DATA, CLASS } from './type'
+import { Name, MODEL_DATA, CLASS, PlainData } from './type'
 
 export class Set<O extends MODEL_DATA> {
   static $name: Name
@@ -54,13 +52,13 @@ export class Set<O extends MODEL_DATA> {
 }
 
 function f_common<O extends MODEL_DATA>(type: string) {
-  return function (this: Set<O>, list: Partial<O>[], parent?: Object) {
+  return function (this: Set<O>, list: PlainData<O>, parent?: Object) {
     const is_hit = this.finder.data_set(type, list, parent)
     this.clear_cache(is_hit)
   }
 }
 
-function f_update<O extends MODEL_DATA>(this: Set<O>, list: Partial<O>[], parent: Object) {
+function f_update<O extends MODEL_DATA>(this: Set<O>, list: PlainData<O>, parent: Object) {
   if (parent) {
     const is_hit = this.finder.data_set('update', list, parent)
     this.clear_cache(is_hit)

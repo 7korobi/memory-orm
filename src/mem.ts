@@ -1,5 +1,5 @@
 import _ from 'lodash'
-import { Name as NameBase, DIC, Cache, PlainData, PlainDatum } from './type'
+import { Name as NameBase, DIC, Cache } from './type'
 import { Set as SetBase } from './set'
 import { Map as MapBase } from './map'
 import { Query as QueryBase } from './query'
