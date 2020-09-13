@@ -7,7 +7,7 @@ import { Datum } from './datum'
 
 type NAVI_LEAF = number
 
-export type ID = string
+export type ID = string | number
 export type PATH = string | number
 export type LeafEmitter = Emitter<LeafCmd>
 export type OrderEmitter = Emitter<OrderCmd>

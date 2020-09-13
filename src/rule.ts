@@ -3,7 +3,7 @@ import * as Mem from './mem'
 import { Model } from './model'
 import { List } from './list'
 import { Struct } from './struct'
-import { Name, Cache, DEPLOY, RelationCmd, DIC, CLASS, MODEL_DATA } from './type'
+import { Name, Cache, DEPLOY, RelationCmd, DIC, CLASS, MODEL_DATA, ID } from './type'
 import { Set } from './set'
 import { Map } from './map'
 import { Query } from './query'
@@ -159,7 +159,7 @@ export class Rule<O extends MODEL_DATA, M extends CLASS<O>> {
     this.default_scope((all) => all.order(...order))
   }
 
-  relation_to_one(key: string, target: string, ik: string, else_id?: string) {
+  relation_to_one(key: string, target: string, ik: ID, else_id?: ID) {
     method(this, key, {
       enumerable: true,
       get() {
@@ -169,7 +169,7 @@ export class Rule<O extends MODEL_DATA, M extends CLASS<O>> {
     })
   }
 
-  relation_to_many(key: string, target: string, ik: string, cmd: string, qk: string) {
+  relation_to_many(key: string, target: string, ik: ID, cmd: string, qk: ID) {
     const { all } = this
     this.use_cache(key, (id) => Mem.Query[target].distinct(false)[cmd]({ [qk]: id }))
 
@@ -181,7 +181,7 @@ export class Rule<O extends MODEL_DATA, M extends CLASS<O>> {
     })
   }
 
-  relation_tree(key: string, ik: string) {
+  relation_tree(key: string, ik: ID) {
     const { all } = this
     this.use_cache(key, (id: string, n: number) => {
       if (n) {

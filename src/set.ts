@@ -22,12 +22,12 @@ export class Set<O extends MODEL_DATA> {
   set = f_common<O>('reset')
   reset = f_common<O>('reset')
   merge = f_common<O>('merge')
-  add = f_item(f_common<O>('merge'))
-  append = f_item(f_common<O>('merge'))
+  add = f_item<O>(f_common<O>('merge'))
+  append = f_item<O>(f_common<O>('merge'))
 
   reject = f_common<O>('remove')
-  del = f_item(f_common<O>('remove'))
-  remove = f_item(f_common<O>('remove'))
+  del = f_item<O>(f_common<O>('remove'))
+  remove = f_item<O>(f_common<O>('remove'))
 
   updates = f_update
   update = f_item<O>(f_update)
