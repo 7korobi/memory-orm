@@ -1,9 +1,10 @@
 import { Metadata, Rule } from './mem'
 import { Model } from './model'
 import { Struct } from './struct'
-import { Many, ObjectIteratee } from 'lodash'
+import { ListIteratee, ListIterator, Many, NotVoid, ObjectIteratee, ObjectIterator } from 'lodash'
 import { Query } from './query'
 import { Datum } from './datum'
+import { List } from './list'
 
 type NAVI_LEAF = number
 
@@ -37,7 +38,7 @@ export type Emitter<T> = {
 export type NameBase = {
   base: string
   list: string
-  id: ID
+  id: string
   ids: string
   deploys: DEPLOY<any, any>[]
   depends: (() => void)[]
@@ -66,6 +67,13 @@ export type RelationCmd = Partial<{
   reverse: boolean
 }>
 
+export type SortCmd = Many<
+  | ListIterator<any, NotVoid>
+  | ListIteratee<any>
+  | ObjectIterator<any, NotVoid>
+  | ObjectIteratee<any>
+>
+
 export type OrderCmd = Partial<{
   belongs_to: string
   pluck: string
@@ -75,10 +83,10 @@ export type OrderCmd = Partial<{
   quantile: number
   mode: boolean
   page: boolean
-  sort: [Many<ObjectIteratee<any>>, Many<boolean | 'asc' | 'desc'>]
+  sort: [SortCmd] | [SortCmd, Many<boolean | 'asc' | 'desc'>]
 }>
 
-export type ReduceOrder<O extends MODEL_DATA> = (number | Reduce)[] &
+export type ReduceOrder<O extends MODEL_DATA> = List<O> &
   Partial<{
     id: ID
     query: Query<O>

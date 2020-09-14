@@ -289,7 +289,7 @@ export class Query<O extends MODEL_DATA> {
     return result
   }
 
-  pluck(...ids: ID[]) {
+  pluck(...keys: ID[]) {
     return this.list.pluck(...arguments)
   }
 }

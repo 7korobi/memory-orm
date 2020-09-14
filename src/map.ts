@@ -209,7 +209,7 @@ export class Map<O extends MODEL_DATA> {
     cmd: OrderCmd,
     list: typeof List
   ) {
-    let o1: Reduce[] = from as any
+    let o1 = from
     if (cmd.belongs_to) {
       if (o1 instanceof Array) {
         for (const val of o1) {
@@ -230,15 +230,15 @@ export class Map<O extends MODEL_DATA> {
       }
     }
 
-    let o: ReduceOrder<O> = o1
+    let o = o1 as ReduceOrder<O>
     if (cmd.sort) {
-      o = _.orderBy(o, ...cmd.sort)
+      o = _.orderBy(o, ...(cmd.sort as any)) as ReduceOrder<O>
     }
 
     const size = cmd.quantile
     if (size) {
       const pad = (o.length - 1) / size
-      const box: ReduceOrder<O> = []
+      const box = ([] as any) as ReduceOrder<O>
       const end = size + 1
       for (let i = 0; i < end; i++) {
         box.push(o[Math.floor(i * pad)])
@@ -254,7 +254,7 @@ export class Map<O extends MODEL_DATA> {
           ret.push(val)
         }
       }
-      o = ret
+      o = ret as ReduceOrder<O>
     }
 
     const key = cmd.index
@@ -353,7 +353,7 @@ export class Map<O extends MODEL_DATA> {
     }
 
     if (cmd.page && (per = query.$page_by)) {
-      o = []
+      o = ([] as any) as ReduceOrder<O>
       o.all = from.length
       for (let idx = 0; idx < from.length; idx++) {
         let c: ReduceOrder<O>
