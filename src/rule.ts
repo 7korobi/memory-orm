@@ -3,7 +3,18 @@ import * as Mem from './userdata'
 import { Model } from './model'
 import { List } from './list'
 import { Struct } from './struct'
-import { Cache, DEPLOY, RelationCmd, DIC, CLASS, MODEL_DATA, ID, NameBase } from './type'
+import {
+  Cache,
+  DEPLOY,
+  RelationCmd,
+  DIC,
+  CLASS,
+  MODEL_DATA,
+  ID,
+  NameBase,
+  SortCmd,
+  OrderCmd,
+} from './type'
 import { Set } from './set'
 import { Map } from './map'
 import { Query } from './query'
@@ -152,12 +163,18 @@ export class Rule<O extends MODEL_DATA, M extends CLASS<O>> {
     this.default_scope((all) => all.shuffle())
   }
 
-  sort(...sort) {
+  sort(...sort: SortCmd) {
     this.default_scope((all) => all.sort(...sort))
   }
 
+  order(k1: string, order: OrderCmd)
+  order(k1: string, k2: string, order: OrderCmd)
+  order(k1: string, k2: string, k3: string, order: OrderCmd)
+  order(k1: string, k2: string, k3: string, k4: string, order: OrderCmd)
+  order(k1: string, k2: string, k3: string, k4: string, k5: string, order: OrderCmd)
+  order(k1: string, k2: string, k3: string, k4: string, k5: string, k6: string, order: OrderCmd)
   order(...order) {
-    this.default_scope((all) => all.order(...order))
+    this.default_scope((all) => (all as any).order(...order))
   }
 
   relation_to_one(key: string, target: string, ik: ID, else_id?: ID) {

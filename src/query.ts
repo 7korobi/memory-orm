@@ -1,5 +1,5 @@
 import _ from 'lodash'
-import { Reduce, Memory, Filter, OrderCmd, ID, DIC, MODEL_DATA, QUERY } from './type'
+import { Reduce, Memory, Filter, OrderCmd, ID, DIC, MODEL_DATA, QUERY, SortCmd } from './type'
 import { Model } from './model'
 import { Struct } from './struct'
 import { Finder } from './finder'
@@ -228,7 +228,22 @@ export class Query<O extends MODEL_DATA> {
     return this.sort(Math.random)
   }
 
-  order(...args) {
+  order(order: OrderCmd): Query<O>
+  order(k1: string, order: OrderCmd): Query<O>
+  order(k1: string, k2: string, order: OrderCmd): Query<O>
+  order(k1: string, k2: string, k3: string, order: OrderCmd): Query<O>
+  order(k1: string, k2: string, k3: string, k4: string, order: OrderCmd): Query<O>
+  order(k1: string, k2: string, k3: string, k4: string, k5: string, order: OrderCmd): Query<O>
+  order(
+    k1: string,
+    k2: string,
+    k3: string,
+    k4: string,
+    k5: string,
+    k6: string,
+    order: OrderCmd
+  ): Query<O>
+  order(...args): Query<O> {
     const adjustedLength = Math.max(args.length, 1)
     const keys: string[] = args.slice(0, adjustedLength - 1)
     const order: OrderCmd = args[adjustedLength - 1]
@@ -246,7 +261,7 @@ export class Query<O extends MODEL_DATA> {
     })
   }
 
-  sort(...sort): Query<O> {
+  sort(...sort: SortCmd): Query<O> {
     return this.order({ sort }) as Query<O>
   }
 

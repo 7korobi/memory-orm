@@ -67,12 +67,14 @@ export type RelationCmd = Partial<{
   reverse: boolean
 }>
 
-export type SortCmd = Many<
+export type SortIterationCmd = Many<
   | ListIterator<any, NotVoid>
   | ListIteratee<any>
   | ObjectIterator<any, NotVoid>
   | ObjectIteratee<any>
 >
+
+export type SortCmd = [SortIterationCmd] | [SortIterationCmd, Many<boolean | 'asc' | 'desc'>]
 
 export type OrderCmd = Partial<{
   belongs_to: string
@@ -83,7 +85,7 @@ export type OrderCmd = Partial<{
   quantile: number
   mode: boolean
   page: boolean
-  sort: [SortCmd] | [SortCmd, Many<boolean | 'asc' | 'desc'>]
+  sort: SortCmd
 }>
 
 export type ReduceOrder<O extends MODEL_DATA> = List<O> &
