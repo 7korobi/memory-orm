@@ -58,6 +58,9 @@ describe('sow oldlog', function () {
     ).toMatchSnapshot()
   })
 
+  test('list sow_villages instanceof Array', () =>
+    expect(Mem.Query.sow_villages.list instanceof Array).toMatchSnapshot())
+
   test("list' sow_villages", () => expect(Mem.Query.sow_villages.list.diff).toMatchSnapshot())
 
   test("list'' sow_villages", () => expect(Mem.Query.sow_villages.list.diff.diff).toMatchSnapshot())

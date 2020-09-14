@@ -30,6 +30,7 @@ function Dash(o, keys) {
           this._diff.push(oo)
         }
         Dash(this._diff, keys)
+        return this._diff
       },
     },
   })

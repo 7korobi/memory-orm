@@ -22,6 +22,6 @@ const keys = [
 
 keys.map((key) =>
   describe(key, function () {
-    test('format snapshot', () => expect(Mem.Query[key]._finder.format).toMatchSnapshot())
+    test('format snapshot', () => expect(Mem.State.base(key).$format).toMatchSnapshot())
   })
 )
