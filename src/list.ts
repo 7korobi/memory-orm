@@ -1,10 +1,10 @@
 import _ from 'lodash'
 import { Query } from './query'
-import { ReduceOrder, Name, MODEL_DATA } from './type'
+import { ReduceOrder, NameBase, MODEL_DATA } from './type'
 
 export class List<O extends MODEL_DATA> extends Array {
   query!: Query<O>
-  static $name: Name
+  static $name: NameBase
   get first() {
     return this[0]
   }

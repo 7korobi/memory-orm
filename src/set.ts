@@ -2,12 +2,12 @@ import _ from 'lodash'
 import { State } from './mem'
 import { Query } from './query'
 import { Finder } from './finder'
-import { Name, MODEL_DATA, CLASS, PlainData } from './type'
+import { MODEL_DATA, CLASS, PlainData, NameBase } from './type'
 
 export class Set<O extends MODEL_DATA> {
-  static $name: Name
+  static $name: NameBase
 
-  $name: Name
+  $name: NameBase
   all: Query<O>
   finder: Finder<O>
   model: CLASS<O>

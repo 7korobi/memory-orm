@@ -1,15 +1,16 @@
 import _ from 'lodash'
-import * as Mem from './mem'
+import * as Mem from './userdata'
 import { Model } from './model'
 import { List } from './list'
 import { Struct } from './struct'
-import { Name, Cache, DEPLOY, RelationCmd, DIC, CLASS, MODEL_DATA, ID } from './type'
+import { Cache, DEPLOY, RelationCmd, DIC, CLASS, MODEL_DATA, ID, NameBase } from './type'
 import { Set } from './set'
 import { Map } from './map'
 import { Query } from './query'
 import { Finder } from './finder'
+import { PureObject, State } from './mem'
 
-function rename(base: string): Name {
+function rename(base: string): NameBase {
   base = _.snakeCase(base).replace(/s$/, '')
   const name = Mem.Name[base]
   if (name) {
@@ -17,7 +18,7 @@ function rename(base: string): Name {
   }
 
   const list = `${base}s`
-  const o = (Mem.Name[list] = Mem.Name[base] = Mem.PureObject())
+  const o = (Mem.Name[list] = Mem.Name[base] = PureObject())
   o.base = base
   o.list = list
   o.id = `${base}_id`
@@ -32,7 +33,7 @@ function method<O extends MODEL_DATA, M extends CLASS<O>>(r: Rule<O, M>, key: st
 }
 
 export class Rule<O extends MODEL_DATA, M extends CLASS<O>> {
-  $name: Name
+  $name: NameBase
   state: Cache
   all: Query<O>
 
@@ -43,7 +44,7 @@ export class Rule<O extends MODEL_DATA, M extends CLASS<O>> {
 
   constructor(base: string, modelClass?: CLASS<O>) {
     this.$name = rename(base)
-    this.state = Mem.State.base(this.$name.list)
+    this.state = State.base(this.$name.list)
 
     this.all = Query.build<O>(this.state)
     this.all.$sort['_reduce.list'] = {}
@@ -143,7 +144,7 @@ export class Rule<O extends MODEL_DATA, M extends CLASS<O>> {
 
   default_scope(scope: (all: Query<O>) => Query<O>) {
     this.all._copy(scope(this.all))
-    const base = Mem.State.base(this.$name.list)
+    const base = State.base(this.$name.list)
     base.$sort = this.all.$sort
   }
 
@@ -256,6 +257,9 @@ export class Rule<O extends MODEL_DATA, M extends CLASS<O>> {
     }
 
     this.deploy(({ o, reduce }) => {
+      if ('string' !== typeof o.id) {
+        throw new Error(`id [${o.id}] must be string.`)
+      }
       const subids = o.id!.split('-')
       o.idx = subids[subids.length - 1]
       for (let idx = 0; idx < keys.length; idx++) {

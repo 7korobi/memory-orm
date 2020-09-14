@@ -1,6 +1,6 @@
 {
   "name": "memory-orm",
-  "version": "0.5.9",
+  "version": "0.5.14",
   "description": "client side ORM + map reduce",
   "author": "7korobi",
   "main": "lib/index.js",
@@ -28,7 +28,7 @@
     "format": "prettier --no-semi --single-quote --print-width 100 --write \"**/*.{ts,tsx,js,jsx,md}\"",
     "jest": "jest -u --config config/jest.js --rootDir .",
     "compile": "run-p compile:*",
-    "compile:ts": "tsc -p .",
+    "compile:ts": "tsc -p . && rm lib/userdata.d.ts",
     "type": "tsc -p . --noemit",
     "g": "run-p -n g:*",
     "g:npm": "npm i -g node-gyp grpc npm-check-updates"
@@ -42,7 +42,7 @@
     "autoprefixer": "^9.8.6",
     "date-fns": "^2.16.1",
     "fake-indexeddb": "^3.1.2",
-    "firebase": "^7.19.1",
+    "firebase": "^7.20.0",
     "jest": "^26.4.2",
     "jest-css-modules": "^2.1.0",
     "node-sass": "^4.14.1",

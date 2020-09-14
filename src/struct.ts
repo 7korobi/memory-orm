@@ -1,12 +1,12 @@
-import { Name } from './type'
+import { ID, NameBase } from './type'
 
 export class Struct extends Array {
   idx?: string
-  get id() {
+  get id(): ID {
     return this[0]
   }
 
-  static $name: Name
+  static $name: NameBase
 
   static bless(o: any[]) {
     Reflect.setPrototypeOf(o, this.prototype)

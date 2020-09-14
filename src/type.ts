@@ -34,7 +34,7 @@ export type Emitter<T> = {
   (k1: PATH, k2: PATH, k3: PATH, k4: PATH, k5: PATH, k6: PATH, cmd: T): void
 }
 
-export type Name = {
+export type NameBase = {
   base: string
   list: string
   id: ID
@@ -148,13 +148,13 @@ export interface SetContext<O extends MODEL_DATA> {
   base: Cache
   journal: Cache
   meta: Metadata
-  deploys: Name['deploys']
+  deploys: DEPLOY<any, any>[]
   from: PlainData<O>
   parent: Object | undefined
 }
 
 export type CLASS<O> = {
-  $name: Name
+  $name: NameBase
   bless(data: any, query?: any): asserts data is O
   new (): O
   new (rule: any): O
@@ -168,6 +168,6 @@ export type MODEL = Model | Struct
 
 export interface MODEL_DATA {
   idx?: string
-  _id?: string
-  id: string
+  _id?: ID
+  id: ID
 }

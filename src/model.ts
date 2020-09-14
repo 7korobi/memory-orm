@@ -1,13 +1,13 @@
-import { Name } from './type'
+import { ID, NameBase } from './type'
 
 export class Model extends Object {
   idx?: string
-  _id!: string
+  _id!: ID
   get id() {
     return this._id
   }
 
-  static $name: Name
+  static $name: NameBase
 
   static bless(o: Object) {
     Reflect.setPrototypeOf(o, this.prototype)

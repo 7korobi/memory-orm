@@ -2,7 +2,6 @@ import _ from 'lodash'
 import { State, PureObject, step, Metadata } from './mem'
 import { Datum } from './datum'
 import {
-  Name,
   PlainData,
   Memory,
   Reduce,
@@ -14,6 +13,7 @@ import {
   Emitter,
   LeafCmd,
   MODEL_DATA,
+  NameBase,
 } from './type'
 import { Model } from './model'
 import { Map } from './map'
@@ -72,7 +72,7 @@ function validate(item: any, meta: Metadata, chklist: Filter[]): boolean {
 }
 
 export class Finder<O extends MODEL_DATA> {
-  $name!: Name
+  $name!: NameBase
   all!: Query<O>
   model!: typeof Model | typeof Struct
   list!: typeof List
@@ -87,7 +87,7 @@ export class Finder<O extends MODEL_DATA> {
     map,
     list,
   }: {
-    $name: Name
+    $name: NameBase
     all: Query<O>
     map: typeof Map
     list: typeof List

@@ -1,18 +1,9 @@
 import _ from 'lodash'
-import { Name as NameBase, DIC, Cache } from './type'
-import { Set as SetBase } from './set'
-import { Map as MapBase } from './map'
-import { Query as QueryBase } from './query'
-import { Finder as FinderBase } from './finder'
+import { Cache } from './type'
 import { Datum } from './datum'
+import { Finder, Set } from './userdata'
 
 export { Rule } from './rule'
-
-export const Set: DIC<SetBase<any>> = {}
-export const Map: DIC<MapBase<any>> = {}
-export const Name: DIC<NameBase> = {}
-export const Query: DIC<QueryBase<any>> = {}
-export const Finder: DIC<FinderBase<any>> = {}
 
 let $react_listeners: any[] = []
 let $step = 0
@@ -96,9 +87,13 @@ class StateManager {
     for (const list in meta.pack) {
       const { $sort, $memory, $format } = meta.pack[list]
       const finder = Finder[list]
+      if (!finder) {
+        console.error('not found Finder', list, Finder)
+        continue
+      }
       const set = Set[finder.$name.base]
-      if (!(finder && set)) {
-        console.error('not found Finder and Query', list, meta.pack)
+      if (!set) {
+        console.error('not found Set', list, Set)
         continue
       }
       const { model } = set
@@ -175,17 +170,3 @@ class StateManager {
   }
 }
 export const State = new StateManager()
-
-export function merge(o: DIC<any>) {
-  for (const key in o) {
-    if (Query[key]) {
-      const sk = Name[key].base
-      const val = o[key]
-      Set[sk].merge(val)
-    }
-    if (Set[key]) {
-      const val = o[key]
-      Set[key].append(val)
-    }
-  }
-}

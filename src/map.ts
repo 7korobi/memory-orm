@@ -1,8 +1,9 @@
 import _ from 'lodash'
 import { Query } from './query'
-import * as Mem from './mem'
-import { LeafCmd, ReduceLeaf, OrderCmd, Reduce, ReduceOrder, Name, MODEL_DATA, CLASS } from './type'
+import { LeafCmd, ReduceLeaf, OrderCmd, Reduce, ReduceOrder, MODEL_DATA, NameBase } from './type'
 import { List } from './list'
+
+import * as Mem from './userdata'
 
 function Dash(o, keys) {
   Object.defineProperties(o, {
@@ -64,7 +65,7 @@ function navi_reduce(root) {
 }
 
 export class Map<O extends MODEL_DATA> {
-  static $name: Name
+  static $name: NameBase
   static bless(o) {
     Reflect.setPrototypeOf(o, this.prototype)
     return o
