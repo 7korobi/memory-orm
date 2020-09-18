@@ -166,37 +166,37 @@ new Rule('sow_village', SowVillage).schema(function () {
     const { id, part_id } = o
     const it = { set: id }
 
-    reduce(it)
-    reduce(o.mode, 'all', it)
-    reduce(o.mode, o.q.folder_id, it)
+    reduce([], it)
+    reduce([o.mode, 'all'], it)
+    reduce([o.mode, o.q.folder_id], it)
     reduce('size_sd', {
       count: 1,
       all: o.vpl[0],
     })
-    reduce('mode', o.mode, o.q.folder_id, cmd)
-    reduce('in_month', o.q.in_month, cmd)
-    reduce('yeary', o.q.yeary, cmd)
-    reduce('monthry', o.q.monthry, cmd)
-    reduce('folder_id', o.q.folder_id, cmd)
-    reduce('upd_range', o.q.upd_range, cmd)
-    reduce('upd_at', o.q.upd_at, cmd)
-    reduce('sow_auth_id', o.q.sow_auth_id, cmd)
-    reduce('rating', o.q.rating, cmd)
-    reduce('size', o.q.size, cmd)
-    reduce('say', o.q.say, cmd)
-    reduce('game', o.q.game, cmd)
-    reduce('mob', o.q.mob, cmd)
+    reduce(['mode', o.mode, o.q.folder_id], cmd)
+    reduce(['in_month', o.q.in_month], cmd)
+    reduce(['yeary', o.q.yeary], cmd)
+    reduce(['monthry', o.q.monthry], cmd)
+    reduce(['folder_id', o.q.folder_id], cmd)
+    reduce(['upd_range', o.q.upd_range], cmd)
+    reduce(['upd_at', o.q.upd_at], cmd)
+    reduce(['sow_auth_id', o.q.sow_auth_id], cmd)
+    reduce(['rating', o.q.rating], cmd)
+    reduce(['size', o.q.size], cmd)
+    reduce(['say', o.q.say], cmd)
+    reduce(['game', o.q.game], cmd)
+    reduce(['mob', o.q.mob], cmd)
     for (let opt_id of o.card.option) {
-      reduce('option', opt_id, cmd)
+      reduce(['option', opt_id], cmd)
     }
     for (let card_id of o.card.event) {
-      reduce('event', card_id, cmd)
+      reduce(['event', card_id], cmd)
     }
     for (let card_id of o.card.discard) {
-      reduce('discard', card_id, cmd)
+      reduce(['discard', card_id], cmd)
     }
     for (let card_id of o.card.config) {
-      reduce('config', card_id, cmd)
+      reduce(['config', card_id], cmd)
     }
   })
 })

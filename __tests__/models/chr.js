@@ -42,7 +42,7 @@ new Rule('tag').schema(function () {
   return (this.model = class model extends this.model {
     static map_reduce(o, emit) {
       const group = Math.floor(o.order / 1000)
-      return emit('group', group, {
+      return emit(['group', group], {
         set: o.id,
         list: true,
       })
@@ -50,7 +50,7 @@ new Rule('tag').schema(function () {
 
     static order(o, emit) {
       const group = Math.floor(o.order / 1000)
-      return emit('group', group, 'list', { sort: ['order'] })
+      return emit(['group', group, 'list'], { sort: ['order'] })
     }
   })
 })
@@ -97,10 +97,10 @@ new Rule('face').schema(function () {
         set: o.id,
         count: 1,
       }
-      emit(it)
-      emit('tag', 'all', it)
+      emit([], it)
+      emit(['tag', 'all'], it)
 
-      return o.tag_ids.map((tag_id) => emit('tag', tag_id, it))
+      return o.tag_ids.map((tag_id) => emit(['tag', tag_id], it))
     }
 
     static map_reduce(o, emit) {
@@ -118,7 +118,7 @@ new Rule('face').schema(function () {
         String.fromCharCode(hira.charCodeAt(0) + 0x60)
       )
 
-      return emit('name_head', head, { set: o.name })
+      return emit(['name_head', head], { set: o.name })
     }
   }
 

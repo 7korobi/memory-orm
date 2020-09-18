@@ -232,7 +232,7 @@ export class Map<O extends MODEL_DATA> {
 
     let o = o1 as ReduceOrder<O>
     if (cmd.sort) {
-      o = _.orderBy(o, ...(cmd.sort as any)) as ReduceOrder<O>
+      o = (_.orderBy(o, cmd.sort[0], cmd.sort[1]) as any) as ReduceOrder<O>
     }
 
     const size = cmd.quantile
@@ -254,7 +254,7 @@ export class Map<O extends MODEL_DATA> {
           ret.push(val)
         }
       }
-      o = ret as ReduceOrder<O>
+      o = ret as any
     }
 
     const key = cmd.index

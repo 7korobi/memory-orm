@@ -168,7 +168,7 @@ export class Query<O extends MODEL_DATA> {
   }
 
   partition(...ary: string[]) {
-    return new Query(this, function () {
+    return new Query<O>(this, function () {
       this.$partition = ary
     })
   }
@@ -177,7 +177,7 @@ export class Query<O extends MODEL_DATA> {
     if (b === this._is_uniq) {
       return this
     }
-    return new Query(this, function () {
+    return new Query<O>(this, function () {
       this._is_uniq = b
       if (b && this._all_ids) {
         this._all_ids = _.uniq(this._all_ids)
@@ -228,29 +228,14 @@ export class Query<O extends MODEL_DATA> {
     return this.sort(Math.random)
   }
 
-  order(order: OrderCmd): Query<O>
-  order(k1: string, order: OrderCmd): Query<O>
-  order(k1: string, k2: string, order: OrderCmd): Query<O>
-  order(k1: string, k2: string, k3: string, order: OrderCmd): Query<O>
-  order(k1: string, k2: string, k3: string, k4: string, order: OrderCmd): Query<O>
-  order(k1: string, k2: string, k3: string, k4: string, k5: string, order: OrderCmd): Query<O>
-  order(
-    k1: string,
-    k2: string,
-    k3: string,
-    k4: string,
-    k5: string,
-    k6: string,
-    order: OrderCmd
-  ): Query<O>
-  order(...args): Query<O> {
-    const adjustedLength = Math.max(args.length, 1)
-    const keys: string[] = args.slice(0, adjustedLength - 1)
-    const order: OrderCmd = args[adjustedLength - 1]
+  order(keys: string | string[], order: OrderCmd): Query<O> {
     if (!keys.length) {
-      keys.push('list')
+      keys = ['list']
     }
-    const path = ['_reduce', ...keys].join('.')
+    if ('string' === typeof keys) {
+      keys = [keys]
+    }
+    const path = [`_reduce`, ...keys].join('.')
 
     if (_.isEqual(order, this.$sort[path])) {
       return this
@@ -262,11 +247,11 @@ export class Query<O extends MODEL_DATA> {
   }
 
   sort(...sort: SortCmd): Query<O> {
-    return this.order({ sort }) as Query<O>
+    return this.order([], { sort }) as Query<O>
   }
 
   page(page_by: number) {
-    return new Query(this, function () {
+    return new Query<O>(this, function () {
       this.$page_by = page_by
     })
   }

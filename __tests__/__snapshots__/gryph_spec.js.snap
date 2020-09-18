@@ -11,7 +11,7 @@ Object {
 exports[`gryph lines snapshot 1`] = `
 Object {
   "hash": Object {
-    "1,-1*-1,1": model [
+    "1,-1*-1,1": Line [
       Array [
         1,
         -1,
@@ -21,7 +21,7 @@ Object {
         1,
       ],
     ],
-    "1,1*-1,-1": model [
+    "1,1*-1,-1": Line [
       Array [
         1,
         1,
@@ -31,7 +31,7 @@ Object {
         -1,
       ],
     ],
-    "1,1*1,-1*-1,1*-1,-1": model [
+    "1,1*1,-1*-1,1*-1,-1": Line [
       Array [
         1,
         1,
@@ -51,7 +51,7 @@ Object {
     ],
   },
   "list": list [
-    model [
+    Line [
       Array [
         1,
         1,
@@ -61,7 +61,7 @@ Object {
         -1,
       ],
     ],
-    model [
+    Line [
       Array [
         1,
         -1,
@@ -71,7 +71,7 @@ Object {
         1,
       ],
     ],
-    model [
+    Line [
       Array [
         1,
         1,
@@ -126,37 +126,37 @@ list [
 exports[`gryph points snapshot 1`] = `
 Object {
   "hash": Object {
-    "-1*-1": model [
+    "-1*-1": struct [
       -1,
       -1,
     ],
-    "-1*1": model [
+    "-1*1": struct [
       -1,
       1,
     ],
-    "1*-1": model [
+    "1*-1": struct [
       1,
       -1,
     ],
-    "1*1": model [
+    "1*1": struct [
       1,
       1,
     ],
   },
   "list": list [
-    model [
+    struct [
       1,
       1,
     ],
-    model [
+    struct [
       1,
       -1,
     ],
-    model [
+    struct [
       -1,
       1,
     ],
-    model [
+    struct [
       -1,
       -1,
     ],

@@ -1,6 +1,6 @@
 {
   "name": "memory-orm",
-  "version": "0.5.18",
+  "version": "0.6.0",
   "description": "client side ORM + map reduce",
   "author": "7korobi",
   "typings": "./lib/index.d.ts",

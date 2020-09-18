@@ -1,5 +1,7 @@
 import { ID, NameBase } from './type'
 
+export type STRUCT<T extends string> = Struct & { [label in T]: any }
+
 export class Struct extends Array {
   idx?: string
   get id(): ID {
@@ -26,3 +28,28 @@ export class Struct extends Array {
 
   static order(item, emit) {}
 }
+
+export function Structure<T extends string>(
+  labels: readonly T[],
+  get: (this: STRUCT<T>) => ID
+): { new (): STRUCT<T> } {
+  class struct extends Struct {}
+  labels.forEach((label, idx) => {
+    Object.defineProperty(struct.prototype, label, {
+      enumerable: true,
+      get() {
+        return this[idx]
+      },
+    })
+  })
+
+  Object.defineProperty(struct.prototype, 'id', {
+    enumerable: true,
+    get,
+  })
+  return struct as { new (): STRUCT<T> }
+}
+
+const Points = Structure(['x', 'y', 'r', 'color'], function () {
+  return this.join('*')
+})

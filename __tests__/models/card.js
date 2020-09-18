@@ -49,7 +49,7 @@ new Rule('role').schema(function () {
 
   return (this.model = class model extends this.model {
     static map_reduce(o, emit) {
-      return emit('group', o.group, { list: true })
+      return emit(['group', o.group], { list: true })
     }
   })
 })
@@ -59,7 +59,7 @@ new Rule('able').schema(function () {
 
   return (this.model = class model extends this.model {
     static map_reduce(o, emit) {
-      return emit('group', o.group, { list: true })
+      return emit(['group', o.group], { list: true })
     }
   })
 })

@@ -14,6 +14,7 @@ import {
   LeafCmd,
   MODEL_DATA,
   NameBase,
+  PATH,
 } from './type'
 import { Model } from './model'
 import { Map } from './map'
@@ -178,7 +179,7 @@ export class Finder<O extends MODEL_DATA> {
         const sorted = map.order(query, path, from, from, cmd, this.list)
         const dashed = map.dash(query, path, sorted, from, cmd, this.list)
         const result = map.post_proc(query, path, dashed, from, cmd, this.list)
-        this.list.bless(result, query)
+        this.list.bless(result as any, query)
         result.from = from
         _.set(query, path, result)
       }
@@ -207,21 +208,22 @@ export class Finder<O extends MODEL_DATA> {
     if (!base.$format) {
       throw new Error('bad context.')
     }
-    const order = (...args) => {
-      const adjustedLength = Math.max(args.length, 1)
-      const keys: string[] = args.slice(0, adjustedLength - 1)
-      const path = ['_reduce', ...keys].join('.')
-      const cmd: OrderCmd = args[adjustedLength - 1]
+    const order = (keys: PATH, cmd: OrderCmd) => {
+      if ('string' === typeof keys) {
+        keys = [keys]
+      }
+      const path = [`_reduce`, ...keys].join('.')
 
       base.$sort[path] = cmd
       journal.$sort[path] = cmd
     }
 
-    const reduce = (...args) => {
-      const adjustedLength = Math.max(args.length, 1)
-      const keys: string[] = args.slice(0, adjustedLength - 1)
-      const path = ['_reduce', ...keys].join('.')
-      let cmd: LeafCmd = args[adjustedLength - 1]
+    const reduce = (keys: PATH, cmd: LeafCmd) => {
+      if ('string' === typeof keys) {
+        keys = [keys]
+      }
+      const path = [`_reduce`, ...keys].join('.')
+
       cmd = reduce.default(keys, cmd)
 
       $group.push([path, cmd])
@@ -231,7 +233,7 @@ export class Finder<O extends MODEL_DATA> {
       this.map.init(map_j, cmd)
     }
 
-    reduce.default = reduce.default_origin = function (keys: string[], cmd: LeafCmd) {
+    reduce.default = reduce.default_origin = function (keys: PATH, cmd: LeafCmd) {
       if (keys.length) {
         return cmd
       }
@@ -264,7 +266,7 @@ export class Finder<O extends MODEL_DATA> {
     model.map_partition(item, reduce)
     model.map_reduce(item, reduce)
     if (reduce.default === reduce.default_origin) {
-      reduce({})
+      reduce([], {})
     }
     model.order(item, order)
   }

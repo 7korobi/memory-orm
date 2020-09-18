@@ -106,25 +106,6 @@ export class Rule<O extends MODEL_DATA, M extends CLASS<O>> {
     })
   }
 
-  struct(...args) {
-    const adjustedLength = Math.max(args.length, 1)
-    const keys = args.slice(0, adjustedLength - 1)
-    const get = args[adjustedLength - 1]
-    this.model = class model extends Struct {}
-    keys.forEach((key, idx) => {
-      method(this, key, {
-        enumerable: true,
-        get() {
-          return this[idx]
-        },
-      })
-    })
-    method(this, 'id', {
-      enumerable: true,
-      get,
-    })
-  }
-
   deploy(cb: DEPLOY<O, M>) {
     this.$name.deploys.push(cb)
   }
@@ -167,14 +148,8 @@ export class Rule<O extends MODEL_DATA, M extends CLASS<O>> {
     this.default_scope((all) => all.sort(...sort))
   }
 
-  order(k1: string, order: OrderCmd)
-  order(k1: string, k2: string, order: OrderCmd)
-  order(k1: string, k2: string, k3: string, order: OrderCmd)
-  order(k1: string, k2: string, k3: string, k4: string, order: OrderCmd)
-  order(k1: string, k2: string, k3: string, k4: string, k5: string, order: OrderCmd)
-  order(k1: string, k2: string, k3: string, k4: string, k5: string, k6: string, order: OrderCmd)
-  order(...order) {
-    this.default_scope((all) => (all as any).order(...order))
+  order(keys: string | string[], order: OrderCmd) {
+    this.default_scope((all) => (all as any).order(keys, order))
   }
 
   relation_to_one(key: string, target: string, ik: ID, else_id?: ID) {
@@ -220,11 +195,11 @@ export class Rule<O extends MODEL_DATA, M extends CLASS<O>> {
 
   relation_graph(key: string, ik: string) {
     const { all } = this
-    this.use_cache(key, (id: string, n: number) => {
+    this.use_cache(key, (id: string[], n: number) => {
       const q = all.where({ id })
       if (n) {
         const ids: any[] = []
-        for (const a of q.pluck(ik) as any[][]) {
+        for (const a of q.pluck(ik) as List<any>) {
           if (a != null) {
             for (let k of a) {
               if (k != null) {

@@ -1,6 +1,6 @@
 import _ from 'lodash'
 import { Query } from './query'
-import { ReduceOrder, NameBase, MODEL_DATA, PlainData, DIC } from './type'
+import { ReduceOrder, NameBase, MODEL_DATA, PlainData, DIC, ID, SortCmd } from './type'
 
 export class List<O extends MODEL_DATA> extends Array {
   query!: Query<O>
@@ -25,7 +25,7 @@ export class List<O extends MODEL_DATA> extends Array {
     return (this.constructor as typeof List).bless(_.uniq(this), this.query) as this
   }
 
-  pluck(...keys) {
+  pluck(...keys: ID[]): List<any> {
     let cb
     switch (keys.length) {
       case 0:
@@ -42,7 +42,7 @@ export class List<O extends MODEL_DATA> extends Array {
         }
         break
     }
-    return (this.constructor as typeof List).bless(this.map(cb), this.query) as List<any>
+    return (this.constructor as typeof List).bless(this.map(cb), this.query)
   }
 
   static bless<O extends MODEL_DATA>(list: any[], query: Query<O>) {
@@ -50,7 +50,7 @@ export class List<O extends MODEL_DATA> extends Array {
     if (query && query.where && query.in) {
       ;(list as any).query = query
     }
-    return list as List<O>
+    return (list as any) as List<O>
   }
 
   constructor(query: Query<O>) {
@@ -60,14 +60,14 @@ export class List<O extends MODEL_DATA> extends Array {
     }
   }
 
-  sort(...sort: any[]) {
-    const o = (_.orderBy(this, ...sort) as unknown) as this
+  sort(...cmd: any[]) {
+    const o = (_.orderBy(this, cmd[0], cmd[1]) as any) as this
     Reflect.setPrototypeOf(o, Reflect.getPrototypeOf(this))
     return o
   }
 
   group_by(cb) {
-    const o = _.groupBy(this, cb) as DIC<List<O>>
+    const o = (_.groupBy(this, cb) as any) as DIC<List<O>>
     for (const key in o) {
       const oo = o[key]
       Reflect.setPrototypeOf(oo, Reflect.getPrototypeOf(this))

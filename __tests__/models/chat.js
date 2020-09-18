@@ -8,7 +8,7 @@
 const { Model, Query, Rule } = require('../../lib/index')
 
 new Rule('chat').schema(function () {
-  this.order({
+  this.order([], {
     sort: ['write_at', 'asc'],
     page: true,
   })
@@ -102,29 +102,29 @@ new Rule('chat').schema(function () {
         min: o.write_at,
       }
 
-      emit(it)
-      emit(part_id, 'wiki', it)
+      emit([], it)
+      emit([part_id, 'wiki'], it)
 
       if (!o.phase) {
         return
       }
       const { group, handle } = o.phase
-      emit('group', part_id, group, it)
-      emit('handle', part_id, handle, it)
+      emit(['group', part_id, group], it)
+      emit(['handle', part_id, handle], it)
 
       if ('M'.includes(group)) {
-        emit(part_id, 'memo', it)
+        emit([part_id, 'memo'], it)
       }
 
       if ('SAI'.includes(group)) {
-        emit(part_id, 'full', it)
+        emit([part_id, 'full'], it)
 
         if (['SSAY', 'VSSAY', 'TITLE', 'MAKER', 'ADMIN', 'public'].includes(handle)) {
-          emit(part_id, 'normal', it)
+          emit([part_id, 'normal'], it)
         }
 
         if (['TSAY', 'private'].includes(handle)) {
-          emit(part_id, 'solo', it)
+          emit([part_id, 'solo'], it)
         }
 
         if (
@@ -132,18 +132,18 @@ new Rule('chat').schema(function () {
             handle
           )
         ) {
-          emit(part_id, 'extra', it)
+          emit([part_id, 'extra'], it)
         }
 
         if (['GSAY'].includes(handle)) {
-          return emit(part_id, 'rest', it)
+          return emit([part_id, 'rest'], it)
         }
       }
     }
 
     static map_reduce(o, emit) {
-      emit('index', o.phase_id, { max: parseInt(o.idx) })
-      emit('last', o.q.group, { max: o.write_at })
+      emit(['index', o.phase_id], { max: parseInt(o.idx) })
+      emit(['last', o.q.group], { max: o.write_at })
 
       emit('say', {
         max: o.write_at + 1,
@@ -156,13 +156,13 @@ new Rule('chat').schema(function () {
         const all = o.phase_id.split('-')
         all[2] = 'top'
         const all_phase_id = all.join('-')
-        emit('potof', all_phase_id, o.potof_id, {
+        emit(['potof', all_phase_id, o.potof_id], {
           count: 1,
           all: o.log.length,
           max: o.write_at + 1,
           min: o.write_at,
         })
-        emit('potof', o.phase_id, o.potof_id, {
+        emit(['potof', o.phase_id, o.potof_id], {
           count: 1,
           all: o.log.length,
           max: o.write_at + 1,
@@ -171,15 +171,15 @@ new Rule('chat').schema(function () {
       }
 
       if (o.phase_id.match(/-.M?$/)) {
-        emit('side', o.phase_id, o.potof_id, { max: o.write_at + 1 })
+        emit(['side', o.phase_id, o.potof_id], { max: o.write_at + 1 })
       }
 
       return (() => {
         const result = []
         for (let mention_id of o.mention_ids) {
-          emit('mention', mention_id, { count: 1 })
+          emit(['mention', mention_id], { count: 1 })
 
-          result.push(emit('mention_to', mention_id, o.id, { count: 1 }))
+          result.push(emit(['mention_to', mention_id, o.id], { count: 1 }))
         }
         return result
       })()
@@ -187,7 +187,7 @@ new Rule('chat').schema(function () {
 
     static order(o, emit) {
       emit('mention', anker)
-      return o.mention_ids.map((mention_id) => emit('mention_to', mention_id, anker))
+      return o.mention_ids.map((mention_id) => emit(['mention_to', mention_id], anker))
     }
   })
 })

@@ -25,7 +25,7 @@ new Rule('random').schema(function () {
 
   return (this.model = class model extends this.model {
     static map_reduce(o, emit) {
-      emit('type', o.type, { count: 1 })
+      emit(['type', o.type], { count: 1 })
       return emit('ratio', {
         count: 1,
         all: o.ratio,

@@ -18,8 +18,8 @@ new Rule('phase').schema(function () {
 
   return (this.model = class model extends this.model {
     static map_reduce(o, emit) {
-      emit('group', o.group, { count: 1 })
-      return emit('handle', o.handle, { count: 1 })
+      emit(['group', o.group], { count: 1 })
+      emit(['handle', o.handle], { count: 1 })
     }
   })
 })

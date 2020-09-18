@@ -72,13 +72,13 @@ new Rule('work_name', WorkName).schema(function () {
     o.q = {
       search_words: [`<${o.name}>`, `<${ascii}>`].join(' '),
     }
-    reduce('code', o.key, { set: o.id })
-    reduce('spot', o.spot, {
+    reduce(['code', o.key], { set: o.id })
+    reduce(['spot', o.spot], {
       set: o.id,
       list: true,
     })
-    reduce('spot_size', o.spot, { count: 1 })
-    order('spot', o.spot, 'list', {
+    reduce(['spot_size', o.spot], { count: 1 })
+    order(['spot', o.spot, 'list'], {
       sort: [
         ['side', 'name'],
         ['asc', 'asc'],

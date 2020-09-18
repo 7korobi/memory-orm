@@ -9,7 +9,7 @@ import { List } from './list'
 type NAVI_LEAF = number
 
 export type ID = string | number
-export type PATH = string | number
+export type PATH = string | (string | number)[]
 export type LeafEmitter = Emitter<LeafCmd>
 export type OrderEmitter = Emitter<OrderCmd>
 
@@ -26,13 +26,7 @@ export type DEPLOY<O, M> = {
 }
 
 export type Emitter<T> = {
-  (cmd: T): void
-  (k1: PATH, cmd: T): void
-  (k1: PATH, k2: PATH, cmd: T): void
-  (k1: PATH, k2: PATH, k3: PATH, cmd: T): void
-  (k1: PATH, k2: PATH, k3: PATH, k4: PATH, cmd: T): void
-  (k1: PATH, k2: PATH, k3: PATH, k4: PATH, k5: PATH, cmd: T): void
-  (k1: PATH, k2: PATH, k3: PATH, k4: PATH, k5: PATH, k6: PATH, cmd: T): void
+  (keys: PATH, cmd: T): void
 }
 
 export type NameBase = {

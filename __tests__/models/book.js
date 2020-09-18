@@ -74,7 +74,7 @@ new Rule('book').schema(function () {
     static map_reduce(o, emit) {
       emit('idx', { max: parseInt(o.idx) })
       const it = { set: o.id }
-      emit(it)
+      emit([], it)
       emit('all', it)
       return emit(o.folder_id, it)
     }
