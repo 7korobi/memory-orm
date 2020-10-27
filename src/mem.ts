@@ -1,4 +1,5 @@
-import _ from 'lodash'
+import _debounce from 'lodash/debounce'
+
 import { Cache } from './type'
 import { Datum } from './datum'
 import { Finder, Set } from './userdata'
@@ -139,7 +140,7 @@ class StateManager {
     }
   }
 
-  notify_for_react = _.debounce(() => {
+  notify_for_react = _debounce(() => {
     for (const o of $react_listeners) {
       const e = {}
       let changed = false

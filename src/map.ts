@@ -1,6 +1,19 @@
-import _ from 'lodash'
+import _get from 'lodash/get'
+import _set from 'lodash/set'
+import _orderBy from 'lodash/orderBy'
+
 import { Query } from './query'
-import { LeafCmd, ReduceLeaf, OrderCmd, Reduce, ReduceOrder, MODEL_DATA, NameBase } from './type'
+import {
+  LeafCmd,
+  ReduceLeaf,
+  OrderCmd,
+  Reduce,
+  ReduceOrder,
+  ReduceOrderPage,
+  NameBase,
+  CLASS,
+  DEFAULT_RULE_TYPE,
+} from './type'
 import { List } from './list'
 
 import * as Mem from './userdata'
@@ -25,7 +38,7 @@ function Dash(o, keys) {
           const b = this[idx + 1]
           const oo = {}
           for (let key of keys) {
-            _.set(oo, key, _.get(b, key) - _.get(a, key))
+            _set(oo, key, _get(b, key) - _get(a, key))
           }
           this._diff.push(oo)
         }
@@ -65,7 +78,7 @@ function navi_reduce(root) {
   return root
 }
 
-export class Map<O extends MODEL_DATA> {
+export class Map<A extends DEFAULT_RULE_TYPE> {
   static $name: NameBase
   static bless(o) {
     Reflect.setPrototypeOf(o, this.prototype)
@@ -99,8 +112,8 @@ export class Map<O extends MODEL_DATA> {
     }
   }
 
-  static reduce<O extends MODEL_DATA>(
-    query: Query<O>,
+  static reduce<A extends DEFAULT_RULE_TYPE>(
+    query: Query<A>,
     path: string,
     item: any,
     o: ReduceLeaf,
@@ -156,11 +169,11 @@ export class Map<O extends MODEL_DATA> {
     }
   }
 
-  static finish<O extends MODEL_DATA>(
-    query: Query<O>,
+  static finish<A extends DEFAULT_RULE_TYPE>(
+    query: Query<A>,
     path: string,
     o: ReduceLeaf,
-    list: typeof List
+    list: CLASS<List<A>>
   ) {
     if (!o) {
       console.error('not found $format', path, query, list)
@@ -201,13 +214,13 @@ export class Map<O extends MODEL_DATA> {
     }
   }
 
-  static order<O extends MODEL_DATA>(
-    query: Query<O>,
+  static order<A extends DEFAULT_RULE_TYPE>(
+    query: Query<A>,
     path: string,
     from: Reduce,
     origin,
     cmd: OrderCmd,
-    list: typeof List
+    list: CLASS<List<A>>
   ) {
     let o1 = from
     if (cmd.belongs_to) {
@@ -230,15 +243,15 @@ export class Map<O extends MODEL_DATA> {
       }
     }
 
-    let o = o1 as ReduceOrder<O>
+    let o = o1 as ReduceOrder<A>
     if (cmd.sort) {
-      o = (_.orderBy(o, cmd.sort[0], cmd.sort[1]) as any) as ReduceOrder<O>
+      o = (_orderBy(o, cmd.sort[0], cmd.sort[1]) as any) as ReduceOrder<A>
     }
 
     const size = cmd.quantile
     if (size) {
       const pad = (o.length - 1) / size
-      const box = ([] as any) as ReduceOrder<O>
+      const box = ([] as any) as ReduceOrder<A>
       const end = size + 1
       for (let i = 0; i < end; i++) {
         box.push(o[Math.floor(i * pad)])
@@ -249,7 +262,7 @@ export class Map<O extends MODEL_DATA> {
     if (cmd.pluck) {
       const ret: any[] = []
       for (const oo of o) {
-        const val = _.get(oo, cmd.pluck)
+        const val = _get(oo, cmd.pluck)
         if (val) {
           ret.push(val)
         }
@@ -262,14 +275,14 @@ export class Map<O extends MODEL_DATA> {
       let is_ary: boolean, counts
       for (const ___ in o) {
         const oo = o[___]
-        is_ary = 'number' === typeof _.get(oo, key)
+        is_ary = 'number' === typeof _get(oo, key)
         counts = is_ary ? [] : {}
         break
       }
 
       for (const ___ in o) {
         const oo = o[___]
-        const idx = _.get(oo, key)
+        const idx = _get(oo, key)
         let a = counts![idx]
         if (!a) {
           counts![idx] = a = new list(query)
@@ -308,13 +321,13 @@ export class Map<O extends MODEL_DATA> {
     return o
   }
 
-  static dash<O extends MODEL_DATA>(
-    query: Query<O>,
+  static dash<A extends DEFAULT_RULE_TYPE>(
+    query: Query<A>,
     path: string,
-    from: ReduceOrder<O>,
+    from: ReduceOrder<A>,
     origin,
     cmd: OrderCmd,
-    list: typeof List
+    list: CLASS<List<A>>
   ) {
     if (!(from instanceof Array)) {
       return from
@@ -328,13 +341,13 @@ export class Map<O extends MODEL_DATA> {
     return o
   }
 
-  static post_proc<O extends MODEL_DATA>(
-    query: Query<O>,
+  static post_proc<A extends DEFAULT_RULE_TYPE>(
+    query: Query<A>,
     path: string,
-    from: ReduceOrder<O>,
+    from: ReduceOrder<A>,
     origin,
     cmd: OrderCmd,
-    list: typeof List
+    list: CLASS<List<A>>
   ) {
     let per
     let o = from
@@ -353,18 +366,18 @@ export class Map<O extends MODEL_DATA> {
     }
 
     if (cmd.page && (per = query.$page_by)) {
-      o = ([] as any) as ReduceOrder<O>
-      o.all = from.length
+      const p = ([] as any) as ReduceOrderPage<A>
+      p.all = from.length
       for (let idx = 0; idx < from.length; idx++) {
-        let c: ReduceOrder<O>
+        let c: ReduceOrder<A>
         if (!(idx % per)) {
           c = new list(query)
-          o.push(c)
+          p.push(c)
         }
         const oo = from[idx]
         c!.push(oo)
       }
-      o.page_idx = function (item) {
+      p.page_idx = function (item) {
         for (let page_idx = 0; page_idx < this.length; page_idx++) {
           const a = this[page_idx]
           if (a.includes(item)) {
@@ -373,7 +386,9 @@ export class Map<O extends MODEL_DATA> {
         }
         return null
       }
+      return p
+    } else {
+      return o
     }
-    return o
   }
 }

@@ -46,62 +46,67 @@ new Rule('sow_turn').schema(function () {
   this.belongs_to('village', { target: 'sow_villages', key: 'story_id' })
 })
 
-new Rule('sow_village', SowVillage).schema(function () {
-  this.order('list', { sort: ['write_at', 'desc'], diff: ['write_at'] })
-  this.order('yeary', { sort: ['id', 'desc'] })
-  this.order('in_month', { sort: ['id', 'asc'] })
-  this.order('upd_at', { sort: ['id', 'asc'] })
-  this.order('folder_id', { sort: ['count', 'desc'] })
-  this.order('upd_range', { sort: ['count', 'desc'] })
-  this.order('sow_auth_id', { sort: ['count', 'desc'] })
-  this.order('rating', { sort: ['count', 'desc'] })
-  this.order('size', { sort: ['count', 'desc'] })
-  this.order('say', { sort: ['count', 'desc'], belongs_to: 'says' })
-  this.order('game', { sort: ['count', 'desc'], belongs_to: 'games' })
-  this.order('mob', { sort: ['count', 'desc'], belongs_to: 'roles' })
-  this.order('option', { sort: ['count', 'desc'], belongs_to: 'options' })
-  this.order('event', { sort: ['count', 'desc'], belongs_to: 'roles' })
-  this.order('discard', { sort: ['count', 'desc'], belongs_to: 'roles' })
-  this.order('config', { sort: ['count', 'desc'], belongs_to: 'roles' })
-  this.has_many('turns', { target: 'sow_turns', key: 'story_id' })
-  this.habtm('marks')
-  this.habtm('option_datas', { target: 'options', key: 'options' })
-  this.belongs_to('say', { target: 'says', key: 'q.say' })
-  this.belongs_to('mob', { target: 'roles', key: 'q.mob' })
-  this.belongs_to('game', { target: 'games', key: 'q.game' })
-  this.scope((all) => ({
-    prologue: all.partition('prologue.all.set').sort('timer.nextcommitdt', 'desc'),
-    progress: all.partition('progress.all.set').sort('timer.nextcommitdt', 'desc'),
+new Rule('sow_village', {
+  model: SowVillage,
+  scope(all) {
+    return {
+      prologue: all.partition('prologue.all.set').sort('timer.nextcommitdt', 'desc'),
+      progress: all.partition('progress.all.set').sort('timer.nextcommitdt', 'desc'),
 
-    mode(mode) {
-      return all.partition(`${mode}.all.set`)
-    },
+      mode(mode) {
+        return all.partition(`${mode}.all.set`)
+      },
 
-    summary(mode, folder_ids, query_in, query_where, search_word) {
-      if (!folder_ids.length) {
-        folder_ids = ['all']
-      }
-      const parts = folder_ids.map((folder_id) => `${mode}.${folder_id}.set`)
-      return all
-        .partition(...parts)
-        .in(query_in)
-        .where(query_where)
-        .search(search_word)
-    },
+      summary(mode, folder_ids, query_in, query_where, search_word) {
+        if (!folder_ids.length) {
+          folder_ids = ['all']
+        }
+        const parts = folder_ids.map((folder_id) => `${mode}.${folder_id}.set`)
+        return all
+          .partition(...parts)
+          .in(query_in)
+          .where(query_where)
+          .search(search_word)
+      },
 
-    all_contents(mode, folder_ids, query_in, query_where, search_word, order, asc) {
-      return all
-        .summary(mode, folder_ids, query_in, query_where, search_word)
-        .page(25)
-        .order({
-          sort: [order, asc],
-          page: true,
-        })
-    },
-  }))
-
-  const cmd = { count: 1 }
-  this.deploy(({ o, reduce }) => {
+      all_contents(mode, folder_ids, query_in, query_where, search_word, order, asc) {
+        return all
+          .summary(mode, folder_ids, query_in, query_where, search_word)
+          .page(25)
+          .order({
+            sort: [order, asc],
+            page: true,
+          })
+      },
+    }
+  },
+  schema() {
+    this.order('list', { sort: ['write_at', 'desc'], diff: ['write_at'] })
+    this.order('yeary', { sort: ['id', 'desc'] })
+    this.order('in_month', { sort: ['id', 'asc'] })
+    this.order('upd_at', { sort: ['id', 'asc'] })
+    this.order('folder_id', { sort: ['count', 'desc'] })
+    this.order('upd_range', { sort: ['count', 'desc'] })
+    this.order('sow_auth_id', { sort: ['count', 'desc'] })
+    this.order('rating', { sort: ['count', 'desc'] })
+    this.order('size', { sort: ['count', 'desc'] })
+    this.order('say', { sort: ['count', 'desc'], belongs_to: 'says' })
+    this.order('game', { sort: ['count', 'desc'], belongs_to: 'games' })
+    this.order('mob', { sort: ['count', 'desc'], belongs_to: 'roles' })
+    this.order('option', { sort: ['count', 'desc'], belongs_to: 'options' })
+    this.order('event', { sort: ['count', 'desc'], belongs_to: 'roles' })
+    this.order('discard', { sort: ['count', 'desc'], belongs_to: 'roles' })
+    this.order('config', { sort: ['count', 'desc'], belongs_to: 'roles' })
+    this.has_many('turns', { target: 'sow_turns', key: 'story_id' })
+    this.habtm('marks')
+    this.habtm('option_datas', { target: 'options', key: 'options' })
+    this.belongs_to('folder', { target: 'folders', key: 'q.folder' })
+    this.belongs_to('say', { target: 'says', key: 'q.say' })
+    this.belongs_to('mob', { target: 'roles', key: 'q.mob' })
+    this.belongs_to('game', { target: 'games', key: 'q.game' })
+  },
+  deploy({ o, reduce }) {
+    const cmd = { count: 1 }
     let { interval, hour, minute } = o.upd
     if (hour < 10) {
       hour = `0${hour}`
@@ -134,6 +139,8 @@ new Rule('sow_village', SowVillage).schema(function () {
       rating: o.rating,
       search_words: o.name,
     }
+    delete o.folder
+
     if ([null, 0, '0', 'null', 'view'].includes(o.rating)) {
       o.q.rating = 'default'
     }
@@ -151,7 +158,6 @@ new Rule('sow_village', SowVillage).schema(function () {
       o.card.config = list
     }
     o.card.option = o.options
-    o.folder = Query.folders.find(o.q.folder_id)
     if (o.is_epilogue && o.is_finish) {
       o.href = `${url.store}/stories/${o._id}`
       o.mode = 'oldlog'
@@ -198,17 +204,21 @@ new Rule('sow_village', SowVillage).schema(function () {
     for (let card_id of o.card.config) {
       reduce(['config', card_id], cmd)
     }
-  })
+  },
 })
 
-new Rule('folder', Folder).schema(function () {
-  this.scope((all) => ({
-    enable: all.where((o) => !o.disabled),
-    host(hostname) {
-      return all.where({ hostname })
-    },
-  }))
-  this.deploy(({ o }) => {
+new Rule('folder', {
+  model: Folder,
+  scope(all) {
+    return {
+      enable: all.where((o) => !o.disabled),
+      host(hostname) {
+        return all.where({ hostname })
+      },
+    }
+  },
+  schema() {},
+  deploy({ o }) {
     let path
     const _r = o.config
     const c = _r && _r.cfg
@@ -234,7 +244,7 @@ new Rule('folder', Folder).schema(function () {
       return
     }
     o.route = { path, name: o._id }
-  })
+  },
 })
 
 Set.folder.set(require('../yaml/sow_folder.yml'))

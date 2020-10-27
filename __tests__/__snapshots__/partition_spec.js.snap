@@ -1,0 +1,1719 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`path metaS snapshot 1`] = `
+Metadata {
+  "depth": 0,
+  "pack": Object {
+    "sow_turns": Object {
+      "$format": Object {
+        "_reduce": Object {
+          "hash": Object {},
+          "list": Array [],
+        },
+      },
+      "$memory": Object {
+        "xebec-308-0": Object {
+          "$group": Array [
+            Array [
+              "_reduce",
+              Object {
+                "list": true,
+                "set": "xebec-308-0",
+              },
+            ],
+          ],
+          "item": model {
+            "_id": "xebec-308-0",
+            "_type": "SowTurn",
+            "created_at": "2020-10-18T12:39:06.000Z",
+            "eclipse": Array [],
+            "epilogue": 0,
+            "event": null,
+            "grudge": -1,
+            "name": "プロローグ",
+            "riot": -1,
+            "say": Object {
+              "modifiedgsay": "1970-01-01T00:00:00.000Z",
+              "modifiedsay": "2020-10-21T14:40:48.000Z",
+              "modifiedspsay": "1970-01-01T00:00:00.000Z",
+              "modifiedvsay": "1970-01-01T00:00:00.000Z",
+              "modifiedwsay": "2020-10-21T14:33:32.000Z",
+              "modifiedxsay": "1970-01-01T00:00:00.000Z",
+            },
+            "scapegoat": -1,
+            "seance": Array [],
+            "story_id": "xebec-308",
+            "turn": 0,
+            "updated_at": "2020-10-20T14:56:28.000Z",
+            "winner": "WIN_NONE",
+          },
+        },
+      },
+      "$sort": Object {},
+    },
+    "sow_villages": Object {
+      "$format": Object {
+        "_reduce": Object {
+          "hash": Object {},
+          "list": Array [],
+        },
+        "_reduce.config.headless": Object {
+          "count": 0,
+        },
+        "_reduce.config.memo": Object {
+          "count": 0,
+        },
+        "_reduce.config.mob": Object {
+          "count": 0,
+        },
+        "_reduce.config.villager": Object {
+          "count": 0,
+        },
+        "_reduce.config.wisper": Object {
+          "count": 0,
+        },
+        "_reduce.event.eclipse": Object {
+          "count": 0,
+        },
+        "_reduce.folder_id.LOBBY": Object {
+          "count": 0,
+        },
+        "_reduce.folder_id.XEBEC": Object {
+          "count": 0,
+        },
+        "_reduce.game.MILLERHOLLOW": Object {
+          "count": 0,
+        },
+        "_reduce.game.MISTERY": Object {
+          "count": 0,
+        },
+        "_reduce.game.TABULA": Object {
+          "count": 0,
+        },
+        "_reduce.game.TROUBLE": Object {
+          "count": 0,
+        },
+        "_reduce.in_month.05月": Object {
+          "count": 0,
+        },
+        "_reduce.in_month.10月": Object {
+          "count": 0,
+        },
+        "_reduce.mob.alive": Object {
+          "count": 0,
+        },
+        "_reduce.mob.gamemaster": Object {
+          "count": 0,
+        },
+        "_reduce.mob.juror": Object {
+          "count": 0,
+        },
+        "_reduce.mob.visiter": Object {
+          "count": 0,
+        },
+        "_reduce.mode.progress.XEBEC": Object {
+          "count": 0,
+        },
+        "_reduce.mode.prologue.LOBBY": Object {
+          "count": 0,
+        },
+        "_reduce.monthry.2020年10月": Object {
+          "count": 0,
+        },
+        "_reduce.monthry.2033年05月": Object {
+          "count": 0,
+        },
+        "_reduce.option.aiming-talk": Object {
+          "count": 0,
+        },
+        "_reduce.option.random-target": Object {
+          "count": 0,
+        },
+        "_reduce.option.select-role": Object {
+          "count": 0,
+        },
+        "_reduce.option.undead-talk": Object {
+          "count": 0,
+        },
+        "_reduce.progress.XEBEC": Object {
+          "hash": Object {},
+        },
+        "_reduce.progress.all": Object {
+          "hash": Object {},
+        },
+        "_reduce.prologue.LOBBY": Object {
+          "hash": Object {},
+        },
+        "_reduce.prologue.all": Object {
+          "hash": Object {},
+        },
+        "_reduce.rating.child": Object {
+          "count": 0,
+        },
+        "_reduce.rating.default": Object {
+          "count": 0,
+        },
+        "_reduce.rating.fireplace": Object {
+          "count": 0,
+        },
+        "_reduce.rating.violence": Object {
+          "count": 0,
+        },
+        "_reduce.say.lobby": Object {
+          "count": 0,
+        },
+        "_reduce.say.vulcan": Object {
+          "count": 0,
+        },
+        "_reduce.size.x10": Object {
+          "count": 0,
+        },
+        "_reduce.size.x13": Object {
+          "count": 0,
+        },
+        "_reduce.size.x25": Object {
+          "count": 0,
+        },
+        "_reduce.size.x8": Object {
+          "count": 0,
+        },
+        "_reduce.size_sd": Object {
+          "all": 0,
+          "count": 0,
+          "variance_data": Array [],
+        },
+        "_reduce.sow_auth_id.admin": Object {
+          "count": 0,
+        },
+        "_reduce.sow_auth_id.master": Object {
+          "count": 0,
+        },
+        "_reduce.sow_auth_id.rinco": Object {
+          "count": 0,
+        },
+        "_reduce.upd_at.00:00": Object {
+          "count": 0,
+        },
+        "_reduce.upd_range.24h": Object {
+          "count": 0,
+        },
+        "_reduce.yeary.2020年": Object {
+          "count": 0,
+        },
+        "_reduce.yeary.2033年": Object {
+          "count": 0,
+        },
+      },
+      "$memory": Object {
+        "lobby-11": Object {
+          "$group": Array [
+            Array [
+              "_reduce",
+              Object {
+                "list": true,
+                "set": "lobby-11",
+              },
+            ],
+            Array [
+              "_reduce.prologue.all",
+              Object {
+                "set": "lobby-11",
+              },
+            ],
+            Array [
+              "_reduce.prologue.LOBBY",
+              Object {
+                "set": "lobby-11",
+              },
+            ],
+            Array [
+              "_reduce.size_sd",
+              Object {
+                "all": 10,
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.mode.prologue.LOBBY",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.in_month.05月",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.yeary.2033年",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.monthry.2033年05月",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.folder_id.LOBBY",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.upd_range.24h",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.upd_at.00:00",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.sow_auth_id.admin",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.rating.default",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.size.x10",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.say.lobby",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.game.MISTERY",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.mob.juror",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.option.random-target",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.option.aiming-talk",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.config.mob",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.config.mob",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.config.mob",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.config.mob",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.config.mob",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.config.memo",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.config.memo",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.config.memo",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.config.memo",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.config.memo",
+              Object {
+                "count": 1,
+              },
+            ],
+          ],
+          "item": SowVillage {
+            "_id": "lobby-11",
+            "_type": "SowVillage",
+            "aggregate": Object {
+              "face_ids": Array [],
+            },
+            "card": Object {
+              "config": Array [
+                "mob",
+                "mob",
+                "mob",
+                "mob",
+                "mob",
+                "memo",
+                "memo",
+                "memo",
+                "memo",
+                "memo",
+              ],
+              "discard": Array [],
+              "event": Array [],
+              "option": Array [
+                "random-target",
+                "aiming-talk",
+              ],
+            },
+            "is_epilogue": false,
+            "is_finish": false,
+            "is_full_commit": false,
+            "label": "みんなで、村建て相談所！",
+            "mark_ids": Array [],
+            "mode": "prologue",
+            "name": "みんなで、村建て相談所！",
+            "options": Array [
+              "random-target",
+              "aiming-talk",
+            ],
+            "q": Object {
+              "folder_id": "LOBBY",
+              "game": "MISTERY",
+              "in_month": "05月",
+              "mob": "juror",
+              "monthry": "2033年05月",
+              "rating": "default",
+              "say": "lobby",
+              "search_words": "みんなで、村建て相談所！",
+              "size": "x10",
+              "sow_auth_id": "admin",
+              "upd_at": "00:00",
+              "upd_range": "24h",
+              "yeary": "2033年",
+            },
+            "rating": "default",
+            "sign": "admin",
+            "sow_auth_id": "admin",
+            "timer": Object {
+              "nextchargedt": 2020-10-10T15:00:00.000Z,
+              "nextcommitdt": 2033-05-18T03:33:20.000Z,
+              "nextupdatedt": 2020-10-10T15:00:00.000Z,
+              "scraplimitdt": 2033-05-18T03:33:20.000Z,
+              "updateddt": 2033-05-18T03:33:20.000Z,
+            },
+            "type": Object {
+              "game": "MISTERY",
+              "mob": "juror",
+              "roletable": "default",
+              "say": "lobby",
+              "vote": "anonymity",
+            },
+            "upd": Object {
+              "hour": 0,
+              "interval": 1,
+              "minute": 0,
+            },
+            "vid": 11,
+            "vpl": Array [
+              10,
+              10,
+            ],
+            "write_at": 2000000000000,
+          },
+        },
+        "lobby-17": Object {
+          "$group": Array [
+            Array [
+              "_reduce",
+              Object {
+                "list": true,
+                "set": "lobby-17",
+              },
+            ],
+            Array [
+              "_reduce.prologue.all",
+              Object {
+                "set": "lobby-17",
+              },
+            ],
+            Array [
+              "_reduce.prologue.LOBBY",
+              Object {
+                "set": "lobby-17",
+              },
+            ],
+            Array [
+              "_reduce.size_sd",
+              Object {
+                "all": 25,
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.mode.prologue.LOBBY",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.in_month.05月",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.yeary.2033年",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.monthry.2033年05月",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.folder_id.LOBBY",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.upd_range.24h",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.upd_at.00:00",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.sow_auth_id.master",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.rating.fireplace",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.size.x25",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.say.lobby",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.game.TROUBLE",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.mob.gamemaster",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.option.aiming-talk",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.event.eclipse",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.config.mob",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.config.mob",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.config.mob",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.config.memo",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.config.memo",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.config.memo",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.config.memo",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.config.memo",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.config.memo",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.config.memo",
+              Object {
+                "count": 1,
+              },
+            ],
+          ],
+          "item": SowVillage {
+            "_id": "lobby-17",
+            "_type": "SowVillage",
+            "aggregate": Object {
+              "face_ids": Array [],
+            },
+            "card": Object {
+              "config": Array [
+                "mob",
+                "mob",
+                "mob",
+                "memo",
+                "memo",
+                "memo",
+                "memo",
+                "memo",
+                "memo",
+                "memo",
+              ],
+              "discard": Array [],
+              "event": Array [
+                "eclipse",
+              ],
+              "option": Array [
+                "aiming-talk",
+              ],
+            },
+            "is_epilogue": false,
+            "is_finish": false,
+            "is_full_commit": false,
+            "label": "みんなで足湯で雑談所",
+            "mark_ids": Array [
+              "cat",
+            ],
+            "mode": "prologue",
+            "name": "みんなで足湯で雑談所",
+            "options": Array [
+              "aiming-talk",
+            ],
+            "q": Object {
+              "folder_id": "LOBBY",
+              "game": "TROUBLE",
+              "in_month": "05月",
+              "mob": "gamemaster",
+              "monthry": "2033年05月",
+              "rating": "fireplace",
+              "say": "lobby",
+              "search_words": "みんなで足湯で雑談所",
+              "size": "x25",
+              "sow_auth_id": "master",
+              "upd_at": "00:00",
+              "upd_range": "24h",
+              "yeary": "2033年",
+            },
+            "rating": "fireplace",
+            "sign": "master",
+            "sow_auth_id": "master",
+            "timer": Object {
+              "nextchargedt": 2020-10-10T15:00:00.000Z,
+              "nextcommitdt": 2033-05-18T03:33:20.000Z,
+              "nextupdatedt": 2020-10-10T15:00:00.000Z,
+              "scraplimitdt": 2033-05-18T03:33:20.000Z,
+              "updateddt": 2033-05-18T03:33:20.000Z,
+            },
+            "type": Object {
+              "game": "TROUBLE",
+              "mob": "gamemaster",
+              "roletable": "test1st",
+              "say": "lobby",
+              "vote": "sign",
+            },
+            "upd": Object {
+              "hour": 0,
+              "interval": 1,
+              "minute": 0,
+            },
+            "vid": 17,
+            "vpl": Array [
+              25,
+              25,
+            ],
+            "write_at": 2000000000000,
+          },
+        },
+        "lobby-18": Object {
+          "$group": Array [
+            Array [
+              "_reduce",
+              Object {
+                "list": true,
+                "set": "lobby-18",
+              },
+            ],
+            Array [
+              "_reduce.prologue.all",
+              Object {
+                "set": "lobby-18",
+              },
+            ],
+            Array [
+              "_reduce.prologue.LOBBY",
+              Object {
+                "set": "lobby-18",
+              },
+            ],
+            Array [
+              "_reduce.size_sd",
+              Object {
+                "all": 8,
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.mode.prologue.LOBBY",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.in_month.05月",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.yeary.2033年",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.monthry.2033年05月",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.folder_id.LOBBY",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.upd_range.24h",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.upd_at.00:00",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.sow_auth_id.master",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.rating.child",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.size.x8",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.say.lobby",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.game.MILLERHOLLOW",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.mob.visiter",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.option.aiming-talk",
+              Object {
+                "count": 1,
+              },
+            ],
+          ],
+          "item": SowVillage {
+            "_id": "lobby-18",
+            "_type": "SowVillage",
+            "aggregate": Object {
+              "face_ids": Array [],
+            },
+            "card": Object {
+              "config": Array [],
+              "discard": Array [],
+              "event": Array [],
+              "option": Array [
+                "aiming-talk",
+              ],
+            },
+            "is_epilogue": false,
+            "is_finish": false,
+            "is_full_commit": false,
+            "label": "【事件】こちら議事公園前派出所 ",
+            "mark_ids": Array [
+              "age_A",
+            ],
+            "mode": "prologue",
+            "name": "【事件】こちら議事公園前派出所 ",
+            "options": Array [
+              "aiming-talk",
+            ],
+            "q": Object {
+              "folder_id": "LOBBY",
+              "game": "MILLERHOLLOW",
+              "in_month": "05月",
+              "mob": "visiter",
+              "monthry": "2033年05月",
+              "rating": "child",
+              "say": "lobby",
+              "search_words": "【事件】こちら議事公園前派出所 ",
+              "size": "x8",
+              "sow_auth_id": "master",
+              "upd_at": "00:00",
+              "upd_range": "24h",
+              "yeary": "2033年",
+            },
+            "rating": "child",
+            "sign": "master",
+            "sow_auth_id": "master",
+            "timer": Object {
+              "nextchargedt": 2020-10-10T15:00:00.000Z,
+              "nextcommitdt": 2033-05-18T03:33:20.000Z,
+              "nextupdatedt": 2020-10-10T15:00:00.000Z,
+              "scraplimitdt": 2033-05-18T03:33:20.000Z,
+              "updateddt": 2033-05-18T03:33:20.000Z,
+            },
+            "type": Object {
+              "game": "MILLERHOLLOW",
+              "mob": "visiter",
+              "roletable": "default",
+              "say": "lobby",
+              "vote": "anonymity",
+            },
+            "upd": Object {
+              "hour": 0,
+              "interval": 1,
+              "minute": 0,
+            },
+            "vid": 18,
+            "vpl": Array [
+              8,
+              8,
+            ],
+            "write_at": 2000000000000,
+          },
+        },
+        "xebec-308": Object {
+          "$group": Array [
+            Array [
+              "_reduce",
+              Object {
+                "list": true,
+                "set": "xebec-308",
+              },
+            ],
+            Array [
+              "_reduce.progress.all",
+              Object {
+                "set": "xebec-308",
+              },
+            ],
+            Array [
+              "_reduce.progress.XEBEC",
+              Object {
+                "set": "xebec-308",
+              },
+            ],
+            Array [
+              "_reduce.size_sd",
+              Object {
+                "all": 13,
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.mode.progress.XEBEC",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.in_month.10月",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.yeary.2020年",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.monthry.2020年10月",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.folder_id.XEBEC",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.upd_range.24h",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.upd_at.00:00",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.sow_auth_id.rinco",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.rating.violence",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.size.x13",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.say.vulcan",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.game.TABULA",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.mob.alive",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.option.select-role",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.option.undead-talk",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.config.villager",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.config.wisper",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.config.wisper",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.config.wisper",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.config.wisper",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.config.wisper",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.config.wisper",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.config.wisper",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.config.wisper",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.config.wisper",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.config.wisper",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.config.headless",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.config.headless",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.config.memo",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.config.memo",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.config.memo",
+              Object {
+                "count": 1,
+              },
+            ],
+            Array [
+              "_reduce.config.memo",
+              Object {
+                "count": 1,
+              },
+            ],
+          ],
+          "item": SowVillage {
+            "_id": "xebec-308",
+            "_type": "SowVillage",
+            "aggregate": Object {
+              "face_ids": Array [],
+            },
+            "card": Object {
+              "config": Array [
+                "villager",
+                "wisper",
+                "wisper",
+                "wisper",
+                "wisper",
+                "wisper",
+                "wisper",
+                "wisper",
+                "wisper",
+                "wisper",
+                "wisper",
+                "headless",
+                "headless",
+                "memo",
+                "memo",
+                "memo",
+                "memo",
+              ],
+              "discard": Array [],
+              "event": Array [],
+              "option": Array [
+                "select-role",
+                "undead-talk",
+              ],
+            },
+            "is_epilogue": false,
+            "is_finish": false,
+            "is_full_commit": false,
+            "label": "【R18】忙しい人のためのゾンビ村【RP村】",
+            "mark_ids": Array [
+              "violence",
+            ],
+            "mode": "progress",
+            "name": "【R18】忙しい人のためのゾンビ村【RP村】",
+            "options": Array [
+              "select-role",
+              "undead-talk",
+            ],
+            "q": Object {
+              "folder_id": "XEBEC",
+              "game": "TABULA",
+              "in_month": "10月",
+              "mob": "alive",
+              "monthry": "2020年10月",
+              "rating": "violence",
+              "say": "vulcan",
+              "search_words": "【R18】忙しい人のためのゾンビ村【RP村】",
+              "size": "x13",
+              "sow_auth_id": "rinco",
+              "upd_at": "00:00",
+              "upd_range": "24h",
+              "yeary": "2020年",
+            },
+            "rating": "violence",
+            "sign": "rinco",
+            "sow_auth_id": "rinco",
+            "timer": Object {
+              "nextchargedt": 2020-10-24T15:00:00.000Z,
+              "nextcommitdt": 2020-10-18T12:39:06.000Z,
+              "nextupdatedt": 2020-10-24T15:00:00.000Z,
+              "scraplimitdt": 2020-10-23T15:00:00.000Z,
+              "updateddt": 2020-10-18T12:39:06.000Z,
+            },
+            "type": Object {
+              "game": "TABULA",
+              "mob": "alive",
+              "roletable": "custom",
+              "say": "vulcan",
+              "vote": "anonymity",
+            },
+            "upd": Object {
+              "hour": 0,
+              "interval": 1,
+              "minute": 0,
+            },
+            "vid": 308,
+            "vpl": Array [
+              13,
+              13,
+            ],
+            "write_at": 1603024746000,
+          },
+        },
+      },
+      "$sort": Object {},
+    },
+  },
+  "write_at": 0,
+}
+`;
+
+exports[`path partition snapshot 1`] = `
+Object {
+  "config": Object {
+    "headless": Object {
+      "count": 2,
+    },
+    "memo": Object {
+      "count": 4,
+    },
+    "villager": Object {
+      "count": 1,
+    },
+    "wisper": Object {
+      "count": 10,
+    },
+  },
+  "folder_id": Object {
+    "XEBEC": Object {
+      "count": 1,
+    },
+  },
+  "game": Object {
+    "TABULA": Object {
+      "count": 1,
+    },
+  },
+  "hash": Object {
+    "xebec-308": SowVillage {
+      "_id": "xebec-308",
+      "_type": "SowVillage",
+      "aggregate": Object {
+        "face_ids": Array [],
+      },
+      "card": Object {
+        "config": Array [
+          "villager",
+          "wisper",
+          "wisper",
+          "wisper",
+          "wisper",
+          "wisper",
+          "wisper",
+          "wisper",
+          "wisper",
+          "wisper",
+          "wisper",
+          "headless",
+          "headless",
+          "memo",
+          "memo",
+          "memo",
+          "memo",
+        ],
+        "discard": Array [],
+        "event": Array [],
+        "option": Array [
+          "select-role",
+          "undead-talk",
+        ],
+      },
+      "is_epilogue": false,
+      "is_finish": false,
+      "is_full_commit": false,
+      "label": "【R18】忙しい人のためのゾンビ村【RP村】",
+      "mark_ids": Array [
+        "violence",
+      ],
+      "mode": "progress",
+      "name": "【R18】忙しい人のためのゾンビ村【RP村】",
+      "options": Array [
+        "select-role",
+        "undead-talk",
+      ],
+      "q": Object {
+        "folder_id": "XEBEC",
+        "game": "TABULA",
+        "in_month": "10月",
+        "mob": "alive",
+        "monthry": "2020年10月",
+        "rating": "violence",
+        "say": "vulcan",
+        "search_words": "【R18】忙しい人のためのゾンビ村【RP村】",
+        "size": "x13",
+        "sow_auth_id": "rinco",
+        "upd_at": "00:00",
+        "upd_range": "24h",
+        "yeary": "2020年",
+      },
+      "rating": "violence",
+      "sign": "rinco",
+      "sow_auth_id": "rinco",
+      "timer": Object {
+        "nextchargedt": "2020-10-24T15:00:00.000Z",
+        "nextcommitdt": "2020-10-18T12:39:06.000Z",
+        "nextupdatedt": "2020-10-24T15:00:00.000Z",
+        "scraplimitdt": "2020-10-23T15:00:00.000Z",
+        "updateddt": "2020-10-18T12:39:06.000Z",
+      },
+      "type": Object {
+        "game": "TABULA",
+        "mob": "alive",
+        "roletable": "custom",
+        "say": "vulcan",
+        "vote": "anonymity",
+      },
+      "upd": Object {
+        "hour": 0,
+        "interval": 1,
+        "minute": 0,
+      },
+      "vid": 308,
+      "vpl": Array [
+        13,
+        13,
+      ],
+      "write_at": 1603024746000,
+    },
+  },
+  "in_month": Object {
+    "10月": Object {
+      "count": 1,
+    },
+  },
+  "list": list [
+    SowVillage {
+      "_id": "xebec-308",
+      "_type": "SowVillage",
+      "aggregate": Object {
+        "face_ids": Array [],
+      },
+      "card": Object {
+        "config": Array [
+          "villager",
+          "wisper",
+          "wisper",
+          "wisper",
+          "wisper",
+          "wisper",
+          "wisper",
+          "wisper",
+          "wisper",
+          "wisper",
+          "wisper",
+          "headless",
+          "headless",
+          "memo",
+          "memo",
+          "memo",
+          "memo",
+        ],
+        "discard": Array [],
+        "event": Array [],
+        "option": Array [
+          "select-role",
+          "undead-talk",
+        ],
+      },
+      "is_epilogue": false,
+      "is_finish": false,
+      "is_full_commit": false,
+      "label": "【R18】忙しい人のためのゾンビ村【RP村】",
+      "mark_ids": Array [
+        "violence",
+      ],
+      "mode": "progress",
+      "name": "【R18】忙しい人のためのゾンビ村【RP村】",
+      "options": Array [
+        "select-role",
+        "undead-talk",
+      ],
+      "q": Object {
+        "folder_id": "XEBEC",
+        "game": "TABULA",
+        "in_month": "10月",
+        "mob": "alive",
+        "monthry": "2020年10月",
+        "rating": "violence",
+        "say": "vulcan",
+        "search_words": "【R18】忙しい人のためのゾンビ村【RP村】",
+        "size": "x13",
+        "sow_auth_id": "rinco",
+        "upd_at": "00:00",
+        "upd_range": "24h",
+        "yeary": "2020年",
+      },
+      "rating": "violence",
+      "sign": "rinco",
+      "sow_auth_id": "rinco",
+      "timer": Object {
+        "nextchargedt": "2020-10-24T15:00:00.000Z",
+        "nextcommitdt": "2020-10-18T12:39:06.000Z",
+        "nextupdatedt": "2020-10-24T15:00:00.000Z",
+        "scraplimitdt": "2020-10-23T15:00:00.000Z",
+        "updateddt": "2020-10-18T12:39:06.000Z",
+      },
+      "type": Object {
+        "game": "TABULA",
+        "mob": "alive",
+        "roletable": "custom",
+        "say": "vulcan",
+        "vote": "anonymity",
+      },
+      "upd": Object {
+        "hour": 0,
+        "interval": 1,
+        "minute": 0,
+      },
+      "vid": 308,
+      "vpl": Array [
+        13,
+        13,
+      ],
+      "write_at": 1603024746000,
+    },
+  ],
+  "mob": Object {
+    "alive": Object {
+      "count": 1,
+    },
+  },
+  "mode": Object {
+    "progress": Object {
+      "XEBEC": Object {
+        "count": 1,
+      },
+    },
+  },
+  "monthry": Object {
+    "2020年10月": Object {
+      "count": 1,
+    },
+  },
+  "option": Object {
+    "select-role": Object {
+      "count": 1,
+    },
+    "undead-talk": Object {
+      "count": 1,
+    },
+  },
+  "progress": Object {
+    "XEBEC": Object {
+      "hash": Object {
+        "xebec-308": SowVillage {
+          "_id": "xebec-308",
+          "_type": "SowVillage",
+          "aggregate": Object {
+            "face_ids": Array [],
+          },
+          "card": Object {
+            "config": Array [
+              "villager",
+              "wisper",
+              "wisper",
+              "wisper",
+              "wisper",
+              "wisper",
+              "wisper",
+              "wisper",
+              "wisper",
+              "wisper",
+              "wisper",
+              "headless",
+              "headless",
+              "memo",
+              "memo",
+              "memo",
+              "memo",
+            ],
+            "discard": Array [],
+            "event": Array [],
+            "option": Array [
+              "select-role",
+              "undead-talk",
+            ],
+          },
+          "is_epilogue": false,
+          "is_finish": false,
+          "is_full_commit": false,
+          "label": "【R18】忙しい人のためのゾンビ村【RP村】",
+          "mark_ids": Array [
+            "violence",
+          ],
+          "mode": "progress",
+          "name": "【R18】忙しい人のためのゾンビ村【RP村】",
+          "options": Array [
+            "select-role",
+            "undead-talk",
+          ],
+          "q": Object {
+            "folder_id": "XEBEC",
+            "game": "TABULA",
+            "in_month": "10月",
+            "mob": "alive",
+            "monthry": "2020年10月",
+            "rating": "violence",
+            "say": "vulcan",
+            "search_words": "【R18】忙しい人のためのゾンビ村【RP村】",
+            "size": "x13",
+            "sow_auth_id": "rinco",
+            "upd_at": "00:00",
+            "upd_range": "24h",
+            "yeary": "2020年",
+          },
+          "rating": "violence",
+          "sign": "rinco",
+          "sow_auth_id": "rinco",
+          "timer": Object {
+            "nextchargedt": "2020-10-24T15:00:00.000Z",
+            "nextcommitdt": "2020-10-18T12:39:06.000Z",
+            "nextupdatedt": "2020-10-24T15:00:00.000Z",
+            "scraplimitdt": "2020-10-23T15:00:00.000Z",
+            "updateddt": "2020-10-18T12:39:06.000Z",
+          },
+          "type": Object {
+            "game": "TABULA",
+            "mob": "alive",
+            "roletable": "custom",
+            "say": "vulcan",
+            "vote": "anonymity",
+          },
+          "upd": Object {
+            "hour": 0,
+            "interval": 1,
+            "minute": 0,
+          },
+          "vid": 308,
+          "vpl": Array [
+            13,
+            13,
+          ],
+          "write_at": 1603024746000,
+        },
+      },
+      "set": Array [
+        "xebec-308",
+      ],
+    },
+    "all": Object {
+      "hash": Object {
+        "xebec-308": SowVillage {
+          "_id": "xebec-308",
+          "_type": "SowVillage",
+          "aggregate": Object {
+            "face_ids": Array [],
+          },
+          "card": Object {
+            "config": Array [
+              "villager",
+              "wisper",
+              "wisper",
+              "wisper",
+              "wisper",
+              "wisper",
+              "wisper",
+              "wisper",
+              "wisper",
+              "wisper",
+              "wisper",
+              "headless",
+              "headless",
+              "memo",
+              "memo",
+              "memo",
+              "memo",
+            ],
+            "discard": Array [],
+            "event": Array [],
+            "option": Array [
+              "select-role",
+              "undead-talk",
+            ],
+          },
+          "is_epilogue": false,
+          "is_finish": false,
+          "is_full_commit": false,
+          "label": "【R18】忙しい人のためのゾンビ村【RP村】",
+          "mark_ids": Array [
+            "violence",
+          ],
+          "mode": "progress",
+          "name": "【R18】忙しい人のためのゾンビ村【RP村】",
+          "options": Array [
+            "select-role",
+            "undead-talk",
+          ],
+          "q": Object {
+            "folder_id": "XEBEC",
+            "game": "TABULA",
+            "in_month": "10月",
+            "mob": "alive",
+            "monthry": "2020年10月",
+            "rating": "violence",
+            "say": "vulcan",
+            "search_words": "【R18】忙しい人のためのゾンビ村【RP村】",
+            "size": "x13",
+            "sow_auth_id": "rinco",
+            "upd_at": "00:00",
+            "upd_range": "24h",
+            "yeary": "2020年",
+          },
+          "rating": "violence",
+          "sign": "rinco",
+          "sow_auth_id": "rinco",
+          "timer": Object {
+            "nextchargedt": "2020-10-24T15:00:00.000Z",
+            "nextcommitdt": "2020-10-18T12:39:06.000Z",
+            "nextupdatedt": "2020-10-24T15:00:00.000Z",
+            "scraplimitdt": "2020-10-23T15:00:00.000Z",
+            "updateddt": "2020-10-18T12:39:06.000Z",
+          },
+          "type": Object {
+            "game": "TABULA",
+            "mob": "alive",
+            "roletable": "custom",
+            "say": "vulcan",
+            "vote": "anonymity",
+          },
+          "upd": Object {
+            "hour": 0,
+            "interval": 1,
+            "minute": 0,
+          },
+          "vid": 308,
+          "vpl": Array [
+            13,
+            13,
+          ],
+          "write_at": 1603024746000,
+        },
+      },
+      "set": Array [
+        "xebec-308",
+      ],
+    },
+  },
+  "rating": Object {
+    "violence": Object {
+      "count": 1,
+    },
+  },
+  "say": Object {
+    "vulcan": Object {
+      "count": 1,
+    },
+  },
+  "set": Array [
+    "xebec-308",
+  ],
+  "size": Object {
+    "x13": Object {
+      "count": 1,
+    },
+  },
+  "size_sd": Object {
+    "all": 13,
+    "avg": 13,
+    "count": 1,
+    "sd": NaN,
+    "standard": [Function],
+    "variance": NaN,
+  },
+  "sow_auth_id": Object {
+    "rinco": Object {
+      "count": 1,
+    },
+  },
+  "upd_at": Object {
+    "00:00": Object {
+      "count": 1,
+    },
+  },
+  "upd_range": Object {
+    "24h": Object {
+      "count": 1,
+    },
+  },
+  "yeary": Object {
+    "2020年": Object {
+      "count": 1,
+    },
+  },
+}
+`;

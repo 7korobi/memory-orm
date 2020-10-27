@@ -1,4 +1,8 @@
-import _ from 'lodash'
+import _get from 'lodash/get'
+import _uniq from 'lodash/uniq'
+import _property from 'lodash/property'
+import _snakeCase from 'lodash/snakeCase'
+
 import * as Mem from './userdata'
 import { Model } from './model'
 import { List } from './list'
@@ -7,13 +11,15 @@ import {
   Cache,
   DEPLOY,
   RelationCmd,
-  DIC,
   CLASS,
-  MODEL_DATA,
   ID,
   NameBase,
   SortCmd,
   OrderCmd,
+  SCHEMA,
+  SCOPE,
+  DEFAULT_RULE_TYPE,
+  QUERY_WITH_SCOPE,
 } from './type'
 import { Set } from './set'
 import { Map } from './map'
@@ -22,7 +28,7 @@ import { Finder } from './finder'
 import { PureObject, State } from './mem'
 
 function rename(base: string): NameBase {
-  base = _.snakeCase(base).replace(/s$/, '')
+  base = _snakeCase(base).replace(/s$/, '')
   const name = Mem.Name[base]
   if (name) {
     return name
@@ -34,46 +40,81 @@ function rename(base: string): NameBase {
   o.list = list
   o.id = `${base}_id`
   o.ids = `${base}_ids`
+  o.relations = []
   o.deploys = []
   o.depends = []
   return o
 }
 
-function method<O extends MODEL_DATA, M extends CLASS<O>>(r: Rule<O, M>, key: string, o: Object) {
-  Object.defineProperty(r.model.prototype, key, o)
+function method({ prototype }: any, key: string, o: Object) {
+  Object.defineProperty(prototype, key, o)
 }
 
-export class Rule<O extends MODEL_DATA, M extends CLASS<O>> {
+export class Rule<A extends DEFAULT_RULE_TYPE> {
   $name: NameBase
   state: Cache
-  all: Query<O>
+  all: QUERY_WITH_SCOPE<A>
 
-  model!: any
-  list!: any
-  set!: any
-  map!: any
+  model!: CLASS<A[0]>
+  list!: CLASS<List<A>>
+  set!: CLASS<Set<A>>
+  map!: CLASS<Map<A>>
 
-  constructor(base: string, modelClass?: CLASS<O>) {
+  constructor(
+    base: string,
+    {
+      model = class model extends Model {} as any,
+      list = class list extends List<A> {} as any,
+      set = class set extends Set<A> {} as any,
+      map = class map extends Map<A> {} as any,
+      scope,
+      scope_without_cache,
+      schema,
+      deploy,
+    }: {
+      model?: CLASS<A[0]>
+      list?: CLASS<List<A>>
+      set?: CLASS<Set<A>>
+      map?: CLASS<Map<A>>
+      scope?: SCOPE<A>
+      scope_without_cache?: SCOPE<A>
+      schema?: SCHEMA<A>
+      deploy?: DEPLOY<A[0]>
+    } = {}
+  ) {
     this.$name = rename(base)
     this.state = State.base(this.$name.list)
 
-    this.all = Query.build<O>(this.state)
+    this.all = Query.build<A>(this.state) as Query<A>
     this.all.$sort['_reduce.list'] = {}
     this.all._cache = {}
-    this.all._finder = new Finder<O>()
+    this.all._finder = new Finder<A>()
 
     this.depend_on(this.$name.list)
 
-    this.model = modelClass || class model extends Model {}
-    this.list = class list extends List<O> {}
-    this.set = class set extends Set<O> {}
-    this.map = class map extends Map<O> {}
+    this.model = model
+    this.list = list
+    this.set = set
+    this.map = map
+
+    if (scope_without_cache) {
+      this.scope_without_cache(scope_without_cache)
+    }
+    if (scope) {
+      this.scope(scope)
+    }
+    if (deploy) {
+      this.deploy(deploy)
+    }
+    if (schema) {
+      this.schema(schema)
+    }
   }
 
-  schema(cb: (this: Rule<O, M>) => void) {
+  schema(cb: SCHEMA<A>) {
     cb.call(this)
     this.model.$name = this.list.$name = this.set.$name = this.map.$name = this.$name
-    this.all._finder.join(this)
+    this.all._finder.join(this as any)
 
     Mem.Set[this.$name.base] = new this.set(this)
     Mem.Query[this.$name.list] = this.all
@@ -92,21 +133,21 @@ export class Rule<O extends MODEL_DATA, M extends CLASS<O>> {
         return keys
       }
       if (keys instanceof String) {
-        return _.property(keys)
+        return _property(keys)
       }
       if (keys instanceof Array) {
-        return _.property(keys)
+        return _property(keys)
       }
       throw new Error(`unimplemented ${keys}`)
     })()
 
-    method(this, 'id', {
+    method(this.model, 'id', {
       enumerable: true,
       get,
     })
   }
 
-  deploy(cb: DEPLOY<O, M>) {
+  deploy(cb: DEPLOY<A[0]>) {
     this.$name.deploys.push(cb)
   }
 
@@ -114,19 +155,17 @@ export class Rule<O extends MODEL_DATA, M extends CLASS<O>> {
     Mem.Name[parent].depends.push(parent)
   }
 
-  scope_without_cache(cb: (all: Query<O>) => DIC<any>) {
+  scope_without_cache(cb: SCOPE<A>) {
     const cmd = cb(this.all)
     for (const key in cmd) {
-      const val = cmd[key]
-      this.all[key] = val
+      ;(this.all as any)[key] = cmd[key]
     }
   }
 
-  scope(cb: (all: Query<O>) => DIC<any>) {
+  scope(cb: SCOPE<A>) {
     const cmd = cb(this.all)
     for (const key in cmd) {
-      const val = cmd[key]
-      this.use_cache(key, val)
+      this.use_cache(key, cmd[key])
     }
   }
 
@@ -134,7 +173,7 @@ export class Rule<O extends MODEL_DATA, M extends CLASS<O>> {
     Object.defineProperties(this[type].prototype, o)
   }
 
-  default_scope(scope: (all: Query<O>) => Query<O>) {
+  default_scope(scope: (all: Query<A>) => Query<A>) {
     this.all._copy(scope(this.all))
     const base = State.base(this.$name.list)
     base.$sort = this.all.$sort
@@ -153,10 +192,11 @@ export class Rule<O extends MODEL_DATA, M extends CLASS<O>> {
   }
 
   relation_to_one(key: string, target: string, ik: ID, else_id?: ID) {
-    method(this, key, {
+    this.$name.relations.push(key)
+    method(this.model, key, {
       enumerable: true,
       get() {
-        const id = _.get(this, ik)
+        const id = _get(this, ik)
         return Mem.Query[target].find(id, else_id!)
       },
     })
@@ -166,7 +206,8 @@ export class Rule<O extends MODEL_DATA, M extends CLASS<O>> {
     const { all } = this
     this.use_cache(key, (id) => Mem.Query[target].distinct(false)[cmd]({ [qk]: id }))
 
-    method(this, key, {
+    this.$name.relations.push(key)
+    method(this.model, key, {
       enumerable: true,
       get() {
         return all[key](this[ik])
@@ -185,7 +226,8 @@ export class Rule<O extends MODEL_DATA, M extends CLASS<O>> {
       }
     })
 
-    method(this, key, {
+    this.$name.relations.push(key)
+    method(this.model, key, {
       enumerable: true,
       value(this: Model | Struct, n: number) {
         return all[key]([this.id], n)
@@ -209,13 +251,14 @@ export class Rule<O extends MODEL_DATA, M extends CLASS<O>> {
           }
         }
 
-        return all[key](_.uniq(ids), n - 1)
+        return all[key](_uniq(ids), n - 1)
       } else {
         return q
       }
     })
 
-    method(this, key, {
+    this.$name.relations.push(key)
+    method(this.model, key, {
       enumerable: true,
       value(this: Model | Struct, n: number) {
         return all[key]([this.id], n)
@@ -225,12 +268,12 @@ export class Rule<O extends MODEL_DATA, M extends CLASS<O>> {
 
   use_cache(key: string, val: any) {
     if (val instanceof Function) {
-      this.all[key] = (...args: string[]) => {
+      ;(this.all as any)[key] = (...args: string[]) => {
         const name = `${key}:${JSON.stringify(args)}`
         return this.all._cache[name] || (this.all._cache[name] = val(...args))
       }
     } else {
-      this.all[key] = val
+      ;(this.all as any)[key] = val
     }
   }
 
@@ -268,7 +311,7 @@ export class Rule<O extends MODEL_DATA, M extends CLASS<O>> {
 
     const { all } = this
     const pk = `${tail_key}_id`
-    method(this, 'siblings', {
+    method(this.model, 'siblings', {
       get() {
         return all.where({ [pk]: this[pk] })
       },
@@ -305,8 +348,8 @@ export class Rule<O extends MODEL_DATA, M extends CLASS<O>> {
 
     Object.defineProperties(this.all, {
       leaf: {
-        get(this: Query<O>) {
-          const not_leaf = _.uniq(this.pluck(fk))
+        get(this: Query<A>) {
+          const not_leaf = _uniq(this.pluck(fk))
           return this.where((o) => !not_leaf.includes(o.id))
         },
       },

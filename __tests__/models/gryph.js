@@ -27,11 +27,11 @@ class Delta extends Struct {
   }
 }
 
-new Rule('point', Points).schema(function () {})
+new Rule('point', { model: Points, schema() {} })
 
-new Rule('line', Line).schema(function () {})
+new Rule('line', { model: Line, schema() {} })
 
-new Rule('delta', Delta).schema(function () {})
+new Rule('delta', { model: Delta, schema() {} })
 
 Set.point.reset([
   [1, 1],

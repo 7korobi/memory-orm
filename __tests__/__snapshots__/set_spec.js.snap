@@ -10,6 +10,9 @@ Object {
   "id": "able_id",
   "ids": "able_ids",
   "list": "ables",
+  "relations": Array [
+    "roles",
+  ],
 }
 `;
 
@@ -25,6 +28,10 @@ Object {
   "id": "chr_job_id",
   "ids": "chr_job_ids",
   "list": "chr_jobs",
+  "relations": Array [
+    "chr_set",
+    "face",
+  ],
 }
 `;
 
@@ -40,6 +47,11 @@ Object {
   "id": "chr_npc_id",
   "ids": "chr_npc_ids",
   "list": "chr_npcs",
+  "relations": Array [
+    "chr_set",
+    "chr_job",
+    "face",
+  ],
 }
 `;
 
@@ -53,6 +65,10 @@ Object {
   "id": "chr_set_id",
   "ids": "chr_set_ids",
   "list": "chr_sets",
+  "relations": Array [
+    "chr_jobs",
+    "chr_npcs",
+  ],
 }
 `;
 
@@ -68,6 +84,11 @@ Object {
   "id": "face_id",
   "ids": "face_ids",
   "list": "faces",
+  "relations": Array [
+    "tags",
+    "chr_jobs",
+    "chr_npcs",
+  ],
 }
 `;
 
@@ -83,6 +104,7 @@ Object {
   "id": "folder_id",
   "ids": "folder_ids",
   "list": "folders",
+  "relations": Array [],
 }
 `;
 
@@ -96,6 +118,7 @@ Object {
   "id": "locale_id",
   "ids": "locale_ids",
   "list": "locales",
+  "relations": Array [],
 }
 `;
 
@@ -111,6 +134,7 @@ Object {
   "id": "random_id",
   "ids": "random_ids",
   "list": "randoms",
+  "relations": Array [],
 }
 `;
 
@@ -124,6 +148,9 @@ Object {
   "id": "role_id",
   "ids": "role_ids",
   "list": "roles",
+  "relations": Array [
+    "ables",
+  ],
 }
 `;
 
@@ -137,6 +164,45 @@ Object {
   "id": "sow_roletable_id",
   "ids": "sow_roletable_ids",
   "list": "sow_roletables",
+  "relations": Array [],
+}
+`;
+
+exports[`sow_village $name snapshot 1`] = `
+Object {
+  "base": "sow_village",
+  "depends": Array [
+    "sow_villages",
+  ],
+  "deploys": Array [
+    [Function],
+  ],
+  "id": "sow_village_id",
+  "ids": "sow_village_ids",
+  "list": "sow_villages",
+  "relations": Array [
+    "turns",
+    "marks",
+    "option_datas",
+    "folder",
+    "say",
+    "mob",
+    "game",
+  ],
+}
+`;
+
+exports[`sow_village_plan $name snapshot 1`] = `
+Object {
+  "base": "sow_village_plan",
+  "depends": Array [
+    "sow_village_plans",
+  ],
+  "deploys": Array [],
+  "id": "sow_village_plan_id",
+  "ids": "sow_village_plan_ids",
+  "list": "sow_village_plans",
+  "relations": Array [],
 }
 `;
 
@@ -150,5 +216,11 @@ Object {
   "id": "tag_id",
   "ids": "tag_ids",
   "list": "tags",
+  "relations": Array [
+    "chr_set",
+    "faces",
+    "nodes",
+    "tag",
+  ],
 }
 `;

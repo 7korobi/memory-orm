@@ -1,8 +1,14 @@
-import _ from 'lodash'
+import _cloneDeep from 'lodash/cloneDeep'
+import _merge from 'lodash/merge'
+import _union from 'lodash/union'
+import _uniq from 'lodash/uniq'
+import _get from 'lodash/get'
+import _set from 'lodash/set'
+
 import { State, PureObject, step, Metadata } from './mem'
 import { Datum } from './datum'
 import {
-  PlainData,
+  DATA,
   Memory,
   Reduce,
   Filter,
@@ -12,9 +18,10 @@ import {
   SetContext,
   Emitter,
   LeafCmd,
-  MODEL_DATA,
   NameBase,
   PATH,
+  CLASS,
+  DEFAULT_RULE_TYPE,
 } from './type'
 import { Model } from './model'
 import { Map } from './map'
@@ -28,9 +35,9 @@ type Emitters = {
   order: Emitter<OrderCmd>
   reduce: Emitter<LeafCmd> & { default: Emitter<LeafCmd>; default_origin: Emitter<LeafCmd> }
 }
-type ReduceContext<O extends MODEL_DATA> = {
+type ReduceContext<A extends DEFAULT_RULE_TYPE> = {
   map: typeof Map
-  query: Query<O>
+  query: Query<A>
   memory: Memory
   cache: Cache['$format']
   paths: {
@@ -38,7 +45,7 @@ type ReduceContext<O extends MODEL_DATA> = {
   }
 }
 
-function each_by_id<O extends MODEL_DATA>({ from }: SetContext<O>, process: IdProcess) {
+function each_by_id<A extends DEFAULT_RULE_TYPE>({ from }: SetContext<A>, process: IdProcess) {
   if (from instanceof Array) {
     for (const item of from) {
       process((item as any).id || item)
@@ -46,7 +53,7 @@ function each_by_id<O extends MODEL_DATA>({ from }: SetContext<O>, process: IdPr
   }
 }
 
-function each<O extends MODEL_DATA>({ from }: SetContext<O>, process: PlainProcess<O>) {
+function each<A extends DEFAULT_RULE_TYPE>({ from }: SetContext<A>, process: PlainProcess<A[0]>) {
   if (from instanceof Array) {
     for (const item of from) {
       process(item)
@@ -72,11 +79,11 @@ function validate(item: any, meta: Metadata, chklist: Filter[]): boolean {
   return true
 }
 
-export class Finder<O extends MODEL_DATA> {
+export class Finder<A extends DEFAULT_RULE_TYPE> {
   $name!: NameBase
-  all!: Query<O>
+  all!: Query<A>
   model!: typeof Model | typeof Struct
-  list!: typeof List
+  list!: CLASS<List<A>>
   map!: typeof Map
 
   constructor() {}
@@ -89,9 +96,9 @@ export class Finder<O extends MODEL_DATA> {
     list,
   }: {
     $name: NameBase
-    all: Query<O>
+    all: Query<A>
     map: typeof Map
-    list: typeof List
+    list: CLASS<List<A>>
     model: typeof Model | typeof Struct
   }) {
     this.$name = $name
@@ -102,18 +109,18 @@ export class Finder<O extends MODEL_DATA> {
     State.notify(this.$name.list)
   }
 
-  calculate(query: Query<O>, memory: Memory) {
+  calculate(query: Query<A>, memory: Memory) {
     if (query._step >= State.step[this.$name.list]) {
       return
     }
     const base = State.base(this.$name.list)
     delete query._reduce
     query._step = step()
-    const ctx: ReduceContext<O> = {
+    const ctx: ReduceContext<A> = {
       map: this.map,
       query,
       memory,
-      cache: _.cloneDeep(base.$format),
+      cache: _cloneDeep(base.$format),
       paths: {
         _reduce: {
           list: [],
@@ -125,7 +132,7 @@ export class Finder<O extends MODEL_DATA> {
     if (query._all_ids) {
       let ids = query._all_ids
       if (query._is_uniq) {
-        ids = _.uniq(ids)
+        ids = _uniq(ids)
       }
       this.reduce(ctx, ids)
     } else if (query === query.all) {
@@ -133,20 +140,20 @@ export class Finder<O extends MODEL_DATA> {
     } else if (query._is_uniq) {
       let ids = []
       for (const partition of query.$partition) {
-        const tgt = _.get(query.all, `reduce.${partition}`)
-        ids = _.union(ids, tgt)
+        const tgt = _get(query.all, `reduce.${partition}`)
+        ids = _union(ids, tgt)
       }
       this.reduce(ctx, ids)
     } else {
       for (const partition of query.$partition) {
-        const tgt = _.get(query.all, `reduce.${partition}`)
+        const tgt = _get(query.all, `reduce.${partition}`)
         this.reduce(ctx, tgt)
       }
     }
     this.finish(ctx)
   }
 
-  reduce({ map, cache, paths, query, memory }: ReduceContext<O>, ids: string[]) {
+  reduce({ map, cache, paths, query, memory }: ReduceContext<A>, ids: string[]) {
     if (!ids) {
       return
     }
@@ -165,28 +172,28 @@ export class Finder<O extends MODEL_DATA> {
     }
   }
 
-  finish({ map, paths, query }: ReduceContext<O>) {
+  finish({ map, paths, query }: ReduceContext<A>) {
     for (const path in paths) {
       const o = paths[path]
       map.finish(query, path, o, this.list)
-      _.set(query, path, o)
+      _set(query, path, o)
     }
 
     for (const path in query.$sort) {
       const cmd: OrderCmd = query.$sort[path]
-      const from: ReduceLeaf = _.get(query, path)
+      const from: ReduceLeaf = _get(query, path)
       if (from) {
         const sorted = map.order(query, path, from, from, cmd, this.list)
         const dashed = map.dash(query, path, sorted, from, cmd, this.list)
         const result = map.post_proc(query, path, dashed, from, cmd, this.list)
         this.list.bless(result as any, query)
         result.from = from
-        _.set(query, path, result)
+        _set(query, path, result)
       }
     }
   }
 
-  data_set(type: string, from: PlainData<O>, parent: Object | undefined) {
+  data_set(type: string, from: DATA<A[0]>, parent: Object | undefined) {
     const meta = State.meta()
     const base = State.base(this.$name.list)
     const journal = State.journal(this.$name.list)
@@ -204,7 +211,7 @@ export class Finder<O extends MODEL_DATA> {
     })
   }
 
-  data_emitter({ base, journal }: SetContext<O>, { item, $group }): Emitters {
+  data_emitter({ base, journal }: SetContext<A>, { item, $group }): Emitters {
     if (!base.$format) {
       throw new Error('bad context.')
     }
@@ -250,19 +257,19 @@ export class Finder<O extends MODEL_DATA> {
   }
 
   data_init(
-    { model, parent, deploys }: SetContext<O>,
+    { model, parent, deploys }: SetContext<A>,
     { item }: Datum,
     { reduce, order }: Emitters
   ) {
     model.bless(item as any)
-    parent && _.merge(item, parent)
+    parent && _merge(item, parent)
     model.deploy.call(item, model)
     for (const deploy of deploys) {
       deploy.call(item, { o: item, model, reduce, order })
     }
   }
 
-  data_entry({ model }: SetContext<O>, { item }: Datum, { reduce, order }: Emitters) {
+  data_entry({ model }: SetContext<A>, { item }: Datum, { reduce, order }: Emitters) {
     model.map_partition(item, reduce)
     model.map_reduce(item, reduce)
     if (reduce.default === reduce.default_origin) {
@@ -271,7 +278,7 @@ export class Finder<O extends MODEL_DATA> {
     model.order(item, order)
   }
 
-  reset(ctx: SetContext<O>) {
+  reset(ctx: SetContext<A>) {
     ctx.journal.$memory = PureObject()
     const news = (ctx.base.$memory = ctx.all.$memory = PureObject())
 
@@ -287,7 +294,7 @@ export class Finder<O extends MODEL_DATA> {
     return true
   }
 
-  merge(ctx: SetContext<O>) {
+  merge(ctx: SetContext<A>) {
     let is_hit = false
     each(ctx, (item) => {
       const o = new Datum(ctx.meta, item as any)
@@ -313,7 +320,7 @@ export class Finder<O extends MODEL_DATA> {
     return is_hit
   }
 
-  remove(ctx: SetContext<O>) {
+  remove(ctx: SetContext<A>) {
     let is_hit = false
     each_by_id(ctx, (id) => {
       const old = ctx.base.$memory[id]
@@ -327,14 +334,14 @@ export class Finder<O extends MODEL_DATA> {
     return is_hit
   }
 
-  update(ctx: SetContext<O>, parent: Object) {
+  update(ctx: SetContext<A>, parent: Object) {
     let is_hit = false
     each_by_id(ctx, (id) => {
       const old = ctx.base.$memory[id]
       if (!old) {
         return
       }
-      _.merge(old.item, parent)
+      _merge(old.item, parent)
       old.$group = []
       const emit = this.data_emitter(ctx, old)
       this.data_entry(ctx, old, emit)

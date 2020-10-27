@@ -4,7 +4,7 @@ export type STRUCT<T extends string> = Struct & { [label in T]: any }
 
 export class Struct extends Array {
   idx?: string
-  get id(): ID {
+  get id(): string {
     return this[0]
   }
 
@@ -49,7 +49,3 @@ export function Structure<T extends string>(
   })
   return struct as { new (): STRUCT<T> }
 }
-
-const Points = Structure(['x', 'y', 'r', 'color'], function () {
-  return this.join('*')
-})

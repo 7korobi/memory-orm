@@ -2,9 +2,9 @@ import { ID, NameBase } from './type'
 
 export class Model extends Object {
   idx?: string
-  _id!: ID
+  _id?: string
   get id() {
-    return this._id
+    return this._id!
   }
 
   static $name: NameBase

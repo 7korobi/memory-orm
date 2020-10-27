@@ -1,28 +1,33 @@
-import _ from 'lodash'
-import { Query } from './query'
-import { ReduceOrder, NameBase, MODEL_DATA, PlainData, DIC, ID, SortCmd } from './type'
+import _at from 'lodash/at'
+import _uniq from 'lodash/uniq'
+import _orderBy from 'lodash/orderBy'
+import _groupBy from 'lodash/groupBy'
+import _property from 'lodash/property'
 
-export class List<O extends MODEL_DATA> extends Array {
-  query!: Query<O>
+import { Query } from './query'
+import { NameBase, DIC, ID, DEFAULT_RULE_TYPE } from './type'
+
+export class List<A extends DEFAULT_RULE_TYPE> extends Array<A[0]> {
+  query!: Query<A>
   static $name: NameBase
-  get first(): O {
+  get first(): A[0] {
     return this[0]
   }
 
-  get last(): O {
+  get last(): A[0] {
     return this[this.length - 1]
   }
 
-  get head(): O {
+  get head(): A[0] {
     return this[0]
   }
 
-  get tail(): O {
+  get tail(): A[0] {
     return this[this.length - 1]
   }
 
   get uniq(): this {
-    return (this.constructor as typeof List).bless(_.uniq(this), this.query) as this
+    return (this.constructor as typeof List).bless(_uniq(this), this.query) as this
   }
 
   pluck(...keys: ID[]): List<any> {
@@ -34,26 +39,26 @@ export class List<O extends MODEL_DATA> extends Array {
         }
         break
       case 1:
-        cb = _.property(keys[0])
+        cb = _property(keys[0])
         break
       default:
         cb = function (o) {
-          return _.at(o, ...keys)
+          return _at(o, ...keys)
         }
         break
     }
     return (this.constructor as typeof List).bless(this.map(cb), this.query)
   }
 
-  static bless<O extends MODEL_DATA>(list: any[], query: Query<O>) {
+  static bless<A extends DEFAULT_RULE_TYPE>(list: any[], query: Query<A>) {
     Reflect.setPrototypeOf(list, this.prototype)
     if (query && query.where && query.in) {
       ;(list as any).query = query
     }
-    return (list as any) as List<O>
+    return (list as any) as List<A>
   }
 
-  constructor(query: Query<O>) {
+  constructor(query: Query<A>) {
     super()
     if (query && query.where && query.in) {
       this.query = query
@@ -61,13 +66,13 @@ export class List<O extends MODEL_DATA> extends Array {
   }
 
   sort(...cmd: any[]) {
-    const o = (_.orderBy(this, cmd[0], cmd[1]) as any) as this
+    const o = (_orderBy(this, cmd[0], cmd[1]) as any) as this
     Reflect.setPrototypeOf(o, Reflect.getPrototypeOf(this))
     return o
   }
 
   group_by(cb) {
-    const o = (_.groupBy(this, cb) as any) as DIC<List<O>>
+    const o = (_groupBy(this, cb) as any) as DIC<List<A>>
     for (const key in o) {
       const oo = o[key]
       Reflect.setPrototypeOf(oo, Reflect.getPrototypeOf(this))

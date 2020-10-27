@@ -17,6 +17,8 @@ const keys = [
   'folder',
   'role',
   'able',
+  'sow_village',
+  'sow_village_plan',
   'sow_roletable',
 ]
 

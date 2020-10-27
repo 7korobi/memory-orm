@@ -1,16 +1,15 @@
-import _ from 'lodash'
 import { State } from './mem'
 import { Query } from './query'
 import { Finder } from './finder'
-import { MODEL_DATA, CLASS, PlainData, NameBase } from './type'
+import { CLASS, DATA, NameBase, DEFAULT_RULE_TYPE, DATUM } from './type'
 
-export class Set<O extends MODEL_DATA> {
+export class Set<A extends DEFAULT_RULE_TYPE> {
   static $name: NameBase
 
   $name: NameBase
-  all: Query<O>
-  finder: Finder<O>
-  model: CLASS<O>
+  all: Query<A>
+  finder: Finder<A>
+  model: CLASS<A[0]>
 
   constructor({ $name, all, model }) {
     this.$name = $name
@@ -19,18 +18,18 @@ export class Set<O extends MODEL_DATA> {
     this.finder = all._finder
   }
 
-  set = f_common<O>('reset')
-  reset = f_common<O>('reset')
-  merge = f_common<O>('merge')
-  add = f_item<O>(f_common<O>('merge'))
-  append = f_item<O>(f_common<O>('merge'))
+  set = f_common<A>('reset')
+  reset = f_common<A>('reset')
+  merge = f_common<A>('merge')
+  add = f_item<A>(f_common<A>('merge'))
+  append = f_item<A>(f_common<A>('merge'))
 
-  reject = f_common<O>('remove')
-  del = f_item<O>(f_common<O>('remove'))
-  remove = f_item<O>(f_common<O>('remove'))
+  reject = f_common<A>('remove')
+  del = f_item<A>(f_common<A>('remove'))
+  remove = f_item<A>(f_common<A>('remove'))
 
   updates = f_update
-  update = f_item<O>(f_update)
+  update = f_item<A>(f_update)
 
   clear_cache = f_clear
   refresh = f_clear
@@ -51,29 +50,29 @@ export class Set<O extends MODEL_DATA> {
   }
 }
 
-function f_common<O extends MODEL_DATA>(type: string) {
-  return function (this: Set<O>, list: PlainData<O>, parent?: Object) {
+function f_common<A extends DEFAULT_RULE_TYPE>(type: string) {
+  return function (this: Set<A>, list: DATA<A[0]>, parent?: Object) {
     const is_hit = this.finder.data_set(type, list, parent)
     this.clear_cache(is_hit)
   }
 }
 
-function f_update<O extends MODEL_DATA>(this: Set<O>, list: PlainData<O>, parent: Object) {
+function f_update<A extends DEFAULT_RULE_TYPE>(this: Set<A>, list: DATA<A[0]>, parent: Object) {
   if (parent) {
     const is_hit = this.finder.data_set('update', list, parent)
     this.clear_cache(is_hit)
   }
 }
 
-function f_item<O extends MODEL_DATA>(cb) {
-  return function (this: Set<O>, item: Partial<O>, parent?: Object) {
+function f_item<A extends DEFAULT_RULE_TYPE>(cb) {
+  return function (this: Set<A>, item: DATUM<A[0]>, parent?: Object) {
     if (item) {
       cb.call(this, [item], parent)
     }
   }
 }
 
-function f_clear<O extends MODEL_DATA>(this: Set<O>, is_hit = true) {
+function f_clear<A extends DEFAULT_RULE_TYPE>(this: Set<A>, is_hit = true) {
   if (is_hit) {
     for (const name of this.$name.depends) {
       State.notify(name)
