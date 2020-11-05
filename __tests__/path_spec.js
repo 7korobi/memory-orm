@@ -7,7 +7,13 @@ require('./models/index')
 const Mem = require('../lib/index')
 
 describe('path', function () {
-  test('children snapshot', () =>
-    expect(Mem.Query.paths.pluck('id', 'paths.hash')).toMatchSnapshot())
-  test('parent snapshot', () => expect(Mem.Query.paths.pluck('id', 'path')).toMatchSnapshot())
+  test('children snapshot', () => {
+    expect(Mem.Query.paths.pluck('id', 'paths.list')).toMatchSnapshot()
+  })
+  test('parent snapshot', () => {
+    expect(Mem.Query.paths.pluck('id', 'path')).toMatchSnapshot()
+  })
+  test('reduce id snapshot', () => {
+    expect(Mem.Query.paths.reduce.id).toMatchSnapshot()
+  })
 })

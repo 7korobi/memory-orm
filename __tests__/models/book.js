@@ -11,7 +11,8 @@ const locale = require('date-fns/locale/ja')
 
 new Rule('book').schema(function () {
   this.sort('write_at')
-  this.path('folder')
+  this.path(['folder'])
+
   this.has_many('parts')
   this.has_many('phases')
   this.has_many('chats')

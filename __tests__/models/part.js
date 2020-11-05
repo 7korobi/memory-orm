@@ -7,7 +7,7 @@ const { Model, Query, Rule } = require('../../lib/index')
 
 new Rule('part').schema(function () {
   this.sort('chats.list.0.0.write_at', 'asc')
-  this.path('folder', 'book')
+  this.path(['folder', 'book'])
   this.has_many('sections')
   this.has_many('phases')
   this.has_many('cards')

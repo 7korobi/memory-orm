@@ -43,7 +43,7 @@ new Rule('work_location', {
         ['desc', 'desc', 'asc'],
       ],
     })
-    this.path('*')
+    this.path(['*'])
   },
   deploy({ o, reduce }) {
     reduce('id_tree', { navi: o.id_ary })

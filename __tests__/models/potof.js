@@ -12,7 +12,7 @@ const { Set, Model, Query, Rule } = require('../../lib/index')
 
 new Rule('potof').schema(function () {
   this.sort('write_at')
-  this.path('folder', 'book')
+  this.path(['folder', 'book'])
   this.belongs_to('part')
   this.belongs_to('face')
   this.belongs_to('winner')

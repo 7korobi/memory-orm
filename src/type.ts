@@ -80,6 +80,10 @@ export type Filter = {
   (item: any, meta: Metadata): boolean
 }
 
+export type PathCmd = {
+  key: string
+}
+
 export type RelationCmd = Partial<{
   key: string
   target: string

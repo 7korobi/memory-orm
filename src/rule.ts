@@ -10,16 +10,17 @@ import { Struct } from './struct'
 import {
   Cache,
   DEPLOY,
-  RelationCmd,
   CLASS,
-  ID,
-  NameBase,
-  SortCmd,
-  OrderCmd,
   SCHEMA,
   SCOPE,
   DEFAULT_RULE_TYPE,
   QUERY_WITH_SCOPE,
+  ID,
+  NameBase,
+  PathCmd,
+  SortCmd,
+  OrderCmd,
+  RelationCmd,
 } from './type'
 import { Set } from './set'
 import { Map } from './map'
@@ -277,7 +278,8 @@ export class Rule<A extends DEFAULT_RULE_TYPE> {
     }
   }
 
-  path(...keys: string[]) {
+  path(keys: string[], option: PathCmd = { key: 'id' }) {
+    const { key } = option
     const { base, list } = this.$name
     let tail_key = keys[keys.length - 1]
     if ('*' === tail_key) {
@@ -292,21 +294,22 @@ export class Rule<A extends DEFAULT_RULE_TYPE> {
     }
 
     this.deploy(({ o, reduce }) => {
-      if ('string' !== typeof o.id) {
-        throw new Error(`id [${o.id}] must be string.`)
+      if ('string' !== typeof o[key]) {
+        throw new Error(`id [${o[key]}] must be string.`)
       }
-      const subids = o.id!.split('-')
-      o.idx = subids[subids.length - 1]
+      const subids = o[key]!.split('-')
+      o[`${key}x`] = subids[subids.length - 1]
       for (let idx = 0; idx < keys.length; idx++) {
-        const key = keys[idx]
-        o[`${key}_id`] = subids.slice(0, idx + 1).join('-')
+        const sub_key = keys[idx]
+        o[`${sub_key}_id`] = subids.slice(0, idx + 1).join('-')
       }
 
+      // '*' support.
       if (base && keys.length + 1 < subids.length) {
         o[`${base}_id`] = subids.slice(0, -1).join('-')
       }
 
-      reduce('id_tree', { navi: subids })
+      reduce(key, { navi: subids })
     })
 
     const { all } = this

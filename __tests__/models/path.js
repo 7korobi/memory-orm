@@ -6,7 +6,7 @@
 const { Model, Set, Rule } = require('../../lib/index')
 
 new Rule('path').schema(function () {
-  return this.path('folder', 'book', '*')
+  this.path(['folder', 'book', '*'])
 })
 
 Set.path.add({ _id: 'book-1-aaa' })

@@ -15,7 +15,7 @@ const format = {
 
 new Rule('section').schema(function () {
   this.sort('write_at')
-  this.path('folder', 'book', 'part')
+  this.path(['folder', 'book', 'part'])
   this.has_many('chats')
 
   this.scope((all) => ({}))

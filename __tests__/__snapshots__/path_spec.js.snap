@@ -4,62 +4,62 @@ exports[`path children snapshot 1`] = `
 list [
   Array [
     "book-1-aaa",
-    Object {},
+    list [],
   ],
   Array [
     "book-1-bbb",
-    Object {
-      "book-1-bbb-ccc": model {
+    list [
+      model {
         "_id": "book-1-bbb-ccc",
         "book_id": "book-1",
         "folder_id": "book",
         "idx": "ccc",
         "path_id": "book-1-bbb",
       },
-      "book-1-bbb-ddd": model {
+      model {
         "_id": "book-1-bbb-ddd",
         "book_id": "book-1",
         "folder_id": "book",
         "idx": "ddd",
         "path_id": "book-1-bbb",
       },
-    },
+    ],
   ],
   Array [
     "book-1-bbb-ccc",
-    Object {},
+    list [],
   ],
   Array [
     "book-1-bbb-ddd",
-    Object {
-      "book-1-bbb-ddd-eee": model {
+    list [
+      model {
         "_id": "book-1-bbb-ddd-eee",
         "book_id": "book-1",
         "folder_id": "book",
         "idx": "eee",
         "path_id": "book-1-bbb-ddd",
       },
-    },
+    ],
   ],
   Array [
     "book-1-bbb-ddd-eee",
-    Object {},
+    list [],
   ],
   Array [
     "book-1-ccc-ddd",
-    Object {},
+    list [],
   ],
   Array [
     "book-1-ccc-eee",
-    Object {},
+    list [],
   ],
   Array [
     "book-1-ddd-eee",
-    Object {},
+    list [],
   ],
   Array [
     "book-1-fff-ggg-hhh-iii",
-    Object {},
+    list [],
   ],
 ]
 `;
@@ -119,4 +119,24 @@ list [
     null,
   ],
 ]
+`;
+
+exports[`path reduce id snapshot 1`] = `
+Object {
+  "navi": Object {
+    "book-1": Object {
+      "book-1-aaa": 0,
+      "book-1-bbb": Object {
+        "book-1-bbb-ccc": 0,
+        "book-1-bbb-ddd-eee": 0,
+      },
+      "book-1-ccc": Object {
+        "book-1-ccc-ddd": 0,
+        "book-1-ccc-eee": 0,
+      },
+      "book-1-ddd-eee": 0,
+      "book-1-fff-ggg-hhh-iii": 0,
+    },
+  },
+}
 `;

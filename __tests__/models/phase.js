@@ -9,7 +9,7 @@ new Rule('phase').schema(function () {
   this.order('write_at')
   this.order('group', { sort: ['count', 'desc'] })
   this.order('handle', { sort: ['count', 'desc'] })
-  this.path('folder', 'book', 'part')
+  this.path(['folder', 'book', 'part'])
   this.has_many('chats')
 
   this.scope((all) => ({}))

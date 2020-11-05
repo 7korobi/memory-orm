@@ -20,7 +20,7 @@ new Rule('chat').schema(function () {
     pluck: 'max_is',
     page: true,
   })
-  this.path('folder', 'book', 'part', 'phase')
+  this.path(['folder', 'book', 'part', 'phase'])
   this.belongs_to('section')
   this.belongs_to('potof')
 

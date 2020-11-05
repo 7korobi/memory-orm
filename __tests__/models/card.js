@@ -7,7 +7,7 @@ const { Set, Model, Query, Rule } = require('../../lib/index')
 
 new Rule('card').schema(function () {
   this.sort('write_at')
-  this.path('folder', 'book', 'potof')
+  this.path(['folder', 'book', 'potof'])
   this.belongs_to('role')
 
   this.property('model', {
@@ -29,7 +29,7 @@ new Rule('card').schema(function () {
 })
 
 new Rule('stat').schema(function () {
-  this.path('folder', 'book', 'potof')
+  this.path(['folder', 'book', 'potof'])
   this.belongs_to('able')
 
   this.deploy(function () {
