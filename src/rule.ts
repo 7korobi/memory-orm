@@ -192,26 +192,44 @@ export class Rule<A extends DEFAULT_RULE_TYPE> {
     this.default_scope((all) => (all as any).order(keys, order))
   }
 
-  relation_to_one(key: string, target: string, ik: ID, else_id?: ID) {
+  relation_to(uniq: boolean, key: string, target: string, cmd: string, qk: ID, ik: ID) {
+    const { all } = this
+    this.use_cache(key, (id) => Mem.Query[target].distinct(uniq)[cmd]({ [qk]: id }))
+
     this.$name.relations.push(key)
-    method(this.model, key, {
-      enumerable: true,
-      get() {
-        const id = _get(this, ik)
-        return Mem.Query[target].find(id, else_id!)
-      },
-    })
+
+    if (uniq) {
+      method(this.model, key, {
+        enumerable: true,
+        get() {
+          const id = _get(this, ik)
+          return all[key](id).list[0]
+        },
+      })
+    } else {
+      method(this.model, key, {
+        enumerable: true,
+        get() {
+          const id = _get(this, ik)
+          return all[key](id)
+        },
+      })
+    }
   }
 
-  relation_to_many(key: string, target: string, ik: ID, cmd: string, qk: ID) {
+  relation_to_one(key: string, target: string, ik: ID, cmd: string, qk: ID, else_id?: ID) {
     const { all } = this
-    this.use_cache(key, (id) => Mem.Query[target].distinct(false)[cmd]({ [qk]: id }))
+    this.use_cache(
+      key,
+      (id) => Mem.Query[target].distinct(true)[cmd]({ [ik]: [id, else_id!] }).list[0]
+    )
 
     this.$name.relations.push(key)
     method(this.model, key, {
       enumerable: true,
       get() {
-        return all[key](this[ik])
+        const id = _get(this, qk)
+        return all[key](id)
       },
     })
   }
@@ -278,13 +296,13 @@ export class Rule<A extends DEFAULT_RULE_TYPE> {
     }
   }
 
-  path(keys: string[], option: PathCmd = { key: 'id' }) {
-    const { key } = option
+  path(keys: string[], option: PathCmd = { pk: 'id' }) {
+    const { pk } = option
     const { base, list } = this.$name
     let tail_key = keys[keys.length - 1]
     if ('*' === tail_key) {
-      this.belongs_to(base)
-      this.has_many(list)
+      this.belongs_to(base, { pk })
+      this.has_many(list, { pk })
       keys.pop()
       tail_key = keys[keys.length - 1]
     }
@@ -294,11 +312,11 @@ export class Rule<A extends DEFAULT_RULE_TYPE> {
     }
 
     this.deploy(({ o, reduce }) => {
-      if ('string' !== typeof o[key]) {
-        throw new Error(`id [${o[key]}] must be string.`)
+      if ('string' !== typeof o[pk]) {
+        throw new Error(`id [${o[pk]}] must be string.`)
       }
-      const subids = o[key]!.split('-')
-      o[`${key}x`] = subids[subids.length - 1]
+      const subids = o[pk]!.split('-')
+      o[`${pk}x`] = subids[subids.length - 1]
       for (let idx = 0; idx < keys.length; idx++) {
         const sub_key = keys[idx]
         o[`${sub_key}_id`] = subids.slice(0, idx + 1).join('-')
@@ -309,39 +327,39 @@ export class Rule<A extends DEFAULT_RULE_TYPE> {
         o[`${base}_id`] = subids.slice(0, -1).join('-')
       }
 
-      reduce(key, { navi: subids })
+      reduce(pk, { navi: subids })
     })
 
     const { all } = this
-    const pk = `${tail_key}_id`
+    const tail_id = `${tail_key}_id`
     method(this.model, 'siblings', {
       get() {
-        return all.where({ [pk]: this[pk] })
+        return all.where({ [tail_id]: this[tail_id] })
       },
     })
   }
 
   belongs_to(to: string, option: RelationCmd = {}) {
     const name = rename(to)
-    const { key = name.id, target = name.list, miss } = option
-    this.relation_to_one(name.base, target, key, miss)
+    const { key = name.id, target = name.list, miss, pk = 'id' } = option
+    this.relation_to(true, name.base, target, 'where', pk, key)
   }
 
   habtm(to, option: RelationCmd = {}) {
     const name = rename(to)
     if (option.reverse) {
-      const { key = this.$name.ids, target = to } = option
-      this.relation_to_many(name.list, target, 'id', 'in', key)
+      const { key = this.$name.ids, target = to, pk = 'id' } = option
+      this.relation_to(false, name.list, target, 'in', key, pk)
     } else {
-      const { key = name.ids, target = name.list } = option
-      this.relation_to_many(name.list, target, key, 'where', 'id')
+      const { key = name.ids, target = name.list, pk = 'id' } = option
+      this.relation_to(false, name.list, target, 'where', pk, key)
     }
   }
 
   has_many(to, option: RelationCmd = {}) {
     const name = rename(to)
-    const { key = this.$name.id, target = name.list } = option
-    this.relation_to_many(name.list, target, 'id', 'where', key)
+    const { key = this.$name.id, target = name.list, pk = 'id' } = option
+    this.relation_to(false, name.list, target, 'where', key, pk)
   }
 
   tree(option: RelationCmd = {}) {
@@ -362,7 +380,7 @@ export class Rule<A extends DEFAULT_RULE_TYPE> {
   graph(option: RelationCmd = {}) {
     const { directed, cost } = option
     const ik = this.$name.ids
-    this.relation_to_many(this.$name.list, this.$name.list, ik, 'where', 'id')
+    this.relation_to(false, this.$name.list, this.$name.list, 'where', 'id', ik)
     this.relation_graph('path', ik)
     if (!directed) {
       return true // todo

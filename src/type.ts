@@ -81,10 +81,11 @@ export type Filter = {
 }
 
 export type PathCmd = {
-  key: string
+  pk: string
 }
 
 export type RelationCmd = Partial<{
+  pk: string
   key: string
   target: string
   miss: string

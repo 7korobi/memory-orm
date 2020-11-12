@@ -10,17 +10,19 @@ list [
     "book-1-bbb",
     list [
       model {
-        "_id": "book-1-bbb-ccc",
+        "_id": 3,
         "book_id": "book-1",
+        "doc_id": "book-1-bbb-ccc",
+        "doc_idx": "ccc",
         "folder_id": "book",
-        "idx": "ccc",
         "path_id": "book-1-bbb",
       },
       model {
-        "_id": "book-1-bbb-ddd",
+        "_id": 4,
         "book_id": "book-1",
+        "doc_id": "book-1-bbb-ddd",
+        "doc_idx": "ddd",
         "folder_id": "book",
-        "idx": "ddd",
         "path_id": "book-1-bbb",
       },
     ],
@@ -33,10 +35,11 @@ list [
     "book-1-bbb-ddd",
     list [
       model {
-        "_id": "book-1-bbb-ddd-eee",
+        "_id": 5,
         "book_id": "book-1",
+        "doc_id": "book-1-bbb-ddd-eee",
+        "doc_idx": "eee",
         "folder_id": "book",
-        "idx": "eee",
         "path_id": "book-1-bbb-ddd",
       },
     ],
@@ -68,55 +71,67 @@ exports[`path parent snapshot 1`] = `
 list [
   Array [
     "book-1-aaa",
-    null,
+    undefined,
+    undefined,
   ],
   Array [
     "book-1-bbb",
-    null,
+    undefined,
+    undefined,
   ],
   Array [
     "book-1-bbb-ccc",
+    "book-1-bbb",
     model {
-      "_id": "book-1-bbb",
+      "_id": 2,
       "book_id": "book-1",
+      "doc_id": "book-1-bbb",
+      "doc_idx": "bbb",
       "folder_id": "book",
-      "idx": "bbb",
     },
   ],
   Array [
     "book-1-bbb-ddd",
+    "book-1-bbb",
     model {
-      "_id": "book-1-bbb",
+      "_id": 2,
       "book_id": "book-1",
+      "doc_id": "book-1-bbb",
+      "doc_idx": "bbb",
       "folder_id": "book",
-      "idx": "bbb",
     },
   ],
   Array [
     "book-1-bbb-ddd-eee",
+    "book-1-bbb-ddd",
     model {
-      "_id": "book-1-bbb-ddd",
+      "_id": 4,
       "book_id": "book-1",
+      "doc_id": "book-1-bbb-ddd",
+      "doc_idx": "ddd",
       "folder_id": "book",
-      "idx": "ddd",
       "path_id": "book-1-bbb",
     },
   ],
   Array [
     "book-1-ccc-ddd",
-    null,
+    "book-1-ccc",
+    undefined,
   ],
   Array [
     "book-1-ccc-eee",
-    null,
+    "book-1-ccc",
+    undefined,
   ],
   Array [
     "book-1-ddd-eee",
-    null,
+    "book-1-ddd",
+    undefined,
   ],
   Array [
     "book-1-fff-ggg-hhh-iii",
-    null,
+    "book-1-fff-ggg-hhh",
+    undefined,
   ],
 ]
 `;
